@@ -1,0 +1,84 @@
+import { ui } from 'lumin';
+import { SystemIcons } from '../../types/system-icons.js';
+
+import { UiNodeBuilder } from './ui-node-builder.js';
+import { ArrayProperty } from '../properties/array-property.js';
+import { PrimitiveTypeProperty } from '../properties/primitive-type-property.js';
+import { PropertyDescriptor } from '../properties/property-descriptor.js';
+
+export class ImageBuilder extends UiNodeBuilder {
+    constructor(){
+        super();
+        
+        this._propertyDescriptors['ui'] = new PrimitiveTypeProperty('ui', 'setIsUI', true, 'boolean');
+        this._propertyDescriptors['opaque'] = new PrimitiveTypeProperty('opaque', 'setIsOpaque', true, 'boolean');
+        this._propertyDescriptors['color'] = new ArrayProperty('color', 'setColor', true, 'vec3');
+        this._propertyDescriptors['texCoords'] = new ArrayProperty('texCoords', 'setTexCoords', true, 'vec2');
+    }
+
+    create(prism, properties) {
+        this.throwIfInvalidPrism(prism);
+
+        this.validate(undefined, undefined, properties);
+
+        const { icon, filePath, resourceId, height, width } = properties;
+
+        let element;
+        if (typeof icon === 'string') {
+            element = ui.UiImage.Create(prism, SystemIcons[icon], height);
+        } else if (resourceId) {
+            element = ui.UiImage.Create(prism, resourceId, width, height);
+        } else if (filePath) {
+            element = ui.UiImage.Create(prism, filePath, width, height);
+        }
+
+        const unapplied = this.excludeProperties(properties, ['icon', 'filePath', 'resourceId', 'height', 'width']);
+
+        this.apply(element, undefined, unapplied);
+
+        return element;
+    }
+
+    update(element, oldProperties, newProperties) {
+        // this.throwIfNotInstanceOf(element, ui.UiImage);
+        super.update(element, oldProperties, newProperties);
+
+        this._validateSize(properties);
+        this._setSize(element, properties);
+    }
+
+    validate(element, oldProperties, newProperties) {
+        super.validate(element, oldProperties, newProperties);
+
+        const message = `The provided icon ${newProperties.icon} is not a valid value`;
+        super._throwIfPredicateFails(newProperties.icon, message, validator.validateSystemIcon)
+
+        PropertyDescriptor.throwIfNotTypeOf(newProperties.resourceId, 'number');
+        PropertyDescriptor.throwIfNotTypeOf(newProperties.filePath, 'string');
+
+        this._validateSize(newProperties);
+    }
+
+    _validateSize(properties) {
+        PropertyDescriptor.throwIfNotTypeOf(properties.height, 'number');
+        PropertyDescriptor.throwIfNotTypeOf(properties.width, 'number');
+    }
+
+    _setSize(element, properties) {
+        const { height, width } = properties;
+
+        if (width || height) {
+            if (width === undefined) {
+                width = element.getSize()[0];
+            }
+
+            if (height === undefined) {
+                height = element.getSize()[1];
+            }
+
+            element.setSize([height, width]);
+        }
+    }
+}
+
+

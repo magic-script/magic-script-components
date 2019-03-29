@@ -1,0 +1,24 @@
+{
+  "name": "magic-script-components",
+  "version": "0.0.1",
+  "description": "MagicScript Component Framework",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magic-script/magic-script-components.git"
+  },
+  "keywords": [
+    "magic-script"
+  ],
+  "author": "Magic Leap",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/magic-script/magic-script-components/issues"
+  },
+  "homepage": "https://github.com/magic-script/magic-script-components#readme"
+}
