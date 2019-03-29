@@ -16,6 +16,9 @@
   "scripts": {
     "build": "rollup -c"
   },
+  "publishConfig": {
+    "registry": "https://nexus.magicleap.blue/repository/npm-internal/"
+  },  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/magic-script/magic-script-components.git"
