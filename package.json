@@ -3,10 +3,18 @@
   "version": "0.0.1",
   "description": "MagicScript Component Framework",
   "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {},
+  "dependencies": {
+    "magic-script-polyfills": "^0.4.0",
+    "react": "^16.8.3",
+    "react-reconciler": "^0.20.2"    
+  },
+  "devDependencies": {
+    "rollup": "^1.1.2",
+    "rollup-plugin-commonjs": "https://github.com/creationix/rollup-plugin-commonjs.git",
+    "rollup-plugin-node-resolve": "^4.0.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup -c"
   },
   "repository": {
     "type": "git",
