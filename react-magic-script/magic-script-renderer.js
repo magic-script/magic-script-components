@@ -1,5 +1,5 @@
 import Reconciler from 'react-reconciler';
-import mxs from '../index.js';
+import mxs from '../main.js';
 
 // Flow type definitions ------------------------------------------------------
 //  Type = string;
@@ -274,9 +274,11 @@ function commitUpdate(instance, updatePayload, type, oldProps, newProps, interna
   console.log(oldProps);
   console.log(newProps);
 
-  if (type === 'text') {
-    instance.setText(newProps.children.toString());
-  }
+  // if (type === 'text') {
+  //   instance.setText(newProps.children.toString());
+  // } 
+
+  mxs._nativeFactory.updateComponent(type, instance, oldProps, newProps);
 }
 
 // Function: insertBefore

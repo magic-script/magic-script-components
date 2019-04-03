@@ -53,10 +53,4 @@ export class RenderNodeBuilder extends TransformNodeBuilder {
     //     });
     //     return subset;
     // }
-
-    throwIfInvalidPrism(prism) {
-        if ( !validator.validatePrism(prism) ) {
-            throw new TypeError('Parameter "prism" is not instance of Prism');
-        }
-    }
 }

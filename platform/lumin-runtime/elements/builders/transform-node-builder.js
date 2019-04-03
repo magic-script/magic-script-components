@@ -25,4 +25,10 @@ export class TransformNodeBuilder extends ElementBuilder {
         // Propagate visibility to children by default
         element.setVisible(newProperties.visible, true);
     }
+
+    throwIfInvalidPrism(prism) {
+        if ( !validator.validatePrism(prism) ) {
+            throw new TypeError('Parameter "prism" is not instance of Prism');
+        }
+    }
 }

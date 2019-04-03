@@ -9,8 +9,12 @@ export class TextChildrenProperty extends PropertyDescriptor {
         this.throwIfNotText(value);
         return true;
     }
-
+    
     throwIfNotText(children) {
+        TextChildrenProperty.throwIfNotText(children);
+    }
+
+    static throwIfNotText(children) {
         const validateItem = (item) => {
             let valid = true;
 

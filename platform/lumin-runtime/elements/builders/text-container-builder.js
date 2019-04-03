@@ -12,8 +12,8 @@ export class TextContainerBuilder extends UiNodeBuilder {
         this._propertyDescriptors['children'] = new TextChildrenProperty('children', 'setText', false);
 
         this._propertyDescriptors['text'] = new PrimitiveTypeProperty('text', 'setText', true, 'string');
-        this._propertyDescriptors['textSize'] = new PrimitiveTypeProperty('textSize', 'setTextSize', true, 'number');
         this._propertyDescriptors['textColor'] = new ArrayProperty('textColor', 'setTextColor', true, 'vec4');
+        this._propertyDescriptors['textSize'] = new PrimitiveTypeProperty('textSize', 'setTextSize', true, 'number');
     }
 
     // update(element, oldProperties, newProperties) {

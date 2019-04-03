@@ -6,9 +6,9 @@ Order | Component | Lumin RT | Implemented | Tested
 ------|-----------|----------|-------------|-------
  1 | view | UiNode | :thumbsup:
  2 | text | UiText | :thumbsup:
- 3 | button | UiButton | :thumbsup:
- 4 | image | UiImage | :thumbsup:
- 5 | textEdit | UiTextEdit | :thumbsup:
+ 3 | textEdit | UiTextEdit | :thumbsup:
+ 4 | button | UiButton | :thumbsup:
+ 5 | image | UiImage | :thumbsup:
  6 | scrollBar | UiScrollBar | :thumbsup:
  7 | scrollView | UiScrollView | :thumbsup:
  8 | listView | UiListView | :thumbsup:
@@ -26,20 +26,19 @@ Order | Component | Lumin RT | Implemented | Tested
 
 Order | Component | Lumin RT | Implemented | Tested
 ------|-----------|----------|-------------|-------
-11 | slider | UiSlider |
-12 | loadingSpinner | UiLoadingSpinner |
-13 | progressBar | UiProgressBar |
-14 | group | UiGroup |
-15 | gridLayout | UiGridLayout |
-16 | layout | UiLayout |
-17 | linearLayout | UiLinearLayout |
-18 | rectLayout | UiRectLayout |
-19 | dropdownList | UiDropDownList |
-20 | toggle | UiToggle |
-21 | toggleGroup | UiToggleGroup |
-22 | panel | UiPanel |
-23 | video | VideoNode |
-24 | audio | AudioNode |
+11 | spinner | UiLoadingSpinner | :thumbsup:
+12 | slider | UiSlider | :thumbsup:
+13 | progressBar | UiProgressBar | :thumbsup:
+14 | gridLayout | UiGridLayout | :thumbsup:
+15 | linearLayout | UiLinearLayout | :thumbsup:
+16 | rectLayout | UiRectLayout | :thumbsup:
+17 | dropdownList | UiDropDownList | :thumbsup:
+18 | dropdownListItem | DropDownListItem | :thumbsup:
+19 | toggle | UiToggle | :thumbsup:
+20 | toggleGroup | UiToggleGroup | :thumbsup:
+21 | panel | UiPanel | :thumbsup:
+22 | video | VideoNode | :thumbsup:
+23 | audio | AudioNode | :thumbsup:
 ---
 
 ## Phase 3:
@@ -52,7 +51,7 @@ Order | Component | Lumin RT | Implemented | Tested
 27 | colorPicker | UiColorPicker |
 28 | timePicker | UiTimePicker |
 29 | datePicker | UiDatePicker |
-30 | dialog | UiDialog |
-31 | tab | UiTab |
+30 | dialog | UiDialog | :thumbsup:
+31 | tab | UiTab | :thumbsup:
 32 | webView | UiWebView |
 ---

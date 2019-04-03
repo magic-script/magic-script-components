@@ -1,5 +1,4 @@
 import { ui } from 'lumin';
-import { validator } from '../../utilities/validator.js';
 
 import { TransformNodeBuilder } from './transform-node-builder.js';
 import { EnumProperty } from '../properties/enum-property.js';
@@ -38,11 +37,5 @@ export class UiNodeBuilder extends TransformNodeBuilder {
             }
         });
         return subset;
-    }
-
-    throwIfInvalidPrism(prism) {
-        if ( !validator.validatePrism(prism) ) {
-            throw new TypeError('Parameter "prism" is not instance of Prism');
-        }
     }
 }

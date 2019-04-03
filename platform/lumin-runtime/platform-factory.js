@@ -60,6 +60,9 @@ export class PlatformFactory extends NativeFactory {
         return element;
     }
 
+    updateComponent(name, ...args) {
+        this.elementBuilders[name].update(...args);
+    }
 
     createApp(appComponent) {
         if (typeof appComponent !== 'object') {

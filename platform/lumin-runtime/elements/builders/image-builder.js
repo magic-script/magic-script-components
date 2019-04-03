@@ -51,7 +51,7 @@ export class ImageBuilder extends UiNodeBuilder {
         super.validate(element, oldProperties, newProperties);
 
         const message = `The provided icon ${newProperties.icon} is not a valid value`;
-        super._throwIfPredicateFails(newProperties.icon, message, validator.validateSystemIcon)
+        PropertyDescriptor.throwIfPredicateFails(newProperties.icon, message, validator.validateSystemIcon);
 
         PropertyDescriptor.throwIfNotTypeOf(newProperties.resourceId, 'number');
         PropertyDescriptor.throwIfNotTypeOf(newProperties.filePath, 'string');
