@@ -48,7 +48,7 @@ export class DatePickerBuilder extends UiNodeBuilder {
 
         const element = ui.UiDatePicker.Create(prism, label, labelSide, DEFAULT_DATE_FORMAT, defaultDate, yearMin, yearMax);
 
-        const unapplied = this.excludeProperties(properties, ['label', 'labelSide', 'dateFormat', 'minYear', 'maxYear']);
+        const unapplied = this.excludeProperties(properties, ['label', 'labelSide', 'defaultDate', 'minYear', 'maxYear']);
 
         this.apply(element, undefined, unapplied);
 
@@ -70,11 +70,10 @@ export class DatePickerBuilder extends UiNodeBuilder {
         let message = `The provided icon ${labelSide} is not a valid value`;
         PropertyDescriptor.throwIfPredicateFails(labelSide, message, validator.validateSide);
 
-        message = `The provided icon ${dateFormat} is not a valid value`;
-        PropertyDescriptor.throwIfPredicateFails(dateFormat, message, validator.validateDateFormat);
+        // message = `The provided icon ${dateFormat} is not a valid value`;
+        // PropertyDescriptor.throwIfPredicateFails(dateFormat, message, validator.validateDateFormat);
 
-        // defaultDate
-
+        PropertyDescriptor.throwIfNotTypeOf(defaultDate, 'string');
         PropertyDescriptor.throwIfNotTypeOf(yearMin, 'number');
         PropertyDescriptor.throwIfNotTypeOf(yearMax, 'number');
     }

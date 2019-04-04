@@ -1,0 +1,75 @@
+import { ui } from 'lumin';
+import { Side } from '../../types/side.js';
+
+import { UiNodeBuilder } from './ui-node-builder.js';
+import { ArrayProperty } from '../properties/array-property.js';
+import { PropertyDescriptor } from '../properties/property-descriptor.js';
+
+import { TimeFormatConverter } from '../../types/time-format.js';
+
+const DEFAULT_TIME_FORMAT = 'hh:mm:ss';
+
+export class TimePickerBuilder extends UiNodeBuilder {
+    constructor(){
+        super();
+        
+        this._propertyDescriptors['color'] = new ArrayProperty('color', 'setColor', true, 'vec3');
+        this._propertyDescriptors['time'] = new PrimitiveTypeProperty('time', 'setTime', false, 'string');
+    }
+
+    create(prism, properties) {
+        this.throwIfInvalidPrism(prism);
+
+        this.validate(undefined, undefined, properties);
+
+        let { label, labelSide, defaultTime } = properties;
+
+        if (label === undefined) {
+            label = '';
+        }
+
+        if (labelSide === undefined) {
+            labelSide = Side.kTop;
+        }
+
+        if (defaultTime === undefined) {
+            defaultTime = new ui.Time();
+        } else {
+            defaultTime = TimeFormatConverter[DEFAULT_TIME_FORMAT].toDate(defaultTime);
+        }
+
+        const element = ui.UiDatePicker.Create(prism, label, labelSide, DEFAULT_TIME_FORMAT, defaultTime);
+
+        const unapplied = this.excludeProperties(properties, ['label', 'labelSide', 'defaultTime']);
+
+        this.apply(element, undefined, unapplied);
+
+        return element;
+    }
+
+    // update(element, oldProperties, newProperties) {
+    //     // this.throwIfNotInstanceOf(element, ui.UiImage);
+    //     super.update(element, oldProperties, newProperties);
+    // }
+
+    validate(element, oldProperties, newProperties) {
+        super.validate(element, oldProperties, newProperties);
+
+        const { label, labelSide, defaultTime } = newProperties;
+
+        PropertyDescriptor.throwIfNotTypeOf(label, 'string');
+
+        let message = `The provided icon ${labelSide} is not a valid value`;
+        PropertyDescriptor.throwIfPredicateFails(labelSide, message, validator.validateSide);
+
+        // message = `The provided icon ${timeFormat} is not a valid value`;
+        // PropertyDescriptor.throwIfPredicateFails(dateFormat, message, validator.validateDateFormat);
+
+        PropertyDescriptor.throwIfNotTypeOf(defaultTime, 'string');
+    }
+
+    setTime(element, oldProperties, newProperties) {
+        const time = TimeFormatConverter[DEFAULT_TIME_FORMAT].toTime(newProperties.time);
+        element.setTime(time);
+    }
+}

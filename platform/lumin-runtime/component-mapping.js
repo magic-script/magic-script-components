@@ -70,7 +70,7 @@ export default {
         'webView': () => new WebViewBuilder(),
         'portalIcon': () => new PortalIconBuilder(),
         'colorPicker': () => new ColorPickerBuilder(),
-        // 'timePicker': () => new TimePickerBuilder(),
+        'timePicker': () => new TimePickerBuilder(),
         'datePicker': () => new DatePickerBuilder(),
         'circleConfirmation': () => new CircleConfirmationBuilder()
     }

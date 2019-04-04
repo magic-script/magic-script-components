@@ -17,12 +17,12 @@ export const DateFormatConverter = {
             const { month, day, year } = dateString.split('/');
             return createDate(year, month, day);
         },
-        toString(dateObject) {
-            if ( !(dateObject instanceof ui.Date)) {
+        toString(date) {
+            if ( !(date instanceof ui.Date)) {
                 throw new TypeError(`Input value is not a valid Date object`);
             }
 
-            return `${dateObject.month()}/${dateObject.day()}/${dateObject.year()}`;
+            return `${date.month()}/${date.day()}/${date.year()}`;
         }
     },
     'DD/MM/YYYY': {
@@ -30,12 +30,12 @@ export const DateFormatConverter = {
             const { day, month, year } = dateString.split('/');
             return createDate(year, month, day);
         },
-        toString(dateObject) {
-            if ( !(dateObject instanceof ui.Date)) {
+        toString(date) {
+            if ( !(date instanceof ui.Date)) {
                 throw new TypeError(`Input value is not a valid Date object`);
             }
 
-            return `${dateObject.day()}/${dateObject.month()}/${dateObject.year()}`;
+            return `${date.day()}/${date.month()}/${date.year()}`;
         }
     },
     'MM/YYYY': {
@@ -43,12 +43,12 @@ export const DateFormatConverter = {
             const { month, year } = dateString.split('/');
             return createDate(year, month, 1);
         },
-        toString(dateObject) {
-            if ( !(dateObject instanceof ui.Date)) {
+        toString(date) {
+            if ( !(date instanceof ui.Date)) {
                 throw new TypeError(`Input value is not a valid Date object`);
             }
 
-            return `${dateObject.month()}/${dateObject.year()}`;
+            return `${date.month()}/${date.year()}`;
         }
     },
     'DD/YYYY': {
@@ -56,12 +56,12 @@ export const DateFormatConverter = {
             const { day, year } = dateString.split('/');
             return createDate(year, 1, day);
         },
-        toString(dateObject) {
-            if ( !(dateObject instanceof ui.Date)) {
+        toString(date) {
+            if ( !(date instanceof ui.Date)) {
                 throw new TypeError(`Input value is not a valid Date object`);
             }
 
-            return `${dateObject.day()}/${dateObject.year()}`;
+            return `${date.day()}/${date.year()}`;
         }
     }
 }

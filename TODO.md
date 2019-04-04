@@ -45,13 +45,13 @@ Order | Component | Lumin RT | Implemented | Tested
 
 Order | Component | Lumin RT | Implemented | Tested
 ------|-----------|----------|-------------|-------
-24 | pageView | UiPageView |
-25 | circleConfirmation | UiCircleConfirmation |
-26 | portalIcon | UiPortalIcon |
-27 | colorPicker | UiColorPicker |
-28 | timePicker | UiTimePicker |
-29 | datePicker | UiDatePicker |
-30 | dialog | UiDialog | :thumbsup:
-31 | tab | UiTab | :thumbsup:
-32 | webView | UiWebView |
+24 | dialog | UiDialog | :thumbsup:
+25 | tab | UiTab | :thumbsup:
+26 | pageView | UiPageView | :thumbsup:
+27 | webView | UiWebView | :thumbsup:
+28 | colorPicker | UiColorPicker | :thumbsup:
+29 | timePicker | UiTimePicker | :thumbsup:
+30 | datePicker | UiDatePicker | :thumbsup:
+31 | portalIcon | UiPortalIcon | :thumbsup:
+32 | circleConfirmation | UiCircleConfirmation | :thumbsup:
 ---

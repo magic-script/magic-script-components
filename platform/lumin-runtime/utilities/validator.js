@@ -10,6 +10,8 @@ import { EclipseLabelType } from '../types/eclipse-label-type.js';
 import { EclipseButtonType } from '../types/eclipse-button-type.js';
 import { DialogType } from '../types/dialog-type.js';
 import { Side } from '../types/side.js';
+import { DateFormat } from '../types/date-format.js';
+import { TimeFormat } from '../types/time-format.js';
 
 
 
@@ -32,5 +34,6 @@ export const validator = {
     validateEclipseButtonType: value => validate(value, EclipseButtonType),
     validateDialogType: value => validate(value, DialogType),
     validateSide: value => validate(value, Side),
-    validateDateFormat: value => (typeof value === 'string') && DateFormat.includes(value)
+    validateDateFormat: value => (typeof value === 'string') && DateFormat.includes(value),
+    validateTimeFormat: value => (typeof value === 'string') && TimeFormat.includes(value)
 }
