@@ -37,9 +37,8 @@ export class TextBuilder extends TextContainerBuilder {
 
         const element = ui.UiText.Create(prism, finalText, fontStyle, fontWeight);
 
-        console.log(properties);
         const unapplied = this.excludeProperties(properties, ['children', 'text', 'style', 'weight']);
-        console.log(unapplied);
+
         this.apply(element, undefined, unapplied);
 
         return element;

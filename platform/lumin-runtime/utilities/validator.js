@@ -9,6 +9,8 @@ import { ToggleType } from '../types/toggle-type.js';
 import { EclipseLabelType } from '../types/eclipse-label-type.js';
 import { EclipseButtonType } from '../types/eclipse-button-type.js';
 import { DialogType } from '../types/dialog-type.js';
+import { Side } from '../types/side.js';
+
 
 
 function validate(value, enumSet) {
@@ -28,5 +30,7 @@ export const validator = {
 
     validateEclipseLabelType: value => validate(value, EclipseLabelType),
     validateEclipseButtonType: value => validate(value, EclipseButtonType),
-    validateDialogType: value => validate(value, DialogType)
+    validateDialogType: value => validate(value, DialogType),
+    validateSide: value => validate(value, Side),
+    validateDateFormat: value => (typeof value === 'string') && DateFormat.includes(value)
 }

@@ -18,15 +18,18 @@ import { DropdownListItemBuilder } from './elements/builders/dropdown-list-item-
 import { ToggleBuilder } from './elements/builders/toggle-builder.js';
 import { ToggleGroupBuilder } from './elements/builders/toggle-group-builder.js';
 import { PanelBuilder } from './elements/builders/panel-builder.js';
-import { VideoBuilder } from './elements/builders/video-builder.js';
-import { AudioBuilder } from './elements/builders/audio-builder.js';
 import { TabBuilder } from './elements/builders/tab-builder.js';
 import { DialogBuilder } from './elements/builders/dialog-builder.js';
-
+import { PageViewBuilder } from './elements/builders/page-view-builder.js';
+import { WebViewBuilder } from './elements/builders/web-view-builder.js';
+import { PortalIconBuilder } from './elements/builders/portal-icon-builder.js';
+import { ColorPickerBuilder } from './elements/builders/color-picker-builder.js';
+import { TimePickerBuilder } from './elements/builders/time-picker-builder.js';
+import { DatePickerBuilder } from './elements/builders/date-picker-builder.js';
+import { CircleConfirmationBuilder } from './elements/builders/circle-confirmation-builder.js';
 import { ModelBuilder } from './elements/builders/model-builder.js';
-
-
-
+import { VideoBuilder } from './elements/builders/video-builder.js';
+import { AudioBuilder } from './elements/builders/audio-builder.js';
 
 export default {
     version: '1.0',
@@ -63,12 +66,12 @@ export default {
         // Phase 3
         'tab': () => new TabBuilder(),
         'dialog': () => new DialogBuilder(),
-        'pageView': () => { throw new Error('Page View is not supported yet'); },
-        'webView': () => { throw new Error('Web View is not supported yet'); },
-        'portalIcon': () => { throw new Error('Portal Icon is not supported yet'); },
-        'colorPicker': () => { throw new Error('Color Picker is not supported yet'); },
-        'timePicker': () => { throw new Error('Time Picker is not supported yet'); },
-        'datePicker': () => { throw new Error('Date Picker is not supported yet'); },
-        'circleConfirmation': () => { throw new Error('Circle Confirmation is not supported yet'); }
+        'pageView': () => new PageViewBuilder(),
+        'webView': () => new WebViewBuilder(),
+        'portalIcon': () => new PortalIconBuilder(),
+        'colorPicker': () => new ColorPickerBuilder(),
+        // 'timePicker': () => new TimePickerBuilder(),
+        'datePicker': () => new DatePickerBuilder(),
+        'circleConfirmation': () => new CircleConfirmationBuilder()
     }
 };
