@@ -2,7 +2,7 @@
   "name": "magic-script-components",
   "version": "0.0.1",
   "description": "MagicScript Component Framework",
-  "main": "index.js",
+  "module": "index.js",
   "dependencies": {
     "magic-script-polyfills": "^0.4.0",
     "react": "^16.8.3",
