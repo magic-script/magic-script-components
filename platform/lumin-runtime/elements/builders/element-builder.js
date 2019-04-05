@@ -26,7 +26,7 @@ export class ElementBuilder {
 
         for (const name of Object.keys(properties)) {
             const descriptor = this._propertyDescriptors[name];
-            if (descriptor) {
+            if (descriptor !== undefined) {
                 action(properties[name], descriptor);
             } else {
                 console.log(`Property ${name} does not have a descriptor`);
@@ -51,7 +51,7 @@ export class ElementBuilder {
         if ( descriptor.validate(value) ) {
             return true;
         } else {
-            console.log(`Property ${descriptor.Name} is not a valid value ${value}`);
+            console.log(`Property ${descriptor.Name} does not have a valid value: ${value}`);
             return false;
         }
     }

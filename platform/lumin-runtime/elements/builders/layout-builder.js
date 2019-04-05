@@ -1,5 +1,5 @@
 import { ui } from 'lumin';
-
+import { ElementBuilder } from './element-builder.js';
 import { PropertyDescriptor } from '../properties/property-descriptor.js';
 
 export class LayoutBuilder extends ElementBuilder {

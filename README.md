@@ -1,2 +1,82 @@
 # magic-script-components
 MagicScript Component Framework
+
+# Configuration steps
+1. Add `.npmrc` file with reference to the internal npm registry
+    `registry=https://nexus.magicleap.blue/repository/npm-group/`
+
+2. Install dependencies:
+- `npm install magic-script-components`
+- `npm install @babel/core @babel/plugin-transform-react-jsx rollup-plugin-babel`
+
+3. Add `.babelrc` file with the following configuration:
+```
+{
+    "plugins": [
+        "@babel/plugin-syntax-jsx",
+        "@babel/plugin-transform-react-jsx"
+    ]
+}
+```
+
+4. Add `babel` to the `rollup.config.js` file:
+```
+import babel from 'rollup-plugin-babel';
+import resolve from 'rollup-plugin-node-resolve';
+import commonjs from 'rollup-plugin-commonjs';
+
+export default {
+  external: ['uv', 'lumin'],
+  input: 'src/main.js',
+  preserveModules: true,
+  output: {
+    dir: 'bin',
+    format: 'es'
+  },
+  plugins: [
+    babel({ exclude: "node_modules/**" }),
+    resolve(),
+    commonjs()
+  ]
+};
+```
+
+# Use example:
+1. Create file `app.js`:
+```
+import React from 'react';
+
+export class MyApp extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { counter: props.counter };
+    this.onButtonClick = this.onButtonClick.bind(this);
+  }
+
+  onButtonClick(event) {
+    this.setState( state => ({ counter: state.counter + 1 }) );
+  }
+
+  render() {
+    return (
+      <view name='main-view'>
+        <text position={[0, 0.25, 0]} textSize={0.10} textColor={[0.1, 1, 0.1, 0.84]}>{this.state.counter}</text>
+        <button width={0.25} height={0.15} roundness={0.5} onClick={this.onButtonClick}>+</button>
+      </view>
+    );
+  }
+}
+
+```
+
+2. Bootstrap 'MyApp' component from `main.js`:
+```
+import 'magic-script-polyfills';
+import React from 'react';
+import mxs from 'magic-script-components';
+
+import { MyApp } from './app.js';
+
+mxs.bootstrap(<MyApp type='landscape' volumeSize={[1,1,1]} caption='My App Caption' counter={0} />);
+```

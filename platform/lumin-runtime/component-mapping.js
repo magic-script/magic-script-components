@@ -36,8 +36,8 @@ export default {
     platform: 'lumin-runtime',  
     components: {
         // Phase 1
-        'view': GroupBuilder,
-        'scene': GroupBuilder,
+        'view': () => new GroupBuilder(),
+        'scene': () => new GroupBuilder(),
         // 'view': () => new UiNodeBuilder(),
         'text': () => new TextBuilder(),
         'textEdit': () => new TextEditBuilder(),
@@ -53,6 +53,7 @@ export default {
         'spinner': () => new LoadingSpinnerBuilder(),
         'slider': () => new SliderBuilder(),
         'progressBar': () => new ProgressBarBuilder(),
+        'gridLayout': () => new GridLayoutBuilder(),
         'linearLayout': () => new LinearLayoutBuilder(),
         'rectLayout': () => new RectLayoutBuilder(),
         'dropdownList': () => new DropdownListBuilder(),

@@ -21,9 +21,9 @@ export class TextContainerBuilder extends UiNodeBuilder {
     //     super.update(element, oldProperties, newProperties);
     // }
 
-    setText(element, children) {
-        // Convert the children to single string
-        element.setText(this._getText(children));
+    setText(element, oldProperties, newProperties) {
+        // TODO: Validate children
+        element.setText(this._getText(newProperties.children));
     }
 
     _getText(children) {

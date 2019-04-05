@@ -2,6 +2,7 @@ import { Alignment } from '../../types/alignment.js';
 import { ArrayProperty } from '../properties/array-property.js';
 import { EnumProperty } from '../properties/enum-property.js';
 import { PrimitiveTypeProperty } from '../properties/primitive-type-property.js';
+import { LayoutBuilder } from './layout-builder.js';
 
 export class PositionalLayoutBuilder extends LayoutBuilder {
     constructor(){

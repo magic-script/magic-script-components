@@ -49,7 +49,7 @@ export class TextBuilder extends TextContainerBuilder {
         super.update(element, oldProperties, newProperties);
 
         this._validateFont(newProperties);
-        this._setFont(newProperties);
+        this._setFont(element, newProperties);
     }
 
     validate(element, oldProperties, newProperties) {

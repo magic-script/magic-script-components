@@ -1,5 +1,6 @@
 import { ui } from 'lumin';
 
+import { LayoutBuilder } from './layout-builder.js';
 import { PrimitiveTypeProperty } from '../properties/primitive-type-property.js';
 
 export class GridLayoutBuilder extends LayoutBuilder {

@@ -4,6 +4,8 @@ import { ElementBuilder } from './element-builder.js';
 import { ArrayProperty } from '../properties/array-property.js';
 import { PrimitiveTypeProperty } from '../properties/primitive-type-property.js';
 
+import { validator } from '../../utilities/validator.js';
+
 export class TransformNodeBuilder extends ElementBuilder {
     constructor(){
         super();

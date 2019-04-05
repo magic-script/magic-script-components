@@ -3,6 +3,7 @@ import { ui } from 'lumin';
 import { Alignment } from '../../types/alignment.js';
 import { ArrayProperty } from '../properties/array-property.js';
 import { EnumProperty } from '../properties/enum-property.js';
+import { LayoutBuilder } from './layout-builder.js';
 
 export class RectLayoutBuilder extends LayoutBuilder {
     constructor(){
