@@ -80,3 +80,15 @@ import { MyApp } from './app.js';
 
 mxs.bootstrap(<MyApp type='landscape' volumeSize={[1,1,1]} caption='My App Caption' counter={0} />);
 ```
+
+3. Define global `process`:
+  - Add file `global-scope.js` to `src` folder
+  ```
+globalThis.process = { env: { NODE_ENV:"development" } };
+export default process;
+  ```
+  - Import `process` to `main.js` at the top of the file:
+  ```
+import 'magic-script-polyfills';
+import process from './global-scope.js';
+  ```
