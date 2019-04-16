@@ -19,9 +19,9 @@ export class LoadingSpinnerBuilder extends UiNodeBuilder {
 
         this.validate(undefined, undefined, properties);
 
-        const { type, resourceId, resourcePath } = properties;
-        const id = resourceId ? resourceId : 0;
-        const path = resourcePath ? resourcePath : '';
+        const type = properties.type;
+        const id   = this.getPropertyValue('resourceId',    0, properties);
+        const path = this.getPropertyValue('resourcePath', '', properties);
         
         const element = ui.UiLoadingSpinner.Create(prism, type, id, path, height);
 

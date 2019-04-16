@@ -4,6 +4,7 @@ import { TextContainerBuilder } from './text-container-builder.js';
 import { PrimitiveTypeProperty } from '../properties/primitive-type-property.js';
 import { PropertyDescriptor } from '../properties/property-descriptor.js';
 import { TextChildrenProperty } from '../properties/text-children-property.js';
+import { ToggleType } from '../../types/toggle-type.js';
 
 export class ToggleBuilder extends TextContainerBuilder {
     constructor(){
@@ -20,19 +21,19 @@ export class ToggleBuilder extends TextContainerBuilder {
 
         this.validate(undefined, undefined, properties);
 
-        let { children, text, type, height } = properties;
+        let { text, type } = properties;
 
         if (text === undefined) {
-            text = this._getText(children);
+            text = this._getText(properties.children);
         }
 
-        if (height === undefined) {
-            height = 0;
-        }
+        type = type === undefined
+            ? ui.ToggleType.kDefault
+            : ToggleType[type];
 
-        const element = type === undefined
-            ? ui.UiToggle.Create(prism, text, height)
-            : ui.UiToggle.Create(prism, text, type, height);
+        const height = this.getPropertyValue('height', 0.0, properties);
+
+        const element = ui.UiToggle.Create(prism, text, type, height);
 
         const unapplied = this.excludeProperties(properties, ['children', 'text', 'type', 'height']);
 
@@ -53,7 +54,7 @@ export class ToggleBuilder extends TextContainerBuilder {
         PropertyDescriptor.throwIfNotTypeOf(newProperties.height, 'number');
         TextChildrenProperty.throwIfNotText(newProperties.children);
 
-        const { type } = newProperties;
+        const type = newProperties.type;
         const message = `The provided toggle type ${type} is not a valid value`;
         super._throwIfPredicateFails(type, message, validator.validateTogglelType);
     }

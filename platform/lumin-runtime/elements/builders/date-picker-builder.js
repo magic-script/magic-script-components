@@ -22,33 +22,26 @@ export class DatePickerBuilder extends UiNodeBuilder {
 
         this.validate(undefined, undefined, properties);
 
-        let { label, labelSide, defaultDate, minYear, maxYear } = properties;
+        let { labelSide, defaultDate } = properties;
 
-        if (label === undefined) {
-            label = '';
-        }
+        const label = this.getPropertyValue('label', '', properties);
 
-        if (labelSide === undefined) {
-            labelSide = Side.kTop;
-        }
+        labelSide = labelSide === undefined
+            ? labelSide = Side.kTop
+            : Side[labelSide];
 
-        if (defaultDate === undefined) {
+        if( defaultDate === undefined ) {
             defaultDate = new ui.Date();
-        } else {
+        } else if (typeof defaultDate === 'string') {
             defaultDate = DateFormatConverter[DEFAULT_DATE_FORMAT].toDate(defaultDate);
-        }
+        }           
 
-        if (minYear === undefined) {
-            minYear = -1;
-        }
-
-        if (maxYear === undefined) {
-            maxYear = -1;
-        }
+        const yearMin = this.getPropertyValue('yearMin', -1, properties);
+        const yearMax = this.getPropertyValue('yearMax', -1, properties);
 
         const element = ui.UiDatePicker.Create(prism, label, labelSide, DEFAULT_DATE_FORMAT, defaultDate, yearMin, yearMax);
 
-        const unapplied = this.excludeProperties(properties, ['label', 'labelSide', 'defaultDate', 'minYear', 'maxYear']);
+        const unapplied = this.excludeProperties(properties, ['label', 'labelSide', 'defaultDate', 'yearMin', 'yearMax']);
 
         this.apply(element, undefined, unapplied);
 

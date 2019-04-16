@@ -33,6 +33,11 @@ export class AudioBuilder extends TransformNodeBuilder {
 
         const element = prism.createAudioNode();
 
+        // For small files
+        // createLoadedFileAudioResourceId(a_fileName, a_absolutePathopt, a_descriptoropt, a_basePathopt) → {number}
+        // For big files
+        // createStreamedFileAudioResourceId(a_fileName, a_absolutePathopt, a_descriptoropt, a_basePathopt) → {number}
+        
         this.update(element, undefined, properties);
 
         return element;

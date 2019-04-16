@@ -21,11 +21,8 @@ export class ProgressBarBuilder extends UiNodeBuilder {
 
         this.validate(undefined, undefined, properties);
 
-        let { width, height } = properties;
-
-        if (height === undefined) {
-            height = 0;
-        }
+        const width  = properties.width;
+        const height = this.getPropertyValue('height', 0.0, properties);
 
         const element = ui.UiProgressBar.Create(prism, width, height);
 

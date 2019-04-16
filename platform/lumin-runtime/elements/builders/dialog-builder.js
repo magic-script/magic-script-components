@@ -31,10 +31,10 @@ export class DialogBuilder extends UiNodeBuilder {
 
         this.validate(undefined, undefined, properties);
 
-        let { children, text, title, type, layout } = properties;
+        let { text, title, type, layout } = properties;
 
         if (text === undefined) {
-            text = this._getText(children);
+            text = this._getText(properties.children);
         }
 
         type = type === undefined

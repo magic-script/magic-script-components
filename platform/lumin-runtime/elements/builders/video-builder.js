@@ -5,10 +5,12 @@ import { QuadNodeBuilder } from './quad-node-builder.js';
 import { EnumProperty } from '../properties/enum-property.js';
 import { PrimitiveTypeProperty } from '../properties/primitive-type-property.js';
 
-import { Alignment } from '../../types/alignment.js'
+import { Alignment } from '../../types/alignment.js';
+import { ViewMode } from '../../types/view-mode.js';
 
 const DEFAULT_FRAME_WIDTH = 512;
 const DEFAULT_FRAME_HEIGHT = 512;
+const DEFAULT_VOLUME = 1.0;
 
 export class VideoBuilder extends QuadNodeBuilder {
     constructor(){
@@ -27,14 +29,26 @@ export class VideoBuilder extends QuadNodeBuilder {
     create(prism, properties) {
         this.throwIfInvalidPrism(prism);
 
-        const { width, height } = properties;
+        let { width, height, volume, viewMode, videoPath } = properties;
 
-        const frameWidth = width === undefined ? DEFAULT_FRAME_WIDTH : width;
-        const frameHeight = height === undefined ? DEFAULT_FRAME_HEIGHT : height;
+        width  = width  === undefined ? DEFAULT_FRAME_WIDTH  : width;
+        height = height === undefined ? DEFAULT_FRAME_HEIGHT : height;
+        volume = volume === undefined ? DEFAULT_VOLUME       : volume;
 
-        const element = prism.createVideoNode(frameWidth, frameHeight);
+        viewMode = viewMode === undefined
+            ? lumin.ViewMode.kFullArea
+            : ViewMode[viewMode];
+        
 
-        this.update(element, undefined, properties);
+        const element = prism.createVideoNode(width, height);
+
+        element.setVideoPath(videoPath);
+        element.setViewMode(ViewMode.kFullArea);
+        element.setVolume(1.0);
+
+        const unapplied = this.excludeProperties(properties, ['width', 'height', 'volume', 'viewMode', 'videoPath']);
+
+        this.update(element, undefined, unapplied);
 
         return element;
     }

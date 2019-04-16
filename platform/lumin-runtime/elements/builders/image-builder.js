@@ -21,15 +21,15 @@ export class ImageBuilder extends UiNodeBuilder {
 
         this.validate(undefined, undefined, properties);
 
-        const { icon, filePath, resourceId, height, width } = properties;
+        const { icon, filePath, resourceId, height, width, userFrame, absolutePath } = properties;
 
         let element;
         if (typeof icon === 'string') {
             element = ui.UiImage.Create(prism, SystemIcons[icon], height);
         } else if (resourceId) {
-            element = ui.UiImage.Create(prism, resourceId, width, height);
+            element = ui.UiImage.Create(prism, resourceId, width, height, userFrame);
         } else if (filePath) {
-            element = ui.UiImage.Create(prism, filePath, width, height);
+            element = ui.UiImage.Create(prism, filePath, width, height, absolutePath, userFrame);
         }
 
         const unapplied = this.excludeProperties(properties, ['icon', 'filePath', 'resourceId', 'height', 'width']);

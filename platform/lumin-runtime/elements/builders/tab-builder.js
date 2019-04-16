@@ -4,6 +4,8 @@ import { TextContainerBuilder } from './text-container-builder.js';
 import { PropertyDescriptor } from '../properties/property-descriptor.js';
 import { TextChildrenProperty } from '../properties/text-children-property.js';
 
+import { EclipseLabelType } from '../../types/eclipse-label-type.js';
+
 export class TabBuilder extends TextContainerBuilder {
 
     create(prism, properties) {
@@ -11,15 +13,15 @@ export class TabBuilder extends TextContainerBuilder {
 
         this.validate(undefined, undefined, properties);
 
-        let { children, text, type } = properties;
+        let { text, type } = properties;
 
         if (text === undefined) {
-            text = this._getText(children);
+            text = this._getText(properties.children);
         }
 
         const element = type === undefined
             ? ui.UiTab.Create(prism, text)
-            : ui.UiTab.CreateEclipseTab(prism, text, type);
+            : ui.UiTab.CreateEclipseTab(prism, text, EclipseLabelType[type]);
 
         const unapplied = this.excludeProperties(properties, ['children', 'text', 'type']);
 

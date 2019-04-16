@@ -18,13 +18,10 @@ export class ScrollBarBuilder extends UiNodeBuilder {
 
         this.validate(undefined, undefined, properties);
 
-        const parameters = [properties.width];
+        const width  = properties.width;
+        const height = this.getPropertyValue('height', 0, properties);
 
-        if (properties.height) {
-            parameters.push(properties.height);
-        }
-
-        const element = ui.UiScrollBar.Create(prism, ...parameters);
+        const element = ui.UiScrollBar.Create(prism, width, height);
 
         const unapplied = this.excludeProperties(properties, ['width', 'height']);
 

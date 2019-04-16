@@ -16,15 +16,8 @@ export class ColorPickerBuilder extends UiNodeBuilder {
 
         this.validate(undefined, undefined, properties);
 
-        let { color, height } = properties;
-
-        if (color === undefined) {
-            color = VEC4_ONE;
-        }
-
-        if (height === undefined) {
-            height = 0;
-        }
+        const color  = this.getPropertyValue('color', VEC4_ONE, properties);
+        const height = this.getPropertyValue('height', 0.0, properties);
 
         const element = ui.UiColorPicker.Create(prism, color, height);
 

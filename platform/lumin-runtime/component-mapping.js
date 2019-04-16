@@ -11,6 +11,7 @@ import { ListViewItemBuilder } from './elements/builders/list-view-item-builder.
 import { LoadingSpinnerBuilder } from './elements/builders/loading-spinner-builder.js';
 import { SliderBuilder } from './elements/builders/slider-builder.js';
 import { ProgressBarBuilder } from './elements/builders/progress-bar-builder.js';
+import { GridLayoutBuilder } from './elements/builders/grid-layout-builder.js';
 import { LinearLayoutBuilder } from './elements/builders/linear-layout-builder.js';
 import { RectLayoutBuilder } from './elements/builders/rect-layout-builder.js';
 import { DropdownListBuilder } from './elements/builders/dropdown-list-builder.js';

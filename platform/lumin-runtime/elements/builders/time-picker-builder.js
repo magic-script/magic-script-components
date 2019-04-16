@@ -22,20 +22,18 @@ export class TimePickerBuilder extends UiNodeBuilder {
 
         this.validate(undefined, undefined, properties);
 
-        let { label, labelSide, defaultTime } = properties;
+        let { labelSide, defaultTime } = properties;
 
-        if (label === undefined) {
-            label = '';
-        }
+        const label = this.getPropertyValue('label', '', properties);
 
-        if (labelSide === undefined) {
-            labelSide = Side.kTop;
-        }
+        labelSide = labelSide === undefined
+            ? ui.Side.kTop
+            : Side[labelSide];
 
         if (defaultTime === undefined) {
             defaultTime = new ui.Time();
-        } else {
-            defaultTime = TimeFormatConverter[DEFAULT_TIME_FORMAT].toDate(defaultTime);
+        } else if (typeof defaultTime === 'string') {
+            defaultTime = TimeFormatConverter[DEFAULT_TIME_FORMAT].toTime(defaultTime);
         }
 
         const element = ui.UiDatePicker.Create(prism, label, labelSide, DEFAULT_TIME_FORMAT, defaultTime);

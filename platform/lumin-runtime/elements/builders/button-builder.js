@@ -19,9 +19,15 @@ export class ButtonBuilder extends TextContainerBuilder {
 
         this.validate(undefined, undefined, properties);
 
-        const { children, text, width, height, roundness } = properties;
+        let { children, text } = properties;
 
-        const finalText = text ? text : this._getText(children);
+        if (text === undefined) {
+            text = this._getText(children);
+        }
+
+        const width = this.getPropertyValue('width', 0.0, properties);
+        const height = this.getPropertyValue('height', 0.0, properties);
+        const roundness = this.getPropertyValue('roundness', 1.0, properties);
 
         const element = ui.UiButton.Create(prism, finalText, width, height, roundness);
 

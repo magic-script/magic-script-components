@@ -1,6 +1,5 @@
 import { ui } from 'lumin';
 import { HorizontalTextAlignment } from '../../types/horizontal-text-alignment.js';
-import { FontStyle, FontWeight } from '../../types/font-style.js';
 import { validator } from '../../utilities/validator.js';
 
 import { TextContainerBuilder } from './text-container-builder.js';
@@ -8,8 +7,7 @@ import { EnumProperty } from '../properties/enum-property.js';
 import { TextChildrenProperty } from '../properties/text-children-property.js';
 import { PropertyDescriptor } from '../properties/property-descriptor.js';
 
-const DEFAULT_FONT_STYLE = FontStyle['normal'];
-const DEFAULT_FONT_WEIGHT = FontWeight['regular'];
+import { PortalIconSize } from '../../types/portal-icon-size.js';
 
 export class PortalIconBuilder extends TextContainerBuilder {
     constructor(){
@@ -38,13 +36,17 @@ export class PortalIconBuilder extends TextContainerBuilder {
         this.throwIfInvalidPrism(prism);
         this.validate(undefined, undefined, properties);
 
-        let { children, text } = properties;
+        let { text, portalSize } = properties;
 
         if (text === undefined) {
-            text = this._getText(children);
+            text = this._getText(properties.children);
         }
 
-        const element = ui.UiPortalIcon.Create(prism, labelText, portalSizeopt);
+        portalSize = portalSize === undefined
+            ? ui.PortalIconSize.kSmall
+            : PortalIconSize[portalSize];
+
+        const element = ui.UiPortalIcon.Create(prism, text, portalSize);
 
         const unapplied = this.excludeProperties(properties, ['children', 'text']);
 

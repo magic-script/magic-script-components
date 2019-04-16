@@ -31,8 +31,8 @@ export class TextBuilder extends TextContainerBuilder {
 
         const { children, text, style, weight } = properties;
 
-        const finalText = text ? text : this._getText(children);
-        const fontStyle = style === undefined ? DEFAULT_FONT_STYLE : FontStyle[style];
+        const finalText  = text ? text : this._getText(children);
+        const fontStyle  = style  === undefined ? DEFAULT_FONT_STYLE  : FontStyle[style];
         const fontWeight = weight === undefined ? DEFAULT_FONT_WEIGHT : FontWeight[weight];
 
         const element = ui.UiText.Create(prism, finalText, fontStyle, fontWeight);

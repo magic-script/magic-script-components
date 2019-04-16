@@ -61,4 +61,9 @@ export class ElementBuilder {
             throw new TypeError(`Component is not a instance of the required type ${expectedTypes.toString()}`);
         }
     }
+
+    getPropertyValue(name, defaultValue, properties) {
+        const  value = properties[name];
+        return value !== undefined ? value : defaultValue;
+    }
 }

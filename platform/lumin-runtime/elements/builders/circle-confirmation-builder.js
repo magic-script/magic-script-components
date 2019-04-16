@@ -13,11 +13,7 @@ export class CircleConfirmationBuilder extends UiNodeBuilder {
 
         this.validate(undefined, undefined, properties);
 
-        const { height } = properties;
-
-        if (height === undefined) {
-            height = 0;
-        }
+        const height = this.getPropertyValue('height', 0.0, properties);
 
         const element = ui.UiCircleConfirmation.Create(prism, height);
         
