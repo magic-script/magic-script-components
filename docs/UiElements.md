@@ -4,6 +4,40 @@
 
 > Properties without *`Default Value`* are required !
 
+### Common Properties
+
+Name | Type | Default Value | LRT Name | LRT type  
+:-----|:------|:---------------:|:----------|:---------
+name | string | empty string | Name | string
+position | vec3 | [ 0, 0, 0 ] | LocalPosition | vec3
+rotation | quat | [ 0, 0, 0, 0 ] | LocalRotation | quat
+scale | vec3 |  | LocalScale | vec3
+transform | mat4 | | LocalTransform | mat4
+visible | boolean | true | Visible | boolean
+
+### Common Properties for Ui elements
+Name | Type | Default Value | LRT Name | LRT type  
+:-----|:------|:---------------:|:----------|:---------
+alignment | string | | Alignment | lumin.Alignment
+enabled | boolean | | Enabled | boolean
+
+### Common Events for the Ui elements
+- onActivate
+- onPressed
+- onLongPress
+- onRelease
+- onHoverEnter
+- onHoverExit
+- onHoverMove
+- onEnabled
+- onDisabled
+- onFocusGained
+- onFocusLost
+- onFocusInput
+- onUpdate
+- onDeleted
+
+---
 ## UiText
 
 ### Tag: `<text>`
@@ -83,6 +117,9 @@ Name | Type | Default Value | LRT Name | LRT type
 -----|------|:-------------:|----------|---------
 width | number | 0 | Width | number
 height | number | 0 | Height | number
+
+### Events
+- onScrollChanged
 ---
 
 ## UiListViewItem
