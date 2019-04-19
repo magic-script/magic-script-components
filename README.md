@@ -7,7 +7,7 @@ MagicScript Component Framework
 
 2. Install dependencies:
 - `npm install magic-script-components`
-- `npm install @babel/core @babel/plugin-transform-react-jsx rollup-plugin-babel`
+- `npm install --save-dev @babel/core @babel/plugin-transform-react-jsx rollup-plugin-babel`
 
 3. Add `.babelrc` file with the following configuration:
 ```
