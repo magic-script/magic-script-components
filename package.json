@@ -1,10 +1,10 @@
 {
   "name": "magic-script-components",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "MagicScript Component Framework",
   "module": "index.js",
   "dependencies": {
-    "magic-script-polyfills": "^0.4.0",
+    "magic-script-polyfills": "^1.0.0",
     "react": "^16.8.3",
     "react-reconciler": "^0.20.2"    
   },
