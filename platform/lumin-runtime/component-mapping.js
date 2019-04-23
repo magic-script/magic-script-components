@@ -48,7 +48,7 @@ export default {
         'scrollView': () => new ScrollViewBuilder(),
         'listView': () => new ListViewBuilder(),
         'listViewItem': () => new ListViewItemBuilder(),
-        'model': () => new ModelBuilder,
+        'model': () => new ModelBuilder(),
 
         // Phase 2
         'spinner': () => new LoadingSpinnerBuilder(),
