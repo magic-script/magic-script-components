@@ -7,6 +7,7 @@ import { PrimitiveTypeProperty } from '../properties/primitive-type-property.js'
 
 import { Alignment } from '../../types/alignment.js';
 import { ViewMode } from '../../types/view-mode.js';
+// import { ViewMode as luminViewMode } from 'lumin';
 
 const DEFAULT_FRAME_WIDTH = 512;
 const DEFAULT_FRAME_HEIGHT = 512;
@@ -39,12 +40,12 @@ export class VideoBuilder extends QuadNodeBuilder {
             ? lumin.ViewMode.kFullArea
             : ViewMode[viewMode];
         
-
         const element = prism.createVideoNode(width, height);
+        const statusCode = element.setVideoPath(videoPath);
+        // console.log(`setVideoPath ${videoPath} result: ${statusCode}`);
 
-        element.setVideoPath(videoPath);
-        element.setViewMode(ViewMode.kFullArea);
-        element.setVolume(1.0);
+        element.setViewMode(viewMode);
+        element.setVolume(volume);
 
         const unapplied = this.excludeProperties(properties, ['width', 'height', 'volume', 'viewMode', 'videoPath']);
 

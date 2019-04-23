@@ -1,17 +1,54 @@
 import { ui } from 'lumin';
 
 import { TransformNodeBuilder } from './transform-node-builder.js';
+import { ArrayProperty } from '../properties/array-property.js';
+import { ClassProperty } from '../properties/class-property.js';
 import { EnumProperty } from '../properties/enum-property.js';
 import { PrimitiveTypeProperty } from '../properties/primitive-type-property.js';
+import { PropertyDescriptor } from '../properties/property-descriptor.js';
 
 import { Alignment } from '../../types/alignment.js'
+import { GravityWellSnap } from '../../types/gravity-well-snap.js';
+import { FocusRequest } from '../../types/focus-request.js';
+import { RenderingLayer } from '../../types/rendering-layer.js';
+import { SoundEvent } from '../../types/sound-event.js';
 
 export class UiNodeBuilder extends TransformNodeBuilder {
     constructor(){
         super();
 
-        this._propertyDescriptors['enabled'] = new PrimitiveTypeProperty('enabled', 'setEnabled', true, 'boolean');
+        // RenderingLayer - second setter
+
         this._propertyDescriptors['alignment'] = new EnumProperty('alignment', 'setAlignment', true, Alignment, 'Alignment');
+        this._propertyDescriptors['activateResponse'] = new EnumProperty('activateResponse', 'setOnActivateResponse', false, FocusRequest, 'FocusRequest');
+        this._propertyDescriptors['renderingLayer'] = new EnumProperty('renderingLayer', 'setRenderingLayer', true, RenderingLayer, 'RenderingLayer');
+        this._propertyDescriptors['enabled'] = new PrimitiveTypeProperty('enabled', 'setEnabled', true, 'boolean');
+        this._propertyDescriptors['eventPassThrough'] = new PrimitiveTypeProperty('eventPassThrough', 'setEventPassThrough', true, 'boolean');
+        this._propertyDescriptors['eventPassThroughChildren'] = new PrimitiveTypeProperty('eventPassThroughChildren', 'setEventPassThroughChildren', true, 'boolean');
+        this._propertyDescriptors['gravityWellEnabled'] = new PrimitiveTypeProperty('gravityWellEnabled', 'setGravityWellEnabled', true, 'boolean');
+
+        // EventSoundID
+        const eventSoundProperties = [
+            new EnumProperty('soundEvent', undefined, undefined, SoundEvent, 'SoundEvent'),
+            new PrimitiveTypeProperty('soundName', undefined, undefined, 'string')            
+        ];
+
+        this._propertyDescriptors['eventSoundId'] = new ClassProperty('eventSoundId', 'setEventSoundID', false, eventSoundProperties);
+
+        // GravityWellProperties setup
+        const shapeProperties = [
+            new ArrayProperty('size', undefined, undefined, 'vec2'),
+            new ArrayProperty('offset', undefined, undefined, 'vec3'),
+            new PrimitiveTypeProperty('roundness', undefined, undefined, 'number')
+        ];
+
+        const gravityWellProperties = [
+            new ClassProperty('shape', undefined, undefined, shapeProperties),
+            new EnumProperty('snap', undefined, undefined, GravityWellSnap, 'GravityWellSnap'),
+            new PrimitiveTypeProperty('internalSnap', undefined, undefined, 'boolean')
+        ];
+
+        this._propertyDescriptors['gravityWellProperties'] = new ClassProperty('gravityWellProperties', 'setGravityWellProperties', true, gravityWellProperties);
     }
 
     create(prism, properties) {
@@ -29,13 +66,29 @@ export class UiNodeBuilder extends TransformNodeBuilder {
     //     super.update(element, oldProperties, newProperties);
     // }
 
-    excludeProperties(properties, exclude) {
-        const subset = Object.assign({}, properties);
-        exclude.forEach(name => {
-            if (properties.hasOwnProperty(name) !== undefined) {
-                delete subset[name]
-            }
-        });
-        return subset;
+    validate(element, oldProperties, newProperties) {
+        super.validate(element, oldProperties, newProperties);
+
+        this.validateOnActivateResponse(element, oldProperties, newProperties);
+    }
+
+    validateOnActivateResponse(element, oldProperties, newProperties) {
+        const focusRequest = newProperties[onActivateResponse];
+        const message = `The provided onActivateResponse ${focusRequest} is not a valid value`;
+        PropertyDescriptor.throwIfPredicateFails(focusRequest, message, validator.validateFocusRequest);
+    }
+
+    setOnActivateResponse(element, oldProperties, newProperties) {
+        const value = newProperties[onActivateResponse];
+        const focusRequest = FocusRequest[value];
+        const onActivateResponse = new OnActivateResponse(focusRequest);
+
+        element.setOnActivateResponse(onActivateResponse);
+    }
+
+    setEventSoundID(element, oldProperties, newProperties) {
+        const { soundEvent, soundName } = newProperties.eventSoundId;
+
+        element.setEventSoundID(SoundEvent[soundEvent], soundName);
     }
 }

@@ -2,7 +2,10 @@ import { TransformNode } from 'lumin';
 
 import { ElementBuilder } from './element-builder.js';
 import { ArrayProperty } from '../properties/array-property.js';
+import { EnumProperty } from '../properties/enum-property.js';
 import { PrimitiveTypeProperty } from '../properties/primitive-type-property.js';
+
+import { CursorHoverState } from '../../types/cursor-hover-state.js';
 
 import { validator } from '../../utilities/validator.js';
 
@@ -11,21 +14,32 @@ export class TransformNodeBuilder extends ElementBuilder {
         super();
 
         this._propertyDescriptors['name'] = new PrimitiveTypeProperty('name', 'setName', true, 'string');
-        this._propertyDescriptors['visible'] = new PrimitiveTypeProperty('visible', 'setVisible', false, 'boolean');
-        this._propertyDescriptors['position'] = new ArrayProperty('position', 'setLocalPosition', true, 'vec3');
-        this._propertyDescriptors['rotation'] = new ArrayProperty('rotation', 'setLocalRotation', true, 'quat');
-        this._propertyDescriptors['scale'] = new ArrayProperty('scale', 'setLocalScale', true, 'vec3');
-        this._propertyDescriptors['transform'] = new ArrayProperty('transform', 'setLocalTransform', true, 'mat4');
+        this._propertyDescriptors['parentedBoneName'] = new PrimitiveTypeProperty('parentedBoneName', 'setParentedBoneName', true, 'string');
+        this._propertyDescriptors['skipRaycast'] = new PrimitiveTypeProperty('skipRaycast', 'setSkipRaycast', true, 'boolean');
+        this._propertyDescriptors['triggerable'] = new PrimitiveTypeProperty('triggerable', 'setTriggerable', true, 'boolean');
+        this._propertyDescriptors['visible'] = new PrimitiveTypeProperty('visible', 'setVisible', true, 'boolean');
+        this._propertyDescriptors['visibilityInherited'] = new PrimitiveTypeProperty('visibilityInherited', 'setVisibilityInherited', true, 'boolean');
+        this._propertyDescriptors['anchorPosition'] = new ArrayProperty('anchorPosition', 'setAnchorPosition', true, 'vec3');
+        this._propertyDescriptors['localPosition'] = new ArrayProperty('localPosition', 'setLocalPosition', true, 'vec3');
+        this._propertyDescriptors['localRotation'] = new ArrayProperty('localRotation', 'setLocalRotation', true, 'quat');
+        this._propertyDescriptors['localScale'] = new ArrayProperty('localScale', 'setLocalScale', true, 'vec3');
+        this._propertyDescriptors['localTransform'] = new ArrayProperty('localTransform', 'setLocalTransform', true, 'mat4');
+        this._propertyDescriptors['cursorHoverState'] = new EnumProperty('cursorHoverState', 'setCursorHoverState', true, CursorHoverState, 'CursorHoverState');
     }
 
     // update(element, oldProperties, newProperties) {
     //     // this.throwIfNotInstanceOf(element, TransformNode);
     //     super.update(element, oldProperties, newProperties);
     // }
-    
-    setVisible(element, oldProperties, newProperties) {
-        // Propagate visibility to children by default
-        element.setVisible(newProperties.visible, true);
+
+    excludeProperties(properties, exclude) {
+        const subset = Object.assign({}, properties);
+        exclude.forEach(name => {
+            if (properties.hasOwnProperty(name) !== undefined) {
+                delete subset[name]
+            }
+        });
+        return subset;
     }
 
     throwIfInvalidPrism(prism) {

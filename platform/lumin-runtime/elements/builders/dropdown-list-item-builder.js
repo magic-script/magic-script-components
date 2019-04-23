@@ -1,7 +1,6 @@
 import { ui } from 'lumin';
 
 import { PropertyDescriptor } from '../properties/property-descriptor.js';
-import { PrimitiveTypeProperty } from '../properties/primitive-type-property.js';
 
 export class DropdownListItemBuilder {
 

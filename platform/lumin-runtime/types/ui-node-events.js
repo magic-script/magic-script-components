@@ -7,7 +7,7 @@
 export const UiNodeEvents = {
     'onActivate': 'onActivateSub',
     'onClick': 'onActivateSub',
-    'onPressed': 'onPressedSub',
+    'onPress': 'onPressedSub',
     'onLongPress': 'onLongPressSub',
     'onRelease': 'onReleasedSub',
     'onHoverEnter': 'onHoverEnterSub',

@@ -56,7 +56,7 @@ export class ToggleBuilder extends TextContainerBuilder {
 
         const type = newProperties.type;
         const message = `The provided toggle type ${type} is not a valid value`;
-        super._throwIfPredicateFails(type, message, validator.validateTogglelType);
+        PropertyDescriptor.throwIfPredicateFails(type, message, validator.validateTogglelType);
     }
 }
 
