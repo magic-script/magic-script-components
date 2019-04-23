@@ -29,7 +29,7 @@ export class ButtonBuilder extends TextContainerBuilder {
         const height = this.getPropertyValue('height', 0.0, properties);
         const roundness = this.getPropertyValue('roundness', 1.0, properties);
 
-        const element = ui.UiButton.Create(prism, finalText, width, height, roundness);
+        const element = ui.UiButton.Create(prism, text, width, height, roundness);
 
         const unapplied = this.excludeProperties(properties, ['children', 'text', 'width', 'height', 'roundness']);
 
