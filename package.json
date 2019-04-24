@@ -27,7 +27,7 @@
     "magic-script"
   ],
   "author": "Magic Leap",
-  "license": "MIT",
+  "license": "Apache 2.0",
   "bugs": {
     "url": "https://github.com/magic-script/magic-script-components/issues"
   },
