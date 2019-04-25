@@ -6,6 +6,8 @@ import { TextChildrenProperty } from '../properties/text-children-property.js';
 
 import { EclipseLabelType } from '../../types/eclipse-label-type.js';
 
+import { validator } from '../../utilities/validator.js';
+
 export class TabBuilder extends TextContainerBuilder {
 
     create(prism, properties) {

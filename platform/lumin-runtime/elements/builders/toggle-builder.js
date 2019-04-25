@@ -6,6 +6,8 @@ import { PropertyDescriptor } from '../properties/property-descriptor.js';
 import { TextChildrenProperty } from '../properties/text-children-property.js';
 import { ToggleType } from '../../types/toggle-type.js';
 
+import { validator } from '../../utilities/validator.js';
+
 export class ToggleBuilder extends TextContainerBuilder {
     constructor(){
         super();

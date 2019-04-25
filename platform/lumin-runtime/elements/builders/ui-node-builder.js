@@ -13,6 +13,8 @@ import { FocusRequest } from '../../types/focus-request.js';
 import { RenderingLayer } from '../../types/rendering-layer.js';
 import { SoundEvent } from '../../types/sound-event.js';
 
+import { validator } from '../../utilities/validator.js';
+
 export class UiNodeBuilder extends TransformNodeBuilder {
     constructor(){
         super();

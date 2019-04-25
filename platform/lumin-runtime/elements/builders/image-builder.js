@@ -6,6 +6,8 @@ import { ArrayProperty } from '../properties/array-property.js';
 import { PrimitiveTypeProperty } from '../properties/primitive-type-property.js';
 import { PropertyDescriptor } from '../properties/property-descriptor.js';
 
+import { validator } from '../../utilities/validator.js';
+
 export class ImageBuilder extends UiNodeBuilder {
     constructor(){
         super();

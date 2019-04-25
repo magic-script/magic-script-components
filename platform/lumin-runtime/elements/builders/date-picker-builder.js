@@ -6,6 +6,7 @@ import { ArrayProperty } from '../properties/array-property.js';
 import { PropertyDescriptor } from '../properties/property-descriptor.js';
 
 import { DateFormatConverter } from '../../types/date-format.js';
+import { validator } from '../../utilities/validator.js';
 
 const DEFAULT_DATE_FORMAT = 'MM/DD/YYYY';
 
