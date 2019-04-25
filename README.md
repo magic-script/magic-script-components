@@ -1,15 +1,21 @@
-# magic-script-components
+# MagicScript Components
+
+[![License](http://img.shields.io/:license-Apache%202.0-blue.svg?style=flat-square)](LICENSE)
+
 MagicScript Component Framework
 
 # Configuration steps
+
 1. Add `.npmrc` file with reference to the internal npm registry
-    `registry=https://nexus.magicleap.blue/repository/npm-group/`
+   `registry=https://nexus.magicleap.blue/repository/npm-group/`
 
 2. Install dependencies:
+
 - `npm install magic-script-components`
 - `npm install --save-dev @babel/core @babel/plugin-transform-react-jsx rollup-plugin-babel`
 
 3. Add `.babelrc` file with the following configuration:
+
 ```
 {
     "plugins": [
@@ -20,6 +26,7 @@ MagicScript Component Framework
 ```
 
 4. Add `babel` to the `rollup.config.js` file:
+
 ```
 import babel from 'rollup-plugin-babel';
 import resolve from 'rollup-plugin-node-resolve';
@@ -42,7 +49,9 @@ export default {
 ```
 
 # Use example:
+
 1. Create file `app.js`:
+
 ```
 import React from 'react';
 
@@ -71,6 +80,7 @@ export class MyApp extends React.Component {
 ```
 
 2. Bootstrap 'MyApp' component from `main.js`:
+
 ```
 import 'magic-script-polyfills';
 import React from 'react';
@@ -82,13 +92,21 @@ mxs.bootstrap(<MyApp type='landscape' volumeSize={[1,1,1]} caption='My App Capti
 ```
 
 3. Define global `process`:
-  - Add file `global-scope.js` to `src` folder
-  ```
+
+- Add file `global-scope.js` to `src` folder
+
+```
 globalThis.process = { env: { NODE_ENV:"development" } };
 export default process;
-  ```
-  - Import `process` to `main.js` at the top of the file:
-  ```
+```
+
+- Import `process` to `main.js` at the top of the file:
+
+```
 import 'magic-script-polyfills';
 import process from './global-scope.js';
-  ```
+```
+
+## License
+
+This project is licensed under the Apache License, Version 2.0 - see the [LICENSE](LICENSE) file for details
