@@ -1,5 +1,5 @@
 # Contributing Guidelines and Agreement for MagicScript
-To ensure the health of the MagicScript ecosystem, in addition to the Apache License 2.0, Contributors to MagicScript must additionally agree to, and follow, these guidelines.
+To ensure the health of the MagicScript ecosystem, in addition to the [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0), Contributors to MagicScript must additionally agree to, and follow, these guidelines.
 
 MagicScript is a community effort: it can only be great if we all help out in one way or another. If you feel like you aren't experienced enough to contribute, you can still make an impact by:
 
