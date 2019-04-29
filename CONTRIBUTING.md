@@ -31,7 +31,7 @@ Per Item #2 above, if your Contribution includes any upstream dependencies, plea
 1. the name(s) of the author(s) of the upstream dependency and any accompanying copyright notice(s);
 2. the name and version of the dependency;
 3. a copy of the license under which you acquired the dependency; and
-4. any other documentation (e.g., NOTICES or LICENSE files) required to be included in downstream distributions under the dependecy’s license.
+4. any other documentation (e.g., [NOTICE](NOTICE) or [LICENSE](LICENSE) files) required to be included in downstream distributions under the dependecy’s license.
 
 # Attribution of Changes
 When contributors submit a change to a MagicScript project, after that change is approved, other developers with commit access may commit it for the author. When doing so, it is important to retain correct attribution of the contribution. Generally speaking, Git handles attribution automatically.
