@@ -75,7 +75,7 @@ export class UiNodeBuilder extends TransformNodeBuilder {
     }
 
     validateOnActivateResponse(element, oldProperties, newProperties) {
-        const focusRequest = newProperties[onActivateResponse];
+        const focusRequest = FocusRequest[newProperties.activateResponse];
         const message = `The provided onActivateResponse ${focusRequest} is not a valid value`;
         PropertyDescriptor.throwIfPredicateFails(focusRequest, message, validator.validateFocusRequest);
     }
