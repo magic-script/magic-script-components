@@ -81,9 +81,8 @@ export class UiNodeBuilder extends TransformNodeBuilder {
     }
 
     setOnActivateResponse(element, oldProperties, newProperties) {
-        const value = newProperties[onActivateResponse];
-        const focusRequest = FocusRequest[value];
-        const onActivateResponse = new OnActivateResponse(focusRequest);
+        const focusRequest = FocusRequest[newProperties.activateResponse];
+        const onActivateResponse = new ui.OnActivateResponse(focusRequest);
 
         element.setOnActivateResponse(onActivateResponse);
     }
