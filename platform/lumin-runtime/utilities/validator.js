@@ -1,6 +1,9 @@
+// Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
+
 import { Prism } from 'lumin';
 
 import { Alignment } from '../types/alignment.js';
+import { CursorEdgeScrollMode } from '../types/cursor-edge-scroll-mode.js';
 import { CursorHoverState } from '../types/cursor-hover-state.js';
 import { DateFormat } from '../types/date-format.js';
 import { DialogType } from '../types/dialog-type.js';
@@ -13,6 +16,7 @@ import { LoadingSpinnerType } from '../types/loading-spinner-type.js';
 import { RenderingLayer } from '../types/rendering-layer.js';
 import { PortalIconSize } from '../types/portal-icon-size.js';
 import { ScrollBarVisibility } from '../types/scroll-bar-visibility.js';
+import { ScrollDirection } from '../types/scroll-direction.js';
 import { Side } from '../types/side.js';
 import { SoundEvent } from '../types/sound-event.js';
 import { SystemIcons } from '../types/system-icons.js';
@@ -29,6 +33,7 @@ export const validator = {
     validatePrism: prism => prism instanceof Prism,
 
     validateAlignment: value => validate(value, Alignment),
+    validateCursorEdgeScrollMode: value => validate(value, CursorEdgeScrollMode),
     validateCursorHoverState: value => validate(value, CursorHoverState),
     validateDateFormat: value => (typeof value === 'string') && DateFormat.includes(value),
     validateDialogType: value => validate(value, DialogType),
@@ -42,6 +47,7 @@ export const validator = {
     validatePortalIconSize: value => validate(value, PortalIconSize),
     validateRenderingLayer: value => validate(value, RenderingLayer),
     validateScrollBarVisibility: value => validate(value, ScrollBarVisibility),
+    validateScrollDirection: value => validate(value, ScrollDirection),
     validateSide: value => validate(value, Side),
     validateSystemIcon: value => validate(value, SystemIcons),
     validateSoundEvent: value => validate(value, SoundEvent),

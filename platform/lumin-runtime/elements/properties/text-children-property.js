@@ -1,3 +1,5 @@
+// Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
+
 import { PropertyDescriptor } from './property-descriptor.js';
 
 export class TextChildrenProperty extends PropertyDescriptor {

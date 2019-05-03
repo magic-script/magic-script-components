@@ -1,3 +1,5 @@
+// Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
+
 import { ui } from 'lumin';
 import { Alignment } from '../../types/alignment';
 
@@ -14,9 +16,21 @@ export class PageViewBuilder extends UiNodeBuilder {
         this._propertyDescriptors['defaultPageAlignment'] = new EnumProperty('defaultPageAlignment', 'setDefaultPageAlignment', true, Alignment, 'Alignment');
         this._propertyDescriptors['defaultPagePadding'] = new ArrayProperty('defaultPagePadding', 'setDefaultPagePadding', true, 'vec4');
 
-        // Composite
-        // this._propertyDescriptors['pageAlignment'] = new EnumProperty('pageAlignment', 'setDefaultPageAlignment', true, Alignment, 'Alignment');
-        // this._propertyDescriptors['pagePadding'] = new ArrayProperty('pagePadding', 'setDefaultPagePadding', true, 'vec4');
+        // pageAlignment
+        const pageAlignmentProperties = [
+            new PrimitiveTypeProperty('index', undefined, undefined, 'number'),
+            new EnumProperty('alignment', undefined, undefined, Alignment, 'Alignment')
+        ];
+
+        this._propertyDescriptors['pageAlignment'] = new ClassProperty('pageAlignment', 'setPageAlignment', false, pageAlignmentProperties);
+
+        // pagePadding
+        const pagePaddingProperties = [
+            new PrimitiveTypeProperty('index', undefined, undefined, 'number'),
+            new ArrayProperty('padding', undefined, undefined, 'vec4')
+        ];
+
+        this._propertyDescriptors['pagePadding'] = new ClassProperty('pagePadding', 'setPagePadding', false, pagePaddingProperties);
     }
 
     create(prism, properties) {
@@ -47,6 +61,16 @@ export class PageViewBuilder extends UiNodeBuilder {
         super.validate(element, oldProperties, newProperties);
 
         this._validateSize(newProperties);
+    }
+
+    setPageAlignment(element, oldProperties, newProperties) {
+        const { index, alignment } = newProperties.pageAlignment;
+        element.setPageAlignment(index, alignment);
+    }
+
+    setPagePadding(element, oldProperties, newProperties) {
+        const { index, padding } = newProperties.pagePadding;
+        element.setPagePadding(index, padding);
     }
 
     _validateSize(properties) {

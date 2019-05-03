@@ -1,5 +1,7 @@
+// Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
+
 import Reconciler from 'react-reconciler';
-import mxs from '../index.js';
+import mxs from '../main.js';
 
 // Flow type definitions ------------------------------------------------------
 //  Type = string;
@@ -39,7 +41,7 @@ function createInstance(type, props, rootContainerInstance, hostContext, interna
   console.log(hostContext);
   console.log(internalInstanceHandle);
   
-  return mxs._nativeFactory.createComponent(type, rootContainerInstance.prism, props);
+  return mxs._nativeFactory.createElement(type, rootContainerInstance, props);
 }
 
 // Function: This function is used to create separate text nodes if the target allows only creating text in separate text nodes
@@ -66,13 +68,7 @@ function appendInitialChild(parentInstance, child) {
   console.log(parentInstance);
   console.log(child);
 
-  if (typeof child === 'string') {
-    parentInstance.setText(child);
-  } else if (typeof child === 'number') {
-    parentInstance.setText(child.toString());
-  } else {
-    parentInstance.addChild(child);
-  }
+  mxs._nativeFactory.addChildElement(parentInstance, child);
 }
 
 // Function: finalizeInitialChildren
@@ -116,7 +112,6 @@ function getChildHostContext(parentHostContext, type, rootContainerInstance) {
   // React-360
   // return {};
 
-  react-native-renderer
   const isInAParentText = type === 'RCTText' ||  type === 'RCTVirtualText';
   return (isInAParentText !== parentHostContext.isInAParentText)
     ? { isInAParentText }
@@ -206,13 +201,7 @@ function appendChild(parentInstance, child) {
   console.log(parentInstance);
   console.log(child);
 
-  if (typeof child === 'string') {
-    parentInstance.setText(child);
-  } else if (typeof child === 'number') {
-    parentInstance.setText(child.toString());
-  } else {
-    parentInstance.addChild(child);
-  }
+  mxs._nativeFactory.addChildElement(parentInstance, child);
 }
 
 // Function: appendChildToContainer
@@ -226,7 +215,7 @@ function appendChildToContainer(container, child) {
   console.log(container);
   console.log(child);
 
-  container.parent.addChild(child);
+  mxs._nativeFactory.appendChildToContainer(container, child);
 }
 
 // Function: commitTextUpdate
@@ -274,11 +263,7 @@ function commitUpdate(instance, updatePayload, type, oldProps, newProps, interna
   console.log(oldProps);
   console.log(newProps);
 
-  // if (type === 'text') {
-  //   instance.setText(newProps.children.toString());
-  // } 
-
-  mxs._nativeFactory.updateComponent(type, instance, oldProps, newProps);
+  mxs._nativeFactory.updateElement(type, instance, oldProps, newProps);
 }
 
 // Function: insertBefore
@@ -312,11 +297,7 @@ function insertInContainerBefore(container, child, beforeChild) {
 function removeChild(parentInstance, child) {
   console.log('removeChild');
   
-  if (typeof child === 'string' || typeof child === 'number')  {
-    parentInstance.setText('');
-  } else {
-    parentInstance.removeChild(child);
-  }
+  mxs._nativeFactory.removeChildElement(parentInstance, child);
 }
 
 // Function: removeChildFromContainer
@@ -329,7 +310,7 @@ function removeChildFromContainer(parentInstance, child) {
   logNotImplemented('removeChildFromContainer');
   console.log(parentInstance);
   console.log(child);
-  // parentInstance.parent.removeChild(child);
+  mxs._nativeFactory.removeChildFromContainer(parentInstance, child);
 }
 
 // Function: resetTextContent

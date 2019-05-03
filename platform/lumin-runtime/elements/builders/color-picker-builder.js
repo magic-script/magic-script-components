@@ -1,3 +1,5 @@
+// Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
+
 import { ui, VEC4_ONE } from 'lumin';
 
 import { UiNodeBuilder } from './ui-node-builder.js';

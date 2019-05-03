@@ -1,6 +1,8 @@
 import { RenderNode } from 'lumin';
 import { validator } from '../../utilities/validator.js';
 
+// Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
+
 import { TransformNodeBuilder } from './transform-node-builder.js';
 import { EnumProperty } from '../properties/enum-property.js';
 import { PrimitiveTypeProperty } from '../properties/primitive-type-property.js';

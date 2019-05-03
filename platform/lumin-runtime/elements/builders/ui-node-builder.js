@@ -1,3 +1,5 @@
+// Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
+
 import { ui } from 'lumin';
 
 import { TransformNodeBuilder } from './transform-node-builder.js';
@@ -75,7 +77,7 @@ export class UiNodeBuilder extends TransformNodeBuilder {
     }
 
     validateOnActivateResponse(element, oldProperties, newProperties) {
-        const focusRequest = FocusRequest[newProperties.activateResponse];
+        const focusRequest = newProperties.activateResponse;
         const message = `The provided onActivateResponse ${focusRequest} is not a valid value`;
         PropertyDescriptor.throwIfPredicateFails(focusRequest, message, validator.validateFocusRequest);
     }
