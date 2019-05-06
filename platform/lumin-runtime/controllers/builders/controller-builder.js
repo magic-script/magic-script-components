@@ -10,7 +10,7 @@ export class ControllerBuilder {
         this._eventHandlerNames = ['onPreAttachPrism', 'onAttachPrism', 'onDetachPrism', 'onEvent', 'onUpdate'];
     }
 
-    create(properties) {
+    create(properties) {        
         const controller = new MxsPrismController(properties);
         
         this.update(controller, undefined, properties)

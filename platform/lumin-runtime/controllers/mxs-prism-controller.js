@@ -7,11 +7,11 @@ export class MxsPrismController extends PrismController {
     constructor(properties) {
         super(properties.name);
 
-        this.rootChild;
+        this._children = [];
 
-        this.initialProperties = properties;
+        this._initialProperties = properties;
 
-        this.eventHandlers = {
+        this._eventHandlers = {
             onPreAttachPrism: [],
             onAttachPrism: [],
             onDetachPrism: [],
@@ -23,18 +23,14 @@ export class MxsPrismController extends PrismController {
     addChild(child) {
         const root = this.getRoot();
         if (root === undefined || root === null) {
-            if (this.rootChild === undefined) {
-                this.rootChild = child;
-            } else {
-                this.rootChild.addChild(child);
-            }
+            this._children.push(child);
         } else {
             root.addChild(child);
         }
     }
 
     addListener(eventName, eventHandler) {
-        const handlers = this.eventHandlers[eventName];
+        const handlers = this._eventHandlers[eventName];
         if (handlers !== undefined) {
             handlers.push(eventHandler);
         } else {
@@ -43,7 +39,7 @@ export class MxsPrismController extends PrismController {
     }
 
     removeListener(eventName, eventHandler) {
-        const handlers = this.eventHandlers[eventName];
+        const handlers = this._eventHandlers[eventName];
         if (handlers !== undefined) {
             const index = handlers.indexOf(eventHandler);
             handlers.splice(index, 1);
@@ -53,36 +49,37 @@ export class MxsPrismController extends PrismController {
     }
 
     onPreAttachPrism(prism) {
-        this.eventHandlers.onPreAttachPrism.forEach(handler => handler(prism));
+        this._eventHandlers.onPreAttachPrism.forEach(handler => handler(prism));
     }
 
     onAttachPrism(prism) {
         const root = this.getRoot();
         
-        if (this.initialProperties !== undefined) {
+        if (this._initialProperties !== undefined) {
             const builder = new TransformNodeBuilder();
-            builder.update(root, undefined, this.initialProperties);
+            builder.update(root, undefined, this._initialProperties);
 
-            this.initialProperties = undefined;            
+            this._initialProperties = undefined;            
         }
 
-        if (this.rootChild !== undefined) {
-            root.addChild(this.rootChild);
+        if (this._children !== undefined) {
+            this._children.forEach(child => root.addChild(child));
+            this._children = undefined;
         }
 
-        this.eventHandlers.onAttachPrism.forEach(handler => handler(prism));
+        this._eventHandlers.onAttachPrism.forEach(handler => handler(prism));
     }
 
     onDetachPrism(prism) {
-        this.eventHandlers.onDetachPrism.forEach(handler => handler(prism));
+        this._eventHandlers.onDetachPrism.forEach(handler => handler(prism));
     }    
 
     onEvent(event) {
-        this.eventHandlers.onEvent.forEach(handler => handler(event));
+        this._eventHandlers.onEvent.forEach(handler => handler(event));
         return false;
     }
     
     onUpdate(delta) {
-        this.eventHandlers.onUpdate.forEach(handler => handler(delta));
+        this._eventHandlers.onUpdate.forEach(handler => handler(delta));
     }
 }

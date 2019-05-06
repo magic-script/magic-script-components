@@ -10,19 +10,14 @@ export class AppPrismController extends PrismController {
         this._containers = new WeakMap();
     }
 
-    onAttachPrism() {
-        // TODO: name should be injected
-        this.getRoot().setName('_root');
-        try {
-            ReactMagicScript.render(this._app, this.getContainer());
-        } catch (error) {
-            console.log(`${error.name} - ${error.message}\n${error.stack}`);
-            throw error;
-        }
+    getRootNodeName(componentName) {
+        return `__root_prism_controller_${componentName.trim().replace(' ', '_')}`;
     }
 
-    onDetachPrism(prism) {
-        this.deleteSceneGraph();
+    findChild(nodeName) {
+        print('AppPrismController.findChild');
+        const root = this.getRoot();
+        return root.getName() === nodeName ? root : root.findChild(nodeName);
     }
 
     getContainer(nodeName) {
@@ -40,8 +35,19 @@ export class AppPrismController extends PrismController {
         return container;
     }
 
-    findChild(nodeName) {
-        const root = this.getRoot();
-        return root.getName() === nodeName ? root : root.findChild(nodeName);
+    onAttachPrism(prism) {
+        const rootNodeName = this.getRootNodeName(this._app.props.name);
+        this.getRoot().setName(rootNodeName);
+
+        try {
+            ReactMagicScript.render(this._app, this.getContainer());
+        } catch (error) {
+            console.log(`${error.name} - ${error.message}\n${error.stack}`);
+            throw error;
+        }
+    }
+
+    onDetachPrism(prism) {
+        this.deleteSceneGraph();
     }
 }

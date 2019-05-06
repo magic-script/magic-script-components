@@ -140,6 +140,7 @@ export class PlatformFactory extends NativeFactory {
     appendChildToContainer(container, child) {
         if (this.isController(child)){
             container.controller.addChildController(child);
+            container.parent.addChild(child.getRoot());
         } else {
             container.controller.getRoot().addChild(child);
         }
