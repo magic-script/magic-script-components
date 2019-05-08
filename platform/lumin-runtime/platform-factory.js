@@ -107,10 +107,15 @@ export class PlatformFactory extends NativeFactory {
             parent.setText(child.toString());
         } else {
             if (this.isController(child)) {
+                // TODO:
+                // If the parent is not a controller
+                // parent.addChild(child.getRoot())
+                // parentContainer.addChildController(child)
                 if ( !this.isController(parent) ) {
                     throw new Error('Adding controller to non-controller parent');
                 }
                 parent.addChildController(child);
+                parent.getRoot().addChild(child.getRoot());
             } else {
                 parent.addChild(child);
             }
@@ -138,6 +143,9 @@ export class PlatformFactory extends NativeFactory {
     }
 
     appendChildToContainer(container, child) {
+        console.log(child);
+        console.log(container);
+
         if (this.isController(child)){
             container.controller.addChildController(child);
             container.parent.addChild(child.getRoot());
