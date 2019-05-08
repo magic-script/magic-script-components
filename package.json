@@ -1,6 +1,6 @@
 {
   "name": "magic-script-components",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "MagicScript Component Framework",
   "module": "index.js",
   "dependencies": {

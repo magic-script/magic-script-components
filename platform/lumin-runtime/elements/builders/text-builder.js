@@ -1,9 +1,12 @@
+// Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
+
 import { ui } from 'lumin';
 import { HorizontalTextAlignment } from '../../types/horizontal-text-alignment.js';
 import { FontStyle, FontWeight } from '../../types/font-style.js';
 import { validator } from '../../utilities/validator.js';
 
 import { TextContainerBuilder } from './text-container-builder.js';
+import { ClassProperty } from '../properties/class-property.js';
 import { EnumProperty } from '../properties/enum-property.js';
 import { PrimitiveTypeProperty } from '../properties/primitive-type-property.js';
 import { PropertyDescriptor } from '../properties/property-descriptor.js';
@@ -15,15 +18,31 @@ export class TextBuilder extends TextContainerBuilder {
     constructor(){
         super();
 
+
+        this._propertyDescriptors['allCaps'] = new PrimitiveTypeProperty('allCaps', 'setAllCaps', true, 'boolean');
+        this._propertyDescriptors['charSpacing'] = new PrimitiveTypeProperty('charSpacing', 'setCharacterSpacing', true, 'number');
+        this._propertyDescriptors['lineSpacing'] = new PrimitiveTypeProperty('lineSpacing', 'setLineSpacing', true, 'number');
         this._propertyDescriptors['textAlignment'] = new EnumProperty('textAlignment', 'setTextAlignment', true, HorizontalTextAlignment, 'HorizontalTextAlignment');
-        this._propertyDescriptors['charSpacing'] = new PrimitiveTypeProperty('iconSize', 'setCharacterSpacing', true, 'number');
-        this._propertyDescriptors['lineSpacing'] = new PrimitiveTypeProperty('iconColor', 'setLineSpacing', true, 'number');
+        this._propertyDescriptors['style'] = new EnumProperty('style', 'setFont', false, FontStyle, 'FontStyle');
+        this._propertyDescriptors['weight'] = new EnumProperty('weight', 'setFont', false, FontWeight, 'FontWeight');
 
-        // TODO:
-        // this._propertyDescriptors['style'] = new EnumProperty('style', 'setFont', true, FontStyle, 'FontStyle');
-        // this._propertyDescriptors['weight'] = new EnumProperty('weight', 'setFont', true, FontWeight, 'FontWeight');
+        const boundsSizeProperties = [
+            new ArrayProperty('boundsSize', undefined, undefined, 'vec4'),
+            new PrimitiveTypeProperty('wrap', undefined, undefined, 'boolean')
+        ];
+
+        this._propertyDescriptors['boundsSize'] = new ClassProperty('boundsSize', 'setBoundsSize', false, boundsSizeProperties);
+
+        const fontParamsProperties = [
+            new EnumProperty('style', undefined, undefined, FontStyle, 'FontStyle'),
+            new EnumProperty('weight', undefined, undefined, FontWeight, 'FontWeight'),
+            new PrimitiveTypeProperty('fontSize', undefined, undefined, 'number'),
+            new PrimitiveTypeProperty('tracking', undefined, undefined, 'number'),
+            new PrimitiveTypeProperty('allCaps', undefined, undefined, 'boolean')
+        ];
+
+        this._propertyDescriptors['fontParams'] = new ClassProperty('fontParams', 'setFontParams', false, fontParamsProperties);
     }
-
 
     create(prism, properties) {
         this.throwIfInvalidPrism(prism);
@@ -44,32 +63,17 @@ export class TextBuilder extends TextContainerBuilder {
         return element;
     }
 
-    update(element, oldProperties, newProperties) {
-        // this.throwIfNotInstanceOf(element, ui.UiText);
-        super.update(element, oldProperties, newProperties);
+    // update(element, oldProperties, newProperties) {
+    //     // this.throwIfNotInstanceOf(element, ui.UiText);
+    //     super.update(element, oldProperties, newProperties);
+    // }
 
-        this._validateFont(newProperties);
-        this._setFont(element, newProperties);
-    }
+    // validate(element, oldProperties, newProperties) {
+    //     super.validate(element, oldProperties, newProperties);
+    // }
 
-    validate(element, oldProperties, newProperties) {
-        super.validate(element, oldProperties, newProperties);
-
-        this._validateFont(newProperties);
-    }
-
-    _validateFont(properties) {
-        const { style, weight } = properties;
-
-        let message = `The provided font style ${style} is not a valid value`;
-        PropertyDescriptor.throwIfPredicateFails(style, message, validator.validateFontStyle);
-
-        message = `The provided font weight ${weight} is not a valid value`;
-        PropertyDescriptor.throwIfPredicateFails(weight, message, validator.validateFontWeight);
-    }
-
-    _setFont(element, properties) {
-        const { style, weight } = properties;
+    setFont(element, oldProperties, newProperties) {
+        const { style, weight } = newProperties;
 
         if (style) {
             const fontStyle = FontStyle[style];
@@ -77,5 +81,19 @@ export class TextBuilder extends TextContainerBuilder {
     
             element.setFont(fontStyle, fontWeight);
         }
+    }
+
+    setBoundsSize(element, oldProperties, newProperties) {
+        let { boundsSize, wrap } = newProperties.wrap;
+
+        if ( !PropertyDescriptor.hasValue(wrap)) {
+            wrap = true;
+        }
+
+        element.setBoundsSize(boundsSize, wrap);
+    }
+
+    setFontParams(element, oldProperties, newProperties) {
+        element.setFontParams(newProperties.fontParams);
     }
 }

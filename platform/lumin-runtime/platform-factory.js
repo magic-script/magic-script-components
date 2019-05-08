@@ -1,7 +1,9 @@
-import { LandscapeApp, ImmersiveApp } from 'lumin';
+// Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
+
+import { LandscapeApp, ImmersiveApp, PrismController } from 'lumin';
 
 import { NativeFactory } from '../../core/native-factory.js';
-import { MxsLandscapeApp } from '../lumin-runtime/MxsLandscapeApp.js';
+import { MxsLandscapeApp } from './mxs-landscape-app.js';
 
 import { UiNodeEvents } from './types/ui-node-events.js';
 
@@ -11,6 +13,12 @@ export class PlatformFactory extends NativeFactory {
 
         // { type, builder }
         this.elementBuilders = {};
+        this.controllerBuilders = {};
+        this.controllers = new WeakMap();
+    }
+
+    isController(element) {
+        return this.controllers[element] !== undefined;
     }
 
     setComponentEvents(element, properties) {
@@ -33,35 +41,125 @@ export class PlatformFactory extends NativeFactory {
         }
     }
 
-    createComponent(name, ...args) {
-      
+    createElement(name, container, ...args) {
         if (typeof name !== 'string')
         {
-            throw new Error('PlatformFactory.createComponent expects "name" to be string');
+            throw new Error('PlatformFactory.createElement expects "name" to be string');
         }
-      
+
+        if (this._mapping.elements[name] !== undefined) {
+            return this._createElement(name, container, ...args)
+        } else if (this._mapping.controllers[name] !== undefined) {
+            return this._createController(name, container, ...args);
+        } else {
+            throw new Error(`Unknown tag: ${name}`);
+        }
+    }
+
+    _createElement(name, container, ...args) {
         if (this.elementBuilders[name] === undefined) {
-            const createBuilder = this._mapping.components[name];
-            
-            if (createBuilder === undefined) {
-                throw new Error(`Unknown component type: ${name}`);
-            }
-
+            const createBuilder = this._mapping.elements[name];
             this.elementBuilders[name] = createBuilder();
-        } 
+        }
 
-        const builder = this.elementBuilders[name];
-
-        const element = builder.create(...args);
+        const prism = container.controller.getPrism();
+        const element = this.elementBuilders[name].create(prism, ...args);
 
         // TODO: Move setComponentEvents to the builders !!!
-        this.setComponentEvents(element, args[1]); // args = [prism, props]
+        this.setComponentEvents(element, args[0]); // args = [props]
 
         return element;
     }
 
-    updateComponent(name, ...args) {
-        this.elementBuilders[name].update(...args);
+    _createController(name, container, ...args) {
+        if (this.controllerBuilders[name] === undefined) {
+            const createBuilder = this._mapping.controllers[name];
+            this.controllerBuilders[name] = createBuilder();
+        }
+
+        const controller = this.controllerBuilders[name].create(...args)
+
+        // Map the controller object with to the tag
+        this.controllers[controller] = name;
+
+        return controller;
+    }
+
+    updateElement(name, ...args) {
+        if (typeof name !== 'string')
+        {
+            throw new Error('PlatformFactory.updateElement expects "name" to be string');
+        }
+
+        if (this._mapping.elements[name] !== undefined) {
+            this.elementBuilders[name].update(...args);
+        } else if (this._mapping.controllers[name] !== undefined) {
+            this.controllerBuilders[name].update(...args);
+        } else {
+            throw new Error(`Unknown tag: ${name}`);
+        }
+    }
+
+    addChildElement(parent, child) {
+        if (typeof child === 'string') {
+            parent.setText(child);
+        } else if (typeof child === 'number') {
+            parent.setText(child.toString());
+        } else {
+            if (this.isController(child)) {
+                // TODO:
+                // If the parent is not a controller
+                // parent.addChild(child.getRoot())
+                // parentContainer.addChildController(child)
+                if ( !this.isController(parent) ) {
+                    throw new Error('Adding controller to non-controller parent');
+                }
+                parent.addChildController(child);
+                parent.getRoot().addChild(child.getRoot());
+            } else {
+                parent.addChild(child);
+            }
+        }
+
+        // TODO: Replace builders with proxies
+        // this.elementBuilders[name].addChild(...args);
+    }
+
+    removeChildElement(parent, child) {
+        if (typeof child === 'string' || typeof child === 'number') {
+            parent.setText('');
+        } else {
+            if (this.isController(child) !== undefined) {
+                if ( !this.isController(parent) ) {
+                    throw new Error('Removing controller from non-controller parent');
+                }
+                parent.removeChildController(child);
+            } else if (this.isController(parent) !== undefined) {
+                parent.getRoot().removeChild(child);
+            } else {
+                parent.removeChild(child);
+            }
+        }
+    }
+
+    appendChildToContainer(container, child) {
+        console.log(child);
+        console.log(container);
+
+        if (this.isController(child)){
+            container.controller.addChildController(child);
+            container.parent.addChild(child.getRoot());
+        } else {
+            container.controller.getRoot().addChild(child);
+        }
+    }
+
+    removeChildFromContainer(container, child) {
+        if (this.isController(child)) {
+            container.controller.removeChildController(child);
+        } else {
+            container.controller.getRoot().removeChild(child);
+        }
     }
 
     createApp(appComponent) {

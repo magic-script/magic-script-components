@@ -1,3 +1,5 @@
+// Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
+
 /**
  * @exports UiNodeEvents
  * @description Represents Magic-Script - Lumin Runtime event mapping for UiNode.
@@ -25,5 +27,6 @@ export const UiNodeEvents = {
     // TextEdit events
     'onCharacterEnter': 'onCharacterEnteredSub',
     'onKeyboardEvent': 'onKeyboardEventSub',
-    'onTextChanged': 'onTextChangedSub'
+    'onTextChanged': 'onTextChangedSub',
+    'onScrollChanged': 'onScrollChangedSub'
 }

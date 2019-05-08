@@ -1,5 +1,7 @@
+// Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
+
 import { LandscapeApp, ui } from 'lumin';
-import { MxsPrismController } from './MxsPrismController.js';
+import { AppPrismController } from './controllers/app-prism-controller.js';
 
 export class MxsLandscapeApp extends LandscapeApp {
     // The 0.5 value is the number of seconds to call `updateLoop` in an interval if
@@ -20,7 +22,7 @@ export class MxsLandscapeApp extends LandscapeApp {
     for (let size of this._prismSize) {
         // TODO: MxsPrismController(this._app.volume);
         // Each controller is responsible for one prism (volume)
-        const controller = new MxsPrismController(this._app);
+        const controller = new AppPrismController(this._app);
         this._prismControllers.push(controller);
 
         const prism = this.requestNewPrism(size);
@@ -34,6 +36,12 @@ export class MxsLandscapeApp extends LandscapeApp {
         controller.onUpdate(delta);
       }
     }
+
+    if ( this._app.props.updateLoop !== undefined
+      && typeof this._app.props.updateLoop === 'function') {
+      this._app.props.updateLoop(delta);
+    }
+
     return true;
   }
 
@@ -43,6 +51,13 @@ export class MxsLandscapeApp extends LandscapeApp {
         controller.onEvent(event);
       }
     }
+
+    if ( this._app.props.eventListener !== undefined
+      && typeof this._app.props.eventListener === 'function') {
+      // TODO: Convert Lumin RT event data to (abstract) Mxs event data
+      this._app.props.eventListener(delta);
+    }
+
     return true;
   }
 
@@ -51,7 +66,7 @@ export class MxsLandscapeApp extends LandscapeApp {
       .find( controller => controller.findChild(nodeName) !== undefined );
 
     if (prismController === undefined) {
-      throw new Error(`Cannot create container for node ${nodeName}`);
+      throw new Error(`Cannot find container for node ${nodeName}`);
     }
 
     return prismController.getContainer(nodeName);

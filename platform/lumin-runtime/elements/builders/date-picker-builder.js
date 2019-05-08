@@ -1,4 +1,5 @@
-import { ui } from 'lumin';
+// Copyright (c) 2019 Magic Leap, Inc. All Rights Reservedimport { ui } from 'lumin';
+
 import { Side } from '../../types/side.js';
 
 import { UiNodeBuilder } from './ui-node-builder.js';

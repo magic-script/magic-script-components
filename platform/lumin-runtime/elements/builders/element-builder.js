@@ -1,3 +1,5 @@
+// Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
+
 export class ElementBuilder {
     constructor() {
         // { name: PropertyDescriptor }
@@ -38,12 +40,22 @@ export class ElementBuilder {
     _setProperty(value, descriptor, element, oldProperties, newProperties) {
         if (descriptor.IsNativeSetter) {
             if (typeof element[descriptor.SetterName] === 'function') {
-                element[descriptor.SetterName](value);
+                try {
+                    element[descriptor.SetterName](value);
+                } catch (error) {
+                    console.lot(error);
+                    throw new Error(`[Native.${descriptor.SetterName}]: ${error.name} - ${error.message}\n${error.stack}`);
+                }
             } else {
                 throw new Error(`${JSON.stringify(element)} does not have method ${descriptor.SetterName}`);
             }
         } else {
-            this[descriptor.SetterName](element, oldProperties, newProperties);
+            try {
+                this[descriptor.SetterName](element, oldProperties, newProperties);
+            } catch (error) {
+                console.lot(error);
+                throw new Error(`[Builder.${descriptor.SetterName}]: ${error.name} - ${error.message}\n${error.stack}`);
+            }
         }
     }
 

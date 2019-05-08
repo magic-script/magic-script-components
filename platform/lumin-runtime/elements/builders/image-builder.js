@@ -1,3 +1,5 @@
+// Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
+
 import { ui } from 'lumin';
 import { SystemIcons } from '../../types/system-icons.js';
 
@@ -16,6 +18,10 @@ export class ImageBuilder extends UiNodeBuilder {
         this._propertyDescriptors['opaque'] = new PrimitiveTypeProperty('opaque', 'setIsOpaque', true, 'boolean');
         this._propertyDescriptors['color'] = new ArrayProperty('color', 'setColor', true, 'vec3');
         this._propertyDescriptors['texCoords'] = new ArrayProperty('texCoords', 'setTexCoords', true, 'vec2');
+
+        // Expects Id
+        this._propertyDescriptors['imageFrameResource'] = new PrimitiveTypeProperty('imageFrameResource', 'setImageFrameResource', true, 'number');
+        this._propertyDescriptors['renderResource'] = new PrimitiveTypeProperty('renderResource', 'setRenderResource', true, 'number');
     }
 
     create(prism, properties) {
@@ -23,15 +29,18 @@ export class ImageBuilder extends UiNodeBuilder {
 
         this.validate(undefined, undefined, properties);
 
-        const { icon, filePath, resourceId, height, width, userFrame, absolutePath } = properties;
+        const { icon, filePath, resourceId, height, width } = properties;
+
+        const absolutePath = this.getPropertyValue('absolutePath', false, properties);
+        const useFrame = this.getPropertyValue('useFrame', false, properties);
 
         let element;
         if (typeof icon === 'string') {
             element = ui.UiImage.Create(prism, SystemIcons[icon], height);
         } else if (resourceId) {
-            element = ui.UiImage.Create(prism, resourceId, width, height, userFrame);
+            element = ui.UiImage.Create(prism, resourceId, width, height, useFrame);
         } else if (filePath) {
-            element = ui.UiImage.Create(prism, filePath, width, height, absolutePath, userFrame);
+            element = ui.UiImage.Create(prism, filePath, width, height, absolutePath, useFrame);
         }
 
         const unapplied = this.excludeProperties(properties, ['icon', 'filePath', 'resourceId', 'height', 'width']);
@@ -45,8 +54,8 @@ export class ImageBuilder extends UiNodeBuilder {
         // this.throwIfNotInstanceOf(element, ui.UiImage);
         super.update(element, oldProperties, newProperties);
 
-        this._validateSize(properties);
-        this._setSize(element, properties);
+        this._validateSize(newProperties);
+        this._setSize(element, newProperties);
     }
 
     validate(element, oldProperties, newProperties) {

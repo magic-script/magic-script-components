@@ -1,13 +1,10 @@
-import { VideoNode } from 'lumin';
-import { validator } from '../../utilities/validator.js';
+// Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
+
+import { ViewMode as luminViewMode } from 'lumin';
 
 import { QuadNodeBuilder } from './quad-node-builder.js';
-import { EnumProperty } from '../properties/enum-property.js';
 import { PrimitiveTypeProperty } from '../properties/primitive-type-property.js';
-
-import { Alignment } from '../../types/alignment.js';
 import { ViewMode } from '../../types/view-mode.js';
-// import { ViewMode as luminViewMode } from 'lumin';
 
 const DEFAULT_FRAME_WIDTH = 512;
 const DEFAULT_FRAME_HEIGHT = 512;
@@ -17,14 +14,11 @@ export class VideoBuilder extends QuadNodeBuilder {
     constructor(){
         super();
 
-        // Looping
-        // TimedTextPath
-        // VideoPath
-        // VideoUri
-        // Volume
-
-        // this._propertyDescriptors['enabled'] = new PrimitiveTypeProperty('enabled', 'setEnabled', true, 'boolean');
-        // this._propertyDescriptors['alignment'] = new EnumProperty('alignment', 'setAlignment', true, Alignment, 'Alignment');
+        this._propertyDescriptors['looping'] = new PrimitiveTypeProperty('looping', 'setLooping', false, 'boolean');
+        this._propertyDescriptors['timedTextPath'] = new PrimitiveTypeProperty('timedTextPath', 'setTimedTextPath', true, 'string');
+        this._propertyDescriptors['videoPath'] = new PrimitiveTypeProperty('videoPath', 'setVideoPath', true, 'string');
+        this._propertyDescriptors['videoUri'] = new PrimitiveTypeProperty('videoUri', 'setVideoUri', true, 'string');
+        this._propertyDescriptors['volume'] = new PrimitiveTypeProperty('volume', 'setVolume', true, 'number');
     }
 
     create(prism, properties) {
@@ -37,27 +31,28 @@ export class VideoBuilder extends QuadNodeBuilder {
         volume = volume === undefined ? DEFAULT_VOLUME       : volume;
 
         viewMode = viewMode === undefined
-            ? lumin.ViewMode.kFullArea
+            ? luminViewMode.kFullArea
             : ViewMode[viewMode];
         
         const element = prism.createVideoNode(width, height);
-        const statusCode = element.setVideoPath(videoPath);
-        // console.log(`setVideoPath ${videoPath} result: ${statusCode}`);
+        const statusCode = element.setVideoPath(videoPath);        
+        print(`setVideoPath ${videoPath} result: ${statusCode}`);
 
         element.setViewMode(viewMode);
         element.setVolume(volume);
 
         const unapplied = this.excludeProperties(properties, ['width', 'height', 'volume', 'viewMode', 'videoPath']);
-
         this.update(element, undefined, unapplied);
 
         return element;
     }
 
-    // update(element, oldProperties, newProperties) {
-    //     // this.throwIfNotInstanceOf(element, RenderNode);
-    //     super.update(element, oldProperties, newProperties);
-    // }
+    update(element, oldProperties, newProperties) {
+        // this.throwIfNotInstanceOf(element, RenderNode);
+        super.update(element, oldProperties, newProperties);
+
+        this.setLooping(element, oldProperties, newProperties)
+    }
 
     // validate(element, oldProperties, newProperties) {
     //     super.validate(element, oldProperties, newProperties);
@@ -66,4 +61,11 @@ export class VideoBuilder extends QuadNodeBuilder {
     //     // PropertyDescriptor.throwIfNotTypeOf(newProperties.height, 'number');
     //     // PropertyDescriptor.throwIfNotTypeOf(newProperties.roundness, 'number');
     // }
+
+    setLooping(element, oldProperties, newProperties) {
+        const looping = newProperties.looping;
+        if ( looping !== undefined ) {
+            element.setLooping(looping ? 1 : 0);
+        }
+    }
 }

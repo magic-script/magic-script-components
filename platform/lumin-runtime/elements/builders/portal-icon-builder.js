@@ -1,3 +1,5 @@
+// Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
+
 import { ui } from 'lumin';
 import { HorizontalTextAlignment } from '../../types/horizontal-text-alignment.js';
 import { validator } from '../../utilities/validator.js';

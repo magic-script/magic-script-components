@@ -1,3 +1,5 @@
+// Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
+
 import { TransformNode } from 'lumin';
 
 import { ElementBuilder } from './element-builder.js';
