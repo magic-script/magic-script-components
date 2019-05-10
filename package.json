@@ -1,12 +1,12 @@
 {
   "name": "magic-script-components",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "MagicScript Component Framework",
   "module": "index.js",
   "dependencies": {
     "magic-script-polyfills": "^1.0.0",
     "react": "^16.8.3",
-    "react-reconciler": "^0.20.2"    
+    "react-reconciler": "^0.20.2"
   },
   "devDependencies": {
     "rollup": "^1.1.2",
@@ -18,7 +18,7 @@
   },
   "publishConfig": {
     "registry": "https://nexus.magicleap.blue/repository/npm-internal/"
-  },  
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/magic-script/magic-script-components.git"
