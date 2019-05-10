@@ -16,7 +16,7 @@ export class LinearLayoutBuilder extends PositionalLayoutBuilder {
     create(prism, properties) {
         this.throwIfInvalidPrism(prism);
 
-        const element = ui.UiLinearLayout.Create(prism, finalText, width, height, roundness);
+        const element = ui.UiLinearLayout.Create(prism);
 
         this.update(element, undefined, properties);
 

@@ -2,13 +2,15 @@
 
 import { ui } from 'lumin';
 import { validator } from '../../utilities/validator.js';
+import { TextContainerBuilder } from './text-container-builder.js';
+
 import { HorizontalTextAlignment } from '../../types/horizontal-text-alignment.js';
+import { FontStyle, FontWeight } from '../../types/font-style.js';
 import { ScrollBarVisibility } from '../../types/scroll-bar-visibility.js';
 import { TextEntryMode } from '../../types/text-entry-mode.js';
-import { FontStyle, FontWeight } from '../../types/font-style.js';
 
-import { TextContainerBuilder } from './text-container-builder.js';
 import { ArrayProperty } from '../properties/array-property.js';
+import { CursorEdgeScrollMode } from '../../types/cursor-edge-scroll-mode.js';
 import { EnumProperty } from '../properties/enum-property.js';
 import { PrimitiveTypeProperty } from '../properties/primitive-type-property.js';
 import { PropertyDescriptor } from '../properties/property-descriptor.js';
@@ -21,8 +23,10 @@ export class TextEditBuilder extends TextContainerBuilder {
         super();
 
         this._propertyDescriptors['textAlignment'] = new EnumProperty('textAlignment', 'setTextAlignment', true, HorizontalTextAlignment, 'HorizontalTextAlignment');
-        this._propertyDescriptors['charSpacing'] = new PrimitiveTypeProperty('iconSize', 'setCharacterSpacing', true, 'number');
-        this._propertyDescriptors['lineSpacing'] = new PrimitiveTypeProperty('iconColor', 'setLineSpacing', true, 'number');
+        this._propertyDescriptors['charLimit'] = new PrimitiveTypeProperty('charLimit', 'setCharacterLimit', true, 'number');
+        this._propertyDescriptors['charSpacing'] = new PrimitiveTypeProperty('charSpacing', 'setCharacterSpacing', true, 'number');
+        this._propertyDescriptors['cursorEdgeScrollMode'] = new EnumProperty('cursorEdgeScrollMode', 'setCursorEdgeScrollMode', true, CursorEdgeScrollMode, 'CursorEdgeScrollMode');
+        this._propertyDescriptors['lineSpacing'] = new PrimitiveTypeProperty('lineSpacing', 'setLineSpacing', true, 'number');
         this._propertyDescriptors['padding'] = new ArrayProperty('padding', 'setTextPadding', true, 'vec4');
         this._propertyDescriptors['hint'] = new PrimitiveTypeProperty('hint', 'setHintText', true, 'string');
         this._propertyDescriptors['hintColor'] = new ArrayProperty('hintColor', 'setHintTextColor', true, 'vec3');
@@ -31,10 +35,28 @@ export class TextEditBuilder extends TextContainerBuilder {
         this._propertyDescriptors['scrolling'] = new PrimitiveTypeProperty('scrolling', 'setScrollingEnabled', true, 'boolean');
         this._propertyDescriptors['textEntry'] = new EnumProperty('textEntry', 'setTextEntryMode', true, TextEntryMode, 'TextEntryMode');
         this._propertyDescriptors['scrollBarVisibility'] = new EnumProperty('scrollBarVisibility', 'setScrollBarVisibilityMode', true, ScrollBarVisibility, 'ScrollBarVisibility');
+        this._propertyDescriptors['scrollSpeed'] = new PrimitiveTypeProperty('scrollSpeed', 'setScrollSpeed', true, 'number');
+        this._propertyDescriptors['scrollValue'] = new PrimitiveTypeProperty('scrollValue', 'setScrollValue', true, 'number');
+        // font
+        // const fontProperties = [
+        //      new EnumProperty('style', undefined, undefined, FontStyle, 'FontStyle'),
+        //      new EnumProperty('weight', undefined, undefined, FontWeight, 'FontWeight')
+        // ];
 
-        // TODO:
-        // this._propertyDescriptors['style'] = new EnumProperty('style', 'setFont', true, FontStyle, 'FontStyle');
-        // this._propertyDescriptors['weight'] = new EnumProperty('weight', 'setFont', true, FontWeight, 'FontWeight');
+        // this._propertyDescriptors['font'] = new ClassProperty('font', 'setFont', false, fontProperties);
+
+        // fontParameters
+        const fontParamsProperties = [
+            new EnumProperty('style', undefined, undefined, FontStyle, 'FontStyle'),
+            new EnumProperty('weight', undefined, undefined, FontWeight, 'FontWeight'),
+            new PrimitiveTypeProperty('fontSize', undefined, undefined, 'number'),
+            new PrimitiveTypeProperty('tracking', undefined, undefined, 'number'),
+            new PrimitiveTypeProperty('allCaps', undefined, undefined, 'boolean'),
+        ];
+
+        this._propertyDescriptors['fontParams'] = new ClassProperty('fontParams', 'setFontParameters', false, fontParamsProperties);
+
+        // keyboardProperties
     }
 
 
@@ -43,11 +65,11 @@ export class TextEditBuilder extends TextContainerBuilder {
 
         this.validate(undefined, undefined, properties);
 
-        const { children, text, width, height } = properties;
+        const { children, width, height } = properties;
 
-        const finalText = text ? text : this._getText(children);
+        const text = this.getPropertyValue('text', this._getText(children), properties);
 
-        const element = ui.UiTextEdit.Create(prism, finalText, width, height);
+        const element = ui.UiTextEdit.Create(prism, text, width, height);
 
         const unapplied = this.excludeProperties(properties, ['children', 'text', 'width', 'height']);
 
@@ -75,7 +97,7 @@ export class TextEditBuilder extends TextContainerBuilder {
         this._validateSelectedText(newProperties);
     }
 
-    // FONT
+    // Font
     _validateFont(properties) {
         const { style, weight } = properties;
 
@@ -97,13 +119,13 @@ export class TextEditBuilder extends TextContainerBuilder {
         }
     }
 
-    // SIZE
+    // Size
     _validateSize(properties) {
         PropertyDescriptor.throwIfNotTypeOf(properties.height, 'number');
         PropertyDescriptor.throwIfNotTypeOf(properties.width, 'number');
     }
 
-    // SELECTED TEXT
+    // SelectedText
     _validateSelectedText(properties){
         PropertyDescriptor.throwIfNotTypeOf(properties.selectedBegin, 'number');
         PropertyDescriptor.throwIfNotTypeOf(properties.selectedEnd, 'number');

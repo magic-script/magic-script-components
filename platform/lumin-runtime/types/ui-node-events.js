@@ -6,7 +6,10 @@
  * @param {string} key - the Magic-Script event name
  * @param {string} value - the Lumin Runtime event name
  */
+
+// TODO: Move events to the component builders
 export const UiNodeEvents = {
+    // UiNode
     'onActivate': 'onActivateSub',
     'onClick': 'onActivateSub',
     'onPress': 'onPressedSub',
@@ -22,11 +25,39 @@ export const UiNodeEvents = {
     'onFocusInput': 'onFocusInputSub',
     'onUpdate': 'onUpdateSub',
     'onDelete': 'onDeletedSub',
-
-    // TODO: Move events to the component builders
     // TextEdit events
     'onCharacterEnter': 'onCharacterEnteredSub',
     'onKeyboardEvent': 'onKeyboardEventSub',
     'onTextChanged': 'onTextChangedSub',
-    'onScrollChanged': 'onScrollChangedSub'
+    // UiListView
+    // UiSlider
+    'onScrollChanged': 'onScrollChangedSub',
+    // UiProgressBar
+    'onProgressBarChanged': 'onProgressBarChangedSub',
+    // UiDropDownList
+    'onListVisibilityChanged': 'onListVisibilityChangedSub',
+    'onSelectionChanged': 'onSelectionChangedSub',
+    // UiToggle
+    'onToggleChanged': 'onToggleChangedSub',
+    // UiPanel
+    'onCursorEdge': 'onCursorEdgeSub',
+    'onCursorOffEdge': 'onCursorOffEdgeSub',
+    'onPanelEnter': 'onPanelEnterSub',
+    'onPanelExit': 'onPanelExitSub',
+    // UiDialog
+    // UiColorPicker
+    'onCancel': 'onCancelSub',
+    'onConfirm': 'onConfirmSub',
+    // UiColorPicker
+    'onColorChanged': 'onColorChangedSub',
+    // UiTimePicker
+    'onTimeChanged': 'onTimeChangedSub',
+    'onTimeConfirmed': 'onTimeConfirmedSub',
+    // UiDatePicker
+    'onDateChanged': 'onDateChangedSub',
+    'onDateConfirmed': 'onDateConfirmedSub',
+    // UiCircleConfirmation
+    'onConfirmationCanceled': 'onConfirmationCanceledSub',
+    'onConfirmationComplete': 'onConfirmationCompleteSub',
+    'onConfirmationUpdate': 'onConfirmationUpdateSub'
 }

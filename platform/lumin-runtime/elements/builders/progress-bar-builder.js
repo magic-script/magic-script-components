@@ -10,7 +10,13 @@ export class ProgressBarBuilder extends UiNodeBuilder {
     constructor(){
         super();
 
-        // ProgressColor
+        // progressColor
+        const progressColorProperties = [
+            new ArrayProperty('beginColor', undefined, undefined, 'vec4'),
+            new ArrayProperty('endColor', undefined, undefined, 'vec4')
+        ];
+
+        this._propertyDescriptors['progressColor'] = new ClassProperty('progressColor', 'setProgressColor', false, progressColorProperties);
 
         this._propertyDescriptors['min'] = new PrimitiveTypeProperty('min', 'setMin', true, 'number');
         this._propertyDescriptors['max'] = new PrimitiveTypeProperty('max', 'setMax', true, 'number');

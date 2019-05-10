@@ -1,8 +1,7 @@
 // Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
 
 import { ui } from 'lumin';
-import { HorizontalTextAlignment } from '../../types/horizontal-text-alignment.js';
-import { validator } from '../../utilities/validator.js';
+import { LabelDisplayMode } from '../../types/label-display-mode.js';
 
 import { TextContainerBuilder } from './text-container-builder.js';
 import { EnumProperty } from '../properties/enum-property.js';
@@ -16,21 +15,16 @@ export class PortalIconBuilder extends TextContainerBuilder {
         super();
 
         // BackgroundModel
-        // HoverScale
-        // HoverZOffset
-        // IconActivateAnimation
-        // IconContextMenuAnimation
-        // IconHoverAnimation
-        // IconHoverPosition
-        // IconIdleAnimation
         // IconModel
-        // LabelDisplayMode
 
-        // this._propertyDescriptors['textAlignment'] = new EnumProperty('textAlignment', 'setTextAlignment', true, HorizontalTextAlignment, 'HorizontalTextAlignment');
-        // this._propertyDescriptors['charSpacing'] = new PrimitiveTypeProperty('iconSize', 'setCharacterSpacing', true, 'number');
-        // this._propertyDescriptors['lineSpacing'] = new PrimitiveTypeProperty('iconColor', 'setLineSpacing', true, 'number');
-        // this._propertyDescriptors['style'] = new EnumProperty('style', 'setFont', true, FontStyle, 'FontStyle');
-        // this._propertyDescriptors['weight'] = new EnumProperty('weight', 'setFont', true, FontWeight, 'FontWeight');
+        this._propertyDescriptors['hoverScale'] = new PrimitiveTypeProperty('hoverScale', 'setHoverScale', true, 'number');
+        this._propertyDescriptors['hoverZOffset'] = new PrimitiveTypeProperty('hoverZOffset', 'setHoverZOffset', true, 'number');
+        this._propertyDescriptors['iconActivateAnimation'] = new PrimitiveTypeProperty('iconActivateAnimation', 'setIconActivateAnimation', true, 'string');
+        this._propertyDescriptors['iconContextMenuAnimation'] = new PrimitiveTypeProperty('iconContextMenuAnimation', 'setIconContextMenuAnimation', true, 'string');
+        this._propertyDescriptors['iconHoverAnimation'] = new PrimitiveTypeProperty('iconHoverAnimation', 'setIconHoverAnimation', true, 'string');
+        this._propertyDescriptors['iconIdleAnimation'] = new PrimitiveTypeProperty('iconIdleAnimation', 'setIconIdleAnimation', true, 'string');
+        this._propertyDescriptors['iconHoverPosition'] = new ArrayProperty('iconHoverPosition', 'setIconHoverPosition', true, 'vec3');
+        this._propertyDescriptors['labelDisplayMode'] = new EnumProperty('labelDisplayMode', 'setLabelDisplayMode', true, LabelDisplayMode, 'LabelDisplayMode');
     }
 
 

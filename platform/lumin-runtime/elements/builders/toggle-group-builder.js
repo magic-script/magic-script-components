@@ -21,7 +21,7 @@ export class ToggleGroupBuilder extends UiNodeBuilder {
         this.validate(undefined, undefined, properties);
 
         const { allowMultipleOn, allowAllOff } = properties;
-        
+
         const element = ui.UiToggleGroup.Create(prism, allowMultipleOn, allowAllOff);
 
         const unapplied = this.excludeProperties(properties, ['allowMultipleOn', 'allowAllOff']);
