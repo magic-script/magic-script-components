@@ -2,10 +2,10 @@
 
 import { ui } from 'lumin';
 
-import { LayoutBuilder } from './layout-builder.js';
+import { PositionalLayoutBuilder } from './positional-layout-builder.js';
 import { PrimitiveTypeProperty } from '../properties/primitive-type-property.js';
 
-export class GridLayoutBuilder extends LayoutBuilder {
+export class GridLayoutBuilder extends PositionalLayoutBuilder {
     constructor(){
         super();
 
@@ -16,7 +16,7 @@ export class GridLayoutBuilder extends LayoutBuilder {
     create(prism, properties) {
         this.throwIfInvalidPrism(prism);
 
-        const element = ui.UiGridLayout.Create(prism, finalText, width, height, roundness);
+        const element = ui.UiGridLayout.Create(prism);
 
         this.update(element, undefined, properties);
 

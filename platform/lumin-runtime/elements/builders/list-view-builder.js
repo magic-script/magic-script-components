@@ -16,7 +16,7 @@ import { ScrollBarVisibility } from '../../types/scroll-bar-visibility.js';
 export class ListViewBuilder extends UiNodeBuilder {
     constructor(){
         super();
-        
+
         this._propertyDescriptors['cursorEdgeScrollMode'] = new EnumProperty('cursorEdgeScrollMode', 'setCursorEdgeScrollMode', true, CursorEdgeScrollMode, 'CursorEdgeScrollMode');
         this._propertyDescriptors['defaultItemAlignment'] = new EnumProperty('defaultItemAlignment', 'setDefaultItemAlignment', true, Alignment, 'Alignment');
         this._propertyDescriptors['defaultItemPadding'] = new ArrayProperty('defaultItemPadding', 'setDefaultItemPadding', true, 'vec4');
@@ -39,7 +39,7 @@ export class ListViewBuilder extends UiNodeBuilder {
 
         this._propertyDescriptors['itemAlignment'] = new ClassProperty('itemAlignment', 'setItemAlignment', false, itemAlignmentProperties);
 
-        // ItemPadding
+        // itemPadding
         const itemPaddingProperties = [
             new PrimitiveTypeProperty('index', undefined, undefined, 'number'),
             new ArrayProperty('padding', undefined, undefined, 'vec4')

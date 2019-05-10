@@ -16,7 +16,7 @@ export class ToggleBuilder extends TextContainerBuilder {
 
         // ToggleModel
 
-        this._propertyDescriptors['on'] = new PrimitiveTypeProperty('on', 'setOn', true, 'boolean');    
+        this._propertyDescriptors['on'] = new PrimitiveTypeProperty('on', 'setOn', true, 'boolean');
     }
 
 

@@ -2,6 +2,7 @@
 
 import { Prism } from 'lumin';
 
+import { AdvanceDirection } from '../types/advance-direction.js';
 import { Alignment } from '../types/alignment.js';
 import { CursorEdgeScrollMode } from '../types/cursor-edge-scroll-mode.js';
 import { CursorHoverState } from '../types/cursor-hover-state.js';
@@ -9,12 +10,17 @@ import { DateFormat } from '../types/date-format.js';
 import { DialogType } from '../types/dialog-type.js';
 import { EclipseButtonType } from '../types/eclipse-button-type.js';
 import { EclipseLabelType } from '../types/eclipse-label-type.js';
+import { FlowDirection } from '../types/flow-direction.js';
 import { FocusRequest } from '../types/focus-request.js';
 import { FontStyle, FontWeight } from '../types/font-style.js';
 import { GravityWellSnap } from '../types/gravity-well-snap.js';
+import { LabelDisplayMode } from '../types/label-display-mode.js';
 import { LoadingSpinnerType } from '../types/loading-spinner-type.js';
 import { RenderingLayer } from '../types/rendering-layer.js';
+import { PanelEdgeConstraintLevel } from '../types/panel-edge-constraint-level.js'
+import { PanelCursorTransitionType } from '../types/panel-cursor-transition-type.js';
 import { PortalIconSize } from '../types/portal-icon-size.js';
+import { Quality } from '../types/quality.js';
 import { ScrollBarVisibility } from '../types/scroll-bar-visibility.js';
 import { ScrollDirection } from '../types/scroll-direction.js';
 import { Side } from '../types/side.js';
@@ -32,6 +38,7 @@ function validate(value, enumSet) {
 export const validator = {
     validatePrism: prism => prism instanceof Prism,
 
+    validateAdvanceDirection: value => validate(value, AdvanceDirection),
     validateAlignment: value => validate(value, Alignment),
     validateCursorEdgeScrollMode: value => validate(value, CursorEdgeScrollMode),
     validateCursorHoverState: value => validate(value, CursorHoverState),
@@ -39,12 +46,17 @@ export const validator = {
     validateDialogType: value => validate(value, DialogType),
     validateEclipseButtonType: value => validate(value, EclipseButtonType),
     validateEclipseLabelType: value => validate(value, EclipseLabelType),
+    validateFlowDirection: value => validate(value, FlowDirection),
     validateFocusRequest: value => validate(value, FocusRequest),
     validateFontStyle: value => validate(value, FontStyle),
     validateFontWeight: value => validate(value, FontWeight),
     validateGravityWellSnap: value => validate(value, GravityWellSnap),
+    validateLabelDisplayMode: value => validate(value, LabelDisplayMode),
     validateLoadinSpinnerType: value => validate(value, LoadingSpinnerType),
+    validatePanelEdgeConstraintLevel: value => validate(value, PanelEdgeConstraintLevel),
+    validatePanelCursorTransitionType: value => validate(value, PanelCursorTransitionType),
     validatePortalIconSize: value => validate(value, PortalIconSize),
+    validateQuality: value => validate(value, Quality),
     validateRenderingLayer: value => validate(value, RenderingLayer),
     validateScrollBarVisibility: value => validate(value, ScrollBarVisibility),
     validateScrollDirection: value => validate(value, ScrollDirection),
@@ -54,5 +66,5 @@ export const validator = {
     validateTextEntryMode: value => validate(value, TextEntryMode),
     validateTimeFormat: value => (typeof value === 'string') && TimeFormat.includes(value),
     validateToggleType: value => validate(value, ToggleType),
-    validateViewMode: value => validate(value, ViewMode),
+    validateViewMode: value => validate(value, ViewMode)
 }
