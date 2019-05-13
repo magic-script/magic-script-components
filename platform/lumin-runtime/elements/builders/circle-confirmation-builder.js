@@ -1,11 +1,8 @@
 // Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
 
 import { ui } from 'lumin';
-import { SystemIcons } from '../../types/system-icons.js';
 
 import { UiNodeBuilder } from './ui-node-builder.js';
-import { ArrayProperty } from '../properties/array-property.js';
-import { PrimitiveTypeProperty } from '../properties/primitive-type-property.js';
 import { PropertyDescriptor } from '../properties/property-descriptor.js';
 
 export class CircleConfirmationBuilder extends UiNodeBuilder {
@@ -18,7 +15,7 @@ export class CircleConfirmationBuilder extends UiNodeBuilder {
         const height = this.getPropertyValue('height', 0.0, properties);
 
         const element = ui.UiCircleConfirmation.Create(prism, height);
-        
+
         const unapplied = this.excludeProperties(properties, ['height']);
 
         this.apply(element, undefined, unapplied);

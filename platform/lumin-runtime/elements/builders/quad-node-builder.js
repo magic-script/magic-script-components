@@ -1,4 +1,5 @@
 // Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
+
 import { RenderNodeBuilder } from './render-node-builder.js';
 import { ArrayProperty } from '../properties/array-property.js';
 import { EnumProperty } from '../properties/enum-property.js';
@@ -17,7 +18,7 @@ export class QuadNodeBuilder extends RenderNodeBuilder {
     }
 
     create(prism, properties) {
-        this.throwIfInvalidPrism(prism);     
+        this.throwIfInvalidPrism(prism);
 
         this.validate(undefined, undefined, properties);
 
@@ -86,7 +87,7 @@ export class QuadNodeBuilder extends RenderNodeBuilder {
 
     _setSubTexture(element, properties) {
         const subTexture = properties.subTexture
-        
+
         if (subTexture !== undefined) {
             element.setSubTexture(subTexture);
         }
