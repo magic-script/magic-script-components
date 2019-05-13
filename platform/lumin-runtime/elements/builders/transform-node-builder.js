@@ -1,7 +1,5 @@
 // Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
 
-import { TransformNode } from 'lumin';
-
 import { ElementBuilder } from './element-builder.js';
 import { ArrayProperty } from '../properties/array-property.js';
 import { EnumProperty } from '../properties/enum-property.js';

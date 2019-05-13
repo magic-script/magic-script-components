@@ -1,58 +1,66 @@
-import { RenderNode } from 'lumin';
-import { validator } from '../../utilities/validator.js';
-
 // Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
 
 import { TransformNodeBuilder } from './transform-node-builder.js';
+
+import { ArrayProperty } from '../properties/array-property.js';
+import { ClassProperty } from '../properties/class-property.js';
 import { EnumProperty } from '../properties/enum-property.js';
 import { PrimitiveTypeProperty } from '../properties/primitive-type-property.js';
 
-import { Alignment } from '../../types/alignment.js'
+import { RenderingLayer } from '../../types/rendering-layer.js';
+import { ShaderType } from '../../types/shader-type.js'
 
 export class RenderNodeBuilder extends TransformNodeBuilder {
+
     constructor(){
         super();
 
-        // BackFaceCulls
-        // Blooms
-        // BloomStrength
-        // CastsShadows
-        // Color
-        // DrmContent
-        // FrontFaceCulls
-        // IsOpaque
-        // IsUI
-        // PushesStencil
-        // ReadsClip
-        // ReadsDepth
-        // ReceivesLight
-        // ReceivesShadows
-        // RenderingLayer
-        // Shader
-        // WritesColor
-        // WritesDepth
-        // WritesStencil
+        this._propertyDescriptors['bloomStrength'] = new PrimitiveTypeProperty('bloomStrength', 'setBloomStrength', true, 'number');
+        this._propertyDescriptors['color'] = new ArrayProperty('color', 'setColor', true, 'vec4');
+        this._propertyDescriptors['drmContent'] = new PrimitiveTypeProperty('drmContent', 'setDrmContent', true, 'boolean');
+        this._propertyDescriptors['shader'] = new EnumProperty('shader', 'setShader', true, ShaderType, 'ShaderType');
+        this._propertyDescriptors['renderingLayer'] = new EnumProperty('renderingLayer', 'setRenderingLayer', true, RenderingLayer, 'RenderingLayer');
 
-        // this._propertyDescriptors['enabled'] = new PrimitiveTypeProperty('enabled', 'setEnabled', true, 'boolean');
-        // this._propertyDescriptors['alignment'] = new EnumProperty('alignment', 'setAlignment', true, Alignment, 'Alignment');
+        this._addRenderStateProperty('backFaceCulls', 'setBackFaceCulls');
+        this._addRenderStateProperty('blooms', 'setBlooms');
+        this._addRenderStateProperty('castsShadows', 'setCastsShadows');
+        this._addRenderStateProperty('frontFaceCulls', 'setFrontFaceCulls');
+        this._addRenderStateProperty('isOpaque', 'setIsOpaque');
+        this._addRenderStateProperty('isUI', 'setIsUI');
+        this._addRenderStateProperty('pushesStencil', 'setPushesStencil');
+        this._addRenderStateProperty('readsClip', 'setReadsClip');
+        this._addRenderStateProperty('readsDepth', 'setReadsDepth');
+        this._addRenderStateProperty('receivesLight', 'setReceivesLight');
+        this._addRenderStateProperty('receivesShadows', 'setReceivesShadows');
+        this._addRenderStateProperty('writesColor', 'setWritesColor');
+        this._addRenderStateProperty('writesDepth', 'setWritesDepth');
+        this._addRenderStateProperty('writesStencil', 'setWritesStencil');
     }
 
-    // create(prism, properties) {
+    _addRenderStateProperty(propertyName, setFunction) {
+        this._propertyDescriptors[propertyName] = this._getClassProperty(propertyName, setFunction);
+        this[setFunction] = this._getSetFunction(propertyName, setFunction);
+    }
 
-    // }
+    _getClassProperty(propertyName, setFunction) {
+        const properties = [
+            new PrimitiveTypeProperty('on', undefined, undefined, 'boolean'),
+            new PrimitiveTypeProperty('renderStateIndex', undefined, undefined, 'number')
+        ];
 
-    // update(element, oldProperties, newProperties) {
-    //     // this.throwIfNotInstanceOf(element, RenderNode);
-    //     super.update(element, oldProperties, newProperties);
-    // }
+        return new ClassProperty(propertyName, setFunction, false, properties);
+    }
 
-    // excludeProperties(properties, ...exclude) {
-    //     const subset = Object.assign({}, properties);
-    //     exclude.forEach(name => {
-    //         if (properties.hasOwnProperty(name)) {
-    //             delete subset[name]
-    //         }
-    //     });
-    //     return subset;
-    // }
+    _getSetFunction(propertyName, setFunction) {
+        const builder = this;
+
+        return function(element, oldProperties, newProperties) {
+            const on = newProperties[propertyName].on;
+
+            if (on !== undefined) {
+                const renderStateIndex = builder.getPropertyValue('renderStateIndex', -1, newProperties[propertyName]);
+                element[setFunction](on, renderStateIndex);
+            }
+        }
+    }
 }

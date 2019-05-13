@@ -3,10 +3,7 @@
 import { ui } from 'lumin';
 
 import { UiNodeBuilder } from './ui-node-builder.js';
-import { ArrayProperty } from '../properties/array-property.js';
 import { EnumProperty } from '../properties/enum-property.js';
-import { PropertyDescriptor } from '../properties/property-descriptor.js';
-import { TextChildrenProperty } from '../properties/text-children-property.js';
 
 import { DialogType } from '../../types/dialog-type.js';
 import { DialogLayout } from '../../types/dialog-layout.js';

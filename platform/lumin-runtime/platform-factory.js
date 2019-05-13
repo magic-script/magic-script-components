@@ -1,6 +1,6 @@
 // Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
 
-import { LandscapeApp, ImmersiveApp, PrismController } from 'lumin';
+import { LandscapeApp, ImmersiveApp, PrismController, ui } from 'lumin';
 
 import { NativeFactory } from '../../core/native-factory.js';
 import { MxsLandscapeApp } from './mxs-landscape-app.js';
@@ -29,11 +29,11 @@ export class PlatformFactory extends NativeFactory {
         for (const pair of eventHandlers) {
             const eventName = UiNodeEvents[pair.name];
 
-            if (eventName !== undefined) { 
+            if (eventName !== undefined) {
                 if (typeof pair.handler === 'function') {
                     element[eventName](pair.handler);
                 } else {
-                    throw new TypeError(`The event handler for ${pair.name} is not a function`);                    
+                    throw new TypeError(`The event handler for ${pair.name} is not a function`);
                 }
             } else {
                 throw new TypeError(`Event ${pair.name} is not recognized event`);
@@ -100,6 +100,39 @@ export class PlatformFactory extends NativeFactory {
         }
     }
 
+    // TODO: Should be replaced by Proxy.addChild(parent, child)
+    // after replacing builders with proxies
+    _addChildNodeToParentNode(parent, child) {
+        if (parent instanceof ui.UiScrollView) {
+            // ScrollBar: child is UiScrollBar
+            if (child instanceof ui.UiScrollBar) {
+                parent.setScrollBar(child);
+            }
+            // ScrollContent: child is <TransformNode, vec3>
+        } else if (parent instanceof ui.UiListView) {
+            // ScrollBar: child is UiSCrollBar
+            // ListViewItem: use addItem instead of addChild
+        } else if (parent instanceof ui.UiSlider) {
+            // SliderModel: child is <Node, vec3>
+        } else if (parent instanceof ui.UiRectLayout) {
+            // Content: child is TransformNode
+        } else if (parent instanceof ui.UiDropDownList) {
+            // ButtonModel: child is <Node, vec3>
+            // List: child is array of DropDownListItem(s)
+            // ListFont: Font2dResource(fontDesc, fontFile, a_absolutePath)
+            // fontDesc = Font2dDesc(advanceDir, flowDir, tileSize, quality, minAlpha)
+        } else if (parent instanceof ui.UiDialog) {
+            // DialogContent: child is TransformNode
+        } else if (parent instanceof ui.UiToggle) {
+            // ToggleModel: child is <Node, vec3>
+        } else if (parent instanceof ui.UiPanel) {
+            // EdgeTransition: child is <side, UiPanel>
+        } else if (parent instanceof ui.UiPortalIcon) {
+            // BackgroundModel: child is <Node, vec3>
+            // IconModel: : child is <Node, vec3>
+        }
+    }
+
     addChildElement(parent, child) {
         if (typeof child === 'string') {
             parent.setText(child);
@@ -117,12 +150,44 @@ export class PlatformFactory extends NativeFactory {
                 parent.addChildController(child);
                 parent.getRoot().addChild(child.getRoot());
             } else {
-                parent.addChild(child);
+                if (this.isController(parent)) {
+                    parent.addChild(child);
+                } else {
+                    this._addChildNodeToParentNode(parent, child);
+                }
             }
         }
+    }
 
-        // TODO: Replace builders with proxies
-        // this.elementBuilders[name].addChild(...args);
+    _removeChildNodeToParentNode(parent, child) {
+        if (parent instanceof ui.UiScrollView) {
+            // ScrollBar: child is <UiScrollBar, orientation>
+            if (child instanceof ui.UiScrollBar) {
+                parent.setScrollBar(child);
+            }
+            // ScrollContent: child is <TransformNode, vec3>
+        } else if (parent instanceof ui.UiListView) {
+            // ScrollBar: child is UiSCrollBar
+            // ListViewItem: use addItem instead of addChild
+        } else if (parent instanceof ui.UiSlider) {
+            // SliderModel: child is <Node, vec3>
+        } else if (parent instanceof ui.UiRectLayout) {
+            // Content: child is TransformNode
+        } else if (parent instanceof ui.UiDropDownList) {
+            // ButtonModel: child is <Node, vec3>
+            // List: child is array of DropDownListItem(s)
+            // ListFont: Font2dResource(fontDesc, fontFile, a_absolutePath)
+            // fontDesc = Font2dDesc(advanceDir, flowDir, tileSize, quality, minAlpha)
+        } else if (parent instanceof ui.UiDialog) {
+            // DialogContent: child is TransformNode
+        } else if (parent instanceof ui.UiToggle) {
+            // ToggleModel: child is <Node, vec3>
+        } else if (parent instanceof ui.UiPanel) {
+            // EdgeTransition: child is <side, UiPanel>
+        } else if (parent instanceof ui.UiPortalIcon) {
+            // BackgroundModel: child is <Node, vec3>
+            // IconModel: : child is <Node, vec3>
+        }
     }
 
     removeChildElement(parent, child) {
@@ -175,7 +240,7 @@ export class PlatformFactory extends NativeFactory {
             app = new MxsLandscapeApp(appComponent, 0.5);
         } else if (appType === 'immersive') {
             app = new ImmersiveApp(0.5);
-            app.type = 'immersiveApp';  
+            app.type = 'immersiveApp';
         } else {
             throw new TypeError(`Invalid argument: Unknown app type: ${appType}`);
         }

@@ -23,6 +23,7 @@ import { PortalIconSize } from '../types/portal-icon-size.js';
 import { Quality } from '../types/quality.js';
 import { ScrollBarVisibility } from '../types/scroll-bar-visibility.js';
 import { ScrollDirection } from '../types/scroll-direction.js';
+import { ShaderType } from '../types/shader-type.js';
 import { Side } from '../types/side.js';
 import { SoundEvent } from '../types/sound-event.js';
 import { SystemIcons } from '../types/system-icons.js';
@@ -60,6 +61,7 @@ export const validator = {
     validateRenderingLayer: value => validate(value, RenderingLayer),
     validateScrollBarVisibility: value => validate(value, ScrollBarVisibility),
     validateScrollDirection: value => validate(value, ScrollDirection),
+    validateShaderType: value => validate(value, ShaderType),
     validateSide: value => validate(value, Side),
     validateSystemIcon: value => validate(value, SystemIcons),
     validateSoundEvent: value => validate(value, SoundEvent),

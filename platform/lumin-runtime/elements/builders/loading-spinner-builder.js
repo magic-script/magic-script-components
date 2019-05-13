@@ -1,9 +1,9 @@
 // Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
 
 import { ui } from 'lumin';
-import { LoadingSpinnerType } from '../../types/loading-spinner-type.js';
 
 import { UiNodeBuilder } from './ui-node-builder.js';
+
 import { ArrayProperty } from '../properties/array-property.js';
 import { PrimitiveTypeProperty } from '../properties/primitive-type-property.js';
 import { PropertyDescriptor } from '../properties/property-descriptor.js';
@@ -26,7 +26,7 @@ export class LoadingSpinnerBuilder extends UiNodeBuilder {
         const type = properties.type;
         const id   = this.getPropertyValue('resourceId',    0, properties);
         const path = this.getPropertyValue('resourcePath', '', properties);
-        
+
         const element = ui.UiLoadingSpinner.Create(prism, type, id, path, height);
 
         const unapplied = this.excludeProperties(properties, ['type', 'resourceId', 'resourcePath', 'height']);
@@ -46,7 +46,7 @@ export class LoadingSpinnerBuilder extends UiNodeBuilder {
 
         const message = `The provided spinner type ${newProperties.type} is not a valid value`;
         PropertyDescriptor.throwIfPredicateFails(newProperties.type, message, validator.validateLoadingSpinnerType);
-        
+
         PropertyDescriptor.throwIfNotTypeOf(newProperties.resourceId, 'number');
         PropertyDescriptor.throwIfNotTypeOf(newProperties.resourcePath, 'string');
         PropertyDescriptor.throwIfNotTypeOf(newProperties.height, 'number');

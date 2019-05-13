@@ -3,7 +3,6 @@
 import { ui } from 'lumin';
 import { HorizontalTextAlignment } from '../../types/horizontal-text-alignment.js';
 import { FontStyle, FontWeight } from '../../types/font-style.js';
-import { validator } from '../../utilities/validator.js';
 
 import { TextContainerBuilder } from './text-container-builder.js';
 import { ClassProperty } from '../properties/class-property.js';
@@ -78,7 +77,7 @@ export class TextBuilder extends TextContainerBuilder {
         if (style) {
             const fontStyle = FontStyle[style];
             const fontWeight = weight ? FontWeight[weight] : DEFAULT_FONT_WEIGHT;
-    
+
             element.setFont(fontStyle, fontWeight);
         }
     }
