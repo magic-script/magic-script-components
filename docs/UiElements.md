@@ -84,25 +84,33 @@ textSize | number | TextSize | number
     allCaps: boolean
 }
 ```
-
 ---
 
 ## UiButton
 
 ### Tag: `<button>`
-### Properties
+### Create Properties
 
 Name | Type | Default Value | LRT Name | LRT type
 -----|------|:---------------:|----------|---------
 text | string | n/a | Text | string
 width | number | n/a |  | number
 height | number | n/a |  | number
+
+### Element Properties
+Name | Type | LRT Name | LRT type
+:-----|:------|:----------|:---------
+iconColor | vec4 | IconColor | vec4
+iconSize | vec3 | IconSize | vec3
+text | string | Text | string
+textColor | vec4 | TextColor | vec4
+textSize | vec3 | TextSize | vec3
 ---
 
 ## UiImage
 
 ### Tag: `<image>`
-### Properties
+### Create Properties
 >Image offers 3 constructors accepting different property sets
 
 Name | Type | Default Value | LRT Name | LRT type
@@ -128,6 +136,18 @@ Name | Type | Default Value | LRT Name | LRT type
 -----|------|:-------------:|----------|---------
 icon | string | n/a | Type | lumin.ui.SystemIcon
 height | number | n/a | Height | number
+
+### Element Properties
+Name | Type | LRT Name | LRT type
+:-----|:------|:----------|:---------
+color | vec4 | Color | vec4
+width | number | Width | number
+height | number | Height | number
+textCoords | vec4 | TextCoords | array[4]
+opaque | boolean | IsOpaque | boolean
+ui | boolean | IsUI | boolean
+imageFrameResource | number | ImageFrameResource | number
+renderResource | number | RenderResource | number
 
 ---
 
