@@ -6,7 +6,7 @@
 
 ### Common Properties
 
-Name | Type | Default Value | LRT Name | LRT type  
+Name | Type | Default Value | LRT Name | LRT type
 :-----|:------|:---------------:|:----------|:---------
 name | string | empty string | Name | string
 position | vec3 | [ 0, 0, 0 ] | LocalPosition | vec3
@@ -16,7 +16,7 @@ transform | mat4 | | LocalTransform | mat4
 visible | boolean | true | Visible | boolean
 
 ### Common Properties for Ui elements
-Name | Type | Default Value | LRT Name | LRT type  
+Name | Type | Default Value | LRT Name | LRT type
 :-----|:------|:---------------:|:----------|:---------
 alignment | string | | Alignment | lumin.Alignment
 enabled | boolean | | Enabled | boolean
@@ -41,15 +41,49 @@ enabled | boolean | | Enabled | boolean
 ## UiText
 
 ### Tag: `<text>`
-### Properties
+### Create Properties
 
-Name | Type | Default Value | LRT Name | LRT type  
+Name | Type | Default Value | LRT Name | LRT type
 :-----|:------|:---------------:|:----------|:---------
 text | string | n/a | Text | string
 style| string | `normal` | | lumin.resources.FontStyle
 weight | string | `regular` | | lumin.resources.FontWeight
 
 If `text` is empty, the content of the `<text>` tag will be used as text.
+
+### Element Properties
+Name | Type | LRT Name | LRT type
+:-----|:------|:----------|:---------
+text | string | Text | string
+allCaps | boolean | AllCaps | boolean
+boundsSize | _object_ | BoundsSize | _multiple parameters_
+charSpacing | number | CharacterSpacing | number
+style | string | Style | lumin.resources.FontStyle
+weight | string | Weight | lumin.resources.FontWeight
+fontParameters | _object_ | FontParameters
+lineSpacing | number | LineSpacing | number
+text | string | Text | string
+textAlignment | string | TextAlignment | lumin.ui.HorizontalTextAlignment
+textColor | verc4 | TextColor | vec4
+textSize | number | TextSize | number
+
+#### boundsSize
+```
+{
+    boundsSize: vec2,
+    wrap: boolean
+}
+```
+#### fontParameters
+```
+{
+    style: string,
+    weight: string,
+    fontSize: number,
+    tracking: number,
+    allCaps: boolean
+}
+```
 
 ---
 
@@ -58,7 +92,7 @@ If `text` is empty, the content of the `<text>` tag will be used as text.
 ### Tag: `<button>`
 ### Properties
 
-Name | Type | Default Value | LRT Name | LRT type  
+Name | Type | Default Value | LRT Name | LRT type
 -----|------|:---------------:|----------|---------
 text | string | n/a | Text | string
 width | number | n/a |  | number
@@ -71,7 +105,7 @@ height | number | n/a |  | number
 ### Properties
 >Image offers 3 constructors accepting different property sets
 
-Name | Type | Default Value | LRT Name | LRT type  
+Name | Type | Default Value | LRT Name | LRT type
 -----|------|:--------------:|----------|---------
 filePath | string | n/a | pngFile | string
 width | number | n/a | Width | number
@@ -81,7 +115,7 @@ useFrame | boolean | False | UseFrame | boolean
 
 ---
 
-Name | Type | Default Value | LRT Name | LRT type  
+Name | Type | Default Value | LRT Name | LRT type
 -----|------|:-------------:|----------|---------
 resourceId | number | n/a | ResId | number
 width | number | n/a | Width | number
@@ -90,10 +124,10 @@ useFrame | boolean | False | UseFrame | boolean
 
 ---
 
-Name | Type | Default Value | LRT Name | LRT type  
+Name | Type | Default Value | LRT Name | LRT type
 -----|------|:-------------:|----------|---------
 icon | string | n/a | Type | lumin.ui.SystemIcon
-height | number | n/a | Height | number 
+height | number | n/a | Height | number
 
 ---
 
@@ -102,7 +136,7 @@ height | number | n/a | Height | number
 ### Tag: `<pageView>`
 ### Properties
 
-Name | Type | Default Value | LRT Name | LRT type  
+Name | Type | Default Value | LRT Name | LRT type
 -----|------|:-------------:|----------|---------
 width | number | n/a | Width | number
 height | number | n/a | Height | number
@@ -113,7 +147,7 @@ height | number | n/a | Height | number
 ### Tag: `<listView>`
 ### Properties
 
-Name | Type | Default Value | LRT Name | LRT type  
+Name | Type | Default Value | LRT Name | LRT type
 -----|------|:-------------:|----------|---------
 width | number | 0 | Width | number
 height | number | 0 | Height | number
@@ -134,12 +168,12 @@ height | number | 0 | Height | number
 ### Tag: `<model>`
 ### Properties
 
-Name | Type | Default Value | LRT Name | LRT type  
+Name | Type | Default Value | LRT Name | LRT type
 -----|------|:-------------:|----------|---------
-modelPath | string | n/a 
-materialPath | string | n/a 
-texturePath | string | n/a 
-textureName | string | n/a 
+modelPath | string | n/a
+materialPath | string | n/a
+texturePath | string | n/a
+textureName | string | n/a
 ---
 
 ## VideoNode
@@ -147,10 +181,10 @@ textureName | string | n/a
 ### Tag: `<video>`
 ### Properties
 
-Name | Type | Default Value | LRT Name | LRT type  
+Name | Type | Default Value | LRT Name | LRT type
 -----|------|:-------------:|----------|---------
 width | number | 512 | Width | number
-height | number | 512 | Height | number 
+height | number | 512 | Height | number
 videoPath | string | n/a |
 viewMode | string | `full-area` | ViewMode | lumin.ViewMode
 volume | number | 1 | Volume | number
