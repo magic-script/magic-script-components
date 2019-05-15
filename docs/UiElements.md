@@ -56,16 +56,16 @@ Name | Type | LRT Name | LRT type
 :-----|:------|:----------|:---------
 text | string | Text | string
 allCaps | boolean | AllCaps | boolean
-boundsSize | _object_ | BoundsSize | _multiple parameters_
 charSpacing | number | CharacterSpacing | number
 style | string | Style | lumin.resources.FontStyle
 weight | string | Weight | lumin.resources.FontWeight
-fontParameters | _object_ | FontParameters
 lineSpacing | number | LineSpacing | number
 text | string | Text | string
 textAlignment | string | TextAlignment | lumin.ui.HorizontalTextAlignment
 textColor | verc4 | TextColor | vec4
 textSize | number | TextSize | number
+boundsSize | _object_ | BoundsSize | _multiple parameters_
+fontParameters | _object_ | FontParameters | lumin.ui.FontParams
 
 #### boundsSize
 ```
@@ -209,3 +209,52 @@ videoPath | string | n/a |
 viewMode | string | `full-area` | ViewMode | lumin.ViewMode
 volume | number | 1 | Volume | number
 ---
+
+## UiTextEdit
+
+### Tag: `<textEdit>`
+### Create Properties
+
+Name | Type | Default Value | LRT Name | LRT type
+-----|------|:-------------:|----------|---------
+text | string | n/a | Text | string
+width | number | n/a | Width | number
+height | number | n/a | Height | number
+
+### Element Properties
+Name | Type | LRT Name | LRT type
+:-----|:------|:----------|:---------
+charLimit | number | CharLimit | number
+charSpacing | number | CharSpacing | number
+cursorEdgeScrollMode | string | CursorEdgeScrollMode | lumin.ui.CursorEdgeScrollMode
+style | string | Style | lumin.resources.FontStyle
+weight | string | Weight | lumin.resources.FontWeight
+hint | string | Hint | string
+hintColor | vec4 | HintColor | vec4
+lineSpacing | number | LineSpacing | number
+multiline | boolean | MultilineMode | boolean
+password  | boolean | PasswordMode | boolean
+scrollBarVisibility | string | ScrollBarVisibility | lumin.ui.ScrollBarVisibility
+scrolling | boolean | ScrollingEnabled | boolean
+scrollSpeed | number | ScrollSpeed | number
+scrollValue | number | ScrollValue | number
+selectedBegin | number | SelectedText | number
+selectedEnd | number | SelectedText | number
+text | string | Text | string
+textAlignment | string | TextAlignment | lumin.ui.HorizontalTextAlignment
+textColor | vec4 | TextColor | vec4
+textEntry | string | TextEntryMode | lumin.ui.TextEntryMode
+textPadding | vec4 | TextPadding | vec4
+textSize | number | TextSize | number
+fontParams | _object_ | FontParams | lumin.ui.FontParams
+
+#### fontParameters
+```
+{
+    style: string,
+    weight: string,
+    fontSize: number,
+    tracking: number,
+    allCaps: boolean
+}
+```
