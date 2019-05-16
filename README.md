@@ -4,7 +4,7 @@
 
 MagicScript Component Framework
 
-# Prerequisites
+## Prerequisites
 1. Install `magic-script-cli` :
 - `npm install -g magic-script-cli`
 
@@ -14,7 +14,7 @@ MagicScript Component Framework
 3. Install the required `npm` packages from the app folder:
 - `npm install`
 
-# Configuration steps
+## Configuration steps
 
 1. Install dependencies:
 
@@ -55,7 +55,7 @@ export default {
 };
 ```
 
-# Use example:
+## Use example:
 
 1. Create file `app.js`:
 
