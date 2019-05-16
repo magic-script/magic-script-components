@@ -4,17 +4,24 @@
 
 MagicScript Component Framework
 
+# Prerequisites
+1. Install `magic-script-cli` :
+- `npm install -g magic-script-cli`
+
+2. Create new MagicScript application :
+- `magic-script init <app-name> <com.app.name>`
+
+3. Install the required `npm` packages from the app folder:
+- `npm install`
+
 # Configuration steps
 
-1. Add `.npmrc` file with reference to the internal npm registry
-   `registry=https://nexus.magicleap.blue/repository/npm-group/`
-
-2. Install dependencies:
+1. Install dependencies:
 
 - `npm install magic-script-components`
 - `npm install --save-dev @babel/core @babel/plugin-transform-react-jsx rollup-plugin-babel`
 
-3. Add `.babelrc` file with the following configuration:
+2. Add `.babelrc` file with the following configuration:
 
 ```
 {
@@ -25,7 +32,7 @@ MagicScript Component Framework
 }
 ```
 
-4. Add `babel` to the `rollup.config.js` file:
+3. Add `babel` to the `rollup.config.js` file:
 
 ```
 import babel from 'rollup-plugin-babel';
