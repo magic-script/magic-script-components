@@ -1,23 +1,11 @@
 {
   "name": "magic-script-components",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "MagicScript Component Framework",
   "module": "index.js",
   "dependencies": {
-    "magic-script-polyfills": "^1.0.0",
-    "react": "^16.8.3",
-    "react-reconciler": "^0.20.2"
-  },
-  "devDependencies": {
-    "rollup": "^1.1.2",
-    "rollup-plugin-commonjs": "https://github.com/creationix/rollup-plugin-commonjs.git",
-    "rollup-plugin-node-resolve": "^4.0.0"
-  },
-  "scripts": {
-    "build": "rollup -c"
-  },
-  "publishConfig": {
-    "registry": "https://nexus.magicleap.blue/repository/npm-internal/"
+    "react": "^16.8.6",
+    "react-reconciler": "^0.20.4"
   },
   "repository": {
     "type": "git",
