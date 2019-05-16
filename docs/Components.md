@@ -1,6 +1,6 @@
 # MagicScript Components List
 
-Order | Component | Lumin RT | Implemented | iOS | Android
+Order | Component | Lumin RT<br>native component | Lumin OS | iOS | Android
 ------|-----------|----------|-------------|-----|---------
  1 | view | UiNode | :thumbsup:
  2 | text | UiText | :thumbsup:
