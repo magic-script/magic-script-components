@@ -5,13 +5,15 @@ import { ReactMagicScript } from '../../../react-magic-script/react-magic-script
 
 export class AppPrismController extends PrismController {
     constructor(appComponent) {
-        super();      
+        super();
         this._app = appComponent;
         this._containers = new WeakMap();
     }
 
     getRootNodeName(componentName) {
-        return `__root_prism_controller_${componentName.trim().replace(' ', '_')}`;
+        return componentName === undefined
+            ? '__root_prism_controller_'
+            : `__root_prism_controller_${componentName.trim().replace(' ', '_')}`;
     }
 
     findChild(nodeName) {
@@ -24,9 +26,9 @@ export class AppPrismController extends PrismController {
         const parent = nodeName === undefined
             ? this.getRoot()
             : this.findChild(nodeName);
-      
+
         let container = this._containers[parent];
-      
+
         if (container === undefined) {
             container = { parent: parent, controller: this };
             this._containers[parent] = container;

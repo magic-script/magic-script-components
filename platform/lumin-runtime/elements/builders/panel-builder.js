@@ -1,6 +1,6 @@
 // Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
 
-import { ui, BoundaryShape } from 'lumin';
+import { ui } from 'lumin';
 
 import { UiNodeBuilder } from './ui-node-builder.js';
 import { ArrayProperty } from '../properties/array-property.js';
@@ -78,7 +78,7 @@ export class PanelBuilder extends UiNodeBuilder {
 
         if ( size !== undefined, roundness !== undefined ) {
             const offset = this.getPropertyValue('offset', [0,0,0], newProperties);
-            const panelShape = new BoundaryShape(size, roundness, offset);
+            const panelShape = new ui.BoundaryShape(size, roundness, offset);
             element.setPanelShape(panelShape);
         }
     }
