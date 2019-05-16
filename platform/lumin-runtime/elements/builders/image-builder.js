@@ -13,7 +13,7 @@ import { validator } from '../../utilities/validator.js';
 export class ImageBuilder extends UiNodeBuilder {
     constructor(){
         super();
-        
+
         this._propertyDescriptors['ui'] = new PrimitiveTypeProperty('ui', 'setIsUI', true, 'boolean');
         this._propertyDescriptors['opaque'] = new PrimitiveTypeProperty('opaque', 'setIsOpaque', true, 'boolean');
         this._propertyDescriptors['color'] = new ArrayProperty('color', 'setColor', true, 'vec3');

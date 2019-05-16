@@ -3,8 +3,11 @@
 import { ui } from 'lumin';
 
 import { UiNodeBuilder } from './ui-node-builder.js';
+import { EnumProperty } from '../properties/enum-property.js';
 import { PrimitiveTypeProperty } from '../properties/primitive-type-property.js';
 import { PropertyDescriptor } from '../properties/property-descriptor.js';
+
+import { Orientation } from '../../types/orientation.js';
 
 export class ScrollBarBuilder extends UiNodeBuilder {
     constructor(){
@@ -12,6 +15,8 @@ export class ScrollBarBuilder extends UiNodeBuilder {
 
         this._propertyDescriptors['thumbSize'] = new PrimitiveTypeProperty('thumbSize', 'setThumbSize', true, 'number');
         this._propertyDescriptors['thumbPosition'] = new PrimitiveTypeProperty('thumbPosition', 'setThumbPosition', true, 'number');
+
+        this._propertyDescriptors['orientation'] = new EnumProperty('orientation', 'setOrientation', false, Orientation, 'Orientation');
     }
 
     create(prism, properties) {
@@ -28,13 +33,38 @@ export class ScrollBarBuilder extends UiNodeBuilder {
 
         this.apply(element, undefined, unapplied);
 
-        return element;
+        // return element;
+        return this._getProxy(element);
     }
 
-    // update(element, oldProperties, newProperties) {
-    //     // this.throwIfNotInstanceOf(element, ui.UiScrollBar);
-    //     super.update(element, oldProperties, newProperties);
-    // }
+    _getProxy(element) {
+        const handler = {
+            orientation: undefined,
+            set: function(target, property, value, receiver) {
+                if (property === 'orientation') {
+                    this.orientation = value;
+                } else  {
+                    return Reflect.set(...arguments);
+                }
+            },
+            get: function(target, property, receiver) {
+                if (property === 'orientation') {
+                    return this.orientation;
+                } else {
+                    return Reflect.get(...arguments);
+                }
+            }
+        };
+
+        return new Proxy(element, handler);
+    }
+
+    setOrientation(element, oldProperties, newProperties) {
+        const orientation = newProperties.orientation;
+        if (orientation !== undefined) {
+            element.orientation = Orientation[orientation];
+        }
+    }
 
     validate(element, oldProperties, newProperties) {
         super.validate(element, oldProperties, newProperties);

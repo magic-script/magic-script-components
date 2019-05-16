@@ -2,6 +2,8 @@
 import { Desc2d } from 'lumin';
 
 import { RenderNodeBuilder } from './render-node-builder.js';
+
+import { ClassProperty } from '../properties/class-property.js';
 import { PrimitiveTypeProperty } from '../properties/primitive-type-property.js';
 
 export class ModelBuilder extends RenderNodeBuilder {
@@ -39,7 +41,7 @@ export class ModelBuilder extends RenderNodeBuilder {
         this.validate(undefined, undefined, properties);
 
         const {modelPath, materialPath, texturePath, textureName} = properties;
-        
+
         prism.createMaterialResourceId(materialPath);
 
         const textureId = prism.createTextureResourceId(Desc2d.DEFAULT, texturePath);
@@ -58,28 +60,49 @@ export class ModelBuilder extends RenderNodeBuilder {
     // }
 
     setAnimation(element, oldProperties, newProperties) {
-        let { resourceId, name, paused, loops } = newProperties.animation;
+        if (newProperties.animation !== undefined) {
+            let { resourceId, name, paused, loops } = newProperties.animation;
 
-        if (resourceId === undefined) {
-            resourceId = element.getModelResource()
+            if (resourceId === undefined) {
+                resourceId = element.getModelResource();
+            }
+
+            if (paused === undefined) {
+                paused = false;
+            }
+
+            if (loops === undefined) {
+                loops = 0;
+            }
+
+            if (name === undefined) {
+                throw new TypeError(`Animation Name has not been provided.`);
+            }
+
+            element.playAnimation(resourceId, name, paused, loops);
         }
-
-        if (paused === undefined) {
-            paused = false;
-        }
-
-        if (loops === undefined) {
-            loops = 0;
-        }
-
-        if (name === undefined) {
-            new TypeError(`Animation Name has not been provided.`);
-        }
-
-        element.playAnimation(resourceId, name, paused, loops);
     }
 
     setTexture(element, oldProperties, newProperties) {
-        element.setTexture(newProperties.materialName, newProperties.textureSlot, newProperties.textureID);
+        if (newProperties.texture !== undefined) {
+            const { textureId, textureSlot, materialName } = newProperties.texture;
+
+            if (materialName === undefined) {
+                console.log('Model.texture.materialName is required');
+                return;
+            }
+
+            if (textureSlot === undefined) {
+                console.log('Model.texture.textureSlot is required');
+                return;
+            }
+
+            if (textureId === undefined) {
+                console.log('Model.texture.textureId is required');
+                return;
+            }
+
+            element.setTexture(materialName, textureSlot, textureId);
+        }
     }
 }

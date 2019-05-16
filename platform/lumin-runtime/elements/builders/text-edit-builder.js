@@ -27,9 +27,9 @@ export class TextEditBuilder extends TextContainerBuilder {
         this._propertyDescriptors['charSpacing'] = new PrimitiveTypeProperty('charSpacing', 'setCharacterSpacing', true, 'number');
         this._propertyDescriptors['cursorEdgeScrollMode'] = new EnumProperty('cursorEdgeScrollMode', 'setCursorEdgeScrollMode', true, CursorEdgeScrollMode, 'CursorEdgeScrollMode');
         this._propertyDescriptors['lineSpacing'] = new PrimitiveTypeProperty('lineSpacing', 'setLineSpacing', true, 'number');
-        this._propertyDescriptors['padding'] = new ArrayProperty('padding', 'setTextPadding', true, 'vec4');
+        this._propertyDescriptors['textPadding'] = new ArrayProperty('textPadding', 'setTextPadding', true, 'vec4');
         this._propertyDescriptors['hint'] = new PrimitiveTypeProperty('hint', 'setHintText', true, 'string');
-        this._propertyDescriptors['hintColor'] = new ArrayProperty('hintColor', 'setHintTextColor', true, 'vec3');
+        this._propertyDescriptors['hintColor'] = new ArrayProperty('hintColor', 'setHintTextColor', true, 'vec4');
         this._propertyDescriptors['multiline'] = new PrimitiveTypeProperty('multiline', 'setMultilineMode', true, 'boolean');
         this._propertyDescriptors['password'] = new PrimitiveTypeProperty('password', 'setPasswordMode', true, 'boolean');
         this._propertyDescriptors['scrolling'] = new PrimitiveTypeProperty('scrolling', 'setScrollingEnabled', true, 'boolean');
@@ -114,7 +114,7 @@ export class TextEditBuilder extends TextContainerBuilder {
         if (style) {
             const fontStyle = FontStyle[style];
             const fontWeight = weight ? FontWeight[weight] : DEFAULT_FONT_WEIGHT;
-    
+
             element.setFont(fontStyle, fontWeight);
         }
     }

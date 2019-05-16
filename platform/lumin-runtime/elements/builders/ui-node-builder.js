@@ -34,7 +34,7 @@ export class UiNodeBuilder extends TransformNodeBuilder {
         // EventSoundID
         const eventSoundProperties = [
             new EnumProperty('soundEvent', undefined, undefined, SoundEvent, 'SoundEvent'),
-            new PrimitiveTypeProperty('soundName', undefined, undefined, 'string')            
+            new PrimitiveTypeProperty('soundName', undefined, undefined, 'string')
         ];
 
         this._propertyDescriptors['eventSoundId'] = new ClassProperty('eventSoundId', 'setEventSoundID', false, eventSoundProperties);
