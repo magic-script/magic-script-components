@@ -1,9 +1,7 @@
-# Implementation order for the MagicScript Components
+# MagicScript Components List
 
-## Phase 1:
-
-Order | Component | Lumin RT | Implemented | Tested
-------|-----------|----------|-------------|-------
+Order | Component | Lumin RT | Implemented | iOS | Android
+------|-----------|----------|-------------|-----|---------
  1 | view | UiNode | :thumbsup:
  2 | text | UiText | :thumbsup:
  3 | textEdit | UiTextEdit | :thumbsup:
@@ -14,18 +12,6 @@ Order | Component | Lumin RT | Implemented | Tested
  8 | listView | UiListView | :thumbsup:
  9 | listViewItem | UiListViewItem | :thumbsup:
 10 | model | ModelNode | :thumbsup:
-
-### Additional tasks:
-1. Add layout system to resemble flex-box (yoga style)
-2. Extract in npm package
-3. Select cmp = select('key'); cmp.setPropX(value); - Double check if we really need this
----
-
-
-## Phase 2:
-
-Order | Component | Lumin RT | Implemented | Tested
-------|-----------|----------|-------------|-------
 11 | spinner | UiLoadingSpinner | :thumbsup:
 12 | slider | UiSlider | :thumbsup:
 13 | progressBar | UiProgressBar | :thumbsup:
@@ -39,12 +25,6 @@ Order | Component | Lumin RT | Implemented | Tested
 21 | panel | UiPanel | :thumbsup:
 22 | video | VideoNode | :thumbsup:
 23 | audio | AudioNode | :thumbsup:
----
-
-## Phase 3:
-
-Order | Component | Lumin RT | Implemented | Tested
-------|-----------|----------|-------------|-------
 24 | dialog | UiDialog | :thumbsup:
 25 | tab | UiTab | :thumbsup:
 26 | pageView | UiPageView | :thumbsup:
@@ -54,4 +34,3 @@ Order | Component | Lumin RT | Implemented | Tested
 30 | datePicker | UiDatePicker | :thumbsup:
 31 | portalIcon | UiPortalIcon | :thumbsup:
 32 | circleConfirmation | UiCircleConfirmation | :thumbsup:
----
