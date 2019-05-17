@@ -77,7 +77,7 @@ export class MyApp extends React.Component {
   render() {
     return (
       <view name='main-view'>
-        <text position={[0, 0.25, 0]} textSize={0.10} textColor={[0.1, 1, 0.1, 0.84]}>{this.state.counter}</text>
+        <text textSize={0.10} textColor={[0.1, 1, 0.1, 0.84]} localPosition={[0, 0.25, 0]}>{this.state.counter}</text>
         <button width={0.25} height={0.15} roundness={0.5} onClick={this.onButtonClick}>+</button>
       </view>
     );
