@@ -114,6 +114,10 @@ import 'magic-script-polyfills';
 import process from './global-scope.js';
 ```
 
+## Components included
+
+- [List of Components](docs/Components.md)
+
 ## License
 
 This project is licensed under the Apache License, Version 2.0 - see the [LICENSE](LICENSE) file for details
