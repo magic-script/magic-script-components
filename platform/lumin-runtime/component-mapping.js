@@ -29,6 +29,7 @@ import { TabBuilder } from './elements/builders/tab-builder.js';
 import { TextBuilder } from './elements/builders/text-builder.js';
 import { TextEditBuilder } from './elements/builders/text-edit-builder.js';
 import { TimePickerBuilder } from './elements/builders/time-picker-builder.js';
+import { TransformNodeBuilder } from './elements/builders/transform-node-builder.js';
 import { ToggleBuilder } from './elements/builders/toggle-builder.js';
 import { ToggleGroupBuilder } from './elements/builders/toggle-group-builder.js';
 import { WebViewBuilder } from './elements/builders/web-view-builder.js';
@@ -68,7 +69,7 @@ export default {
         'toggle': () => new ToggleBuilder(),
         'toggleGroup': () => new ToggleGroupBuilder(),
         'panel': () => new PanelBuilder(),
-        
+
         'tab': () => new TabBuilder(),
         'dialog': () => new DialogBuilder(),
         'pageView': () => new PageViewBuilder(),
@@ -78,6 +79,8 @@ export default {
         'timePicker': () => new TimePickerBuilder(),
         'datePicker': () => new DatePickerBuilder(),
         'circleConfirmation': () => new CircleConfirmationBuilder(),
+
+        'content': () => new TransformNodeBuilder(),
 
         'model': () => new ModelBuilder(),
         'quad' : () => new QuadNodeBuilder(),

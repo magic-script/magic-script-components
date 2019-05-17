@@ -17,7 +17,6 @@ export class AppPrismController extends PrismController {
     }
 
     findChild(nodeName) {
-        print('AppPrismController.findChild');
         const root = this.getRoot();
         return root.getName() === nodeName ? root : root.findChild(nodeName);
     }

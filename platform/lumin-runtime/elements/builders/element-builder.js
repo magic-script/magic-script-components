@@ -11,7 +11,7 @@ export class ElementBuilder {
             if (this._validateProperty(value, descriptor)) {
                 this._setProperty(value, descriptor, element, oldProperties, newProperties);
             }
-        });        
+        });
     }
 
     apply(element, oldProperties, newProperties) {
@@ -36,14 +36,14 @@ export class ElementBuilder {
             }
         }
     }
-    
+
     _setProperty(value, descriptor, element, oldProperties, newProperties) {
         if (descriptor.IsNativeSetter) {
             if (typeof element[descriptor.SetterName] === 'function') {
                 try {
                     element[descriptor.SetterName](value);
                 } catch (error) {
-                    console.lot(error);
+                    console.log(error);
                     throw new Error(`[Native.${descriptor.SetterName}]: ${error.name} - ${error.message}\n${error.stack}`);
                 }
             } else {
@@ -53,7 +53,7 @@ export class ElementBuilder {
             try {
                 this[descriptor.SetterName](element, oldProperties, newProperties);
             } catch (error) {
-                console.lot(error);
+                console.log(error);
                 throw new Error(`[Builder.${descriptor.SetterName}]: ${error.name} - ${error.message}\n${error.stack}`);
             }
         }

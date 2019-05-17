@@ -25,12 +25,61 @@ export class TransformNodeBuilder extends ElementBuilder {
         this._propertyDescriptors['localScale'] = new ArrayProperty('localScale', 'setLocalScale', true, 'vec3');
         this._propertyDescriptors['localTransform'] = new ArrayProperty('localTransform', 'setLocalTransform', true, 'mat4');
         this._propertyDescriptors['cursorHoverState'] = new EnumProperty('cursorHoverState', 'setCursorHoverState', true, CursorHoverState, 'CursorHoverState');
+
+        this._propertyDescriptors['offset'] = new ArrayProperty('offset', 'setOffset', false, 'vec3');
     }
 
-    // update(element, oldProperties, newProperties) {
-    //     // this.throwIfNotInstanceOf(element, TransformNode);
-    //     super.update(element, oldProperties, newProperties);
-    // }
+    create(prism, properties) {
+        this.throwIfInvalidPrism(prism);
+
+        this.validate(undefined, undefined, properties);
+
+        const defaultTransform = [
+            [1, 0, 0, 0],
+            [0, 1, 0, 0],
+            [0, 0, 1, 0],
+            [0, 0, 0, 1]
+        ];
+
+        const localTransform = this.getPropertyValue('localTransform', defaultTransform, properties);
+
+        const element = prism.createTransformNode(localTransform);
+
+        const unapplied = this.excludeProperties(properties, ['localTransform']);
+
+        this.apply(element, undefined, unapplied);
+
+        // return element;
+        return this._getProxy(element);
+    }
+
+
+    _getProxy(element) {
+        const handler = {
+            offset: undefined,
+            set: function(target, property, value, receiver) {
+                if (property === 'offset') {
+                    // value should be vec3 type
+                    if (Array.isArray(value) && value.length === 3) {
+                        this.offset = value;
+                    } else {
+                        throw new TypeError(`offset value ${value} is not a vec3 type`);
+                    }
+                } else  {
+                    return Reflect.set(...arguments);
+                }
+            },
+            get: function(target, property, receiver) {
+                if (property === 'offset') {
+                    return this.offset;
+                } else {
+                    return Reflect.get(...arguments);
+                }
+            }
+        };
+
+        return new Proxy(element, handler);
+    }
 
     excludeProperties(properties, exclude) {
         const subset = Object.assign({}, properties);

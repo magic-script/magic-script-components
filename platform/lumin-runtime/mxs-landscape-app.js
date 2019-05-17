@@ -5,7 +5,7 @@ import { AppPrismController } from './controllers/app-prism-controller.js';
 
 export class MxsLandscapeApp extends LandscapeApp {
     // The 0.5 value is the number of seconds to call `updateLoop` in an interval if
-    // there are no other events waking the event loop.  
+    // there are no other events waking the event loop.
     constructor(appComponent, timeDelta) {
         super(timeDelta);
 
@@ -18,7 +18,7 @@ export class MxsLandscapeApp extends LandscapeApp {
     return 0;
   }
 
-  onAppStart(arg) {  
+  onAppStart(arg) {
     for (let size of this._prismSize) {
         // TODO: MxsPrismController(this._app.volume);
         // Each controller is responsible for one prism (volume)

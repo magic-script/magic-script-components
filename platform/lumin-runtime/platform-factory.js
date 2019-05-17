@@ -1,6 +1,6 @@
 // Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
 
-import { LandscapeApp, ImmersiveApp, PrismController, ui } from 'lumin';
+import { ImmersiveApp, ModelNode, TransformNode, ui } from 'lumin';
 
 import { NativeFactory } from '../../core/native-factory.js';
 import { MxsLandscapeApp } from './mxs-landscape-app.js';
@@ -104,32 +104,94 @@ export class PlatformFactory extends NativeFactory {
     // after replacing builders with proxies
     _addChildNodeToParentNode(parent, child) {
         if (parent instanceof ui.UiScrollView) {
-            // ScrollBar: child is UiScrollBar
+            if (child instanceof ui.UiScrollBar) {
+                parent.setScrollBar(child.orientation, child);
+            }
+
+            if (child instanceof TransformNode) {
+                if (child.offset !== undefined) {
+                    parent.setScrollContent(child, child.offset);
+                } else {
+                    parent.setScrollContent(child);
+                }
+            }
+        } else if (parent instanceof ui.UiListView) {
             if (child instanceof ui.UiScrollBar) {
                 parent.setScrollBar(child);
             }
-            // ScrollContent: child is <TransformNode, vec3>
-        } else if (parent instanceof ui.UiListView) {
-            // ScrollBar: child is UiSCrollBar
-            // ListViewItem: use addItem instead of addChild
+            if (child instanceof ui.UiListViewItem) {
+                const { padding, itemAlignment } = child;
+                if (padding !== undefined) {
+                    if (itemAlignment !== undefined) {
+                        parent.addItem(child, padding, itemAlignment);
+                    } else {
+                        parent.addItem(child, padding);
+                    }
+                } else {
+                    parent.addItem(child);
+                }
+            }
         } else if (parent instanceof ui.UiSlider) {
-            // SliderModel: child is <Node, vec3>
+            if (child instanceof TransformNode) {
+                if (child.offset !== undefined) {
+                    parent.setSliderModel(child, child.offset);
+                } else {
+                    parent.setSliderModel(child);
+                }
+            }
         } else if (parent instanceof ui.UiRectLayout) {
-            // Content: child is TransformNode
+            if (child instanceof TransformNode) {
+                parent.setContent(child);
+            }
         } else if (parent instanceof ui.UiDropDownList) {
-            // ButtonModel: child is <Node, vec3>
-            // List: child is array of DropDownListItem(s)
+            if (child instanceof TransformNode) {
+                if (child.offset !== undefined) {
+                    parent.ButtonModel(child, child.offset);
+                } else {
+                    parent.ButtonModel(child);
+                }
+            }
+            if (child instanceof ui.DropDownListItem) {
+                const list = parent.getList();
+                list.push(child);
+                parent.setList(list);
+            }
             // ListFont: Font2dResource(fontDesc, fontFile, a_absolutePath)
             // fontDesc = Font2dDesc(advanceDir, flowDir, tileSize, quality, minAlpha)
         } else if (parent instanceof ui.UiDialog) {
-            // DialogContent: child is TransformNode
+            if (child instanceof TransformNode) {
+                parent.setDialogContent(child);
+            }
         } else if (parent instanceof ui.UiToggle) {
-            // ToggleModel: child is <Node, vec3>
+            if (child instanceof TransformNode) {
+                if (child.offset !== undefined) {
+                    parent.setToggleModel(child, child.offset);
+                } else {
+                    parent.setToggleModel(child);
+                }
+            }
         } else if (parent instanceof ui.UiPanel) {
-            // EdgeTransition: child is <side, UiPanel>
+            if (child instanceof ui.UiPanel) {
+                if (child.side !== undefined) {
+                    parent.setEdgeTransition(child.side, child);
+                }
+            }
         } else if (parent instanceof ui.UiPortalIcon) {
-            // BackgroundModel: child is <Node, vec3>
-            // IconModel: : child is <Node, vec3>
+            if (child instanceof ModelNode) {
+                parent.setIconModel(child, child.offset);
+            } else if (child instanceof TransformNode) {
+                parent.setBackgroundModel(child, child.offset);
+            }
+        } else if (parent instanceof ui.UiButton) {
+            if (child instanceof TransformNode) {
+                if (child.offset !== undefined) {
+                    parent.setButtonModel(child, child.offset);
+                } else {
+                    parent.setButtonModel(child);
+                }
+            }
+        } else {
+            parent.addChild(child);
         }
     }
 
@@ -147,12 +209,15 @@ export class PlatformFactory extends NativeFactory {
                 if ( !this.isController(parent) ) {
                     throw new Error('Adding controller to non-controller parent');
                 }
+                print('PlatformFactory.addChildElement: parent.addChildController');
                 parent.addChildController(child);
                 parent.getRoot().addChild(child.getRoot());
             } else {
                 if (this.isController(parent)) {
+                    print('PlatformFactory.addChildElement: parent.addChild');
                     parent.addChild(child);
                 } else {
+                    print('PlatformFactory.addChildElement: _addChildNodeToParentNode(parent, child)');
                     this._addChildNodeToParentNode(parent, child);
                 }
             }
