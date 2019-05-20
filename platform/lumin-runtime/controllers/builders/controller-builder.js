@@ -10,9 +10,9 @@ export class ControllerBuilder {
         this._eventHandlerNames = ['onPreAttachPrism', 'onAttachPrism', 'onDetachPrism', 'onEvent', 'onUpdate'];
     }
 
-    create(properties) {        
+    create(properties) {
         const controller = new MxsPrismController(properties);
-        
+
         this.update(controller, undefined, properties)
 
         return controller;
@@ -38,7 +38,7 @@ export class ControllerBuilder {
     _validateEventHandlers(properties) {
         return this._eventHandlerNames.every(name => {
             const handler = properties[name];
-            
+
             if (handler === undefined || typeof handler === 'function') {
                 return true;
             } else {

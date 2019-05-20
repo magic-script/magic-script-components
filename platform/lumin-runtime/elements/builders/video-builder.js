@@ -33,10 +33,9 @@ export class VideoBuilder extends QuadNodeBuilder {
         viewMode = viewMode === undefined
             ? luminViewMode.kFullArea
             : ViewMode[viewMode];
-        
+
         const element = prism.createVideoNode(width, height);
-        const statusCode = element.setVideoPath(videoPath);        
-        print(`setVideoPath ${videoPath} result: ${statusCode}`);
+        const statusCode = element.setVideoPath(videoPath);
 
         element.setViewMode(viewMode);
         element.setVolume(volume);
