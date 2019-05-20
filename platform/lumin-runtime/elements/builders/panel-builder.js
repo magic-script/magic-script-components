@@ -2,14 +2,12 @@
 
 import { ui } from 'lumin';
 
-import { MxsPanel } from '../mxs-panel.js';
 import { UiNodeBuilder } from './ui-node-builder.js';
 import { ArrayProperty } from '../properties/array-property.js';
 import { PrimitiveTypeProperty } from '../properties/primitive-type-property.js';
 
 import { PanelEdgeConstraintLevel } from '../../types/panel-edge-constraint-level.js';
 import { PanelCursorTransitionType } from '../../types/panel-cursor-transition-type.js';
-import { Side } from '../../types/side.js';
 
 export class PanelBuilder extends UiNodeBuilder {
     constructor(){
@@ -36,6 +34,8 @@ export class PanelBuilder extends UiNodeBuilder {
 
         this._propertyDescriptors['edgeConstraintLevel'] = new ClassProperty('edgeConstraintLevel', 'setEdgeConstraintLevel', false, edgeConstraintLevelProperties);
 
+        // EdgeTransition
+
         // PanelShape - new BoundaryShape(size, roundness, offsetopt)
         const panelShapeProperties = [
             new ArrayProperty('size', undefined, undefined, 'vec2'),
@@ -44,16 +44,13 @@ export class PanelBuilder extends UiNodeBuilder {
         ];
 
         this._propertyDescriptors['panelShape'] = new ClassProperty('panelShape', 'setPanelShape', false, panelShapeProperties);
-
-        // Side (EdgeTransition)
-        this._propertyDescriptors['side'] = new EnumProperty('side', 'setSide', false, Side, 'Side');
     }
 
 
     create(prism, properties) {
         this.throwIfInvalidPrism(prism);
 
-        const element = MxsPanel.Create(prism);
+        const element = ui.UiPanel.Create(prism);
 
         this.update(element, undefined, properties);
 
@@ -83,13 +80,6 @@ export class PanelBuilder extends UiNodeBuilder {
             const offset = this.getPropertyValue('offset', [0,0,0], newProperties);
             const panelShape = new ui.BoundaryShape(size, roundness, offset);
             element.setPanelShape(panelShape);
-        }
-    }
-
-    setSide(element, oldProperties, newProperties) {
-        const side = newProperties.side;
-        if (side !== undefined) {
-            element.Side = Side[side];
         }
     }
 }

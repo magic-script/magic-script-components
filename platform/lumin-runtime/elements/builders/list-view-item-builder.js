@@ -4,11 +4,8 @@ import { ui } from 'lumin';
 
 import { UiNodeBuilder } from './ui-node-builder.js';
 import { ArrayProperty } from '../properties/array-property.js';
-import { EnumProperty } from '../properties/enum-property.js';
 
 import { Alignment } from '../../types/alignment.js';
-
-import { MxsListViewItem } from '../mxs-list-view-item.js';
 
 export class ListViewItemBuilder extends UiNodeBuilder {
     constructor(){
@@ -23,24 +20,49 @@ export class ListViewItemBuilder extends UiNodeBuilder {
     create(prism, properties) {
         this.throwIfInvalidPrism(prism);
 
-        const element = MxsListViewItem.Create(prism);
+        const element = ui.UiListViewItem.Create(prism);
 
         this.update(element, undefined, properties);
 
-        return element;
+        // return element;
+        return this._getProxy(element);
+    }
+
+    _getProxy(element) {
+        const handler = {
+            padding: undefined,
+            itemAlignment: undefined,
+            set: function(target, property, value, receiver) {
+                if (property === 'padding') {
+                    this.padding = value;
+                } else if (property === 'itemAlignment') {
+                    this.itemAlignment = value;
+                } else  {
+                    return Reflect.set(...arguments);
+                }
+            },
+            get: function(target, property, receiver) {
+                if (property === 'padding') {
+                    return this.padding;
+                } else if (property === 'itemAlignment') {
+                    return this.itemAlignment;
+                } else {
+                    return Reflect.get(...arguments);
+                }
+            }
+        };
+
+        return new Proxy(element, handler);
     }
 
     setPadding(element, oldProperties, newProperties) {
-        const padding = newProperties.padding
-        if (padding !== undefined) {
-            element.Padding = padding;
-        }
+        element.padding = newProperties.padding;
     }
 
     setItemAlignment(element, oldProperties, newProperties) {
         const itemAlignment = newProperties.itemAlignment;
         if (itemAlignment !== undefined) {
-            element.ItemAlignment = Alignment[itemAlignment];
+            element.itemAlignment = Alignment[itemAlignment];
         }
     }
 }

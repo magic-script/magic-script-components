@@ -29,10 +29,8 @@ export const UiNodeEvents = {
     'onCharacterEnter': 'onCharacterEnteredSub',
     'onKeyboardEvent': 'onKeyboardEventSub',
     'onTextChanged': 'onTextChangedSub',
-    // UiSlider
-    'onSliderChanged': 'onSliderChangedSub',
     // UiListView
-    // UiScrollBar
+    // UiSlider
     'onScrollChanged': 'onScrollChangedSub',
     // UiProgressBar
     'onProgressBarChanged': 'onProgressBarChangedSub',

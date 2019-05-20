@@ -27,7 +27,7 @@ export class TextBuilder extends TextContainerBuilder {
         this._propertyDescriptors['weight'] = new EnumProperty('weight', 'setFont', false, FontWeight, 'FontWeight');
 
         const boundsSizeProperties = [
-            new ArrayProperty('boundsSize', undefined, undefined, 'vec2'),
+            new ArrayProperty('boundsSize', undefined, undefined, 'vec4'),
             new PrimitiveTypeProperty('wrap', undefined, undefined, 'boolean')
         ];
 
