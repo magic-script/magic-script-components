@@ -49,36 +49,11 @@ export class TransformNodeBuilder extends ElementBuilder {
 
         this.apply(element, undefined, unapplied);
 
-        // return element;
-        return this._getProxy(element);
+        return this._attachOffsetProperty(element);
     }
 
-
-    _getProxy(element) {
-        const handler = {
-            offset: undefined,
-            set: function(target, property, value, receiver) {
-                if (property === 'offset') {
-                    // value should be vec3 type
-                    if (Array.isArray(value) && value.length === 3) {
-                        this.offset = value;
-                    } else {
-                        throw new TypeError(`offset value ${value} is not a vec3 type`);
-                    }
-                } else  {
-                    return Reflect.set(...arguments);
-                }
-            },
-            get: function(target, property, receiver) {
-                if (property === 'offset') {
-                    return this.offset;
-                } else {
-                    return Reflect.get(...arguments);
-                }
-            }
-        };
-
-        return new Proxy(element, handler);
+    _attachOffsetProperty(element) {
+        return element[offset] = [0, 0, 0];
     }
 
     excludeProperties(properties, exclude) {
