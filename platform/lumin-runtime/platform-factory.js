@@ -105,7 +105,7 @@ export class PlatformFactory extends NativeFactory {
     _addChildNodeToParentNode(parent, child) {
         if (parent instanceof ui.UiScrollView) {
             if (child instanceof ui.UiScrollBar) {
-                parent.setScrollBar(child.orientation, child);
+                parent.setScrollBar(child.Orientation, child);
             }
 
             if (child instanceof TransformNode) {
@@ -120,12 +120,12 @@ export class PlatformFactory extends NativeFactory {
                 parent.setScrollBar(child);
             }
             if (child instanceof ui.UiListViewItem) {
-                const { padding, itemAlignment } = child;
-                if (padding !== undefined) {
-                    if (itemAlignment !== undefined) {
-                        parent.addItem(child, padding, itemAlignment);
+                const { Padding, ItemAlignment } = child;
+                if (Padding !== undefined) {
+                    if (ItemAlignment !== undefined) {
+                        parent.addItem(child, Padding, ItemAlignment);
                     } else {
-                        parent.addItem(child, padding);
+                        parent.addItem(child, Padding);
                     }
                 } else {
                     parent.addItem(child);
@@ -172,8 +172,8 @@ export class PlatformFactory extends NativeFactory {
             }
         } else if (parent instanceof ui.UiPanel) {
             if (child instanceof ui.UiPanel) {
-                if (child.side !== undefined) {
-                    parent.setEdgeTransition(child.side, child);
+                if (child.Side !== undefined) {
+                    parent.setEdgeTransition(child.Side, child);
                 }
             }
         } else if (parent instanceof ui.UiPortalIcon) {
@@ -209,15 +209,12 @@ export class PlatformFactory extends NativeFactory {
                 if ( !this.isController(parent) ) {
                     throw new Error('Adding controller to non-controller parent');
                 }
-                print('PlatformFactory.addChildElement: parent.addChildController');
                 parent.addChildController(child);
                 parent.getRoot().addChild(child.getRoot());
             } else {
                 if (this.isController(parent)) {
-                    print('PlatformFactory.addChildElement: parent.addChild');
                     parent.addChild(child);
                 } else {
-                    print('PlatformFactory.addChildElement: _addChildNodeToParentNode(parent, child)');
                     this._addChildNodeToParentNode(parent, child);
                 }
             }
