@@ -1,1 +1,0 @@
-# UI Kit Elements attribute schema
