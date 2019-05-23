@@ -82,11 +82,16 @@ export class AudioBuilder extends TransformNodeBuilder {
     create(prism, properties) {
         this.throwIfInvalidPrism(prism);
 
+        // Required properties
+        const fileName = properties.fileName;
+
+        this._throwIfNoFileName(fileName, 'Property "fileName" is required');
+
+        // Optional properties
         const loadFile = this.getPropertyValue('loadFile', false, properties);
-        const fileName = this.getPropertyValue('fileName', false, properties);
         const absolutePath = this.getPropertyValue('absolutePath', false, properties);
-        const descriptor = this.getPropertyValue('descriptor', false, properties);
-        const basePath = this.getPropertyValue('basePath', false, properties);
+        const descriptor = this.getPropertyValue('descriptor', -1, properties);
+        const basePath = this.getPropertyValue('basePath', null, properties);
         const autoDestroy = this.getPropertyValue('autoDestroy', false, properties);
         const dynamicDecode = this.getPropertyValue('dynamicDecode', false, properties);
 
@@ -107,6 +112,12 @@ export class AudioBuilder extends TransformNodeBuilder {
         this.update(element, undefined, properties);
 
         return element;
+    }
+
+    _throwIfNoFileName(fileName, message) {
+        if (fileName === undefined || fileName === null || fileName === '') {
+            throw new Error(message);
+        }
     }
 
     _throwIfNoAudioResource(id, message) {
