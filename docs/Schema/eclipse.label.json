@@ -1,0 +1,176 @@
+{
+  "type": "object",
+  "properties": {
+    "textSize": {
+      "type": "number"
+    },
+    "eclipseLabelType": {
+      "type": "string"
+    },
+    "fontSelector": {
+      "$ref": "#/definitions/selectFontType"
+    },
+    "fontParameters": {
+      "$ref": "#/definitions/fontParametersType"
+    },
+    "textColor": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "boundsSize": {
+      "$ref": "#/definitions/point2Type"
+    },
+    "alignment": {
+      "$ref": "#/definitions/alignmentType"
+    },
+    "wrap": {
+      "type": "boolean"
+    },
+    "characterSpacing": {
+      "type": "number"
+    },
+    "lineSpacing": {
+      "type": "number"
+    },
+    "textAlignment": {
+      "type": "string"
+    },
+    "gravityWellProperties": {
+      "$ref": "#/definitions/gravityWellPropertiesType"
+    },
+    "gravityWellEnabled": {
+      "type": "boolean"
+    },
+    "enabled": {
+      "type": "boolean"
+    },
+    "eventPassThrough": {
+      "type": "boolean"
+    },
+    "external": {
+      "type": "boolean"
+    },
+    "position": {
+      "$ref": "#/definitions/point3Type"
+    },
+    "rotation": {
+      "$ref": "#/definitions/point3Type"
+    },
+    "scale": {
+      "$ref": "#/definitions/scaleType"
+    },
+    "visible": {
+      "type": "boolean"
+    },
+    "cursorHoverState": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    }
+  },
+  "definitions": {
+    "fontParametersType": {
+      "type": "object",
+      "properties": {
+        "style": {
+          "type": "string"
+        },
+        "weight": {
+          "type": "string"
+        }
+      }
+    },
+    "selectFontType": {
+      "type": "object",
+      "properties": {
+        "useDefault": {
+          "type": "boolean"
+        },
+        "fontParameters": {
+          "$ref": "#/definitions/fontParametersType"
+        },
+        "font": {
+          "type": "string"
+        }
+      }
+    },
+    "point2Type": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        }
+      }
+    },
+    "alignmentType": {
+      "type": "object",
+      "properties": {
+        "verticalAlignment": {
+          "type": "string"
+        },
+        "horizontalAlignment": {
+          "type": "string"
+        }
+      }
+    },
+    "point3Type": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "z": {
+          "type": "number"
+        }
+      }
+    },
+    "boundaryShapeType": {
+      "type": "object",
+      "properties": {
+        "size": {
+          "$ref": "#/definitions/point2Type"
+        },
+        "roundness": {
+          "type": "number"
+        },
+        "offset": {
+          "$ref": "#/definitions/point3Type"
+        }
+      }
+    },
+    "gravityWellPropertiesType": {
+      "type": "object",
+      "properties": {
+        "boundaryShape": {
+          "$ref": "#/definitions/boundaryShapeType"
+        },
+        "gravityWellSnap": {
+          "type": "string"
+        }
+      }
+    },
+    "scaleType": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "z": {
+          "type": "number"
+        }
+      }
+    }
+  }
+}

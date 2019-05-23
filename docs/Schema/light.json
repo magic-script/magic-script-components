@@ -1,0 +1,77 @@
+{
+  "type": "object",
+  "properties": {
+    "lightType": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    },
+    "intensity": {
+      "type": "number"
+    },
+    "range": {
+      "type": "number"
+    },
+    "spotAngle": {
+      "type": "number"
+    },
+    "castShadows": {
+      "type": "boolean"
+    },
+    "useHeadPose": {
+      "type": "boolean"
+    },
+    "external": {
+      "type": "boolean"
+    },
+    "position": {
+      "$ref": "#/definitions/point3Type"
+    },
+    "rotation": {
+      "$ref": "#/definitions/point3Type"
+    },
+    "scale": {
+      "$ref": "#/definitions/scaleType"
+    },
+    "visible": {
+      "type": "boolean"
+    },
+    "cursorHoverState": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    }
+  },
+  "definitions": {
+    "point3Type": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "z": {
+          "type": "number"
+        }
+      }
+    },
+    "scaleType": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "z": {
+          "type": "number"
+        }
+      }
+    }
+  }
+}

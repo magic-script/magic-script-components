@@ -1,0 +1,190 @@
+{
+  "type": "object",
+  "properties": {
+    "textures": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/materialTextureType"
+      }
+    },
+    "resource": {
+      "type": "string"
+    },
+    "texCoords": {
+      "$ref": "#/definitions/mat4x2Type"
+    },
+    "color": {
+      "type": "string"
+    },
+    "opaque": {
+      "type": "boolean"
+    },
+    "uiLayer": {
+      "type": "boolean"
+    },
+    "size": {
+      "$ref": "#/definitions/point2Type"
+    },
+    "alignment": {
+      "$ref": "#/definitions/alignmentType"
+    },
+    "useFrame": {
+      "type": "boolean"
+    },
+    "frameResource": {
+      "$ref": "#/definitions/materialModelType"
+    },
+    "gravityWellProperties": {
+      "$ref": "#/definitions/gravityWellPropertiesType"
+    },
+    "gravityWellEnabled": {
+      "type": "boolean"
+    },
+    "enabled": {
+      "type": "boolean"
+    },
+    "eventPassThrough": {
+      "type": "boolean"
+    },
+    "external": {
+      "type": "boolean"
+    },
+    "position": {
+      "$ref": "#/definitions/point3Type"
+    },
+    "rotation": {
+      "$ref": "#/definitions/point3Type"
+    },
+    "scale": {
+      "$ref": "#/definitions/scaleType"
+    },
+    "visible": {
+      "type": "boolean"
+    },
+    "cursorHoverState": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    }
+  },
+  "definitions": {
+    "materialTextureType": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "textureType": {
+          "type": "string"
+        },
+        "materialTexture": {
+          "type": "string"
+        }
+      }
+    },
+    "point2Type": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        }
+      }
+    },
+    "mat4x2Type": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "$ref": "#/definitions/point2Type"
+        },
+        "y": {
+          "$ref": "#/definitions/point2Type"
+        },
+        "z": {
+          "$ref": "#/definitions/point2Type"
+        },
+        "w": {
+          "$ref": "#/definitions/point2Type"
+        }
+      }
+    },
+    "alignmentType": {
+      "type": "object",
+      "properties": {
+        "verticalAlignment": {
+          "type": "string"
+        },
+        "horizontalAlignment": {
+          "type": "string"
+        }
+      }
+    },
+    "materialModelType": {
+      "type": "object",
+      "properties": {
+        "material": {
+          "type": "string"
+        },
+        "model": {
+          "type": "string"
+        }
+      }
+    },
+    "point3Type": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "z": {
+          "type": "number"
+        }
+      }
+    },
+    "boundaryShapeType": {
+      "type": "object",
+      "properties": {
+        "size": {
+          "$ref": "#/definitions/point2Type"
+        },
+        "roundness": {
+          "type": "number"
+        },
+        "offset": {
+          "$ref": "#/definitions/point3Type"
+        }
+      }
+    },
+    "gravityWellPropertiesType": {
+      "type": "object",
+      "properties": {
+        "boundaryShape": {
+          "$ref": "#/definitions/boundaryShapeType"
+        },
+        "gravityWellSnap": {
+          "type": "string"
+        }
+      }
+    },
+    "scaleType": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "z": {
+          "type": "number"
+        }
+      }
+    }
+  }
+}

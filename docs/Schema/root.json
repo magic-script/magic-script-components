@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "properties": {
+    "initiallyLoaded": {
+      "type": "boolean"
+    },
+    "sceneName": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}

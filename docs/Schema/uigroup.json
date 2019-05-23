@@ -1,0 +1,104 @@
+{
+  "type": "object",
+  "properties": {
+    "gravityWellProperties": {
+      "$ref": "#/definitions/gravityWellPropertiesType"
+    },
+    "gravityWellEnabled": {
+      "type": "boolean"
+    },
+    "enabled": {
+      "type": "boolean"
+    },
+    "eventPassThrough": {
+      "type": "boolean"
+    },
+    "external": {
+      "type": "boolean"
+    },
+    "position": {
+      "$ref": "#/definitions/point3Type"
+    },
+    "rotation": {
+      "$ref": "#/definitions/point3Type"
+    },
+    "scale": {
+      "$ref": "#/definitions/scaleType"
+    },
+    "visible": {
+      "type": "boolean"
+    },
+    "cursorHoverState": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    }
+  },
+  "definitions": {
+    "point2Type": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        }
+      }
+    },
+    "point3Type": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "z": {
+          "type": "number"
+        }
+      }
+    },
+    "boundaryShapeType": {
+      "type": "object",
+      "properties": {
+        "size": {
+          "$ref": "#/definitions/point2Type"
+        },
+        "roundness": {
+          "type": "number"
+        },
+        "offset": {
+          "$ref": "#/definitions/point3Type"
+        }
+      }
+    },
+    "gravityWellPropertiesType": {
+      "type": "object",
+      "properties": {
+        "boundaryShape": {
+          "$ref": "#/definitions/boundaryShapeType"
+        },
+        "gravityWellSnap": {
+          "type": "string"
+        }
+      }
+    },
+    "scaleType": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "z": {
+          "type": "number"
+        }
+      }
+    }
+  }
+}
