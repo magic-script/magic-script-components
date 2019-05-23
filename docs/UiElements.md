@@ -258,7 +258,7 @@ fontParams | _object_ | FontParams | lumin.ui.FontParams
     allCaps: boolean
 }
 ```
-
+---
 ## UiScrollBar
 
 ### Tag: `<scrollBar>`
