@@ -35,25 +35,40 @@
     },
 
 
-    "external": {
+    "name": {
+      "type": "string"
+    },
+    "parentedBoneName": {
+      "type": "string"
+    },
+    "skipRaycast": {
       "type": "boolean"
     },
-    "position": {
-      "$ref": "#/definitions/point3Type"
-    },
-    "rotation": {
-      "$ref": "#/definitions/point3Type"
-    },
-    "scale": {
-      "$ref": "#/definitions/scaleType"
+    "triggerable": {
+      "type": "boolean"
     },
     "visible": {
       "type": "boolean"
     },
-    "cursorHoverState": {
-      "type": "string"
+    "visibilityInherited": {
+      "type": "boolean"
     },
-    "name": {
+    "anchorPosition": {
+      "type": "vec3"
+    },
+    "localPosition": {
+      "type": "vec3"
+    },
+    "localRotation": {
+      "type": "quat"
+    },
+    "localScale": {
+      "type": "vec3"
+    },
+    "localTransform": {
+      "type": "mat4"
+    },
+    "cursorHoverState": {
       "type": "string"
     }
   },
