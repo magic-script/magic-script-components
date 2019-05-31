@@ -1,0 +1,67 @@
+// Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
+
+import { input } from 'lumin';
+
+/**
+ * @exports KeyCodes
+ * @description Represents Magic-Script - Lumin Runtime KeyCodes mapping.
+ */
+export const KeyCodes = {
+    'akeycode-0' : input.KeyCodes.AKEYCODE_0,
+    'akeycode-1' : input.KeyCodes.AKEYCODE_1,
+    'akeycode-2' : input.KeyCodes.AKEYCODE_2,
+    'akeycode-3' : input.KeyCodes.AKEYCODE_3,
+    'akeycode-4' : input.KeyCodes.AKEYCODE_4,
+    'akeycode-5' : input.KeyCodes.AKEYCODE_5,
+    'akeycode-6' : input.KeyCodes.AKEYCODE_6,
+    'akeycode-7' : input.KeyCodes.AKEYCODE_7,
+    'akeycode-8' : input.KeyCodes.AKEYCODE_8,
+    'akeycode-9' : input.KeyCodes.AKEYCODE_9,
+    'akeycode-A' : input.KeyCodes.AKEYCODE_A,
+    'akeycode-B' : input.KeyCodes.AKEYCODE_B,
+    'akeycode-C' : input.KeyCodes.AKEYCODE_C,
+
+    'akeycode-alt-left' : input.KeyCodes.AKEYCODE_ALT_LEFT,
+    'akeycode-alt-right' : input.KeyCodes.AKEYCODE_ALT_RIGHT,
+    'akeycode-apostrophe' : input.KeyCodes.AKEYCODE_APOSTROPHE,
+    'akeycode-app-switch' : input.KeyCodes.AKEYCODE_APP_SWITCH,
+    'akeycode-at' : input.KeyCodes.AKEYCODE_AT,
+    'akeycode-avr-input' : input.KeyCodes.AKEYCODE_AVR_INPUT,
+    'akeycode-avr-power' : input.KeyCodes.AKEYCODE_AVR_POWER,
+    'akeycode-back' : input.KeyCodes.AKEYCODE_BACK,
+    'akeycode-backslash' : input.KeyCodes.AKEYCODE_BACKSLASH,
+    'akeycode-bookmark' : input.KeyCodes.AKEYCODE_BOOKMARK,
+    'akeycode-break' : input.KeyCodes.AKEYCODE_BREAK,
+    'akeycode-button-1' : input.KeyCodes.AKEYCODE_BUTTON_1,
+    'akeycode-button-2' : input.KeyCodes.AKEYCODE_BUTTON_2,
+    'akeycode-button-3' : input.KeyCodes.AKEYCODE_BUTTON_3,
+    'akeycode-button-4' : input.KeyCodes.AKEYCODE_BUTTON_4,
+    'akeycode-button-5' : input.KeyCodes.AKEYCODE_BUTTON_5,
+    'akeycode-button-6' : input.KeyCodes.AKEYCODE_BUTTON_6,
+    'akeycode-button-7' : input.KeyCodes.AKEYCODE_BUTTON_7,
+    'akeycode-button-8' : input.KeyCodes.AKEYCODE_BUTTON_8,
+    'akeycode-button-9' : input.KeyCodes.AKEYCODE_BUTTON_9,
+    'akeycode-button-10' : input.KeyCodes.AKEYCODE_BUTTON_10,
+    'akeycode-button-11' : input.KeyCodes.AKEYCODE_BUTTON_11,
+    'akeycode-button-12' : input.KeyCodes.AKEYCODE_BUTTON_12,
+    'akeycode-button-13' : input.KeyCodes.AKEYCODE_BUTTON_13,
+    'akeycode-button-14' : input.KeyCodes.AKEYCODE_BUTTON_14,
+    'akeycode-button-15' : input.KeyCodes.AKEYCODE_BUTTON_15,
+    'akeycode-button-16' : input.KeyCodes.AKEYCODE_BUTTON_16,
+    'akeycode-button-A' : input.KeyCodes.AKEYCODE_BUTTON_A,
+    'akeycode-button-B' : input.KeyCodes.AKEYCODE_BUTTON_B,
+    'akeycode-button-C' : input.KeyCodes.AKEYCODE_BUTTON_C,
+    'akeycode-button-X' : input.KeyCodes.AKEYCODE_BUTTON_X,
+    'akeycode-button-Y' : input.KeyCodes.AKEYCODE_BUTTON_Y,
+    'akeycode-button-Z' : input.KeyCodes.AKEYCODE_BUTTON_Z,
+    'akeycode-button-L1' : input.KeyCodes.AKEYCODE_BUTTON_L1,
+    'akeycode-button-L2' : input.KeyCodes.AKEYCODE_BUTTON_L2,
+    'akeycode-button-R1' : input.KeyCodes.AKEYCODE_BUTTON_R1,
+    'akeycode-button-R2' : input.KeyCodes.AKEYCODE_BUTTON_R2,
+    'akeycode-button-mode' : input.KeyCodes.AKEYCODE_BUTTON_MODE,
+    'akeycode-button-select' : input.KeyCodes.AKEYCODE_BUTTON_SELECT,
+    'akeycode-button-start' : input.KeyCodes.AKEYCODE_BUTTON_START,
+    'akeycode-button-thumbl' : input.KeyCodes.AKEYCODE_BUTTON_THUMBL,
+    'akeycode-button-thumbr' : input.KeyCodes.AKEYCODE_BUTTON_THUMBR,
+    'akeycode-call' : input.KeyCodes.AKEYCODE_CALL
+}
