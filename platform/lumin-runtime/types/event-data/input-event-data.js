@@ -1,0 +1,19 @@
+// Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
+
+import { ServerEvent } from './server-event.js';
+import { EventType } from '../event-type.js';
+import { EventSource } from '../event-source.js';
+
+import { extractor } from '../../utilities/extractor.js';
+
+export class InputEventData extends ServerEvent {
+    get DeviceId() {
+        return this._nativeEvent.getDeviceId();
+    }
+    get EventSource() {
+        return extractor.getKeyByValue(EventSource, this._nativeEvent.getEventSource());
+    }
+    get EventType() {
+        return extractor.getKeyByValue(EventType, this._nativeEvent.getEventType());
+    }
+}

@@ -54,16 +54,16 @@
       "type": "boolean"
     },
     "anchorPosition": {
-      "type": "vec3"
+      "$ref": "#/definitions/glmVec3"
     },
     "localPosition": {
-      "type": "vec3"
+      "$ref": "#/definitions/glmVec3"
     },
     "localRotation": {
       "type": "quat"
     },
     "localScale": {
-      "type": "vec3"
+      "$ref": "#/definitions/glmVec3"
     },
     "localTransform": {
       "type": "mat4"
@@ -74,6 +74,14 @@
   },
 
   "definitions": {
+    "glmVec3": {
+      "type": "array",
+      "items": [
+        { "type": "number" },
+        { "type": "number" },
+        { "type": "number" }
+      ]
+    },
     "spatialSoundDirectionType": {
       "type": "object",
       "properties": {
