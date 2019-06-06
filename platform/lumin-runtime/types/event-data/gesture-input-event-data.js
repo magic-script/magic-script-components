@@ -3,9 +3,9 @@
 import { ControlTouchPadInputEventData } from './control-touch-pad-input-event-data.js';
 import { GestureType } from '../gesture-type.js';
 import { GestureDirection } from '../gesture-direction.js';
-import { HandGestureKeypointName } from '../hand-gesture-keypoint-name.js';
 
 import { extractor } from '../../utilities/extractor.js';
+import { validator } from '../../utilities/validator.js'
 
 export class GestureInputEventData extends ControlTouchPadInputEventData {
     get Gesture() {
@@ -52,8 +52,11 @@ export class GestureInputEventData extends ControlTouchPadInputEventData {
         return this._nativeEvent.getHandGestureIndex();
     }
 
-    getHandGestureKeypoint(KeypointName) {
-        // validate KeypointName against HandGestureKeypointName
+    getHandGestureKeypoint(keypointName) {
+        if ( !validator.validateHandGestureKeypointName(keypointName)) {
+            throw new TypeError(`Provided value (${keypointName}) for 'keypointName' is not valid HandGestureKeypointName value`);
+        }
+
         return this._nativeEvent.getHandGestureKeypoint();
     }
 
@@ -62,7 +65,10 @@ export class GestureInputEventData extends ControlTouchPadInputEventData {
     }
 
     get HandGestureKeyPoseConfidence(gesture) {
-        // validate gesture against GestureType
+        if ( !validator.validateGestureType(gesture)) {
+            throw new TypeError(`Provided value (${gesture}) for 'gesture' is not valid GestureType value`);
+        }
+
         return this._nativeEvent.getHandGestureKeyPoseConfidence(gesture);
     }
 
@@ -70,8 +76,12 @@ export class GestureInputEventData extends ControlTouchPadInputEventData {
         return this._nativeEvent.getHandGestureLocation();
     }
 
-    get isHandGestureKeypointRecognized() {
-        return this._nativeEvent.isHandGestureKeypointRecognized();
+    get isHandGestureKeypointRecognized(keypointName) {
+        if ( !validator.validateHandGestureKeypointName(keypointName)) {
+            throw new TypeError(`Provided value (${keypointName}) for 'keypointName' is not valid HandGestureKeypointName value`);
+        }
+
+        return this._nativeEvent.isHandGestureKeypointRecognized(keypointName);
     }
 
     get isMultiTouch() {
