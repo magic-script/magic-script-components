@@ -1,10 +1,8 @@
 // Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
 
-export class ServerEvent {
-    constructor(nativeEvent) {
-        this._nativeEvent = nativeEvent;
-    }
+import { EventData } from './event-data.js';
 
+export class ServerEvent extends EventData{
     get PrismId() {
         return this._nativeEvent.getPrismId();
     }
