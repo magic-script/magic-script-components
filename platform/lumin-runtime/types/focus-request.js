@@ -4,8 +4,8 @@ import { ui } from 'lumin';
 
 /**
  * @exports FocusRequest
- * @description Represents Magic-Script - Lumin Runtime EclipseLabelType mapping for UiNode.
- */ 
+ * @description Represents Magic-Script - Lumin Runtime FocusRequest mapping.
+ */
 export const FocusRequest = {
     'gain-focus': ui.OnActivateResponse.FocusRequest.kGainFocus,
     'lose-focus': ui.OnActivateResponse.FocusRequest.kLoseFocus,

@@ -5,16 +5,16 @@ import { KeyCodes } from '../key-codes.js';
 import { extractor } from '../../utilities/extractor.js';
 
 export class KeyInputEventData extends InputEventData {
-    get keyCode() {
+    get KeyCode() {
         return extractor.getKeyByValue(KeyCodes, this._nativeEvent.keyCode());
     }
 
     // TODO: Should this be available at all since it is platform specific ?
-    get keyVal() {
+    get KeyVal() {
         return this._nativeEvent.keyVal();
     }
 
-    get metaKeys() {
+    get MetaKeys() {
         // TOOD: Find what metaKey is !
         return this._nativeEvent.metaKeys();
     }
