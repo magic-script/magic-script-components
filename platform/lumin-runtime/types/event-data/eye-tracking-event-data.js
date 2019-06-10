@@ -1,10 +1,6 @@
 // Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
 
 import { ServerEvent } from './server-event.js';
-import { EventType } from '../event-type.js';
-import { EventSource } from '../event-source.js';
-
-import { extractor } from '../../utilities/extractor.js';
 
 export class EyeTrackingEventData extends ServerEvent {
     get EyeTrackingFixationConfidence() {
