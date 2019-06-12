@@ -1,5 +1,7 @@
 // Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
 
+import { ControlPose3DofInputEventData as _ControlPose3DofInputEventData } from 'lumin';
+
 import { InputEventData } from './input-event-data.js';
 
 export class ControlPose3DofInputEventData extends InputEventData {
@@ -14,6 +16,11 @@ export class ControlPose3DofInputEventData extends InputEventData {
             'QuaternionZ'
         ]);
     }
+
+    static isSupported(event) {
+        return (event instanceof _ControlPose3DofInputEventData);
+    }
+
     // get Quaternion() {
     //     return this._nativeEvent.getQuaternion();
     // }

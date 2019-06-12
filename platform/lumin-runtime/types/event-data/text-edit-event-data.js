@@ -1,5 +1,5 @@
 // Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
-
+import { ui } from 'lumin';
 import { UiEventData } from './ui-event-data.js';
 
 export class TextEditEventData extends UiEventData {
@@ -30,5 +30,9 @@ export class TextEditEventData extends UiEventData {
             // TextPadding
             // TextSize
         ]);
+    }
+
+    static isSupported(event) {
+        return (event.getUiNode() instanceof ui.UiTextEdit);
     }
 }

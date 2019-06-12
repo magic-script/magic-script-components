@@ -1,5 +1,7 @@
 // Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
 
+import { GestureInputEventData as _GestureInputEventData } from 'lumin';
+
 import { ControlTouchPadInputEventData } from './control-touch-pad-input-event-data.js';
 import { GestureType } from '../gesture-type.js';
 import { GestureDirection } from '../gesture-direction.js';
@@ -103,6 +105,10 @@ export class GestureInputEventData extends ControlTouchPadInputEventData {
 
     get isMultiTouch() {
         return this._nativeEvent.isMultiTouch();
+    }
+
+    static isSupported(event) {
+        return (event instanceof _GestureInputEventData);
     }
 }
 

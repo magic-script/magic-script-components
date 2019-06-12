@@ -1,5 +1,5 @@
 // Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
-
+import { EyeTrackingEventData as _EyeTrackingEventData } from 'lumin';
 import { ServerEvent } from './server-event.js';
 
 export class EyeTrackingEventData extends ServerEvent {
@@ -59,5 +59,9 @@ export class EyeTrackingEventData extends ServerEvent {
     }
     isFixationDepthUnconfortable() {
         return this._nativeEvent.isFixationDepthUnconfortable();
+    }
+
+    static isSupported(event) {
+        return (event instanceof _EyeTrackingEventData);
     }
 }

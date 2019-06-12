@@ -1,4 +1,5 @@
 // Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
+import { InputEventData as _InputEventData } from 'lumin';
 
 import { ServerEvent } from './server-event.js';
 import { EventType } from '../event-type.js';
@@ -20,7 +21,12 @@ export class InputEventData extends ServerEvent {
     get EventSource() {
         return extractor.getKeyByValue(EventSource, this._nativeEvent.getEventSource());
     }
+
     get EventType() {
         return extractor.getKeyByValue(EventType, this._nativeEvent.getEventType());
+    }
+
+    static isSupported(event) {
+        return (event instanceof _InputEventData);
     }
 }

@@ -1,8 +1,8 @@
 // Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
-
+import { ServerEvent as _ServerEvent } from 'lumin';
 import { EventData } from './event-data.js';
 
-export class ServerEvent extends EventData{
+export class ServerEvent extends EventData {
     constructor(nativeEvent) {
         super(nativeEvent);
 
@@ -17,5 +17,9 @@ export class ServerEvent extends EventData{
 
     get isInputEvent() {
         return this._nativeEvent.isInputEventType();
+    }
+
+    static isSupported(event) {
+        return (event instanceof _ServerEvent);
     }
 }

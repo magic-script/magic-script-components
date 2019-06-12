@@ -1,5 +1,5 @@
 // Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
-
+import { ui } from 'lumin';
 import { UiEventData } from './ui-event-data.js';
 
 export class SliderEventData extends UiEventData {
@@ -11,5 +11,9 @@ export class SliderEventData extends UiEventData {
             'Min',
             'Value'
         ]);
+    }
+
+    static isSupported(event) {
+        return (event.getUiNode() instanceof ui.UiSlider);
     }
 }

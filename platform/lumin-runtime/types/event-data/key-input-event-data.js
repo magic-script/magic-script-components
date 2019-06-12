@@ -1,5 +1,5 @@
 // Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
-
+import { KeyInputEventData as _KeyInputEventData } from 'lumin';
 import { InputEventData } from './input-event-data.js';
 import { KeyCodes } from '../key-codes.js';
 import { extractor } from '../../utilities/extractor.js';
@@ -17,5 +17,9 @@ export class KeyInputEventData extends InputEventData {
     get MetaKeys() {
         // TOOD: Find what metaKey is !
         return this._nativeEvent.metaKeys();
+    }
+
+    static isSupported(event) {
+        return (event instanceof _KeyInputEventData);
     }
 }

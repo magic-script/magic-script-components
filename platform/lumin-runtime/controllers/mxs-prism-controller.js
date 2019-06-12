@@ -29,6 +29,19 @@ export class MxsPrismController extends PrismController {
             onEvent:[],
             onUpdate: []
         };
+
+        this._eventTypes = [
+            ControlPose3DofInputEventData,
+            ControlPose6DofInputEventData,
+            ControlTouchPadInputEventData,
+            EyeTrackingEventData,
+            GestureInputEventData,
+            InputEventData,
+            KeyInputEventData,
+            SelectionEventData,
+            UiEventData,
+            VideoEventData
+        ];
     }
 
     addChild(child) {
@@ -86,38 +99,13 @@ export class MxsPrismController extends PrismController {
     }
 
     _getEventDataByEventType(eventData) {
-        if (eventData instanceof lumin.ControlPose3DofInputEventData) {
-            return new ControlPose3DofInputEventData(eventData);
-        }
-        if (eventData instanceof lumin.ControlPose6DofInputEventData) {
-            return new ControlPose6DofInputEventData(eventData);
-        }
-        if (eventData instanceof lumin.ControlTouchPadInputEventData) {
-            return new ControlTouchPadInputEventData(eventData);
-        }
-        if (eventData instanceof lumin.EyeTrackingEventData) {
-            return new EyeTrackingEventData(eventData);
-        }
-        if (eventData instanceof lumin.GestureInputEventData) {
-            return new GestureInputEventData(eventData);
-        }
-        if (eventData instanceof lumin.InputEventData) {
-            return new InputEventData(eventData);
-        }
-        if (eventData instanceof lumin.KeyInputEventData) {
-            return new KeyInputEventData(eventData);
-        }
-        if (eventData instanceof lumin.SelectionEventData) {
-            return new SelectionEventData(eventData);
-        }
-        if (eventData instanceof lumin.ui.UiEventData) {
-            return new UiEventData(eventData);
-        }
-        if (eventData instanceof lumin.VideoEventData) {
-            return new VideoEventData(eventData);
-        }
 
-        return eventData;
+        const eventConstructor = this._eventTypes
+            .find( eventType => eventType.isSupported(eventData) );
+
+        return eventConstructor === undefined
+            ? eventData
+            : new eventConstructor(eventData);
     }
 
     onEvent(event) {
