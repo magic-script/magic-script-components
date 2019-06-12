@@ -7,9 +7,16 @@ import { EventSource } from '../event-source.js';
 import { extractor } from '../../utilities/extractor.js';
 
 export class InputEventData extends ServerEvent {
-    get DeviceId() {
-        return this._nativeEvent.getDeviceId();
+    constructor(nativeEvent) {
+        super(nativeEvent);
+
+        this._addGetProperties([
+            'DeviceId'
+        ]);
     }
+    // get DeviceId() {
+    //     return this._nativeEvent.getDeviceId();
+    // }
     get EventSource() {
         return extractor.getKeyByValue(EventSource, this._nativeEvent.getEventSource());
     }

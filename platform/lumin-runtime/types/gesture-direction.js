@@ -14,7 +14,7 @@ export const GestureDirection = {
     'in': input.GestureDirection.IN,
     'left': input.GestureDirection.LEFT,
     'out': input.GestureDirection.OUT,
-    'reight': input.GestureDirection.RIGHT,
+    'right': input.GestureDirection.RIGHT,
     'unknown': input.GestureDirection.UNKNOWN,
     'up': input.GestureDirection.UP
 }

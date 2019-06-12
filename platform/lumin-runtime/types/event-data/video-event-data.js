@@ -5,6 +5,15 @@ import { VideoEventType } from '../video-event-type.js';
 import { extractor } from '../../utilities/extractor.js';
 
 export class VideoEventData extends UiEventData {
+    constructor(nativeEvent) {
+        super(nativeEvent);
+
+        this._addGetProperties([
+            'AffectedNodeId',
+            'XPos',
+            'YPos'
+        ]);
+    }
     get AffectedNodeId() {
         return this._nativeEvent.getAffectedNodeId();
     }

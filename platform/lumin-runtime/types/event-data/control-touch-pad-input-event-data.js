@@ -3,17 +3,27 @@
 import { InputEventData } from './input-event-data.js';
 
 export class ControlTouchPadInputEventData extends InputEventData {
-    get Touch() {
-        // The Lumin Runtime (the native) function is:
-        // getTouch(tidx) - where "tidx" is touch index (default value 0)
-        return this._nativeEvent.getTouch();
+    constructor(nativeEvent) {
+        super(nativeEvent);
+
+        this._addGetProperties([
+            'Touch',
+            'TouchCount',
+            'TouchState'
+        ]);
     }
 
-    get TouchCount() {
-        return this._nativeEvent.getTouchCount();
-    }
+    // get Touch() {
+    //     // The Lumin Runtime (the native) function is:
+    //     // getTouch(tidx) - where "tidx" is touch index (default value 0)
+    //     return this._nativeEvent.getTouch();
+    // }
 
-    get TouchState() {
-        return this._nativeEvent.getTouchState();
-    }
+    // get TouchCount() {
+    //     return this._nativeEvent.getTouchCount();
+    // }
+
+    // get TouchState() {
+    //     return this._nativeEvent.getTouchState();
+    // }
 }
