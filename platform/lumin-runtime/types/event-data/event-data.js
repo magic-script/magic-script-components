@@ -7,11 +7,11 @@ export class EventData {
 
     _addGetProperties(propertyNames) {
         propertyNames
-            .filter(  name => this._nativeEvent[`get${name}`] === 'function')
+            .filter( name => typeof this._nativeEvent[`get${name}`] === 'function')
             .forEach( name => {
                 Object.defineProperty(this, name, {
                     enumerable: true,
-                    get:  () => this._nativeEvent[getterName]()
+                    get:  () => this._nativeEvent[`get${name}`]()
                 })
             });
     }

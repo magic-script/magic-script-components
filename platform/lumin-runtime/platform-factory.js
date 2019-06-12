@@ -32,10 +32,7 @@ export class PlatformFactory extends NativeFactory {
             if (eventDescriptor !== undefined) {
                 if (typeof pair.handler === 'function') {
                     element[eventDescriptor.subName]((eventData) => {
-                        console.log(eventDescriptor);
-                        const data = new eventDescriptor.dataType(eventData);
-                        console.log(data);
-                        pair.handler(data);
+                        pair.handler(new eventDescriptor.dataType(eventData));
                     });
                 } else {
                     throw new TypeError(`The event handler for ${pair.name} is not a function`);
