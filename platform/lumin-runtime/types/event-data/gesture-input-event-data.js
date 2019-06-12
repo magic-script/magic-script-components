@@ -64,7 +64,7 @@ export class GestureInputEventData extends ControlTouchPadInputEventData {
         return this._nativeEvent.getHandGestureKeyPointCount();
     }
 
-    get HandGestureKeyPoseConfidence(gesture) {
+    HandGestureKeyPoseConfidence(gesture) {
         if ( !validator.validateGestureType(gesture)) {
             throw new TypeError(`Provided value (${gesture}) for 'gesture' is not valid GestureType value`);
         }
@@ -76,7 +76,7 @@ export class GestureInputEventData extends ControlTouchPadInputEventData {
         return this._nativeEvent.getHandGestureLocation();
     }
 
-    get isHandGestureKeypointRecognized(keypointName) {
+    isHandGestureKeypointRecognized(keypointName) {
         if ( !validator.validateHandGestureKeypointName(keypointName)) {
             throw new TypeError(`Provided value (${keypointName}) for 'keypointName' is not valid HandGestureKeypointName value`);
         }

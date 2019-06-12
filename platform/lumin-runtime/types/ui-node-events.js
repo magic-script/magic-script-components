@@ -1,7 +1,7 @@
 // Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
 
 import { DropDownListEventData } from './event-data/drop-down-list-event-data.js';
-import { ProgressbarEventData } from './event-data/progress-bar-event-data.js';
+import { ProgressBarEventData } from './event-data/progress-bar-event-data.js';
 import { TextEditEventData } from './event-data/text-edit-event-data.js';
 import { ToggleEventData } from './event-data/toggle-event-data.js';
 import { ScrollViewEventData } from './event-data/scroll-view-event-data.js';
@@ -43,7 +43,7 @@ export const UiNodeEvents = {
     // UiScrollBar
     'onScrollChanged': { subName: 'onScrollChangedSub', dataType: ScrollViewEventData },
     // UiProgressBar
-    'onProgressBarChanged': { subName: 'onProgressBarChangedSub', dataType: ProgressbarEventData },
+    'onProgressBarChanged': { subName: 'onProgressBarChangedSub', dataType: ProgressBarEventData },
     // UiDropDownList
     'onListVisibilityChanged': { subName: 'onListVisibilityChangedSub', dataType: DropDownListEventData },
     'onSelectionChanged': { subName: 'onSelectionChangedSub', dataType: DropDownListEventData },

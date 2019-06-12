@@ -6,7 +6,7 @@ import { input } from 'lumin';
  * @exports GestureType
  * @description Represents Magic-Script - Lumin Runtime GestureType mapping.
  */
-export const GravityWellSnap = {
+export const GestureType = {
     'double-tap': input.GestureType.DoubleTap,
     'edge-press': input.GestureType.EdgePress,
     'force-dwell': input.GestureType.ForceDwell,
