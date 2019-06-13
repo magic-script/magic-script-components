@@ -53,7 +53,7 @@ export class TransformNodeBuilder extends ElementBuilder {
     }
 
     _attachOffsetProperty(element) {
-        return element[offset] = [0, 0, 0];
+        return element['offset'] = [0, 0, 0];
     }
 
     excludeProperties(properties, exclude) {
