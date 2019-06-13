@@ -28,7 +28,7 @@ const UPDATE_SIGNAL = {};
 // Function: createInstance
 // Description: This is where react-reconciler wants to create an instance of UI element in terms of the target.
 // Returns: Instance
-// Input parameters: 
+// Input parameters:
 //  type: string,
 //  props: Props,
 //  rootContainerInstance: Container,
@@ -40,12 +40,12 @@ function createInstance(type, props, rootContainerInstance, hostContext, interna
   console.log(rootContainerInstance);
   console.log(hostContext);
   console.log(internalInstanceHandle);
-  
+
   return mxs._nativeFactory.createElement(type, rootContainerInstance, props);
 }
 
 // Function: This function is used to create separate text nodes if the target allows only creating text in separate text nodes
-// Description: 
+// Description:
 // Returns: TextInstance
 // Input parameters:
 //  text: string,
@@ -60,7 +60,7 @@ function createTextInstance(text, rootContainerInstance, hostContext, internalIn
 // Function: appendInitialChild
 // Description: This function gets called for initial UI tree creation
 // Returns: void
-// Input paramters: 
+// Input paramters:
 //  parentInstance: Instance,
 //  child: Instance | TextInstance
 function appendInitialChild(parentInstance, child) {
@@ -162,10 +162,10 @@ function prepareUpdate(instance, type, oldProps, newProps, rootContainerInstance
 }
 
 // Function: shouldDeprioritizeSubtree
-// Description: 
+// Description:
 // Returns: boolean
 // Input parameters:
-//  type: string, 
+//  type: string,
 //  props: Props
 function shouldDeprioritizeSubtree(type, props) {
   logNotImplemented('shouldDeprioritizeSubtree');
@@ -173,10 +173,10 @@ function shouldDeprioritizeSubtree(type, props) {
 }
 
 // Function: shouldSetTextContent
-// Description: 
+// Description:
 // Returns: boolean
 // Input parameters:
-//  type: string, 
+//  type: string,
 //  props: Props
 function shouldSetTextContent(type, props) {
   // Brian Vaughn:
@@ -191,7 +191,7 @@ function shouldSetTextContent(type, props) {
 }
 
 // Function: appendChild
-// Description: 
+// Description:
 // Returns: void
 // Input parameters:
 //  parentInstance: Instance,
@@ -205,7 +205,7 @@ function appendChild(parentInstance, child) {
 }
 
 // Function: appendChildToContainer
-// Description: 
+// Description:
 // Returns: void
 // Input parameters:
 //  parentInstance: Instance,
@@ -219,7 +219,7 @@ function appendChildToContainer(container, child) {
 }
 
 // Function: commitTextUpdate
-// Description: 
+// Description:
 // Returns: void
 // Input parameters:
 //  textInstance: TextInstance,
@@ -233,7 +233,7 @@ function commitTextUpdate(textInstance, oldText, newText) {
 }
 
 // Function: commitMount
-// Description: 
+// Description:
 // Returns: void
 // Input parameters:
 //  instance: Instance,
@@ -245,7 +245,7 @@ function commitMount(instance, type, newProps, internalInstanceHandle) {
 }
 
 // Function: commitUpdate
-// Description: 
+// Description:
 // Returns: void
 // Input parameters:
 //  instance: Instance,
@@ -267,18 +267,24 @@ function commitUpdate(instance, updatePayload, type, oldProps, newProps, interna
 }
 
 // Function: insertBefore
-// Description: 
+// Description:
 // Returns: void
 // Input parameters:
 //  parentInstance: Instance,
 //  child: Instance | TextInstance,
 //  beforeChild: Instance | TextInstance
 function insertBefore(parentInstance, child, beforeChild) {
-  logNotImplemented('insertBefore');
+  if (typeof child === 'string') {
+    parentInstance.setText(child);
+  } else if (typeof child === 'number') {
+    parentInstance.setText(child.toString());
+  } else {
+    parentInstance.addChild(child);
+  }
 }
 
 // Function: insertInContainerBefore
-// Description: 
+// Description:
 // Returns: void
 // Input parameters:
 //  parentInstance: Container,
@@ -289,19 +295,19 @@ function insertInContainerBefore(container, child, beforeChild) {
 }
 
 // Function: removeChild
-// Description: 
+// Description:
 // Returns: void
 // Input parameters:
 //  parentInstance: Instance,
 //  child: Instance | TextInstance
 function removeChild(parentInstance, child) {
   console.log('removeChild');
-  
+
   mxs._nativeFactory.removeChildElement(parentInstance, child);
 }
 
 // Function: removeChildFromContainer
-// Description: 
+// Description:
 // Returns: void
 // Input parameters:
 //  parentInstance: Container,
@@ -314,7 +320,7 @@ function removeChildFromContainer(parentInstance, child) {
 }
 
 // Function: resetTextContent
-// Description: 
+// Description:
 // Returns: void
 // Input parameters:
 //  instance: Instance
@@ -323,7 +329,7 @@ function resetTextContent(instance) {
 }
 
 // Function: hideInstance
-// Description: 
+// Description:
 // Returns: void
 // Input parameters:
 //  instance: Instance
@@ -332,7 +338,7 @@ function hideInstance(instance) {
 }
 
 // Function: hideTextInstance
-// Description: 
+// Description:
 // Returns: void
 // Input parameters:
 //  textInstance: TextInstance
@@ -341,7 +347,7 @@ function hideTextInstance(textInstance) {
 }
 
 // Function: unhideInstance
-// Description: 
+// Description:
 // Returns: void
 // Input parameters:
 //  instance: Instance,
@@ -351,7 +357,7 @@ function unhideInstance(instance, props) {
 }
 
 // Function: unhideTextInstance
-// Description: 
+// Description:
 // Returns: void
 // Input parameters:
 //  textInstance: TextInstance,
@@ -363,7 +369,7 @@ function unhideTextInstance(textInstance, text) {
 
 const HostConfig = {
   now: Date.now,
-  
+
   createInstance: createInstance,
   createTextInstance: createTextInstance,
 
@@ -373,7 +379,7 @@ const HostConfig = {
   getPublicInstance: getPublicInstance,
   getRootHostContext: getRootHostContext,
   getChildHostContext: getChildHostContext,
-  
+
   prepareForCommit: prepareForCommit,
   resetAfterCommit: resetAfterCommit,
 
@@ -387,11 +393,11 @@ const HostConfig = {
   scheduleTimeout: throwNotImplemented('scheduleTimeout'),
   cancelTimeout: throwNotImplemented('cancelTimeout'),
 
-  supportsMutation: true, 
+  supportsMutation: true,
   supportsPersistence: false,
   supportsHydration: false,
-  
-  
+
+
   // Mutation -----------------------------------------------------------------
 
   appendChild: appendChild,
@@ -409,9 +415,9 @@ const HostConfig = {
   unhideInstance: unhideInstance,
   unhideTextInstance: unhideTextInstance,
 
-  
+
   // Persistence --------------------------------------------------------------
-  
+
   cloneInstance: throwNotImplemented('cloneInstance'),
   createContainerChildSet: throwNotImplemented('createContainerChildSet'),
   appendChildToContainerChildSet: throwNotImplemented('appendChildToContainerChildSet'),
@@ -421,9 +427,9 @@ const HostConfig = {
   cloneUnhiddenInstance: throwNotImplemented('cloneUnhiddenInstance'),
   createHiddenTextInstance: throwNotImplemented('createHiddenTextInstance'),
 
-  
+
   // Hydration ----------------------------------------------------------------
-  
+
   canHydrateInstance: throwNotImplemented('canHydrateInstance'),
   canHydrateTextInstance: throwNotImplemented('canHydrateTextInstance'),
   canHydrateSuspenseInstance: throwNotImplemented('canHydrateSuspenseInstance'),
