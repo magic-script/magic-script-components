@@ -267,12 +267,12 @@ export class PlatformFactory extends NativeFactory {
         if (typeof child === 'string' || typeof child === 'number') {
             parent.setText('');
         } else {
-            if (this.isController(child) !== undefined) {
+            if (this.isController(child)) {
                 if ( !this.isController(parent) ) {
                     throw new Error('Removing controller from non-controller parent');
                 }
                 parent.removeChildController(child);
-            } else if (this.isController(parent) !== undefined) {
+            } else if (this.isController(parent)) {
                 parent.getRoot().removeChild(child);
             } else {
                 parent.removeChild(child);
