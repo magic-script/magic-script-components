@@ -221,7 +221,6 @@ export class PlatformFactory extends NativeFactory {
                     throw new Error('Adding controller to non-controller parent');
                 }
                 parent.addChildController(child);
-                child.setParent(parent);
             } else {
                 if (this.isController(parent)) {
                     parent.addChild(child);

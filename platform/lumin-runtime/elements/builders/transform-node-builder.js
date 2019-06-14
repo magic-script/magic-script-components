@@ -49,11 +49,10 @@ export class TransformNodeBuilder extends ElementBuilder {
 
         this.apply(element, undefined, unapplied);
 
-        return this._attachOffsetProperty(element);
-    }
+        // Attach 'offset' property
+        // the property is used when TransformNode is used by another node as content/model
+        element.offset = [0, 0, 0];
 
-    _attachOffsetProperty(element) {
-        element['offset'] = [0, 0, 0];
         return element;
     }
 
@@ -65,6 +64,13 @@ export class TransformNodeBuilder extends ElementBuilder {
             }
         });
         return subset;
+    }
+
+    setOffset(element, oldProperties, newProperties) {
+        const offset = newProperties.offset;
+        if (offset !== undefined) {
+            element.offset = offset;
+        }
     }
 
     throwIfInvalidPrism(prism) {

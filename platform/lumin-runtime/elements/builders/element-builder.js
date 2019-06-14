@@ -32,7 +32,6 @@ export class ElementBuilder {
                 action(properties[name], descriptor);
             } else {
                 console.log(`Property ${name} does not have a descriptor`);
-                // console.log(`Property ${name} is not recognized as property of ${element.getName()}`);
             }
         }
     }
@@ -43,7 +42,6 @@ export class ElementBuilder {
                 try {
                     element[descriptor.SetterName](descriptor.parse(value));
                 } catch (error) {
-                    console.log(error);
                     throw new Error(`[Native.${descriptor.SetterName}]: ${error.name} - ${error.message}\n${error.stack}`);
                 }
             } else {
@@ -53,7 +51,6 @@ export class ElementBuilder {
             try {
                 this[descriptor.SetterName](element, oldProperties, newProperties);
             } catch (error) {
-                console.log(error);
                 throw new Error(`[Builder.${descriptor.SetterName}]: ${error.name} - ${error.message}\n${error.stack}`);
             }
         }

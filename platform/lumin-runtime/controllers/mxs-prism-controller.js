@@ -44,15 +44,6 @@ export class MxsPrismController extends PrismController {
         ];
     }
 
-    setParent(parent) {
-        const root = this.getRoot();
-        if (root === undefined || root === null) {
-            this._parent = parent;
-        } else {
-            parent.addChild(root);
-        }
-    }
-
     addChild(child) {
         const root = this.getRoot();
         if (root === undefined || root === null) {
@@ -60,6 +51,11 @@ export class MxsPrismController extends PrismController {
         } else {
             root.addChild(child);
         }
+    }
+
+    addChildController(controller) {
+        super.addChildController(controller);
+        this.addChild(controller.getRoot());
     }
 
     addListener(eventName, eventHandler) {
@@ -87,11 +83,6 @@ export class MxsPrismController extends PrismController {
 
     onAttachPrism(prism) {
         const root = this.getRoot();
-        
-        if (this._parent !== undefined) {
-            this._parent.addChild(root);
-            this._parent = undefined;
-        }
 
         if (this._initialProperties !== undefined) {
             const builder = new TransformNodeBuilder();
