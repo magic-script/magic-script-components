@@ -15,4 +15,8 @@ export class EnumProperty extends PropertyDescriptor {
         this.throwIfConditionFails(value, message, this._enumType[value] !== undefined);
         return true;
     }
+
+    parse (value) {
+        return this._enumType[value];
+    }
 }

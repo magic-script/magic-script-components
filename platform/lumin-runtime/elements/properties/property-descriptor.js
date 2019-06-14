@@ -90,4 +90,8 @@ export class PropertyDescriptor {
             throw new TypeError(message);
         }
     }
+
+    parse (value) {
+        return value;
+    }
 }
