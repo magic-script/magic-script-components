@@ -1,0 +1,134 @@
+{
+  "type": "object",
+  "properties": {
+    "planarResource": {
+      "$ref": "#/definitions/planarResourceType"
+    },
+    "file": {
+      "type": "string"
+    },
+    "uri": {
+      "type": "string"
+    },
+    "loop": {
+      "type": "boolean"
+    },
+    "volume": {
+      "type": "number"
+    },
+    "resource": {
+      "type": "string"
+    },
+    "subTexture": {
+      "type": "string"
+    },
+    "texCoords": {
+      "$ref": "#/definitions/mat4x2Type"
+    },
+    "size": {
+      "$ref": "#/definitions/point2Type"
+    },
+    "viewMode": {
+      "type": "string"
+    },
+    "shader": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    },
+    "opaque": {
+      "type": "boolean"
+    },
+    "external": {
+      "type": "boolean"
+    },
+    "position": {
+      "$ref": "#/definitions/point3Type"
+    },
+    "rotation": {
+      "$ref": "#/definitions/point3Type"
+    },
+    "scale": {
+      "$ref": "#/definitions/scaleType"
+    },
+    "visible": {
+      "type": "boolean"
+    },
+    "cursorHoverState": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    }
+  },
+  "definitions": {
+    "planarResourceType": {
+      "type": "object",
+      "properties": {
+        "width": {
+          "type": "integer"
+        },
+        "height": {
+          "type": "integer"
+        }
+      }
+    },
+    "point2Type": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        }
+      }
+    },
+    "mat4x2Type": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "$ref": "#/definitions/point2Type"
+        },
+        "y": {
+          "$ref": "#/definitions/point2Type"
+        },
+        "z": {
+          "$ref": "#/definitions/point2Type"
+        },
+        "w": {
+          "$ref": "#/definitions/point2Type"
+        }
+      }
+    },
+    "point3Type": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "z": {
+          "type": "number"
+        }
+      }
+    },
+    "scaleType": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "z": {
+          "type": "number"
+        }
+      }
+    }
+  }
+}

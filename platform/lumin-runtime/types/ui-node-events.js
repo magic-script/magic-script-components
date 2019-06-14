@@ -1,5 +1,13 @@
 // Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
 
+import { DropDownListEventData } from './event-data/drop-down-list-event-data.js';
+import { ProgressBarEventData } from './event-data/progress-bar-event-data.js';
+import { TextEditEventData } from './event-data/text-edit-event-data.js';
+import { ToggleEventData } from './event-data/toggle-event-data.js';
+import { ScrollViewEventData } from './event-data/scroll-view-event-data.js';
+import { SliderEventData } from './event-data/slider-event-data.js';
+import { UiEventData } from './event-data/ui-event-data.js';
+
 /**
  * @exports UiNodeEvents
  * @description Represents Magic-Script - Lumin Runtime event mapping for UiNode.
@@ -10,56 +18,56 @@
 // TODO: Move events to the component builders
 export const UiNodeEvents = {
     // UiNode
-    'onActivate': 'onActivateSub',
-    'onClick': 'onActivateSub',
-    'onPress': 'onPressedSub',
-    'onLongPress': 'onLongPressSub',
-    'onRelease': 'onReleasedSub',
-    'onHoverEnter': 'onHoverEnterSub',
-    'onHoverExit': 'onHoverExitSub',
-    'onHoverMove': 'onHoveMoveSub',
-    'onEnabled': 'onEnabledSub',
-    'onDisabled': 'onDisabledSub',
-    'onFocusGained': 'onFocusGainedSub',
-    'onFocusLost': 'onFocusLostSub',
-    'onFocusInput': 'onFocusInputSub',
-    'onUpdate': 'onUpdateSub',
-    'onDelete': 'onDeletedSub',
+    'onActivate': { subName: 'onActivateSub', dataType: UiEventData },
+    'onClick': { subName: 'onActivateSub', dataType: UiEventData },
+    'onPress': { subName: 'onPressedSub', dataType: UiEventData },
+    'onLongPress': { subName: 'onLongPressSub', dataType: UiEventData },
+    'onRelease': { subName: 'onReleasedSub', dataType: UiEventData },
+    'onHoverEnter': { subName: 'onHoverEnterSub', dataType: UiEventData },
+    'onHoverExit': { subName: 'onHoverExitSub', dataType: UiEventData },
+    'onHoverMove': { subName: 'onHoveMoveSub', dataType: UiEventData },
+    'onEnabled': { subName: 'onEnabledSub', dataType: UiEventData },
+    'onDisabled': { subName: 'onDisabledSub', dataType: UiEventData },
+    'onFocusGained': { subName: 'onFocusGainedSub', dataType: UiEventData },
+    'onFocusLost': { subName: 'onFocusLostSub', dataType: UiEventData },
+    'onFocusInput': { subName: 'onFocusInputSub', dataType: UiEventData },
+    'onUpdate': { subName: 'onUpdateSub', dataType: UiEventData },
+    'onDelete': { subName: 'onDeletedSub', dataType: UiEventData },
     // TextEdit events
-    'onCharacterEnter': 'onCharacterEnteredSub',
-    'onKeyboardEvent': 'onKeyboardEventSub',
-    'onTextChanged': 'onTextChangedSub',
+    'onCharacterEnter': { subName: 'onCharacterEnteredSub', dataType: TextEditEventData },
+    'onKeyboardEvent': { subName: 'onKeyboardEventSub', dataType: TextEditEventData },
+    'onTextChanged': { subName: 'onTextChangedSub', dataType: TextEditEventData },
     // UiSlider
-    'onSliderChanged': 'onSliderChangedSub',
+    'onSliderChanged': { subName: 'onSliderChangedSub', dataType: SliderEventData },
     // UiListView
     // UiScrollBar
-    'onScrollChanged': 'onScrollChangedSub',
+    'onScrollChanged': { subName: 'onScrollChangedSub', dataType: ScrollViewEventData },
     // UiProgressBar
-    'onProgressBarChanged': 'onProgressBarChangedSub',
+    'onProgressBarChanged': { subName: 'onProgressBarChangedSub', dataType: ProgressBarEventData },
     // UiDropDownList
-    'onListVisibilityChanged': 'onListVisibilityChangedSub',
-    'onSelectionChanged': 'onSelectionChangedSub',
+    'onListVisibilityChanged': { subName: 'onListVisibilityChangedSub', dataType: DropDownListEventData },
+    'onSelectionChanged': { subName: 'onSelectionChangedSub', dataType: DropDownListEventData },
     // UiToggle
-    'onToggleChanged': 'onToggleChangedSub',
+    'onToggleChanged': { subName: 'onToggleChangedSub', dataType: ToggleEventData },
     // UiPanel
-    'onCursorEdge': 'onCursorEdgeSub',
-    'onCursorOffEdge': 'onCursorOffEdgeSub',
-    'onPanelEnter': 'onPanelEnterSub',
-    'onPanelExit': 'onPanelExitSub',
+    'onCursorEdge': { subName: 'onCursorEdgeSub', dataType: UiEventData },
+    'onCursorOffEdge': { subName: 'onCursorOffEdgeSub', dataType: UiEventData },
+    'onPanelEnter': { subName: 'onPanelEnterSub', dataType: UiEventData },
+    'onPanelExit': { subName: 'onPanelExitSub', dataType: UiEventData },
     // UiDialog
     // UiColorPicker
-    'onCancel': 'onCancelSub',
-    'onConfirm': 'onConfirmSub',
+    'onCancel': { subName: 'onCancelSub', dataType: UiEventData },
+    'onConfirm': { subName: 'onConfirmSub', dataType: UiEventData },
     // UiColorPicker
-    'onColorChanged': 'onColorChangedSub',
+    'onColorChanged': { subName: 'onColorChangedSub', dataType: UiEventData },
     // UiTimePicker
-    'onTimeChanged': 'onTimeChangedSub',
-    'onTimeConfirmed': 'onTimeConfirmedSub',
+    'onTimeChanged': { subName: 'onTimeChangedSub', dataType: UiEventData },
+    'onTimeConfirmed': { subName: 'onTimeConfirmedSub', dataType: UiEventData },
     // UiDatePicker
-    'onDateChanged': 'onDateChangedSub',
-    'onDateConfirmed': 'onDateConfirmedSub',
+    'onDateChanged': { subName: 'onDateChangedSub', dataType: UiEventData },
+    'onDateConfirmed': { subName: 'onDateConfirmedSub', dataType: UiEventData },
     // UiCircleConfirmation
-    'onConfirmationCanceled': 'onConfirmationCanceledSub',
-    'onConfirmationComplete': 'onConfirmationCompleteSub',
-    'onConfirmationUpdate': 'onConfirmationUpdateSub'
+    'onConfirmationCanceled': { subName: 'onConfirmationCanceledSub', dataType: UiEventData },
+    'onConfirmationComplete': { subName: 'onConfirmationCompleteSub', dataType: UiEventData },
+    'onConfirmationUpdate': { subName: 'onConfirmationUpdateSub', dataType: UiEventData }
 }

@@ -41,7 +41,7 @@ export class ElementBuilder {
         if (descriptor.IsNativeSetter) {
             if (typeof element[descriptor.SetterName] === 'function') {
                 try {
-                    element[descriptor.SetterName](value);
+                    element[descriptor.SetterName](descriptor.parse(value));
                 } catch (error) {
                     console.log(error);
                     throw new Error(`[Native.${descriptor.SetterName}]: ${error.name} - ${error.message}\n${error.stack}`);

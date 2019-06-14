@@ -1,0 +1,129 @@
+{
+  "type": "object",
+  "properties": {
+    "loadFile": { "type": "boolean" },
+    "fileName": { "type": "string" },
+    "absolutePath": { "type": "boolean" },
+    "descriptor": { "type": "number" },
+    "basePath": { "type": "string" },
+    "autoDestroy": { "type": "boolean" },
+    "dynamicDecode": { "type": "boolean" },
+    "soundLooping": { "type": "boolean" },
+    "soundMute": { "type": "boolean" },
+    "soundPitch": { "type": "number" },
+    "soundVolumeLinear": { "type": "number" },
+    "spatialSoundEnable": { "type": "boolean" },
+    "streamedFileOffset": { "type": "number" },
+
+    "spatialSoundDirection": {
+      "$ref": "#/definitions/spatialSoundDirectionType"
+    },
+    "spatialSoundDirectSendLevels": {
+      "$ref": "#/definitions/spatialSoundSendLevelsType"
+    },
+    "spatialSoundDistance": {
+      "$ref": "#/definitions/spatialSoundDistanceType"
+    },
+    "spatialSoundPosition": {
+      "$ref": "#/definitions/spatialSoundPositionType"
+    },
+    "spatialSoundRadiation": {
+      "$ref": "#/definitions/spatialSoundRadiationType"
+    },
+    "spatialSoundRoomSendLevels": {
+      "$ref": "#/definitions/spatialSoundSendLevelsType"
+    },
+
+
+    "name": {
+      "type": "string"
+    },
+    "parentedBoneName": {
+      "type": "string"
+    },
+    "skipRaycast": {
+      "type": "boolean"
+    },
+    "triggerable": {
+      "type": "boolean"
+    },
+    "visible": {
+      "type": "boolean"
+    },
+    "visibilityInherited": {
+      "type": "boolean"
+    },
+    "anchorPosition": {
+      "$ref": "#/definitions/glmVec3"
+    },
+    "localPosition": {
+      "$ref": "#/definitions/glmVec3"
+    },
+    "localRotation": {
+      "type": "quat"
+    },
+    "localScale": {
+      "$ref": "#/definitions/glmVec3"
+    },
+    "localTransform": {
+      "type": "mat4"
+    },
+    "cursorHoverState": {
+      "type": "string"
+    }
+  },
+
+  "definitions": {
+    "glmVec3": {
+      "type": "array",
+      "items": [
+        { "type": "number" },
+        { "type": "number" },
+        { "type": "number" }
+      ]
+    },
+    "spatialSoundDirectionType": {
+      "type": "object",
+      "properties": {
+        "channel": { "type": "number" },
+        "channelDirection": { "type": "quat" }
+      }
+    },
+    "spatialSoundPositionType": {
+      "type": "object",
+      "properties": {
+        "channel": { "type": "number" },
+        "channelPosition": { "type": "vec3" }
+      }
+    },
+    "spatialSoundDistanceType": {
+      "type": "object",
+      "properties": {
+        "channel": { "type": "number" },
+        "minDistance": { "type": "number" },
+        "maxDistance": { "type": "number" },
+        "rollOffFactor": { "type": "number" }
+      }
+    },
+    "spatialSoundRadiationType": {
+      "type": "object",
+      "properties": {
+        "channel": { "type": "number" },
+        "innerAngle": { "type": "number" },
+        "outerAngle": { "type": "number" },
+        "outerGain": { "type": "number" },
+        "outerGainHf": { "type": "number"}
+      }
+    },
+    "spatialSoundSendLevelsType": {
+      "type": "object",
+      "properties": {
+        "channel": { "type": "number" },
+        "gain": { "type": "number" },
+        "gainLf": { "type": "number" },
+        "gainMf": { "type": "number" },
+        "gainHf": { "type": "number" }
+      }
+    }
+  }
+}

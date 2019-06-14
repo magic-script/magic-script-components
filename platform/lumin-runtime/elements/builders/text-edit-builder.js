@@ -10,6 +10,7 @@ import { ScrollBarVisibility } from '../../types/scroll-bar-visibility.js';
 import { TextEntryMode } from '../../types/text-entry-mode.js';
 
 import { ArrayProperty } from '../properties/array-property.js';
+import { ClassProperty } from '../properties/class-property.js';
 import { CursorEdgeScrollMode } from '../../types/cursor-edge-scroll-mode.js';
 import { EnumProperty } from '../properties/enum-property.js';
 import { PrimitiveTypeProperty } from '../properties/primitive-type-property.js';

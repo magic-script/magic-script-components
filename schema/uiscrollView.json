@@ -1,0 +1,139 @@
+{
+  "type": "object",
+  "properties": {
+    "direction": {
+      "type": "string"
+    },
+    "speed": {
+      "type": "number"
+    },
+    "offset": {
+      "$ref": "#/definitions/point3Type"
+    },
+    "value": {
+      "type": "number"
+    },
+    "scrollBounds": {
+      "$ref": "#/definitions/aabbType"
+    },
+    "cursorEdgeScrollMode": {
+      "type": "string"
+    },
+    "minExtent": {
+      "$ref": "#/definitions/point2Type"
+    },
+    "maxExtent": {
+      "$ref": "#/definitions/point2Type"
+    },
+    "gravityWellProperties": {
+      "$ref": "#/definitions/gravityWellPropertiesType"
+    },
+    "gravityWellEnabled": {
+      "type": "boolean"
+    },
+    "enabled": {
+      "type": "boolean"
+    },
+    "eventPassThrough": {
+      "type": "boolean"
+    },
+    "external": {
+      "type": "boolean"
+    },
+    "position": {
+      "$ref": "#/definitions/point3Type"
+    },
+    "rotation": {
+      "$ref": "#/definitions/point3Type"
+    },
+    "scale": {
+      "$ref": "#/definitions/scaleType"
+    },
+    "visible": {
+      "type": "boolean"
+    },
+    "cursorHoverState": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    }
+  },
+  "definitions": {
+    "point3Type": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "z": {
+          "type": "number"
+        }
+      }
+    },
+    "aabbType": {
+      "type": "object",
+      "properties": {
+        "min": {
+          "$ref": "#/definitions/point3Type"
+        },
+        "max": {
+          "$ref": "#/definitions/point3Type"
+        }
+      }
+    },
+    "point2Type": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        }
+      }
+    },
+    "boundaryShapeType": {
+      "type": "object",
+      "properties": {
+        "size": {
+          "$ref": "#/definitions/point2Type"
+        },
+        "roundness": {
+          "type": "number"
+        },
+        "offset": {
+          "$ref": "#/definitions/point3Type"
+        }
+      }
+    },
+    "gravityWellPropertiesType": {
+      "type": "object",
+      "properties": {
+        "boundaryShape": {
+          "$ref": "#/definitions/boundaryShapeType"
+        },
+        "gravityWellSnap": {
+          "type": "string"
+        }
+      }
+    },
+    "scaleType": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "z": {
+          "type": "number"
+        }
+      }
+    }
+  }
+}

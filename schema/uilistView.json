@@ -1,0 +1,196 @@
+{
+  "type": "object",
+  "properties": {
+    "orientation": {
+      "type": "string"
+    },
+    "size": {
+      "$ref": "#/definitions/point2Type"
+    },
+    "scrollingEnabled": {
+      "type": "boolean"
+    },
+    "cursorEdgeScrollMode": {
+      "type": "string"
+    },
+    "speed": {
+      "type": "number"
+    },
+    "value": {
+      "type": "number"
+    },
+    "alignment": {
+      "$ref": "#/definitions/alignmentType"
+    },
+    "skipInvisibleItems": {
+      "type": "boolean"
+    },
+    "defaultItemAlignment": {
+      "$ref": "#/definitions/alignmentType"
+    },
+    "defaultItemPadding": {
+      "$ref": "#/definitions/itemPaddingType"
+    },
+    "itemAlignment": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/itemAlignmentMappingType"
+      }
+    },
+    "itemPadding": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/itemPaddingMappingType"
+      }
+    },
+    "gravityWellProperties": {
+      "$ref": "#/definitions/gravityWellPropertiesType"
+    },
+    "gravityWellEnabled": {
+      "type": "boolean"
+    },
+    "enabled": {
+      "type": "boolean"
+    },
+    "eventPassThrough": {
+      "type": "boolean"
+    },
+    "external": {
+      "type": "boolean"
+    },
+    "position": {
+      "$ref": "#/definitions/point3Type"
+    },
+    "rotation": {
+      "$ref": "#/definitions/point3Type"
+    },
+    "scale": {
+      "$ref": "#/definitions/scaleType"
+    },
+    "visible": {
+      "type": "boolean"
+    },
+    "cursorHoverState": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    }
+  },
+  "definitions": {
+    "point2Type": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        }
+      }
+    },
+    "alignmentType": {
+      "type": "object",
+      "properties": {
+        "verticalAlignment": {
+          "type": "string"
+        },
+        "horizontalAlignment": {
+          "type": "string"
+        }
+      }
+    },
+    "itemPaddingType": {
+      "type": "object",
+      "properties": {
+        "top": {
+          "type": "number"
+        },
+        "right": {
+          "type": "number"
+        },
+        "bottom": {
+          "type": "number"
+        },
+        "left": {
+          "type": "number"
+        }
+      }
+    },
+    "itemAlignmentMappingType": {
+      "type": "object",
+      "properties": {
+        "nodeId": {
+          "type": "string"
+        },
+        "itemAlignment": {
+          "$ref": "#/definitions/alignmentType"
+        }
+      }
+    },
+    "itemPaddingMappingType": {
+      "type": "object",
+      "properties": {
+        "nodeId": {
+          "type": "string"
+        },
+        "itemPadding": {
+          "$ref": "#/definitions/itemPaddingType"
+        }
+      }
+    },
+    "point3Type": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "z": {
+          "type": "number"
+        }
+      }
+    },
+    "boundaryShapeType": {
+      "type": "object",
+      "properties": {
+        "size": {
+          "$ref": "#/definitions/point2Type"
+        },
+        "roundness": {
+          "type": "number"
+        },
+        "offset": {
+          "$ref": "#/definitions/point3Type"
+        }
+      }
+    },
+    "gravityWellPropertiesType": {
+      "type": "object",
+      "properties": {
+        "boundaryShape": {
+          "$ref": "#/definitions/boundaryShapeType"
+        },
+        "gravityWellSnap": {
+          "type": "string"
+        }
+      }
+    },
+    "scaleType": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "z": {
+          "type": "number"
+        }
+      }
+    }
+  }
+}

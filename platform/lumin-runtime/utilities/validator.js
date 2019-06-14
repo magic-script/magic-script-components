@@ -13,8 +13,11 @@ import { EclipseLabelType } from '../types/eclipse-label-type.js';
 import { FlowDirection } from '../types/flow-direction.js';
 import { FocusRequest } from '../types/focus-request.js';
 import { FontStyle, FontWeight } from '../types/font-style.js';
+import { GestureType } from '../types/gesture-type.js';
 import { GravityWellSnap } from '../types/gravity-well-snap.js';
+import { HandGestureKeypointName } from '../types/hand-gesture-keypoint-name.js';
 import { LabelDisplayMode } from '../types/label-display-mode.js';
+import { LightType } from '../types/light-type.js';
 import { LoadingSpinnerType } from '../types/loading-spinner-type.js';
 import { RenderingLayer } from '../types/rendering-layer.js';
 import { PanelEdgeConstraintLevel } from '../types/panel-edge-constraint-level.js'
@@ -51,8 +54,11 @@ export const validator = {
     validateFocusRequest: value => validate(value, FocusRequest),
     validateFontStyle: value => validate(value, FontStyle),
     validateFontWeight: value => validate(value, FontWeight),
+    validateGestureType: value => validate(value, GestureType),
     validateGravityWellSnap: value => validate(value, GravityWellSnap),
+    validateHandGestureKeypointName: value => validate(value, HandGestureKeypointName),
     validateLabelDisplayMode: value => validate(value, LabelDisplayMode),
+    validateLightType: value => validate(value, LightType),
     validateLoadinSpinnerType: value => validate(value, LoadingSpinnerType),
     validatePanelEdgeConstraintLevel: value => validate(value, PanelEdgeConstraintLevel),
     validatePanelCursorTransitionType: value => validate(value, PanelCursorTransitionType),

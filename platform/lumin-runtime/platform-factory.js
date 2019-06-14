@@ -27,11 +27,13 @@ export class PlatformFactory extends NativeFactory {
             .map(key => ({ name: key, handler: properties[key] }));
 
         for (const pair of eventHandlers) {
-            const eventName = UiNodeEvents[pair.name];
+            const eventDescriptor = UiNodeEvents[pair.name];
 
-            if (eventName !== undefined) {
+            if (eventDescriptor !== undefined) {
                 if (typeof pair.handler === 'function') {
-                    element[eventName](pair.handler);
+                    element[eventDescriptor.subName]((eventData) => {
+                        pair.handler(new eventDescriptor.dataType(eventData));
+                    });
                 } else {
                     throw new TypeError(`The event handler for ${pair.name} is not a function`);
                 }
@@ -219,7 +221,7 @@ export class PlatformFactory extends NativeFactory {
                     throw new Error('Adding controller to non-controller parent');
                 }
                 parent.addChildController(child);
-                parent.getRoot().addChild(child.getRoot());
+                child.setParent(parent);
             } else {
                 if (this.isController(parent)) {
                     parent.addChild(child);
@@ -265,12 +267,12 @@ export class PlatformFactory extends NativeFactory {
         if (typeof child === 'string' || typeof child === 'number') {
             parent.setText('');
         } else {
-            if (this.isController(child) !== undefined) {
+            if (this.isController(child)) {
                 if ( !this.isController(parent) ) {
                     throw new Error('Removing controller from non-controller parent');
                 }
                 parent.removeChildController(child);
-            } else if (this.isController(parent) !== undefined) {
+            } else if (this.isController(parent)) {
                 parent.getRoot().removeChild(child);
             } else {
                 parent.removeChild(child);
