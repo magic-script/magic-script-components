@@ -54,8 +54,24 @@ export class MxsPrismController extends PrismController {
     }
 
     addChildController(controller) {
+        // It will receive all onEvent callbacks received by this controller (the parent).
+        // If a prism is already attached,
+        // the child controller will also receive an onAttachPrism callback.
         super.addChildController(controller);
-        this.addChild(controller.getRoot());
+
+        if (controller.getRoot() !== undefined) {
+            this.addChild(controller.getRoot());
+        } else {
+            // Prism hasn't been attached to the child controller yet
+            // Subscribe for the onAttachPrism event
+            // and unsubscribe after adding the child root node to the current controller
+            const handler = () => {
+                this.addChild(controller.getRoot());
+                controller.removeListener('onAttachPrism', handler);
+            };
+
+            controller.addListener('onAttachPrism', handler);
+        }
     }
 
     addListener(eventName, eventHandler) {
@@ -76,7 +92,7 @@ export class MxsPrismController extends PrismController {
             throw TypeError(`Event ${eventName} is not supported by the controller`);
         }
     }
-    
+
     clearListeners() {
         this._eventHandlers = {
             onPreAttachPrism: [],
@@ -88,7 +104,7 @@ export class MxsPrismController extends PrismController {
     }
 
     onPreAttachPrism(prism) {
-        this._eventHandlers.onPreAttachPrism.forEach(handler => handler(prism));
+        this._eventHandlers.onPreAttachPrism.forEach(handler => handler(new PrismEventData(prism)));
     }
 
     onAttachPrism(prism) {
@@ -106,11 +122,11 @@ export class MxsPrismController extends PrismController {
             this._children = undefined;
         }
 
-        this._eventHandlers.onAttachPrism.forEach(handler => handler(prism));
+        this._eventHandlers.onAttachPrism.forEach(handler => handler(new PrismEventData(prism)));
     }
 
     onDetachPrism(prism) {
-        this._eventHandlers.onDetachPrism.forEach(handler => handler(prism));
+        this._eventHandlers.onDetachPrism.forEach(handler => handler(new PrismEventData(prism)));
     }
 
     _getEventDataByEventType(eventData) {

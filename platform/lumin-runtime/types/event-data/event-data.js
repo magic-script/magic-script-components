@@ -17,6 +17,6 @@ export class EventData {
     }
 
     static isSupported(event) {
-        throw new Error('EventData.isInstanceOf should be overridden');
+        throw new Error('EventData.isSupported should be overridden');
     }
 }
