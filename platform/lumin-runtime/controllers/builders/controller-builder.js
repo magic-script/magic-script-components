@@ -71,6 +71,8 @@ export class ControllerBuilder {
     }
 
     _updateEventHandlers(controller, properties) {
+        controller.clearListeners();
+
         this._eventHandlerNames.forEach(name => {
             const handler = properties[name];
 
