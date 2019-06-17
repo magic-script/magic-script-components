@@ -1,4 +1,5 @@
 // Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
+// import { vec2, vec3, vec4, quat, mat4 } from 'gl-matrix';
 
 const ArrayLengthByType = {
     'vec2': 2,
@@ -33,6 +34,10 @@ export class PropertyDescriptor {
         return this._isNativeSetter;
     }
 
+    parse (value) {
+        return value;
+    }
+
     validate(value) {
         throw new Error('PropertyDescriptor.validate should be overridden');
     }
@@ -60,12 +65,27 @@ export class PropertyDescriptor {
     }
 
     static throwIfNotArray(value, arrayType) {
+        const typedArrayNames = [
+            Int8Array.name,
+            Uint8Array.name,
+            Uint8ClampedArray.name,
+            Int16Array.name,
+            Uint16Array.name,
+            Int32Array.name,
+            Uint32Array.name,
+            Float32Array.name,
+            Float64Array.name
+        ];
+
         if ( this.hasValue(value) ) {
-            if ( !Array.isArray(value) ) {
-                throw new TypeError(`Parameter ${value} should have value of type an array`);
+            if (   !Array.isArray(value)
+                && !typedArrayNames.some(name => name === value.constructor.name) ) {
+                throw new TypeError(`Parameter ${value} should have value of type an array or typed array`);
             }
 
-            if (this.hasValue(arrayType) && value.length !== ArrayLengthByType[arrayType]) {
+            if (   this.hasValue(arrayType)
+                && value.length !== ArrayLengthByType[arrayType]
+                && value.length !== 16) {
                 throw new TypeError(`Parameter ${JSON.stringify(value)} should be ${arrayType} value`);
             }
         }
@@ -89,9 +109,5 @@ export class PropertyDescriptor {
         if ( this.hasValue(value) && !predicate(value) ) {
             throw new TypeError(message);
         }
-    }
-
-    parse (value) {
-        return value;
     }
 }

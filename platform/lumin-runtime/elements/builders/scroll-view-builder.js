@@ -4,10 +4,12 @@ import { ui, math } from 'lumin';
 
 import { UiNodeBuilder } from './ui-node-builder.js';
 import { ArrayProperty } from '../properties/array-property.js';
+import { ClassProperty } from '../properties/class-property.js';
 import { EnumProperty } from '../properties/enum-property.js';
 import { PrimitiveTypeProperty } from '../properties/primitive-type-property.js';
 
 import { ScrollBarVisibility } from '../../types/scroll-bar-visibility.js';
+import { ScrollDirection } from '../../types/scroll-direction.js';
 
 export class ScrollViewBuilder extends UiNodeBuilder {
     constructor(){

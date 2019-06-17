@@ -10,13 +10,13 @@ export class EnumProperty extends PropertyDescriptor {
         this._enumName = enumName;
     }
 
+    parse (value) {
+        return this._enumType[value];
+    }
+
     validate(value) {
         const message = `The provided value ${value} is not valid ${this._enumName} value`;
         this.throwIfConditionFails(value, message, this._enumType[value] !== undefined);
         return true;
-    }
-
-    parse (value) {
-        return this._enumType[value];
     }
 }
