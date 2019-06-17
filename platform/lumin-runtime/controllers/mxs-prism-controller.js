@@ -80,6 +80,16 @@ export class MxsPrismController extends PrismController {
             throw TypeError(`Event ${eventName} is not supported by the controller`);
         }
     }
+    
+    clearListeners() {
+        this._eventHandlers = {
+            onPreAttachPrism: [],
+            onAttachPrism: [],
+            onDetachPrism: [],
+            onEvent:[],
+            onUpdate: []
+        };
+    }
 
     onPreAttachPrism(prism) {
         this._eventHandlers.onPreAttachPrism.forEach(handler => handler(prism));
