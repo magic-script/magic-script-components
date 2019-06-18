@@ -31,6 +31,7 @@ import { Side } from '../types/side.js';
 import { SoundEvent } from '../types/sound-event.js';
 import { SystemIcons } from '../types/system-icons.js';
 import { TextEntryMode } from '../types/text-entry-mode.js';
+import { TextureType } from '../types/texture-type.js';
 import { TimeFormat } from '../types/time-format.js';
 import { ToggleType } from '../types/toggle-type.js';
 import { ViewMode } from '../types/view-mode.js';
@@ -71,6 +72,7 @@ export const validator = {
     validateSide: value => validate(value, Side),
     validateSystemIcon: value => validate(value, SystemIcons),
     validateSoundEvent: value => validate(value, SoundEvent),
+    validateTextureType: value => validate(value, TextureType),
     validateTextEntryMode: value => validate(value, TextEntryMode),
     validateTimeFormat: value => (typeof value === 'string') && TimeFormat.includes(value),
     validateToggleType: value => validate(value, ToggleType),

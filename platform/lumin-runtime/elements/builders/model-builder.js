@@ -6,6 +6,10 @@ import { RenderNodeBuilder } from './render-node-builder.js';
 import { ClassProperty } from '../properties/class-property.js';
 import { PrimitiveTypeProperty } from '../properties/primitive-type-property.js';
 
+import { TextureType } from '../../types/texture-type.js';
+import { validator } from '../../utilities/validator.js';
+import { PropertyDescriptor } from '../properties/property-descriptor.js';
+
 export class ModelBuilder extends RenderNodeBuilder {
     constructor() {
         super();
@@ -40,15 +44,19 @@ export class ModelBuilder extends RenderNodeBuilder {
 
         this.validate(undefined, undefined, properties);
 
-        const {modelPath, materialPath, texturePath, textureName} = properties;
+        const { modelPath, materialPath } = properties;
 
         prism.createMaterialResourceId(materialPath);
 
-        const textureId = prism.createTextureResourceId(Desc2d.DEFAULT, texturePath);
         const modelId = prism.createModelResourceId(modelPath, 1.0);
         const element = prism.createModelNode(modelId);
 
-        element.setTexture(textureName, 0, textureId)
+        const defaultTexture = {
+            textureId: properties.defaultTextureId,
+            textureSlot: properties.defaultTextureSlot,
+            materialName: properties.defaultMaterialName
+        };
+        this._setTextures(prism, element, properties.texturePaths, defaultTexture)
 
         this.update(element, undefined, properties);
         return element;
@@ -58,6 +66,59 @@ export class ModelBuilder extends RenderNodeBuilder {
     //     // this.throwIfNotInstanceOf(element, RenderNode);
     //     super.update(element, oldProperties, newProperties);
     // }
+
+    _setTextures(prism, element, texturePaths, defaultTexture) {
+        if (Array.isArray(texturePaths)) {
+            const textureIds = texturePaths.map(path => prism.createTextureResourceId(Desc2d.DEFAULT, path));
+
+            const { materialName, textureSlot, textureId } = defaultTexture;
+
+            if ( materialName === undefined) {
+                console.log('Value for defaultMaterialName attribute was not provided');
+                return;
+            }
+
+            if ( !validator.validateTextureType(textureSlot) ) {
+                console.log(`Provided defaultTextureSlot value ${textureSlot} is not supported`);
+                return;
+            }
+
+            if ( textureId >= textureIds.length ) {
+                console.log(`defaultTextureId ${textureId} is out of available texture Ids range`);
+                return;
+            }
+
+            console.log(`name: ${materialName}, slot: ${TextureType[textureSlot]}, id: ${textureIds[textureId]}`);
+            element.setTexture(materialName, TextureType[textureSlot], textureIds[textureId]);
+        }
+    }
+
+    setTexture(element, oldProperties, newProperties) {
+        const texture = newProperties.texture;
+
+        if (texture === undefined) {
+            return;
+        }
+
+        const { materialName, textureSlot, textureId } = texture;
+
+        if (materialName === undefined) {
+            console.log('Model.texture.materialName is required');
+            return;
+        }
+
+        if (textureSlot === undefined) {
+            console.log('Model.texture.textureSlot is required');
+            return;
+        }
+
+        if ( textureId === undefined) {
+            console.log('Model.texture.textureId is required');
+            return;
+        }
+
+        element.setTexture(materialName, textureSlot, textureId)
+    }
 
     setAnimation(element, oldProperties, newProperties) {
         if (newProperties.animation !== undefined) {
@@ -80,29 +141,6 @@ export class ModelBuilder extends RenderNodeBuilder {
             }
 
             element.playAnimation(resourceId, name, paused, loops);
-        }
-    }
-
-    setTexture(element, oldProperties, newProperties) {
-        if (newProperties.texture !== undefined) {
-            const { textureId, textureSlot, materialName } = newProperties.texture;
-
-            if (materialName === undefined) {
-                console.log('Model.texture.materialName is required');
-                return;
-            }
-
-            if (textureSlot === undefined) {
-                console.log('Model.texture.textureSlot is required');
-                return;
-            }
-
-            if (textureId === undefined) {
-                console.log('Model.texture.textureId is required');
-                return;
-            }
-
-            element.setTexture(materialName, textureSlot, textureId);
         }
     }
 }

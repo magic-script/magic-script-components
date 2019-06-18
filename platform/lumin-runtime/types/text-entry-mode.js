@@ -5,9 +5,9 @@ import { ui } from 'lumin';
 /**
  * @exports TextEntryMode
  * @description Represents the supported text entry modes.
- */ 
+ */
 export const TextEntryMode = {
-    'email' : ui.TextEntryMode.Email,
+    'email' : ui.TextEntryMode.kEmail,
     'none': ui.TextEntryMode.kNone,
     'normal': ui.TextEntryMode.kNormal,
     'numeric': ui.TextEntryMode.kNumeric,
