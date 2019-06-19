@@ -46,8 +46,9 @@ export class ModelBuilder extends RenderNodeBuilder {
 
         const { modelPath, materialPath, texturePaths } = properties;
 
+        let textureIds;
         if (Array.isArray(texturePaths)) {
-            texturePaths.map(path => prism.createTextureResourceId(Desc2d.DEFAULT, path));
+            textureIds = texturePaths.map(path => prism.createTextureResourceId(Desc2d.DEFAULT, path));
         }
 
         prism.createMaterialResourceId(materialPath);
@@ -55,12 +56,7 @@ export class ModelBuilder extends RenderNodeBuilder {
         const modelId = prism.createModelResourceId(modelPath, 1.0);
         const element = prism.createModelNode(modelId);
 
-        // const defaultTexture = {
-        //     textureId: properties.defaultTextureId,
-        //     textureSlot: properties.defaultTextureSlot,
-        //     materialName: properties.defaultMaterialName
-        // };
-        // this._setTextures(prism, element, properties.texturePaths, defaultTexture)
+        this._setDefaultTexture(element, textureIds, properties)
 
         this.update(element, undefined, properties);
         return element;
@@ -71,30 +67,35 @@ export class ModelBuilder extends RenderNodeBuilder {
     //     super.update(element, oldProperties, newProperties);
     // }
 
-    _setTextures(prism, element, texturePaths, defaultTexture) {
-        if (Array.isArray(texturePaths)) {
-            const textureIds = texturePaths.map(path => prism.createTextureResourceId(Desc2d.DEFAULT, path));
-
-            const { materialName, textureSlot, textureId } = defaultTexture;
-
-            if ( materialName === undefined) {
-                console.log('Value for defaultMaterialName attribute was not provided');
-                return;
-            }
-
-            if ( !validator.validateTextureType(textureSlot) ) {
-                console.log(`Provided defaultTextureSlot value ${textureSlot} is not supported`);
-                return;
-            }
-
-            if ( textureId >= textureIds.length ) {
-                console.log(`defaultTextureId ${textureId} is out of available texture Ids range`);
-                return;
-            }
-
-            console.log(`name: ${materialName}, slot: ${TextureType[textureSlot]}, id: ${textureIds[textureId]}`);
-            element.setTexture(materialName, TextureType[textureSlot], textureIds[textureId]);
+    _setDefaultTexture(element, textureIds, properties) {
+        if (textureIds === undefined || textureIds.length === 0) {
+            return;
         }
+
+        if (  properties.defaultTextureIndex === undefined
+           || typeof properties.defaultTextureIndex !== 'number') {
+            return;
+        }
+
+        const defaultTextureIndex = properties.defaultTextureIndex;
+        if ( defaultTextureIndex >= textureIds.length ) {
+            console.log(`defaultTextureId ${defaultTextureIndex} is out of available texture Ids range`);
+            return;
+        }
+
+        const defaultTextureSlot = properties.defaultTextureSlot;
+        if ( !validator.validateTextureType(defaultTextureSlot) ) {
+            console.log(`Provided defaultTextureSlot value ${defaultTextureSlot} is not supported`);
+            return;
+        }
+
+        const defaultMaterialName = properties.defaultMaterialName;
+        if ( defaultMaterialName === undefined) {
+            console.log('Value for defaultMaterialName attribute was not provided');
+            return;
+        }
+
+        element.setTexture(defaultMaterialName, TextureType[defaultTextureSlot], textureIds[defaultTextureIndex]);
     }
 
     setTexture(element, oldProperties, newProperties) {
