@@ -1,5 +1,6 @@
 // Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
 import { Node as _Node } from 'lumin';
+import { EventData } from './event-data.js';
 
 export class NodeEventData extends EventData {
     constructor(nativeEvent) {

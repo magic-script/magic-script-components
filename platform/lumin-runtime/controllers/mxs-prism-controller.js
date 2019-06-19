@@ -10,6 +10,7 @@ import { EyeTrackingEventData } from '../types/event-data/eye-tracking-event-dat
 import { GestureInputEventData } from '../types/event-data/gesture-input-event-data.js';
 import { InputEventData } from '../types/event-data/input-event-data.js';
 import { KeyInputEventData } from '../types/event-data/key-input-event-data.js';
+import { PrismEventData } from '../types/event-data/prism-event-data.js';
 import { SelectionEventData } from '../types/event-data/selection-event-data.js';
 import { UiEventData } from '../types/event-data/ui-event-data.js';
 import { VideoEventData } from '../types/event-data/video-event-data.js';

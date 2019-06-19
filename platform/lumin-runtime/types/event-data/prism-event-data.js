@@ -1,5 +1,6 @@
 // Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
 import { Prism as _Prism } from 'lumin';
+import { EventData } from './event-data.js';
 import { NodeEventData } from './node-event-data.js';
 import { TransformNodeEventData } from './transform-node-event-data.js';
 

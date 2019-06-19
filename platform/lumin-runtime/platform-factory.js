@@ -4,6 +4,7 @@ import { ImmersiveApp, ModelNode, TransformNode, ui } from 'lumin';
 
 import { NativeFactory } from '../../core/native-factory.js';
 import { MxsLandscapeApp } from './mxs-landscape-app.js';
+import { MxsPrismController } from './controllers/mxs-prism-controller.js';
 
 import { UiNodeEvents } from './types/ui-node-events.js';
 
@@ -14,11 +15,10 @@ export class PlatformFactory extends NativeFactory {
         // { type, builder }
         this.elementBuilders = {};
         this.controllerBuilders = {};
-        this.controllers = new WeakMap();
     }
 
     isController(element) {
-        return this.controllers[element] !== undefined;
+        return element instanceof MxsPrismController;
     }
 
     setComponentEvents(element, properties) {
@@ -49,13 +49,53 @@ export class PlatformFactory extends NativeFactory {
             throw new Error('PlatformFactory.createElement expects "name" to be string');
         }
 
+        let element;
         if (this._mapping.elements[name] !== undefined) {
-            return this._createElement(name, container, ...args)
+            element = this._createElement(name, container, ...args);
+            Object.defineProperty(element, 'childController', {
+                enumerable: true,
+                writable: true,
+                configurable: false,
+                value: undefined
+            });
         } else if (this._mapping.controllers[name] !== undefined) {
-            return this._createController(name, container, ...args);
+            element = this._createController(name, container, ...args);
         } else {
             throw new Error(`Unknown tag: ${name}`);
         }
+
+        Object.defineProperty(element, 'addChild$Universal', {
+            enumerable: true,
+            writable: false,
+            configurable: false,
+            value: (child) => {
+                if (this.isController(element)) {
+                    if (this.isController(child)) {
+                        element.addChildController(child);
+                    } else {
+                        element.addChild(child);
+                        if (child.childController !== undefined) {
+                            element.addChildController(child.childController);
+                        }
+                    }
+                } else {
+                    if (this.isController(child)) {
+                        element.childController = child;
+                        const handler = () => {
+                            element.addChild(child.getRoot());
+                            child.removeListener('onAttachPrism', handler);
+                        };
+
+                        child.addListener('onAttachPrism', handler);
+                    } else {
+                        element.childController = child.childController;
+                        this._addChildNodeToParentNode(element, child);
+                    }
+                }
+            }
+        });
+
+        return element;
     }
 
     _createElement(name, container, ...args) {
@@ -79,12 +119,7 @@ export class PlatformFactory extends NativeFactory {
             this.controllerBuilders[name] = createBuilder();
         }
 
-        const controller = this.controllerBuilders[name].create(...args)
-
-        // Map the controller object with to the tag
-        this.controllers[controller] = name;
-
-        return controller;
+        return this.controllerBuilders[name].create(...args);
     }
 
     updateElement(name, ...args) {
@@ -212,22 +247,7 @@ export class PlatformFactory extends NativeFactory {
         } else if (typeof child === 'number') {
             parent.setText(child.toString());
         } else {
-            if (this.isController(child)) {
-                // TODO:
-                // If the parent is not a controller
-                // parent.addChild(child.getRoot())
-                // parentContainer.addChildController(child)
-                if ( !this.isController(parent) ) {
-                    throw new Error('Adding controller to non-controller parent');
-                }
-                parent.addChildController(child);
-            } else {
-                if (this.isController(parent)) {
-                    parent.addChild(child);
-                } else {
-                    this._addChildNodeToParentNode(parent, child);
-                }
-            }
+            parent.addChild$Universal(child);
         }
     }
 
