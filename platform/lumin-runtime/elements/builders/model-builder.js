@@ -44,19 +44,23 @@ export class ModelBuilder extends RenderNodeBuilder {
 
         this.validate(undefined, undefined, properties);
 
-        const { modelPath, materialPath } = properties;
+        const { modelPath, materialPath, texturePaths } = properties;
+
+        if (Array.isArray(texturePaths)) {
+            texturePaths.map(path => prism.createTextureResourceId(Desc2d.DEFAULT, path));
+        }
 
         prism.createMaterialResourceId(materialPath);
 
         const modelId = prism.createModelResourceId(modelPath, 1.0);
         const element = prism.createModelNode(modelId);
 
-        const defaultTexture = {
-            textureId: properties.defaultTextureId,
-            textureSlot: properties.defaultTextureSlot,
-            materialName: properties.defaultMaterialName
-        };
-        this._setTextures(prism, element, properties.texturePaths, defaultTexture)
+        // const defaultTexture = {
+        //     textureId: properties.defaultTextureId,
+        //     textureSlot: properties.defaultTextureSlot,
+        //     materialName: properties.defaultMaterialName
+        // };
+        // this._setTextures(prism, element, properties.texturePaths, defaultTexture)
 
         this.update(element, undefined, properties);
         return element;
