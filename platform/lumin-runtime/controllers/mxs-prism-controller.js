@@ -20,8 +20,9 @@ export class MxsPrismController extends PrismController {
         super(properties.name);
 
         this._children = [];
+        this._controllers = [];
 
-        this._initialProperties = properties;
+        this._initialProperties = {...properties};
 
         this._eventHandlers = {
             onPreAttachPrism: [],
@@ -58,20 +59,12 @@ export class MxsPrismController extends PrismController {
         // It will receive all onEvent callbacks received by this controller (the parent).
         // If a prism is already attached,
         // the child controller will also receive an onAttachPrism callback.
-        super.addChildController(controller);
-
-        if (controller.getRoot() !== undefined) {
-            this.addChild(controller.getRoot());
+        const root = this.getRoot();
+        if (root === undefined || root === null) {
+            this._controllers.push(controller);
         } else {
-            // Prism hasn't been attached to the child controller yet
-            // Subscribe for the onAttachPrism event
-            // and unsubscribe after adding the child root node to the current controller
-            const handler = () => {
-                this.addChild(controller.getRoot());
-                controller.removeListener('onAttachPrism', handler);
-            };
-
-            controller.addListener('onAttachPrism', handler);
+            super.addChildController(controller);
+            this.addChild(controller.getRoot());
         }
     }
 
@@ -116,6 +109,14 @@ export class MxsPrismController extends PrismController {
             builder.update(root, undefined, this._initialProperties);
 
             this._initialProperties = undefined;
+        }
+
+        if (this._controllers !== undefined) {
+            this._controllers.forEach(controller => {
+                super.addChildController(controller);
+                root.addChild(controller.getRoot());
+            });
+            this._controllers = undefined;
         }
 
         if (this._children !== undefined) {
