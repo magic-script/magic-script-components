@@ -1,12 +1,12 @@
 // Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
 
 import { MxsPrismController } from '../mxs-prism-controller.js';
-import { TransformNodeBuilder } from '../../elements/builders/transform-node-builder.js';
+import { TransformBuilder } from '../../elements/builders/transform-builder.js';
 // import { PrimitiveTypeProperty } from '../properties/primitive-type-property.js';
 
 export class ControllerBuilder {
     constructor() {
-        this._transformNodeBuilder = new TransformNodeBuilder();
+        this._transformBuilder = new TransformBuilder();
         this._eventHandlerNames = ['onPreAttachPrism', 'onAttachPrism', 'onDetachPrism', 'onEvent', 'onUpdate'];
     }
 
@@ -85,7 +85,7 @@ export class ControllerBuilder {
     _updateRootNodeProperties(controller, properties) {
         const root = controller.getRoot();
         console.log(JSON.stringify(root));
-        this._transformNodeBuilder.update(root, undefined, properties);
+        this._transformBuilder.update(root, undefined, properties);
     }
 
     _updateRootNodeEventHandlers(controller, properties) {

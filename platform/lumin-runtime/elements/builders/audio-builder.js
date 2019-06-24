@@ -2,12 +2,12 @@
 
 import { SpatialSoundSendLevels, SpatialSoundDistanceProperties, SpatialSoundRadiationProperties } from 'lumin';
 
-import { TransformNodeBuilder } from './transform-node-builder.js';
+import { TransformBuilder } from './transform-builder.js';
 import { ArrayProperty } from '../properties/array-property.js'
 import { ClassProperty } from '../properties/class-property.js';
 import { PrimitiveTypeProperty } from '../properties/primitive-type-property.js';
 
-export class AudioBuilder extends TransformNodeBuilder {
+export class AudioBuilder extends TransformBuilder {
     constructor(){
         super();
 

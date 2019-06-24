@@ -9,7 +9,7 @@ import { CursorHoverState } from '../../types/cursor-hover-state.js';
 
 import { validator } from '../../utilities/validator.js';
 
-export class TransformNodeBuilder extends ElementBuilder {
+export class TransformBuilder extends ElementBuilder {
     constructor(){
         super();
 

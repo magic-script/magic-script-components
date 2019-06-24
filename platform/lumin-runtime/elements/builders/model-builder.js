@@ -1,16 +1,15 @@
 // Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
 import { Desc2d } from 'lumin';
 
-import { RenderNodeBuilder } from './render-node-builder.js';
+import { RenderBuilder } from './render-builder.js';
 
 import { ClassProperty } from '../properties/class-property.js';
 import { PrimitiveTypeProperty } from '../properties/primitive-type-property.js';
 
 import { TextureType } from '../../types/texture-type.js';
 import { validator } from '../../utilities/validator.js';
-import { PropertyDescriptor } from '../properties/property-descriptor.js';
 
-export class ModelBuilder extends RenderNodeBuilder {
+export class ModelBuilder extends RenderBuilder {
     constructor() {
         super();
 

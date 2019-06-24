@@ -29,14 +29,16 @@ import { TabBuilder } from './elements/builders/tab-builder.js';
 import { TextBuilder } from './elements/builders/text-builder.js';
 import { TextEditBuilder } from './elements/builders/text-edit-builder.js';
 import { TimePickerBuilder } from './elements/builders/time-picker-builder.js';
-import { TransformNodeBuilder } from './elements/builders/transform-node-builder.js';
+import { TransformBuilder } from './elements/builders/transform-builder.js';
 import { ToggleBuilder } from './elements/builders/toggle-builder.js';
 import { ToggleGroupBuilder } from './elements/builders/toggle-group-builder.js';
 import { WebViewBuilder } from './elements/builders/web-view-builder.js';
 
 import { AudioBuilder } from './elements/builders/audio-builder.js';
+import { LightBuilder } from './elements/builders/light-builder.js';
+import { LineBuilder } from './elements/builders/line-builder.js';
 import { ModelBuilder } from './elements/builders/model-builder.js';
-import { QuadNodeBuilder } from './elements/builders/quad-node-builder.js';
+import { QuadBuilder } from './elements/builders/quad-builder.js';
 import { VideoBuilder } from './elements/builders/video-builder.js';
 
 
@@ -80,11 +82,13 @@ export default {
         'datePicker': () => new DatePickerBuilder(),
         'circleConfirmation': () => new CircleConfirmationBuilder(),
 
-        'content': () => new TransformNodeBuilder(),
+        'content': () => new TransformBuilder(),
 
         'model': () => new ModelBuilder(),
-        'quad' : () => new QuadNodeBuilder(),
+        'quad' : () => new QuadBuilder(),
         'video': () => new VideoBuilder(),
-        'audio': () => new AudioBuilder()
+        'audio': () => new AudioBuilder(),
+        'light': () => new LightBuilder(),
+        'line' : () => new LineBuilder()
     }
 };

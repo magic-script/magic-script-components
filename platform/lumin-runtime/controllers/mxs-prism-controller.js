@@ -1,7 +1,7 @@
 // Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
 
 import { PrismController } from 'lumin';
-import { TransformNodeBuilder } from '../elements/builders/transform-node-builder.js';
+import { TransformBuilder } from '../elements/builders/transform-builder.js';
 
 import { ControlPose3DofInputEventData } from '../types/event-data/control-pose-3dof-Input-event-data.js';
 import { ControlPose6DofInputEventData } from '../types/event-data/control-pose-6dof-input-event-data.js';
@@ -112,7 +112,7 @@ export class MxsPrismController extends PrismController {
         const root = this.getRoot();
 
         if (this._initialProperties !== undefined) {
-            const builder = new TransformNodeBuilder();
+            const builder = new TransformBuilder();
             builder.update(root, undefined, this._initialProperties);
 
             this._initialProperties = undefined;

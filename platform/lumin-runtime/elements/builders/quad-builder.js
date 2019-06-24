@@ -1,6 +1,6 @@
 // Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
 
-import { RenderNodeBuilder } from './render-node-builder.js';
+import { RenderBuilder } from './render-builder.js';
 import { ArrayProperty } from '../properties/array-property.js';
 import { EnumProperty } from '../properties/enum-property.js';
 import { PrimitiveTypeProperty } from '../properties/primitive-type-property.js';
@@ -8,7 +8,7 @@ import { PropertyDescriptor } from '../properties/property-descriptor.js';
 
 import { ViewMode } from '../../types/view-mode.js';
 
-export class QuadNodeBuilder extends RenderNodeBuilder {
+export class QuadBuilder extends RenderBuilder {
     constructor(){
         super();
 

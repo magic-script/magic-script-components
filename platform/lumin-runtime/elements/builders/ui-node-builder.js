@@ -2,7 +2,7 @@
 
 import { ui } from 'lumin';
 
-import { TransformNodeBuilder } from './transform-node-builder.js';
+import { TransformBuilder } from './transform-builder.js';
 import { ArrayProperty } from '../properties/array-property.js';
 import { ClassProperty } from '../properties/class-property.js';
 import { EnumProperty } from '../properties/enum-property.js';
@@ -17,7 +17,7 @@ import { SoundEvent } from '../../types/sound-event.js';
 
 import { validator } from '../../utilities/validator.js';
 
-export class UiNodeBuilder extends TransformNodeBuilder {
+export class UiNodeBuilder extends TransformBuilder {
     constructor(){
         super();
 
