@@ -5,6 +5,8 @@ import { ui } from 'lumin';
 import { UiNodeBuilder } from './ui-node-builder.js';
 import { PrimitiveTypeProperty } from '../properties/primitive-type-property.js';
 import { PropertyDescriptor } from '../properties/property-descriptor.js';
+import { ArrayProperty } from '../properties/array-property.js';
+import { ClassProperty } from '../properties/class-property.js';
 
 export class ProgressBarBuilder extends UiNodeBuilder {
     constructor(){
@@ -51,6 +53,10 @@ export class ProgressBarBuilder extends UiNodeBuilder {
 
         PropertyDescriptor.throwIfNotTypeOf(newProperties.width, 'number');
         PropertyDescriptor.throwIfNotTypeOf(newProperties.height, 'number');
+    }
+
+    setProgressColor (element, oldProperties, newProperties) {
+        element.setProgressColor(newProperties.progressColor.beginColor, newProperties.progressColor.endColor);
     }
 }
 
