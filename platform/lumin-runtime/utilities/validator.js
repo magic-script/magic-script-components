@@ -37,7 +37,7 @@ import { ToggleType } from '../types/toggle-type.js';
 import { ViewMode } from '../types/view-mode.js';
 
 function validate(value, enumSet) {
-    return enumSet[value] !== undefined;
+    return typeof value === 'string' && enumSet[value] !== undefined;
 }
 
 export const validator = {
