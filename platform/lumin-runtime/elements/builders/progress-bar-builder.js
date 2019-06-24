@@ -56,7 +56,10 @@ export class ProgressBarBuilder extends UiNodeBuilder {
     }
 
     setProgressColor (element, oldProperties, newProperties) {
-        element.setProgressColor(newProperties.progressColor.beginColor, newProperties.progressColor.endColor);
+        const { beginColor, endColor } = newProperties.progressColor;
+        if ( beginColor !== undefined && endColor !== undefined ) {
+            element.setProgressColor( beginColor, endColor );
+        }
     }
 }
 
