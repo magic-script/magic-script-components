@@ -90,9 +90,10 @@ export class TextBuilder extends TextContainerBuilder {
             const tileSize = fontDescription.tileSize;
             const quality = this.getPropertyValue('quality', Quality['std'], fontDescription);
             const minAlpha = this.getPropertyValue('minAlpha', 0.15, fontDescription);
+            const finalAbsolutePath = absolutePath || false;
 
-            const fontDesc = new Font2dDesc(advanceDirection, flowDirection, tileSize, quality, minAlpha);
-            const font2dResourceId = prism.createFont2dResourceId(fontDesc, filePath, absolutePath);
+            const fontDesc = new glyph.Font2dDesc(advanceDirection, flowDirection, tileSize, quality, minAlpha);
+            const font2dResourceId = prism.createFont2dResourceId(fontDesc, filePath, finalAbsolutePath);
 
             element.setFont(font2dResourceId);
         }
