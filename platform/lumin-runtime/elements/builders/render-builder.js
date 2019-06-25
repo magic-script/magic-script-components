@@ -1,6 +1,6 @@
 // Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
 
-import { TransformNodeBuilder } from './transform-node-builder.js';
+import { TransformBuilder } from './transform-builder.js';
 
 import { ArrayProperty } from '../properties/array-property.js';
 import { ClassProperty } from '../properties/class-property.js';
@@ -10,7 +10,7 @@ import { PrimitiveTypeProperty } from '../properties/primitive-type-property.js'
 import { RenderingLayer } from '../../types/rendering-layer.js';
 import { ShaderType } from '../../types/shader-type.js'
 
-export class RenderNodeBuilder extends TransformNodeBuilder {
+export class RenderBuilder extends TransformBuilder {
 
     constructor(){
         super();

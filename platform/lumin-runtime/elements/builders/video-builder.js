@@ -2,7 +2,8 @@
 
 import { ViewMode as luminViewMode } from 'lumin';
 
-import { QuadNodeBuilder } from './quad-node-builder.js';
+import { QuadBuilder } from './quad-builder.js';
+
 import { PrimitiveTypeProperty } from '../properties/primitive-type-property.js';
 import { ViewMode } from '../../types/view-mode.js';
 
@@ -10,7 +11,7 @@ const DEFAULT_FRAME_WIDTH = 512;
 const DEFAULT_FRAME_HEIGHT = 512;
 const DEFAULT_VOLUME = 1.0;
 
-export class VideoBuilder extends QuadNodeBuilder {
+export class VideoBuilder extends QuadBuilder {
     constructor(){
         super();
 

@@ -2,7 +2,7 @@
 
 import { SpatialSoundSendLevels, SpatialSoundDistanceProperties, SpatialSoundRadiationProperties } from 'lumin';
 
-import { TransformNodeBuilder } from './transform-node-builder.js';
+import { TransformBuilder } from './transform-builder.js';
 import { ArrayProperty } from '../properties/array-property.js'
 import { ClassProperty } from '../properties/class-property.js';
 import { EnumProperty } from '../properties/enum-property.js';
@@ -10,7 +10,7 @@ import { PrimitiveTypeProperty } from '../properties/primitive-type-property.js'
 
 import { LightType } from '../../types/light-type.js';
 
-export class LightNode extends TransformNodeBuilder {
+export class LightBuilder extends TransformBuilder {
     constructor(){
         super();
 

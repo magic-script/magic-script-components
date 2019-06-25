@@ -13,7 +13,7 @@ export class TextContainerBuilder extends UiNodeBuilder {
 
         this._propertyDescriptors['children'] = new TextChildrenProperty('children', 'setText', false);
 
-        this._propertyDescriptors['text'] = new PrimitiveTypeProperty('text', 'setText', true, 'string');
+        this._propertyDescriptors['text'] = new PrimitiveTypeProperty('text', 'setText', false, 'string');
         this._propertyDescriptors['textColor'] = new ArrayProperty('textColor', 'setTextColor', true, 'vec4');
         this._propertyDescriptors['textSize'] = new PrimitiveTypeProperty('textSize', 'setTextSize', true, 'number');
     }
@@ -24,8 +24,13 @@ export class TextContainerBuilder extends UiNodeBuilder {
     // }
 
     setText(element, oldProperties, newProperties) {
-        // TODO: Validate children
-        element.setText(this._getText(newProperties.children));
+        let text = newProperties.text;
+
+        if (text === undefined) {
+            text = this._getText(newProperties.children);
+        }
+
+        element.setText(text);
     }
 
     _getText(children) {
@@ -40,5 +45,5 @@ export class TextContainerBuilder extends UiNodeBuilder {
         }
 
         return text;
-    }    
+    }
 }

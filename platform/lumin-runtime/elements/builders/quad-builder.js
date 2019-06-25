@@ -1,6 +1,6 @@
 // Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
 
-import { RenderNodeBuilder } from './render-node-builder.js';
+import { RenderBuilder } from './render-builder.js';
 import { ArrayProperty } from '../properties/array-property.js';
 import { EnumProperty } from '../properties/enum-property.js';
 import { PrimitiveTypeProperty } from '../properties/primitive-type-property.js';
@@ -8,13 +8,14 @@ import { PropertyDescriptor } from '../properties/property-descriptor.js';
 
 import { ViewMode } from '../../types/view-mode.js';
 
-export class QuadNodeBuilder extends RenderNodeBuilder {
+export class QuadBuilder extends RenderBuilder {
     constructor(){
         super();
 
         this._propertyDescriptors['renderResourceId'] = new PrimitiveTypeProperty('renderResourceId', 'setRenderResourceId', true, 'number');
         this._propertyDescriptors['texCoords'] = new ArrayProperty('texCoords', 'setTexCoords', true, 'vec2');
         this._propertyDescriptors['viewMode'] = new EnumProperty('viewMode', 'setViewMode', true, ViewMode, 'ViewMode');
+        this._propertyDescriptors['size'] = new ArrayProperty('size', 'setSize', true, 'vec2');
     }
 
     create(prism, properties) {
@@ -39,24 +40,24 @@ export class QuadNodeBuilder extends RenderNodeBuilder {
         // this.throwIfNotInstanceOf(element, QuadNode);
         super.update(element, oldProperties, newProperties);
 
-        this._validateSize(newProperties);
+        // this._validateSize(newProperties);
         this._validateSubTexture(newProperties);
 
-        this._setSize(element, newProperties);
+        // this._setSize(element, newProperties);
         this._setSubTexture(element, newProperties);
     }
 
     validate(element, oldProperties, newProperties) {
         super.validate(element, oldProperties, newProperties);
 
-        this._validateSize(newProperties);
+        // this._validateSize(newProperties);
         this._validateSubTexture(newProperties);
     }
 
-    _validateSize(properties) {
-        PropertyDescriptor.throwIfNotTypeOf(properties.height, 'number');
-        PropertyDescriptor.throwIfNotTypeOf(properties.width, 'number');
-    }
+    // _validateSize(properties) {
+    //     PropertyDescriptor.throwIfNotTypeOf(properties.height, 'number');
+    //     PropertyDescriptor.throwIfNotTypeOf(properties.width, 'number');
+    // }
 
     _validateSubTexture(properties) {
         const subTexture = properties.subTexture;
@@ -69,21 +70,21 @@ export class QuadNodeBuilder extends RenderNodeBuilder {
         }
     }
 
-    _setSize(element, properties) {
-        const { height, width } = properties;
+    // _setSize(element, properties) {
+    //     const { height, width } = properties;
 
-        if (width || height) {
-            if (width === undefined) {
-                width = element.getSize()[0];
-            }
+    //     if (width || height) {
+    //         if (width === undefined) {
+    //             width = element.getSize()[0];
+    //         }
 
-            if (height === undefined) {
-                height = element.getSize()[1];
-            }
+    //         if (height === undefined) {
+    //             height = element.getSize()[1];
+    //         }
 
-            element.setSize([height, width]);
-        }
-    }
+    //         element.setSize([height, width]);
+    //     }
+    // }
 
     _setSubTexture(element, properties) {
         const subTexture = properties.subTexture

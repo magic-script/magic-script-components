@@ -1,9 +1,12 @@
 // Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
 
 import { ui } from 'lumin';
-import { validator } from '../../utilities/validator.js';
+
 import { TextContainerBuilder } from './text-container-builder.js';
 
+import { AdvanceDirection } from '../../types/advance-direction.js';
+import { FlowDirection } from '../../types/flow-direction.js';
+import { Quality }  from '../../types/quality.js';
 import { HorizontalTextAlignment } from '../../types/horizontal-text-alignment.js';
 import { FontStyle, FontWeight } from '../../types/font-style.js';
 import { ScrollBarVisibility } from '../../types/scroll-bar-visibility.js';
@@ -16,8 +19,7 @@ import { EnumProperty } from '../properties/enum-property.js';
 import { PrimitiveTypeProperty } from '../properties/primitive-type-property.js';
 import { PropertyDescriptor } from '../properties/property-descriptor.js';
 
-const DEFAULT_FONT_STYLE = FontStyle['normal'];
-const DEFAULT_FONT_WEIGHT = FontWeight['regular'];
+import { validator } from '../../utilities/validator.js';
 
 export class TextEditBuilder extends TextContainerBuilder {
     constructor(){
@@ -55,7 +57,7 @@ export class TextEditBuilder extends TextContainerBuilder {
             new PrimitiveTypeProperty('allCaps', undefined, undefined, 'boolean'),
         ];
 
-        this._propertyDescriptors['fontParams'] = new ClassProperty('fontParams', 'setFontParameters', false, fontParamsProperties);
+        this._propertyDescriptors['fontParams'] = new ClassProperty('fontParams', 'setFontParams', false, fontParamsProperties);
 
         // keyboardProperties
     }
@@ -72,7 +74,9 @@ export class TextEditBuilder extends TextContainerBuilder {
 
         const element = ui.UiTextEdit.Create(prism, text, width, height);
 
-        const unapplied = this.excludeProperties(properties, ['children', 'text', 'width', 'height']);
+        this._setFont2dResource(prism, element, properties);
+
+        const unapplied = this.excludeProperties(properties, ['children', 'text', 'width', 'height', 'fontDescription', 'filePath', 'absolutePath']);
 
         this.apply(element, undefined, unapplied);
 
@@ -98,7 +102,55 @@ export class TextEditBuilder extends TextContainerBuilder {
         this._validateSelectedText(newProperties);
     }
 
-    // Font
+    setFontParams(element, oldProperties, newProperties) {
+        const style = FontStyle[this.getPropertyValue('style', 'normal', newProperties.fontParams)];
+        const weight = FontWeight[this.getPropertyValue('weight', 'regular', newProperties.fontParams)];
+        const fontSize = this.getPropertyValue('fontSize', 0.02, newProperties.fontParams);
+        const tracking = this.getPropertyValue('tracking', 50, newProperties.fontParams);
+        const allCaps = this.getPropertyValue('allCaps', false, newProperties.fontParams);
+
+        element.setFontParams(new ui.FontParams(style, weight, fontSize, tracking, allCaps));
+    }
+
+    _setFont2dResource(prism, element, properties) {
+        const { fontDescription, filePath } = properties;
+        const absolutePath = this.getPropertyValue('absolutePath', false, properties);
+
+        if (this._validateFont2dResourceProperties(fontDescription, filePath, absolutePath)) {
+
+            const advanceDirection = AdvanceDirection[fontDescription.advanceDirection];
+            const flowDirection = FlowDirection[fontDescription.flowDirection];
+            const tileSize = fontDescription.tileSize;
+            const quality = this.getPropertyValue('quality', Quality['std'], fontDescription);
+            const minAlpha = this.getPropertyValue('minAlpha', 0.15, fontDescription);
+
+            const fontDesc = new Font2dDesc(advanceDirection, flowDirection, tileSize, quality, minAlpha);
+            const font2dResourceId = prism.createFont2dResourceId(fontDesc, filePath, absolutePath);
+
+            element.setFont(font2dResourceId);
+        }
+    }
+
+    _validateFont2dResourceProperties(fontDescription, filePath, absolutePath) {
+        if ( !PropertyDescriptor.hasValue(fontDescription) ) {
+            return false;
+        }
+
+        const { advanceDirection, flowDirection, tileSize, quality, minAlpha } = fontDescription;
+
+        return (  (  this._validateFont2dDescriptionProperties(advanceDirection, flowDirection, tileSize, quality, minAlpha) )
+               && (  PropertyDescriptor.hasValue(filePath) && typeof filePath === 'string' )
+               && ( !PropertyDescriptor.hasValue(absolutePath) || typeof fontDescription === 'boolean' ) );
+    }
+
+    _validateFont2dDescriptionProperties(advanceDirection, flowDirection, tileSize, quality, minAlpha) {
+        return (  (  PropertyDescriptor.hasValue(advanceDirection) && validator.validateAdvanceDirection(advanceDirection) )
+               && (  PropertyDescriptor.hasValue(flowDirection) && validator.validateFlowDirection(flowDirection) )
+               && (  PropertyDescriptor.hasValue(tileSize) && typeof tileSize === 'number' )
+               && ( !PropertyDescriptor.hasValue(quality) || validator.validateQuality(quality) )
+               && ( !PropertyDescriptor.hasValue(minAlpha) || typeof minAlpha === 'number' ) );
+    }
+
     _validateFont(properties) {
         const { style, weight } = properties;
 
@@ -114,19 +166,17 @@ export class TextEditBuilder extends TextContainerBuilder {
 
         if (style) {
             const fontStyle = FontStyle[style];
-            const fontWeight = weight ? FontWeight[weight] : DEFAULT_FONT_WEIGHT;
+            const fontWeight = weight ? FontWeight[weight] : FontWeight['regular'];
 
             element.setFont(fontStyle, fontWeight);
         }
     }
 
-    // Size
     _validateSize(properties) {
         PropertyDescriptor.throwIfNotTypeOf(properties.height, 'number');
         PropertyDescriptor.throwIfNotTypeOf(properties.width, 'number');
     }
 
-    // SelectedText
     _validateSelectedText(properties){
         PropertyDescriptor.throwIfNotTypeOf(properties.selectedBegin, 'number');
         PropertyDescriptor.throwIfNotTypeOf(properties.selectedEnd, 'number');
