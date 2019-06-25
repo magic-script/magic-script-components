@@ -113,7 +113,8 @@ export class TextEditBuilder extends TextContainerBuilder {
     }
 
     _setFont2dResource(prism, element, properties) {
-        const { fontDescription, filePath, absolutePath } = properties;
+        const { fontDescription, filePath } = properties;
+        const absolutePath = this.getPropertyValue('absolutePath', false, properties);
 
         if (this._validateFont2dResourceProperties(fontDescription, filePath, absolutePath)) {
 

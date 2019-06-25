@@ -81,7 +81,8 @@ export class TextBuilder extends TextContainerBuilder {
     // }
 
     _setFont2dResource(prism, element, properties) {
-        const { fontDescription, filePath, absolutePath } = properties;
+        const { fontDescription, filePath } = properties;
+        const absolutePath = this.getPropertyValue('absolutePath', false, properties);
 
         if (this._validateFont2dResourceProperties(fontDescription, filePath, absolutePath)) {
 
@@ -90,10 +91,9 @@ export class TextBuilder extends TextContainerBuilder {
             const tileSize = fontDescription.tileSize;
             const quality = this.getPropertyValue('quality', Quality['std'], fontDescription);
             const minAlpha = this.getPropertyValue('minAlpha', 0.15, fontDescription);
-            const finalAbsolutePath = absolutePath || false;
 
             const fontDesc = new glyph.Font2dDesc(advanceDirection, flowDirection, tileSize, quality, minAlpha);
-            const font2dResourceId = prism.createFont2dResourceId(fontDesc, filePath, finalAbsolutePath);
+            const font2dResourceId = prism.createFont2dResourceId(fontDesc, filePath, absolutePath);
 
             element.setFont(font2dResourceId);
         }
