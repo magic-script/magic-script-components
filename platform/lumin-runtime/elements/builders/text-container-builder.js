@@ -26,7 +26,11 @@ export class TextContainerBuilder extends UiNodeBuilder {
     setText(element, oldProperties, newProperties) {
         const { children, text } = newProperties;
         const finalText  = text ? text : this._getText(children);
-        element.setText(finalText);
+        if (finalText !== undefined) {
+            element.setText(finalText);
+        } else {
+            element.setText('');
+        }
     }
 
     _getText(children) {
