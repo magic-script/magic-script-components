@@ -108,7 +108,7 @@ export class TextBuilder extends TextContainerBuilder {
 
         return (  (  this._validateFont2dDescriptionProperties(advanceDirection, flowDirection, tileSize, quality, minAlpha) )
                && (  PropertyDescriptor.hasValue(filePath) && typeof filePath === 'string' )
-               && ( !PropertyDescriptor.hasValue(absolutePath) || typeof fontDescription === 'boolean' ) );
+               && ( !PropertyDescriptor.hasValue(absolutePath) || typeof absolutePath === 'boolean' ) );
     }
 
     _validateFont2dDescriptionProperties(advanceDirection, flowDirection, tileSize, quality, minAlpha) {
