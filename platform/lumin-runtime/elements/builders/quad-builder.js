@@ -12,7 +12,7 @@ export class QuadBuilder extends RenderBuilder {
     constructor(){
         super();
 
-        this._propertyDescriptors['renderResourceId'] = new PrimitiveTypeProperty('renderResourceId', 'setRenderResourceId', true, 'number');
+        this._propertyDescriptors['renderResourceId'] = new PrimitiveTypeProperty('renderResource', 'setRenderResource', true, 'number');
         this._propertyDescriptors['texCoords'] = new ArrayProperty('texCoords', 'setTexCoords', true, 'vec2');
         this._propertyDescriptors['viewMode'] = new EnumProperty('viewMode', 'setViewMode', true, ViewMode, 'ViewMode');
         this._propertyDescriptors['size'] = new ArrayProperty('size', 'setSize', true, 'vec2');
