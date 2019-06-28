@@ -1,6 +1,7 @@
 // Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
 
 import { ControllerBuilder } from './controllers/builders/controller-builder.js';
+import { WebGlController } from './controllers/webgl-controller.js';
 
 // import { UiNodeBuilder } from './elements/builders/ui-node-builder.js';
 import { ButtonBuilder } from './elements/builders/button-builder.js';
@@ -40,7 +41,7 @@ import { LineBuilder } from './elements/builders/line-builder.js';
 import { ModelBuilder } from './elements/builders/model-builder.js';
 import { QuadBuilder } from './elements/builders/quad-builder.js';
 import { VideoBuilder } from './elements/builders/video-builder.js';
-import { WebGLBuilder } from './elements/builders/webgl-builder.js';
+// import { WebGLBuilder } from './elements/builders/webgl-builder.js';
 
 
 export default {
@@ -48,6 +49,7 @@ export default {
     platform: 'lumin-runtime',
     controllers: {
         'scene': () => new ControllerBuilder(),
+        'webgl': () => new WebGlController(),
     },
     elements: {
         'view': () => new GroupBuilder(),
@@ -90,7 +92,7 @@ export default {
         'video': () => new VideoBuilder(),
         'audio': () => new AudioBuilder(),
         'light': () => new LightBuilder(),
-        'line' : () => new LineBuilder(),
-        'webgl': () => new WebGLBuilder()
+        'line' : () => new LineBuilder()
+        // 'webgl': () => new WebGLBuilder()
     }
 };
