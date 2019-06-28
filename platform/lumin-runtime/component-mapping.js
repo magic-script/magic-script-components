@@ -40,6 +40,7 @@ import { LineBuilder } from './elements/builders/line-builder.js';
 import { ModelBuilder } from './elements/builders/model-builder.js';
 import { QuadBuilder } from './elements/builders/quad-builder.js';
 import { VideoBuilder } from './elements/builders/video-builder.js';
+import { WebGLBuilder } from './elements/builders/webgl-builder.js';
 
 
 export default {
@@ -89,6 +90,7 @@ export default {
         'video': () => new VideoBuilder(),
         'audio': () => new AudioBuilder(),
         'light': () => new LightBuilder(),
-        'line' : () => new LineBuilder()
+        'line' : () => new LineBuilder(),
+        'webgl': () => new WebGLBuilder()
     }
 };
