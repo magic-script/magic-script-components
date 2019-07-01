@@ -14,7 +14,7 @@ export class LoadingSpinnerBuilder extends UiNodeBuilder {
     constructor(){
         super();
 
-        this._propertyDescriptors['size']  = new ArrayProperty('color', 'setSize', true, 'vec2');
+        this._propertyDescriptors['size']  = new ArrayProperty('size', 'setSize', true, 'vec2');
         this._propertyDescriptors['value'] = new PrimitiveTypeProperty('value', 'setValue', true, 'number');
     }
 
