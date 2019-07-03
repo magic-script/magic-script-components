@@ -7,6 +7,7 @@ import { UiNodeBuilder } from './ui-node-builder.js';
 import { ArrayProperty } from '../properties/array-property.js';
 import { PrimitiveTypeProperty } from '../properties/primitive-type-property.js';
 import { PropertyDescriptor } from '../properties/property-descriptor.js';
+import { LoadingSpinnerType } from '../../types/loading-spinner-type.js';
 
 import { validator } from '../../utilities/validator.js';
 
@@ -23,9 +24,10 @@ export class LoadingSpinnerBuilder extends UiNodeBuilder {
 
         this.validate(undefined, undefined, properties);
 
-        const type = properties.type;
-        const id   = this.getPropertyValue('resourceId',    0, properties);
+        const type = LoadingSpinnerType[this.getPropertyValue('type', 'sprite-animation', properties)];
+        const id   = this.getPropertyValue('resourceId', 0, properties);
         const path = this.getPropertyValue('resourcePath', '', properties);
+        const height = this.getPropertyValue('height', 0, properties);
 
         const element = ui.UiLoadingSpinner.Create(prism, type, id, path, height);
 
