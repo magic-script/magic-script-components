@@ -131,7 +131,7 @@ export class TextBuilder extends TextContainerBuilder {
     }
 
     setBoundsSize(element, oldProperties, newProperties) {
-        let { boundsSize, wrap } = newProperties.wrap;
+        let { boundsSize, wrap } = newProperties.boundsSize;
 
         if ( !PropertyDescriptor.hasValue(wrap)) {
             wrap = true;
