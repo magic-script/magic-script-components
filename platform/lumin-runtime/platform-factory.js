@@ -176,6 +176,8 @@ export class PlatformFactory extends NativeFactory {
                 } else {
                     parent.addItem(child, Padding);
                 }
+            } else {
+                parent.addItem(child);
             }
         } else if (parent instanceof ui.UiSlider) {
             if (child instanceof TransformNode) {
@@ -282,6 +284,17 @@ export class PlatformFactory extends NativeFactory {
         }
     }
 
+    // TODO(tcuadra): Expose listView.removeItem(ListViewItem) overload
+    //                to avoid the need to perform this lookup
+    _getListViewIndex(listView, item) {
+        for (let i = 0; i < listView.getItemCount(); i++) {
+            if (item === listView.getItem(i)) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
     removeChildElement(parent, child) {
         if (typeof child === 'string' || typeof child === 'number') {
             parent.setText('');
@@ -293,6 +306,8 @@ export class PlatformFactory extends NativeFactory {
                 parent.removeChildController(child);
             } else if (this.isController(parent)) {
                 parent.getRoot().removeChild(child);
+            } else if (parent instanceof ui.UiListView) {
+                parent.removeItem(this._getListViewIndex(parent, child));
             } else {
                 parent.removeChild(child);
             }

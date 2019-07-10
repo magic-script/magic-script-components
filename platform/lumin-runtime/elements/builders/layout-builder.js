@@ -9,8 +9,8 @@ export class LayoutBuilder extends ElementBuilder {
         // this.throwIfNotInstanceOf(element, ui.UiButton);
         super.update(element, oldProperties, newProperties);
 
-        this._validateSize(properties);
-        this._setSize(element, properties);
+        this._validateSize(newProperties);
+        this._setSize(element, newProperties);
     }
 
     validate(element, oldProperties, newProperties) {
