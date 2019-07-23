@@ -54,13 +54,18 @@ export class TextBuilder extends TextContainerBuilder {
         this.throwIfInvalidPrism(prism);
         this.validate(undefined, undefined, properties);
 
-        const { children, text, style, weight } = properties;
+        let { children, text } = properties;
 
-        const finalText  = text ? text : this._getText(children);
+        if (text === undefined) {
+            text = this._getText(children);
+        }
+        
+        const { style, weight } = properties;
+
         const fontStyle  = style  === undefined ? DEFAULT_FONT_STYLE  : FontStyle[style];
         const fontWeight = weight === undefined ? DEFAULT_FONT_WEIGHT : FontWeight[weight];
 
-        const element = ui.UiText.Create(prism, finalText, fontStyle, fontWeight);
+        const element = ui.UiText.Create(prism, text, fontStyle, fontWeight);
 
         this._setFont2dResource(prism, element, properties);
 

@@ -65,12 +65,15 @@ export class TextEditBuilder extends TextContainerBuilder {
 
     create(prism, properties) {
         this.throwIfInvalidPrism(prism);
-
         this.validate(undefined, undefined, properties);
 
-        const { children, width, height } = properties;
+        let { children, text } = properties;
 
-        const text = this.getPropertyValue('text', this._getText(children), properties);
+        if (text === undefined) {
+            text = this._getText(children);
+        }
+
+        const { width, height } = properties;
 
         const element = ui.UiTextEdit.Create(prism, text, width, height);
 
