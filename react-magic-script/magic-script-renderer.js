@@ -313,7 +313,6 @@ function removeChild(parentInstance, child) {
 //  parentInstance: Container,
 //  child: Instance | TextInstance
 function removeChildFromContainer(parentInstance, child) {
-  logNotImplemented('removeChildFromContainer');
   console.log(parentInstance);
   console.log(child);
   mxs._nativeFactory.removeChildFromContainer(parentInstance, child);
