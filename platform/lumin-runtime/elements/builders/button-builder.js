@@ -30,9 +30,10 @@ export class ButtonBuilder extends TextContainerBuilder {
         const width = this.getPropertyValue('width', 0.0, properties);
         const height = this.getPropertyValue('height', 0.0, properties);
         const roundness = this.getPropertyValue('roundness', 1.0, properties);
+        const enabled = this.getPropertyValue('enabled', true, properties);
 
         const element = ui.UiButton.Create(prism, text, width, height, roundness);
-
+        element.setEnabled(enabled);
         const unapplied = this.excludeProperties(properties, ['children', 'text', 'width', 'height', 'roundness']);
 
         this.apply(element, undefined, unapplied);
