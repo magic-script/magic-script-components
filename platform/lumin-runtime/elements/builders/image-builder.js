@@ -16,7 +16,7 @@ export class ImageBuilder extends UiNodeBuilder {
 
         this._propertyDescriptors['ui'] = new PrimitiveTypeProperty('ui', 'setIsUI', true, 'boolean');
         this._propertyDescriptors['opaque'] = new PrimitiveTypeProperty('opaque', 'setIsOpaque', true, 'boolean');
-        this._propertyDescriptors['color'] = new ArrayProperty('color', 'setColor', true, 'vec3');
+        this._propertyDescriptors['color'] = new ArrayProperty('color', 'setColor', true, 'vec4');
         this._propertyDescriptors['texCoords'] = new ArrayProperty('texCoords', 'setTexCoords', true, 'vec4');
 
         // Expects Id
@@ -29,7 +29,7 @@ export class ImageBuilder extends UiNodeBuilder {
 
         this.validate(undefined, undefined, properties);
 
-        const { icon, filePath, resourceId, height, width } = properties;
+        const { icon, filePath, resourceId, height, width, color } = properties;
 
         const absolutePath = this.getPropertyValue('absolutePath', false, properties);
         const useFrame = this.getPropertyValue('useFrame', false, properties);
@@ -41,6 +41,8 @@ export class ImageBuilder extends UiNodeBuilder {
             element = ui.UiImage.Create(prism, resourceId, width, height, useFrame);
         } else if (filePath) {
             element = ui.UiImage.Create(prism, filePath, width, height, absolutePath, useFrame);
+        } else if (color) {
+            element = ui.UiImage.Create(prism, 0n, width, height);
         }
 
         const unapplied = this.excludeProperties(properties, ['icon', 'filePath', 'resourceId', 'height', 'width']);
