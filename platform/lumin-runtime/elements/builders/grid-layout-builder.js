@@ -14,9 +14,7 @@ export class GridLayoutBuilder extends PositionalLayoutBuilder {
     }
 
     create(prism, properties) {
-        // TODO(tcuadra): Should LayoutBuilder inherit from UiNodeBuilder?
-        //                Otherwise move prism function up the builder hierarchy
-        // this.throwIfInvalidPrism(prism);
+        this.throwIfInvalidPrism(prism);
 
         const element = ui.UiGridLayout.Create(prism);
 

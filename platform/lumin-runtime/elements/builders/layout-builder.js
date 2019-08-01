@@ -1,9 +1,9 @@
 // Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
 
-import { ElementBuilder } from './element-builder.js';
+import { UiNodeBuilder } from './ui-node-builder.js';
 import { PropertyDescriptor } from '../properties/property-descriptor.js';
 
-export class LayoutBuilder extends ElementBuilder {
+export class LayoutBuilder extends UiNodeBuilder {
 
     update(element, oldProperties, newProperties) {
         // this.throwIfNotInstanceOf(element, ui.UiButton);
