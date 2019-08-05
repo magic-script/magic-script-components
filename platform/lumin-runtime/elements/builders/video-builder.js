@@ -4,8 +4,10 @@ import { ViewMode as luminViewMode } from 'lumin';
 
 import { QuadBuilder } from './quad-builder.js';
 
+import { EnumProperty } from '../properties/enum-property.js';
 import { PrimitiveTypeProperty } from '../properties/primitive-type-property.js';
 import { ViewMode } from '../../types/view-mode.js';
+import { VideoAction } from '../../types/video-action.js';
 
 const DEFAULT_FRAME_WIDTH = 512;
 const DEFAULT_FRAME_HEIGHT = 512;
@@ -20,6 +22,8 @@ export class VideoBuilder extends QuadBuilder {
         this._propertyDescriptors['videoPath'] = new PrimitiveTypeProperty('videoPath', 'setVideoPath', true, 'string');
         this._propertyDescriptors['videoUri'] = new PrimitiveTypeProperty('videoUri', 'setVideoUri', true, 'string');
         this._propertyDescriptors['volume'] = new PrimitiveTypeProperty('volume', 'setVolume', true, 'number');
+        this._propertyDescriptors['seekTo'] = new PrimitiveTypeProperty('seekTo', 'seekTo', true, 'number');
+        this._propertyDescriptors['action'] = new EnumProperty('action', 'setAction', false, VideoAction, 'VideoAction');
     }
 
     create(prism, properties) {
@@ -48,24 +52,31 @@ export class VideoBuilder extends QuadBuilder {
     }
 
     update(element, oldProperties, newProperties) {
-        // this.throwIfNotInstanceOf(element, RenderNode);
         super.update(element, oldProperties, newProperties);
 
         this.setLooping(element, oldProperties, newProperties)
     }
 
-    // validate(element, oldProperties, newProperties) {
-    //     super.validate(element, oldProperties, newProperties);
-
-    //     // PropertyDescriptor.throwIfNotTypeOf(newProperties.width, 'number');
-    //     // PropertyDescriptor.throwIfNotTypeOf(newProperties.height, 'number');
-    //     // PropertyDescriptor.throwIfNotTypeOf(newProperties.roundness, 'number');
-    // }
-
     setLooping(element, oldProperties, newProperties) {
         const looping = newProperties.looping;
         if ( looping !== undefined ) {
             element.setLooping(looping ? 1 : 0);
+        }
+    }
+
+    setAction(element, oldProperties, newProperties) {
+        const action = newProperties.action;
+
+        if (action === undefined) {
+            return
+        }
+
+        if (VideoAction[action] === VideoAction.start) {
+            element.start();
+        } else if (VideoAction[action] === VideoAction.stop) {
+            element.stop();
+        } else if (VideoAction[action] === VideoAction.pause) {
+            element.pause();
         }
     }
 }

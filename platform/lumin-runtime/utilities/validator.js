@@ -34,6 +34,7 @@ import { TextEntryMode } from '../types/text-entry-mode.js';
 import { TextureType } from '../types/texture-type.js';
 import { TimeFormat } from '../types/time-format.js';
 import { ToggleType } from '../types/toggle-type.js';
+import { VideoAction } from '../types/video-action.js';
 import { ViewMode } from '../types/view-mode.js';
 
 function validate(value, enumSet) {
@@ -60,7 +61,7 @@ export const validator = {
     validateHandGestureKeypointName: value => validate(value, HandGestureKeypointName),
     validateLabelDisplayMode: value => validate(value, LabelDisplayMode),
     validateLightType: value => validate(value, LightType),
-    validateLoadinSpinnerType: value => validate(value, LoadingSpinnerType),
+    validateLoadingSpinnerType: value => validate(value, LoadingSpinnerType),
     validatePanelEdgeConstraintLevel: value => validate(value, PanelEdgeConstraintLevel),
     validatePanelCursorTransitionType: value => validate(value, PanelCursorTransitionType),
     validatePortalIconSize: value => validate(value, PortalIconSize),
@@ -76,5 +77,6 @@ export const validator = {
     validateTextEntryMode: value => validate(value, TextEntryMode),
     validateTimeFormat: value => (typeof value === 'string') && TimeFormat.includes(value),
     validateToggleType: value => validate(value, ToggleType),
+    validateVideoAction: value => validate(value, VideoAction),
     validateViewMode: value => validate(value, ViewMode)
 }
