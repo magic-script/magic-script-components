@@ -1,10 +1,10 @@
 // Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
 
-import { TransformBuilder } from './transform-builder.js';
+import { RenderBuilder } from './render-builder.js';
 import { ArrayProperty } from '../properties/array-property.js'
 import { PropertyDescriptor } from '../properties/property-descriptor.js';
 
-export class LineBuilder extends TransformBuilder {
+export class LineBuilder extends RenderBuilder {
     constructor(){
         super();
 
