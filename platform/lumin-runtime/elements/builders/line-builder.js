@@ -1,17 +1,13 @@
 // Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
 
-import { SpatialSoundSendLevels, SpatialSoundDistanceProperties, SpatialSoundRadiationProperties } from 'lumin';
-
-import { TransformBuilder } from './transform-builder.js';
+import { RenderBuilder } from './render-builder.js';
 import { ArrayProperty } from '../properties/array-property.js'
-import { PrimitiveTypeProperty } from '../properties/primitive-type-property.js';
 import { PropertyDescriptor } from '../properties/property-descriptor.js';
 
-export class LineBuilder extends TransformBuilder {
+export class LineBuilder extends RenderBuilder {
     constructor(){
         super();
 
-        this._propertyDescriptors['clear'] = new PrimitiveTypeProperty('clear', 'setClear', false, 'boolean');
         this._propertyDescriptors['points'] = new ArrayProperty('points', 'setPoints', false);
     }
 
@@ -25,16 +21,11 @@ export class LineBuilder extends TransformBuilder {
         return element;
     }
 
-    setClear(element, oldProperties, newProperties) {
-        const clear = newProperties.clear;
-        if ( clear !== undefined && typeof clear === 'boolean' && clear === true ) {
-            element.clearPoints();
-        }
-    }
-
     setPoints(element, oldProperties, newProperties) {
+        element.clearPoints();
+
         const points = newProperties.points;
-        if ( points != undefined && Array.isArray(points) ) {
+        if ( points !== undefined && Array.isArray(points) ) {
             points.forEach( point => {
                 PropertyDescriptor.throwIfNotArray(point, 'vec3');
                 element.addPoints(point);
