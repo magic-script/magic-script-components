@@ -9,8 +9,8 @@ import { PropertyDescriptor } from '../properties/property-descriptor.js';
 export class ColorPickerBuilder extends UiNodeBuilder {
     constructor(){
         super();
-        
-        this._propertyDescriptors['color'] = new ArrayProperty('color', 'setColor', true, 'vec3');
+
+        this._propertyDescriptors['color'] = new ArrayProperty('color', 'setColor', true, 'vec4');
     }
 
     create(prism, properties) {
@@ -30,14 +30,9 @@ export class ColorPickerBuilder extends UiNodeBuilder {
         return element;
     }
 
-    // update(element, oldProperties, newProperties) {
-    //     // this.throwIfNotInstanceOf(element, ui.UiImage);
-    //     super.update(element, oldProperties, newProperties);
-    // }
-
     validate(element, oldProperties, newProperties) {
         super.validate(element, oldProperties, newProperties);
 
-        PropertyDescriptor.throwIfNotTypeOf(properties.height, 'number');
+        PropertyDescriptor.throwIfNotTypeOf(newProperties.height, 'number');
     }
 }
