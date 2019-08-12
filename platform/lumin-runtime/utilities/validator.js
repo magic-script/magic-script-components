@@ -4,6 +4,7 @@ import { Prism } from 'lumin';
 
 import { AdvanceDirection } from '../types/advance-direction.js';
 import { Alignment } from '../types/alignment.js';
+import { AudioAction } from '../types/audio-action.js';
 import { CursorEdgeScrollMode } from '../types/cursor-edge-scroll-mode.js';
 import { CursorHoverState } from '../types/cursor-hover-state.js';
 import { DateFormat } from '../types/date-format.js';
@@ -46,6 +47,7 @@ export const validator = {
 
     validateAdvanceDirection: value => validate(value, AdvanceDirection),
     validateAlignment: value => validate(value, Alignment),
+    validateAudioAction: value => validate(value, AudioAction),
     validateCursorEdgeScrollMode: value => validate(value, CursorEdgeScrollMode),
     validateCursorHoverState: value => validate(value, CursorHoverState),
     validateDateFormat: value => (typeof value === 'string') && DateFormat.includes(value),
