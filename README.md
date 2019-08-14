@@ -66,6 +66,7 @@ export default {
 
 ```
 import React from 'react';
+import { View, Text, Button } from 'magic-script-components';
 
 export class MyApp extends React.Component {
   constructor(props) {
