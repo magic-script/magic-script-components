@@ -5,13 +5,17 @@
 MagicScript Component Framework
 
 ## Prerequisites
+
 1. Install `magic-script-cli` :
+
 - `npm install -g magic-script-cli`
 
 2. Create new MagicScript application :
+
 - `magic-script init <app-name> <com.app.name>`
 
 3. Install the required `npm` packages from the app folder:
+
 - `npm install`
 
 ## Configuration steps
@@ -77,10 +81,10 @@ export class MyApp extends React.Component {
 
   render() {
     return (
-      <view name='main-view'>
-        <text textSize={0.10} textColor={[0.1, 1, 0.1, 0.84]} localPosition={[0, 0.25, 0]}>{this.state.counter}</text>
-        <button width={0.25} height={0.15} roundness={0.5} onClick={this.onButtonClick}>+</button>
-      </view>
+      <View name='main-view'>
+        <Text textSize={0.10} textColor={[0.1, 1, 0.1, 0.84]} localPosition={[0, 0.25, 0]}>{this.state.counter}</Text>
+        <Button width={0.25} height={0.15} roundness={0.5} onClick={this.onButtonClick}>+</Button>
+      </View>
     );
   }
 }
