@@ -4,14 +4,14 @@
   "description": "MagicScript Component Framework",
   "module": "index.js",
   "dependencies": {
-    "react": "^16.8.6",
-    "react-reconciler": "^0.20.4"
+    "react": "^16.9.0",
+    "react-reconciler": "^0.21.0"
   },
   "peerDependencies": {
-    "@babel/core": "^7.4.5",
+    "@babel/core": "^7.5.5",
     "@babel/plugin-transform-react-jsx": "^7.3.0",
-    "@babel/plugin-proposal-class-properties": "^7.4.4",
-    "rollup-plugin-babel": "^4.3.2"
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "rollup-plugin-babel": "^4.3.3"
   },
   "repository": {
     "type": "git",
