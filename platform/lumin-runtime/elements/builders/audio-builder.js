@@ -5,12 +5,16 @@ import { SpatialSoundSendLevels, SpatialSoundDistanceProperties, SpatialSoundRad
 import { TransformBuilder } from './transform-builder.js';
 import { ArrayProperty } from '../properties/array-property.js'
 import { ClassProperty } from '../properties/class-property.js';
+import { EnumProperty } from '../properties/enum-property.js';
 import { PrimitiveTypeProperty } from '../properties/primitive-type-property.js';
+
+import { AudioAction } from '../../types/audio-action.js';
 
 export class AudioBuilder extends TransformBuilder {
     constructor(){
         super();
 
+        this._propertyDescriptors['action'] = new EnumProperty('action', 'setAction', false, AudioAction, 'AudioAction');
         this._propertyDescriptors['soundLooping'] = new PrimitiveTypeProperty('soundLooping', 'setSoundLooping', true, 'boolean');
         this._propertyDescriptors['soundMute'] = new PrimitiveTypeProperty('soundMute', 'setSoundMute', true, 'boolean');
         this._propertyDescriptors['soundPitch'] = new PrimitiveTypeProperty('soundPitch', 'setSoundPitch', true, 'number');
@@ -213,6 +217,24 @@ export class AudioBuilder extends TransformBuilder {
 
         if ( channel !== undefined && channelSendlevels !== undefined ) {
             element.setSpatialSoundRoomSendLevels(channel, channelSendlevels);
+        }
+    }
+
+    setAction(element, oldProperties, newProperties) {
+        const action = newProperties.action;
+
+        if (action === undefined) {
+            return
+        }
+
+        if (AudioAction[action] === AudioAction.start) {
+            element.startSound();
+        } else if (AudioAction[action] === VideoAction.stop) {
+            element.stopSound();
+        } else if (AudioAction[action] === VideoAction.pause) {
+            element.pauseSound();
+        } else if (AudioAction[action] === VideoAction.resume) {
+            element.resumeSound();
         }
     }
 }
