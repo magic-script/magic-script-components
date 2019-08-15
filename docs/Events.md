@@ -1,4 +1,6 @@
-### Common Events for the Ui elements
+# Events
+
+## Common Events for the Ui elements
 
 - onActivate
 - onPressed

@@ -1,8 +1,14 @@
-## UiButton
+# Button
 
-### Tag: `<button>`
+## Tag: `<Button>`
 
-### Create Properties
+- #### Lumin Runtime native component - UiButton
+
+## [Common Events](../Events.md)
+
+## [Common Properties](../Properties.md)
+
+## Create Properties
 
 | Name   | Type   | Default Value | LRT Name | LRT type |
 | ------ | ------ | :-----------: | -------- | -------- |
@@ -10,7 +16,7 @@
 | width  | number |      n/a      |          | number   |
 | height | number |      n/a      |          | number   |
 
-### Element Properties
+## Element Properties
 
 | Name      | Type   | LRT Name  | LRT type |
 | :-------- | :----- | :-------- | :------- |

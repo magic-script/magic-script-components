@@ -1,8 +1,8 @@
-### Properties
+# Properties
 
 > Properties without _`Default Value`_ are required !
 
-### Common Properties
+## Common Properties
 
 | Name      | Type    | Default Value  | LRT Name       | LRT type |
 | :-------- | :------ | :------------: | :------------- | :------- |
@@ -13,7 +13,7 @@
 | transform | mat4    |                | LocalTransform | mat4     |
 | visible   | boolean |      true      | Visible        | boolean  |
 
-### Common Properties for Ui elements
+## Common Properties for UI elements
 
 | Name      | Type    | Default Value | LRT Name  | LRT type        |
 | :-------- | :------ | :-----------: | :-------- | :-------------- |
