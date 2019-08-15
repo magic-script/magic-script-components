@@ -1,8 +1,16 @@
 {
   "name": "magic-script-components",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MagicScript Component Framework",
   "module": "index.js",
+  "files": [
+    "core",
+    "platform",
+    "react-magic-script",
+    "components.js",
+    "configuration.js",
+    "index.js"
+  ],
   "dependencies": {
     "react": "^16.9.0",
     "react-reconciler": "^0.21.0"
