@@ -1,8 +1,14 @@
-## UiImage
+# Image
 
-### Tag: `<image>`
+## Tag: `<Image>`
 
-### Create Properties
+- #### Lumin Runtime native component - UiImage
+
+## [Common Events](../Events.md)
+
+## [Common Properties](../Properties.md)
+
+## Create Properties
 
 > Image offers 3 constructors accepting different property sets
 
@@ -30,7 +36,7 @@
 | icon   | string |      n/a      | Type     | lumin.ui.SystemIcon |
 | height | number |      n/a      | Height   | number              |
 
-### Element Properties
+## Element Properties
 
 | Name               | Type    | LRT Name           | LRT type |
 | :----------------- | :------ | :----------------- | :------- |

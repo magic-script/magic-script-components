@@ -1,15 +1,21 @@
-## UiScrollBar
+# ScrollBar
 
-### Tag: `<scrollBar>`
+## Tag: `<ScrollBar>`
 
-### Create Properties
+- #### Lumin Runtime native component - UiScrollBar
+
+## [Common Events](../Events.md)
+
+## [Common Properties](../Properties.md)
+
+## Create Properties
 
 | Name   | Type   | Default Value | LRT Name | LRT type |
 | ------ | ------ | :-----------: | -------- | -------- |
 | width  | number |      n/a      | Width    | number   |
 | height | number |       0       | Height   | number   |
 
-### Element Properties
+## Element Properties
 
 | Name          | Type   | LRT Name      | LRT type             |
 | :------------ | :----- | :------------ | :------------------- |

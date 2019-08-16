@@ -1,8 +1,14 @@
-## VideoNode
+# Video
 
-### Tag: `<video>`
+## Tag: `<Video>`
 
-### Properties
+- #### Lumin Runtime native component - VideoNode
+
+## [Common Events](../Events.md)
+
+## [Common Properties](../Properties.md)
+
+## Properties
 
 | Name      | Type   | Default Value | LRT Name | LRT type       |
 | --------- | ------ | :-----------: | -------- | -------------- |

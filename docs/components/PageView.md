@@ -1,8 +1,14 @@
-## UiPageView
+# PageView
 
-### Tag: `<pageView>`
+## Tag: `<PageView>`
 
-### Properties
+- #### Lumin Runtime native component - UiPageView
+
+## [Common Events](../Events.md)
+
+## [Common Properties](../Properties.md)
+
+## Properties
 
 | Name   | Type   | Default Value | LRT Name | LRT type |
 | ------ | ------ | :-----------: | -------- | -------- |

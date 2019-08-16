@@ -1,8 +1,14 @@
-## UiTextEdit
+# TextEdit
 
-### Tag: `<textEdit>`
+## Tag: `<TextEdit>`
 
-### Create Properties
+- #### Lumin Runtime native component - UiTextEdit
+
+## [Common Events](../Events.md)
+
+## [Common Properties](../Properties.md)
+
+## Create Properties
 
 | Name   | Type   | Default Value | LRT Name | LRT type |
 | ------ | ------ | :-----------: | -------- | -------- |
@@ -10,7 +16,7 @@
 | width  | number |      n/a      | Width    | number   |
 | height | number |      n/a      | Height   | number   |
 
-### Element Properties
+## Element Properties
 
 | Name                 | Type     | LRT Name             | LRT type                         |
 | :------------------- | :------- | :------------------- | :------------------------------- |
@@ -38,7 +44,7 @@
 | textSize             | number   | TextSize             | number                           |
 | fontParams           | _object_ | FontParams           | lumin.ui.FontParams              |
 
-#### fontParameters
+### fontParameters
 
 ```
 {

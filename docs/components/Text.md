@@ -1,8 +1,14 @@
-## UiText
+# Text
 
-### Tag: `<text>`
+## Tag: `<Text>`
 
-### Create Properties
+- #### Lumin Runtime native component - UiText
+
+## [Common Events](../Events.md)
+
+## [Common Properties](../Properties.md)
+
+## Create Properties
 
 | Name   | Type   | Default Value | LRT Name | LRT type                   |
 | :----- | :----- | :-----------: | :------- | :------------------------- |
@@ -12,7 +18,7 @@
 
 If `text` is empty, the content of the `<text>` tag will be used as text.
 
-### Element Properties
+## Element Properties
 
 | Name           | Type     | LRT Name         | LRT type                         |
 | :------------- | :------- | :--------------- | :------------------------------- |
@@ -29,7 +35,7 @@ If `text` is empty, the content of the `<text>` tag will be used as text.
 | boundsSize     | _object_ | BoundsSize       | _multiple parameters_            |
 | fontParameters | _object_ | FontParameters   | lumin.ui.FontParams              |
 
-#### boundsSize
+### boundsSize
 
 ```
 {
@@ -38,7 +44,7 @@ If `text` is empty, the content of the `<text>` tag will be used as text.
 }
 ```
 
-#### fontParameters
+### fontParameters
 
 ```
 {

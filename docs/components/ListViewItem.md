@@ -1,5 +1,7 @@
-## UiListViewItem
+# ListViewItem
 
-### Tag: `<listViewItem>`
+## Tag: `<ListViewItem>`
 
-### Properties: has no properties !
+- #### Lumin Runtime native component - UiListViewItem
+
+## Properties: has no properties !

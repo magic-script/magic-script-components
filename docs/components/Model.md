@@ -1,8 +1,14 @@
-## ModelNode
+# Model
 
-### Tag: `<model>`
+## Tag: `<Model>`
 
-### Properties
+- #### Lumin Runtime native component - ModelNode
+
+## [Common Events](../Events.md)
+
+## [Common Properties](../Properties.md)
+
+## Properties
 
 | Name         | Type   | Default Value | LRT Name | LRT type |
 | ------------ | ------ | :-----------: | -------- | -------- |
