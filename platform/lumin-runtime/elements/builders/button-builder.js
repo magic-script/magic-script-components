@@ -8,7 +8,7 @@ import { PrimitiveTypeProperty } from '../properties/primitive-type-property.js'
 import { PropertyDescriptor } from '../properties/property-descriptor.js';
 
 import { EclipseButtonType } from '../../types/eclipse-button-type.js';
-import { SystemIcon } from '../../types/system-icons.js';
+import { SystemIcons } from '../../types/system-icons.js';
 import { Side } from '../../types/side.js';
 import { validator } from '../../utilities/validator.js';
 
@@ -56,18 +56,13 @@ export class ButtonBuilder extends TextContainerBuilder {
         PropertyDescriptor.throwIfNotTypeOf(newProperties.roundness, 'number');
         PropertyDescriptor.throwIfNotTypeOf(newProperties.iconPath, 'string');
 
-        const buttonType = newProperties.type;
-        const message = `The provided button type ${buttonType} is not a valid value`;
-        PropertyDescriptor.throwIfPredicateFails(buttonType, message, validator.validateEclipseButtonType);
+        this._validateEnumerationValue(newProperties.type, 'button type', validator.validateEclipseButtonType);
+        this._validateEnumerationValue(newProperties.iconType, 'icon type', validator.validateSystemIcon);
+        this._validateEnumerationValue(newProperties.labelSide, 'label side', validator.validateSide);
+    }
 
-        const iconType = newProperties.iconType;
-        const message = `The provided icon type ${iconType} is not a valid value`;
-        PropertyDescriptor.throwIfPredicateFails(iconType, message, validator.validateSystemIcon);
-
-        const labelSide = newProperties.labelSide;
-        const message = `The provided label side ${labelSide} is not a valid value`;
-        PropertyDescriptor.throwIfPredicateFails(labelSide, message, validator.validateSide);
-
+    _validateEnumerationValue(value, messageSubject, predicate) {
+        PropertyDescriptor.throwIfPredicateFails(value, `The provided ${messageSubject} ${value} is not a valid value`, predicate);
     }
 
     getText(children, text) {
@@ -80,7 +75,7 @@ export class ButtonBuilder extends TextContainerBuilder {
 
         // 1. EclipseButtonParams(type, iconPath, text, labelSide, height, iconType)
         if (type !== undefined && iconPath !== undefined && text !== undefined && labelSide !== undefined && height !== undefined && iconType !== undefined) {
-            return new ui.EclipseButtonParams(EclipseButtonType[type], iconPath, text, Side[labelSide], height, SystemIcon[iconType]);
+            return new ui.EclipseButtonParams(EclipseButtonType[type], iconPath, text, Side[labelSide], height, SystemIcons[iconType]);
         }
 
         // 2. EclipseButtonParams(type, iconPath, text, labelSide, height)
@@ -105,7 +100,7 @@ export class ButtonBuilder extends TextContainerBuilder {
 
         // 6. EclipseButtonParams(type, iconType, height)
         if (type !== undefined && iconType !== undefined && height !== undefined) {
-            return new ui.EclipseButtonParams(EclipseButtonType[type], SystemIcon[iconType], height);
+            return new ui.EclipseButtonParams(EclipseButtonType[type], SystemIcons[iconType], height);
         }
 
         // 7. EclipseButtonParams(type)
