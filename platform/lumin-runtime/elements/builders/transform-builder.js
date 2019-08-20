@@ -35,10 +35,10 @@ export class TransformBuilder extends ElementBuilder {
         this.validate(undefined, undefined, properties);
 
         const defaultTransform = [
-            [1, 0, 0, 0],
-            [0, 1, 0, 0],
-            [0, 0, 1, 0],
-            [0, 0, 0, 1]
+            1, 0, 0, 0,
+            0, 1, 0, 0,
+            0, 0, 1, 0,
+            0, 0, 0, 1
         ];
 
         const localTransform = this.getPropertyValue('localTransform', defaultTransform, properties);
