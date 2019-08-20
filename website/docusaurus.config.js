@@ -7,7 +7,7 @@
 
 module.exports = {
   title: "MagicScript Components",
-  tagline: "MagicScript Components Framework",
+  tagline: "Framework to build mixed reality applications with React, Declarative Elements and JavaScript",
   url: "https://components.magicscript.org/",
   baseUrl: "/",
   favicon: "img/favicon.png",
@@ -31,10 +31,6 @@ module.exports = {
     },
     footer: {
       style: "dark",
-      logo: {
-        alt: "Magic Leap Logo",
-        src: "https://docusaurus.io/img/oss_logo.png"
-      },
       copyright: `Copyright © ${new Date().getFullYear()} Magic Leap, Inc.`
     }
   },
