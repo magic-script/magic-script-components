@@ -10,7 +10,7 @@ module.exports = {
   tagline: "MagicScript Components Framework",
   url: "https://components.magicscript.org/",
   baseUrl: "/",
-  favicon: "img/favicon.ico",
+  favicon: "img/favicon.png",
   organizationName: "magic-script", // Usually your GitHub org/user name.
   projectName: "magic-script-components", // Usually your repo name.
   themeConfig: {
