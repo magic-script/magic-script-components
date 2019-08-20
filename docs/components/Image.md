@@ -1,4 +1,7 @@
-# Image
+---
+id: image
+title: Image
+---
 
 ## Tag: `<Image>`
 

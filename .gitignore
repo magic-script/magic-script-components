@@ -11,3 +11,7 @@
 package-lock.json
 *.tgz
 /package/
+
+# Yarn
+#
+yarn.lock

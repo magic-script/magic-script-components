@@ -1,4 +1,7 @@
-# PageView
+---
+id: pageview
+title: PageView
+---
 
 ## Tag: `<PageView>`
 

@@ -1,4 +1,7 @@
-# Model
+---
+id: model
+title: Model
+---
 
 ## Tag: `<Model>`
 

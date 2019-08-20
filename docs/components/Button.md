@@ -1,4 +1,7 @@
-# Button
+---
+id: button
+title: Button
+---
 
 ## Tag: `<Button>`
 

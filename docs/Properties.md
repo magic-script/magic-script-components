@@ -1,4 +1,7 @@
-# Properties
+---
+id: properties
+title: Properties
+---
 
 > Properties without _`Default Value`_ are required !
 

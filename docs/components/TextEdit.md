@@ -1,4 +1,7 @@
-# TextEdit
+---
+id: textedit
+title: TextEdit
+---
 
 ## Tag: `<TextEdit>`
 

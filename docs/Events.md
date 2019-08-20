@@ -1,4 +1,7 @@
-# Events
+---
+id: events
+title: Events
+---
 
 ## Common Events for the Ui elements
 

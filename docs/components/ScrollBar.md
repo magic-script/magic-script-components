@@ -1,4 +1,7 @@
-# ScrollBar
+---
+id: scrollbar
+title: ScrollBar
+---
 
 ## Tag: `<ScrollBar>`
 

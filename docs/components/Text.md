@@ -1,4 +1,7 @@
-# Text
+---
+id: text
+title: Text
+---
 
 ## Tag: `<Text>`
 

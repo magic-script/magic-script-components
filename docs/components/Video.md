@@ -1,4 +1,7 @@
-# Video
+---
+id: video
+title: Video
+---
 
 ## Tag: `<Video>`
 
