@@ -21,7 +21,7 @@ module.exports = {
         src: "img/logo.svg"
       },
       links: [
-        { to: "docs/doc1", label: "Docs", position: "left" },
+        { to: "docs/components", label: "Docs", position: "left" },
         {
           href: "https://github.com/facebook/docusaurus",
           label: "GitHub",
@@ -43,6 +43,7 @@ module.exports = {
       "@docusaurus/preset-classic",
       {
         docs: {
+          path: "../docs",
           sidebarPath: require.resolve("./sidebars.js")
         },
         theme: {
