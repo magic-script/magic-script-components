@@ -6,24 +6,24 @@
  */
 
 module.exports = {
-  title: "My Site",
-  tagline: "The tagline of my site",
-  url: "https://your-docusaurus-test-site.com",
+  title: "MagicScript Components",
+  tagline: "MagicScript Components Framework",
+  url: "https://components.magicscript.org/",
   baseUrl: "/",
   favicon: "img/favicon.ico",
-  organizationName: "facebook", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  organizationName: "magic-script", // Usually your GitHub org/user name.
+  projectName: "magic-script-components", // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: "My Site",
+      title: "MagicScript",
       logo: {
-        alt: "My Site Logo",
+        alt: "MagicScript Logo",
         src: "img/logo.svg"
       },
       links: [
         { to: "docs/components", label: "Docs", position: "left" },
         {
-          href: "https://github.com/facebook/docusaurus",
+          href: "https://github.com/magic-script/magic-script-components",
           label: "GitHub",
           position: "right"
         }
@@ -32,10 +32,10 @@ module.exports = {
     footer: {
       style: "dark",
       logo: {
-        alt: "Facebook Open Source Logo",
+        alt: "Magic Leap Logo",
         src: "https://docusaurus.io/img/oss_logo.png"
       },
-      copyright: `Copyright © ${new Date().getFullYear()} Facebook, Inc. Built with Docusaurus.`
+      copyright: `Copyright © ${new Date().getFullYear()} Magic Leap, Inc.`
     }
   },
   presets: [
