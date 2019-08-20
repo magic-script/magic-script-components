@@ -25,7 +25,7 @@ export class LoadingSpinnerBuilder extends UiNodeBuilder {
         this.validate(undefined, undefined, properties);
 
         const type = LoadingSpinnerType[this.getPropertyValue('type', 'sprite-animation', properties)];
-        const id   = this.getPropertyValue('resourceId', 0, properties);
+        const id   = this.getPropertyValue('resourceId', BigInt(0), properties);
         const path = this.getPropertyValue('resourcePath', '', properties);
         const height = this.getPropertyValue('height', 0, properties);
 
