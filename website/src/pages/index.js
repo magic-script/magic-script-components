@@ -18,7 +18,10 @@ const features = [
     title: <>Simple</>,
     imageUrl: "img/javascript.svg",
     description: (
-      <>Use declarative elements and JavaScript to build applications with less code.</>
+      <>
+        Use declarative elements and JavaScript to build applications with less
+        code.
+      </>
     )
   },
   {
@@ -50,7 +53,7 @@ function Home() {
           <div className={styles.buttons}>
             <Link
               className={classnames(
-                "button button--outline button--secondary button--lg",
+                "button button--secondary button--lg",
                 styles.getStarted
               )}
               to={withBaseUrl("docs/components")}
