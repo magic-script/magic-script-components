@@ -1,4 +1,4 @@
-import configuration from './configuration.js';
+import configuration from './src/configuration.js';
 
 export default {
     _init() {
@@ -53,4 +53,4 @@ export {
     Video,
     View,
     WebView
-} from './components.js'
+} from './src/components.js'
