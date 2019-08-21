@@ -46,7 +46,7 @@
   },
   "jest": {
     "moduleNameMapper": {
-      "lumin": "./src/__mocks__/luminMock.js"
+      "lumin": "./__mocks__/luminMock.js"
     }
   }
 }
