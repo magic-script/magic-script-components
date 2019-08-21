@@ -16,21 +16,21 @@ import styles from "./styles.module.css";
 const features = [
   {
     title: <>Simple</>,
-    imageUrl: "img/undraw_docusaurus_mountain.svg",
+    imageUrl: "img/javascript.svg",
     description: (
-      <>Use declarative elements to build applications with less code.</>
+      <>Use declarative elements and JavaScript to build applications with less code.</>
     )
   },
   {
     title: <>3D Framework</>,
-    imageUrl: "img/undraw_docusaurus_tree.svg",
+    imageUrl: "img/magicscript.svg",
     description: (
       <>Create specialized application front ends for mixed reality and 3D.</>
     )
   },
   {
     title: <>Powered by React</>,
-    imageUrl: "img/undraw_docusaurus_react.svg",
+    imageUrl: "img/react.svg",
     description: <>Make use of built-in state management provided by React.</>
   }
 ];

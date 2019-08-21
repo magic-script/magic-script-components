@@ -7,7 +7,8 @@
 
 module.exports = {
   title: "MagicScript Components",
-  tagline: "Framework to build mixed reality applications with React, Declarative Elements and JavaScript",
+  tagline:
+    "Framework to build mixed reality applications with React, declarative elements and JavaScript",
   url: "https://components.magicscript.org/",
   baseUrl: "/",
   favicon: "img/favicon.png",
@@ -18,7 +19,7 @@ module.exports = {
       title: "MagicScript",
       logo: {
         alt: "MagicScript Logo",
-        src: "img/logo.svg"
+        src: "img/magicscript.svg"
       },
       links: [
         { to: "docs/components", label: "Docs", position: "left" },
