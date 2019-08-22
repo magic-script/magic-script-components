@@ -12,7 +12,10 @@
     "index.js"
   ],
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "docs:start": "cd website && npm install && npm run start",
+    "docs:build": "cd website && npm install && npm run build",
+    "docs:deploy": "cd website && npm install && npm run deploy"
   },
   "repository": {
     "type": "git",
