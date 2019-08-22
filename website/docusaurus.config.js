@@ -9,7 +9,7 @@ module.exports = {
   title: "MagicScript Components",
   tagline:
     "Framework to build mixed reality applications with React, declarative elements and JavaScript",
-  url: "https://components.magicscript.org/",
+  url: "http://www.magicscript.org/magic-script-components/",
   baseUrl: "/",
   favicon: "img/favicon.png",
   organizationName: "magic-script", // Usually your GitHub org/user name.
