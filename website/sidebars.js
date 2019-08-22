@@ -7,6 +7,18 @@
 
 module.exports = {
   docs: {
-    Main: ["components", "events", "properties"]
+    Main: ["components", "events", "properties"],
+    Components: [
+      "components/button",
+      "components/image",
+      "components/listview",
+      "components/listviewitem",
+      "components/model",
+      "components/pageview",
+      "components/scrollbar",
+      "components/text",
+      "components/textedit",
+      "components/video"
+    ]
   }
 };
