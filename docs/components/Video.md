@@ -37,3 +37,24 @@ title: Video
 - pause
 - start
 - stop
+
+## Video EventData
+| Name      | Type   | Description |
+| --------- | ------ | :---------- |
+| AffectedNodeId | BigInt | The ID of the VideoNode that was affected.
+| XPos | number | *based on event type |
+| YPos | number | *based on event type |
+| VideoEventType | string |  Video event type |
+
+### VideoEventType values, XPos & YPos purpose:
+- buffering-update:
+    X is the buffering percent, Y is unused
+- completion
+- error:
+    X is the type of fatal error, Y is the MediaError code
+- info:
+    X is the info or warning code, Y is an info code to provide more details
+- prepared
+- seek-complete
+- video-size-changed:
+    X is width, Y is height
