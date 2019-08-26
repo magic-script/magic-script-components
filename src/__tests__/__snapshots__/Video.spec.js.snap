@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Video component Matches the snapshot 1`] = `
+<video
+  videoPath="test_file.mp4"
+/>
+`;
