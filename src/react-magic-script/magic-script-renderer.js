@@ -1,7 +1,7 @@
 // Copyright (c) 2019 Magic Leap, Inc. All Rights Reserved
 
 import Reconciler from 'react-reconciler';
-import mxs from '../index.js';
+import mxs from '../../index.js';
 
 // Flow type definitions ------------------------------------------------------
 //  Type = string;
