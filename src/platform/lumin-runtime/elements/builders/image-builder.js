@@ -42,7 +42,7 @@ export class ImageBuilder extends UiNodeBuilder {
         } else if (filePath) {
             element = ui.UiImage.Create(prism, filePath, width, height, absolutePath, useFrame);
         } else if (color) {
-            element = ui.UiImage.Create(prism, 0n, width, height, useFrame);
+            element = ui.UiImage.Create(prism, BigInt(0), width, height, useFrame);
         }
 
         const unapplied = this.excludeProperties(properties, ['icon', 'filePath', 'resourceId', 'height', 'width']);
