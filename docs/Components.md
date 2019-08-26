@@ -7,7 +7,7 @@ title: MagicScript Components
 
 | Order | Component                                  | Lumin RT<br/>native component | Lumin OS   | iOS | Android |
 | ----- | ------------------------------------------ | ----------------------------- | ---------- | --- | ------- |
-| 1     | Audio                                      | AudioNode                     | :thumbsup: |
+| 1     | [Audio](components/Audio.md)               | AudioNode                     | :thumbsup: |
 | 2     | [Button](components/Button.md)             | UiButton                      | :thumbsup: |
 | 3     | CircleConfirmation                         | UiCircleConfirmation          | :thumbsup: |
 | 4     | ColorPicker                                | UiColorPicker                 | :thumbsup: |

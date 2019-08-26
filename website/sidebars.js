@@ -9,6 +9,7 @@ module.exports = {
   docs: {
     Main: ["components", "events", "properties"],
     Components: [
+      "components/audio",
       "components/button",
       "components/image",
       "components/listview",
