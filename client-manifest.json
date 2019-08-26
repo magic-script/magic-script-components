@@ -7,15 +7,15 @@
       1,
       2,
       3,
-      33,
-      34,
+      35,
+      36,
       0
     ],
     "1": [
       0,
       2,
-      33,
-      34,
+      35,
+      36,
       1
     ],
     "@site/src/pages/index.js": [
@@ -27,113 +27,119 @@
       0,
       3
     ],
-    "@site/../docs/components/Button.md": [
+    "@site/../docs/components/Audio.md": [
       4
     ],
-    "@site/../docs/components/Image.md": [
+    "@site/../docs/components/Button.md": [
       5
     ],
-    "@site/../docs/components/ListView.md": [
+    "@site/../docs/components/Image.md": [
       6
     ],
-    "@site/../docs/components/ListViewItem.md": [
+    "@site/../docs/components/ListView.md": [
       7
     ],
-    "@site/../docs/components/Model.md": [
+    "@site/../docs/components/ListViewItem.md": [
       8
     ],
-    "@site/../docs/components/PageView.md": [
+    "@site/../docs/components/Model.md": [
       9
     ],
-    "@site/../docs/components/ScrollBar.md": [
+    "@site/../docs/components/PageView.md": [
       10
     ],
-    "@site/../docs/components/Text.md": [
+    "@site/../docs/components/ScrollBar.md": [
       11
     ],
-    "@site/../docs/components/TextEdit.md": [
+    "@site/../docs/components/Text.md": [
       12
     ],
-    "@site/../docs/components/Video.md": [
+    "@site/../docs/components/TextEdit.md": [
       13
     ],
-    "@site/../docs/Components.md": [
+    "@site/../docs/components/Video.md": [
       14
     ],
-    "@site/../docs/Events.md": [
+    "@site/../docs/Components.md": [
       15
     ],
-    "@site/../docs/Properties.md": [
+    "@site/../docs/Events.md": [
       16
     ],
-    "/Users/lzolotarev/Projects/magic-script-components/website/.docusaurus/docusaurus-plugin-content-docs/docs-b5f.json": [
+    "@site/../docs/Properties.md": [
       17
     ],
-    "main": [
-      32,
+    "/Users/lzolotarev/Projects/magic-script-components/website/.docusaurus/docusaurus-plugin-content-docs/docs-b5f.json": [
       18
     ],
-    "/Users/lzolotarev/Projects/magic-script-components/website/.docusaurus/docusaurus-plugin-content-docs/docs-components-811.json": [
+    "main": [
+      34,
       19
     ],
-    "/Users/lzolotarev/Projects/magic-script-components/website/.docusaurus/docusaurus-plugin-content-docs/docs-components-button-3da.json": [
+    "/Users/lzolotarev/Projects/magic-script-components/website/.docusaurus/docusaurus-plugin-content-docs/docs-components-811.json": [
       20
     ],
-    "/Users/lzolotarev/Projects/magic-script-components/website/.docusaurus/docusaurus-plugin-content-docs/docs-components-image-799.json": [
+    "/Users/lzolotarev/Projects/magic-script-components/website/.docusaurus/docusaurus-plugin-content-docs/docs-components-audio-040.json": [
       21
     ],
-    "/Users/lzolotarev/Projects/magic-script-components/website/.docusaurus/docusaurus-plugin-content-docs/docs-components-listview-c67.json": [
+    "/Users/lzolotarev/Projects/magic-script-components/website/.docusaurus/docusaurus-plugin-content-docs/docs-components-button-3da.json": [
       22
     ],
-    "/Users/lzolotarev/Projects/magic-script-components/website/.docusaurus/docusaurus-plugin-content-docs/docs-components-listviewitem-805.json": [
+    "/Users/lzolotarev/Projects/magic-script-components/website/.docusaurus/docusaurus-plugin-content-docs/docs-components-image-799.json": [
       23
     ],
-    "/Users/lzolotarev/Projects/magic-script-components/website/.docusaurus/docusaurus-plugin-content-docs/docs-components-model-ce3.json": [
+    "/Users/lzolotarev/Projects/magic-script-components/website/.docusaurus/docusaurus-plugin-content-docs/docs-components-listview-c67.json": [
       24
     ],
-    "/Users/lzolotarev/Projects/magic-script-components/website/.docusaurus/docusaurus-plugin-content-docs/docs-components-pageview-42a.json": [
+    "/Users/lzolotarev/Projects/magic-script-components/website/.docusaurus/docusaurus-plugin-content-docs/docs-components-listviewitem-805.json": [
       25
     ],
-    "/Users/lzolotarev/Projects/magic-script-components/website/.docusaurus/docusaurus-plugin-content-docs/docs-components-scrollbar-0bc.json": [
+    "/Users/lzolotarev/Projects/magic-script-components/website/.docusaurus/docusaurus-plugin-content-docs/docs-components-model-ce3.json": [
       26
     ],
-    "/Users/lzolotarev/Projects/magic-script-components/website/.docusaurus/docusaurus-plugin-content-docs/docs-components-textedit-a12.json": [
+    "/Users/lzolotarev/Projects/magic-script-components/website/.docusaurus/docusaurus-plugin-content-docs/docs-components-pageview-42a.json": [
       27
     ],
-    "/Users/lzolotarev/Projects/magic-script-components/website/.docusaurus/docusaurus-plugin-content-docs/docs-components-text-bae.json": [
+    "/Users/lzolotarev/Projects/magic-script-components/website/.docusaurus/docusaurus-plugin-content-docs/docs-components-scrollbar-0bc.json": [
       28
     ],
-    "/Users/lzolotarev/Projects/magic-script-components/website/.docusaurus/docusaurus-plugin-content-docs/docs-components-video-b83.json": [
+    "/Users/lzolotarev/Projects/magic-script-components/website/.docusaurus/docusaurus-plugin-content-docs/docs-components-textedit-a12.json": [
       29
     ],
-    "/Users/lzolotarev/Projects/magic-script-components/website/.docusaurus/docusaurus-plugin-content-docs/docs-events-481.json": [
+    "/Users/lzolotarev/Projects/magic-script-components/website/.docusaurus/docusaurus-plugin-content-docs/docs-components-text-bae.json": [
       30
     ],
-    "/Users/lzolotarev/Projects/magic-script-components/website/.docusaurus/docusaurus-plugin-content-docs/docs-properties-78b.json": [
+    "/Users/lzolotarev/Projects/magic-script-components/website/.docusaurus/docusaurus-plugin-content-docs/docs-components-video-b83.json": [
       31
     ],
-    "runtime~main": [
-      18,
+    "/Users/lzolotarev/Projects/magic-script-components/website/.docusaurus/docusaurus-plugin-content-docs/docs-events-481.json": [
       32
+    ],
+    "/Users/lzolotarev/Projects/magic-script-components/website/.docusaurus/docusaurus-plugin-content-docs/docs-properties-78b.json": [
+      33
+    ],
+    "runtime~main": [
+      19,
+      34
     ],
     "@theme/DocLegacyPage": [
       0,
       1,
-      33
+      35
     ],
     "@theme/NotFound": [
       0,
       1,
-      34
+      36
     ]
   },
   "assets": {
     "0": {
       "js": [
         {
-          "file": "0.058c4a3c0d2bc37f40a4.js",
-          "hash": "5906d2393c7c74b1476b",
-          "publicPath": "/0.058c4a3c0d2bc37f40a4.js"
+          "file": "0.f4e9fbb4eb0fc039e43a.js",
+          "hash": "88b684e3078a32f9bf7d",
+          "publicPath": "/0.f4e9fbb4eb0fc039e43a.js"
         }
       ]
     },
@@ -141,15 +147,15 @@
       "css": [
         {
           "file": "1.196ce05925ea6d776920.css",
-          "hash": "191abe35b330b4472704",
+          "hash": "19bceff244214a32b64b",
           "publicPath": "/1.196ce05925ea6d776920.css"
         }
       ],
       "js": [
         {
-          "file": "1.26e3aa96c2275fd3682b.js",
-          "hash": "191abe35b330b4472704",
-          "publicPath": "/1.26e3aa96c2275fd3682b.js"
+          "file": "1.32aa27fda8ef55a1c319.js",
+          "hash": "19bceff244214a32b64b",
+          "publicPath": "/1.32aa27fda8ef55a1c319.js"
         }
       ]
     },
@@ -157,15 +163,15 @@
       "css": [
         {
           "file": "component---site-src-pages-index-jsc-4-f-f99.4cd38b9258d9b9141dce.css",
-          "hash": "1b75a299cf7777c40699",
+          "hash": "72d18da4e95f84128247",
           "publicPath": "/component---site-src-pages-index-jsc-4-f-f99.4cd38b9258d9b9141dce.css"
         }
       ],
       "js": [
         {
-          "file": "component---site-src-pages-index-jsc-4-f-f99.9a7a261803bd70eb25c4.js",
-          "hash": "1b75a299cf7777c40699",
-          "publicPath": "/component---site-src-pages-index-jsc-4-f-f99.9a7a261803bd70eb25c4.js"
+          "file": "component---site-src-pages-index-jsc-4-f-f99.5fcd4212bf21a68948d3.js",
+          "hash": "72d18da4e95f84128247",
+          "publicPath": "/component---site-src-pages-index-jsc-4-f-f99.5fcd4212bf21a68948d3.js"
         }
       ]
     },
@@ -173,308 +179,326 @@
       "css": [
         {
           "file": "component---theme-doc-legacy-item-031-769.1f1ce10374de019f5d3a.css",
-          "hash": "1bfe56c92fe0a569c9ef",
+          "hash": "67ff7b8eacdd2cb0c460",
           "publicPath": "/component---theme-doc-legacy-item-031-769.1f1ce10374de019f5d3a.css"
         }
       ],
       "js": [
         {
-          "file": "component---theme-doc-legacy-item-031-769.e9d6dbe816406edf78d5.js",
-          "hash": "1bfe56c92fe0a569c9ef",
-          "publicPath": "/component---theme-doc-legacy-item-031-769.e9d6dbe816406edf78d5.js"
+          "file": "component---theme-doc-legacy-item-031-769.981919022887077eb8eb.js",
+          "hash": "67ff7b8eacdd2cb0c460",
+          "publicPath": "/component---theme-doc-legacy-item-031-769.981919022887077eb8eb.js"
         }
       ]
     },
     "4": {
       "js": [
         {
-          "file": "content---docs-components-button-85-d-7e9.ab4c842f6fd279ca99a9.js",
-          "hash": "21ae6112aa4f2b38083e",
-          "publicPath": "/content---docs-components-button-85-d-7e9.ab4c842f6fd279ca99a9.js"
+          "file": "content---docs-components-audiod-4-d-722.155061fe842ac32feff8.js",
+          "hash": "dde6687d274ddcebc984",
+          "publicPath": "/content---docs-components-audiod-4-d-722.155061fe842ac32feff8.js"
         }
       ]
     },
     "5": {
       "js": [
         {
-          "file": "content---docs-components-imagee-99-893.bb10b7c7f3ff344ec71d.js",
-          "hash": "916ab3f5fb4b6b3ef3a3",
-          "publicPath": "/content---docs-components-imagee-99-893.bb10b7c7f3ff344ec71d.js"
+          "file": "content---docs-components-button-85-d-7e9.0138029e90d49bcf05d3.js",
+          "hash": "bdda5b679b492489e3c5",
+          "publicPath": "/content---docs-components-button-85-d-7e9.0138029e90d49bcf05d3.js"
         }
       ]
     },
     "6": {
       "js": [
         {
-          "file": "content---docs-components-listviewb-0-a-8cd.27daa964823af265dcbd.js",
-          "hash": "0c15ee32ace36364361a",
-          "publicPath": "/content---docs-components-listviewb-0-a-8cd.27daa964823af265dcbd.js"
+          "file": "content---docs-components-imagee-99-893.49502e05da95e4baac0d.js",
+          "hash": "2b79db707a5275ebf7a8",
+          "publicPath": "/content---docs-components-imagee-99-893.49502e05da95e4baac0d.js"
         }
       ]
     },
     "7": {
       "js": [
         {
-          "file": "content---docs-components-listviewitem-1-d-1-ee9.829a6c74bf9590d085b1.js",
-          "hash": "6f25a45e034e40b8a528",
-          "publicPath": "/content---docs-components-listviewitem-1-d-1-ee9.829a6c74bf9590d085b1.js"
+          "file": "content---docs-components-listviewb-0-a-8cd.b77d9703df8409e94d7e.js",
+          "hash": "faa1529238fa2a2b2058",
+          "publicPath": "/content---docs-components-listviewb-0-a-8cd.b77d9703df8409e94d7e.js"
         }
       ]
     },
     "8": {
       "js": [
         {
-          "file": "content---docs-components-model-02-f-08f.004b26a0d52e377d20a6.js",
-          "hash": "2a767d4a66c74c528e5c",
-          "publicPath": "/content---docs-components-model-02-f-08f.004b26a0d52e377d20a6.js"
+          "file": "content---docs-components-listviewitem-1-d-1-ee9.ba1201e71b0072a050ad.js",
+          "hash": "b8153cbcd9773d18c8f4",
+          "publicPath": "/content---docs-components-listviewitem-1-d-1-ee9.ba1201e71b0072a050ad.js"
         }
       ]
     },
     "9": {
       "js": [
         {
-          "file": "content---docs-components-pageviewa-6-e-b64.dd53a357a82dedbe3e44.js",
-          "hash": "f382b09da9c0d4672042",
-          "publicPath": "/content---docs-components-pageviewa-6-e-b64.dd53a357a82dedbe3e44.js"
+          "file": "content---docs-components-model-02-f-08f.754f71582339ac0442e3.js",
+          "hash": "1f5784414c762996fc94",
+          "publicPath": "/content---docs-components-model-02-f-08f.754f71582339ac0442e3.js"
         }
       ]
     },
     "10": {
       "js": [
         {
-          "file": "content---docs-components-scrollbar-357-7b4.9d1cd7320663bea218fd.js",
-          "hash": "3d2ae705b457c2758a39",
-          "publicPath": "/content---docs-components-scrollbar-357-7b4.9d1cd7320663bea218fd.js"
+          "file": "content---docs-components-pageviewa-6-e-b64.624bc1706b91b522d3b9.js",
+          "hash": "55af4f03eb00328b434e",
+          "publicPath": "/content---docs-components-pageviewa-6-e-b64.624bc1706b91b522d3b9.js"
         }
       ]
     },
     "11": {
       "js": [
         {
-          "file": "content---docs-components-textdda-774.f571c15746d496d4481c.js",
-          "hash": "e9da6cf45e097947e2ef",
-          "publicPath": "/content---docs-components-textdda-774.f571c15746d496d4481c.js"
+          "file": "content---docs-components-scrollbar-357-7b4.337056d20d6ff3a96afa.js",
+          "hash": "a99e420de5522c6f9f69",
+          "publicPath": "/content---docs-components-scrollbar-357-7b4.337056d20d6ff3a96afa.js"
         }
       ]
     },
     "12": {
       "js": [
         {
-          "file": "content---docs-components-texteditd-02-421.ae462a62a26e7c9c38be.js",
-          "hash": "d854517f4c46aeff26e2",
-          "publicPath": "/content---docs-components-texteditd-02-421.ae462a62a26e7c9c38be.js"
+          "file": "content---docs-components-textdda-774.0c30f3478bb8983d3e25.js",
+          "hash": "6deb889bbf5cd6cf4505",
+          "publicPath": "/content---docs-components-textdda-774.0c30f3478bb8983d3e25.js"
         }
       ]
     },
     "13": {
       "js": [
         {
-          "file": "content---docs-components-video-798-611.834ddeb20b65c8ca9fb2.js",
-          "hash": "616467ce4ec0febd0488",
-          "publicPath": "/content---docs-components-video-798-611.834ddeb20b65c8ca9fb2.js"
+          "file": "content---docs-components-texteditd-02-421.deb81b6677d78bbb9b0f.js",
+          "hash": "9153d85214a9b412f6d7",
+          "publicPath": "/content---docs-components-texteditd-02-421.deb81b6677d78bbb9b0f.js"
         }
       ]
     },
     "14": {
       "js": [
         {
-          "file": "content---docs-componentse-66-f8a.dd3da5c1a167afe5cff9.js",
-          "hash": "0b7c3b5201939057612e",
-          "publicPath": "/content---docs-componentse-66-f8a.dd3da5c1a167afe5cff9.js"
+          "file": "content---docs-components-video-798-611.09386a8cf50e75076bf5.js",
+          "hash": "a442db93efc07d386ab5",
+          "publicPath": "/content---docs-components-video-798-611.09386a8cf50e75076bf5.js"
         }
       ]
     },
     "15": {
       "js": [
         {
-          "file": "content---docs-events-7-c-7-e6e.eed03ef5b45b33d16b58.js",
-          "hash": "2b1dd8f7b24dddb27d50",
-          "publicPath": "/content---docs-events-7-c-7-e6e.eed03ef5b45b33d16b58.js"
+          "file": "content---docs-componentse-66-f8a.5d48fe36d7341364f1f7.js",
+          "hash": "fa00b1bb8bc12c6668b0",
+          "publicPath": "/content---docs-componentse-66-f8a.5d48fe36d7341364f1f7.js"
         }
       ]
     },
     "16": {
       "js": [
         {
-          "file": "content---docs-properties-795-13a.8430bf58f44a1ac764cf.js",
-          "hash": "033bfbc7e3c44c7109c0",
-          "publicPath": "/content---docs-properties-795-13a.8430bf58f44a1ac764cf.js"
+          "file": "content---docs-events-7-c-7-e6e.7049f8a7088857624722.js",
+          "hash": "e32570fff6d6a9e18267",
+          "publicPath": "/content---docs-events-7-c-7-e6e.7049f8a7088857624722.js"
         }
       ]
     },
     "17": {
       "js": [
         {
-          "file": "docsMetadata---docs-067-ba9.28a36ba7f989266ccbe0.js",
-          "hash": "14c1e13617d708f0ce9d",
-          "publicPath": "/docsMetadata---docs-067-ba9.28a36ba7f989266ccbe0.js"
+          "file": "content---docs-properties-795-13a.84323e7c135d4a21008f.js",
+          "hash": "28f6798f63885361ea3a",
+          "publicPath": "/content---docs-properties-795-13a.84323e7c135d4a21008f.js"
         }
       ]
     },
     "18": {
+      "js": [
+        {
+          "file": "docsMetadata---docs-067-ba9.74c88679397401f8eb3f.js",
+          "hash": "113e1dbbb87b61018b21",
+          "publicPath": "/docsMetadata---docs-067-ba9.74c88679397401f8eb3f.js"
+        }
+      ]
+    },
+    "19": {
       "css": [
         {
           "file": "main.ed443c1625bb5ff0fc5a.css",
-          "hash": "a1da6f90953b0372e1e4",
+          "hash": "41fa74f309a49430b2a1",
           "publicPath": "/main.ed443c1625bb5ff0fc5a.css"
         }
       ],
       "js": [
         {
-          "file": "main.dba53ce556302299442b.js",
-          "hash": "a1da6f90953b0372e1e4",
-          "publicPath": "/main.dba53ce556302299442b.js"
-        }
-      ]
-    },
-    "19": {
-      "js": [
-        {
-          "file": "metadata---docs-components-717-137.1acc3b73b45b45f469ef.js",
-          "hash": "ccb429d968d7be203fb8",
-          "publicPath": "/metadata---docs-components-717-137.1acc3b73b45b45f469ef.js"
+          "file": "main.2163cb95759534dff233.js",
+          "hash": "41fa74f309a49430b2a1",
+          "publicPath": "/main.2163cb95759534dff233.js"
         }
       ]
     },
     "20": {
       "js": [
         {
-          "file": "metadata---docs-components-buttonb-06-108.114856cf8c5e18317117.js",
-          "hash": "3b1ccd8640a85557221e",
-          "publicPath": "/metadata---docs-components-buttonb-06-108.114856cf8c5e18317117.js"
+          "file": "metadata---docs-components-717-137.e91c7392c2617900d342.js",
+          "hash": "d2e5a437f851af23626e",
+          "publicPath": "/metadata---docs-components-717-137.e91c7392c2617900d342.js"
         }
       ]
     },
     "21": {
       "js": [
         {
-          "file": "metadata---docs-components-image-866-36b.8bd2180fca4da02624de.js",
-          "hash": "42d80b55f4f437d4ce48",
-          "publicPath": "/metadata---docs-components-image-866-36b.8bd2180fca4da02624de.js"
+          "file": "metadata---docs-components-audio-6-a-8-49c.378b50b28b3e38364f88.js",
+          "hash": "f78548d93b0342137e5e",
+          "publicPath": "/metadata---docs-components-audio-6-a-8-49c.378b50b28b3e38364f88.js"
         }
       ]
     },
     "22": {
       "js": [
         {
-          "file": "metadata---docs-components-listviewfed-01b.0df3adf1c2439e7ab39c.js",
-          "hash": "996144ef625109b446c6",
-          "publicPath": "/metadata---docs-components-listviewfed-01b.0df3adf1c2439e7ab39c.js"
+          "file": "metadata---docs-components-buttonb-06-108.fe0e969b1dc02dd1d9b0.js",
+          "hash": "0b3fed863e67bea14d23",
+          "publicPath": "/metadata---docs-components-buttonb-06-108.fe0e969b1dc02dd1d9b0.js"
         }
       ]
     },
     "23": {
       "js": [
         {
-          "file": "metadata---docs-components-listviewitem-149-974.59052e5c9b410597011a.js",
-          "hash": "ef6a73e13ce47e3d2aa8",
-          "publicPath": "/metadata---docs-components-listviewitem-149-974.59052e5c9b410597011a.js"
+          "file": "metadata---docs-components-image-866-36b.e1e6d167e04da2334581.js",
+          "hash": "414c76e4e72997183cba",
+          "publicPath": "/metadata---docs-components-image-866-36b.e1e6d167e04da2334581.js"
         }
       ]
     },
     "24": {
       "js": [
         {
-          "file": "metadata---docs-components-model-668-698.0d52b3c481fa076b22ee.js",
-          "hash": "c1f7f5f0c0b0c3c3a083",
-          "publicPath": "/metadata---docs-components-model-668-698.0d52b3c481fa076b22ee.js"
+          "file": "metadata---docs-components-listviewfed-01b.cf3c3cebce71cf3d9526.js",
+          "hash": "c2350160077a83b37a26",
+          "publicPath": "/metadata---docs-components-listviewfed-01b.cf3c3cebce71cf3d9526.js"
         }
       ]
     },
     "25": {
       "js": [
         {
-          "file": "metadata---docs-components-pageview-618-de5.3f2992d00b27f8e7ca99.js",
-          "hash": "828f568ae3019f1bdd14",
-          "publicPath": "/metadata---docs-components-pageview-618-de5.3f2992d00b27f8e7ca99.js"
+          "file": "metadata---docs-components-listviewitem-149-974.976034a654f1083653e9.js",
+          "hash": "36ba6cc1b8bc498af50a",
+          "publicPath": "/metadata---docs-components-listviewitem-149-974.976034a654f1083653e9.js"
         }
       ]
     },
     "26": {
       "js": [
         {
-          "file": "metadata---docs-components-scrollbarbcf-8f6.52d5d031f9960ef440c9.js",
-          "hash": "60f382cc9ebe668d4b54",
-          "publicPath": "/metadata---docs-components-scrollbarbcf-8f6.52d5d031f9960ef440c9.js"
+          "file": "metadata---docs-components-model-668-698.e116b2727e5963cdbca7.js",
+          "hash": "7dfaeddc9777d83ceb88",
+          "publicPath": "/metadata---docs-components-model-668-698.e116b2727e5963cdbca7.js"
         }
       ]
     },
     "27": {
       "js": [
         {
-          "file": "metadata---docs-components-textedit-436-4a4.af970cce327cca131f24.js",
-          "hash": "25f22db22ebf9e3252de",
-          "publicPath": "/metadata---docs-components-textedit-436-4a4.af970cce327cca131f24.js"
+          "file": "metadata---docs-components-pageview-618-de5.f7b8537e6ec487ce27fc.js",
+          "hash": "90a5bc90d65a15cfe58a",
+          "publicPath": "/metadata---docs-components-pageview-618-de5.f7b8537e6ec487ce27fc.js"
         }
       ]
     },
     "28": {
       "js": [
         {
-          "file": "metadata---docs-components-textee-9-5c0.7ab0d315ac7f5f76d0d5.js",
-          "hash": "716a4356a9376a74181f",
-          "publicPath": "/metadata---docs-components-textee-9-5c0.7ab0d315ac7f5f76d0d5.js"
+          "file": "metadata---docs-components-scrollbarbcf-8f6.65e61a15ce976ae57835.js",
+          "hash": "2c39e5084d098fe768f1",
+          "publicPath": "/metadata---docs-components-scrollbarbcf-8f6.65e61a15ce976ae57835.js"
         }
       ]
     },
     "29": {
       "js": [
         {
-          "file": "metadata---docs-components-video-78-c-6ff.11038a45b1e13bb844e4.js",
-          "hash": "ffa7e6a8929902c636c1",
-          "publicPath": "/metadata---docs-components-video-78-c-6ff.11038a45b1e13bb844e4.js"
+          "file": "metadata---docs-components-textedit-436-4a4.933858135648298447bd.js",
+          "hash": "18c4384c74eea71d4cc0",
+          "publicPath": "/metadata---docs-components-textedit-436-4a4.933858135648298447bd.js"
         }
       ]
     },
     "30": {
       "js": [
         {
-          "file": "metadata---docs-events-3-e-0-086.c7293c0d6b94094b07c9.js",
-          "hash": "3091cf19146fd0fed3b2",
-          "publicPath": "/metadata---docs-events-3-e-0-086.c7293c0d6b94094b07c9.js"
+          "file": "metadata---docs-components-textee-9-5c0.c83ffe387dd9a1bde5e4.js",
+          "hash": "96d26e7d2d6ede8baf63",
+          "publicPath": "/metadata---docs-components-textee-9-5c0.c83ffe387dd9a1bde5e4.js"
         }
       ]
     },
     "31": {
       "js": [
         {
-          "file": "metadata---docs-properties-5-ab-356.51fffb4e01fae0256539.js",
-          "hash": "d087bb75e670c70b90f8",
-          "publicPath": "/metadata---docs-properties-5-ab-356.51fffb4e01fae0256539.js"
+          "file": "metadata---docs-components-video-78-c-6ff.867b4b804f60fd737b89.js",
+          "hash": "12a6083a9a3e2a5a4de6",
+          "publicPath": "/metadata---docs-components-video-78-c-6ff.867b4b804f60fd737b89.js"
         }
       ]
     },
     "32": {
       "js": [
         {
-          "file": "runtime~main.6c9f512cb62c2eed33fd.js",
-          "hash": "935a9ded19c3e859f308",
-          "publicPath": "/runtime~main.6c9f512cb62c2eed33fd.js"
+          "file": "metadata---docs-events-3-e-0-086.01c62483cf283384a2d6.js",
+          "hash": "1fb0e434adadde5e8c02",
+          "publicPath": "/metadata---docs-events-3-e-0-086.01c62483cf283384a2d6.js"
         }
       ]
     },
     "33": {
-      "css": [
-        {
-          "file": "33.297168503529ced8d75d.css",
-          "hash": "1ca0848487d124512aef",
-          "publicPath": "/33.297168503529ced8d75d.css"
-        }
-      ],
       "js": [
         {
-          "file": "33.ea9a6f76aefe9bcf3da4.js",
-          "hash": "1ca0848487d124512aef",
-          "publicPath": "/33.ea9a6f76aefe9bcf3da4.js"
+          "file": "metadata---docs-properties-5-ab-356.61cea1184e2d5026e551.js",
+          "hash": "c30e8468c369066b8eb9",
+          "publicPath": "/metadata---docs-properties-5-ab-356.61cea1184e2d5026e551.js"
         }
       ]
     },
     "34": {
       "js": [
         {
-          "file": "34.585a27459b6038542774.js",
-          "hash": "181681996faa25ba261d",
-          "publicPath": "/34.585a27459b6038542774.js"
+          "file": "runtime~main.e30d6e50c0cb1afa4315.js",
+          "hash": "9ca6f8138bdb6a21b2d8",
+          "publicPath": "/runtime~main.e30d6e50c0cb1afa4315.js"
+        }
+      ]
+    },
+    "35": {
+      "css": [
+        {
+          "file": "35.297168503529ced8d75d.css",
+          "hash": "9f00a7edcb005b17219d",
+          "publicPath": "/35.297168503529ced8d75d.css"
+        }
+      ],
+      "js": [
+        {
+          "file": "35.9e08492402ec16d47384.js",
+          "hash": "9f00a7edcb005b17219d",
+          "publicPath": "/35.9e08492402ec16d47384.js"
+        }
+      ]
+    },
+    "36": {
+      "js": [
+        {
+          "file": "36.e5d4745fb6a7b82a02cf.js",
+          "hash": "fdc00a4a4e30a6d9c743",
+          "publicPath": "/36.e5d4745fb6a7b82a02cf.js"
         }
       ]
     }
