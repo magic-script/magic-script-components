@@ -46,10 +46,5 @@
     "babel-jest": "^24.9.0",
     "jest": "^24.9.0",
     "react-test-renderer": "^16.9.0"
-  },
-  "jest": {
-    "moduleNameMapper": {
-      "lumin": "./__mocks__/luminMock.js"
-    }
   }
 }
