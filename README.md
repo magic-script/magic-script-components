@@ -12,53 +12,11 @@ MagicScript Component Framework
 
 2. Create new MagicScript application :
 
-- `magic-script init <app-name> <com.app.name>`
+- `magic-script init` and follow the steps.
 
 3. Install the required `npm` packages from the app folder:
 
 - `npm install`
-
-## Configuration steps
-
-1. Install dependencies:
-
-- `npm install magic-script-components`
-- `npm install --save-dev @babel/core @babel/plugin-transform-react-jsx @babel/plugin-proposal-class-properties rollup-plugin-babel`
-
-2. Add `.babelrc` file with the following configuration:
-
-```
-{
-    "plugins": [
-        "@babel/plugin-syntax-jsx",
-        "@babel/plugin-transform-react-jsx",
-        "@babel/plugin-proposal-class-properties"
-    ]
-}
-```
-
-3. Add `babel` to the `rollup.config.js` file:
-
-```
-import babel from 'rollup-plugin-babel';
-import resolve from 'rollup-plugin-node-resolve';
-import commonjs from 'rollup-plugin-commonjs';
-
-export default {
-  external: ['uv', 'lumin'],
-  input: 'src/main.js',
-  preserveModules: true,
-  output: {
-    dir: 'bin',
-    format: 'es'
-  },
-  plugins: [
-    babel({ exclude: "node_modules/**" }),
-    resolve(),
-    commonjs()
-  ]
-};
-```
 
 ## Use example:
 
