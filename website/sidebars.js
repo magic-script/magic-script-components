@@ -8,7 +8,7 @@
 module.exports = {
   docs: {
     "Getting Started": ["installation", "example"],
-    Main: ["components", "events", "properties"],
+    Reference: ["components", "events", "properties"],
     Components: [
       "components/audio",
       "components/button",

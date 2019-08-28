@@ -49,7 +49,7 @@ title: TextEdit
 
 ### fontParameters
 
-```
+```javascript
 {
     style: string,
     weight: string,

@@ -40,7 +40,7 @@ If `text` is empty, the content of the `<text>` tag will be used as text.
 
 ### boundsSize
 
-```
+```javascript
 {
     boundsSize: vec2,
     wrap: boolean
@@ -49,7 +49,7 @@ If `text` is empty, the content of the `<text>` tag will be used as text.
 
 ### fontParameters
 
-```
+```javascript
 {
     style: string,
     weight: string,

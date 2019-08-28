@@ -44,7 +44,7 @@ title: Audio
 
 ### spatialSoundDirection
 
-```
+```javascript
 {
     channel: number,
     channelDirection: quat
@@ -53,7 +53,7 @@ title: Audio
 
 ### spatialSoundDirectSendLevels
 
-```
+```javascript
 {
     channel: number,
     gain: number,
@@ -65,7 +65,7 @@ title: Audio
 
 ### spatialSoundDistance
 
-```
+```javascript
 {
     channel: number,
     minDistance: number,
@@ -76,7 +76,7 @@ title: Audio
 
 ### spatialSoundPosition
 
-```
+```javascript
 {
     channel: number,
     channelPosition: vec3
@@ -85,7 +85,7 @@ title: Audio
 
 ### spatialSoundRadiation
 
-```
+```javascript
 {
     channel: number,
     innerAngle: number,
@@ -97,7 +97,7 @@ title: Audio
 
 ### spatialSoundRoomSendLevels
 
-```
+```javascript
 {
     channel: number,
     gain: number,
