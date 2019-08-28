@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[20],{39:function(e){e.exports=JSON.parse('{"id":"components","title":"MagicScript Components","description":"**This document and the framework are under active development !**","source":"@site/../docs/Components.md","permalink":"/docs/components","sidebar":"docs","category":"Main","next":"events","next_title":"Events"}')}}]);

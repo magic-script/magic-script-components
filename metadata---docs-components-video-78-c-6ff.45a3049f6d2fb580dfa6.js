@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[33],{69:function(o){o.exports=JSON.parse('{"id":"components/video","title":"Video","description":"## Tag: `<Video>`","source":"@site/../docs/components/Video.md","permalink":"/docs/components/video","sidebar":"docs","category":"Components","previous":"components/textedit","previous_title":"TextEdit"}')}}]);
