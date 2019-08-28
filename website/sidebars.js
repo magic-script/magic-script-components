@@ -7,6 +7,7 @@
 
 module.exports = {
   docs: {
+    "Getting Started": ["installation", "example"],
     Main: ["components", "events", "properties"],
     Components: [
       "components/audio",

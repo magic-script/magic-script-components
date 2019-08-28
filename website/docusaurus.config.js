@@ -22,7 +22,7 @@ module.exports = {
         src: "img/magicscript.svg"
       },
       links: [
-        { to: "docs/components", label: "Docs", position: "left" },
+        { to: "docs/installation", label: "Docs", position: "left" },
         {
           href: "https://github.com/magic-script/magic-script-components",
           label: "GitHub",

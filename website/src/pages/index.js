@@ -56,7 +56,7 @@ function Home() {
                 "button button--secondary button--lg",
                 styles.getStarted
               )}
-              to={withBaseUrl("docs/components")}
+              to={withBaseUrl("docs/installation")}
             >
               Get Started
             </Link>
