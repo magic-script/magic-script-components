@@ -4,7 +4,7 @@
 
 MagicScript Component Framework
 
-## Prerequisites
+## Installation
 
 1. Install `magic-script-cli` :
 
@@ -18,7 +18,7 @@ MagicScript Component Framework
 
 - `npm install`
 
-## Use example:
+## Example
 
 1. Create file `app.js`:
 
@@ -78,7 +78,7 @@ import 'magic-script-polyfills';
 import process from './global-scope.js';
 ```
 
-## Components included
+## Documentation
 
 - [List of Components](docs/Components.md)
 
