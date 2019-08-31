@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageView component Matches the snapshot 1`] = `
+<pageView
+  height={0.2}
+  width={0.2}
+/>
+`;

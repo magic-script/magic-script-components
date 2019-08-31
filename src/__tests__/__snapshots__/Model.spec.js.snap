@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Model component Matches the snapshot 1`] = `
+<model
+  materialPath=""
+  modelPath=""
+  textureName=""
+  texturePath=""
+/>
+`;
