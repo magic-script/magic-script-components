@@ -12,22 +12,22 @@ title: Video
 ## [Common Properties](../Properties.md)
 
 ## Create Properties
-| Name      | Type   | Default Value | LRT Name | LRT type       |
-| --------- | ------ | :-----------: | -------- | -------------- |
-| width     | number |      512      | Width    | number         |
-| height    | number |      512      | Height   | number         |
-| videoPath | string |      n/a      |          |                |
-| viewMode  | string |  `full-area`  | ViewMode | lumin.ViewMode |
+| Name      | Type   | Default Value | Description |
+| --------- | ------ | :-----------: | ----------- |
+| width     | number |      512      | The surface resolution width 1 to 2048  |
+| height    | number |      512      | The surface resolution height 1 to 2048 |
+| videoPath | string |      n/a      | Sets the file to Play. Preparation for playback begins synchronously after this property is set. The VideoNode is not ready to actually play (via action='start') until a VideoEvent of type VideoEventType 'prepared' is received. |
+| viewMode  | string |  `full-area`  | Set the current ViewMode to the given value. |
 
 ## Element Properties
-| Name      | Type   | Default Value | LRT Name | LRT type       |
-| --------- | ------ | :-----------: | -------- | -------------- |
-| volume    | number |       1       | Volume   | number         |
-| looping   | boolean |     n/a      | Looping  | boolean        |
-| timedTextPath | string |  n/a      | TimedTextPath | string    |
-| videoUri | string |       n/a      | VideoUri | string         |
-| seekTo | number |         n/a      | SeekTo   | number         |
-| action | string |         n/a      |          |                |
+| Name      | Type   | Default Value | Description |
+| --------- | ------ | :-----------: | ----------- |
+| volume    | number |       1       | Sets the volume of the node. |
+| looping   | boolean |     n/a      | Sets the looping mode of the player. |
+| timedTextPath | string |  n/a      | Sets the timed text file. |
+| videoUri | string |       n/a      | Sets the file Uri to Play. Preparation for playback begins synchronously after this property is set. The VideoNode is not ready to actually play (via action='start') until a VideoEvent of type VideoEventType 'prepared' is received. |
+| seekTo | number |         n/a      | Seeks to the specified time position. |
+| action | string |         n/a      | Sets the current operation: `start`, `stop`, `pause` |
 
 ### viewMode options:
 - full-area
