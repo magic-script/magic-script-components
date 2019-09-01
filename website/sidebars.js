@@ -12,6 +12,7 @@ module.exports = {
     Components: [
       "components/audio",
       "components/button",
+      "components/circleconfirmation",
       "components/image",
       "components/listview",
       "components/listviewitem",

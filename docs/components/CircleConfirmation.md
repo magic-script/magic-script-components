@@ -1,5 +1,5 @@
 ---
-id: circleConfirmation
+id: circleconfirmation
 title: CircleConfirmation
 ---
 
@@ -13,6 +13,6 @@ title: CircleConfirmation
 
 ## Create Properties
 
-| Name   | Type    | Default Value | Description |
-| ------ | ------- | :-----------: | ----------- |
-| height | string  |      0        | The radius of the circle the knob evolves at. |
+| Name   | Type   | Default Value | Description                                   |
+| ------ | ------ | :-----------: | --------------------------------------------- |
+| height | string |       0       | The radius of the circle the knob evolves at. |
