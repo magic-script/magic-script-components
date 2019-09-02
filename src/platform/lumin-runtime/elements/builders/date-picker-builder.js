@@ -14,8 +14,8 @@ const DEFAULT_DATE_FORMAT = 'MM/DD/YYYY';
 export class DatePickerBuilder extends UiNodeBuilder {
     constructor(){
         super();
-        
-        this._propertyDescriptors['color'] = new ArrayProperty('color', 'setColor', true, 'vec3');
+
+        this._propertyDescriptors['color'] = new ArrayProperty('color', 'setColor', true, 'vec4');
         this._propertyDescriptors['date'] = new PrimitiveTypeProperty('date', 'setDate', false, 'string');
     }
 
@@ -36,7 +36,7 @@ export class DatePickerBuilder extends UiNodeBuilder {
             defaultDate = new ui.Date();
         } else if (typeof defaultDate === 'string') {
             defaultDate = DateFormatConverter[DEFAULT_DATE_FORMAT].toDate(defaultDate);
-        }           
+        }
 
         const yearMin = this.getPropertyValue('yearMin', -1, properties);
         const yearMax = this.getPropertyValue('yearMax', -1, properties);
