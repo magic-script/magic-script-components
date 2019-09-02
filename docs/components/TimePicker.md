@@ -1,5 +1,5 @@
 ---
-id: timePicker
+id: timepicker
 title: TimePicker
 ---
 
@@ -13,14 +13,14 @@ title: TimePicker
 
 ## Create Properties
 
-| Name   | Type   | Default Value | Description |
-| ------ | ------ | :-----------: | ----------- |
-| label  | string |      n/a      | The text label that appears with the TimePicker. |
-| labelSide   | string | `top`    | Side enum specifying whether the label appears on the side or top. Only top and left currently supported. |
-| defaultTime | string | (current Time) | The default time to set for the TimePicker. |
-
+| Name        | Type   | Default Value  | Description                                                                                               |
+| ----------- | ------ | :------------: | --------------------------------------------------------------------------------------------------------- |
+| label       | string |      n/a       | The text label that appears with the TimePicker.                                                          |
+| labelSide   | string |     `top`      | Side enum specifying whether the label appears on the side or top. Only top and left currently supported. |
+| defaultTime | string | (current Time) | The default time to set for the TimePicker.                                                               |
 
 ### LabelSide values:
+
 - bottom
 - left
 - right
@@ -28,9 +28,9 @@ title: TimePicker
 
 ## Element Properties
 
-| Name   | Type   | Description |
-| :------| :----- | ----------- |
-| color  | string | Sets the TimePicker component's color, doesn't affect label. |
-| time   | number | The Time to set, will ignore values that aren't in the TimeFormat. |
+| Name  | Type   | Description                                                        |
+| :---- | :----- | ------------------------------------------------------------------ |
+| color | string | Sets the TimePicker component's color, doesn't affect label.       |
+| time  | number | The Time to set, will ignore values that aren't in the TimeFormat. |
 
-*The default time format is: `hh:mm:ss`
+\*The default time format is: `hh:mm:ss`

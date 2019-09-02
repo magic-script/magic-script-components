@@ -10,9 +10,9 @@ title: MagicScript Components
 | 1     | [Audio](components/Audio.md)                           | AudioNode                     | :thumbsup: |
 | 2     | [Button](components/Button.md)                         | UiButton                      | :thumbsup: |
 | 3     | [CircleConfirmation](components/CircleConfirmation.md) | UiCircleConfirmation          | :thumbsup: |
-| 4     | ColorPicker                                            | UiColorPicker                 | :thumbsup: |
+| 4     | [ColorPicker](components/ColorPicker.md)               | UiColorPicker                 | :thumbsup: |
 | 5     | Content                                                | x                             | :thumbsup: |
-| 6     | DatePicker                                             | UiDatePicker                  | :thumbsup: |
+| 6     | [DatePicker](components/DatePicker.md)                 | UiDatePicker                  | :thumbsup: |
 | 7     | Dialog                                                 | UiDialog                      | :thumbsup: |
 | 8     | DropdownList                                           | UiDropDownList                | :thumbsup: |
 | 9     | DropdownListItem                                       | DropDownListItem              | :thumbsup: |
@@ -37,7 +37,7 @@ title: MagicScript Components
 | 28    | Tab                                                    | UiTab                         | :thumbsup: |
 | 29    | [Text](components/Text.md)                             | UiText                        | :thumbsup: |
 | 30    | [TextEdit](components/TextEdit.md)                     | UiTextEdit                    | :thumbsup: |
-| 31    | TimePicker                                             | UiTimePicker                  | :thumbsup: |
+| 31    | [TimePicker](components/TimePicker.md)                 | UiTimePicker                  | :thumbsup: |
 | 32    | Toggle                                                 | UiToggle                      | :thumbsup: |
 | 33    | ToggleGroup                                            | UiToggleGroup                 | :thumbsup: |
 | 34    | [Video](components/Video.md)                           | VideoNode                     | :thumbsup: |

@@ -13,6 +13,8 @@ module.exports = {
       "components/audio",
       "components/button",
       "components/circleconfirmation",
+      "components/colorpicker",
+      "components/datepicker",
       "components/image",
       "components/listview",
       "components/listviewitem",
@@ -21,6 +23,7 @@ module.exports = {
       "components/scrollbar",
       "components/text",
       "components/textedit",
+      "components/timepicker",
       "components/video"
     ]
   }
