@@ -15,8 +15,8 @@ const DEFAULT_TIME_FORMAT = 'hh:mm:ss';
 export class TimePickerBuilder extends UiNodeBuilder {
     constructor(){
         super();
-        
-        this._propertyDescriptors['color'] = new ArrayProperty('color', 'setColor', true, 'vec3');
+
+        this._propertyDescriptors['color'] = new ArrayProperty('color', 'setColor', true, 'vec4');
         this._propertyDescriptors['time'] = new PrimitiveTypeProperty('time', 'setTime', false, 'string');
     }
 
@@ -39,7 +39,7 @@ export class TimePickerBuilder extends UiNodeBuilder {
             defaultTime = TimeFormatConverter[DEFAULT_TIME_FORMAT].toTime(defaultTime);
         }
 
-        const element = ui.UiDatePicker.Create(prism, label, labelSide, DEFAULT_TIME_FORMAT, defaultTime);
+        const element = ui.UiTimePicker.Create(prism, label, labelSide, DEFAULT_TIME_FORMAT, defaultTime);
 
         const unapplied = this.excludeProperties(properties, ['label', 'labelSide', 'defaultTime']);
 
@@ -47,11 +47,6 @@ export class TimePickerBuilder extends UiNodeBuilder {
 
         return element;
     }
-
-    // update(element, oldProperties, newProperties) {
-    //     // this.throwIfNotInstanceOf(element, ui.UiImage);
-    //     super.update(element, oldProperties, newProperties);
-    // }
 
     validate(element, oldProperties, newProperties) {
         super.validate(element, oldProperties, newProperties);
@@ -63,7 +58,7 @@ export class TimePickerBuilder extends UiNodeBuilder {
         let message = `The provided icon ${labelSide} is not a valid value`;
         PropertyDescriptor.throwIfPredicateFails(labelSide, message, validator.validateSide);
 
-        // message = `The provided icon ${timeFormat} is not a valid value`;
+        // message = `The provided time format ${timeFormat} is not a valid value`;
         // PropertyDescriptor.throwIfPredicateFails(dateFormat, message, validator.validateDateFormat);
 
         PropertyDescriptor.throwIfNotTypeOf(defaultTime, 'string');
