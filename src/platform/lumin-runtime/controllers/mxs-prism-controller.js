@@ -129,6 +129,7 @@ export class MxsPrismController extends PrismController {
 
     onDetachPrism(prism) {
         this._eventHandlers.onDetachPrism.forEach(handler => handler(new PrismEventData(prism)));
+        this.deleteSceneGraph();
     }
 
     _getEventDataByEventType(eventData) {

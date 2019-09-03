@@ -15,6 +15,9 @@ export class PlatformFactory extends NativeFactory {
         // { type, builder }
         this.elementBuilders = {};
         this.controllerBuilders = {};
+
+        // Storing the app in order to get access to nodes prism
+        this._app;
     }
 
     isController(element) {
@@ -306,10 +309,14 @@ export class PlatformFactory extends NativeFactory {
                 parent.removeChildController(child);
             } else if (this.isController(parent)) {
                 parent.getRoot().removeChild(child);
+                parent.getPrism().deleteNode(child);
             } else if (parent instanceof ui.UiListView) {
                 parent.removeItem(this._getListViewIndex(parent, child));
             } else {
                 parent.removeChild(child);
+
+                const prism = this._app.getPrism(child.getPrismId());
+                prism.deleteNode(child);
             }
         }
     }
@@ -352,6 +359,8 @@ export class PlatformFactory extends NativeFactory {
             throw new TypeError(`Invalid argument: Unknown app type: ${appType}`);
         }
 
+        // Saving the app so the factory can get access to the nodes prism
+        this._app = app;
         return app;
     }
 }
