@@ -1,6 +1,6 @@
 # MagicScript Components
 
-[![npm version](https://badge.fury.io/js/magic-script-components.svg)](https://badge.fury.io/js/magic-script-components) [![License](http://img.shields.io/:license-Apache%202.0-blue.svg)](LICENSE)
+[![Build Status](https://travis-ci.com/magic-script/magic-script-components.svg)](https://travis-ci.com/magic-script/magic-script-components) [![npm version](https://badge.fury.io/js/magic-script-components.svg)](https://badge.fury.io/js/magic-script-components) [![License](http://img.shields.io/:license-Apache%202.0-blue.svg)](LICENSE)
 
 MagicScript Component Framework
 
@@ -18,7 +18,8 @@ npm install -g magic-script-cli
 magic-script init
 ```
 
-and follow the steps.
+- Follow the steps.
+- Choose "Components" when application type is requested.
 
 3. Install the required `npm` packages from the app folder:
 
@@ -26,15 +27,23 @@ and follow the steps.
 npm install
 ```
 
+4. Build and install your application:
+
+```bash
+magic-script build -i
+```
+
+5. Refer to MagicScript [Getting Started](https://www.magicscript.org/docs/getting-started) guide for more information.
+
 ## Example
 
-1. Create file `app.js`:
+Replace `app.js` content with this code for more interafctive use case:
 
 ```javascript
 import React from "react";
 import { View, Text, Button } from "magic-script-components";
 
-export class MyApp extends React.Component {
+export default class MyApp extends React.Component {
   constructor(props) {
     super(props);
 
@@ -68,41 +77,6 @@ export class MyApp extends React.Component {
     );
   }
 }
-```
-
-2. Bootstrap 'MyApp' component from `main.js`:
-
-```javascript
-import "magic-script-polyfills";
-import React from "react";
-import mxs from "magic-script-components";
-
-import { MyApp } from "./app.js";
-
-mxs.bootstrap(
-  <MyApp
-    type="landscape"
-    volumeSize={[1, 1, 1]}
-    caption="My App Caption"
-    counter={0}
-  />
-);
-```
-
-3. Define global `process`:
-
-- Add file `global-scope.js` to `src` folder
-
-```javascript
-globalThis.process = { env: { NODE_ENV: "development" } };
-export default process;
-```
-
-- Import `process` to `main.js` at the top of the file:
-
-```javascript
-import "magic-script-polyfills";
-import process from "./global-scope.js";
 ```
 
 ## Documentation

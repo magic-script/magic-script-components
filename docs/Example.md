@@ -3,13 +3,13 @@ id: example
 title: Example
 ---
 
-1. Create file `app.js`:
+Replace `app.js` content with this code for more interafctive use case:
 
 ```javascript
 import React from "react";
 import { View, Text, Button } from "magic-script-components";
 
-export class MyApp extends React.Component {
+export default class MyApp extends React.Component {
   constructor(props) {
     super(props);
 
@@ -43,39 +43,4 @@ export class MyApp extends React.Component {
     );
   }
 }
-```
-
-2. Bootstrap 'MyApp' component from `main.js`:
-
-```javascript
-import "magic-script-polyfills";
-import React from "react";
-import mxs from "magic-script-components";
-
-import { MyApp } from "./app.js";
-
-mxs.bootstrap(
-  <MyApp
-    type="landscape"
-    volumeSize={[1, 1, 1]}
-    caption="My App Caption"
-    counter={0}
-  />
-);
-```
-
-3. Define global `process`:
-
-- Add file `global-scope.js` to `src` folder
-
-```javascript
-globalThis.process = { env: { NODE_ENV: "development" } };
-export default process;
-```
-
-- Import `process` to `main.js` at the top of the file:
-
-```javascript
-import "magic-script-polyfills";
-import process from "./global-scope.js";
 ```
