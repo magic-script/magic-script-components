@@ -3,6 +3,25 @@ id: text
 title: Text
 ---
 
+A MagicScript component for displaying text.
+
+## Code Example
+
+```javascript
+import React from "react";
+import { Text } from "magic-script-components";
+
+export default class TextExample extends React.Component {
+  render() {
+    return (
+      <Text textSize={0.1} localPosition={[-0.3, 0, 0]}>
+        Text Example
+      </Text>
+    );
+  }
+}
+```
+
 ## Tag: `<Text>`
 
 - #### Lumin Runtime native component - UiText
