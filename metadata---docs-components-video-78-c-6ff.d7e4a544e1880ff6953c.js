@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[41],{73:function(o){o.exports=JSON.parse('{"id":"components/video","title":"Video","description":"## Tag: `<Video>`","source":"@site/../docs/components/Video.md","permalink":"/docs/components/video","sidebar":"docs","category":"Components","previous":"components/timepicker","previous_title":"TimePicker"}')}}]);
