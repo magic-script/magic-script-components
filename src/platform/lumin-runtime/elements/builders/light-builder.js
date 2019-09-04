@@ -14,12 +14,12 @@ export class LightBuilder extends TransformBuilder {
     constructor(){
         super();
 
-        this._propertyDescriptors['color'] = new ArrayProperty('color', 'setColor', true, 'vec3');
+        this._propertyDescriptors['color'] = new ArrayProperty('color', 'setColor', true, 'vec4');
         this._propertyDescriptors['intensity'] = new PrimitiveTypeProperty('intensity', 'setIntensity', true, 'number');
         this._propertyDescriptors['range'] = new PrimitiveTypeProperty('range', 'setRange', true, 'number');
         this._propertyDescriptors['spotAngle'] = new PrimitiveTypeProperty('spotAngle', 'setSpotAngle', true, 'number');
         this._propertyDescriptors['type'] = new EnumProperty('type', '// setType', true, LightType, 'LightType');
-        this._propertyDescriptors['castsShadows'] = new PrimitiveTypeProperty('castsShadows', 'trySetCastsShadows', true, 'number');
+        this._propertyDescriptors['castsShadows'] = new PrimitiveTypeProperty('castsShadows', 'trySetCastsShadows', true, 'boolean');
 
         // setUseHeadPose
         const useHeadPoseProperties = [
