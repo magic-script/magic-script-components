@@ -1,5 +1,5 @@
 ---
-id: circleconfirmation
+id: circleConfirmation
 title: CircleConfirmation
 ---
 

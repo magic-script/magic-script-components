@@ -1,5 +1,5 @@
 ---
-id: scrollbar
+id: scrollBar
 title: ScrollBar
 ---
 

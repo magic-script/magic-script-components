@@ -1,5 +1,5 @@
 ---
-id: pageview
+id: pageView
 title: PageView
 ---
 

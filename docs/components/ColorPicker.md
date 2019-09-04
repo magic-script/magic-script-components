@@ -1,5 +1,5 @@
 ---
-id: colorpicker
+id: colorPicker
 title: ColorPicker
 ---
 

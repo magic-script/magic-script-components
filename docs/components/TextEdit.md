@@ -1,5 +1,5 @@
 ---
-id: textedit
+id: textEdit
 title: TextEdit
 ---
 

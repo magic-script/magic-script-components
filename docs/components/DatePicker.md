@@ -1,5 +1,5 @@
 ---
-id: datepicker
+id: datePicker
 title: DatePicker
 ---
 
