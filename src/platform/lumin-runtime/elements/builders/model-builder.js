@@ -5,6 +5,7 @@ import { RenderBuilder } from './render-builder.js';
 
 import { ClassProperty } from '../properties/class-property.js';
 import { PrimitiveTypeProperty } from '../properties/primitive-type-property.js';
+import { PropertyDescriptor } from '../properties/property-descriptor.js'
 
 import { TextureType } from '../../types/texture-type.js';
 import { validator } from '../../utilities/validator.js';
@@ -31,7 +32,7 @@ export class ModelBuilder extends RenderBuilder {
         // texture
         const textureProperties = [
             new PrimitiveTypeProperty('textureId', undefined, undefined, 'number'),
-            new PrimitiveTypeProperty('textureSlot', undefined, undefined, 'number'),
+            new PrimitiveTypeProperty('textureSlot', undefined, undefined, 'string'),
             new PrimitiveTypeProperty('materialName', undefined, undefined, 'string')
         ];
 
@@ -50,9 +51,12 @@ export class ModelBuilder extends RenderBuilder {
             textureIds = texturePaths.map(path => prism.createTextureResourceId(Desc2d.DEFAULT, path));
         }
 
-        prism.createMaterialResourceId(materialPath);
+        if (materialPath !== undefined) {
+            prism.createMaterialResourceId(materialPath);
+        }
 
-        const modelId = prism.createModelResourceId(modelPath, 1.0);
+        const importScale = this.getPropertyValue('importScale', 1.0, properties);
+        const modelId = prism.createModelResourceId(modelPath, importScale);
         const element = prism.createModelNode(modelId);
 
         this._setDefaultTexture(element, textureIds, properties)
@@ -61,10 +65,23 @@ export class ModelBuilder extends RenderBuilder {
         return element;
     }
 
-    // update(element, oldProperties, newProperties) {
-    //     // this.throwIfNotInstanceOf(element, RenderNode);
-    //     super.update(element, oldProperties, newProperties);
-    // }
+    validate(element, oldProperties, newProperties) {
+        super.validate(element, oldProperties, newProperties);
+
+        const { modelPath, materialPath, importScale } = newProperties;
+
+        if (PropertyDescriptor.hasValue(modelPath)) {
+            PropertyDescriptor.throwIfNotTypeOf(modelPath, 'string');
+        }
+
+        if (PropertyDescriptor.hasValue(materialPath)) {
+            PropertyDescriptor.throwIfNotTypeOf(materialPath, 'string');
+        }
+
+        if (PropertyDescriptor.hasValue(importScale)) {
+            PropertyDescriptor.throwIfNotTypeOf(importScale, 'number');
+        }
+    }
 
     _setDefaultTexture(element, textureIds, properties) {
         if (textureIds === undefined || textureIds.length === 0) {
@@ -121,7 +138,7 @@ export class ModelBuilder extends RenderBuilder {
             return;
         }
 
-        element.setTexture(materialName, textureSlot, textureId)
+        element.setTexture(materialName, TextureType[textureSlot], textureId)
     }
 
     setAnimation(element, oldProperties, newProperties) {
