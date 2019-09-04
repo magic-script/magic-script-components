@@ -7,9 +7,9 @@ title: ScrollBar
 
 - #### Lumin Runtime native component - UiScrollBar
 
-## [Common Events](../Events.md)
+## [Common Events](../types/Events.md)
 
-## [Common Properties](../Properties.md)
+## [Common Properties](../types/Properties.md)
 
 ## Create Properties
 

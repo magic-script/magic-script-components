@@ -7,9 +7,9 @@ title: Light
 
 - #### Lumin Runtime native component - LightNode
 
-## [Common Events](../Events.md)
+## [Common Events](../types/Events.md)
 
-## [Common Properties](../Properties.md)
+## [Common Properties](../types/Properties.md)
 
 ## Element Properties
 
@@ -23,7 +23,7 @@ title: Light
 | castsShadows | boolean | Attempts to set the light's shadow casting status. Currently the system supports only one shadow casting light. In landscape mode this light is created by the system and shared by all apps. In immersive mode, the developer is responsible for setting the the shadow casting light. Only directional lights can cast shadows. If this function fails, the reason for the failure will appear in the log. |
 | useHeadPose | _object_ | Sets the head pose status of the light. Calling this function and setting a_on to true will result in the light using the headpose world transform as it's own transform. |
 
-### type options: [LightType](LightType.md)
+### type options: [LightType](../types/LightType.md)
 
 ### useHeadPose
 - on

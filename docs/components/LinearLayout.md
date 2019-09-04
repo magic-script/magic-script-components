@@ -7,9 +7,9 @@ title: LinearLayout
 
 - #### Lumin Runtime native component - UiLinearLayout
 
-## [Common Events](../Events.md)
+## [Common Events](../types/Events.md)
 
-## [Common Properties](../Properties.md)
+## [Common Properties](../types/Properties.md)
 
 ## Element Properties
 
@@ -22,6 +22,6 @@ title: LinearLayout
 | skipInvisibleItems | boolean | Skips invisble items. Setting this value true will cause the layout to skip over any invisible items. The layout will check the visibility of each top-level item Node added and if invisible, along with inherited visibility, will skip that Node for layout. Using this setting will affect the displayed grid layout by collapsing the location of invisible items in the grid while the remaining, visible items adjust to fill in those absent locations. |
 | orientation | string | Sets the horizontal or vertical orientation of this linear layout. The default orientation is Vertical. |
 
-### defaultItemAlignment options: [Orientation](Alignment.md)
-### itemAlignment options: [Alignment](Alignment.md)
-### orientation options: [Orientation](Orientation.md)
+### defaultItemAlignment options: [Orientation](../types/Alignment.md)
+### itemAlignment options: [Alignment](../types/Alignment.md)
+### orientation options: [Orientation](../types/Orientation.md)

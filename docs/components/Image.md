@@ -7,9 +7,9 @@ title: Image
 
 - #### Lumin Runtime native component - UiImage
 
-## [Common Events](../Events.md)
+## [Common Events](../types/Events.md)
 
-## [Common Properties](../Properties.md)
+## [Common Properties](../types/Properties.md)
 
 ## Create Properties
 

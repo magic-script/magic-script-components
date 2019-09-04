@@ -7,9 +7,9 @@ title: GridLayout
 
 - #### Lumin Runtime native component - UiGridLayout
 
-## [Common Events](../Events.md)
+## [Common Events](../types/Events.md)
 
-## [Common Properties](../Properties.md)
+## [Common Properties](../types/Properties.md)
 
 ## Element Properties
 
@@ -23,5 +23,5 @@ title: GridLayout
 | columns | number | Sets the number of columns for the grid. The default value of 0 indicates the number of columns can grow to fit items as they are added. Setting the value above 0 will lock the grid column dimension. If both rows and columns are set, columns will take precedence. If neither rows or columns are set, the grid layout will have 1 row and add columns as needed. When the number of columns is set, the grid will lay items in row-major order. |
 | rows    | number | Sets the number of rows for the grid. The default value of 0 indicates the number of rows can grow to fit items as they are added. Setting the value above 0 will lock the grid row dimension. If both rows and columns are set, columns will take precedence. If neither rows or columns are set, the grid layout will have 1 row and add columns as needed. When the number of rows is set (and columns is 0), the grid will lay items in column-major order. |
 
-### defaultItemAlignment options: [Alignment](Alignment.md)
-### itemAlignment options: [Alignment](Alignment.md)
+### defaultItemAlignment options: [Alignment](../types/Alignment.md)
+### itemAlignment options: [Alignment](../types/Alignment.md)

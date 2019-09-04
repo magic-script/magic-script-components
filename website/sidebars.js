@@ -8,7 +8,7 @@
 module.exports = {
   docs: {
     "Getting Started": ["installation", "example"],
-    Reference: ["components", "events", "properties"],
+    Reference: ["components"],
     Components: [
       "components/audio",
       "components/button",
@@ -25,6 +25,15 @@ module.exports = {
       "components/textedit",
       "components/timepicker",
       "components/video"
+    ],
+    Types: [
+      "types/alignment",
+      "types/buttonType",
+      "types/events",
+      "types/iconType",
+      "types/lightType",
+      "types/orientation",
+      "types/properties"
     ]
   }
 };

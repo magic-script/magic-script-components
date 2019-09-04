@@ -7,9 +7,9 @@ title: ListView
 
 - #### Lumin Runtime native component - UiListView
 
-## [Common Events](../Events.md)
+## [Common Events](../types/Events.md)
 
-## [Common Properties](../Properties.md)
+## [Common Properties](../types/Properties.md)
 
 ## Properties
 

@@ -20,7 +20,7 @@ title: MagicScript Components
 | 11    | [Image](components/Image.md)                           | UiImage                       | :thumbsup: |
 | 12    | [Light](components/Light.md)                           | x                             | :thumbsup: |
 | 13    | Line                                                   | x                             | :thumbsup: |
-| 14    | LinearLayout (components/LinearLayout.md)              | UiLinearLayout                | :thumbsup: |
+| 14    | [LinearLayout](components/LinearLayout.md)             | UiLinearLayout                | :thumbsup: |
 | 15    | [ListView](components/ListView.md)                     | UiListView                    | :thumbsup: |
 | 16    | [ListViewItem](components/ListViewItem.md)             | UiListViewItem                | :thumbsup: |
 | 17    | [Model](components/Model.md)                           | ModelNode                     | :thumbsup: |
@@ -29,7 +29,7 @@ title: MagicScript Components
 | 20    | PortalIcon                                             | UiPortalIcon                  | :thumbsup: |
 | 21    | [ProgressBar](components/ProgressBar.md)               | UiProgressBar                 | :thumbsup: |
 | 22    | Quad                                                   | x                             | :thumbsup: |
-| 23    | [RectLayout] components/RectLayout.md)                 | UiRectLayout                  | :thumbsup: |
+| 23    | [RectLayout](components/RectLayout.md)                 | UiRectLayout                  | :thumbsup: |
 | 24    | [ScrollBar](components/ScrollBar.md)                   | UiScrollBar                   | :thumbsup: |
 | 25    | ScrollView                                             | UiScrollView                  | :thumbsup: |
 | 26    | Slider                                                 | UiSlider                      | :thumbsup: |

@@ -7,9 +7,9 @@ title: Dialog
 
 - #### Lumin Runtime native component - UiDialog
 
-## [Common Events](../Events.md)
+## [Common Events](../types/Events.md)
 
-## [Common Properties](../Properties.md)
+## [Common Properties](../types/Properties.md)
 
 ## Create Properties
 
@@ -42,6 +42,6 @@ title: Dialog
 | confirmIcon | string | Sets the Confirm button icon. |
 | expireTime  | number | Sets the expiration time for the dialog in seconds. For modeless timed dialogs,and optionally for other dialogs, a timer can be set that will send out the onTimeExpired event when the dialog time expires. The dialog does not destroy itself and must be handled by the caller using the event.|
 
-### buttonType options: [ButtonType](ButtonType.md)
+### buttonType options: [ButtonType](../types/ButtonType.md)
 
-### cancelIcon / confirmIcon  options: [IconType](IconType.md)
+### cancelIcon / confirmIcon  options: [IconType](../types/IconType.md)
