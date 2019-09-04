@@ -24,7 +24,7 @@ export class DropdownListBuilder extends TextContainerBuilder {
     // this._propertyDescriptors['listFont'] = new ClassProperty('listFont', 'setListFont', false, listFontProperties);
 
         this._propertyDescriptors['iconSize'] = new PrimitiveTypeProperty('iconSize', 'setIconSize', true, 'number');
-        this._propertyDescriptors['iconColor'] = new ArrayProperty('iconColor', 'setIconColor', true, 'vec3');
+        this._propertyDescriptors['iconColor'] = new ArrayProperty('iconColor', 'setIconColor', true, 'vec4');
         this._propertyDescriptors['listMaxHeight'] = new PrimitiveTypeProperty('listMaxHeight', 'setListMaxHeight', true, 'number');
         this._propertyDescriptors['listTextSize'] = new PrimitiveTypeProperty('listTextSize', 'setListTextSize', true, 'number');
         this._propertyDescriptors['maxCharacterLimit'] = new PrimitiveTypeProperty('maxCharacterLimit', 'setMaxCharacterLimit', true, 'number');
@@ -53,11 +53,6 @@ export class DropdownListBuilder extends TextContainerBuilder {
 
         return element;
     }
-
-    // update(element, oldProperties, newProperties) {
-    //     // this.throwIfNotInstanceOf(element, ui.UiGroup);
-    //     super.update(element, oldProperties, newProperties);
-    // }
 
     setSelected(element, oldProperties, newProperties) {
         const { id, selected } = newProperties;
