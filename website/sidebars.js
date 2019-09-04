@@ -42,7 +42,8 @@ module.exports = {
       "types/iconType",
       "types/lightType",
       "types/orientation",
-      "types/properties"
+      "types/properties",
+      "types/textureType"
     ]
   }
 };

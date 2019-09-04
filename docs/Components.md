@@ -18,7 +18,7 @@ title: MagicScript Components
 | 9     | [DropdownListItem](components/DropdownListItem.md)     | DropDownListItem              | :thumbsup: |
 | 10    | [GridLayout](components/GridLayout.md)                 | UiGridLayout                  | :thumbsup: |
 | 11    | [Image](components/Image.md)                           | UiImage                       | :thumbsup: |
-| 12    | [Light](components/Light.md)                           | x                             | :thumbsup: |
+| 12    | [Light](components/Light.md)                           | LightNode                     | :thumbsup: |
 | 13    | Line                                                   | x                             | :thumbsup: |
 | 14    | [LinearLayout](components/LinearLayout.md)             | UiLinearLayout                | :thumbsup: |
 | 15    | [ListView](components/ListView.md)                     | UiListView                    | :thumbsup: |
