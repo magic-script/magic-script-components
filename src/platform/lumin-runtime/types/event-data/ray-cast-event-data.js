@@ -20,6 +20,6 @@ export class RayCastEventData extends ServerEvent {
     }
 
     static isSupported(event) {
-        return (event instanceof _VideoEventData);
+        return (event instanceof _RayCastEventData);
     }
 }
