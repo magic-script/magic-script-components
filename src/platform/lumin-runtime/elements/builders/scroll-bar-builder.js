@@ -30,6 +30,13 @@ export class ScrollBarBuilder extends UiNodeBuilder {
 
         const element = MxsScrollBar.Create(prism, width, height);
 
+        Object.defineProperty(element, 'Orientation', {
+            enumerable: true,
+            writable: true,
+            configurable: false,
+            value: ui.Orientation.kVertical
+        });
+
         const unapplied = this.excludeProperties(properties, ['width', 'height']);
 
         this.apply(element, undefined, unapplied);
