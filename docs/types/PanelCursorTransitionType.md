@@ -3,7 +3,7 @@ id: panelCursorTransitionType
 title: PanelCursorTransitionType
 ---
 
-# PanelEdgeConstraintLevel options:
+# PanelCursorTransitionType options:
  - center
  - closest-edge
  - initial-position
