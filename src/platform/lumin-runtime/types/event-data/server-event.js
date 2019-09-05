@@ -19,6 +19,10 @@ export class ServerEvent extends EventData {
 
     get ServerEventType() {
         return extractor.getKeyByValue(ServerEventType, this._nativeEvent.getServerEventType());
+
+    // Returns a string representation of this event for debug purposes.
+    toString() {
+        return this._nativeEvent.toString();
     }
 
     static isSupported(event) {
