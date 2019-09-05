@@ -23,9 +23,15 @@ module.exports = {
       },
       links: [
         { to: "docs/installation", label: "Docs", position: "left" },
+        { to: "docs/components", label: "API", position: "left" },
         {
           href: "https://github.com/magic-script/magic-script-components",
           label: "GitHub",
+          position: "right"
+        },
+        {
+          href: "https://www.npmjs.com/package/magic-script-components",
+          label: "NPM",
           position: "right"
         }
       ]
