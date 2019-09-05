@@ -5,7 +5,7 @@ title: Model
 
 A MagicScript component for 3D model.
 
-## Code Example
+## Example
 
 ```javascript
 <Model

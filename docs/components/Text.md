@@ -5,7 +5,7 @@ title: Text
 
 A MagicScript component for displaying text.
 
-## Code Example
+## Example
 
 ```javascript
 import React from "react";
