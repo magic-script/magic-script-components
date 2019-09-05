@@ -7,10 +7,10 @@ import { ui } from 'lumin';
  * @description Represents Magic-Script - Lumin Runtime Orientation mapping for UiNode.
  */
 export const PanelEdgeConstraintLevel = {
-    'kHeavy': ui.PanelEdgeConstraintLevel.kHeavy,
-    'kImpassable': ui.PanelEdgeConstraintLevel.kImpassable,
-    'kLight': ui.PanelEdgeConstraintLevel.kLight,
-    'kManual': ui.PanelEdgeConstraintLevel.kManual,
-    'kMedium': ui.PanelEdgeConstraintLevel.kMedium,
-    'kNone': ui.PanelEdgeConstraintLevel.kNone
+    'heavy': ui.PanelEdgeConstraintLevel.kHeavy,
+    'impassable': ui.PanelEdgeConstraintLevel.kImpassable,
+    'light': ui.PanelEdgeConstraintLevel.kLight,
+    'manual': ui.PanelEdgeConstraintLevel.kManual,
+    'medium': ui.PanelEdgeConstraintLevel.kMedium,
+    'none': ui.PanelEdgeConstraintLevel.kNone
 }
