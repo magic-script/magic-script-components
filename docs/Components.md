@@ -11,7 +11,7 @@ title: MagicScript Components
 | 2     | [Button](components/Button.md)                         | UiButton                      | :thumbsup: |
 | 3     | [CircleConfirmation](components/CircleConfirmation.md) | UiCircleConfirmation          | :thumbsup: |
 | 4     | [ColorPicker](components/ColorPicker.md)               | UiColorPicker                 | :thumbsup: |
-| 5     | Content                                                | x                             | :thumbsup: |
+| 5     | [Content](components/Content.md)                       | TransformNode                 | :thumbsup: |
 | 6     | [DatePicker](components/DatePicker.md)                 | UiDatePicker                  | :thumbsup: |
 | 7     | [Dialog](components/Dialog.md)                         | UiDialog                      | :thumbsup: |
 | 8     | [DropdownList](components/DropdownList.md)             | UiDropDownList                | :thumbsup: |
@@ -19,13 +19,13 @@ title: MagicScript Components
 | 10    | [GridLayout](components/GridLayout.md)                 | UiGridLayout                  | :thumbsup: |
 | 11    | [Image](components/Image.md)                           | UiImage                       | :thumbsup: |
 | 12    | [Light](components/Light.md)                           | LightNode                     | :thumbsup: |
-| 13    | Line                                                   | x                             | :thumbsup: |
+| 13    | [Line](components/Line.md)                             | LineNode                      | :thumbsup: |
 | 14    | [LinearLayout](components/LinearLayout.md)             | UiLinearLayout                | :thumbsup: |
 | 15    | [ListView](components/ListView.md)                     | UiListView                    | :thumbsup: |
 | 16    | [ListViewItem](components/ListViewItem.md)             | UiListViewItem                | :thumbsup: |
 | 17    | [Model](components/Model.md)                           | ModelNode                     | :thumbsup: |
 | 18    | [PageView](components/PageView.md)                     | UiPageView                    | :thumbsup: |
-| 19    | Panel                                                  | UiPanel                       | :thumbsup: |
+| 19    | [Panel](components/Panel.md)                           | UiPanel                       | :thumbsup: |
 | 20    | PortalIcon                                             | UiPortalIcon                  | :thumbsup: |
 | 21    | [ProgressBar](components/ProgressBar.md)               | UiProgressBar                 | :thumbsup: |
 | 22    | Quad                                                   | x                             | :thumbsup: |

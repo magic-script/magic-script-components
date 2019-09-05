@@ -14,6 +14,7 @@ module.exports = {
       "components/button",
       "components/circleConfirmation",
       "components/colorPicker",
+      "components/content",
       "components/datePicker",
       "components/dialog",
       "components/dropdownList",
@@ -21,11 +22,13 @@ module.exports = {
       "components/gridLayout",
       "components/image",
       "components/light",
+      "components/line",
       "components/linearLayout",
       "components/listView",
       "components/listViewItem",
       "components/model",
       "components/pageView",
+      "components/panel",
       "components/progressBar",
       "components/rectLayout",
       "components/scrollBar",
@@ -38,11 +41,15 @@ module.exports = {
     Types: [
       "types/alignment",
       "types/buttonType",
+      "types/cursorHoverState",
       "types/events",
       "types/iconType",
       "types/lightType",
       "types/orientation",
+      "types/panelCursorTransitionType",
+      "types/panelEdgeConstraintLevel",
       "types/properties",
+      "types/side",
       "types/textureType"
     ]
   }
