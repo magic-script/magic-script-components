@@ -19,6 +19,11 @@ export class ServerEvent extends EventData {
         return this._nativeEvent.isInputEventType();
     }
 
+    // Returns a string representation of this event for debug purposes.
+    toString() {
+        return this._nativeEvent.toString();
+    }
+
     static isSupported(event) {
         return (event instanceof _ServerEvent);
     }
