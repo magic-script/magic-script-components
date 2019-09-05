@@ -11,6 +11,7 @@ import { GestureInputEventData } from '../types/event-data/gesture-input-event-d
 import { InputEventData } from '../types/event-data/input-event-data.js';
 import { KeyInputEventData } from '../types/event-data/key-input-event-data.js';
 import { PrismEventData } from '../types/event-data/prism-event-data.js';
+import { RayCastEventData } from '../types/event-data/ray-cast-event-data.js';
 import { SelectionEventData } from '../types/event-data/selection-event-data.js';
 import { UiEventData } from '../types/event-data/ui-event-data.js';
 import { VideoEventData } from '../types/event-data/video-event-data.js';
@@ -40,6 +41,7 @@ export class MxsPrismController extends PrismController {
             GestureInputEventData,
             InputEventData,
             KeyInputEventData,
+            RayCastEventData,
             SelectionEventData,
             UiEventData,
             VideoEventData
