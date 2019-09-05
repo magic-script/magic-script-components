@@ -7,14 +7,21 @@ title: Properties
 
 ## Common Properties
 
-| Name      | Type    | Default Value  | LRT Name       | LRT type |
-| :-------- | :------ | :------------: | :------------- | :------- |
-| name      | string  |  empty string  | Name           | string   |
-| position  | vec3    |  [ 0, 0, 0 ]   | LocalPosition  | vec3     |
-| rotation  | quat    | [ 0, 0, 0, 0 ] | LocalRotation  | quat     |
-| scale     | vec3    |                | LocalScale     | vec3     |
-| transform | mat4    |                | LocalTransform | mat4     |
-| visible   | boolean |      true      | Visible        | boolean  |
+| Name      | Type    | Default Value  | Description |
+| :-------- | :------ | :------------: | ----------- |
+| name      | string  |  empty string  |  |
+| localPosition  | vec3 |  [ 0, 0, 0 ]   |  |
+| localRotation  | quat | [ 0, 0, 0, 0 ] |  |
+| localScale     | vec3 | |  |
+| localTransform | mat4 | |  |
+| visible   | boolean |  true  |  |
+| parentedBoneName | string | | |
+| skipRaycast | boolean | | |
+| triggerable | boolean | | |
+| visibilityInherited | boolean | | |
+| anchorPosition | vec3 | | |
+| cursorHoverState | string | | |
+| offset | vec3 | | |
 
 ## Common Properties for UI elements
 
