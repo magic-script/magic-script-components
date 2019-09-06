@@ -22,8 +22,6 @@ export default class TextExample extends React.Component {
 }
 ```
 
-## Tag: `<Text>`
-
 ## [Common Events](../types/Events.md)
 
 ## [Common Properties](../types/Properties.md)

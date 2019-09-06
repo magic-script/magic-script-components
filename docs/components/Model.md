@@ -23,8 +23,6 @@ A MagicScript component for 3D model.
 
 - FBX file format is currently supported on ML1 only.
 
-## Tag: `<Model>`
-
 ## [Common Events](../types/Events.md)
 
 ## [Common Properties](../types/Properties.md)

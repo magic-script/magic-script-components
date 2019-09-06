@@ -3,7 +3,11 @@ id: textEdit
 title: TextEdit
 ---
 
-## Tag: `<TextEdit>`
+## Example
+
+```javascript
+<TextEdit />
+```
 
 ## [Common Events](../types/Events.md)
 

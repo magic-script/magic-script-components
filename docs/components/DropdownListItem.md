@@ -3,7 +3,11 @@ id: dropdownListItem
 title: DropdownListItem
 ---
 
-## Tag: `<DropdownListItem>`
+## Example
+
+```javascript
+<DropdownListItem />
+```
 
 ## [Common Events](../types/Events.md)
 
@@ -11,13 +15,13 @@ title: DropdownListItem
 
 ## Create Properties
 
-| Name   | Type   | Default Value | Description |
-| ------ | ------ | :-----------: | ----------- |
-| id     | number |      0        |  |
-| label  | string |      n/a      |  |
+| Name  | Type   | Default Value | Description |
+| ----- | ------ | :-----------: | ----------- |
+| id    | number |       0       |             |
+| label | string |      n/a      |             |
 
 ## Element Properties
 
-| Name   | Type   | Description |
-| ------ | ------ | ----------- |
+| Name     | Type    | Description                         |
+| -------- | ------- | ----------------------------------- |
 | selected | boolean | Set the selected state of this item |

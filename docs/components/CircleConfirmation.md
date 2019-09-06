@@ -3,7 +3,11 @@ id: circleConfirmation
 title: CircleConfirmation
 ---
 
-## Tag: `<CircleConfirmation>`
+## Example
+
+```javascript
+<CircleConfirmation />
+```
 
 ## [Common Events](../types/Events.md)
 

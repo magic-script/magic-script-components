@@ -3,7 +3,11 @@ id: audio
 title: Audio
 ---
 
-## Tag: `<Audio>`
+## Example
+
+```javascript
+<Audio />
+```
 
 ## [Common Events](../types/Events.md)
 

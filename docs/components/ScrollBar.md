@@ -3,7 +3,11 @@ id: scrollBar
 title: ScrollBar
 ---
 
-## Tag: `<ScrollBar>`
+## Example
+
+```javascript
+<ScrollBar />
+```
 
 ## [Common Events](../types/Events.md)
 

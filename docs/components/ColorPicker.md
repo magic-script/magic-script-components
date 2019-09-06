@@ -3,7 +3,11 @@ id: colorPicker
 title: ColorPicker
 ---
 
-## Tag: `<ColorPicker>`
+## Example
+
+```javascript
+<ColorPicker />
+```
 
 ## [Common Events](../types/Events.md)
 

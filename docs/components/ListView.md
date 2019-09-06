@@ -3,7 +3,11 @@ id: listView
 title: ListView
 ---
 
-## Tag: `<ListView>`
+## Example
+
+```javascript
+<ListView />
+```
 
 ## [Common Events](../types/Events.md)
 

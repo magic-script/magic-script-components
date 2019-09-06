@@ -3,7 +3,11 @@ id: datePicker
 title: DatePicker
 ---
 
-## Tag: `<DatePicker>`
+## Example
+
+```javascript
+<DatePicker />
+```
 
 ## [Common Events](../types/Events.md)
 

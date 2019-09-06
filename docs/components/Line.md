@@ -3,7 +3,11 @@ id: line
 title: Line
 ---
 
-## Tag: `<Line>`
+## Example
+
+```javascript
+<Line />
+```
 
 ## [Common Events](../types/Events.md)
 
@@ -11,6 +15,6 @@ title: Line
 
 ## Element Properties
 
-| Name   | Type   | Description |
-| :----- | :----- | ----------- |
+| Name   | Type   | Description                                                                                                                                                               |
+| :----- | :----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | points | [vec3] | Sets the points that describe this series of line segments. The line follows the order in which the points are added. No line can exist if there is less than two points. |

@@ -3,6 +3,10 @@ id: listViewItem
 title: ListViewItem
 ---
 
-## Tag: `<ListViewItem>`
+## Example
+
+```javascript
+<ListViewItem />
+```
 
 ## Properties: has no properties !

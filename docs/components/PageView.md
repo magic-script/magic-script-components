@@ -3,7 +3,11 @@ id: pageView
 title: PageView
 ---
 
-## Tag: `<PageView>`
+## Example
+
+```javascript
+<PageView />
+```
 
 ## [Common Events](../types/Events.md)
 

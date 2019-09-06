@@ -3,7 +3,11 @@ id: image
 title: Image
 ---
 
-## Tag: `<Image>`
+## Example
+
+```javascript
+<Image />
+```
 
 ## [Common Events](../types/Events.md)
 

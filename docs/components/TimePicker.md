@@ -3,7 +3,11 @@ id: timePicker
 title: TimePicker
 ---
 
-## Tag: `<TimePicker>`
+## Example
+
+```javascript
+<TimePicker />
+```
 
 ## [Common Events](../types/Events.md)
 

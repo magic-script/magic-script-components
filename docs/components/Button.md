@@ -3,7 +3,11 @@ id: button
 title: Button
 ---
 
-## Tag: `<Button>`
+## Example
+
+```javascript
+<Button />
+```
 
 ## [Common Events](../types/Events.md)
 

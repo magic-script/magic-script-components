@@ -3,7 +3,11 @@ id: panel
 title: Panel
 ---
 
-## Tag: `<Panel>`
+## Example
+
+```javascript
+<Panel />
+```
 
 ## [Common Events](../types/Events.md)
 
