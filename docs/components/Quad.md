@@ -5,8 +5,6 @@ title: Quad
 
 ## Tag: `<Quad>`
 
-- #### Lumin Runtime native component - QuadNode
-
 ## [Common Events](../types/Events.md)
 
 ## [Common Properties](../types/Properties.md)

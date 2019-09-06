@@ -5,8 +5,6 @@ title: TimePicker
 
 ## Tag: `<TimePicker>`
 
-- #### Lumin Runtime native component - UiTimePicker
-
 ## [Common Events](../types/Events.md)
 
 ## [Common Properties](../types/Properties.md)

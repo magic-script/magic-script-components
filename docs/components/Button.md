@@ -5,8 +5,6 @@ title: Button
 
 ## Tag: `<Button>`
 
-- #### Lumin Runtime native component - UiButton
-
 ## [Common Events](../types/Events.md)
 
 ## [Common Properties](../types/Properties.md)

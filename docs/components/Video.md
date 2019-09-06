@@ -5,8 +5,6 @@ title: Video
 
 ## Tag: `<Video>`
 
-- #### Lumin Runtime native component - VideoNode
-
 ## [Common Events](../types/Events.md)
 
 ## [Common Properties](../types/Properties.md)

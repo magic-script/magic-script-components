@@ -5,8 +5,6 @@ title: Content
 
 ## Tag: `<Content>`
 
-- #### Lumin Runtime native component - TransformNode
-
 ## [Common Events](../types/Events.md)
 
 ## [Common Properties](../types/Properties.md)

@@ -5,8 +5,6 @@ title: TextEdit
 
 ## Tag: `<TextEdit>`
 
-- #### Lumin Runtime native component - UiTextEdit
-
 ## [Common Events](../types/Events.md)
 
 ## [Common Properties](../types/Properties.md)

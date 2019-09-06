@@ -25,8 +25,6 @@ A MagicScript component for 3D model.
 
 ## Tag: `<Model>`
 
-- #### Lumin Runtime native component - ModelNode
-
 ## [Common Events](../types/Events.md)
 
 ## [Common Properties](../types/Properties.md)

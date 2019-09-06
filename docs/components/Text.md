@@ -24,8 +24,6 @@ export default class TextExample extends React.Component {
 
 ## Tag: `<Text>`
 
-- #### Lumin Runtime native component - UiText
-
 ## [Common Events](../types/Events.md)
 
 ## [Common Properties](../types/Properties.md)

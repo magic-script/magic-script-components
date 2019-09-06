@@ -5,8 +5,6 @@ title: ListView
 
 ## Tag: `<ListView>`
 
-- #### Lumin Runtime native component - UiListView
-
 ## [Common Events](../types/Events.md)
 
 ## [Common Properties](../types/Properties.md)

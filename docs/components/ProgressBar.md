@@ -5,8 +5,6 @@ title: ProgressBar
 
 ## Tag: `<ProgressBar>`
 
-- #### Lumin Runtime native component - UiProgressBar
-
 ## [Common Events](../types/Events.md)
 
 ## [Common Properties](../types/Properties.md)

@@ -5,8 +5,6 @@ title: ColorPicker
 
 ## Tag: `<ColorPicker>`
 
-- #### Lumin Runtime native component - UiColorPicker
-
 ## [Common Events](../types/Events.md)
 
 ## [Common Properties](../types/Properties.md)

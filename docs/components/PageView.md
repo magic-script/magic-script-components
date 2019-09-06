@@ -5,8 +5,6 @@ title: PageView
 
 ## Tag: `<PageView>`
 
-- #### Lumin Runtime native component - UiPageView
-
 ## [Common Events](../types/Events.md)
 
 ## [Common Properties](../types/Properties.md)

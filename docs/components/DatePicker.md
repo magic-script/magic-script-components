@@ -5,8 +5,6 @@ title: DatePicker
 
 ## Tag: `<DatePicker>`
 
-- #### Lumin Runtime native component - UiDatePickerNode
-
 ## [Common Events](../types/Events.md)
 
 ## [Common Properties](../types/Properties.md)

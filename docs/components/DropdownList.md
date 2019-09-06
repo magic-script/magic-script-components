@@ -5,8 +5,6 @@ title: DropdownList
 
 ## Tag: `<DropdownList>`
 
-- #### Lumin Runtime native component - UiDropdownList
-
 ## [Common Events](../types/Events.md)
 
 ## [Common Properties](../types/Properties.md)

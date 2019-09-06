@@ -5,8 +5,6 @@ title: DropdownListItem
 
 ## Tag: `<DropdownListItem>`
 
-- #### Lumin Runtime native component - DropdownListItem
-
 ## [Common Events](../types/Events.md)
 
 ## [Common Properties](../types/Properties.md)

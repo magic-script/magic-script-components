@@ -5,8 +5,6 @@ title: CircleConfirmation
 
 ## Tag: `<CircleConfirmation>`
 
-- #### Lumin Runtime native component - UiCircleConfirmationNode
-
 ## [Common Events](../types/Events.md)
 
 ## [Common Properties](../types/Properties.md)

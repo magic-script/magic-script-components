@@ -5,8 +5,6 @@ title: RectLayout
 
 ## Tag: `<RectLayout>`
 
-- #### Lumin Runtime native component - UiRectLayout
-
 ## [Common Events](../types/Events.md)
 
 ## [Common Properties](../types/Properties.md)

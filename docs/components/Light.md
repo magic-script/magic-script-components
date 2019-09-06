@@ -5,8 +5,6 @@ title: Light
 
 ## Tag: `<Light>`
 
-- #### Lumin Runtime native component - LightNode
-
 ## [Common Events](../types/Events.md)
 
 ## [Common Properties](../types/Properties.md)

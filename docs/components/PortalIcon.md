@@ -5,8 +5,6 @@ title: PortalIcon
 
 ## Tag: `<PortalIcon>`
 
-- #### Lumin Runtime native component - UiPortalIcon
-
 ## [Common Events](../types/Events.md)
 
 ## [Common Properties](../types/Properties.md)

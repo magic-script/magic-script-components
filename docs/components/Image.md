@@ -5,8 +5,6 @@ title: Image
 
 ## Tag: `<Image>`
 
-- #### Lumin Runtime native component - UiImage
-
 ## [Common Events](../types/Events.md)
 
 ## [Common Properties](../types/Properties.md)

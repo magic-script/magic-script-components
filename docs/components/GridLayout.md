@@ -5,8 +5,6 @@ title: GridLayout
 
 ## Tag: `<GridLayout>`
 
-- #### Lumin Runtime native component - UiGridLayout
-
 ## [Common Events](../types/Events.md)
 
 ## [Common Properties](../types/Properties.md)

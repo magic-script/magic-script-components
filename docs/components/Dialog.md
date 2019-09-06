@@ -5,8 +5,6 @@ title: Dialog
 
 ## Tag: `<Dialog>`
 
-- #### Lumin Runtime native component - UiDialog
-
 ## [Common Events](../types/Events.md)
 
 ## [Common Properties](../types/Properties.md)

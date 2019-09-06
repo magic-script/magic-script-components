@@ -5,8 +5,6 @@ title: ScrollBar
 
 ## Tag: `<ScrollBar>`
 
-- #### Lumin Runtime native component - UiScrollBar
-
 ## [Common Events](../types/Events.md)
 
 ## [Common Properties](../types/Properties.md)

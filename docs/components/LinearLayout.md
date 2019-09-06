@@ -5,8 +5,6 @@ title: LinearLayout
 
 ## Tag: `<LinearLayout>`
 
-- #### Lumin Runtime native component - UiLinearLayout
-
 ## [Common Events](../types/Events.md)
 
 ## [Common Properties](../types/Properties.md)

@@ -5,8 +5,6 @@ title: Panel
 
 ## Tag: `<Panel>`
 
-- #### Lumin Runtime native component - UiPanel
-
 ## [Common Events](../types/Events.md)
 
 ## [Common Properties](../types/Properties.md)
