@@ -26,9 +26,9 @@ title: MagicScript Components
 | 17    | [Model](components/Model.md)                           | ModelNode                     | :thumbsup: |
 | 18    | [PageView](components/PageView.md)                     | UiPageView                    | :thumbsup: |
 | 19    | [Panel](components/Panel.md)                           | UiPanel                       | :thumbsup: |
-| 20    | PortalIcon                                             | UiPortalIcon                  | :thumbsup: |
+| 20    | [PortalIcon](components/PortalIcon.md)                 | UiPortalIcon                  | :thumbsup: |
 | 21    | [ProgressBar](components/ProgressBar.md)               | UiProgressBar                 | :thumbsup: |
-| 22    | Quad                                                   | x                             | :thumbsup: |
+| 22    | [Quad](components/Quad.md)                             | QuadNode                      | :thumbsup: |
 | 23    | [RectLayout](components/RectLayout.md)                 | UiRectLayout                  | :thumbsup: |
 | 24    | [ScrollBar](components/ScrollBar.md)                   | UiScrollBar                   | :thumbsup: |
 | 25    | ScrollView                                             | UiScrollView                  | :thumbsup: |

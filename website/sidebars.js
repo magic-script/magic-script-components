@@ -29,7 +29,9 @@ module.exports = {
       "components/model",
       "components/pageView",
       "components/panel",
+      "components/portalIcon",
       "components/progressBar",
+      "components/quad",
       "components/rectLayout",
       "components/scrollBar",
       "components/text",
@@ -44,13 +46,16 @@ module.exports = {
       "types/cursorHoverState",
       "types/events",
       "types/iconType",
+      "types/labelDisplayMode",
       "types/lightType",
       "types/orientation",
       "types/panelCursorTransitionType",
       "types/panelEdgeConstraintLevel",
+      "types/portalIconSize",
       "types/properties",
       "types/side",
-      "types/textureType"
+      "types/textureType",
+      "types/viewMode"
     ]
   }
 };
