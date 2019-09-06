@@ -3,6 +3,8 @@ id: progressBar
 title: ProgressBar
 ---
 
+ProgressBar is a component used to visualize the progression of an extended operation.
+
 ## Example
 
 ```javascript

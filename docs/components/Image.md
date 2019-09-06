@@ -3,6 +3,8 @@ id: image
 title: Image
 ---
 
+Image is a component for displaying different types of images.
+
 ## Example
 
 ```javascript

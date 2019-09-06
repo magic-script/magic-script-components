@@ -3,6 +3,8 @@ id: listView
 title: ListView
 ---
 
+ListView is a component for displaying lists of information.
+
 ## Example
 
 ```javascript

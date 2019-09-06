@@ -3,7 +3,7 @@ id: text
 title: Text
 ---
 
-A MagicScript component for displaying text.
+Text is a component for displaying text.
 
 ## Example
 

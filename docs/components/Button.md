@@ -3,6 +3,8 @@ id: button
 title: Button
 ---
 
+Button is a component used to interact with an application.
+
 ## Example
 
 ```javascript

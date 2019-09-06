@@ -3,6 +3,8 @@ id: textEdit
 title: TextEdit
 ---
 
+TextEdit is a component for inputting text into the application.
+
 ## Example
 
 ```javascript
