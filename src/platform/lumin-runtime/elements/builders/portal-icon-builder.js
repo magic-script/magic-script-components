@@ -9,6 +9,7 @@ import { TextChildrenProperty } from '../properties/text-children-property.js';
 import { PropertyDescriptor } from '../properties/property-descriptor.js';
 
 import { PortalIconSize } from '../../types/portal-icon-size.js';
+import { validator } from '../../utilities/validator.js';
 
 export class PortalIconBuilder extends TextContainerBuilder {
     constructor(){
@@ -32,17 +33,17 @@ export class PortalIconBuilder extends TextContainerBuilder {
         this.throwIfInvalidPrism(prism);
         this.validate(undefined, undefined, properties);
 
-        let { text, portalSize } = properties;
+        let { text, iconSize } = properties;
 
         if (text === undefined) {
             text = this._getText(properties.children);
         }
 
-        portalSize = portalSize === undefined
+        iconSize = iconSize === undefined
             ? ui.PortalIconSize.kSmall
-            : PortalIconSize[portalSize];
+            : PortalIconSize[iconSize];
 
-        const element = ui.UiPortalIcon.Create(prism, text, portalSize);
+        const element = ui.UiPortalIcon.Create(prism, text, iconSize);
 
         const unapplied = this.excludeProperties(properties, ['children', 'text']);
 
@@ -51,15 +52,14 @@ export class PortalIconBuilder extends TextContainerBuilder {
         return element;
     }
 
-    // update(element, oldProperties, newProperties) {
-    //     // this.throwIfNotInstanceOf(element, ui.UiText);
-    //     super.update(element, oldProperties, newProperties);
-    // }
 
     validate(element, oldProperties, newProperties) {
         super.validate(element, oldProperties, newProperties);
 
         PropertyDescriptor.throwIfNotTypeOf(newProperties.text, 'string');
         TextChildrenProperty.throwIfNotText(newProperties.children);
+
+        const message = `The provided icon size ${newProperties.iconSize} is not a valid value`;
+        PropertyDescriptor.throwIfPredicateFails(newProperties.iconSize, message, validator.validatePortalIconSize);
     }
 }
