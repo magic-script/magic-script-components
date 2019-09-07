@@ -10,8 +10,8 @@ export class ToggleGroupBuilder extends UiNodeBuilder {
     constructor(){
         super();
 
-        this._propertyDescriptors['allowMultipleTogglesOn'] = new PrimitiveTypeProperty('allowMultipleTogglesOn', 'setAllowMultipleTogglesOn', true, 'boolean');
-        this._propertyDescriptors['allowAllTogglesOff'] = new PrimitiveTypeProperty('allowAllTogglesOff', 'setAllowAllTogglesOff', true, 'boolean');
+        this._propertyDescriptors['allowMultipleOn'] = new PrimitiveTypeProperty('allowMultipleOn', 'setAllowMultipleTogglesOn', true, 'boolean');
+        this._propertyDescriptors['allowAllOff'] = new PrimitiveTypeProperty('allowAllOff', 'setAllowAllTogglesOff', true, 'boolean');
         this._propertyDescriptors['allTogglesOff'] = new PrimitiveTypeProperty('allTogglesOff', 'setAllTogglesOff', true, 'boolean');
     }
 
@@ -20,7 +20,8 @@ export class ToggleGroupBuilder extends UiNodeBuilder {
 
         this.validate(undefined, undefined, properties);
 
-        const { allowMultipleOn, allowAllOff } = properties;
+        const allowMultipleOn = this.getPropertyValue('allowMultipleOn', false, properties);
+        const allowAllOff = this.getPropertyValue('allowAllOff', false, properties);
 
         const element = ui.UiToggleGroup.Create(prism, allowMultipleOn, allowAllOff);
 
@@ -30,9 +31,4 @@ export class ToggleGroupBuilder extends UiNodeBuilder {
 
         return element;
     }
-
-    // update(element, oldProperties, newProperties) {
-    //     // this.throwIfNotInstanceOf(element, ui.UiImage);
-    //     super.update(element, oldProperties, newProperties);
-    // }
 }
