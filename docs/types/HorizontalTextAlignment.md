@@ -4,7 +4,7 @@ title: HorizontalTextAlignment
 ---
 
 ## HorizontalTextAlignment options:
- = center
- = justify
- = left
- = right
+ - center
+ - justify
+ - left
+ - right
