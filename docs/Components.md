@@ -34,7 +34,7 @@ title: MagicScript Components
 | 25    | [ScrollView](components/ScrollView.md)                 | UiScrollView                  | :thumbsup: |
 | 26    | [Slider](components/Slider.md)                         | UiSlider                      | :thumbsup: |
 | 27    | [Spinner](components/Spinner.md)                       | UiLoadingSpinner              | :thumbsup: |
-| 28    | Tab                                                    | UiTab                         | :thumbsup: |
+| 28    | [Tab](components/Tab.md)                               | UiTab                         | :thumbsup: |
 | 29    | [Text](components/Text.md)                             | UiText                        | :thumbsup: |
 | 30    | [TextEdit](components/TextEdit.md)                     | UiTextEdit                    | :thumbsup: |
 | 31    | [TimePicker](components/TimePicker.md)                 | UiTimePicker                  | :thumbsup: |
