@@ -38,11 +38,6 @@ export class LoadingSpinnerBuilder extends UiNodeBuilder {
         return element;
     }
 
-    // update(element, oldProperties, newProperties) {
-    //     // this.throwIfNotInstanceOf(element, ui.UiImage);
-    //     super.update(element, oldProperties, newProperties);
-    // }
-
     validate(element, oldProperties, newProperties) {
         super.validate(element, oldProperties, newProperties);
 
