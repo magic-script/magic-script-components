@@ -31,9 +31,9 @@ title: MagicScript Components
 | 22    | [Quad](components/Quad.md)                             | QuadNode                      | :thumbsup: |
 | 23    | [RectLayout](components/RectLayout.md)                 | UiRectLayout                  | :thumbsup: |
 | 24    | [ScrollBar](components/ScrollBar.md)                   | UiScrollBar                   | :thumbsup: |
-| 25    | ScrollView                                             | UiScrollView                  | :thumbsup: |
-| 26    | Slider                                                 | UiSlider                      | :thumbsup: |
-| 27    | Spinner                                                | UiLoadingSpinner              | :thumbsup: |
+| 25    | [ScrollView](components/ScrollView.md)                 | UiScrollView                  | :thumbsup: |
+| 26    | [Slider](components/Slider.md)                         | UiSlider                      | :thumbsup: |
+| 27    | [Spinner](components/Spinner.md)                       | UiLoadingSpinner              | :thumbsup: |
 | 28    | Tab                                                    | UiTab                         | :thumbsup: |
 | 29    | [Text](components/Text.md)                             | UiText                        | :thumbsup: |
 | 30    | [TextEdit](components/TextEdit.md)                     | UiTextEdit                    | :thumbsup: |
