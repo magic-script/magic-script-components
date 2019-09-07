@@ -44,12 +44,6 @@ export class ScrollViewBuilder extends UiNodeBuilder {
         return element;
     }
 
-    // update(element, oldProperties, newProperties) {
-    //     // this.throwIfNotInstanceOf(element, ui.UiScrollView);
-    //     super.update(element, oldProperties, newProperties);
-    // }
-
-
     setScrollBounds(element, oldProperties, newProperties) {
         const { min, max } = newProperties;
 
