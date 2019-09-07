@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[99],{131:function(e){e.exports=JSON.parse('{"id":"types/viewMode","title":"ViewMode Type","description":"# ViewMode options:","source":"@site/../docs/types/ViewMode.md","permalink":"/docs/types/viewMode","sidebar":"docs","category":"Types","previous":"types/textureType","previous_title":"Texture Type"}')}}]);
