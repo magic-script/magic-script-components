@@ -4,7 +4,6 @@ title: CursorHoverState
 ---
 
 # CursorHoverState options:
-
 - browser-default
 - browser-pointer
 - crosshair
