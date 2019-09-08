@@ -3,7 +3,8 @@ id: cursorHoverState
 title: CursorHoverState
 ---
 
-# CursorHoverState options:
+## CursorHoverState options
+
 - browser-default
 - browser-pointer
 - crosshair

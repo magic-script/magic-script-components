@@ -3,8 +3,9 @@ id: horizontalTextAlignment
 title: HorizontalTextAlignment
 ---
 
-## HorizontalTextAlignment options:
- - center
- - justify
- - left
- - right
+## HorizontalTextAlignment options
+
+- center
+- justify
+- left
+- right

@@ -3,7 +3,8 @@ id: scrollBarVisibility
 title: ScrollBarVisibility
 ---
 
-# ScrollBarVisibility options:
- - always
- - auto
- - off
+## ScrollBarVisibility options
+
+- always
+- auto
+- off

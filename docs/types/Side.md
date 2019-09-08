@@ -3,8 +3,9 @@ id: side
 title: Side
 ---
 
-# Side options:
- - bottom
- - left
- - right
- - top
+## Side options
+
+- bottom
+- left
+- right
+- top

@@ -3,6 +3,7 @@ id: viewMode
 title: ViewMode Type
 ---
 
-# ViewMode options:
- - full-area
- - left-right
+## ViewMode options
+
+- full-area
+- left-right

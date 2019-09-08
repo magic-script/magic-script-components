@@ -3,6 +3,7 @@ id: fontStyle
 title: FontStyle
 ---
 
-# FontStyle options:
- - normal
- - italic
+## FontStyle options
+
+- normal
+- italic

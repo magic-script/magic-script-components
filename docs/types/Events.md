@@ -4,6 +4,7 @@ title: Events
 ---
 
 ## Common Events for the Ui elements
+
 - onActivate
 - onPressed
 - onLongPress
