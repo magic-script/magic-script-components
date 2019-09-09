@@ -17,4 +17,4 @@ title: CircleConfirmation
 
 | Name   | Type   | Default Value | Description                                   |
 | ------ | ------ | :-----------: | --------------------------------------------- |
-| height | string |       0       | The radius of the circle the knob evolves at. |
+| height | number |      `0`      | The radius of the circle the knob evolves at. |

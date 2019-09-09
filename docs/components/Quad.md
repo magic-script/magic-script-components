@@ -23,7 +23,7 @@ title: Quad
 
 | Name      | Type   | Description                                                                                                                                                          |
 | :-------- | :----- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| texCoords | vec2   | Set the texture coordinates of the node being rendered, if the resource is a texture. If the type of the render resource is not a texture, this will have no effect. |
+| texCoords | [vec2] | Set the texture coordinates of the node being rendered, if the resource is a texture. If the type of the render resource is not a texture, this will have no effect. |
 | viewMode  | string | Set the current ViewMode to the given value.                                                                                                                         |
 | size      | vec2   | Set the custom size, which is by default one: [1, 1].                                                                                                                |
 

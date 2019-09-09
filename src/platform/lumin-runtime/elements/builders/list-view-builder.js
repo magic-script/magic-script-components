@@ -18,18 +18,18 @@ export class ListViewBuilder extends UiNodeBuilder {
     constructor(){
         super();
 
-        this._propertyDescriptors['cursorEdgeScrollMode'] = new EnumProperty('cursorEdgeScrollMode', 'setCursorEdgeScrollMode', true, CursorEdgeScrollMode, 'CursorEdgeScrollMode');
-        this._propertyDescriptors['defaultItemAlignment'] = new EnumProperty('defaultItemAlignment', 'setDefaultItemAlignment', true, Alignment, 'Alignment');
+        this._propertyDescriptors['cursorEdgeScrollMode'] = new EnumProperty('cursorEdgeScrollMode', 'setCursorEdgeScrollMode', false, CursorEdgeScrollMode, 'CursorEdgeScrollMode');
+        this._propertyDescriptors['defaultItemAlignment'] = new EnumProperty('defaultItemAlignment', 'setDefaultItemAlignment', false, Alignment, 'Alignment');
         this._propertyDescriptors['defaultItemPadding'] = new ArrayProperty('defaultItemPadding', 'setDefaultItemPadding', true, 'vec4');
-        this._propertyDescriptors['defaultItemAlignment'] = new EnumProperty('orientation', 'setOrientation', true, Orientation, 'Orientation');
+        this._propertyDescriptors['orientation'] = new EnumProperty('orientation', 'setOrientation', false, Orientation, 'Orientation');
 
-        // TODO: ScrollBar
+        // ScrollBar
 
-        this._propertyDescriptors['scrollBarVisibility'] = new EnumProperty('scrollBarVisibility', 'setScrollBarVisibilityMode', true, ScrollBarVisibility, 'ScrollBarVisibility');
+        this._propertyDescriptors['scrollBarVisibility'] = new EnumProperty('scrollBarVisibility', 'setScrollBarVisibilityMode', false, ScrollBarVisibility, 'ScrollBarVisibility');
         this._propertyDescriptors['scrollingEnabled'] = new PrimitiveTypeProperty('scrollingEnabled', 'setScrollingEnabled', true, 'boolean');
         this._propertyDescriptors['scrollSpeed'] = new PrimitiveTypeProperty('scrollSpeed', 'setScrollSpeed', true, 'number');
         this._propertyDescriptors['scrollValue'] = new PrimitiveTypeProperty('scrollValue', 'setScrollValue', true, 'number');
-        this._propertyDescriptors['scrollToItem'] = new PrimitiveTypeProperty('scrollToItem', 'setScrollToItem', true, 'number');
+        this._propertyDescriptors['scrollToItem'] = new PrimitiveTypeProperty('scrollToItem', 'scrollToItem', true, 'number');
         this._propertyDescriptors['skipInvisibleItems'] = new PrimitiveTypeProperty('skipInvisibleItems', 'setSkipInvisibleItems', true, 'boolean');
 
         // itemAlignment
@@ -65,20 +65,31 @@ export class ListViewBuilder extends UiNodeBuilder {
         return element;
     }
 
-    // update(element, oldProperties, newProperties) {
-    //     // this.throwIfNotInstanceOf(element, ui.UiListView);
-    //     super.update(element, oldProperties, newProperties);
-    // }
-
     validate(element, oldProperties, newProperties) {
         super.validate(element, oldProperties, newProperties);
 
         this._validateSize(newProperties);
     }
 
+    setCursorEdgeScrollMode(element, oldProperties, newProperties) {
+        element.setCursorEdgeScrollMode(CursorEdgeScrollMode[newProperties.cursorEdgeScrollMode]);
+    }
+
+    setDefaultItemAlignment(element, oldProperties, newProperties) {
+        element.setDefaultItemAlignment(Alignment[newProperties.defaultItemAlignment]);
+    }
+
+    setOrientation(element, oldProperties, newProperties) {
+        element.setOrientation(Orientation[newProperties.orientation]);
+    }
+
+    setScrollBarVisibilityMode(element, oldProperties, newProperties) {
+        element.setScrollBarVisibilityMode(ScrollBarVisibility[newProperties.scrollBarVisibility])
+    }
+
     setItemAlignment(element, oldProperties, newProperties) {
         const { index, alignment } = newProperties.itemAlignment;
-        element.setItemAlignment(index, alignment);
+        element.setItemAlignment(index, Alignment[alignment]);
     }
 
     setItemPadding(element, oldProperties, newProperties) {

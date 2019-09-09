@@ -18,11 +18,6 @@ export class TextContainerBuilder extends UiNodeBuilder {
         this._propertyDescriptors['textSize'] = new PrimitiveTypeProperty('textSize', 'setTextSize', true, 'number');
     }
 
-    // update(element, oldProperties, newProperties) {
-    //     // this.throwIfNotInstanceOf(element, ui.UiText, ui.UiButton, ui.UiTextEdit, ui.UiDropDownList, ui.UiToggle, ui.UiTab);
-    //     super.update(element, oldProperties, newProperties);
-    // }
-
     setText(element, oldProperties, newProperties) {
         let text = newProperties.text;
 

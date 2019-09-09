@@ -19,39 +19,39 @@ Image is a component for displaying different types of images.
 
 > Image offers 3 constructors accepting different property sets
 
-| Name         | Type    | Default Value | LRT Name     | LRT type |
-| ------------ | ------- | :-----------: | ------------ | -------- |
-| filePath     | string  |      n/a      | pngFile      | string   |
-| width        | number  |      n/a      | Width        | number   |
-| height       | number  |      n/a      | Height       | number   |
-| absolutePath | boolean |     False     | AbsolutePath | boolean  |
-| useFrame     | boolean |     False     | UseFrame     | boolean  |
+| Name         | Type    | Default Value | Description                                                             |
+| ------------ | ------- | :-----------: | ----------------------------------------------------------------------- |
+| filePath     | string  |      n/a      | The path to the file to render for the image.                           |
+| width        | number  |      n/a      | The width of the image.                                                 |
+| height       | number  |      n/a      | The height of the image.                                                |
+| absolutePath | boolean |    `false`    | Flag that pngFile is an absolute path name, instead of a relative path. |
+| useFrame     | boolean |    `false`    | Specifies whether the image should have a frame.                        |
 
 ---
 
-| Name       | Type    | Default Value | LRT Name | LRT type |
-| ---------- | ------- | :-----------: | -------- | -------- |
-| resourceId | number  |      n/a      | ResId    | number   |
-| width      | number  |      n/a      | Width    | number   |
-| height     | number  |      n/a      | Height   | number   |
-| useFrame   | boolean |     False     | UseFrame | boolean  |
+| Name       | Type    | Default Value | Description                                      |
+| ---------- | ------- | :-----------: | ------------------------------------------------ |
+| resourceId | BigInt  |      n/a      | The resource ID to render for the image.         |
+| width      | number  |      n/a      | The width of the image.                          |
+| height     | number  |      n/a      | The height of the image.                         |
+| useFrame   | boolean |    `false`    | Specifies whether the image should have a frame. |
 
 ---
 
-| Name   | Type   | Default Value | LRT Name | LRT type            |
-| ------ | ------ | :-----------: | -------- | ------------------- |
-| icon   | string |      n/a      | Type     | lumin.ui.SystemIcon |
-| height | number |      n/a      | Height   | number              |
+| Name   | Type   | Default Value | Description                        |
+| ------ | ------ | :-----------: | ---------------------------------- |
+| icon   | string |      n/a      | The SystemIcon type for the image. |
+| height | number |      n/a      | The height of the image.           |
+
+### icon options: [IconType](../types/IconType.md)
 
 ## Element Properties
 
-| Name               | Type    | LRT Name           | LRT type |
-| :----------------- | :------ | :----------------- | :------- |
-| color              | vec4    | Color              | vec4     |
-| width              | number  | Width              | number   |
-| height             | number  | Height             | number   |
-| textCoords         | vec4    | TextCoords         | array[4] |
-| opaque             | boolean | IsOpaque           | boolean  |
-| ui                 | boolean | IsUI               | boolean  |
-| imageFrameResource | number  | ImageFrameResource | number   |
-| renderResource     | number  | RenderResource     | number   |
+| Name               | Type    | Description                              |
+| :----------------- | :------ | ---------------------------------------- |
+| color              | vec4    | Sets a color to modulate the image with. |
+| textCoords         | [vec2]  | Sets the texture coordinates used by the Image. The texture coordinates must be a list of 4 coordinates representing the UV coordinates of the 4 corners. |
+| opaque             | boolean | Sets the opacity state of the image. |
+| ui                 | boolean | Sets if the image needs to be rendered on UI Layer. |
+| imageFrameResource | BigInt  | Sets the model resource used for the image frame. Note: Frame models are expected to be sized at 1 meter high and 1 meter wide and to be centered at the origin. |
+| renderResource     | BigInt  | Sets the render resource used for the image. |
