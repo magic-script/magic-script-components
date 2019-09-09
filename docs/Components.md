@@ -38,8 +38,8 @@ title: MagicScript Components
 | 29    | [Text](components/Text.md)                             | UiText                        | :thumbsup: |
 | 30    | [TextEdit](components/TextEdit.md)                     | UiTextEdit                    | :thumbsup: |
 | 31    | [TimePicker](components/TimePicker.md)                 | UiTimePicker                  | :thumbsup: |
-| 32    | Toggle                                                 | UiToggle                      | :thumbsup: |
-| 33    | ToggleGroup                                            | UiToggleGroup                 | :thumbsup: |
+| 32    | [Toggle](components/Toggle.md)                         | UiToggle                      | :thumbsup: |
+| 33    | [ToggleGroup](components/ToggleGroup.md)               | UiToggleGroup                 | :thumbsup: |
 | 34    | [Video](components/Video.md)                           | VideoNode                     | :thumbsup: |
 | 35    | [View](components/View.md)                             | UiGroup                       | :thumbsup: |
 | 36    | WebView                                                | UiWebView                     | :thumbsup: |

@@ -3,6 +3,7 @@ id: scrollDirection
 title: ScrollDirection
 ---
 
-# ScrollDirection options:
- - horizontal
- - vertical
+## ScrollDirection options
+
+- horizontal
+- vertical

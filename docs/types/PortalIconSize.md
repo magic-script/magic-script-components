@@ -3,9 +3,10 @@ id: portalIconSize
 title: PortalIconSize
 ---
 
-# PortalIconSize options:
- - extra-large
- - large
- - medium
- - small
- - extra-small
+## PortalIconSize options
+
+- extra-large
+- large
+- medium
+- small
+- extra-small

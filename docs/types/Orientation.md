@@ -3,6 +3,7 @@ id: orientation
 title: Orientation Type
 ---
 
-# Orientation Type options:
- - horizontal
- - vertical
+## Orientation Type options
+
+- horizontal
+- vertical

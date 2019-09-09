@@ -3,6 +3,7 @@ id: labelDisplayMode
 title: LabelDisplayMode
 ---
 
-## LabelDisplayMode options:
- - always
- - hover
+## LabelDisplayMode options
+
+- always
+- hover

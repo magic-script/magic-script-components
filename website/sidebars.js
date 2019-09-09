@@ -37,9 +37,12 @@ module.exports = {
       "components/scrollView",
       "components/slider",
       "components/spinner",
+      "components/tab",
       "components/text",
       "components/textEdit",
       "components/timePicker",
+      "components/toggle",
+      "components/toggleGroup",
       "components/video",
       "components/view"
     ],
@@ -47,7 +50,11 @@ module.exports = {
       "types/alignment",
       "types/buttonType",
       "types/cursorHoverState",
+      "types/eclipseLabelType",
       "types/events",
+      "types/fontStyle",
+      "types/fontWeight",
+      "types/horizontalTextAlignment",
       "types/iconType",
       "types/labelDisplayMode",
       "types/lightType",
@@ -61,6 +68,7 @@ module.exports = {
       "types/scrollDirection",
       "types/side",
       "types/textureType",
+      "types/toggleType",
       "types/viewMode"
     ]
   }
