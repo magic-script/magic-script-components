@@ -17,7 +17,7 @@ export class ImageBuilder extends UiNodeBuilder {
         this._propertyDescriptors['ui'] = new PrimitiveTypeProperty('ui', 'setIsUI', true, 'boolean');
         this._propertyDescriptors['opaque'] = new PrimitiveTypeProperty('opaque', 'setIsOpaque', true, 'boolean');
         this._propertyDescriptors['color'] = new ArrayProperty('color', 'setColor', true, 'vec4');
-        this._propertyDescriptors['texCoords'] = new ArrayProperty('texCoords', 'setTexCoords', true, 'vec4');
+        this._propertyDescriptors['texCoords'] = new ArrayProperty('texCoords', 'setTexCoords', false, 'vec4');
 
         // Expects Id
         this._propertyDescriptors['imageFrameResource'] = new PrimitiveTypeProperty('imageFrameResource', 'setImageFrameResource', true, 'number');
@@ -91,6 +91,12 @@ export class ImageBuilder extends UiNodeBuilder {
 
             element.setSize([width, height]);
         }
+    }
+
+    setTexCoords(element, oldProperties, newProperties) {
+        const texCoords = newProperties.texCoords;
+        texCoords.forEach( coordinate => PropertyDescriptor.throwIfNotArray(coordinate, 'vec2') );
+        element.setTexCoords(texCoords);
     }
 }
 

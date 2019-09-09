@@ -15,7 +15,7 @@ title: PageView
 
 ## Properties
 
-| Name   | Type   | Default Value | LRT Name | LRT type |
-| ------ | ------ | :-----------: | -------- | -------- |
-| width  | number |      n/a      | Width    | number   |
-| height | number |      n/a      | Height   | number   |
+| Name   | Type   | Default Value | Description                                                                      |
+| ------ | ------ | :-----------: | -------------------------------------------------------------------------------- |
+| width  | number |      `0`      | The width of the page view. The default (0) allows the view to grow to content.  |
+| height | number |      `0`      | The height of the page view. The default (0) allows the view to grow to content. |

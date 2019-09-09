@@ -13,7 +13,7 @@ export class QuadBuilder extends RenderBuilder {
         super();
 
         this._propertyDescriptors['renderResourceId'] = new PrimitiveTypeProperty('renderResourceId', 'setRenderResource', true, 'number');
-        this._propertyDescriptors['texCoords'] = new ArrayProperty('texCoords', 'setTexCoords', true, 'vec2');
+        this._propertyDescriptors['texCoords'] = new ArrayProperty('texCoords', 'setTexCoords', false, 'vec4');
         this._propertyDescriptors['viewMode'] = new EnumProperty('viewMode', 'setViewMode', true, ViewMode, 'ViewMode');
         this._propertyDescriptors['size'] = new ArrayProperty('size', 'setSize', true, 'vec2');
     }
@@ -67,5 +67,11 @@ export class QuadBuilder extends RenderBuilder {
         if (subTexture !== undefined) {
             element.setSubTexture(subTexture);
         }
+    }
+
+    setTexCoords(element, oldProperties, newProperties) {
+        const texCoords = newProperties.texCoords;
+        texCoords.forEach( coordinate => PropertyDescriptor.throwIfNotArray(coordinate, 'vec2') );
+        element.setTexCoords(texCoords);
     }
 }

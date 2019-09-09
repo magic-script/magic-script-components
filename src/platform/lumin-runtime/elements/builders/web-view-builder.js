@@ -15,49 +15,29 @@ export class WebViewBuilder extends UiNodeBuilder {
 
         this.validate(undefined, undefined, properties);
 
-        const { height, width } = properties;
+        const { width, height } = properties;
 
         const element = ui.UiWebView.Create(prism, [width, height]);
 
-        const unapplied = this.excludeProperties(properties, ['height', 'width']);
+        const unapplied = this.excludeProperties(properties, ['width, height']);
 
         this.apply(element, undefined, unapplied);
 
         return element;
     }
 
-    update(element, oldProperties, newProperties) {
-        // this.throwIfNotInstanceOf(element, ui.UiImage);
-        super.update(element, oldProperties, newProperties);
-
-        this._validateSize(properties);
-        this._setSize(element, properties);
-    }
-
     validate(element, oldProperties, newProperties) {
         super.validate(element, oldProperties, newProperties);
 
-        this._validateSize(newProperties);
+        _validateProperty(newProperties.width, 'number', 'Property width is required.');
+        _validateProperty(newProperties.height, 'number', 'Property height is required.');
     }
 
-    _validateSize(properties) {
-        PropertyDescriptor.throwIfNotTypeOf(properties.height, 'number');
-        PropertyDescriptor.throwIfNotTypeOf(properties.width, 'number');
-    }
-
-    _setSize(element, properties) {
-        const { height, width } = properties;
-
-        if (width || height) {
-            if (width === undefined) {
-                width = element.getSize()[0];
-            }
-
-            if (height === undefined) {
-                height = element.getSize()[1];
-            }
-
-            element.setSize([height, width]);
+    _validateProperty(value, type, errorMessage) {
+        if (PropertyDescriptor.hasValue(value)) {
+            PropertyDescriptor.throwIfNotTypeOf(value, type);
+        } else {
+            throw new TypeError(errorMessage);
         }
     }
 }
