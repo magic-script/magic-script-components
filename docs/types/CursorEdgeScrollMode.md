@@ -3,7 +3,8 @@ id: cursorEdgeScrollMode
 title: CursorEdgeScrollMode
 ---
 
-# CursorEdgeScrollMode options:
- - always
- - auto
- - never
+## CursorEdgeScrollMode options
+
+- always
+- auto
+- never
