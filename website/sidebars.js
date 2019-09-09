@@ -44,14 +44,18 @@ module.exports = {
       "components/toggle",
       "components/toggleGroup",
       "components/video",
-      "components/view"
+      "components/view",
+      "components/webView"
     ],
     Types: [
+      "types/advanceDirection",
       "types/alignment",
       "types/buttonType",
+      "types/cursorEdgeScrollMode",
       "types/cursorHoverState",
       "types/eclipseLabelType",
       "types/events",
+      "types/flowDirection",
       "types/fontStyle",
       "types/fontWeight",
       "types/horizontalTextAlignment",
@@ -64,9 +68,11 @@ module.exports = {
       "types/panelEdgeConstraintLevel",
       "types/portalIconSize",
       "types/properties",
+      "types/quality",
       "types/scrollBarVisibility",
       "types/scrollDirection",
       "types/side",
+      "types/textEntryMode",
       "types/textureType",
       "types/toggleType",
       "types/viewMode"

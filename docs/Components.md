@@ -42,4 +42,4 @@ title: MagicScript Components
 | 33    | [ToggleGroup](components/ToggleGroup.md)               | UiToggleGroup                 | :thumbsup: |
 | 34    | [Video](components/Video.md)                           | VideoNode                     | :thumbsup: |
 | 35    | [View](components/View.md)                             | UiGroup                       | :thumbsup: |
-| 36    | WebView                                                | UiWebView                     | :thumbsup: |
+| 36    | [WebView](components/WebView.md)                       | UiWebView                     | :thumbsup: |
