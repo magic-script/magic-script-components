@@ -1,15 +1,17 @@
 ---
-id: datepicker
+id: datePicker
 title: DatePicker
 ---
 
-## Tag: `<DatePicker>`
+## Example
 
-- #### Lumin Runtime native component - UiDatePickerNode
+```javascript
+<DatePicker />
+```
 
-## [Common Events](../Events.md)
+## [Common Events](../types/Events.md)
 
-## [Common Properties](../Properties.md)
+## [Common Properties](../types/Properties.md)
 
 ## Create Properties
 

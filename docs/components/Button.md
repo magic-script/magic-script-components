@@ -3,28 +3,33 @@ id: button
 title: Button
 ---
 
-## Tag: `<Button>`
+Button is a component used to interact with an application.
 
-- #### Lumin Runtime native component - UiButton
+## Example
 
-## [Common Events](../Events.md)
+```javascript
+<Button />
+```
 
-## [Common Properties](../Properties.md)
+## [Common Events](../types/Events.md)
+
+## [Common Properties](../types/Properties.md)
 
 ## Create Properties
 
-| Name   | Type   | Default Value | LRT Name | LRT type |
-| ------ | ------ | :-----------: | -------- | -------- |
-| text   | string |      n/a      | Text     | string   |
-| width  | number |      n/a      |          | number   |
-| height | number |      n/a      |          | number   |
+| Name      | Type   | Default Value | Description                                                    |
+| --------- | ------ | :-----------: | -------------------------------------------------------------- |
+| text      | string |      n/a      | The UTF-8 encoded text to initially set the UiButton label to. |
+| width     | number |      `0`      | The width of the button, 0 for default.                        |
+| height    | number |      `0`      | The height of the button, 0 for default.                       |
+| roundness | number |      1.0      | The ratio of corner rounding (0-1). 1 [default] = fully rounded (circle, capsule), 0 = sharp corner. |
 
 ## Element Properties
 
-| Name      | Type   | LRT Name  | LRT type |
-| :-------- | :----- | :-------- | :------- |
-| iconColor | vec4   | IconColor | vec4     |
-| iconSize  | vec3   | IconSize  | vec3     |
-| text      | string | Text      | string   |
-| textColor | vec4   | TextColor | vec4     |
-| textSize  | vec3   | TextSize  | vec3     |
+| Name      | Type   | Description                               |
+| :-------- | :----- | ----------------------------------------- |
+| iconColor | vec4   | Sets the RGBA color of the button icon.   |
+| iconSize  | vec2   | Sets the button icon size in scene units. |
+| text      | string | Sets the UTF-8 encoded button text.       |
+| textColor | vec4   | Sets the RGBA color of the button text.   |
+| textSize  | number | Size of text.                             |

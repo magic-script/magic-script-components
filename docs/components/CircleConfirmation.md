@@ -1,18 +1,20 @@
 ---
-id: circleconfirmation
+id: circleConfirmation
 title: CircleConfirmation
 ---
 
-## Tag: `<CircleConfirmation>`
+## Example
 
-- #### Lumin Runtime native component - UiCircleConfirmationNode
+```javascript
+<CircleConfirmation />
+```
 
-## [Common Events](../Events.md)
+## [Common Events](../types/Events.md)
 
-## [Common Properties](../Properties.md)
+## [Common Properties](../types/Properties.md)
 
 ## Create Properties
 
 | Name   | Type   | Default Value | Description                                   |
 | ------ | ------ | :-----------: | --------------------------------------------- |
-| height | string |       0       | The radius of the circle the knob evolves at. |
+| height | number |      `0`      | The radius of the circle the knob evolves at. |

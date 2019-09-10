@@ -1,10 +1,14 @@
 ---
-id: listviewitem
+id: listViewItem
 title: ListViewItem
 ---
 
-## Tag: `<ListViewItem>`
+ListViewItem is a componet used to display row of information.
 
-- #### Lumin Runtime native component - UiListViewItem
+## Example
+
+```javascript
+<ListViewItem />
+```
 
 ## Properties: has no properties !

@@ -1,15 +1,17 @@
 ---
-id: colorpicker
+id: colorPicker
 title: ColorPicker
 ---
 
-## Tag: `<ColorPicker>`
+## Example
 
-- #### Lumin Runtime native component - UiColorPicker
+```javascript
+<ColorPicker />
+```
 
-## [Common Events](../Events.md)
+## [Common Events](../types/Events.md)
 
-## [Common Properties](../Properties.md)
+## [Common Properties](../types/Properties.md)
 
 ## Create Properties
 

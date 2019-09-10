@@ -15,10 +15,19 @@ npm install -g magic-script-cli
 magic-script init
 ```
 
-and follow the steps.
+- Follow the steps.
+- Choose "Components" when application type is requested.
 
 3. Install the required `npm` packages from the app folder:
 
 ```bash
 npm install
 ```
+
+4. Build and install your application:
+
+```bash
+magic-script build -i
+```
+
+5. Refer to MagicScript [Getting Started](https://www.magicscript.org/docs/getting-started) guide for more information.

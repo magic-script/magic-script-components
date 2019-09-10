@@ -1,19 +1,21 @@
 ---
-id: pageview
+id: pageView
 title: PageView
 ---
 
-## Tag: `<PageView>`
+## Example
 
-- #### Lumin Runtime native component - UiPageView
+```javascript
+<PageView />
+```
 
-## [Common Events](../Events.md)
+## [Common Events](../types/Events.md)
 
-## [Common Properties](../Properties.md)
+## [Common Properties](../types/Properties.md)
 
 ## Properties
 
-| Name   | Type   | Default Value | LRT Name | LRT type |
-| ------ | ------ | :-----------: | -------- | -------- |
-| width  | number |      n/a      | Width    | number   |
-| height | number |      n/a      | Height   | number   |
+| Name   | Type   | Default Value | Description                                                                      |
+| ------ | ------ | :-----------: | -------------------------------------------------------------------------------- |
+| width  | number |      `0`      | The width of the page view. The default (0) allows the view to grow to content.  |
+| height | number |      `0`      | The height of the page view. The default (0) allows the view to grow to content. |
