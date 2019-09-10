@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Text component Matches the snapshot 1`] = `
-<text
-  text="Test Text"
-/>
-`;

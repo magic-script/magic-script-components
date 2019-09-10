@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Button component Matches the snapshot 1`] = `
-<button
-  height={0.1}
-  text="Test Button"
-  width={0.25}
-/>
-`;
