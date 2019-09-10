@@ -55,6 +55,7 @@ title: Icon Type
 - copy
 - credit-card
 - cut
+- cv-camera-privilege
 - do-not-disturb
 - dot
 - download
@@ -73,6 +74,12 @@ title: Icon Type
 - file
 - filter
 - flag
+- flag-france
+- flag-germany
+- flag-japan
+- flag-south-korea
+- flag-uk
+- flag-usa
 - follow
 - frame
 - game-controller
@@ -90,6 +97,7 @@ title: Icon Type
 - info
 - keyboard
 - keyboard-capital
+- keyboard-language
 - keyboard-letter
 - keyboard-number
 - link
@@ -143,9 +151,11 @@ title: Icon Type
 - privacy
 - private-view
 - public-view
+- rearrange
 - refresh
 - replay
 - report
+- resize
 - restore-media
 - revolver
 - rewind-ten-second
@@ -197,6 +207,7 @@ title: Icon Type
 - volume
 - volume-mute
 - warning
+- web-xr
 - wifi
 - wifi-no-bar
 - wifi-no-signal
