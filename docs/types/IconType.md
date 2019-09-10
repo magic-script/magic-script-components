@@ -4,6 +4,8 @@ title: Icon Type
 ---
 
 ## Icon Type options
+####
+ [images at creator.magicleap.com](https://creator.magicleap.com/learn/guides/system-icons)
 
 - actions
 - actions-left
