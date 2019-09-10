@@ -4,11 +4,7 @@
   "description": "MagicScript Component Framework",
   "module": "index.js",
   "files": [
-    "src/core",
-    "src/platform",
-    "src/react-magic-script",
     "src/components.js",
-    "src/configuration.js",
     "index.js"
   ],
   "scripts": {
