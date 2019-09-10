@@ -1,6 +1,6 @@
 # MagicScript Components
 
-[![Build Status](https://travis-ci.com/magic-script/magic-script-components.svg)](https://travis-ci.com/magic-script/magic-script-components) [![npm version](https://badge.fury.io/js/magic-script-components.svg)](https://badge.fury.io/js/magic-script-components) [![License](http://img.shields.io/:license-Apache%202.0-blue.svg)](LICENSE)
+[![npm version](https://badge.fury.io/js/magic-script-components.svg)](https://badge.fury.io/js/magic-script-components) [![License](http://img.shields.io/:license-Apache%202.0-blue.svg)](LICENSE)
 
 MagicScript Component Framework
 
