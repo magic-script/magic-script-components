@@ -8,7 +8,27 @@ Button is a component used to interact with an application.
 ## Example
 
 ```javascript
-<Button />
+class MyApp extends React.Component {
+
+  buttonClickHandler = (event) => {
+     console.log("Hello from buttonClickHandler");
+  }
+
+  render () {
+    return (
+      <View>
+        <Button 
+          height={0.1}
+          localPosition={[0.4, -0.2, 0]}
+          onClick={this.buttonClickHandler}
+          roundness={0.7}
+          textSize={0.03}
+          width={0.3}
+        >Click Me</Button>
+      </View>
+    );
+  }
+}
 ```
 
 ## [Common Events](../types/Events.md)

@@ -8,7 +8,17 @@ TextEdit is a component for inputting text into the application.
 ## Example
 
 ```javascript
-<TextEdit />
+<TextEdit
+    charSpacing={0.02}
+    height={0.08}
+    lineSpacing={0.3}
+    localPosition={[-0.9, 0.5, 0]}
+    padding={[0.5, 0.3, 0.5, 0.3]}
+    text="Edit Me"
+    textAlignment="center"
+    textSize={0.03}
+    width={0.4}
+ />
 ```
 
 ## [Common Events](../types/Events.md)
