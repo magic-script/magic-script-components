@@ -8,7 +8,13 @@ Image is a component for displaying different types of images.
 ## Example
 
 ```javascript
-<Image />
+<Image 
+    localPosition={[0.1, 0.1, 0]} 
+    filePath="path/to/your/file" 
+    width={0.3} 
+    height={0.150} 
+    useFrame={true}
+/>
 ```
 
 ## [Common Events](../types/Events.md)
