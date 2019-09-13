@@ -19,8 +19,9 @@ title: Dialog
 | ------ | ------ | :-----------: | ----------------------------------------------------------------- |
 | title  | number |      n/a      | The dialog title text. Use an empty string to not show title.     |
 | text   | number |      n/a      | The dialog message text. Use an empty string to not show message. |
-| type   | string |  dual-action  | The type of dialog.                                               |
-| layout | string |   standard    | The dialog layout preference.                                     |
+| type   | string | `dual-action` | The type of dialog.                                               |
+| layout | string |  `standard`   | The dialog layout preference.                                     |
+| scrolling | boolean | `false`   | Creates a new UiDialog with vertical scrolling content.           |
 
 ### Dialog Type options:
 
