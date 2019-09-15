@@ -3,7 +3,8 @@ id: button
 title: Button
 ---
 
-Button is a component used to interact with an application.
+## Description
+Button represents a standard, clickable button that you can select and activate with the Control. You can set the label text and control the size and color of the button or use an icon. Button text uses the default system font, Lomino, and is white.
 
 ## Example
 
@@ -17,7 +18,7 @@ class MyApp extends React.Component {
   render () {
     return (
       <View>
-        <Button 
+        <Button
           height={0.1}
           localPosition={[0.4, -0.2, 0]}
           onClick={this.buttonClickHandler}
