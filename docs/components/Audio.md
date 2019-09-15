@@ -3,6 +3,9 @@ id: audio
 title: Audio
 ---
 
+## Description
+The Audio component allows you to play audio resources and 3D sound effects. It supports spatialization and basic controls - such as stop and start - using WAV, MP3, and OGG format files. Loaded file and Streamed file audio components require an audio resource, which is the audio file you want to play.
+
 ## Example
 
 ```javascript
