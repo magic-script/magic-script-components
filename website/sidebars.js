@@ -53,6 +53,8 @@ module.exports = {
       "types/buttonType",
       "types/cursorEdgeScrollMode",
       "types/cursorHoverState",
+      "types/dialogLayout",
+      "types/dialogType",
       "types/eclipseLabelType",
       "types/events",
       "types/flowDirection",
