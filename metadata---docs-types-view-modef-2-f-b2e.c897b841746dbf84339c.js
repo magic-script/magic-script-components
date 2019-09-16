@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[139],{171:function(e){e.exports=JSON.parse('{"id":"types/viewMode","title":"ViewMode Type","description":"## ViewMode options","source":"@site/../docs/types/ViewMode.md","permalink":"/docs/types/viewMode","sidebar":"docs","category":"Types","previous":"types/toggleType","previous_title":"Toggle Type"}')}}]);

@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[113],{45:function(t){t.exports=JSON.parse('{"id":"installation","title":"Installation","description":"1. Install `magic-script-cli`:","source":"@site/../docs/Installation.md","permalink":"/docs/installation","sidebar":"docs","category":"Getting Started","next":"example","next_title":"Example"}')}}]);
