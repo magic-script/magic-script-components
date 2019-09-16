@@ -2,6 +2,8 @@
 id: linearLayout
 title: LinearLayout
 ---
+## Description
+The LinearLayout component automatically lays out of multiple elements in a horizontal or vertical orientation. When you add items, they are appended to the previously added item. By default, the LinearLayout will grow to fit vertical content without padding. Padding order is top, right, bottom, left. The default content alignment is top left for items added to the layout.
 
 ## Example
 

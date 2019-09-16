@@ -2,8 +2,8 @@
 id: progressBar
 title: ProgressBar
 ---
-
-ProgressBar is a component used to visualize the progression of an extended operation.
+## Description
+ProgressBar is used to show the progress of an event. By default, a ProgressBar creates a horizontal progress bar. You cannot modify the progress bar size after you create it.
 
 ## Example
 

@@ -2,6 +2,8 @@
 id: timePicker
 title: TimePicker
 ---
+## Description
+Dialog which allows the user to select time.
 
 ## Example
 

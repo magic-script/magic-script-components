@@ -2,6 +2,8 @@
 id: colorPicker
 title: ColorPicker
 ---
+## Description
+Dialog which allows the user to select color.
 
 ## Example
 

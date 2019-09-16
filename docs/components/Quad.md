@@ -2,6 +2,8 @@
 id: quad
 title: Quad
 ---
+## Description
+The Quad component renders a 2D rectangle in your scene and applies a texture to it. You can draw on this node or render stereoscopic images. By default, a quad node renders as a 1 meter square.
 
 ## Example
 

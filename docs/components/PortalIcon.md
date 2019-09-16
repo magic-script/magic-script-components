@@ -2,6 +2,8 @@
 id: portalIcon
 title: PortalIcon
 ---
+## Description
+PortalIcon represents a portal icon for use in the Universe icon grid launcer.
 
 ## Example
 

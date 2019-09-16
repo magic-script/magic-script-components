@@ -2,6 +2,8 @@
 id: panel
 title: Panel
 ---
+## Description
+The Panel organizes two or more elements, transforms descendents within its bounds, and affects the cursor. Panels can also use gravity wells to lightly constrain the cursor within the panel. Panels can parent other panels or be in a layout with other panels. Use Panels when your app needs high-level or visual navigation clues, or when you need a way to navigate between locations or purposes. Use subpanels when you want to visually separate or sort groups of similar content or group content to receive the same transforms. By default, a Panel creates a 2D square that is centered on the parent node's position.
 
 ## Example
 

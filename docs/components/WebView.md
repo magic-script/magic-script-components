@@ -2,6 +2,8 @@
 id: webView
 title: WebView
 ---
+## Description
+WebView renders HTML, CSS, and JavaScript content in a volume. When you enable web inspectors in your app, use web inspector clients, such as Chrome DevTools, to debug the displayed WebView content.
 
 ## Example
 

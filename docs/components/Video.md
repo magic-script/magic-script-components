@@ -2,6 +2,8 @@
 id: video
 title: Video
 ---
+## Description
+Video component represents a simple 2-d rectangle that video resources can be played on.
 
 ## Example
 

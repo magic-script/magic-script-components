@@ -2,6 +2,8 @@
 id: datePicker
 title: DatePicker
 ---
+## Description
+Dialog which allows the user to select date.
 
 ## Example
 

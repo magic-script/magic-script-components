@@ -2,6 +2,8 @@
 id: slider
 title: Slider
 ---
+## Description
+The Slider class places a slider into your volume. Use sliders to provide a visual reference to a specific range and the current value within that range, like a volume slider. You can create two types of sliders: horizontal and radial. Horizontal sliders can use either icons or labels. Radial sliders must use icons. The default slider is white and uses 100% opacity for the active part of the slider. Sliders inherit the width from a parent node, such as RectLayout. If the slider does not have a parent, it is one meter wide unless otherwise constrained. The default minimum and maximum values in the range are 0 and 1.
 
 ## Example
 

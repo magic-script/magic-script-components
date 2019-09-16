@@ -2,6 +2,8 @@
 id: spinner
 title: Spinner
 ---
+## Description
+The Spinner shows the loading state using specific visual effects. There are two types of loading spinners (`sprite-animation`, `particle-package`) with different effects.
 
 ## Example
 

@@ -2,6 +2,8 @@
 id: scrollBar
 title: ScrollBar
 ---
+## Description
+The ScrollBar creates a scrollbar used in conjunction with a ScrollView. This creates the visual indicator that the content can be scrolled and provides the controls used to scroll the view. By default, the scrollbar is as long the ScrollView is. The ends of the scrollbar cannot be interacted with, so the scroll range is less than the entire length of the scroll bar. You generally do not need to change either.
 
 ## Example
 

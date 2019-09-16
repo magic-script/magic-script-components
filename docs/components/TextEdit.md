@@ -2,8 +2,8 @@
 id: textEdit
 title: TextEdit
 ---
-
-TextEdit is a component for inputting text into the application.
+## Description
+The TextEdit component creates an editable text box for text entry on a single or multiple lines. The last line includes a white underline to clearly delineate that the text box is editable. Include a UTF-8 compatible font in your project if you expect characters outside of the ISO Latin-1 character set.
 
 ## Example
 
