@@ -28,3 +28,5 @@ WebView renders HTML, CSS, and JavaScript content in a volume. When you enable w
 | url      | string | Set the URL to load in the webview     |
 | action   | string | Requests the specified action          |
 | scrollBy | vec2   | Scroll webview in the given direction. Expects an array of two numbers: [xPixels, yPixels] |
+
+### action options: [WebViewAction](../types/WebViewAction.md)
