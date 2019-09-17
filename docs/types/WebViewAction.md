@@ -1,5 +1,5 @@
 ---
-id: WebView
+id: webViewAction
 title: WebView Action Type
 ---
 

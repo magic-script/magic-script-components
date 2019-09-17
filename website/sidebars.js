@@ -77,7 +77,8 @@ module.exports = {
       "types/textEntryMode",
       "types/textureType",
       "types/toggleType",
-      "types/viewMode"
+      "types/viewMode",
+      "types/webViewAction"
     ]
   }
 };
