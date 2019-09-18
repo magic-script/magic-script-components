@@ -9,7 +9,27 @@ CircleConfirmation is the UI element intended to confirm powering off. CircleCon
 ## Example
 
 ```javascript
-<CircleConfirmation />
+
+onConfirmationCanceled = (event) => {
+    print("onConfirmationCanceled");
+  }
+
+onConfirmationUpdate = (event) => {
+    print("onConfirmationUpdate");
+  }
+
+onConfirmationComplete = (event) => {
+    print("onConfirmationComplete");
+  }
+
+<CircleConfirmation
+    onConfirmationCanceled={this.onConfirmationCanceled}
+    onConfirmationComplete={this.onConfirmationComplete}
+    onConfirmationUpdate={this.onConfirmationUpdate}
+    height={0.2}
+></CircleConfirmation>
+
+
 ```
 
 ## [Common Events](../types/Events.md)
