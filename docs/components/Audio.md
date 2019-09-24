@@ -9,7 +9,7 @@ The Audio component allows you to play audio resources and 3D sound effects. It 
 
 ## Example
 
-###! Don't forget to include the `resources` in your `app.package` file!
+! Don't forget to include the `resources` in your `app.package` file!
 
 ```javascript
 import React from 'react';
