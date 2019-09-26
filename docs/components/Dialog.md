@@ -13,6 +13,7 @@ onDialogCancel = (event) => {
 onDialogConfirm = (event) => {
     console.log("onDialogConfirm");
   }
+  
 <Dialog
     buttonType="text-with-icon"
     dialogType="dual-action"
