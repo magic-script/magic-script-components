@@ -111,7 +111,7 @@ git commit
 5. Deploy on public website
 
 ```bash
-yarn run deploy
+yarn deploy
 ```
 
 - All documentation is in markdown format in ```docs``` directory. Just add your new markdown files there.
