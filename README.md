@@ -12,7 +12,7 @@ MagicScript Component Framework
 npm install -g magic-script-cli
 ```
 
-2. Create new MagicScript application:
+2. Create a new MagicScript application:
 
 ```bash
 magic-script init
@@ -33,11 +33,11 @@ npm install
 magic-script build -i
 ```
 
-5. Refer to MagicScript [Getting Started](https://www.magicscript.org/docs/getting-started) guide for more information.
+5. Refer to the MagicScript [Getting Started](https://www.magicscript.org/docs/getting-started) guide for more information.
 
 ## Example
 
-Replace `app.js` content with this code for more interafctive use case:
+Replace `app.js` content with this code for a more interactive use case:
 
 ```javascript
 import React from "react";
