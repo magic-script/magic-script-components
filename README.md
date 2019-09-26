@@ -83,6 +83,40 @@ export default class MyApp extends React.Component {
 
 - [List of Components](docs/Components.md)
 
+### Updating documentation
+
+1. Get documentation source code and install dependencies
+
+```bash
+git clone https://github.com/magic-script/magic-script-components.git
+cd magic-script-components
+cd website
+yarn
+```
+
+2. Make your changes and test them locally
+
+```bash
+yarn start
+```
+
+3. Save your changes
+
+```bash
+git commit
+```
+
+4. Set system variable GIT_USER with you GitHub user name in e.g. ```.bash_profile```  or console ```export GIT_USER=<GitHub user name>```
+
+5. Deploy on public website
+
+```bash
+yarn run deploy
+```
+
+- All documentation is in markdown format in ```docs``` directory. Just add your new markdown files there.
+- Refer to [Docusaurus 2](https://v2.docusaurus.io/) docs for more advanced content management topics.
+
 ## License
 
 This project is licensed under the Apache License, Version 2.0 - see the [LICENSE](LICENSE) file for details
