@@ -6,7 +6,26 @@ title: Dialog
 ## Example
 
 ```javascript
-<Dialog />
+onDialogCancel = (event) => {
+    console.log("onDialogCancel");
+  }
+
+onDialogConfirm = (event) => {
+    console.log("onDialogConfirm");
+  }
+<Dialog
+    buttonType="text-with-icon"
+    dialogType="dual-action"
+    dialogLayout="wide"
+    cancelIcon="thumbs-up"
+    cancelText="Cancel"
+    confirmIcon="check"
+    confirmText="Confirm"
+    title="This is title"
+    text="This is text"
+    onCancel={this.onDialogCancel}
+    onConfirm={this.onDialogConfirm}
+/>
 ```
 
 ## [Common Events](../types/Events.md)
