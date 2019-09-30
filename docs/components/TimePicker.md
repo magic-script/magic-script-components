@@ -2,11 +2,24 @@
 id: timePicker
 title: TimePicker
 ---
+## Description
+Dialog which allows the user to select time.
 
 ## Example
 
 ```javascript
-<TimePicker />
+import React from 'react';
+import { View, TimePicker } from 'magic-script-components';
+
+export default class MyApp extends React.Component {
+  render () {
+    return (
+      <View name='main-view'>
+        <TimePicker label='Pick Time' />
+      </View>
+    );
+  }
+}
 ```
 
 ## [Common Events](../types/Events.md)

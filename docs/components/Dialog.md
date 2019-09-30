@@ -2,6 +2,8 @@
 id: dialog
 title: Dialog
 ---
+## Description
+The Dialog is a container where you can place other UI components - such as layouts, buttons, or text - as child nodes.
 
 ## Example
 
@@ -39,21 +41,13 @@ onDialogConfirm = (event) => {
 | ------ | ------ | :-----------: | ----------------------------------------------------------------- |
 | title  | number |      n/a      | The dialog title text. Use an empty string to not show title.     |
 | text   | number |      n/a      | The dialog message text. Use an empty string to not show message. |
-| type   | string |  dual-action  | The type of dialog.                                               |
-| layout | string |   standard    | The dialog layout preference.                                     |
+| type   | string | `dual-action` | The type of dialog.                                               |
+| layout | string |  `standard`   | The dialog layout preference.                                     |
+| scrolling | boolean | `false`   | Creates a new Dialog with vertical scrolling content.           |
 
-### Dialog Type options:
+### Dialog Type options: [DialogType](../types/DialogType.md)
 
-- custom
-- timed
-- no-action
-- single-action
-- dual-action
-
-### Dialog Layout options:
-
-- standard
-- wide
+### DialogLayout options: [DialogLayout](../types/DialogLayout.md)
 
 ## Element Properties
 

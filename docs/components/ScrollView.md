@@ -2,6 +2,8 @@
 id: scrollView
 title: ScrollView
 ---
+## Description
+The ScrollView class represents a scrollable content view so objects, such as images or text, can overflow the viewable area. The ScrollView creates a 3D box (Quad) that you specify a minimum and maximum corner that contains all of your content. The scroll bounds sets the viewable area (AABB) of the 3D box. Content outside the scroll bounds is clipped. You can scroll horizontally, vertically, or both. When scrolling, the cursor snaps to contents of the scroll view when gravity wells and snap are enabled. By default, the scroll view is the size of the volume that called it and scrolls vertically with a .5f scroll rate and a 2.0f activity duration.
 
 ## Example
 

@@ -46,9 +46,14 @@ function Home() {
       title={`${siteConfig.title}`}
       description="Description will go into a meta tag in <head />"
     >
-      <header className={classnames("hero hero--primary", styles.heroBanner)}>
+      <header className={classnames("hero", styles.heroBanner)}>
         <div className="container">
-          <h1 className="hero__title">{siteConfig.title}</h1>
+          <img
+            src={withBaseUrl("img/magicscript-logo.svg")}
+            alt={siteConfig.title}
+            width="400"
+          />
+          <h1 className="hero__title">{"Components"}</h1>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
           <div className={styles.buttons}>
             <Link

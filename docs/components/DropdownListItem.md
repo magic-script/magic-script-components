@@ -2,6 +2,8 @@
 id: dropdownListItem
 title: DropdownListItem
 ---
+## Description
+Structure containing information about each item in a drop-down list.
 
 ## Example
 

@@ -3,10 +3,33 @@ id: audio
 title: Audio
 ---
 
+## Description
+
+The Audio component allows you to play audio resources and 3D sound effects. It supports spatialization and basic controls - such as stop and start - using WAV, MP3, and OGG format files. Loaded file and Streamed file audio components require an audio resource, which is the audio file you want to play.
+
 ## Example
 
+> | ⚠️ Don't forget to include the `resources` in your `app.package` file! |
+> | ---------------------------------------------------------------------- |
+>
+
 ```javascript
-<Audio />
+import React from "react";
+import { View, Audio } from "magic-script-components";
+
+export default class MyApp extends React.Component {
+  render() {
+    return (
+      <View name="main-view">
+        <Audio
+          fileName="resources/your-audio-file.mp3"
+          loadFile={true}
+          action="start"
+        />
+      </View>
+    );
+  }
+}
 ```
 
 ## [Common Events](../types/Events.md)

@@ -2,10 +2,10 @@
 id: content
 title: Content
 ---
+## Description
+Root component for group of components. Example for such parent component is ScrollView.
 
 ## Example
-
-Some components need to wrap their children in `<content>` tag.
 
 ```javascript
 <ScrollView>

@@ -2,6 +2,8 @@
 id: dropdownList
 title: DropdownList
 ---
+## Description
+The DropDownList creates a vertical drop-down list box. Single or multiple items can be selected from a DropDownList. Drop-down lists can be flat or nested. When you create nested drop-down lists, only the parent list and the current list are visible at the same time. Drop-down lists that overflow are automatically styled to show that there are more selections.
 
 ## Example
 
