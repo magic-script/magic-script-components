@@ -42,10 +42,10 @@ class MyApp extends React.Component {
 
 | Name      | Type   | Default Value | Description                                                                                          |
 | --------- | ------ | :-----------: | ---------------------------------------------------------------------------------------------------- |
-| text      | string |      n/a      | The UTF-8 encoded text to initially set the UiButton label to.                                       |
+| text      | string |      n/a      | The UTF-8 encoded text to set the initial value of the button label.                                       |
 | width     | number |      `0`      | The width of the button, 0 for default.                                                              |
 | height    | number |      `0`      | The height of the button, 0 for default.                                                             |
-| roundness | number |      1.0      | The ratio of corner rounding (0-1). 1 [default] = fully rounded (circle, capsule), 0 = sharp corner. |
+| roundness | number |      1.0      | The ratio of corner rounding (0-1). Use `1` for a fully rounded button, such as a circle or capsule. Use `0` for a sharp corner. |
 
 ## Element Properties
 
@@ -55,4 +55,4 @@ class MyApp extends React.Component {
 | iconSize  | vec2   | Sets the button icon size in scene units. |
 | text      | string | Sets the UTF-8 encoded button text.       |
 | textColor | vec4   | Sets the RGBA color of the button text.   |
-| textSize  | number | Size of text.                             |
+| textSize  | number | Sets the text size.                       |
