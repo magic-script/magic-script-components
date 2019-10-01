@@ -30,9 +30,9 @@ export default class MyApp extends React.Component {
 
 | Name        | Type   |   Default Value    | Description                                                                  |
 | ----------- | ------ | :----------------: | ---------------------------------------------------------------------------- |
-| label       | string |        n/a         | The text label that appears with the DatePicker.                             |
-| labelSide   | string |       `top`        | Side enum specifying whether the label appears on the side or top. Only top and left currently supported. |
-| defaultDate | string | (current DateTime) | The default date to appear on the picker instead of the placeholder strings. |
+| label       | string |        n/a         | The text label that appears with the date picker.                             |
+| labelSide   | string |       `top`        | Side enum specifying whether the label appears on the side or top. Only top and left are currently supported. |
+| defaultDate | string | (current DateTime) | The default date to appear on the date picker instead of the placeholder strings. |
 | yearMin     | number |        `-1`        | The minimum year available to choose from.                                   |
 | yearMax     | number |        `-1`        | The maximum year available to choose from.                                   |
 
@@ -47,5 +47,5 @@ export default class MyApp extends React.Component {
 
 | Name  | Type   | Description                                                                       |
 | :---- | :----- | --------------------------------------------------------------------------------- |
-| color | string | Sets the DatePicker component's color, doesn't affect label.                      |
-| date  | number | Sets the Date manually. This will only have an affect when not currently focused. |
+| color | string | Sets the DatePicker component's color. This does not affect the label.            |
+| date  | number | Sets the date manually. This only has an affect when not currently focused. |
