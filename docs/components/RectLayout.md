@@ -2,6 +2,8 @@
 id: rectLayout
 title: RectLayout
 ---
+## Description
+The RectLayout allows you to automatically layout content within a single rectangular plane with side padding and content alignment. It acts like a table cell when used in conjunction with other layout elements. When you do not specify the rectangle size, or use 0, the rectangle will grow to fit the content until it is clipped by the edges of the container. Non-uniform scaling is not recommended. By default, the RectLayout sends events only when it is the immediate parent of a UI element. For example, if you have text in a RectLayout, both the text and the RectLayout will send onHover events. If you have a text button inside the layout, the layout does not send an onHover event because the parent of the text is the button. By default, there is no padding and content is aligned to the top left. The padding order is top, right, bottom, left.
 
 ## Example
 

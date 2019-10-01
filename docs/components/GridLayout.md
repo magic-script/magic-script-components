@@ -2,6 +2,8 @@
 id: gridLayout
 title: GridLayout
 ---
+## Description
+The GridLayout class automatically lays out elements in a grid with optional padding. The GridLayout grows to accommodate additional items based on row and column settings. You can constrain the number of columns, rows, or both. If you constrain only one dimension, the other can grow as needed. If the layout has an explicit width, then any items added to it can shrink to fit if they are larger than the width of the layout. All units are in meters, including padding.
 
 ## Example
 

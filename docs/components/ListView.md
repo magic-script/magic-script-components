@@ -2,8 +2,8 @@
 id: listView
 title: ListView
 ---
-
-ListView is a component for displaying lists of information.
+## Description
+The ListView is a scrollable, selectable list of items. It adds a background quad to the items, including padding. Items can be grouped in horizontal or vertical lists.
 
 ## Example
 

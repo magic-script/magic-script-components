@@ -2,6 +2,8 @@
 id: light
 title: Light
 ---
+## Description
+The Light component creates a light in your scene. The default light system supports 1 directional light, poised on the Headpose camera. This cannot be used in conjunction with other lights. Any light you add to the prism disables the default light. All light nodes default to a white color, but can be modified to use a different light color. Light intensity controls how bright the light is, which ranges from 0 to 1.0. All lights can optionally cast shadows.
 
 ## Example
 

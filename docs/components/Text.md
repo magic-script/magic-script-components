@@ -2,8 +2,8 @@
 id: text
 title: Text
 ---
-
-Text is a component for displaying text.
+## Description
+This is the base component of any static text element placed in your volume. These are single or multi-line text areas of UTF-8 encoded 2D text. Use them inside your volume as is, or call them from other UI elements. Text cannot be modified by a user, but can be copied with the cursor.
 
 ## Example
 

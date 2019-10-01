@@ -37,8 +37,7 @@ module.exports = {
       ]
     },
     footer: {
-      style: "dark",
-      copyright: `Copyright © ${new Date().getFullYear()} Magic Leap, Inc.`
+      copyright: `Copyright © 2018 - ${new Date().getFullYear()} Magic Leap, Inc.`
     }
   },
   presets: [

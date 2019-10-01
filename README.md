@@ -1,6 +1,6 @@
 # MagicScript Components
 
-[![npm version](https://badge.fury.io/js/magic-script-components.svg)](https://badge.fury.io/js/magic-script-components) [![License](http://img.shields.io/:license-Apache%202.0-blue.svg)](LICENSE)
+[![CI](https://github.com/magic-script/magic-script-components/workflows/CI/badge.svg)](https://github.com/magic-script/magic-script-components/actions) [![npm version](https://badge.fury.io/js/magic-script-components.svg)](https://badge.fury.io/js/magic-script-components) [![License](http://img.shields.io/:license-Apache%202.0-blue.svg)](LICENSE)
 
 MagicScript Component Framework
 
@@ -12,7 +12,7 @@ MagicScript Component Framework
 npm install -g magic-script-cli
 ```
 
-2. Create new MagicScript application:
+2. Create a new MagicScript application:
 
 ```bash
 magic-script init
@@ -33,11 +33,11 @@ npm install
 magic-script build -i
 ```
 
-5. Refer to MagicScript [Getting Started](https://www.magicscript.org/docs/getting-started) guide for more information.
+5. Refer to the MagicScript [Getting Started](https://www.magicscript.org/docs/getting-started) guide for more information.
 
 ## Example
 
-Replace `app.js` content with this code for more interafctive use case:
+Replace `app.js` content with this code for a more interactive use case:
 
 ```javascript
 import React from "react";
@@ -82,6 +82,40 @@ export default class MyApp extends React.Component {
 ## Documentation
 
 - [List of Components](docs/Components.md)
+
+### Updating documentation
+
+1. Get documentation source code and install dependencies
+
+```bash
+git clone https://github.com/magic-script/magic-script-components.git
+cd magic-script-components
+cd website
+yarn
+```
+
+2. Make your changes and test them locally
+
+```bash
+yarn start
+```
+
+3. Save your changes
+
+```bash
+git commit
+```
+
+4. Set system variable GIT_USER with you GitHub user name in e.g. ```.bash_profile```  or console ```export GIT_USER=<GitHub user name>```
+
+5. Deploy on public website
+
+```bash
+yarn deploy
+```
+
+- All documentation is in markdown format in ```docs``` directory. Just add your new markdown files there.
+- Refer to [Docusaurus 2](https://v2.docusaurus.io/) docs for more advanced content management topics.
 
 ## License
 

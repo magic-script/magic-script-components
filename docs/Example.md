@@ -3,7 +3,7 @@ id: example
 title: Example
 ---
 
-Replace `app.js` content with this code for more interafctive use case:
+Replace `app.js` content with this code for a more interactive use case:
 
 ```javascript
 import React from "react";

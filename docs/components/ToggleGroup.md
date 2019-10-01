@@ -2,6 +2,8 @@
 id:  toggleGroup
 title:  ToggleGroup
 ---
+## Description
+ToggleGroup represents a group of standard, clickable toggles.
 
 ## Example
 

@@ -2,13 +2,13 @@
 id: image
 title: Image
 ---
-
-Image is a component for displaying different types of images.
+## Description
+Images display an alignable 2D image from an image resource.
 
 ## Example
 
 ```javascript
-<Image 
+<Image
     filePath="path/to/your/file" 
     height={0.150} 
     localPosition={[0.1, 0.1, 0]} 
