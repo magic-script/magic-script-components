@@ -6,7 +6,15 @@ title: DatePicker
 ## Example
 
 ```javascript
-<DatePicker />
+<DatePicker
+    label='This is label'
+    labelSide='left'
+    height={0.5}
+    defaultDate='03/21/1990'
+    yearMin={1990}
+    yearMax={2100}
+    localScale={[2, 2, 0]}
+/>
 ```
 
 ## [Common Events](../types/Events.md)

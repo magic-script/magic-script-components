@@ -6,7 +6,10 @@ title: ColorPicker
 ## Example
 
 ```javascript
-<ColorPicker />
+<ColorPicker
+    height={0.6}
+    color={[0.339, 0.123, 0.991, 1]}
+/>
 ```
 
 ## [Common Events](../types/Events.md)
