@@ -9,10 +9,11 @@ title: DatePicker
 <DatePicker
     label='This is label'
     labelSide='left'
-    height={0.5}
     defaultDate='03/21/1990'
+    color={[0.23, 0.13, 0.98, 1]}
+    height={0.5}
     yearMin={1990}
-    yearMax={2100}
+    yearMax={2020}
     localScale={[2, 2, 0]}
 />
 ```
