@@ -19,11 +19,11 @@ Structure containing information about each item in a drop-down list.
 
 | Name  | Type   | Default Value | Description |
 | ----- | ------ | :-----------: | ----------- |
-| id    | number |       0       |             |
-| label | string |      n/a      |             |
+| id    | number |       0       | A unique ID used per drop-down list item. If the ID is not unique, the list item that occurs first is used when a list item with the same ID is selected. |
+| label | string |      n/a      | The text used for the drop-down list item. |
 
 ## Element Properties
 
 | Name     | Type    | Description                         |
 | -------- | ------- | ----------------------------------- |
-| selected | boolean | Set the selected state of this item |
+| selected | boolean | Sets the selected state of this item. |
