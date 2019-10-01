@@ -3,7 +3,7 @@ id: content
 title: Content
 ---
 ## Description
-Root component for group of components. Example for such parent component is ScrollView.
+The root component for a group of components. An example of a parent component is `ScrollView`.
 
 ## Example
 
