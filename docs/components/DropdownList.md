@@ -19,7 +19,7 @@ The `DropDownList` creates a vertical drop-down list box. Single or multiple ite
 
 | Name | Type   | Default Value | Description                                                        |
 | ---- | ------ | :-----------: | ------------------------------------------------------------------ |
-| text | number |      n/a      | The UTF-8 encoded text to initially set the drop-down list label to. |
+| text | string |      n/a      | The UTF-8 encoded text to initially set the drop-down list label to. |
 
 ## Element Properties
 
