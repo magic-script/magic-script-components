@@ -47,5 +47,5 @@ export default class MyApp extends React.Component {
 
 | Name  | Type   | Description                                                                       |
 | :---- | :----- | --------------------------------------------------------------------------------- |
-| color | string | Sets the DatePicker component's color. This does not affect the label.            |
-| date  | number | Sets the date manually. This only has an affect when not currently focused. |
+| color | vec4   | Sets the DatePicker component's color. This does not affect the label.            |
+| date  | string | Sets the date manually. This only has an affect when not currently focused.       |
