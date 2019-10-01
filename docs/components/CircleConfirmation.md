@@ -5,7 +5,7 @@ title: CircleConfirmation
 
 ## Description
 
-CircleConfirmation is the UI element intended to confirm powering off. CircleConfirmation a knob that the user controls using the touchepad of the control. When the user gets the knob to make a complete circle, CircleConfirmation signals this to the client code. The client code would power off upon receipt of confirmation.
+CircleConfirmation is the UI element intended to confirm powering off. The user moves the control knob using the touchpad of the Control. When the user makes a complete circle with the control knob, CircleConfirmation signals this to the client code. The client code can then power off upon confirmation receipt.
 
 ## Example
 
@@ -38,4 +38,4 @@ onConfirmationComplete = event => {
 
 | Name   | Type   | Default Value | Description                                   |
 | ------ | ------ | :-----------: | --------------------------------------------- |
-| height | number |      `0`      | The radius of the circle the knob evolves at. |
+| height | number |      `0`      | The radius of the circle the control knob travels to complete the confirmation. |
