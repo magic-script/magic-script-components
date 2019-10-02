@@ -5,8 +5,8 @@ title: MagicScript Components
 
 **This document and the framework are under active development !**
 
-| Order | Component                                              | Lumin RT<br/>native component | Lumin OS   | iOS | Android |
-| ----- | ------------------------------------------------------ | ----------------------------- | ---------- | --- | ------- |
+| Order | Component                                              | Lumin RT<br/>native component | Lumin OS   |
+| ----- | ------------------------------------------------------ | ----------------------------- | ---------- |
 | 1     | [Audio](components/Audio.md)                           | AudioNode                     | :thumbsup: |
 | 2     | [Button](components/Button.md)                         | UiButton                      | :thumbsup: |
 | 3     | [CircleConfirmation](components/CircleConfirmation.md) | UiCircleConfirmation          | :thumbsup: |
