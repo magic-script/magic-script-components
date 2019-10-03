@@ -35,9 +35,6 @@ module.exports = {
           position: "right"
         }
       ]
-    },
-    footer: {
-      copyright: `Copyright © 2018 - ${new Date().getFullYear()} Magic Leap, Inc.`
     }
   },
   presets: [
