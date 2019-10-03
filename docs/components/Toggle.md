@@ -19,7 +19,7 @@ Toggle creates a two option, toggleable element. Toggles are generally used in a
 
 | Name   | Type   | Default Value  | Description                                                                                               |
 | ------ | ------ | :------------: | --------------------------------------------------------------------------------------------------------- |
-| text   | string |      n/a       | The UTF-8 encoded text to initially set the UiToggle label to.                                            |
+| text   | string |      n/a       | The UTF-8 encoded text to initially set the Toggle label to.                                            |
 | type   | string |     `top`      | Side enum specifying whether the label appears on the side or top. Only top and left currently supported. |
 | height | string |      0.0       | The height of the toggle, 0 for default.                                                                  |
 
