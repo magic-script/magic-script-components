@@ -31,7 +31,7 @@ export default class MyApp extends React.Component {
 | Name        | Type   | Default Value  | Description                                                                                               |
 | ----------- | ------ | :------------: | --------------------------------------------------------------------------------------------------------- |
 | label       | string |      n/a       | The text label that appears with the TimePicker.                                                          |
-| labelSide   | string |     `top`      | Side enum specifying whether the label appears on the side or top. Only top and left currently supported. |
+| labelSide   | string |     `top`      | Side enum specifying whether the label appears on the side or top. Only `top` and `left` are currently supported. |
 | defaultTime | string | (current Time) | The default time to set for the TimePicker.                                                               |
 
 ### LabelSide values:
@@ -46,6 +46,4 @@ export default class MyApp extends React.Component {
 | Name  | Type   | Description                                                        |
 | :---- | :----- | ------------------------------------------------------------------ |
 | color | string | Sets the TimePicker component's color. This doesn't affect the label.       |
-| time  | number | Sets the time. This ignores values that aren't in the TimeFormat. |
-
-\*The default time format is: `hh:mm:ss`
+| time  | number | Sets the time. This ignores values that aren't in `hh:mm:ss` format. |
