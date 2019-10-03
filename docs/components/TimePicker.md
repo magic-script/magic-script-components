@@ -3,7 +3,7 @@ id: timePicker
 title: TimePicker
 ---
 ## Description
-Dialog which allows the user to select time.
+The TimePicker component is a dialog that allows the user to select a time.
 
 ## Example
 
@@ -45,7 +45,7 @@ export default class MyApp extends React.Component {
 
 | Name  | Type   | Description                                                        |
 | :---- | :----- | ------------------------------------------------------------------ |
-| color | string | Sets the TimePicker component's color, doesn't affect label.       |
-| time  | number | The Time to set, will ignore values that aren't in the TimeFormat. |
+| color | string | Sets the TimePicker component's color. This doesn't affect the label.       |
+| time  | number | Sets the time. This ignores values that aren't in the TimeFormat. |
 
 \*The default time format is: `hh:mm:ss`
