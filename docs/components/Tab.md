@@ -3,7 +3,7 @@ id: tab
 title: Tab
 ---
 ## Description
-Tab allows you to change a content view through button controls. Organize an extensive amount of data in a compact form. Only one tab can be active at a time. The active tab can be scrollable. Like Buttons, you can create text with icons, text, and icon tabs.
+Tab allows you to change a content view using button controls. You can organize an extensive amount of data in a compact form. Only one tab can be active at a time, and the active tab can be scrollable. Like Buttons, you can create text with icons, text, and icon tabs.
 
 ## Example
 
