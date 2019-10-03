@@ -3,7 +3,7 @@ id: video
 title: Video
 ---
 ## Description
-Video component represents a simple 2-d rectangle that video resources can be played on.
+The Video component represents a simple 2D rectangle on which video resources can be played.
 
 ## Example
 
@@ -19,10 +19,10 @@ Video component represents a simple 2-d rectangle that video resources can be pl
 
 | Name      | Type   | Default Value | Description                                                                                                                                                                                                                         |
 | --------- | ------ | :-----------: | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| width     | number |      512      | The surface resolution width 1 to 2048                                                                                                                                                                                              |
-| height    | number |      512      | The surface resolution height 1 to 2048                                                                                                                                                                                             |
-| videoPath | string |      n/a      | Sets the file to Play. Preparation for playback begins synchronously after this property is set. The VideoNode is not ready to actually play (via action='start') until a VideoEvent of type VideoEventType 'prepared' is received. |
-| viewMode  | string |  `full-area`  | Set the current ViewMode to the given value.                                                                                                                                                                                        |
+| width     | number |      512      | The surface resolution width. Supported values are between 1 and 2048.                                                                                                                                                                                              |
+| height    | number |      512      | The surface resolution height. Supported values are between 1 and 2048.                                                                                                                                                                                             |
+| videoPath | string |      n/a      | The path to the file to play. Preparation for playback begins synchronously after this property is set. The video is not ready to play until a `VideoEvent` of type VideoEventType 'prepared' is received. |
+| viewMode  | string |  `full-area`  | The current ViewMode of the video.                                                                                                                                                                                        |
 
 ## Element Properties
 
@@ -31,7 +31,7 @@ Video component represents a simple 2-d rectangle that video resources can be pl
 | volume        | number  |       1       | Sets the volume of the node.                                                                                                                                                                                                            |
 | looping       | boolean |      n/a      | Sets the looping mode of the player.                                                                                                                                                                                                    |
 | timedTextPath | string  |      n/a      | Sets the timed text file.                                                                                                                                                                                                               |
-| videoUri      | string  |      n/a      | Sets the file Uri to Play. Preparation for playback begins synchronously after this property is set. The VideoNode is not ready to actually play (via action='start') until a VideoEvent of type VideoEventType 'prepared' is received. |
+| videoUri      | string  |      n/a      | Sets the file Uri to play. Preparation for playback begins synchronously after this property is set. The video is not ready to play until a `VideoEvent` of type VideoEventType 'prepared' is received. |
 | seekTo        | number  |      n/a      | Seeks to the specified time position.                                                                                                                                                                                                   |
 | action        | string  |      n/a      | Sets the current operation: `start`, `stop`, `pause`                                                                                                                                                                                    |
 
@@ -50,21 +50,21 @@ Video component represents a simple 2-d rectangle that video resources can be pl
 
 | Name           | Type   | Description                                |
 | -------------- | ------ | :----------------------------------------- |
-| AffectedNodeId | BigInt | The ID of the VideoNode that was affected. |
-| XPos           | number | \*based on event type                      |
-| YPos           | number | \*based on event type                      |
-| VideoEventType | string | Video event type                           |
+| AffectedNodeId | BigInt | The ID of the video that was affected. |
+| XPos           | number | This is based on the event type.                      |
+| YPos           | number | This is based on the event type.                      |
+| VideoEventType | string | This is the video event type.                           |
 
 ### VideoEventType values, XPos & YPos purpose:
 
 - buffering-update:
-  X is the buffering percent, Y is unused
+  X is the buffering percent, Y is unused.
 - completion
 - error:
-  X is the type of fatal error, Y is the MediaError code
+  X is the type of fatal error, Y is the MediaError code.
 - info:
-  X is the info or warning code, Y is an info code to provide more details
+  X is the info or warning code, Y is an info code that provides more details.
 - prepared
 - seek-complete
 - video-size-changed:
-  X is width, Y is height
+  X is width, Y is height.
