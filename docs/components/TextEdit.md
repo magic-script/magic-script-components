@@ -38,7 +38,7 @@ The TextEdit component creates an editable text box for text entry on a single o
 | --------------- | -------- | :-----------: | ----------- |
 | fontDescription | _object_ |      n/a      | A 2D font that is a font rendered onto a planar image (whatever the format), as opposed to a 3D model of the glyphs or other graphical representation. |
 | filePath        | string   |      n/a      | The font file from which the glyphs are loaded. By default this is assumed to be a relative path from the executable file. |
-| absolutePath    | boolean  |    `false`    | Flags that `fontFile` is an absolute path name, instead of a relative path. |
+| absolutePath    | boolean  |    `false`    | Flags that the font file is an absolute path name, instead of a relative path. |
 
 ### fontDescription
 ```javascript
