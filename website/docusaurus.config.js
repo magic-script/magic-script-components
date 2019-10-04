@@ -25,13 +25,24 @@ module.exports = {
         { to: "docs/installation", label: "Docs", position: "left" },
         { to: "docs/components", label: "API", position: "left" },
         {
+          href: "https://www.magicscript.org/",
+          label: "Lumin",
+          position: "left"
+        },
+        {
+          href: "https://www.npmjs.com/package/magic-script-components",
+          label: "NPM",
+          position: "right"
+        },
+        {
           href: "https://github.com/magic-script/magic-script-components",
           label: "GitHub",
           position: "right"
         },
         {
-          href: "https://www.npmjs.com/package/magic-script-components",
-          label: "NPM",
+          href:
+            "https://creator.magicleap.com/learn/guides/magicscript-overview",
+          label: "Creator Portal",
           position: "right"
         }
       ]
