@@ -3,7 +3,7 @@ id: image
 title: Image
 ---
 ## Description
-Images display an alignable 2D image from an image resource.
+The Image component displays a 2D image from an image file.
 
 ## Example
 
@@ -23,7 +23,7 @@ Images display an alignable 2D image from an image resource.
 
 ## Create Properties
 
-> Image offers 3 constructors accepting different property sets
+> Image offers 3 constructors accepting different property sets.
 
 | Name         | Type    | Default Value | Description                                                             |
 | ------------ | ------- | :-----------: | ----------------------------------------------------------------------- |
@@ -55,9 +55,9 @@ Images display an alignable 2D image from an image resource.
 
 | Name               | Type    | Description                              |
 | :----------------- | :------ | ---------------------------------------- |
-| color              | vec4    | Sets a color to modulate the image with. |
-| textCoords         | [vec2]  | Sets the texture coordinates used by the Image. The texture coordinates must be a list of 4 coordinates representing the UV coordinates of the 4 corners. |
+| color              | vec4    | Sets a color to modulate the image. |
+| textCoords         | [vec2]  | Sets the texture coordinates used by the image. The texture coordinates must be a list of four coordinates representing the UV coordinates of the four corners. |
 | opaque             | boolean | Sets the opacity state of the image. |
-| ui                 | boolean | Sets if the image needs to be rendered on UI Layer. |
-| imageFrameResource | BigInt  | Sets the model resource used for the image frame. Note: Frame models are expected to be sized at 1 meter high and 1 meter wide and to be centered at the origin. |
+| ui                 | boolean | Sets whether the image is rendered on UI Layer. |
+| imageFrameResource | BigInt  | Sets the model resource used for the image frame. Note: Frame models are expected to be one meter high,  one meter wide, and centered at the origin. |
 | renderResource     | BigInt  | Sets the render resource used for the image. |
