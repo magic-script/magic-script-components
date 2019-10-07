@@ -8,7 +8,37 @@ The GridLayout class automatically lays out elements in a grid with optional pad
 ## Example
 
 ```javascript
-<GridLayout />
+import React from "react";
+import { View, GridLayout, Text } from "magic-script-components";
+
+export default class MyApp extends React.Component {
+  state = { selectedId: undefined }
+
+  onSelection = (eventData) => {
+    console.log('Selected items:', eventData.SelectedItems);
+  }
+
+  render() {
+    const moons = [
+      'Europa',   'Ganymede', 'Io',
+      'Callisto', 'Valetudo', 'Amalthea',
+      'Metis',    'Ananke',   'Carme'];
+
+    return (
+      <View name="main-view">
+        <GridLayout
+          columns={3}
+          rows={3}
+          defaultItemAlignment='center-left'
+          defaultItemPadding={[0.01, 0.01, 0.01, 0.01]}
+          localPosition={[-0.25, 0.25, 0]}
+        >
+          {moons.map((moon, index) => (<Text textSize={0.05} key={index} text={moon} />))}
+        </GridLayout>
+      </View>
+    );
+  }
+}
 ```
 
 ## [Common Events](../types/Events.md)
