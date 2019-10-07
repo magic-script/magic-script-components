@@ -12,12 +12,6 @@ import React from "react";
 import { View, GridLayout, Text } from "magic-script-components";
 
 export default class MyApp extends React.Component {
-  state = { selectedId: undefined }
-
-  onSelection = (eventData) => {
-    console.log('Selected items:', eventData.SelectedItems);
-  }
-
   render() {
     const moons = [
       'Europa',   'Ganymede', 'Io',
