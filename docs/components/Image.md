@@ -8,13 +8,40 @@ The Image component displays a 2D image from an image file.
 ## Example
 
 ```javascript
-<Image
-    filePath="path/to/your/file" 
-    height={0.150} 
-    localPosition={[0.1, 0.1, 0]} 
-    useFrame={true}
-    width={0.3}
-/>
+import React from "react";
+import { View, Image, Button } from "magic-script-components";
+
+export default class MyApp extends React.Component {
+  state = { index: 1 }
+
+  onNextClick = (eventData) => {
+    this.setState(state => ({ index: state.index < 4 ? state.index + 1 : 1 }));
+  }
+
+  render() {
+    const path = `res/DemoPicture${this.state.index}.jpg`;
+
+    return (
+      <View>
+        <Image
+          filePath={path}
+          height={0.25}
+          width={0.5}
+          localPosition={[0.1, 0.1, 0]}
+        />
+        <Button
+          localPosition={[ 0.12, -0.15, 0]}
+          width={0.25}
+          height={0.10}
+          roundness={0.5}
+          type='icon'
+          iconType='arrow-right'
+          onClick={this.onNextClick}
+        />
+      </View>
+    );
+  }
+}
 ```
 
 ## [Common Events](../types/Events.md)
