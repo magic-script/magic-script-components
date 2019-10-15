@@ -10,7 +10,39 @@ The RectLayout sends events only when it is the immediate parent of a UI element
 ## Example
 
 ```javascript
-<RectLayout />
+import React from "react";
+import { View, RectLayout, Content, Text } from "magic-script-components";
+
+export default class MyApp extends React.Component {
+  render() {
+    return (
+      <View name='main-view'>
+        <RectLayout
+          localPosition={[-0.40, 0.40, 0]}
+          width={0.8}
+          height={0.4}
+          padding={[0.1, 0.1, 0.1, 0.1]}
+          contentAlignment='bottom-left'
+        >
+          <Content>
+            <Text textSize={0.05} text='Top Message'/>
+          </Content>
+        </RectLayout>
+        <RectLayout
+          localPosition={[-0.40, 0, 0]}
+          width={0.8}
+          height={0.4}
+          padding={[0.1, 0.1, 0.1, 0.1]}
+          contentAlignment='top-right'
+        >
+          <Content>
+            <Text textSize={0.05} text='Bottom Message'/>
+          </Content>
+        </RectLayout>
+      </View>
+    );
+  }
+}
 ```
 
 ## [Common Events](../types/Events.md)
