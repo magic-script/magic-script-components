@@ -36,6 +36,6 @@ onConfirmationComplete = event => {
 
 ## Create Properties
 
-| Name   | Type   |  Description                                   |
-| ------ | ------ |  --------------------------------------------- |
-| height | number |  The radius of the circle the control knob travels to complete the confirmation. The default height is 0.1 (100mm). Setting the value to '0' sets the height to the default height.  |
+| Name   | Type   | Description                                                                                                                                                                        |
+| ------ | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| height | number | The radius of the circle the control knob travels to complete the confirmation. The default height is 0.1 (100mm). Setting the value to '0' sets the height to the default height. |

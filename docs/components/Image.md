@@ -2,7 +2,9 @@
 id: image
 title: Image
 ---
+
 ## Description
+
 The Image component displays a 2D image from an image file.
 
 ## Example
@@ -12,11 +14,11 @@ import React from "react";
 import { View, Image, Button } from "magic-script-components";
 
 export default class MyApp extends React.Component {
-  state = { index: 1 }
+  state = { index: 1 };
 
-  onNextClick = (eventData) => {
+  onNextClick = eventData => {
     this.setState(state => ({ index: state.index < 4 ? state.index + 1 : 1 }));
-  }
+  };
 
   render() {
     const path = `res/DemoPicture${this.state.index}.jpg`;
@@ -30,12 +32,12 @@ export default class MyApp extends React.Component {
           localPosition={[0.1, 0.1, 0]}
         />
         <Button
-          localPosition={[ 0.12, -0.15, 0]}
+          localPosition={[0.12, -0.15, 0]}
           width={0.25}
-          height={0.10}
+          height={0.1}
           roundness={0.5}
-          type='icon'
-          iconType='arrow-right'
+          type="icon"
+          iconType="arrow-right"
           onClick={this.onNextClick}
         />
       </View>
@@ -80,11 +82,11 @@ export default class MyApp extends React.Component {
 
 ## Element Properties
 
-| Name               | Type    | Description                              |
-| :----------------- | :------ | ---------------------------------------- |
-| color              | vec4    | Sets a color to modulate the image. |
+| Name               | Type    | Description                                                                                                                                                     |
+| :----------------- | :------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| color              | vec4    | Sets a color to modulate the image.                                                                                                                             |
 | textCoords         | [vec2]  | Sets the texture coordinates used by the image. The texture coordinates must be a list of four coordinates representing the UV coordinates of the four corners. |
-| opaque             | boolean | Sets the opacity state of the image. |
-| ui                 | boolean | Sets whether the image is rendered on UI Layer. |
-| imageFrameResource | BigInt  | Sets the model resource used for the image frame. Note: Frame models are expected to be one meter high,  one meter wide, and centered at the origin. |
-| renderResource     | BigInt  | Sets the render resource used for the image. |
+| opaque             | boolean | Sets the opacity state of the image.                                                                                                                            |
+| ui                 | boolean | Sets whether the image is rendered on UI Layer.                                                                                                                 |
+| imageFrameResource | BigInt  | Sets the model resource used for the image frame. Note: Frame models are expected to be one meter high, one meter wide, and centered at the origin.             |
+| renderResource     | BigInt  | Sets the render resource used for the image.                                                                                                                    |

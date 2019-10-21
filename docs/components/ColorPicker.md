@@ -2,19 +2,21 @@
 id: colorPicker
 title: ColorPicker
 ---
+
 ## Description
+
 Dialog which allows the user to select color.
 
 ## Example
 
 ```javascript
-import React from 'react';
-import { View, ColorPicker } from 'magic-script-components';
+import React from "react";
+import { View, ColorPicker } from "magic-script-components";
 
 export default class MyApp extends React.Component {
-  render () {
+  render() {
     return (
-      <View name='main-view'>
+      <View name="main-view">
         <ColorPicker color={[1, 0.5, 1, 0.8]} />
       </View>
     );

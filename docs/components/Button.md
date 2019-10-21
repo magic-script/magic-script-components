@@ -40,11 +40,11 @@ class MyApp extends React.Component {
 
 ## Create Properties
 
-| Name      | Type   | Default Value | Description                                                                                          |
-| --------- | ------ | :-----------: | ---------------------------------------------------------------------------------------------------- |
-| text      | string |      n/a      | The UTF-8 encoded text to set the initial value of the button label.                                       |
-| width     | number |      `0`      | The width of the button, 0 for default.                                                              |
-| height    | number |      `0`      | The height of the button, 0 for default.                                                             |
+| Name      | Type   | Default Value | Description                                                                                                                      |
+| --------- | ------ | :-----------: | -------------------------------------------------------------------------------------------------------------------------------- |
+| text      | string |      n/a      | The UTF-8 encoded text to set the initial value of the button label.                                                             |
+| width     | number |      `0`      | The width of the button, 0 for default.                                                                                          |
+| height    | number |      `0`      | The height of the button, 0 for default.                                                                                         |
 | roundness | number |      1.0      | The ratio of corner rounding (0-1). Use `1` for a fully rounded button, such as a circle or capsule. Use `0` for a sharp corner. |
 
 ## Element Properties

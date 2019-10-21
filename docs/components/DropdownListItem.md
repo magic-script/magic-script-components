@@ -2,7 +2,9 @@
 id: dropdownListItem
 title: DropdownListItem
 ---
+
 ## Description
+
 Structure containing information about each item in a drop-down list.
 
 ## Example
@@ -17,13 +19,13 @@ Structure containing information about each item in a drop-down list.
 
 ## Create Properties
 
-| Name  | Type   | Default Value | Description |
-| ----- | ------ | :-----------: | ----------- |
+| Name  | Type   | Default Value | Description                                                                                                                                               |
+| ----- | ------ | :-----------: | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | id    | number |       0       | A unique ID used per drop-down list item. If the ID is not unique, the list item that occurs first is used when a list item with the same ID is selected. |
-| label | string |      n/a      | The text used for the drop-down list item. |
+| label | string |      n/a      | The text used for the drop-down list item.                                                                                                                |
 
 ## Element Properties
 
-| Name     | Type    | Description                         |
-| -------- | ------- | ----------------------------------- |
+| Name     | Type    | Description                           |
+| -------- | ------- | ------------------------------------- |
 | selected | boolean | Sets the selected state of this item. |

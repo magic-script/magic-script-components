@@ -2,7 +2,9 @@
 id: content
 title: Content
 ---
+
 ## Description
+
 The root component for a group of components. An example of a parent component is `ScrollView`.
 
 ## Example
