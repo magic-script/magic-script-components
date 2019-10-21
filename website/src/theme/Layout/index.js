@@ -8,7 +8,7 @@
 import React from "react";
 import Head from "@docusaurus/Head";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import withBaseUrl from "@docusaurus/withBaseUrl";
+import useBaseUrl from "@docusaurus/useBaseUrl";
 import Navbar from "@theme/Navbar";
 import Footer from "@theme/Footer";
 
@@ -43,7 +43,7 @@ function Layout(props) {
         <meta name="viewport" content="width=device-width" />
         {metaTitle && <title>{metaTitle}</title>}
         {metaTitle && <meta property="og:title" content={metaTitle} />}
-        {favicon && <link rel="shortcut icon" href={withBaseUrl(favicon)} />}
+        {favicon && <link rel="shortcut icon" href={useBaseUrl(favicon)} />}
         {description && <meta name="description" content={description} />}
         {description && (
           <meta property="og:description" content={description} />
@@ -54,13 +54,13 @@ function Layout(props) {
         {metaImage && (
           <meta
             property="og:image"
-            content={siteUrl + withBaseUrl(metaImage)}
+            content={siteUrl + useBaseUrl(metaImage)}
           />
         )}
         {metaImage && (
           <meta
             property="twitter:image"
-            content={siteUrl + withBaseUrl(metaImage)}
+            content={siteUrl + useBaseUrl(metaImage)}
           />
         )}
         {metaImage && (
