@@ -46,6 +46,10 @@ module.exports = {
           position: "right"
         }
       ]
+    },
+    algolia: {
+      apiKey: "4a2801e1f42c5488e5db0eb1ed45b5ba",
+      indexName: "magicscript_components"
     }
   },
   presets: [
