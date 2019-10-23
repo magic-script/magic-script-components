@@ -10,11 +10,11 @@
     "deploy": "docusaurus deploy"
   },
   "dependencies": {
-    "@docusaurus/core": "^2.0.0-alpha.29",
-    "@docusaurus/preset-classic": "^2.0.0-alpha.29",
+    "@docusaurus/core": "^2.0.0-alpha.30",
+    "@docusaurus/preset-classic": "^2.0.0-alpha.30",
     "classnames": "^2.2.6",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
     "react-script-loader-hoc": "^1.2.2"
   },
   "browserslist": {
