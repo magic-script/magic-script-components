@@ -5,7 +5,7 @@ title: ScrollBar
 
 ## Description
 
-The ScrollBar component creates a scroll bar used in conjunction with a ScrollView component. This creates the visual indicator that the content can be scrolled and provides the controls used to scroll the view. By default, the scroll bar is as long the ScrollView. The ends of the scroll bar cannot be interacted with, so the scroll range is less than the entire length of the scroll bar. You generally do not need to change either.
+The ScrollBar component creates a scroll bar used in conjunction with a ScrollView component. This creates the visual indicator that the content can be scrolled and provides the controls used to scroll the view. By default, the scroll bar is as long as the ScrollView. The ends of the scroll bar cannot be interacted with, so the scroll range is less than the entire length of the scroll bar. You generally do not need to change either.
 
 ## Example
 
