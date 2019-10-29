@@ -57,7 +57,7 @@ export default class MyApp extends React.Component {
       max: [0.25, 0.35, 0.1]
     };
 
-    const calcutalteValue = (number, multiplier) =>
+    const calculateValue = (number, multiplier) =>
       ((number + 1 * multiplier) % 10) * 0.1;
 
     return (
@@ -80,9 +80,9 @@ export default class MyApp extends React.Component {
                 key={index}
                 text={`${word[0]} - ${word}`}
                 textColor={[
-                  calcutalteValue(index, 1),
-                  calcutalteValue(index, 2),
-                  calcutalteValue(index, 3),
+                  calculateValue(index, 1),
+                  calculateValue(index, 2),
+                  calculateValue(index, 3),
                   0.8
                 ]}
               />
