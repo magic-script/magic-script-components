@@ -7,10 +7,31 @@ title: WebView
 
 WebView renders HTML, CSS, and JavaScript content in a prism. When you enable web inspectors in your app, use web inspector clients, such as Chrome DevTools, to debug the displayed WebView content.
 
+
+
 ## Example
 
+> | ⚠️ Don't forget to include the `WebView` and `Internet` privileges in your `manifest.xml` file! |
+> | -------------------------------------------------------------------------------|
+> | `<uses-privilege ml:name="WebView"/>`  |
+> | `<uses-privilege ml:name="Internet"/>` |
+
 ```javascript
-<WebView />
+import React from "react";
+
+import { View, WebView, Text } from "magic-script-components";
+export default class MyApp extends React.Component {
+
+  render() {
+
+    return (
+      <View name='main-view' >
+        <Text text='WebView' textSize={0.05} localPosition={[0, 0.45, 0]} />
+        <WebView localPosition={[-0.4, 0.4, 0]} width={0.8} height={0.8} url={'http://google.com'}/>
+      </View>
+    );
+  }
+}
 ```
 
 ## [Common Events](../types/Events.md)
