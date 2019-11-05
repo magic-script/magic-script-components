@@ -5,6 +5,7 @@
   "module": "index.js",
   "files": [
     "src/components.js",
+    "index.d.ts",
     "index.js"
   ],
   "scripts": {
