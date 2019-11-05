@@ -3,6 +3,11 @@ declare module "magic-script-components" {
   // Components:
   // --------------------------------------------------------------------------------
 
+  interface AppProps {
+    type: 'landscape' | 'immersive';
+    volumeSize: vec3;
+  }
+
   interface ViewProps {
     name?: string;
     parentedBoneName?: string;
