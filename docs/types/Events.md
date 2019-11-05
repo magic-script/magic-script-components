@@ -3,37 +3,7 @@ id: events
 title: Events
 ---
 
-## Events supported by all of the following components:
-Button
-CircleConfirmation
-ColorPicker
-DatePicker
-Dialog
-DropdownList
-GridLayout
-Image
-Line
-LinearLayout
-ListView
-ListViewItem
-PageView
-Panel
-PortalIcon
-ProgressBar
-RectLayout
-ScrollBar
-ScrollView
-Slider
-Spinner
-Tab
-Text
-TextEdit
-TimePicker
-Toggle
-ToggleGroup
-View
-WebView
-
+## Common Events:
 - onActivate
 - onPressed
 - onLongPress
@@ -48,11 +18,42 @@ WebView
 - onFocusInput
 - onUpdate
 - onDeleted
-
 - onEvent
 - onUpdateLoop
 
-## The following components support `onEvent` and `onUpdateLoop` events:
+supported by all of the following components:
+- Button
+- CircleConfirmation
+- ColorPicker
+- DatePicker
+- Dialog
+- DropdownList
+- GridLayout
+- Image
+- Line
+- LinearLayout
+- ListView
+- ListViewItem
+- PageView
+- Panel
+- PortalIcon
+- ProgressBar
+- RectLayout
+- ScrollBar
+- ScrollView
+- Slider
+- Spinner
+- Tab
+- Text
+- TextEdit
+- TimePicker
+- Toggle
+- ToggleGroup
+- View
+- WebView
+
+
+## The following components support `onEvent` and `onUpdateLoop` events only:
 - Audio
 - Content
 - Light
