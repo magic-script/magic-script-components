@@ -1,10 +1,11 @@
 {
   "name": "magic-script-components",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "MagicScript Component Framework",
   "module": "index.js",
   "files": [
     "src/components.js",
+    "index.d.ts",
     "index.js"
   ],
   "scripts": {
