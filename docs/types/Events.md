@@ -5,7 +5,7 @@ title: Events
 
 ## Common Events:
 - onActivate
-- onPressed
+- onPress
 - onLongPress
 - onRelease
 - onHoverEnter
