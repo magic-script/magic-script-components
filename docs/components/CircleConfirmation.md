@@ -26,7 +26,7 @@ onConfirmationComplete = event => {
   onConfirmationCanceled={this.onConfirmationCanceled}
   onConfirmationComplete={this.onConfirmationComplete}
   onConfirmationUpdate={this.onConfirmationUpdate}
-  height={0.2}
+  radius={0.2}
 ></CircleConfirmation>;
 ```
 
@@ -38,4 +38,4 @@ onConfirmationComplete = event => {
 
 | Name   | Type   | Description                                                                                                                                                                        |
 | ------ | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| height | number | The radius of the circle the control knob travels to complete the confirmation. The default height is 0.1 (100mm). Setting the value to '0' sets the height to the default height. |
+| radius | number | The radius of the circle the control knob travels to complete the confirmation. The default height is 0.1 (100mm). Setting the value to '0' sets the height to the default height. |
