@@ -8,7 +8,63 @@ declare module "magic-script-components" {
     volumeSize: vec3;
   }
 
-  interface ViewProps {
+  interface EventHandlerProps {
+    onActivate?: (eventData: UiEventData) => void;
+    onClick?: (eventData: UiEventData) => void;
+    onPress?: (eventData: UiEventData) => void;
+    onLongPress?: (eventData: UiEventData) => void;
+    onRelease?: (eventData: UiEventData) => void;
+    onHoverEnter?: (eventData: UiEventData) => void;
+    onHoverExit?: (eventData: UiEventData) => void;
+    onHoverMove?: (eventData: UiEventData) => void;
+    onEnabled?: (eventData: UiEventData) => void;
+    onDisabled?: (eventData: UiEventData) => void;
+    onFocusGained?: (eventData: UiEventData) => void;
+    onFocusLost?: (eventData: UiEventData) => void;
+    onFocusInput?: (eventData: UiEventData) => void;
+    onUpdate?: (eventData: UiEventData) => void;
+    onDelete?: (eventData: UiEventData) => void;
+    onCharacterEnter?: (eventData: TextEditEventData) => void;
+    onKeyboardEvent?: (eventData: TextEditEventData) => void;
+    onTextChanged?: (eventData: TextEditEventData) => void;
+    onSliderChanged?: (eventData: SliderEventData) => void;
+    onScrollChanged?: (eventData: ScrollViewEventData) => void;
+    onProgressBarChanged?: (eventData: ProgressBarEventData) => void;
+    onListVisibilityChanged?: (eventData: DropDownListEventData) => void;
+    onSelectionChanged?: (eventData: DropDownListEventData) => void;
+    onToggleChanged?: (eventData: ToggleEventData) => void;
+    onCursorEdge?: (eventData: UiEventData) => void;
+    onCursorOffEdge?: (eventData: UiEventData) => void;
+    onPanelEnter?: (eventData: UiEventData) => void;
+    onPanelExit?: (eventData: UiEventData) => void;
+    onDialogCanceled?: (eventData: UiEventData) => void;
+    onDialogConfirmed?: (eventData: UiEventData) => void;
+    onDialogTimeExpired?: (eventData: UiEventData) => void;
+    onColorCanceled?: (eventData: ColorPickerEventData) => void;
+    onColorChanged?: (eventData: ColorPickerEventData) => void;
+    onColorConfirmed?: (eventData: ColorPickerEventData) => void;
+    onTimeChanged?: (eventData: TimePickerEventData) => void;
+    onTimeConfirmed?: (eventData: TimePickerEventData) => void;
+    onDateChanged?: (eventData: DatePickerEventData) => void;
+    onDateConfirmed?: (eventData: DatePickerEventData) => void;
+    onConfirmationCanceled?: (eventData: CircleConfirmationEventData) => void;
+    onConfirmationCompleted?: (eventData: CircleConfirmationEventData) => void;
+    onConfirmationUpdated?: (eventData: CircleConfirmationEventData) => void;
+  }
+
+  type UiEventData = any;
+  type TextEditEventData = any;
+  type SliderEventData = any;
+  type ScrollViewEventData = any;
+  type ProgressBarEventData = any;
+  type DropDownListEventData = any;
+  type ToggleEventData = any;
+  type ColorPickerEventData = any;
+  type TimePickerEventData = any;
+  type DatePickerEventData = any;
+  type CircleConfirmationEventData = any;
+
+  interface ViewProps extends EventHandlerProps {
     name?: string;
     parentedBoneName?: string;
     skipRaycast?: boolean;
@@ -37,7 +93,7 @@ declare module "magic-script-components" {
 
   const View: React.FC<ViewProps>;
 
-  interface TextProps {
+  interface TextProps extends EventHandlerProps {
     name?: string;
     parentedBoneName?: string;
     skipRaycast?: boolean;
@@ -81,7 +137,7 @@ declare module "magic-script-components" {
 
   const Text: React.FC<TextProps>;
 
-  interface TextEditProps {
+  interface TextEditProps extends EventHandlerProps {
     name?: string;
     parentedBoneName?: string;
     skipRaycast?: boolean;
@@ -135,7 +191,7 @@ declare module "magic-script-components" {
 
   const TextEdit: React.FC<TextEditProps>;
 
-  interface ButtonProps {
+  interface ButtonProps extends EventHandlerProps {
     name?: string;
     parentedBoneName?: string;
     skipRaycast?: boolean;
@@ -169,12 +225,11 @@ declare module "magic-script-components" {
     width?: number;
     height?: number;
     roundness?: number;
-    onClick?: (event: any) => void;
   }
 
   const Button: React.FC<ButtonProps>;
 
-  interface ImageProps {
+  interface ImageProps extends EventHandlerProps {
     name?: string;
     parentedBoneName?: string;
     skipRaycast?: boolean;
@@ -216,7 +271,7 @@ declare module "magic-script-components" {
 
   const Image: React.FC<ImageProps>;
 
-  interface ScrollBarProps {
+  interface ScrollBarProps extends EventHandlerProps {
     name?: string;
     parentedBoneName?: string;
     skipRaycast?: boolean;
@@ -250,7 +305,7 @@ declare module "magic-script-components" {
 
   const ScrollBar: React.FC<ScrollBarProps>;
 
-  interface ScrollViewProps {
+  interface ScrollViewProps extends EventHandlerProps {
     name?: string;
     parentedBoneName?: string;
     skipRaycast?: boolean;
@@ -286,7 +341,7 @@ declare module "magic-script-components" {
 
   const ScrollView: React.FC<ScrollViewProps>;
 
-  interface ListViewProps {
+  interface ListViewProps extends EventHandlerProps {
     name?: string;
     parentedBoneName?: string;
     skipRaycast?: boolean;
@@ -328,7 +383,7 @@ declare module "magic-script-components" {
 
   const ListView: React.FC<ListViewProps>;
 
-  interface ListViewItemProps {
+  interface ListViewItemProps extends EventHandlerProps {
     name?: string;
     parentedBoneName?: string;
     skipRaycast?: boolean;
@@ -358,7 +413,7 @@ declare module "magic-script-components" {
 
   const ListViewItem: React.FC<ListViewItemProps>;
 
-  interface SpinnerProps {
+  interface SpinnerProps extends EventHandlerProps {
     name?: string;
     parentedBoneName?: string;
     skipRaycast?: boolean;
@@ -394,7 +449,7 @@ declare module "magic-script-components" {
 
   const Spinner: React.FC<SpinnerProps>;
 
-  interface SliderProps {
+  interface SliderProps extends EventHandlerProps {
     name?: string;
     parentedBoneName?: string;
     skipRaycast?: boolean;
@@ -428,7 +483,7 @@ declare module "magic-script-components" {
 
   const Slider: React.FC<SliderProps>;
 
-  interface ProgressBarProps {
+  interface ProgressBarProps extends EventHandlerProps {
     name?: string;
     parentedBoneName?: string;
     skipRaycast?: boolean;
@@ -463,7 +518,7 @@ declare module "magic-script-components" {
 
   const ProgressBar: React.FC<ProgressBarProps>;
 
-  interface GridLayoutProps {
+  interface GridLayoutProps extends EventHandlerProps {
     name?: string;
     parentedBoneName?: string;
     skipRaycast?: boolean;
@@ -500,7 +555,7 @@ declare module "magic-script-components" {
 
   const GridLayout: React.FC<GridLayoutProps>;
 
-  interface LinearLayoutProps {
+  interface LinearLayoutProps extends EventHandlerProps {
     name?: string;
     parentedBoneName?: string;
     skipRaycast?: boolean;
@@ -536,7 +591,7 @@ declare module "magic-script-components" {
 
   const LinearLayout: React.FC<LinearLayoutProps>;
 
-  interface RectLayoutProps {
+  interface RectLayoutProps extends EventHandlerProps {
     name?: string;
     parentedBoneName?: string;
     skipRaycast?: boolean;
@@ -568,7 +623,7 @@ declare module "magic-script-components" {
 
   const RectLayout: React.FC<RectLayoutProps>;
 
-  interface DropdownListProps {
+  interface DropdownListProps extends EventHandlerProps {
     name?: string;
     parentedBoneName?: string;
     skipRaycast?: boolean;
@@ -608,14 +663,14 @@ declare module "magic-script-components" {
 
   const DropdownList: React.FC<DropdownListProps>;
 
-  interface DropdownListItemProps {
+  interface DropdownListItemProps extends EventHandlerProps {
     label?: string;
     id?: number;
   }
 
   const DropdownListItem: React.FC<DropdownListItemProps>;
 
-  interface ToggleProps {
+  interface ToggleProps extends EventHandlerProps {
     name?: string;
     parentedBoneName?: string;
     skipRaycast?: boolean;
@@ -651,7 +706,7 @@ declare module "magic-script-components" {
 
   const Toggle: React.FC<ToggleProps>;
 
-  interface ToggleGroupProps {
+  interface ToggleGroupProps extends EventHandlerProps {
     name?: string;
     parentedBoneName?: string;
     skipRaycast?: boolean;
@@ -683,7 +738,7 @@ declare module "magic-script-components" {
 
   const ToggleGroup: React.FC<ToggleGroupProps>;
 
-  interface PanelProps {
+  interface PanelProps extends EventHandlerProps {
     name?: string;
     parentedBoneName?: string;
     skipRaycast?: boolean;
@@ -720,7 +775,7 @@ declare module "magic-script-components" {
 
   const Panel: React.FC<PanelProps>;
 
-  interface TabProps {
+  interface TabProps extends EventHandlerProps {
     name?: string;
     parentedBoneName?: string;
     skipRaycast?: boolean;
@@ -754,7 +809,7 @@ declare module "magic-script-components" {
 
   const Tab: React.FC<TabProps>;
 
-  interface DialogProps {
+  interface DialogProps extends EventHandlerProps {
     name?: string;
     parentedBoneName?: string;
     skipRaycast?: boolean;
@@ -796,7 +851,7 @@ declare module "magic-script-components" {
 
   const Dialog: React.FC<DialogProps>;
 
-  interface PageViewProps {
+  interface PageViewProps extends EventHandlerProps {
     name?: string;
     parentedBoneName?: string;
     skipRaycast?: boolean;
@@ -832,7 +887,7 @@ declare module "magic-script-components" {
 
   const PageView: React.FC<PageViewProps>;
 
-  interface WebViewProps {
+  interface WebViewProps extends EventHandlerProps {
     name?: string;
     parentedBoneName?: string;
     skipRaycast?: boolean;
@@ -866,7 +921,7 @@ declare module "magic-script-components" {
 
   const WebView: React.FC<WebViewProps>;
 
-  interface PortalIconProps {
+  interface PortalIconProps extends EventHandlerProps {
     name?: string;
     parentedBoneName?: string;
     skipRaycast?: boolean;
@@ -908,7 +963,7 @@ declare module "magic-script-components" {
 
   const PortalIcon: React.FC<PortalIconProps>;
 
-  interface ColorPickerProps {
+  interface ColorPickerProps extends EventHandlerProps {
     name?: string;
     parentedBoneName?: string;
     skipRaycast?: boolean;
@@ -939,7 +994,7 @@ declare module "magic-script-components" {
 
   const ColorPicker: React.FC<ColorPickerProps>;
 
-  interface TimePickerProps {
+  interface TimePickerProps extends EventHandlerProps {
     name?: string;
     parentedBoneName?: string;
     skipRaycast?: boolean;
@@ -974,7 +1029,7 @@ declare module "magic-script-components" {
 
   const TimePicker: React.FC<TimePickerProps>;
 
-  interface DatePickerProps {
+  interface DatePickerProps extends EventHandlerProps {
     name?: string;
     parentedBoneName?: string;
     skipRaycast?: boolean;
@@ -1011,7 +1066,7 @@ declare module "magic-script-components" {
 
   const DatePicker: React.FC<DatePickerProps>;
 
-  interface CircleConfirmationProps {
+  interface CircleConfirmationProps extends EventHandlerProps {
     name?: string;
     parentedBoneName?: string;
     skipRaycast?: boolean;
@@ -1041,7 +1096,7 @@ declare module "magic-script-components" {
 
   const CircleConfirmation: React.FC<CircleConfirmationProps>;
 
-  interface ContentProps {
+  interface ContentProps extends EventHandlerProps {
     name?: string;
     parentedBoneName?: string;
     skipRaycast?: boolean;
@@ -1061,7 +1116,7 @@ declare module "magic-script-components" {
 
   const Content: React.FC<ContentProps>;
 
-  interface ModelProps {
+  interface ModelProps extends EventHandlerProps {
     name?: string;
     parentedBoneName?: string;
     skipRaycast?: boolean;
@@ -1110,7 +1165,7 @@ declare module "magic-script-components" {
 
   const Model: React.FC<ModelProps>;
 
-  interface QuadProps {
+  interface QuadProps extends EventHandlerProps {
     name?: string;
     parentedBoneName?: string;
     skipRaycast?: boolean;
@@ -1154,7 +1209,7 @@ declare module "magic-script-components" {
 
   const Quad: React.FC<QuadProps>;
 
-  interface VideoProps {
+  interface VideoProps extends EventHandlerProps {
     name?: string;
     parentedBoneName?: string;
     skipRaycast?: boolean;
@@ -1206,7 +1261,7 @@ declare module "magic-script-components" {
 
   const Video: React.FC<VideoProps>;
 
-  interface AudioProps {
+  interface AudioProps extends EventHandlerProps {
     name?: string;
     parentedBoneName?: string;
     skipRaycast?: boolean;
@@ -1246,7 +1301,7 @@ declare module "magic-script-components" {
 
   const Audio: React.FC<AudioProps>;
 
-  interface LightProps {
+  interface LightProps extends EventHandlerProps {
     name?: string;
     parentedBoneName?: string;
     skipRaycast?: boolean;
@@ -1273,7 +1328,7 @@ declare module "magic-script-components" {
 
   const Light: React.FC<LightProps>;
 
-  interface LineProps {
+  interface LineProps extends EventHandlerProps {
     name?: string;
     parentedBoneName?: string;
     skipRaycast?: boolean;
@@ -1405,3 +1460,5 @@ declare module "magic-script-components" {
   type LightType = 'directional' | 'point' | 'spot';
 
 }
+
+declare function print(...args: any[]): void
