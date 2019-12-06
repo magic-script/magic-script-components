@@ -8,62 +8,6 @@ declare module "magic-script-components" {
     volumeSize: vec3;
   }
 
-  interface EventHandlerProps {
-    onActivate?: (eventData: UiEventData) => void;
-    onClick?: (eventData: UiEventData) => void;
-    onPress?: (eventData: UiEventData) => void;
-    onLongPress?: (eventData: UiEventData) => void;
-    onRelease?: (eventData: UiEventData) => void;
-    onHoverEnter?: (eventData: UiEventData) => void;
-    onHoverExit?: (eventData: UiEventData) => void;
-    onHoverMove?: (eventData: UiEventData) => void;
-    onEnabled?: (eventData: UiEventData) => void;
-    onDisabled?: (eventData: UiEventData) => void;
-    onFocusGained?: (eventData: UiEventData) => void;
-    onFocusLost?: (eventData: UiEventData) => void;
-    onFocusInput?: (eventData: UiEventData) => void;
-    onUpdate?: (eventData: UiEventData) => void;
-    onDelete?: (eventData: UiEventData) => void;
-    onCharacterEnter?: (eventData: TextEditEventData) => void;
-    onKeyboardEvent?: (eventData: TextEditEventData) => void;
-    onTextChanged?: (eventData: TextEditEventData) => void;
-    onSliderChanged?: (eventData: SliderEventData) => void;
-    onScrollChanged?: (eventData: ScrollViewEventData) => void;
-    onProgressBarChanged?: (eventData: ProgressBarEventData) => void;
-    onListVisibilityChanged?: (eventData: DropDownListEventData) => void;
-    onSelectionChanged?: (eventData: DropDownListEventData) => void;
-    onToggleChanged?: (eventData: ToggleEventData) => void;
-    onCursorEdge?: (eventData: UiEventData) => void;
-    onCursorOffEdge?: (eventData: UiEventData) => void;
-    onPanelEnter?: (eventData: UiEventData) => void;
-    onPanelExit?: (eventData: UiEventData) => void;
-    onDialogCanceled?: (eventData: UiEventData) => void;
-    onDialogConfirmed?: (eventData: UiEventData) => void;
-    onDialogTimeExpired?: (eventData: UiEventData) => void;
-    onColorCanceled?: (eventData: ColorPickerEventData) => void;
-    onColorChanged?: (eventData: ColorPickerEventData) => void;
-    onColorConfirmed?: (eventData: ColorPickerEventData) => void;
-    onTimeChanged?: (eventData: TimePickerEventData) => void;
-    onTimeConfirmed?: (eventData: TimePickerEventData) => void;
-    onDateChanged?: (eventData: DatePickerEventData) => void;
-    onDateConfirmed?: (eventData: DatePickerEventData) => void;
-    onConfirmationCanceled?: (eventData: CircleConfirmationEventData) => void;
-    onConfirmationCompleted?: (eventData: CircleConfirmationEventData) => void;
-    onConfirmationUpdated?: (eventData: CircleConfirmationEventData) => void;
-  }
-
-  type UiEventData = any;
-  type TextEditEventData = any;
-  type SliderEventData = any;
-  type ScrollViewEventData = any;
-  type ProgressBarEventData = any;
-  type DropDownListEventData = any;
-  type ToggleEventData = any;
-  type ColorPickerEventData = any;
-  type TimePickerEventData = any;
-  type DatePickerEventData = any;
-  type CircleConfirmationEventData = any;
-
   interface ViewProps extends EventHandlerProps {
     name?: string;
     parentedBoneName?: string;
@@ -1367,6 +1311,369 @@ declare module "magic-script-components" {
   }
 
   const Line: React.FC<LineProps>;
+
+  interface EventHandlerProps {
+    onActivate?: (eventData: UiEventData) => void;
+    onClick?: (eventData: UiEventData) => void;
+    onPress?: (eventData: UiEventData) => void;
+    onLongPress?: (eventData: UiEventData) => void;
+    onRelease?: (eventData: UiEventData) => void;
+    onHoverEnter?: (eventData: UiEventData) => void;
+    onHoverExit?: (eventData: UiEventData) => void;
+    onHoverMove?: (eventData: UiEventData) => void;
+    onEnabled?: (eventData: UiEventData) => void;
+    onDisabled?: (eventData: UiEventData) => void;
+    onFocusGained?: (eventData: UiEventData) => void;
+    onFocusLost?: (eventData: UiEventData) => void;
+    onFocusInput?: (eventData: UiEventData) => void;
+    onUpdate?: (eventData: UiEventData) => void;
+    onDelete?: (eventData: UiEventData) => void;
+    onCharacterEnter?: (eventData: TextEditEventData) => void;
+    onKeyboardEvent?: (eventData: TextEditEventData) => void;
+    onTextChanged?: (eventData: TextEditEventData) => void;
+    onSliderChanged?: (eventData: SliderEventData) => void;
+    onScrollChanged?: (eventData: ScrollViewEventData) => void;
+    onProgressBarChanged?: (eventData: ProgressBarEventData) => void;
+    onListVisibilityChanged?: (eventData: DropDownListEventData) => void;
+    onSelectionChanged?: (eventData: DropDownListEventData) => void;
+    onToggleChanged?: (eventData: ToggleEventData) => void;
+    onCursorEdge?: (eventData: UiEventData) => void;
+    onCursorOffEdge?: (eventData: UiEventData) => void;
+    onPanelEnter?: (eventData: UiEventData) => void;
+    onPanelExit?: (eventData: UiEventData) => void;
+    onDialogCanceled?: (eventData: UiEventData) => void;
+    onDialogConfirmed?: (eventData: UiEventData) => void;
+    onDialogTimeExpired?: (eventData: UiEventData) => void;
+    onColorCanceled?: (eventData: ColorPickerEventData) => void;
+    onColorChanged?: (eventData: ColorPickerEventData) => void;
+    onColorConfirmed?: (eventData: ColorPickerEventData) => void;
+    onTimeChanged?: (eventData: TimePickerEventData) => void;
+    onTimeConfirmed?: (eventData: TimePickerEventData) => void;
+    onDateChanged?: (eventData: DatePickerEventData) => void;
+    onDateConfirmed?: (eventData: DatePickerEventData) => void;
+    onConfirmationCanceled?: (eventData: CircleConfirmationEventData) => void;
+    onConfirmationCompleted?: (eventData: CircleConfirmationEventData) => void;
+    onConfirmationUpdated?: (eventData: CircleConfirmationEventData) => void;
+  }
+
+  // Event Data:
+  // --------------------------------------------------------------------------------
+
+  interface UiEventData {
+    AABB?: any;
+    AnchorPosition?: any;
+    ChildCount?: any;
+    CurrentPrismTransform?: any;
+    CurrentWorldTransform?: any;
+    CursorHoverState?: any;
+    LocalAABB?: any;
+    LocalTransform?: any;
+    Name?: any;
+    NodeId?: any;
+    ParentedBoneName?: any;
+    PrismId?: any;
+    LocalPosition?: any;
+    LocalRotation?: any;
+    LocalScale?: any;
+    PrismPosition?: any;
+    WorldPosition?: any;
+    Alignment?: any;
+    Enabled?: any;
+    EventPassThrough?: any;
+    EventSoundID?: any;
+    GravityWellEnabled?: any;
+    GravityWellProperties?: any;
+    RenderingLayer?: any;
+  }
+
+  interface TextEditEventData {
+    AABB?: any;
+    AnchorPosition?: any;
+    ChildCount?: any;
+    CurrentPrismTransform?: any;
+    CurrentWorldTransform?: any;
+    CursorHoverState?: any;
+    LocalAABB?: any;
+    LocalTransform?: any;
+    Name?: any;
+    NodeId?: any;
+    ParentedBoneName?: any;
+    PrismId?: any;
+    LocalPosition?: any;
+    LocalRotation?: any;
+    LocalScale?: any;
+    PrismPosition?: any;
+    WorldPosition?: any;
+    Alignment?: any;
+    Enabled?: any;
+    EventPassThrough?: any;
+    EventSoundID?: any;
+    GravityWellEnabled?: any;
+    GravityWellProperties?: any;
+    RenderingLayer?: any;
+    Text?: any;
+  }
+
+  interface SliderEventData {
+    AABB?: any;
+    AnchorPosition?: any;
+    ChildCount?: any;
+    CurrentPrismTransform?: any;
+    CurrentWorldTransform?: any;
+    CursorHoverState?: any;
+    LocalAABB?: any;
+    LocalTransform?: any;
+    Name?: any;
+    NodeId?: any;
+    ParentedBoneName?: any;
+    PrismId?: any;
+    LocalPosition?: any;
+    LocalRotation?: any;
+    LocalScale?: any;
+    PrismPosition?: any;
+    WorldPosition?: any;
+    Alignment?: any;
+    Enabled?: any;
+    EventPassThrough?: any;
+    EventSoundID?: any;
+    GravityWellEnabled?: any;
+    GravityWellProperties?: any;
+    RenderingLayer?: any;
+    Max?: any;
+    Min?: any;
+    Value?: any;
+  }
+
+  interface ScrollViewEventData {
+    AABB?: any;
+    AnchorPosition?: any;
+    ChildCount?: any;
+    CurrentPrismTransform?: any;
+    CurrentWorldTransform?: any;
+    CursorHoverState?: any;
+    LocalAABB?: any;
+    LocalTransform?: any;
+    Name?: any;
+    NodeId?: any;
+    ParentedBoneName?: any;
+    PrismId?: any;
+    LocalPosition?: any;
+    LocalRotation?: any;
+    LocalScale?: any;
+    PrismPosition?: any;
+    WorldPosition?: any;
+    Alignment?: any;
+    Enabled?: any;
+    EventPassThrough?: any;
+    EventSoundID?: any;
+    GravityWellEnabled?: any;
+    GravityWellProperties?: any;
+    RenderingLayer?: any;
+    ScrollValue?: any;
+  }
+
+  interface ProgressBarEventData {
+    AABB?: any;
+    AnchorPosition?: any;
+    ChildCount?: any;
+    CurrentPrismTransform?: any;
+    CurrentWorldTransform?: any;
+    CursorHoverState?: any;
+    LocalAABB?: any;
+    LocalTransform?: any;
+    Name?: any;
+    NodeId?: any;
+    ParentedBoneName?: any;
+    PrismId?: any;
+    LocalPosition?: any;
+    LocalRotation?: any;
+    LocalScale?: any;
+    PrismPosition?: any;
+    WorldPosition?: any;
+    Alignment?: any;
+    Enabled?: any;
+    EventPassThrough?: any;
+    EventSoundID?: any;
+    GravityWellEnabled?: any;
+    GravityWellProperties?: any;
+    RenderingLayer?: any;
+    Max?: any;
+    Min?: any;
+    Value?: any;
+    ProgressColor?: any;
+  }
+
+  interface DropDownListEventData {
+    AABB?: any;
+    AnchorPosition?: any;
+    ChildCount?: any;
+    CurrentPrismTransform?: any;
+    CurrentWorldTransform?: any;
+    CursorHoverState?: any;
+    LocalAABB?: any;
+    LocalTransform?: any;
+    Name?: any;
+    NodeId?: any;
+    ParentedBoneName?: any;
+    PrismId?: any;
+    LocalPosition?: any;
+    LocalRotation?: any;
+    LocalScale?: any;
+    PrismPosition?: any;
+    WorldPosition?: any;
+    Alignment?: any;
+    Enabled?: any;
+    EventPassThrough?: any;
+    EventSoundID?: any;
+    GravityWellEnabled?: any;
+    GravityWellProperties?: any;
+    RenderingLayer?: any;
+  }
+
+  interface ToggleEventData {
+    AABB?: any;
+    AnchorPosition?: any;
+    ChildCount?: any;
+    CurrentPrismTransform?: any;
+    CurrentWorldTransform?: any;
+    CursorHoverState?: any;
+    LocalAABB?: any;
+    LocalTransform?: any;
+    Name?: any;
+    NodeId?: any;
+    ParentedBoneName?: any;
+    PrismId?: any;
+    LocalPosition?: any;
+    LocalRotation?: any;
+    LocalScale?: any;
+    PrismPosition?: any;
+    WorldPosition?: any;
+    Alignment?: any;
+    Enabled?: any;
+    EventPassThrough?: any;
+    EventSoundID?: any;
+    GravityWellEnabled?: any;
+    GravityWellProperties?: any;
+    RenderingLayer?: any;
+    On?: any;
+    Text?: any;
+    TextColor?: any;
+    TextSize?: any;
+  }
+
+  interface ColorPickerEventData {
+    AABB?: any;
+    AnchorPosition?: any;
+    ChildCount?: any;
+    CurrentPrismTransform?: any;
+    CurrentWorldTransform?: any;
+    CursorHoverState?: any;
+    LocalAABB?: any;
+    LocalTransform?: any;
+    Name?: any;
+    NodeId?: any;
+    ParentedBoneName?: any;
+    PrismId?: any;
+    LocalPosition?: any;
+    LocalRotation?: any;
+    LocalScale?: any;
+    PrismPosition?: any;
+    WorldPosition?: any;
+    Alignment?: any;
+    Enabled?: any;
+    EventPassThrough?: any;
+    EventSoundID?: any;
+    GravityWellEnabled?: any;
+    GravityWellProperties?: any;
+    RenderingLayer?: any;
+    Color?: any;
+  }
+
+  interface TimePickerEventData {
+    AABB?: any;
+    AnchorPosition?: any;
+    ChildCount?: any;
+    CurrentPrismTransform?: any;
+    CurrentWorldTransform?: any;
+    CursorHoverState?: any;
+    LocalAABB?: any;
+    LocalTransform?: any;
+    Name?: any;
+    NodeId?: any;
+    ParentedBoneName?: any;
+    PrismId?: any;
+    LocalPosition?: any;
+    LocalRotation?: any;
+    LocalScale?: any;
+    PrismPosition?: any;
+    WorldPosition?: any;
+    Alignment?: any;
+    Enabled?: any;
+    EventPassThrough?: any;
+    EventSoundID?: any;
+    GravityWellEnabled?: any;
+    GravityWellProperties?: any;
+    RenderingLayer?: any;
+    Time?: any;
+    TimeString?: any;
+  }
+
+  interface DatePickerEventData {
+    AABB?: any;
+    AnchorPosition?: any;
+    ChildCount?: any;
+    CurrentPrismTransform?: any;
+    CurrentWorldTransform?: any;
+    CursorHoverState?: any;
+    LocalAABB?: any;
+    LocalTransform?: any;
+    Name?: any;
+    NodeId?: any;
+    ParentedBoneName?: any;
+    PrismId?: any;
+    LocalPosition?: any;
+    LocalRotation?: any;
+    LocalScale?: any;
+    PrismPosition?: any;
+    WorldPosition?: any;
+    Alignment?: any;
+    Enabled?: any;
+    EventPassThrough?: any;
+    EventSoundID?: any;
+    GravityWellEnabled?: any;
+    GravityWellProperties?: any;
+    RenderingLayer?: any;
+    Date?: any;
+    DateString?: any;
+  }
+
+  interface CircleConfirmationEventData {
+    AABB?: any;
+    AnchorPosition?: any;
+    ChildCount?: any;
+    CurrentPrismTransform?: any;
+    CurrentWorldTransform?: any;
+    CursorHoverState?: any;
+    LocalAABB?: any;
+    LocalTransform?: any;
+    Name?: any;
+    NodeId?: any;
+    ParentedBoneName?: any;
+    PrismId?: any;
+    LocalPosition?: any;
+    LocalRotation?: any;
+    LocalScale?: any;
+    PrismPosition?: any;
+    WorldPosition?: any;
+    Alignment?: any;
+    Enabled?: any;
+    EventPassThrough?: any;
+    EventSoundID?: any;
+    GravityWellEnabled?: any;
+    GravityWellProperties?: any;
+    RenderingLayer?: any;
+    Angle?: any;
+  }
 
   // Other Types:
   // --------------------------------------------------------------------------------
