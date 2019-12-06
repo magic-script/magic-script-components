@@ -1359,7 +1359,10 @@ declare module "magic-script-components" {
   // Event Data:
   // --------------------------------------------------------------------------------
 
-  interface UiEventData {
+  interface EventData {
+  }
+
+  interface NodeEventData extends EventData {
     AABB?: any;
     AnchorPosition?: any;
     ChildCount?: any;
@@ -1372,11 +1375,17 @@ declare module "magic-script-components" {
     NodeId?: any;
     ParentedBoneName?: any;
     PrismId?: any;
+  }
+
+  interface TransformNodeEventData extends NodeEventData {
     LocalPosition?: any;
     LocalRotation?: any;
     LocalScale?: any;
     PrismPosition?: any;
     WorldPosition?: any;
+  }
+
+  interface UiEventData extends TransformNodeEventData {
     Alignment?: any;
     Enabled?: any;
     EventPassThrough?: any;
@@ -1386,141 +1395,28 @@ declare module "magic-script-components" {
     RenderingLayer?: any;
   }
 
-  interface TextEditEventData {
-    AABB?: any;
-    AnchorPosition?: any;
-    ChildCount?: any;
-    CurrentPrismTransform?: any;
-    CurrentWorldTransform?: any;
-    CursorHoverState?: any;
-    LocalAABB?: any;
-    LocalTransform?: any;
-    Name?: any;
-    NodeId?: any;
-    ParentedBoneName?: any;
-    PrismId?: any;
-    LocalPosition?: any;
-    LocalRotation?: any;
-    LocalScale?: any;
-    PrismPosition?: any;
-    WorldPosition?: any;
-    Alignment?: any;
-    Enabled?: any;
-    EventPassThrough?: any;
-    EventSoundID?: any;
-    GravityWellEnabled?: any;
-    GravityWellProperties?: any;
-    RenderingLayer?: any;
+  interface TextEditEventData extends UiEventData {
     Text?: any;
   }
 
-  interface SliderEventData {
-    AABB?: any;
-    AnchorPosition?: any;
-    ChildCount?: any;
-    CurrentPrismTransform?: any;
-    CurrentWorldTransform?: any;
-    CursorHoverState?: any;
-    LocalAABB?: any;
-    LocalTransform?: any;
-    Name?: any;
-    NodeId?: any;
-    ParentedBoneName?: any;
-    PrismId?: any;
-    LocalPosition?: any;
-    LocalRotation?: any;
-    LocalScale?: any;
-    PrismPosition?: any;
-    WorldPosition?: any;
-    Alignment?: any;
-    Enabled?: any;
-    EventPassThrough?: any;
-    EventSoundID?: any;
-    GravityWellEnabled?: any;
-    GravityWellProperties?: any;
-    RenderingLayer?: any;
+  interface SliderEventData extends UiEventData {
     Max?: any;
     Min?: any;
     Value?: any;
   }
 
-  interface ScrollViewEventData {
-    AABB?: any;
-    AnchorPosition?: any;
-    ChildCount?: any;
-    CurrentPrismTransform?: any;
-    CurrentWorldTransform?: any;
-    CursorHoverState?: any;
-    LocalAABB?: any;
-    LocalTransform?: any;
-    Name?: any;
-    NodeId?: any;
-    ParentedBoneName?: any;
-    PrismId?: any;
-    LocalPosition?: any;
-    LocalRotation?: any;
-    LocalScale?: any;
-    PrismPosition?: any;
-    WorldPosition?: any;
-    Alignment?: any;
-    Enabled?: any;
-    EventPassThrough?: any;
-    EventSoundID?: any;
-    GravityWellEnabled?: any;
-    GravityWellProperties?: any;
-    RenderingLayer?: any;
+  interface ScrollViewEventData extends UiEventData {
     ScrollValue?: any;
   }
 
-  interface ProgressBarEventData {
-    AABB?: any;
-    AnchorPosition?: any;
-    ChildCount?: any;
-    CurrentPrismTransform?: any;
-    CurrentWorldTransform?: any;
-    CursorHoverState?: any;
-    LocalAABB?: any;
-    LocalTransform?: any;
-    Name?: any;
-    NodeId?: any;
-    ParentedBoneName?: any;
-    PrismId?: any;
-    LocalPosition?: any;
-    LocalRotation?: any;
-    LocalScale?: any;
-    PrismPosition?: any;
-    WorldPosition?: any;
-    Alignment?: any;
-    Enabled?: any;
-    EventPassThrough?: any;
-    EventSoundID?: any;
-    GravityWellEnabled?: any;
-    GravityWellProperties?: any;
-    RenderingLayer?: any;
+  interface ProgressBarEventData extends UiEventData {
     Max?: any;
     Min?: any;
     Value?: any;
     ProgressColor?: any;
   }
 
-  interface DropDownListEventData {
-    AABB?: any;
-    AnchorPosition?: any;
-    ChildCount?: any;
-    CurrentPrismTransform?: any;
-    CurrentWorldTransform?: any;
-    CursorHoverState?: any;
-    LocalAABB?: any;
-    LocalTransform?: any;
-    Name?: any;
-    NodeId?: any;
-    ParentedBoneName?: any;
-    PrismId?: any;
-    LocalPosition?: any;
-    LocalRotation?: any;
-    LocalScale?: any;
-    PrismPosition?: any;
-    WorldPosition?: any;
+  interface DropDownListEventData extends UiEventData {
     Alignment?: any;
     Enabled?: any;
     EventPassThrough?: any;
@@ -1530,148 +1426,28 @@ declare module "magic-script-components" {
     RenderingLayer?: any;
   }
 
-  interface ToggleEventData {
-    AABB?: any;
-    AnchorPosition?: any;
-    ChildCount?: any;
-    CurrentPrismTransform?: any;
-    CurrentWorldTransform?: any;
-    CursorHoverState?: any;
-    LocalAABB?: any;
-    LocalTransform?: any;
-    Name?: any;
-    NodeId?: any;
-    ParentedBoneName?: any;
-    PrismId?: any;
-    LocalPosition?: any;
-    LocalRotation?: any;
-    LocalScale?: any;
-    PrismPosition?: any;
-    WorldPosition?: any;
-    Alignment?: any;
-    Enabled?: any;
-    EventPassThrough?: any;
-    EventSoundID?: any;
-    GravityWellEnabled?: any;
-    GravityWellProperties?: any;
-    RenderingLayer?: any;
+  interface ToggleEventData extends UiEventData {
     On?: any;
     Text?: any;
     TextColor?: any;
     TextSize?: any;
   }
 
-  interface ColorPickerEventData {
-    AABB?: any;
-    AnchorPosition?: any;
-    ChildCount?: any;
-    CurrentPrismTransform?: any;
-    CurrentWorldTransform?: any;
-    CursorHoverState?: any;
-    LocalAABB?: any;
-    LocalTransform?: any;
-    Name?: any;
-    NodeId?: any;
-    ParentedBoneName?: any;
-    PrismId?: any;
-    LocalPosition?: any;
-    LocalRotation?: any;
-    LocalScale?: any;
-    PrismPosition?: any;
-    WorldPosition?: any;
-    Alignment?: any;
-    Enabled?: any;
-    EventPassThrough?: any;
-    EventSoundID?: any;
-    GravityWellEnabled?: any;
-    GravityWellProperties?: any;
-    RenderingLayer?: any;
+  interface ColorPickerEventData extends UiEventData {
     Color?: any;
   }
 
-  interface TimePickerEventData {
-    AABB?: any;
-    AnchorPosition?: any;
-    ChildCount?: any;
-    CurrentPrismTransform?: any;
-    CurrentWorldTransform?: any;
-    CursorHoverState?: any;
-    LocalAABB?: any;
-    LocalTransform?: any;
-    Name?: any;
-    NodeId?: any;
-    ParentedBoneName?: any;
-    PrismId?: any;
-    LocalPosition?: any;
-    LocalRotation?: any;
-    LocalScale?: any;
-    PrismPosition?: any;
-    WorldPosition?: any;
-    Alignment?: any;
-    Enabled?: any;
-    EventPassThrough?: any;
-    EventSoundID?: any;
-    GravityWellEnabled?: any;
-    GravityWellProperties?: any;
-    RenderingLayer?: any;
+  interface TimePickerEventData extends UiEventData {
     Time?: any;
     TimeString?: any;
   }
 
-  interface DatePickerEventData {
-    AABB?: any;
-    AnchorPosition?: any;
-    ChildCount?: any;
-    CurrentPrismTransform?: any;
-    CurrentWorldTransform?: any;
-    CursorHoverState?: any;
-    LocalAABB?: any;
-    LocalTransform?: any;
-    Name?: any;
-    NodeId?: any;
-    ParentedBoneName?: any;
-    PrismId?: any;
-    LocalPosition?: any;
-    LocalRotation?: any;
-    LocalScale?: any;
-    PrismPosition?: any;
-    WorldPosition?: any;
-    Alignment?: any;
-    Enabled?: any;
-    EventPassThrough?: any;
-    EventSoundID?: any;
-    GravityWellEnabled?: any;
-    GravityWellProperties?: any;
-    RenderingLayer?: any;
+  interface DatePickerEventData extends UiEventData {
     Date?: any;
     DateString?: any;
   }
 
-  interface CircleConfirmationEventData {
-    AABB?: any;
-    AnchorPosition?: any;
-    ChildCount?: any;
-    CurrentPrismTransform?: any;
-    CurrentWorldTransform?: any;
-    CursorHoverState?: any;
-    LocalAABB?: any;
-    LocalTransform?: any;
-    Name?: any;
-    NodeId?: any;
-    ParentedBoneName?: any;
-    PrismId?: any;
-    LocalPosition?: any;
-    LocalRotation?: any;
-    LocalScale?: any;
-    PrismPosition?: any;
-    WorldPosition?: any;
-    Alignment?: any;
-    Enabled?: any;
-    EventPassThrough?: any;
-    EventSoundID?: any;
-    GravityWellEnabled?: any;
-    GravityWellProperties?: any;
-    RenderingLayer?: any;
+  interface CircleConfirmationEventData extends UiEventData {
     Angle?: any;
   }
 
