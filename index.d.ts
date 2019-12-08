@@ -8,22 +8,7 @@ declare module "magic-script-components" {
     volumeSize: vec3;
   }
 
-  interface ViewProps extends EventHandlerProps {
-    name?: string;
-    parentedBoneName?: string;
-    skipRaycast?: boolean;
-    triggerable?: boolean;
-    visible?: boolean;
-    visibilityInherited?: boolean;
-    anchorPosition?: vec3;
-    localPosition?: vec3;
-    localRotation?: quat;
-    localScale?: vec3;
-    localTransform?: mat4;
-    cursorHoverState?: CursorHoverState;
-    offset?: vec3;
-    padding?: vec4;
-    itemAlignment?: Alignment;
+  interface ViewProps extends ContentProps, EventHandlerProps {
     alignment?: Alignment;
     activateResponse?: FocusRequest;
     renderingLayer?: RenderingLayer;
@@ -37,31 +22,7 @@ declare module "magic-script-components" {
 
   const View: React.FC<ViewProps>;
 
-  interface TextProps extends EventHandlerProps {
-    name?: string;
-    parentedBoneName?: string;
-    skipRaycast?: boolean;
-    triggerable?: boolean;
-    visible?: boolean;
-    visibilityInherited?: boolean;
-    anchorPosition?: vec3;
-    localPosition?: vec3;
-    localRotation?: quat;
-    localScale?: vec3;
-    localTransform?: mat4;
-    cursorHoverState?: CursorHoverState;
-    offset?: vec3;
-    padding?: vec4;
-    itemAlignment?: Alignment;
-    alignment?: Alignment;
-    activateResponse?: FocusRequest;
-    renderingLayer?: RenderingLayer;
-    enabled?: boolean;
-    eventPassThrough?: boolean;
-    eventPassThroughChildren?: boolean;
-    gravityWellEnabled?: boolean;
-    eventSoundId?: { soundEvent?: SoundEvent; soundName?: string; };
-    gravityWellProperties?: { shape?: { size?: vec2; offset?: vec3; roundness?: number; }; snap?: GravityWellSnap; internalSnap?: boolean; };
+  interface TextProps extends ViewProps, EventHandlerProps {
     children?: any;
     text?: string;
     textColor?: vec4;
@@ -81,31 +42,7 @@ declare module "magic-script-components" {
 
   const Text: React.FC<TextProps>;
 
-  interface TextEditProps extends EventHandlerProps {
-    name?: string;
-    parentedBoneName?: string;
-    skipRaycast?: boolean;
-    triggerable?: boolean;
-    visible?: boolean;
-    visibilityInherited?: boolean;
-    anchorPosition?: vec3;
-    localPosition?: vec3;
-    localRotation?: quat;
-    localScale?: vec3;
-    localTransform?: mat4;
-    cursorHoverState?: CursorHoverState;
-    offset?: vec3;
-    padding?: vec4;
-    itemAlignment?: Alignment;
-    alignment?: Alignment;
-    activateResponse?: FocusRequest;
-    renderingLayer?: RenderingLayer;
-    enabled?: boolean;
-    eventPassThrough?: boolean;
-    eventPassThroughChildren?: boolean;
-    gravityWellEnabled?: boolean;
-    eventSoundId?: { soundEvent?: SoundEvent; soundName?: string; };
-    gravityWellProperties?: { shape?: { size?: vec2; offset?: vec3; roundness?: number; }; snap?: GravityWellSnap; internalSnap?: boolean; };
+  interface TextEditProps extends ViewProps, EventHandlerProps {
     children?: any;
     text?: string;
     textColor?: vec4;
@@ -135,31 +72,7 @@ declare module "magic-script-components" {
 
   const TextEdit: React.FC<TextEditProps>;
 
-  interface ButtonProps extends EventHandlerProps {
-    name?: string;
-    parentedBoneName?: string;
-    skipRaycast?: boolean;
-    triggerable?: boolean;
-    visible?: boolean;
-    visibilityInherited?: boolean;
-    anchorPosition?: vec3;
-    localPosition?: vec3;
-    localRotation?: quat;
-    localScale?: vec3;
-    localTransform?: mat4;
-    cursorHoverState?: CursorHoverState;
-    offset?: vec3;
-    padding?: vec4;
-    itemAlignment?: Alignment;
-    alignment?: Alignment;
-    activateResponse?: FocusRequest;
-    renderingLayer?: RenderingLayer;
-    enabled?: boolean;
-    eventPassThrough?: boolean;
-    eventPassThroughChildren?: boolean;
-    gravityWellEnabled?: boolean;
-    eventSoundId?: { soundEvent?: SoundEvent; soundName?: string; };
-    gravityWellProperties?: { shape?: { size?: vec2; offset?: vec3; roundness?: number; }; snap?: GravityWellSnap; internalSnap?: boolean; };
+  interface ButtonProps extends ViewProps, EventHandlerProps {
     children?: any;
     text?: string;
     textColor?: vec4;
@@ -173,31 +86,7 @@ declare module "magic-script-components" {
 
   const Button: React.FC<ButtonProps>;
 
-  interface ImageProps extends EventHandlerProps {
-    name?: string;
-    parentedBoneName?: string;
-    skipRaycast?: boolean;
-    triggerable?: boolean;
-    visible?: boolean;
-    visibilityInherited?: boolean;
-    anchorPosition?: vec3;
-    localPosition?: vec3;
-    localRotation?: quat;
-    localScale?: vec3;
-    localTransform?: mat4;
-    cursorHoverState?: CursorHoverState;
-    offset?: vec3;
-    padding?: vec4;
-    itemAlignment?: Alignment;
-    alignment?: Alignment;
-    activateResponse?: FocusRequest;
-    renderingLayer?: RenderingLayer;
-    enabled?: boolean;
-    eventPassThrough?: boolean;
-    eventPassThroughChildren?: boolean;
-    gravityWellEnabled?: boolean;
-    eventSoundId?: { soundEvent?: SoundEvent; soundName?: string; };
-    gravityWellProperties?: { shape?: { size?: vec2; offset?: vec3; roundness?: number; }; snap?: GravityWellSnap; internalSnap?: boolean; };
+  interface ImageProps extends ViewProps, EventHandlerProps {
     ui?: boolean;
     opaque?: boolean;
     color?: vec4;
@@ -215,31 +104,7 @@ declare module "magic-script-components" {
 
   const Image: React.FC<ImageProps>;
 
-  interface ScrollBarProps extends EventHandlerProps {
-    name?: string;
-    parentedBoneName?: string;
-    skipRaycast?: boolean;
-    triggerable?: boolean;
-    visible?: boolean;
-    visibilityInherited?: boolean;
-    anchorPosition?: vec3;
-    localPosition?: vec3;
-    localRotation?: quat;
-    localScale?: vec3;
-    localTransform?: mat4;
-    cursorHoverState?: CursorHoverState;
-    offset?: vec3;
-    padding?: vec4;
-    itemAlignment?: Alignment;
-    alignment?: Alignment;
-    activateResponse?: FocusRequest;
-    renderingLayer?: RenderingLayer;
-    enabled?: boolean;
-    eventPassThrough?: boolean;
-    eventPassThroughChildren?: boolean;
-    gravityWellEnabled?: boolean;
-    eventSoundId?: { soundEvent?: SoundEvent; soundName?: string; };
-    gravityWellProperties?: { shape?: { size?: vec2; offset?: vec3; roundness?: number; }; snap?: GravityWellSnap; internalSnap?: boolean; };
+  interface ScrollBarProps extends ViewProps, EventHandlerProps {
     thumbSize?: number;
     thumbPosition?: number;
     orientation?: Orientation;
@@ -249,31 +114,7 @@ declare module "magic-script-components" {
 
   const ScrollBar: React.FC<ScrollBarProps>;
 
-  interface ScrollViewProps extends EventHandlerProps {
-    name?: string;
-    parentedBoneName?: string;
-    skipRaycast?: boolean;
-    triggerable?: boolean;
-    visible?: boolean;
-    visibilityInherited?: boolean;
-    anchorPosition?: vec3;
-    localPosition?: vec3;
-    localRotation?: quat;
-    localScale?: vec3;
-    localTransform?: mat4;
-    cursorHoverState?: CursorHoverState;
-    offset?: vec3;
-    padding?: vec4;
-    itemAlignment?: Alignment;
-    alignment?: Alignment;
-    activateResponse?: FocusRequest;
-    renderingLayer?: RenderingLayer;
-    enabled?: boolean;
-    eventPassThrough?: boolean;
-    eventPassThroughChildren?: boolean;
-    gravityWellEnabled?: boolean;
-    eventSoundId?: { soundEvent?: SoundEvent; soundName?: string; };
-    gravityWellProperties?: { shape?: { size?: vec2; offset?: vec3; roundness?: number; }; snap?: GravityWellSnap; internalSnap?: boolean; };
+  interface ScrollViewProps extends ViewProps, EventHandlerProps {
     scrollBarVisibility?: ScrollBarVisibility;
     scrollDirection?: ScrollDirection;
     scrollMask?: number;
@@ -327,61 +168,13 @@ declare module "magic-script-components" {
 
   const ListView: React.FC<ListViewProps>;
 
-  interface ListViewItemProps extends EventHandlerProps {
-    name?: string;
-    parentedBoneName?: string;
-    skipRaycast?: boolean;
-    triggerable?: boolean;
-    visible?: boolean;
-    visibilityInherited?: boolean;
-    anchorPosition?: vec3;
-    localPosition?: vec3;
-    localRotation?: quat;
-    localScale?: vec3;
-    localTransform?: mat4;
-    cursorHoverState?: CursorHoverState;
-    offset?: vec3;
-    padding?: vec4;
-    itemAlignment?: Alignment;
-    alignment?: Alignment;
-    activateResponse?: FocusRequest;
-    renderingLayer?: RenderingLayer;
-    enabled?: boolean;
-    eventPassThrough?: boolean;
-    eventPassThroughChildren?: boolean;
-    gravityWellEnabled?: boolean;
-    eventSoundId?: { soundEvent?: SoundEvent; soundName?: string; };
-    gravityWellProperties?: { shape?: { size?: vec2; offset?: vec3; roundness?: number; }; snap?: GravityWellSnap; internalSnap?: boolean; };
+  interface ListViewItemProps extends ViewProps, EventHandlerProps {
     backgroundColor?: vec4;
   }
 
   const ListViewItem: React.FC<ListViewItemProps>;
 
-  interface SpinnerProps extends EventHandlerProps {
-    name?: string;
-    parentedBoneName?: string;
-    skipRaycast?: boolean;
-    triggerable?: boolean;
-    visible?: boolean;
-    visibilityInherited?: boolean;
-    anchorPosition?: vec3;
-    localPosition?: vec3;
-    localRotation?: quat;
-    localScale?: vec3;
-    localTransform?: mat4;
-    cursorHoverState?: CursorHoverState;
-    offset?: vec3;
-    padding?: vec4;
-    itemAlignment?: Alignment;
-    alignment?: Alignment;
-    activateResponse?: FocusRequest;
-    renderingLayer?: RenderingLayer;
-    enabled?: boolean;
-    eventPassThrough?: boolean;
-    eventPassThroughChildren?: boolean;
-    gravityWellEnabled?: boolean;
-    eventSoundId?: { soundEvent?: SoundEvent; soundName?: string; };
-    gravityWellProperties?: { shape?: { size?: vec2; offset?: vec3; roundness?: number; }; snap?: GravityWellSnap; internalSnap?: boolean; };
+  interface SpinnerProps extends ViewProps, EventHandlerProps {
     size?: vec2;
     value?: number;
     type?: LoadingSpinnerType;
@@ -393,31 +186,7 @@ declare module "magic-script-components" {
 
   const Spinner: React.FC<SpinnerProps>;
 
-  interface SliderProps extends EventHandlerProps {
-    name?: string;
-    parentedBoneName?: string;
-    skipRaycast?: boolean;
-    triggerable?: boolean;
-    visible?: boolean;
-    visibilityInherited?: boolean;
-    anchorPosition?: vec3;
-    localPosition?: vec3;
-    localRotation?: quat;
-    localScale?: vec3;
-    localTransform?: mat4;
-    cursorHoverState?: CursorHoverState;
-    offset?: vec3;
-    padding?: vec4;
-    itemAlignment?: Alignment;
-    alignment?: Alignment;
-    activateResponse?: FocusRequest;
-    renderingLayer?: RenderingLayer;
-    enabled?: boolean;
-    eventPassThrough?: boolean;
-    eventPassThroughChildren?: boolean;
-    gravityWellEnabled?: boolean;
-    eventSoundId?: { soundEvent?: SoundEvent; soundName?: string; };
-    gravityWellProperties?: { shape?: { size?: vec2; offset?: vec3; roundness?: number; }; snap?: GravityWellSnap; internalSnap?: boolean; };
+  interface SliderProps extends ViewProps, EventHandlerProps {
     min?: number;
     max?: number;
     value?: number;
@@ -427,31 +196,7 @@ declare module "magic-script-components" {
 
   const Slider: React.FC<SliderProps>;
 
-  interface ProgressBarProps extends EventHandlerProps {
-    name?: string;
-    parentedBoneName?: string;
-    skipRaycast?: boolean;
-    triggerable?: boolean;
-    visible?: boolean;
-    visibilityInherited?: boolean;
-    anchorPosition?: vec3;
-    localPosition?: vec3;
-    localRotation?: quat;
-    localScale?: vec3;
-    localTransform?: mat4;
-    cursorHoverState?: CursorHoverState;
-    offset?: vec3;
-    padding?: vec4;
-    itemAlignment?: Alignment;
-    alignment?: Alignment;
-    activateResponse?: FocusRequest;
-    renderingLayer?: RenderingLayer;
-    enabled?: boolean;
-    eventPassThrough?: boolean;
-    eventPassThroughChildren?: boolean;
-    gravityWellEnabled?: boolean;
-    eventSoundId?: { soundEvent?: SoundEvent; soundName?: string; };
-    gravityWellProperties?: { shape?: { size?: vec2; offset?: vec3; roundness?: number; }; snap?: GravityWellSnap; internalSnap?: boolean; };
+  interface ProgressBarProps extends ViewProps, EventHandlerProps {
     progressColor?: { beginColor?: vec4; endColor?: vec4; };
     min?: number;
     max?: number;
@@ -462,31 +207,7 @@ declare module "magic-script-components" {
 
   const ProgressBar: React.FC<ProgressBarProps>;
 
-  interface GridLayoutProps extends EventHandlerProps {
-    name?: string;
-    parentedBoneName?: string;
-    skipRaycast?: boolean;
-    triggerable?: boolean;
-    visible?: boolean;
-    visibilityInherited?: boolean;
-    anchorPosition?: vec3;
-    localPosition?: vec3;
-    localRotation?: quat;
-    localScale?: vec3;
-    localTransform?: mat4;
-    cursorHoverState?: CursorHoverState;
-    offset?: vec3;
-    padding?: vec4;
-    itemAlignment?: Alignment;
-    alignment?: Alignment;
-    activateResponse?: FocusRequest;
-    renderingLayer?: RenderingLayer;
-    enabled?: boolean;
-    eventPassThrough?: boolean;
-    eventPassThroughChildren?: boolean;
-    gravityWellEnabled?: boolean;
-    eventSoundId?: { soundEvent?: SoundEvent; soundName?: string; };
-    gravityWellProperties?: { shape?: { size?: vec2; offset?: vec3; roundness?: number; }; snap?: GravityWellSnap; internalSnap?: boolean; };
+  interface GridLayoutProps extends ViewProps, EventHandlerProps {
     defaultItemAlignment?: Alignment;
     defaultItemPadding?: vec4;
     itemPadding?: vec4;
@@ -499,31 +220,7 @@ declare module "magic-script-components" {
 
   const GridLayout: React.FC<GridLayoutProps>;
 
-  interface LinearLayoutProps extends EventHandlerProps {
-    name?: string;
-    parentedBoneName?: string;
-    skipRaycast?: boolean;
-    triggerable?: boolean;
-    visible?: boolean;
-    visibilityInherited?: boolean;
-    anchorPosition?: vec3;
-    localPosition?: vec3;
-    localRotation?: quat;
-    localScale?: vec3;
-    localTransform?: mat4;
-    cursorHoverState?: CursorHoverState;
-    offset?: vec3;
-    padding?: vec4;
-    itemAlignment?: Alignment;
-    alignment?: Alignment;
-    activateResponse?: FocusRequest;
-    renderingLayer?: RenderingLayer;
-    enabled?: boolean;
-    eventPassThrough?: boolean;
-    eventPassThroughChildren?: boolean;
-    gravityWellEnabled?: boolean;
-    eventSoundId?: { soundEvent?: SoundEvent; soundName?: string; };
-    gravityWellProperties?: { shape?: { size?: vec2; offset?: vec3; roundness?: number; }; snap?: GravityWellSnap; internalSnap?: boolean; };
+  interface LinearLayoutProps extends ViewProps, EventHandlerProps {
     defaultItemAlignment?: Alignment;
     defaultItemPadding?: vec4;
     itemPadding?: vec4;
@@ -535,31 +232,7 @@ declare module "magic-script-components" {
 
   const LinearLayout: React.FC<LinearLayoutProps>;
 
-  interface RectLayoutProps extends EventHandlerProps {
-    name?: string;
-    parentedBoneName?: string;
-    skipRaycast?: boolean;
-    triggerable?: boolean;
-    visible?: boolean;
-    visibilityInherited?: boolean;
-    anchorPosition?: vec3;
-    localPosition?: vec3;
-    localRotation?: quat;
-    localScale?: vec3;
-    localTransform?: mat4;
-    cursorHoverState?: CursorHoverState;
-    offset?: vec3;
-    padding?: vec4;
-    itemAlignment?: Alignment;
-    alignment?: Alignment;
-    activateResponse?: FocusRequest;
-    renderingLayer?: RenderingLayer;
-    enabled?: boolean;
-    eventPassThrough?: boolean;
-    eventPassThroughChildren?: boolean;
-    gravityWellEnabled?: boolean;
-    eventSoundId?: { soundEvent?: SoundEvent; soundName?: string; };
-    gravityWellProperties?: { shape?: { size?: vec2; offset?: vec3; roundness?: number; }; snap?: GravityWellSnap; internalSnap?: boolean; };
+  interface RectLayoutProps extends ViewProps, EventHandlerProps {
     contentAlignment?: Alignment;
     width?: number;
     height?: number;
@@ -567,31 +240,7 @@ declare module "magic-script-components" {
 
   const RectLayout: React.FC<RectLayoutProps>;
 
-  interface DropdownListProps extends EventHandlerProps {
-    name?: string;
-    parentedBoneName?: string;
-    skipRaycast?: boolean;
-    triggerable?: boolean;
-    visible?: boolean;
-    visibilityInherited?: boolean;
-    anchorPosition?: vec3;
-    localPosition?: vec3;
-    localRotation?: quat;
-    localScale?: vec3;
-    localTransform?: mat4;
-    cursorHoverState?: CursorHoverState;
-    offset?: vec3;
-    padding?: vec4;
-    itemAlignment?: Alignment;
-    alignment?: Alignment;
-    activateResponse?: FocusRequest;
-    renderingLayer?: RenderingLayer;
-    enabled?: boolean;
-    eventPassThrough?: boolean;
-    eventPassThroughChildren?: boolean;
-    gravityWellEnabled?: boolean;
-    eventSoundId?: { soundEvent?: SoundEvent; soundName?: string; };
-    gravityWellProperties?: { shape?: { size?: vec2; offset?: vec3; roundness?: number; }; snap?: GravityWellSnap; internalSnap?: boolean; };
+  interface DropdownListProps extends ViewProps, EventHandlerProps {
     text?: string;
     textColor?: vec4;
     textSize?: number;
@@ -614,31 +263,7 @@ declare module "magic-script-components" {
 
   const DropdownListItem: React.FC<DropdownListItemProps>;
 
-  interface ToggleProps extends EventHandlerProps {
-    name?: string;
-    parentedBoneName?: string;
-    skipRaycast?: boolean;
-    triggerable?: boolean;
-    visible?: boolean;
-    visibilityInherited?: boolean;
-    anchorPosition?: vec3;
-    localPosition?: vec3;
-    localRotation?: quat;
-    localScale?: vec3;
-    localTransform?: mat4;
-    cursorHoverState?: CursorHoverState;
-    offset?: vec3;
-    padding?: vec4;
-    itemAlignment?: Alignment;
-    alignment?: Alignment;
-    activateResponse?: FocusRequest;
-    renderingLayer?: RenderingLayer;
-    enabled?: boolean;
-    eventPassThrough?: boolean;
-    eventPassThroughChildren?: boolean;
-    gravityWellEnabled?: boolean;
-    eventSoundId?: { soundEvent?: SoundEvent; soundName?: string; };
-    gravityWellProperties?: { shape?: { size?: vec2; offset?: vec3; roundness?: number; }; snap?: GravityWellSnap; internalSnap?: boolean; };
+  interface ToggleProps extends ViewProps, EventHandlerProps {
     children?: any;
     text?: string;
     textColor?: vec4;
@@ -650,31 +275,7 @@ declare module "magic-script-components" {
 
   const Toggle: React.FC<ToggleProps>;
 
-  interface ToggleGroupProps extends EventHandlerProps {
-    name?: string;
-    parentedBoneName?: string;
-    skipRaycast?: boolean;
-    triggerable?: boolean;
-    visible?: boolean;
-    visibilityInherited?: boolean;
-    anchorPosition?: vec3;
-    localPosition?: vec3;
-    localRotation?: quat;
-    localScale?: vec3;
-    localTransform?: mat4;
-    cursorHoverState?: CursorHoverState;
-    offset?: vec3;
-    padding?: vec4;
-    itemAlignment?: Alignment;
-    alignment?: Alignment;
-    activateResponse?: FocusRequest;
-    renderingLayer?: RenderingLayer;
-    enabled?: boolean;
-    eventPassThrough?: boolean;
-    eventPassThroughChildren?: boolean;
-    gravityWellEnabled?: boolean;
-    eventSoundId?: { soundEvent?: SoundEvent; soundName?: string; };
-    gravityWellProperties?: { shape?: { size?: vec2; offset?: vec3; roundness?: number; }; snap?: GravityWellSnap; internalSnap?: boolean; };
+  interface ToggleGroupProps extends ViewProps, EventHandlerProps {
     allowMultipleOn?: boolean;
     allowAllOff?: boolean;
     allTogglesOff?: boolean;
@@ -682,31 +283,7 @@ declare module "magic-script-components" {
 
   const ToggleGroup: React.FC<ToggleGroupProps>;
 
-  interface PanelProps extends EventHandlerProps {
-    name?: string;
-    parentedBoneName?: string;
-    skipRaycast?: boolean;
-    triggerable?: boolean;
-    visible?: boolean;
-    visibilityInherited?: boolean;
-    anchorPosition?: vec3;
-    localPosition?: vec3;
-    localRotation?: quat;
-    localScale?: vec3;
-    localTransform?: mat4;
-    cursorHoverState?: CursorHoverState;
-    offset?: vec3;
-    padding?: vec4;
-    itemAlignment?: Alignment;
-    alignment?: Alignment;
-    activateResponse?: FocusRequest;
-    renderingLayer?: RenderingLayer;
-    enabled?: boolean;
-    eventPassThrough?: boolean;
-    eventPassThroughChildren?: boolean;
-    gravityWellEnabled?: boolean;
-    eventSoundId?: { soundEvent?: SoundEvent; soundName?: string; };
-    gravityWellProperties?: { shape?: { size?: vec2; offset?: vec3; roundness?: number; }; snap?: GravityWellSnap; internalSnap?: boolean; };
+  interface PanelProps extends ViewProps, EventHandlerProps {
     cursorConstrained?: boolean;
     cursorInitialPosition?: vec3;
     cursorTransitionType?: PanelCursorTransitionType;
@@ -719,31 +296,7 @@ declare module "magic-script-components" {
 
   const Panel: React.FC<PanelProps>;
 
-  interface TabProps extends EventHandlerProps {
-    name?: string;
-    parentedBoneName?: string;
-    skipRaycast?: boolean;
-    triggerable?: boolean;
-    visible?: boolean;
-    visibilityInherited?: boolean;
-    anchorPosition?: vec3;
-    localPosition?: vec3;
-    localRotation?: quat;
-    localScale?: vec3;
-    localTransform?: mat4;
-    cursorHoverState?: CursorHoverState;
-    offset?: vec3;
-    padding?: vec4;
-    itemAlignment?: Alignment;
-    alignment?: Alignment;
-    activateResponse?: FocusRequest;
-    renderingLayer?: RenderingLayer;
-    enabled?: boolean;
-    eventPassThrough?: boolean;
-    eventPassThroughChildren?: boolean;
-    gravityWellEnabled?: boolean;
-    eventSoundId?: { soundEvent?: SoundEvent; soundName?: string; };
-    gravityWellProperties?: { shape?: { size?: vec2; offset?: vec3; roundness?: number; }; snap?: GravityWellSnap; internalSnap?: boolean; };
+  interface TabProps extends ViewProps, EventHandlerProps {
     children?: any;
     text?: string;
     textColor?: vec4;
@@ -753,31 +306,7 @@ declare module "magic-script-components" {
 
   const Tab: React.FC<TabProps>;
 
-  interface DialogProps extends EventHandlerProps {
-    name?: string;
-    parentedBoneName?: string;
-    skipRaycast?: boolean;
-    triggerable?: boolean;
-    visible?: boolean;
-    visibilityInherited?: boolean;
-    anchorPosition?: vec3;
-    localPosition?: vec3;
-    localRotation?: quat;
-    localScale?: vec3;
-    localTransform?: mat4;
-    cursorHoverState?: CursorHoverState;
-    offset?: vec3;
-    padding?: vec4;
-    itemAlignment?: Alignment;
-    alignment?: Alignment;
-    activateResponse?: FocusRequest;
-    renderingLayer?: RenderingLayer;
-    enabled?: boolean;
-    eventPassThrough?: boolean;
-    eventPassThroughChildren?: boolean;
-    gravityWellEnabled?: boolean;
-    eventSoundId?: { soundEvent?: SoundEvent; soundName?: string; };
-    gravityWellProperties?: { shape?: { size?: vec2; offset?: vec3; roundness?: number; }; snap?: GravityWellSnap; internalSnap?: boolean; };
+  interface DialogProps extends ViewProps, EventHandlerProps {
     children?: any;
     text?: string;
     buttonType?: EclipseButtonType;
@@ -795,31 +324,7 @@ declare module "magic-script-components" {
 
   const Dialog: React.FC<DialogProps>;
 
-  interface PageViewProps extends EventHandlerProps {
-    name?: string;
-    parentedBoneName?: string;
-    skipRaycast?: boolean;
-    triggerable?: boolean;
-    visible?: boolean;
-    visibilityInherited?: boolean;
-    anchorPosition?: vec3;
-    localPosition?: vec3;
-    localRotation?: quat;
-    localScale?: vec3;
-    localTransform?: mat4;
-    cursorHoverState?: CursorHoverState;
-    offset?: vec3;
-    padding?: vec4;
-    itemAlignment?: Alignment;
-    alignment?: Alignment;
-    activateResponse?: FocusRequest;
-    renderingLayer?: RenderingLayer;
-    enabled?: boolean;
-    eventPassThrough?: boolean;
-    eventPassThroughChildren?: boolean;
-    gravityWellEnabled?: boolean;
-    eventSoundId?: { soundEvent?: SoundEvent; soundName?: string; };
-    gravityWellProperties?: { shape?: { size?: vec2; offset?: vec3; roundness?: number; }; snap?: GravityWellSnap; internalSnap?: boolean; };
+  interface PageViewProps extends ViewProps, EventHandlerProps {
     defaultPageAlignment?: Alignment;
     defaultPagePadding?: vec4;
     visiblePage?: number;
@@ -831,31 +336,7 @@ declare module "magic-script-components" {
 
   const PageView: React.FC<PageViewProps>;
 
-  interface WebViewProps extends EventHandlerProps {
-    name?: string;
-    parentedBoneName?: string;
-    skipRaycast?: boolean;
-    triggerable?: boolean;
-    visible?: boolean;
-    visibilityInherited?: boolean;
-    anchorPosition?: vec3;
-    localPosition?: vec3;
-    localRotation?: quat;
-    localScale?: vec3;
-    localTransform?: mat4;
-    cursorHoverState?: CursorHoverState;
-    offset?: vec3;
-    padding?: vec4;
-    itemAlignment?: Alignment;
-    alignment?: Alignment;
-    activateResponse?: FocusRequest;
-    renderingLayer?: RenderingLayer;
-    enabled?: boolean;
-    eventPassThrough?: boolean;
-    eventPassThroughChildren?: boolean;
-    gravityWellEnabled?: boolean;
-    eventSoundId?: { soundEvent?: SoundEvent; soundName?: string; };
-    gravityWellProperties?: { shape?: { size?: vec2; offset?: vec3; roundness?: number; }; snap?: GravityWellSnap; internalSnap?: boolean; };
+  interface WebViewProps extends ViewProps, EventHandlerProps {
     url?: string;
     action?: WebViewAction;
     scrollBy?: vec2;
@@ -865,31 +346,7 @@ declare module "magic-script-components" {
 
   const WebView: React.FC<WebViewProps>;
 
-  interface PortalIconProps extends EventHandlerProps {
-    name?: string;
-    parentedBoneName?: string;
-    skipRaycast?: boolean;
-    triggerable?: boolean;
-    visible?: boolean;
-    visibilityInherited?: boolean;
-    anchorPosition?: vec3;
-    localPosition?: vec3;
-    localRotation?: quat;
-    localScale?: vec3;
-    localTransform?: mat4;
-    cursorHoverState?: CursorHoverState;
-    offset?: vec3;
-    padding?: vec4;
-    itemAlignment?: Alignment;
-    alignment?: Alignment;
-    activateResponse?: FocusRequest;
-    renderingLayer?: RenderingLayer;
-    enabled?: boolean;
-    eventPassThrough?: boolean;
-    eventPassThroughChildren?: boolean;
-    gravityWellEnabled?: boolean;
-    eventSoundId?: { soundEvent?: SoundEvent; soundName?: string; };
-    gravityWellProperties?: { shape?: { size?: vec2; offset?: vec3; roundness?: number; }; snap?: GravityWellSnap; internalSnap?: boolean; };
+  interface PortalIconProps extends ViewProps, EventHandlerProps {
     children?: any;
     text?: string;
     textColor?: vec4;
@@ -907,62 +364,14 @@ declare module "magic-script-components" {
 
   const PortalIcon: React.FC<PortalIconProps>;
 
-  interface ColorPickerProps extends EventHandlerProps {
-    name?: string;
-    parentedBoneName?: string;
-    skipRaycast?: boolean;
-    triggerable?: boolean;
-    visible?: boolean;
-    visibilityInherited?: boolean;
-    anchorPosition?: vec3;
-    localPosition?: vec3;
-    localRotation?: quat;
-    localScale?: vec3;
-    localTransform?: mat4;
-    cursorHoverState?: CursorHoverState;
-    offset?: vec3;
-    padding?: vec4;
-    itemAlignment?: Alignment;
-    alignment?: Alignment;
-    activateResponse?: FocusRequest;
-    renderingLayer?: RenderingLayer;
-    enabled?: boolean;
-    eventPassThrough?: boolean;
-    eventPassThroughChildren?: boolean;
-    gravityWellEnabled?: boolean;
-    eventSoundId?: { soundEvent?: SoundEvent; soundName?: string; };
-    gravityWellProperties?: { shape?: { size?: vec2; offset?: vec3; roundness?: number; }; snap?: GravityWellSnap; internalSnap?: boolean; };
+  interface ColorPickerProps extends ViewProps, EventHandlerProps {
     color?: vec4;
     height?: number;
   }
 
   const ColorPicker: React.FC<ColorPickerProps>;
 
-  interface TimePickerProps extends EventHandlerProps {
-    name?: string;
-    parentedBoneName?: string;
-    skipRaycast?: boolean;
-    triggerable?: boolean;
-    visible?: boolean;
-    visibilityInherited?: boolean;
-    anchorPosition?: vec3;
-    localPosition?: vec3;
-    localRotation?: quat;
-    localScale?: vec3;
-    localTransform?: mat4;
-    cursorHoverState?: CursorHoverState;
-    offset?: vec3;
-    padding?: vec4;
-    itemAlignment?: Alignment;
-    alignment?: Alignment;
-    activateResponse?: FocusRequest;
-    renderingLayer?: RenderingLayer;
-    enabled?: boolean;
-    eventPassThrough?: boolean;
-    eventPassThroughChildren?: boolean;
-    gravityWellEnabled?: boolean;
-    eventSoundId?: { soundEvent?: SoundEvent; soundName?: string; };
-    gravityWellProperties?: { shape?: { size?: vec2; offset?: vec3; roundness?: number; }; snap?: GravityWellSnap; internalSnap?: boolean; };
+  interface TimePickerProps extends ViewProps, EventHandlerProps {
     color?: vec4;
     time?: string;
     showHint?: boolean;
@@ -973,31 +382,7 @@ declare module "magic-script-components" {
 
   const TimePicker: React.FC<TimePickerProps>;
 
-  interface DatePickerProps extends EventHandlerProps {
-    name?: string;
-    parentedBoneName?: string;
-    skipRaycast?: boolean;
-    triggerable?: boolean;
-    visible?: boolean;
-    visibilityInherited?: boolean;
-    anchorPosition?: vec3;
-    localPosition?: vec3;
-    localRotation?: quat;
-    localScale?: vec3;
-    localTransform?: mat4;
-    cursorHoverState?: CursorHoverState;
-    offset?: vec3;
-    padding?: vec4;
-    itemAlignment?: Alignment;
-    alignment?: Alignment;
-    activateResponse?: FocusRequest;
-    renderingLayer?: RenderingLayer;
-    enabled?: boolean;
-    eventPassThrough?: boolean;
-    eventPassThroughChildren?: boolean;
-    gravityWellEnabled?: boolean;
-    eventSoundId?: { soundEvent?: SoundEvent; soundName?: string; };
-    gravityWellProperties?: { shape?: { size?: vec2; offset?: vec3; roundness?: number; }; snap?: GravityWellSnap; internalSnap?: boolean; };
+  interface DatePickerProps extends ViewProps, EventHandlerProps {
     color?: vec4;
     date?: string;
     showHint?: boolean;
@@ -1010,31 +395,7 @@ declare module "magic-script-components" {
 
   const DatePicker: React.FC<DatePickerProps>;
 
-  interface CircleConfirmationProps extends EventHandlerProps {
-    name?: string;
-    parentedBoneName?: string;
-    skipRaycast?: boolean;
-    triggerable?: boolean;
-    visible?: boolean;
-    visibilityInherited?: boolean;
-    anchorPosition?: vec3;
-    localPosition?: vec3;
-    localRotation?: quat;
-    localScale?: vec3;
-    localTransform?: mat4;
-    cursorHoverState?: CursorHoverState;
-    offset?: vec3;
-    padding?: vec4;
-    itemAlignment?: Alignment;
-    alignment?: Alignment;
-    activateResponse?: FocusRequest;
-    renderingLayer?: RenderingLayer;
-    enabled?: boolean;
-    eventPassThrough?: boolean;
-    eventPassThroughChildren?: boolean;
-    gravityWellEnabled?: boolean;
-    eventSoundId?: { soundEvent?: SoundEvent; soundName?: string; };
-    gravityWellProperties?: { shape?: { size?: vec2; offset?: vec3; roundness?: number; }; snap?: GravityWellSnap; internalSnap?: boolean; };
+  interface CircleConfirmationProps extends ViewProps, EventHandlerProps {
     radius?: number;
   }
 
@@ -1060,22 +421,7 @@ declare module "magic-script-components" {
 
   const Content: React.FC<ContentProps>;
 
-  interface ModelProps extends EventHandlerProps {
-    name?: string;
-    parentedBoneName?: string;
-    skipRaycast?: boolean;
-    triggerable?: boolean;
-    visible?: boolean;
-    visibilityInherited?: boolean;
-    anchorPosition?: vec3;
-    localPosition?: vec3;
-    localRotation?: quat;
-    localScale?: vec3;
-    localTransform?: mat4;
-    cursorHoverState?: CursorHoverState;
-    offset?: vec3;
-    padding?: vec4;
-    itemAlignment?: Alignment;
+  interface ModelProps extends ContentProps, EventHandlerProps {
     bloomStrength?: number;
     color?: vec4;
     drmContent?: boolean;
@@ -1109,22 +455,7 @@ declare module "magic-script-components" {
 
   const Model: React.FC<ModelProps>;
 
-  interface QuadProps extends EventHandlerProps {
-    name?: string;
-    parentedBoneName?: string;
-    skipRaycast?: boolean;
-    triggerable?: boolean;
-    visible?: boolean;
-    visibilityInherited?: boolean;
-    anchorPosition?: vec3;
-    localPosition?: vec3;
-    localRotation?: quat;
-    localScale?: vec3;
-    localTransform?: mat4;
-    cursorHoverState?: CursorHoverState;
-    offset?: vec3;
-    padding?: vec4;
-    itemAlignment?: Alignment;
+  interface QuadProps extends ContentProps, EventHandlerProps {
     bloomStrength?: number;
     color?: vec4;
     drmContent?: boolean;
@@ -1153,45 +484,7 @@ declare module "magic-script-components" {
 
   const Quad: React.FC<QuadProps>;
 
-  interface VideoProps extends EventHandlerProps {
-    name?: string;
-    parentedBoneName?: string;
-    skipRaycast?: boolean;
-    triggerable?: boolean;
-    visible?: boolean;
-    visibilityInherited?: boolean;
-    anchorPosition?: vec3;
-    localPosition?: vec3;
-    localRotation?: quat;
-    localScale?: vec3;
-    localTransform?: mat4;
-    cursorHoverState?: CursorHoverState;
-    offset?: vec3;
-    padding?: vec4;
-    itemAlignment?: Alignment;
-    bloomStrength?: number;
-    color?: vec4;
-    drmContent?: boolean;
-    shader?: ShaderType;
-    renderingLayer?: RenderingLayer;
-    backFaceCulls?: { on?: boolean; renderStateIndex?: number; };
-    blooms?: { on?: boolean; renderStateIndex?: number; };
-    castsShadows?: { on?: boolean; renderStateIndex?: number; };
-    frontFaceCulls?: { on?: boolean; renderStateIndex?: number; };
-    isOpaque?: { on?: boolean; renderStateIndex?: number; };
-    isUI?: { on?: boolean; renderStateIndex?: number; };
-    pushesStencil?: { on?: boolean; renderStateIndex?: number; };
-    readsClip?: { on?: boolean; renderStateIndex?: number; };
-    readsDepth?: { on?: boolean; renderStateIndex?: number; };
-    receivesLight?: { on?: boolean; renderStateIndex?: number; };
-    receivesShadows?: { on?: boolean; renderStateIndex?: number; };
-    writesColor?: { on?: boolean; renderStateIndex?: number; };
-    writesDepth?: { on?: boolean; renderStateIndex?: number; };
-    writesStencil?: { on?: boolean; renderStateIndex?: number; };
-    renderResourceId?: number;
-    texCoords?: vec4;
-    viewMode?: ViewMode;
-    size?: vec2;
+  interface VideoProps extends QuadProps, EventHandlerProps {
     looping?: boolean;
     timedTextPath?: string;
     videoPath?: string;
@@ -1205,22 +498,7 @@ declare module "magic-script-components" {
 
   const Video: React.FC<VideoProps>;
 
-  interface AudioProps extends EventHandlerProps {
-    name?: string;
-    parentedBoneName?: string;
-    skipRaycast?: boolean;
-    triggerable?: boolean;
-    visible?: boolean;
-    visibilityInherited?: boolean;
-    anchorPosition?: vec3;
-    localPosition?: vec3;
-    localRotation?: quat;
-    localScale?: vec3;
-    localTransform?: mat4;
-    cursorHoverState?: CursorHoverState;
-    offset?: vec3;
-    padding?: vec4;
-    itemAlignment?: Alignment;
+  interface AudioProps extends ContentProps, EventHandlerProps {
     action?: AudioAction;
     soundLooping?: boolean;
     soundMute?: boolean;
@@ -1245,22 +523,7 @@ declare module "magic-script-components" {
 
   const Audio: React.FC<AudioProps>;
 
-  interface LightProps extends EventHandlerProps {
-    name?: string;
-    parentedBoneName?: string;
-    skipRaycast?: boolean;
-    triggerable?: boolean;
-    visible?: boolean;
-    visibilityInherited?: boolean;
-    anchorPosition?: vec3;
-    localPosition?: vec3;
-    localRotation?: quat;
-    localScale?: vec3;
-    localTransform?: mat4;
-    cursorHoverState?: CursorHoverState;
-    offset?: vec3;
-    padding?: vec4;
-    itemAlignment?: Alignment;
+  interface LightProps extends ContentProps, EventHandlerProps {
     color?: vec4;
     intensity?: number;
     range?: number;
@@ -1272,22 +535,7 @@ declare module "magic-script-components" {
 
   const Light: React.FC<LightProps>;
 
-  interface LineProps extends EventHandlerProps {
-    name?: string;
-    parentedBoneName?: string;
-    skipRaycast?: boolean;
-    triggerable?: boolean;
-    visible?: boolean;
-    visibilityInherited?: boolean;
-    anchorPosition?: vec3;
-    localPosition?: vec3;
-    localRotation?: quat;
-    localScale?: vec3;
-    localTransform?: mat4;
-    cursorHoverState?: CursorHoverState;
-    offset?: vec3;
-    padding?: vec4;
-    itemAlignment?: Alignment;
+  interface LineProps extends ContentProps, EventHandlerProps {
     bloomStrength?: number;
     color?: vec4;
     drmContent?: boolean;
