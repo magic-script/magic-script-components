@@ -23,7 +23,6 @@ declare module "magic-script-components" {
   const View: React.FC<ViewProps>;
 
   interface TextProps extends ViewProps, EventHandlerProps {
-    children?: any;
     text?: string;
     textColor?: vec4;
     textSize?: number;
@@ -43,7 +42,6 @@ declare module "magic-script-components" {
   const Text: React.FC<TextProps>;
 
   interface TextEditProps extends ViewProps, EventHandlerProps {
-    children?: any;
     text?: string;
     textColor?: vec4;
     textSize?: number;
@@ -73,7 +71,6 @@ declare module "magic-script-components" {
   const TextEdit: React.FC<TextEditProps>;
 
   interface ButtonProps extends ViewProps, EventHandlerProps {
-    children?: any;
     text?: string;
     textColor?: vec4;
     textSize?: number;
@@ -264,7 +261,6 @@ declare module "magic-script-components" {
   const DropdownListItem: React.FC<DropdownListItemProps>;
 
   interface ToggleProps extends ViewProps, EventHandlerProps {
-    children?: any;
     text?: string;
     textColor?: vec4;
     textSize?: number;
@@ -297,7 +293,6 @@ declare module "magic-script-components" {
   const Panel: React.FC<PanelProps>;
 
   interface TabProps extends ViewProps, EventHandlerProps {
-    children?: any;
     text?: string;
     textColor?: vec4;
     textSize?: number;
@@ -307,7 +302,6 @@ declare module "magic-script-components" {
   const Tab: React.FC<TabProps>;
 
   interface DialogProps extends ViewProps, EventHandlerProps {
-    children?: any;
     text?: string;
     buttonType?: EclipseButtonType;
     cancelText?: string;
@@ -347,7 +341,6 @@ declare module "magic-script-components" {
   const WebView: React.FC<WebViewProps>;
 
   interface PortalIconProps extends ViewProps, EventHandlerProps {
-    children?: any;
     text?: string;
     textColor?: vec4;
     textSize?: number;
