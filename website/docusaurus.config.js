@@ -41,8 +41,8 @@ module.exports = {
         },
         {
           href:
-            "https://creator.magicleap.com/learn/guides/magicscript-overview",
-          label: "Creator Portal",
+            "https://developer.magicleap.com/learn/guides/magicscript-overview",
+          label: "Developer Portal",
           position: "right"
         }
       ]
