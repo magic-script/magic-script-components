@@ -74,8 +74,8 @@ export default class MyApp extends React.Component {
 
 | Name      | Type    | Default Value | Description                                                       |
 | --------- | ------- | :-----------: | ----------------------------------------------------------------- |
-| title     | number  |      n/a      | The dialog title text. Use an empty string to hide the title.     |
-| text      | number  |      n/a      | The dialog message text. Use an empty string to hide the message. |
+| title     | string  |      n/a      | The dialog title text. Use an empty string to hide the title.     |
+| text      | string  |      n/a      | The dialog message text. Use an empty string to hide the message. |
 | type      | string  | `dual-action` | The type of dialog.                                               |
 | layout    | string  |  `standard`   | The dialog layout preference.                                     |
 | scrolling | boolean |    `false`    | Creates a new dialog with vertical scrolling content.             |
