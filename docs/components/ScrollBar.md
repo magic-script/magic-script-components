@@ -21,8 +21,8 @@ The ScrollBar component creates a scroll bar used in conjunction with a ScrollVi
 
 | Name   | Type   | Default Value | Description                                                                                                                             |
 | ------ | ------ | :-----------: | --------------------------------------------------------------------------------------------------------------------------------------- |
-| width  | number |      n/a      | This is the length of the scroll bar. This is a little bit longer than the scroll range (which is the range the scroll bar thumb runs). |
-| height | number |      `0`      | This is the width of the scroll bar. A user should normally not care about this unless they intend to change the skin of an app.        |
+| length  | number |      n/a      | This is the length of the scroll bar. This is a little bit longer than the scroll range (which is the range the scroll bar thumb runs). |
+| thickness | number |      `0`      | This is the width of the scroll bar. A user should normally not care about this unless they intend to change the skin of an app.        |
 
 ## Element Properties
 
