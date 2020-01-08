@@ -5,7 +5,7 @@ title: MagicScript Components
 
 **This document and the framework are under active development !**
 
-Order | Component | Lumin RT<br>native component | Lumin OS | iOS | Android | Test<br>Links
+Order | Component | Lumin RT<br/>native component | Lumin OS | iOS | Android | Test<br/>Links
 ------|-----------|----------|-------------|-----|---------|---------|
 1 | [Audio](components/Audio.md) | AudioNode |  👍 |  👍 |  👍 | [link](https://github.com/magic-script/magic-script-components-react-native/tree/master/docs/coverage/Audio.md)
 2 | [Button](components/Button.md) | UiButton |  👍 |  👍 |  👍 | [link](https://github.com/magic-script/magic-script-components-react-native/tree/master/docs/coverage/Button.md)
