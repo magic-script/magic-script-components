@@ -25,7 +25,7 @@ The Model component renders a static or animated 3D model in your scene. Lumin R
 
 - FBX file format is currently supported on Magic Leap One.
 
-## [Common Events](../types/Events.md)
+## [Common Events](../events/CommonEvents.md)
 
 ## [Common Properties](../types/Properties.md)
 

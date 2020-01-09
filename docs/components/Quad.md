@@ -13,7 +13,7 @@ The Quad component renders a 2D rectangle in your scene and applies a texture to
 <Quad />
 ```
 
-## [Common Events](../types/Events.md)
+## [Common Events](../events/CommonEvents.md)
 
 ## [Common Properties](../types/Properties.md)
 

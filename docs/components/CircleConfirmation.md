@@ -30,7 +30,7 @@ onConfirmationComplete = event => {
 ></CircleConfirmation>;
 ```
 
-## [Common Events](../types/Events.md)
+## [Common Events](../events/CommonEvents.md)
 
 ## [Common Properties](../types/Properties.md)
 

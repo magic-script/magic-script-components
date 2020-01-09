@@ -63,7 +63,7 @@ export default class MyApp extends React.Component {
 }
 ```
 
-## [Common Events](../types/Events.md)
+## [Common Events](../events/CommonEvents.md)
 
 ## [Common Properties](../types/Properties.md)
 
