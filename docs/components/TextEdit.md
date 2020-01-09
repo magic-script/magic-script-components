@@ -23,7 +23,7 @@ The TextEdit component creates an editable text box for text entry on a single o
 />
 ```
 
-## [Common Events](../types/Events.md)
+## [Common Events](../events/CommonEvents.md)
 
 ## [Common Properties](../types/Properties.md)
 

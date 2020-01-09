@@ -13,7 +13,7 @@ The ScrollBar component creates a scroll bar used in conjunction with a ScrollVi
 <ScrollBar />
 ```
 
-## [Common Events](../types/Events.md)
+## [Common Events](../events/CommonEvents.md)
 
 ## [Common Properties](../types/Properties.md)
 

@@ -1,6 +1,6 @@
 ---
-id: events
-title: Events
+id: commonEvents
+title: Common Events
 ---
 
 ```javascript

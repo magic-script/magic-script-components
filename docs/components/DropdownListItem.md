@@ -13,7 +13,7 @@ Structure containing information about each item in a drop-down list.
 <DropdownListItem />
 ```
 
-## [Common Events](../types/Events.md)
+## [Common Events](../events/CommonEvents.md)
 
 ## [Common Properties](../types/Properties.md)
 

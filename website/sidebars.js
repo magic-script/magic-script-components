@@ -56,7 +56,7 @@ module.exports = {
       "types/dialogLayout",
       "types/dialogType",
       "types/eclipseLabelType",
-      "types/events",
+      "events/commonEvents",
       "types/flowDirection",
       "types/fontStyle",
       "types/fontWeight",

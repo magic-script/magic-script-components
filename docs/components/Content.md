@@ -19,7 +19,7 @@ The root component for a group of components. An example of a parent component i
 </ScrollView>
 ```
 
-## [Common Events](../types/Events.md)
+## [Common Events](../events/CommonEvents.md)
 
 ## [Common Properties](../types/Properties.md)
 

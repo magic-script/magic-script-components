@@ -13,7 +13,7 @@ A View collects node children, aggregates specific events of all children, and r
 <View />
 ```
 
-## [Common Events](../types/Events.md)
+## [Common Events](../events/CommonEvents.md)
 
 ## [Common Properties](../types/Properties.md)
 
