@@ -56,7 +56,6 @@ module.exports = {
       "types/dialogLayout",
       "types/dialogType",
       "types/eclipseLabelType",
-      "events/commonEvents",
       "types/flowDirection",
       "types/fontStyle",
       "types/fontWeight",
@@ -79,6 +78,12 @@ module.exports = {
       "types/toggleType",
       "types/viewMode",
       "types/webViewAction"
+    ],
+    Events: [
+      "events/commonEvents",
+      "events/eventsExample",
+      "events/componentEvents",
+      "events/eventDataTypes"
     ]
   }
 };
