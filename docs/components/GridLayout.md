@@ -53,7 +53,6 @@ import { GridLayout, LinearLayout, Text, View } from "magic-script-components";
 export default class MyApp extends React.Component {
   render() {
     return (
-      // padding: [top, right, bottom, left]
       <View name="main-view">
         <GridLayout localPosition={[0, 0.5, 0]} width={0.5} height={0.8} rows={2} columns={2}
           itemAlignment={[
