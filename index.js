@@ -1,4 +1,3 @@
-
 export {
     Audio,
     Button,
@@ -36,4 +35,6 @@ export {
     Video,
     View,
     WebView
-} from './src/components.js'
+} from './src/components.js';
+
+export { Platform } from './src/platform';
