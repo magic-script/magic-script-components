@@ -34,6 +34,65 @@ class MyApp extends React.Component {
 }
 ```
 
+```javascript
+import React from "react";
+import { GridLayout, Button } from "magic-script-components";
+
+export default class MyApp extends React.Component {
+  buttonClickHandler = message => {
+    console.log(message);
+  };
+  render() {
+    const commonProps = { roundness: 0.7, textSize: 0.03, width: 0.3 };
+
+    return (
+      <GridLayout columns={4} rows={4} localPosition={[-0.7, 0.7, 0]} >
+        <Button { ...commonProps } onClick={() => this.buttonClickHandler('0: Button click')}>
+          0: Regular Button
+        </Button>
+        <Button { ...commonProps } onClick={() => this.buttonClickHandler('1: Clock click')}
+          type='text-with-icon'
+          text='1: Clock'
+          labelSide='left'
+          height={0.15}
+          iconType='clock'
+        />
+        <Button { ...commonProps } onClick={() => this.buttonClickHandler('2: Cloud click')}
+          type='icon-with-label'
+          iconPath='res/Cloud.png'
+          text='2: Cloud'
+          labelSide='right'
+          height={0.15}
+        />
+        <Button { ...commonProps } onClick={() => this.buttonClickHandler('3: GameController click')}
+          type='icon-with-label'
+          iconPath='res/GameController.png'
+          text='3: Game Controller'
+          height={0.15}
+        />
+        <Button { ...commonProps } onClick={() => this.buttonClickHandler('4: Send click')}
+          type='icon'
+          iconPath='res/Send.png'
+          height={0.15}
+        />
+        <Button { ...commonProps } onClick={() => this.buttonClickHandler('5: Text with Height click')}
+          type='text'
+          text='5: Text with Height'
+          height={0.1}
+        />
+        <Button { ...commonProps } onClick={() => this.buttonClickHandler('6: Check click')}
+          type='icon'
+          height={0.1}
+          iconType='check'
+        />
+      </GridLayout>
+    );
+  }
+}
+```
+
+[The used icons are from magicleap.com developer portal](https://developer.magicleap.com/learn/guides/system-icons)
+
 ## [Common Events](../events/CommonEvents.md)
 
 ## [Common Properties](../types/Properties.md)
