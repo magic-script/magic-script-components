@@ -1,7 +1,7 @@
 class Platform {
-    static setNativeModule(module) {
-        Platform.OS = module.platformName();
-        Platform.Version = module.platformVersion();
+    static setPlatformInformation(platform) {
+        Platform.OS = platform.name();
+        Platform.Version = platform.version();
     }
 }
 
