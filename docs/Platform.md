@@ -5,7 +5,7 @@ title: Platform
 
 ## Description
 
-The Audio component allows you to play audio resources and 3D sound effects. It supports spatialization and basic controls - such as stop and start - using WAV, MP3, and OGG format files. _Loaded file_ and _Streamed file_ audio components require an audio resource, which is the audio file you want to play.
+The Platform component allows you to get information about platform your app runs.
 
 ## Example
 
