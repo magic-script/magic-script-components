@@ -32,7 +32,6 @@ supported by all of the following components:
 - DropdownList
 - GridLayout
 - Image
-- Line
 - LinearLayout
 - ListView
 - ListViewItem
@@ -59,6 +58,7 @@ supported by all of the following components:
 - Audio
 - Content
 - Light
+- Line
 - Model
 - Quad
 - Video
