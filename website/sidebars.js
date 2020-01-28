@@ -19,6 +19,7 @@ module.exports = {
       "components/dialog",
       "components/dropdownList",
       "components/dropdownListItem",
+      "components/flexLayout",
       "components/gridLayout",
       "components/image",
       "components/light",
