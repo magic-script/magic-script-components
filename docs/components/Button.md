@@ -42,7 +42,41 @@ class MyApp extends React.Component {
 // magic-script-components-lumin: 1.0.11
 // magic-script-components-react-native: 1.0.1
 ```
+
+import ExpandableSection from '@theme/ExpandableSection';
+
+
+<ExpandableSection title="Common Events" path="events/CommonEvents.md" >
+
+<div>
+
+## Common Events:
+
+- onActivate
+- onPressed
+- onLongPress
+- onRelease
+- onHoverEnter
+- onHoverExit
+- onHoverMove
+- onEnabled
+- onDisabled
+- onFocusGained
+- onFocusLost
+- onFocusInput
+- onUpdate
+- onDeleted
+- onEvent
+- onUpdateLoop
+
+</div>
+
+</ExpandableSection>
+
+
+<ExpandableSection title='Common Properties' path="types/Properties.md" />
 ​
+
 ## Create Properties
 
 | Name      | Type   | Default Value | Required | Description |
