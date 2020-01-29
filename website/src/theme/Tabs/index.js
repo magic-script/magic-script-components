@@ -69,10 +69,10 @@ function Tabs(props) {
         className={classnames('tabs', {
           'tabs--block': block,
         })}>
-        {values.map(({value, label}) => (
+        {values.map(({value, label}, index) => (
           <li
             role="tab"
-            tabIndex="0"
+            tabIndex={index}
             aria-selected={selectedValue === value}
             className={classnames('tab-item', styles.tabItem, {
               'tab-item--active': selectedValue === value,

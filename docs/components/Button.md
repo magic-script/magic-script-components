@@ -3,34 +3,9 @@ id: button
 title: Button
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+import PlatformTabs from '@theme/PlatformTabs';
 
-<Tabs
-  defaultValue="lumin"
-  values={[
-    { label: 'Lumin', value: 'lumin', },
-    { label: 'iOS', value: 'ios', },
-    { label: 'Android', value: 'android', },
-  ]
-}>
-<TabItem value="lumin">
-​
-![button](http://localhost:3000/static/components/panorama/button_lumin.png 'Button component')
-​
-</TabItem>
-<TabItem value="ios">
-​
-![button](http://localhost:3000/static/components/panorama/button_ios.png 'Button component')
-​
-</TabItem>
-<TabItem value="android">
-​
-![button](http://localhost:3000/static/components/panorama/button_android.png 'Button component')
-​
-</TabItem>
-</Tabs>
-​
+<PlatformTabs component='button' />​
 
 ## Description
 ​
@@ -69,20 +44,21 @@ class MyApp extends React.Component {
 ```
 ​
 ## Create Properties
-​
+
 | Name      | Type   | Default Value | Required | Description |
-| --------- | ------ | :-----------: | :------: |-------------------------------------------------------------------------------------------------------------------------------- |
-| text      | string |      n/a      | Y | The UTF-8 encoded text to set the initial value of the button label.                                                             |
-| width     | number |      `0`      | N | The width of the button, 0 for default.                                                                                          |
-| height    | number |      `0`      | N | The height of the button, 0 for default.                                                                                         |
-| roundness | number |      1.0      | N | The ratio of corner rounding (0-1). Use `1` for a fully rounded button, such as a circle or capsule. Use `0` for a sharp corner. |
+| --------- | ------ | :-----------: | :------: | -------------------------------------------------------------------------------------------------------------------------------- |
+| text      | string |      n/a      |    Y     | The UTF-8 encoded text to set the initial value of the button label.                                                             |
+| width     | number |      `0`      |    N     | The width of the button, 0 for default.                                                                                          |
+| height    | number |      `0`      |    N     | The height of the button, 0 for default.                                                                                         |
+| roundness | number |      1.0      |    N     | The ratio of corner rounding (0-1). Use `1` for a fully rounded button, such as a circle or capsule. Use `0` for a sharp corner. |
+
 ​
 ## Element Properties
-​
+
 | Name      | Type   | Default Value            | Description                               |
 | :-------- | :----- | :----------------------: | ----------------------------------------- |
 | iconColor | vec4   | [0.75, 0.75, 0.75, 1.00] | Sets the RGBA color of the button icon.   |
 | iconSize  | vec2   |       [0.04, 0.04]       | Sets the button icon size in scene units. |
 | text      | string |       empty string       | Sets the UTF-8 encoded button text.       |
 | textColor | vec4   | [0.75, 0.75, 0.75, 1.00] | Sets the RGBA color of the button text.   |
-| textSize  | number |          0.0167          | Sets the text size.  
+| textSize  | number |          0.0167          | Sets the text size.                       |
