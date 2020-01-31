@@ -3,6 +3,10 @@ id: pageView
 title: PageView
 ---
 
+import PlatformTabs from '@theme/PlatformTabs';
+
+<PlatformTabs component='pageview' />​
+
 ## Description
 
 The PageView component is used to switch between displaying individual page node hierarchies. Use the PageView component to toggle between individual page node hierarchies. By default, the width and height of the PageView is `0` to allow the page view to expand to fit the content. You can constrain one or both values. There is no padding for views by default. Unless otherwise set, all pages within the view are aligned to the top left.
@@ -48,13 +52,13 @@ export default class MyApp extends React.Component {
 
 ## Create Properties
 
-| Name   | Type   | Default Value | Description                                                                                  |
-| ------ | ------ | :-----------: | -------------------------------------------------------------------------------------------- |
-| width  | number |      `0`      | The width of the page view. The default (`0`) allows the view to expand to fit the content.  |
-| height | number |      `0`      | The height of the page view. The default (`0`) allows the view to expand to fit the content. |
+| Name   | Type   | Default Value | Required | Description                                                                                  |
+| ------ | ------ | :-----------: | :------: | -------------------------------------------------------------------------------------------- |
+| width  | number |      `0`      |          | The width of the page view. The default (`0`) allows the view to expand to fit the content.  |
+| height | number |      `0`      |          | The height of the page view. The default (`0`) allows the view to expand to fit the content. |
 
 ## Element Properties
 
-| Name        | Type   | Description                               |
-| ----------- | ------ | ----------------------------------------- |
-| visiblePage | number | The index (zero based) of the added pages |
+| Name        | Type   | Default Value | Description                               |
+| ----------- | ------ | :-----------: | ----------------------------------------- |
+| visiblePage | number |               | The index (zero based) of the added pages |

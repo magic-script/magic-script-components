@@ -77,6 +77,7 @@ import ExpandableSection from '@theme/ExpandableSection';
 <ExpandableSection title='Common Properties' path="types/Properties.md" />
 ​
 
+​
 ## Create Properties
 
 | Name      | Type   | Default Value | Required | Description |

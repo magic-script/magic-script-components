@@ -31,26 +31,26 @@ The Model component renders a static or animated 3D model in your scene. Lumin R
 
 ## Create Properties
 
-| Name                | Type     | Default Value | Description                                                                                                                 |
-| ------------------- | -------- | :-----------: | --------------------------------------------------------------------------------------------------------------------------- |
-| modelPath           | string   |      n/a      | File name of the model resource to load. By default this is assumed to be a relative path from the executable file.         |
-| materialPath        | string   |      n/a      | File name of the material resource to load. By default this is assumed to be a relative path from the executable file.      |
-| importScale         | number   |      1.0      | The scale that is applied to this resource.                                                                                 |
-| texturePaths        | [string] |      n/a      | An array of file names of the texture resources. By default this is assumed to be a relative path from the executable file. |
-| defaultTextureIndex | number   |      n/a      | Default index from the texturePaths.                                                                                        |
-| defaultTextureSlot  | string   |      n/a      | The texture slot, such as `Albedo` or `Normal`.                                                                             |
-| defaultMaterialName | string   |      n/a      | The name of the material.                                                                                                   |
+| Name                | Type     | Default Value | Required | Description                                                                                                                 |
+| ------------------- | -------- | :-----------: | :------: | --------------------------------------------------------------------------------------------------------------------------- |
+| modelPath           | string   |      n/a      |          | File name of the model resource to load. By default this is assumed to be a relative path from the executable file.         |
+| materialPath        | string   |      n/a      |          | File name of the material resource to load. By default this is assumed to be a relative path from the executable file.      |
+| importScale         | number   |      1.0      |          | The scale that is applied to this resource.                                                                                 |
+| texturePaths        | [string] |      n/a      |          | An array of file names of the texture resources. By default this is assumed to be a relative path from the executable file. |
+| defaultTextureIndex | number   |      n/a      |          | Default index from the texturePaths.                                                                                        |
+| defaultTextureSlot  | string   |      n/a      |          | The texture slot, such as `Albedo` or `Normal`.                                                                             |
+| defaultMaterialName | string   |      n/a      |          | The name of the material.                                                                                                   |
 
 ## Element Properties
 
-| Name                   | Type     | Description                                                                                                                                                                                          |
-| ---------------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| animationPauseState    | boolean  | Sets the animation pause state for the current model node.                                                                                                                                           |
-| animationPlaybackSpeed | number   | Sets the playback speed for animations.                                                                                                                                                              |
-| animationTime          | number   | Sets the current time of the animation.                                                                                                                                                              |
-| modelResourceId        | number   | Sets the ID of the resource this node draws. The ID refers to a _ModelResource_.                                                                                                                     |
-| animation              | _object_ | Sets the current animation by `resource` + `name`. Some animation resources contain multiple animations. These are addressed by animation name. FBX models, for example, may contain 1-n animations. |
-| texture                | _object_ | Sets the texture of a given material by the new texture ID. Material should be the one applied to the Model Node.                                                                                    |
+| Name                   | Type     | Default Value | Description                                                                                                                                                                                          |
+| ---------------------- | -------- | :-----------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| animationPauseState    | boolean  |               | Sets the animation pause state for the current model node.                                                                                                                                           |
+| animationPlaybackSpeed | number   |               | Sets the playback speed for animations.                                                                                                                                                              |
+| animationTime          | number   |               | Sets the current time of the animation.                                                                                                                                                              |
+| modelResourceId        | number   |               | Sets the ID of the resource this node draws. The ID refers to a _ModelResource_.                                                                                                                     |
+| animation              | _object_ |               | Sets the current animation by `resource` + `name`. Some animation resources contain multiple animations. These are addressed by animation name. FBX models, for example, may contain 1-n animations. |
+| texture                | _object_ |               | Sets the texture of a given material by the new texture ID. Material should be the one applied to the Model Node.                                                                                    |
 
 ### animation
 

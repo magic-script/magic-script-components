@@ -3,6 +3,10 @@ id: dialog
 title: Dialog
 ---
 
+import PlatformTabs from '@theme/PlatformTabs';
+
+<PlatformTabs component='dialog' />​
+
 ## Description
 
 The Dialog is a container where you can place other UI components - such as layouts, buttons, or text - as child nodes.
@@ -72,13 +76,13 @@ export default class MyApp extends React.Component {
 
 ## Create Properties
 
-| Name      | Type    | Default Value | Description                                                       |
-| --------- | ------- | :-----------: | ----------------------------------------------------------------- |
-| title     | string  |      n/a      | The dialog title text. Use an empty string to hide the title.     |
-| text      | string  |      n/a      | The dialog message text. Use an empty string to hide the message. |
-| type      | string  | `dual-action` | The type of dialog.                                               |
-| layout    | string  |  `standard`   | The dialog layout preference.                                     |
-| scrolling | boolean |    `false`    | Creates a new dialog with vertical scrolling content.             |
+| Name      | Type    | Default Value | Required | Description                                                       |
+| --------- | ------- | :-----------: | :------: | ----------------------------------------------------------------- |
+| title     | string  |      n/a      |     N    | The dialog title text. Use an empty string to hide the title.     |
+| text      | string  |      n/a      |     N    | The dialog message text. Use an empty string to hide the message. |
+| type      | string  | `dual-action` |     N    | The type of dialog.                                               |
+| layout    | string  |  `standard`   |     N    | The dialog layout preference.                                     |
+| scrolling | boolean |    `false`    |     N    | Creates a new dialog with vertical scrolling content.             |
 
 ### Dialog Type options: [DialogType](../types/DialogType.md)
 
@@ -86,14 +90,14 @@ export default class MyApp extends React.Component {
 
 ## Element Properties
 
-| Name        | Type   | Description                                                                                                                                                                                                                                                                                       |
-| :---------- | :----- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| buttonType  | string | Sets the button type to use for the dialog.                                                                                                                                                                                                                                                       |
-| cancelText  | string | Sets the UTF-8 encoded Cancel button text, default is `Cancel`.                                                                                                                                                                                                                                   |
-| cancelIcon  | string | Sets the Confirm button icon.                                                                                                                                                                                                                                                                     |
-| confirmText | string | Sets the UTF-8 encoded Confirm button text, default is `Confirm`.                                                                                                                                                                                                                                 |
-| confirmIcon | string | Sets the Confirm button icon.                                                                                                                                                                                                                                                                     |
-| expireTime  | number | Sets the expiration time for the dialog in seconds. For modeless timed dialogs, and optionally for other dialogs, a timer can be set that sends out the `onTimeExpired` event when the dialog time expires. The dialog does not destroy itself and must be handled by the caller using the event. |
+| Name        | Type   | Default Value | Description                                                                                                                                                                                                                                                                                       |
+| :---------- | :----- | :-----------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| buttonType  | string |               | Sets the button type to use for the dialog.                                                                                                                                                                                                                                                       |
+| cancelText  | string |               | Sets the UTF-8 encoded Cancel button text, default is `Cancel`.                                                                                                                                                                                                                                   |
+| cancelIcon  | string |               | Sets the Confirm button icon.                                                                                                                                                                                                                                                                     |
+| confirmText | string |               | Sets the UTF-8 encoded Confirm button text, default is `Confirm`.                                                                                                                                                                                                                                 |
+| confirmIcon | string |               | Sets the Confirm button icon.                                                                                                                                                                                                                                                                     |
+| expireTime  | number |               | Sets the expiration time for the dialog in seconds. For modeless timed dialogs, and optionally for other dialogs, a timer can be set that sends out the `onTimeExpired` event when the dialog time expires. The dialog does not destroy itself and must be handled by the caller using the event. |
 
 ### buttonType options: [ButtonType](../types/ButtonType.md)
 

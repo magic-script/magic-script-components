@@ -3,6 +3,10 @@ id: circleConfirmation
 title: CircleConfirmation
 ---
 
+import PlatformTabs from '@theme/PlatformTabs';
+
+<PlatformTabs component='circleconfirmation' />​
+
 ## Description
 
 CircleConfirmation is the UI element intended to confirm powering off. The user moves the control knob using the touchpad of the Control. When the user makes a complete circle with the control knob, CircleConfirmation signals this to the client code. The client code can then power off upon confirmation receipt.
@@ -10,24 +14,38 @@ CircleConfirmation is the UI element intended to confirm powering off. The user 
 ## Example
 
 ```javascript
-onConfirmationCanceled = event => {
-  console.log("onConfirmationCanceled");
-};
+import React from 'react';
+import { View, CircleConfirmation } from 'magic-script-components';
 
-onConfirmationUpdate = event => {
-  console.log("onConfirmationUpdate");
-};
+export class ExampleCircleConfirmation extends React.Component {
+    constructor(props) {
+        super(props);
+    }
 
-onConfirmationComplete = event => {
-  console.log("onConfirmationComplete");
-};
+    onConfirmationCanceled = event => {
+        console.log("onConfirmationCanceled");
+    };
+    onConfirmationUpdate = event => {
+        console.log("onConfirmationUpdate");
+    };
+    onConfirmationComplete = event => {
+        console.log("onConfirmationComplete");
+    };
 
-<CircleConfirmation
-  onConfirmationCanceled={this.onConfirmationCanceled}
-  onConfirmationComplete={this.onConfirmationComplete}
-  onConfirmationUpdate={this.onConfirmationUpdate}
-  radius={0.2}
-></CircleConfirmation>;
+
+    render() {
+        return (
+            <View>
+                <CircleConfirmation
+                    onConfirmationCanceled={this.onConfirmationCanceled}
+                    onConfirmationComplete={this.onConfirmationComplete}
+                    onConfirmationUpdate={this.onConfirmationUpdate}
+                    radius={0.2}
+                ></CircleConfirmation>
+            </View>
+        );
+    }
+}
 ```
 
 ## [Common Events](../events/CommonEvents.md)
@@ -36,6 +54,6 @@ onConfirmationComplete = event => {
 
 ## Create Properties
 
-| Name   | Type   | Description                                                                                                                                                                        |
-| ------ | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| radius | number | The radius of the circle the control knob travels to complete the confirmation. The default height is 0.1 (100mm). Setting the value to '0' sets the height to the default height. |
+| Name   | Type   | Default Value | Required | Description                                                                                                                                                                       |
+| ------ | ------ |    :------:   | :------: |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| radius | number |      0.2      |    N     |The radius of the circle the control knob travels to complete the confirmation. The default height is 0.1 (100mm). Setting the value to '0' sets the height to the default height. |

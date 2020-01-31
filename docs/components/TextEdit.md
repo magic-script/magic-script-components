@@ -3,6 +3,10 @@ id: textEdit
 title: TextEdit
 ---
 
+import PlatformTabs from '@theme/PlatformTabs';
+
+<PlatformTabs component='textedit' />​
+
 ## Description
 
 The TextEdit component creates an editable text box for text entry on a single or multiple lines. The last line includes a white underline to clearly delineate that the text box is editable. Include a UTF-8 compatible font in your project if you expect characters outside of the ISO Latin-1 character set.
@@ -29,11 +33,11 @@ The TextEdit component creates an editable text box for text entry on a single o
 
 ## Create Properties
 
-| Name   | Type   | Default Value | Description                                     |
-| ------ | ------ | :-----------: | ----------------------------------------------- |
-| text   | string |      n/a      | The initial UTF-8 encoded text in the text box. |
-| width  | number |      n/a      | The width of the text edit area.                |
-| height | number |      n/a      | The height of the text edit area.               |
+| Name   | Type   | Default Value | Required | Description                                     |
+| ------ | ------ | :-----------: | :------: | ----------------------------------------------- |
+| text   | string |      n/a      |          | The initial UTF-8 encoded text in the text box. |
+| width  | number |      n/a      |          | The width of the text edit area.                |
+| height | number |      n/a      |          | The height of the text edit area.               |
 
 ## Aditional (optional) parameters for create step.
 
@@ -63,31 +67,31 @@ The TextEdit component creates an editable text box for text entry on a single o
 
 ## Element Properties
 
-| Name                 | Type     | Description                                                                                                                                                                                             |
-| :------------------- | :------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| charLimit            | number   | Sets the maximum number of characters allowed in the text box.                                                                                                                                          |
-| charSpacing          | number   | Sets the additional character spacing that is applied between characters. Note that `0` is the default spacing.                                                                                         |
-| cursorEdgeScrollMode | string   | Sets the cursor edge scroll mode for this text box.                                                                                                                                                     |
-| style                | string   | Sets the style of the Magic Leap font.                                                                                                                                                                  |
-| weight               | string   | Sets he weight (i.e., thickness) of the Magic Leap font.                                                                                                                                                |
-| hint                 | string   | Sets the UTF-8 encoded text for hint text.                                                                                                                                                              |
-| hintColor            | vec4     | Sets the text color of the hint.                                                                                                                                                                        |
-| lineSpacing          | number   | Sets the line spacing to adjust the distance between lines of text; e.g., use 1 for single-spaced text, 2 for double-spaced text. The default is 1.0.                                                   |
-| multiline            | boolean  | Sets whether the text box is in multiline mode or not. The default is single line.                                                                                                                      |
-| password             | boolean  | Sets whether the text box is in password mode or not.                                                                                                                                                   |
-| scrollBarVisibility  | string   | Creates and shows the scrollbar in the vertical direction. If a scrollbar already exists, only its visibility is affected. This function also attaches the scrollbar to the ScrollView that manages it. |
-| scrolling            | boolean  | Sets whether scrolling is enabled or not.                                                                                                                                                               |
-| scrollSpeed          | number   | Sets the scroll speed in scene units per second.                                                                                                                                                        |
-| scrollValue          | number   | Manually scrolls the `textEdit` content position using a normalized value between 0 and 1.                                                                                                              |
-| selectedBegin        | number   | The first index for text selection.                                                                                                                                                                     |
-| selectedEnd          | number   | The last index for text selection.                                                                                                                                                                      |
-| text                 | string   | Sets the UTF-8 encoded text.                                                                                                                                                                            |
-| textAlignment        | string   | Aligns the text to the left, center, or right or justifies it.                                                                                                                                          |
-| textColor            | vec4     | Sets the RGBA color of the rendered text.                                                                                                                                                               |
-| textEntry            | string   | Sets the current text entry mode of the text box.                                                                                                                                                       |
-| textPadding          | vec4     | Sets the padding around the text within the text edit area. This defaults to half the text size unless explicitly set. The padding order is: top, right, bottom, left.                                  |
-| textSize             | number   | Sets the text render size height in scene units.                                                                                                                                                        |
-| fontParams           | _object_ | Sets the font parameters, including syle, weight, pixel size, and tracking. This uses one of the default sets of Magic Leap font resources that support style and weight.                               |
+| Name                 | Type     | Default Value | Description                                                                                                                                                                                             |
+| :------------------- | :------- | :-----------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| charLimit            | number   |               | Sets the maximum number of characters allowed in the text box.                                                                                                                                          |
+| charSpacing          | number   |               | Sets the additional character spacing that is applied between characters. Note that `0` is the default spacing.                                                                                         |
+| cursorEdgeScrollMode | string   |               | Sets the cursor edge scroll mode for this text box.                                                                                                                                                     |
+| style                | string   |               | Sets the style of the Magic Leap font.                                                                                                                                                                  |
+| weight               | string   |               | Sets he weight (i.e., thickness) of the Magic Leap font.                                                                                                                                                |
+| hint                 | string   |               | Sets the UTF-8 encoded text for hint text.                                                                                                                                                              |
+| hintColor            | vec4     |               | Sets the text color of the hint.                                                                                                                                                                        |
+| lineSpacing          | number   |               | Sets the line spacing to adjust the distance between lines of text; e.g., use 1 for single-spaced text, 2 for double-spaced text. The default is 1.0.                                                   |
+| multiline            | boolean  |               | Sets whether the text box is in multiline mode or not. The default is single line.                                                                                                                      |
+| password             | boolean  |               | Sets whether the text box is in password mode or not.                                                                                                                                                   |
+| scrollBarVisibility  | string   |               | Creates and shows the scrollbar in the vertical direction. If a scrollbar already exists, only its visibility is affected. This function also attaches the scrollbar to the ScrollView that manages it. |
+| scrolling            | boolean  |               | Sets whether scrolling is enabled or not.                                                                                                                                                               |
+| scrollSpeed          | number   |               | Sets the scroll speed in scene units per second.                                                                                                                                                        |
+| scrollValue          | number   |               | Manually scrolls the `textEdit` content position using a normalized value between 0 and 1.                                                                                                              |
+| selectedBegin        | number   |               | The first index for text selection.                                                                                                                                                                     |
+| selectedEnd          | number   |               | The last index for text selection.                                                                                                                                                                      |
+| text                 | string   |               | Sets the UTF-8 encoded text.                                                                                                                                                                            |
+| textAlignment        | string   |               | Aligns the text to the left, center, or right or justifies it.                                                                                                                                          |
+| textColor            | vec4     |               | Sets the RGBA color of the rendered text.                                                                                                                                                               |
+| textEntry            | string   |               | Sets the current text entry mode of the text box.                                                                                                                                                       |
+| textPadding          | vec4     |               | Sets the padding around the text within the text edit area. This defaults to half the text size unless explicitly set. The padding order is: top, right, bottom, left.                                  |
+| textSize             | number   |               | Sets the text render size height in scene units.                                                                                                                                                        |
+| fontParams           | _object_ |               | Sets the font parameters, including syle, weight, pixel size, and tracking. This uses one of the default sets of Magic Leap font resources that support style and weight.                               |
 
 ### fontParameters
 
