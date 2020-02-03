@@ -4,20 +4,20 @@ class PlaneDetector {
     }
 
     static startDetecting(configuration) {
-        if (typeof PlaneDetector.nativePlaneDetector == 'undefined') { console.error("NativePlaneDetector not set."); }
+        PlaneDetector.assertNativePlaneDetector();
 
         // configuration sample: { planeType: ["horizontal", "vertical"] }
         PlaneDetector.nativePlaneDetector.startDetecting(configuration);
     }
 
     static stopDetecting(observer) {
-        if (typeof PlaneDetector.nativePlaneDetector == 'undefined') { console.error("NativePlaneDetector not set."); }
+        PlaneDetector.assertNativePlaneDetector();
 
         PlaneDetector.nativePlaneDetector.stopDetecting(observer);
     }
 
     static getAllPlanes(configuration, callback) {
-        if (typeof PlaneDetector.nativePlaneDetector == 'undefined') { console.error("NativePlaneDetector not set."); }
+        PlaneDetector.assertNativePlaneDetector();
 
         // configuration sample: { planeType: ["horizontal", "vertical"] }
         // callback sample (error, planes) => { }
@@ -25,13 +25,13 @@ class PlaneDetector {
     }
 
     static reset() {
-        if (typeof PlaneDetector.nativePlaneDetector == 'undefined') { console.error("NativePlaneDetector not set."); }
+        PlaneDetector.assertNativePlaneDetector();
 
         PlaneDetector.nativePlaneDetector.reset();
     }
 
     static requestPlaneCast(configuration, callback) {
-        if (typeof PlaneDetector.nativePlaneDetector == 'undefined') { console.error("NativePlaneDetector not set."); }
+        PlaneDetector.assertNativePlaneDetector();
 
         // configuration sample: { planeType: "vertical", rayCastParameters: {...}] }
         // callback sample (error, planes) => { }
@@ -40,31 +40,35 @@ class PlaneDetector {
 
     // callbacks registration
     static addOnPlaneDetectedObserver(observer, observerCallback) {
-        if (typeof PlaneDetector.nativePlaneDetector == 'undefined') { console.error("NativePlaneDetector not set."); }
+        PlaneDetector.assertNativePlaneDetector();
 
         // observerCallback sample data: Plane: { normal: [x, y, z], center: [x, y, z], vertices: [[x, y, z]], id: UUID, type: [String] }
         PlaneDetector.nativePlaneDetector.addOnPlaneDetectedObserver(observer, observerCallback);
     }
 
     static addOnPlaneUpdatedObserver(observer, observerCallback) {
-        if (typeof PlaneDetector.nativePlaneDetector == 'undefined') { console.error("NativePlaneDetector not set."); }
+        PlaneDetector.assertNativePlaneDetector();
 
         // observerCallback sample data: Plane: { normal: [x, y, z], center: [x, y, z], vertices: [[x, y, z]], id: UUID, type: [String] }
         PlaneDetector.nativePlaneDetector.addOnPlaneUpdatedObserver(observer, observerCallback);
     }
 
     static addOnPlaneRemovedObserver(observer, observerCallback) {
-        if (typeof PlaneDetector.nativePlaneDetector == 'undefined') { console.error("NativePlaneDetector not set."); }
+        PlaneDetector.assertNativePlaneDetector();
 
         // observerCallback sample data: Plane: { normal: [x, y, z], center: [x, y, z], vertices: [[x, y, z]], id: UUID, type: [String] }
         PlaneDetector.nativePlaneDetector.addOnPlaneRemovedObserver(observer, observerCallback);
     }
 
     static addOnPlaneTappedObserver(observer, observerCallback) {
-        if (typeof PlaneDetector.nativePlaneDetector == 'undefined') { console.error("NativePlaneDetector not set."); }
+        PlaneDetector.assertNativePlaneDetector();
 
         // observerCallback sample data: Plane: { normal: [x, y, z], center: [x, y, z], vertices: [[x, y, z]], id: UUID, type: [String] }
         PlaneDetector.nativePlaneDetector.addOnPlaneTappedObserver(observer, observerCallback);
+    }
+
+    static assertNativePlaneDetector() {
+        if (typeof PlaneDetector.nativePlaneDetector == 'undefined') { console.error("NativePlaneDetector not set."); }
     }
 }
 
