@@ -64,3 +64,8 @@ export class ExampleColorPicker extends React.Component {
 | Name  | Type   |     Default Value    | Description                            |
 | :---- | :----- | :------------------: | -------------------------------------- |
 | color | string | [1.0, 1.0, 1.0, 1.0] |The initial color for the color picker. |
+
+
+## Investigate before release:
+- should we add events?
+- in Android contains other properties from button like roundness 

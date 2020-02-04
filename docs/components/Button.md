@@ -80,7 +80,7 @@ import ExpandableSection from '@theme/ExpandableSection';
 ​
 ## Create Properties
 
-| Name      | Type   | Default Value | Required | Description |
+| Name      | Type   | Default Value | Required | Description | Comments |
 | --------- | ------ | :-----------: | :------: | -------------------------------------------------------------------------------------------------------------------------------- |
 | text      | string |      n/a      |    Y     | The UTF-8 encoded text to set the initial value of the button label.                                                             |
 | width     | number |      `0`      |    N     | The width of the button, 0 for default.                                                                                          |
@@ -97,3 +97,8 @@ import ExpandableSection from '@theme/ExpandableSection';
 | text      | string |       empty string       | Sets the UTF-8 encoded button text.       |
 | textColor | vec4   | [0.75, 0.75, 0.75, 1.00] | Sets the RGBA color of the button text.   |
 | textSize  | number |          0.0167          | Sets the text size.                       |
+
+## Investigate before release:
+- text is duplicated in Create and Element properties with different Default Value
+- Android text is not required
+- Android iconColor, iconSize, textColor, TextSize do not have default value

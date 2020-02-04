@@ -83,19 +83,19 @@ export default class MyApp extends React.Component {
 ### itemAlignment
 
 ```javascript
-{
+[{
     index: <number>,
     alignment: <string>
-}
+}]
 ```
 
 ### itemPadding
 
 ```javascript
-{
+[{
     index: <number>,
     padding: <vec4>
-}
+}]
 ```
 
 ### cursorEdgeScrollMode options: [CursorEdgeScrollMode](../types/CursorEdgeScrollMode.md)
