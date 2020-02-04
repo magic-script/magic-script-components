@@ -46,11 +46,11 @@ class MyApp extends React.Component {
 import ExpandableSection from '@theme/ExpandableSection';
 
 
-<ExpandableSection title="Common Events" path="events/CommonEvents.md" >
+<ExpandableSection title="Common Events">
 
 <div>
 
-## Common Events:
+<!-- ## Common Events: -->
 
 - onActivate
 - onPressed
@@ -74,7 +74,7 @@ import ExpandableSection from '@theme/ExpandableSection';
 </ExpandableSection>
 
 
-<ExpandableSection title='Common Properties' path="types/Properties.md" />
+<ExpandableSection title='Common Properties' path='content/Properties.md' />
 ​
 
 ​

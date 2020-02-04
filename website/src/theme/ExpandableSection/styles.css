@@ -1,0 +1,16 @@
+
+.button {
+  color: var(--ifm-color-primary);
+  font-size: 24px;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.button:hover {
+  color: var(--ifm-color-primary);
+  font-size: 24px;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
