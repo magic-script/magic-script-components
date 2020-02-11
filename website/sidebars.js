@@ -7,7 +7,7 @@
 
 module.exports = {
   docs: {
-    "Getting Started": ["installation", "example"],
+    "Getting Started": ["installation", "example", "platform"],
     Reference: ["components"],
     Components: [
       "components/audio",

@@ -44,3 +44,16 @@ export default class MyApp extends React.Component {
   }
 }
 ```
+
+To make code platform dependent add import:
+```javascript
+import { Platform } from 'magic-script-components';
+```
+or change previous to:
+```javascript
+import { Platform, View, Text, Button } from 'magic-script-components';
+```
+and now you can use in code `Platform` object to get platform name and version:
+```javascript
+console.log(`Runs on ${Platform.OS} (${Platform.Version})`);
+```
