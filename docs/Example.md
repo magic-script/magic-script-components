@@ -44,3 +44,13 @@ export default class MyApp extends React.Component {
   }
 }
 ```
+### Color property:
+The accepted value for color property is:
+1. string: 'hotpink', '#FF3399', 'F39'
+2. number: 0xFF3399
+3. array: [255, 165, 0, 0.8], [255, 165, 0],
+4. object:
+  { h:120, s:1, l:0.75 }
+  { l:80, c:25, h:200 }
+  { c:1, m:0.5, y:0, k:0.2}
+  { r:255, g:165, b:0, a: 0.8 }
