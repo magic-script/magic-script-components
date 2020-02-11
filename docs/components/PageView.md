@@ -54,11 +54,11 @@ export default class MyApp extends React.Component {
 
 | Name   | Type   | Default Value | Required | Description                                                                                  |
 | ------ | ------ | :-----------: | :------: | -------------------------------------------------------------------------------------------- |
-| width  | number |      `0`      |          | The width of the page view. The default (`0`) allows the view to expand to fit the content.  |
-| height | number |      `0`      |          | The height of the page view. The default (`0`) allows the view to expand to fit the content. |
+| width  | number |      `0`      |    N     | The width of the page view. The default (`0`) allows the view to expand to fit the content.  |
+| height | number |      `0`      |    N     | The height of the page view. The default (`0`) allows the view to expand to fit the content. |
 
 ## Element Properties
 
 | Name        | Type   | Default Value | Description                               |
 | ----------- | ------ | :-----------: | ----------------------------------------- |
-| visiblePage | number |               | The index (zero based) of the added pages |
+| visiblePage | number |      `0`      | The index (zero based) of the added pages |

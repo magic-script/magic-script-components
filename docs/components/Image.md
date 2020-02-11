@@ -106,4 +106,4 @@ export class ExampleImage extends React.Component {
 | renderResource     | BigInt  |               | Sets the render resource used for the image.                                                                                                                    |
 
 ## Investigate before release:
-- textCoords, opaque, ui, imageFrameResource, renderResource not implemented in Android
+- textCoords, opaque, ui, imageFrameResource, renderResource not implemented in Android [[issue tracker](https://github.com/magic-script/magic-script-components/issues/227)]

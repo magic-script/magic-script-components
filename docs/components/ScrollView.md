@@ -108,12 +108,12 @@ export default class MyApp extends React.Component {
 | Name                | Type     | Default Value | Description                                                                                                                                                                                                                             |
 | :------------------ | :------- | :-----------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | scrollBarVisibility | string   |               | Sets the visibility mode of any attached scrollbars. The visibility mode affects the visibility of any attached scroll bars.                                                                                                            |
-| scrollDirection     | string   |               | Sets the scroll direction for the scroll view. The default is vertical.                                                                                                                                                                 |
+| scrollDirection     | string   |  `vertical`   | Sets the scroll direction for the scroll view. The default is vertical.                                                                                                                                                                 |
 | scrollMask          | number   |               | Applies the texture resource as a mask for ScrollView content.                                                                                                                                                                          |
 | scrollOffset        | vec3     |               | Sets the scroll content offset manually.                                                                                                                                                                                                |
 | scrollSpeed         | number   |               | Sets the scroll speed in scene units per second.                                                                                                                                                                                        |
 | scrollValue         | number   |               | Sets the scroll content position manually with a normalized value between 0 and 1.                                                                                                                                                      |
-| scrollBounds        | _object_ |               | Sets the scroll bounds. The bounds are defined within the ScrollView's local coordinate system. The scroll bounds is used to both clip content visually and to automatically clamp content scrolling extents to stay within the bounds. |
+| scrollBounds        | _object_ |      n/a      | Sets the scroll bounds. The bounds are defined within the ScrollView's local coordinate system. The scroll bounds is used to both clip content visually and to automatically clamp content scrolling extents to stay within the bounds. |
 
 ### scrollBounds
 
@@ -127,3 +127,6 @@ export default class MyApp extends React.Component {
 ### scrollBarVisibility options: [ScrollBarVisibility](../types/ScrollBarVisibility.md)
 
 ### ScrollDirection options: [ScrollDirection](../types/ScrollDirection.md)
+
+## Investigate before release:
+scrollBarVisibility, scrollMask, scrollOffset,scrollSpeed,scrollValue is not implemented in Android

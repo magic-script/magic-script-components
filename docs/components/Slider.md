@@ -105,6 +105,6 @@ export default class MyApp extends React.Component {
 
 | Name  | Type   | Default Value | Description                                                                                                                       |
 | :---- | :----- | :-----------: | --------------------------------------------------------------------------------------------------------------------------------- |
-| min   | number |               | Sets the minimum slider value. This value is set only if it is less than the slider's maximum value. The default value is `0`.    |
-| max   | number |               | Sets the maximum slider value. This value is set only if it is greater than the slider's minimum value. The default value is `1`. |
-| value | number |               | Sets the slider value. The value will be clamped within the current minimum and maximum range.                                    |
+| min   | number |      `0`      | Sets the minimum slider value. This value is set only if it is less than the slider's maximum value. The default value is `0`.    |
+| max   | number |      `1`      | Sets the maximum slider value. This value is set only if it is greater than the slider's minimum value. The default value is `1`. |
+| value | number |      n/a      | Sets the slider value. The value will be clamped within the current minimum and maximum range.                                    |

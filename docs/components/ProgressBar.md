@@ -51,12 +51,12 @@ export default class MyApp extends React.Component {
 
 ## Element Properties
 
-| Name          | Type     | Default Value | Description                                                                                                                                              |
-| :------------ | :------- | :-----------: | :------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| min           | number   |               | Sets the progress bar minimum value. Default value for min is `0`. The minimum value is set only if it is less than the progress bar's maximum value.    |
-| max           | number   |               | Sets the progress bar maximum value. Default value for max is `1`. The maximum value is set only if it is greater than the progress bar's minimum value. |
-| value         | number   |               | Sets the progress bar value. The value is constrained within the current min and max range.                                                              |
-| progressColor | _object_ |               | Sets the progress bar indicator color.                                                                                                                   |
+| Name          | Type     |  Default Value   | Description                                                                                                                                              |
+| :------------ | :------- | :--------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| min           | number   |        0         | Sets the progress bar minimum value. Default value for min is `0`. The minimum value is set only if it is less than the progress bar's maximum value.    |
+| max           | number   |        0         | Sets the progress bar maximum value. Default value for max is `1`. The maximum value is set only if it is greater than the progress bar's minimum value. |
+| value         | number   |        0         | Sets the progress bar value. The value is constrained within the current min and max range.                                                              |
+| progressColor | _object_ | `<white, white>` | Sets the progress bar indicator color.                                                                                                                   |
 
 ### progressColor
 
@@ -66,3 +66,6 @@ export default class MyApp extends React.Component {
     endColor: <vec4>
 }
 ```
+
+## Investigate before release:
+Android default width=0.5, height=0.004

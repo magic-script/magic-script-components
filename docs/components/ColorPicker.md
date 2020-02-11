@@ -53,19 +53,25 @@ export class ExampleColorPicker extends React.Component {
 ## [Common Properties](../types/Properties.md)
 
 ## Create Properties
-
-| Name   | Type   |    Default Value     | Required | Description                             |
-| ------ | ------ | :------------------: | :------: | --------------------------------------- |
-| color  | string | [1.0, 1.0, 1.0, 1.0] |     N    | The initial color for the color picker. |
-| height | number |          0           |     N    | Optional height for the color picker.   |
+| Name   | Type   |    Default Value     | Required | Description                             | Lumin Os |  IOS  | Android |
+| ------ | ------ | :------------------: | :------: | --------------------------------------- | :------: | :---: | :-----: |
+| color  | string | [1.0, 1.0, 1.0, 1.0] |    N     | The initial color for the color picker. |    👍    |  👍   |   👍    |
+| height | number |          0           |    N     | Optional height for the color picker.   |    👍    |       |         |
 
 ## Element Properties
 
-| Name  | Type   |     Default Value    | Description                            |
-| :---- | :----- | :------------------: | -------------------------------------- |
-| color | string | [1.0, 1.0, 1.0, 1.0] |The initial color for the color picker. |
+| Name  | Type   |    Default Value     | Description                             |
+| :---- | :----- | :------------------: | --------------------------------------- |
+| color | string | [1.0, 1.0, 1.0, 1.0] | The initial color for the color picker. |
 
+## Component specific events
+| Name             | Event Field     | Description                              |
+| :--------------- | :-------------- | ---------------------------------------- |
+| onColorChanged   | `Color: string` | Notifiy when color in picker has changed |
+| onColorConfirmed | `Color: string` | Notify when user confirm selected color  |
+| onColorCanceled  | `Color: string` | Notify when user cancel selected color   |
 
 ## Investigate before release:
 - should we add events?
-- in Android contains other properties from button like roundness 
+- in Android, contains other properties from button like roundness 
+- onColorConfirmed couse crash on lumin

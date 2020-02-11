@@ -36,9 +36,9 @@ export default class MyApp extends React.Component {
 
 | Name        | Type   | Default Value  | Required | Description                                                                                                       |
 | ----------- | ------ | :------------: | :------: | ----------------------------------------------------------------------------------------------------------------- |
-| label       | string |      n/a       |          | The text label that appears with the TimePicker.                                                                  |
-| labelSide   | string |     `top`      |          | Side enum specifying whether the label appears on the side or top. Only `top` and `left` are currently supported. |
-| defaultTime | string | (current Time) |          | The default time to set for the TimePicker.                                                                       |
+| label       | string |      n/a       |    N     | The text label that appears with the TimePicker.                                                                  |
+| labelSide   | string |     `top`      |    N     | Side enum specifying whether the label appears on the side or top. Only `top` and `left` are currently supported. |
+| defaultTime | string | (current Time) |    N     | The default time to set for the TimePicker.                                                                       |
 
 ### LabelSide values:
 

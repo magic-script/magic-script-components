@@ -82,6 +82,3 @@ export default class MyApp extends React.Component {
     selected: <boolean>
 }
 ```
-
-## Investigate before release:
-- 

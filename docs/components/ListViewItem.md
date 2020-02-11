@@ -57,6 +57,6 @@ export default class MyApp extends React.Component {
 
 ## Element Properties
 
-| Name            | Type | Required | Description                |
-| --------------- | ---- | -------- | -------------------------- |
-| backgroundColor | vec4 |          | Sets the background color. |
+| Name            | Type | Default Value | Description                |
+| --------------- | ---- | :-----------: | -------------------------- |
+| backgroundColor | vec4 |      n/a      | Sets the background color. |

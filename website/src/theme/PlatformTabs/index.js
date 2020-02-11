@@ -26,7 +26,7 @@ function PlatformTabs(props) {
         ]
       }>
       <TabItem value="lumin">
-        <img src={useBaseUrl(`img/components/${component}/lumin.png`)} alt={`${toTagFormat(component)} on Lumin`} />
+        <img src={useBaseUrl(`img/components/${component}/lumin.jpeg`)} alt={`${toTagFormat(component)} on Lumin`} />
       </TabItem>
       <TabItem value="ios">
         <img src={useBaseUrl(`img/components/${component}/ios.png`)} alt={`${toTagFormat(component)} on iOS`} />

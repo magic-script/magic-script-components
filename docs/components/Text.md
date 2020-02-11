@@ -36,9 +36,9 @@ export default class TextExample extends React.Component {
 
 | Name   | Type   | Default Value | Required | Description                                          |
 | :----- | :----- | :-----------: | :------: | ---------------------------------------------------- |
-| text   | string |      n/a      |          | The UTF-8 encoded text to initially set the text to. |
-| style  | string |   `normal`    |          | The style of the Magic Leap font.                    |
-| weight | string |   `regular`   |          | The weight (i.e., thickness) of the Magic Leap font. |
+| text   | string |      n/a      |    N     | The UTF-8 encoded text to initially set the text to. |
+| style  | string |   `normal`    |    N     | The style of the Magic Leap font.                    |
+| weight | string |   `regular`   |    N     | The weight (i.e., thickness) of the Magic Leap font. |
 
 If `text` is empty, the content of the `<text>` tag will be used as text.
 
@@ -50,9 +50,9 @@ If `text` is empty, the content of the `<text>` tag will be used as text.
 
 | Name          | Type     | Default Value | Description                                                                                                                                                                                                                                                                        |
 | :------------ | :------- | :-----------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| allCaps       | boolean  |               | Displays the text in all caps if `true`.                                                                                                                                                                                                                                           |
-| charSpacing   | number   |               | Sets the additional character spacing that is applied between characters. Note a spacing of `0` is the default spacing.                                                                                                                                                            |
-| lineSpacing   | number   |               | Sets the line spacing to adjust the distance between lines of text; e.g., use 1 for single-spaced text, 2 for double-spaced text. The default is 1.0.                                                                                                                              |
+| allCaps       | boolean  |        n/a       | Displays the text in all caps if `true`.                                                                                                                                                                                                                                           |
+| charSpacing   | number   |       `0`        | Sets the additional character spacing that is applied between characters. Note a spacing of `0` is the default spacing.                                                                                                                                                            |
+| lineSpacing   | number   |     `1.0`         | Sets the line spacing to adjust the distance between lines of text; e.g., use 1 for single-spaced text, 2 for double-spaced text. The default is 1.0.                                                                                                                              |
 | style         | string   |               | Sets the style of the Magic Leap font.                                                                                                                                                                                                                                             |
 | weight        | string   |               | Sets the weight (i.e., thickness) of the Magic Leap font.                                                                                                                                                                                                                          |
 | text          | string   |               | Sets the UTF-8 encoded text. This call is ignored if there is a current localization key set. Set the localization key to an empty string, "", to unset it.                                                                                                                        |

@@ -80,9 +80,9 @@ import ExpandableSection from '@theme/ExpandableSection';
 ​
 ## Create Properties
 
-| Name      | Type   | Default Value | Required | Description | Comments |
+| Name      | Type   | Default Value | Required | Description                                                                                                                      | Comments |
 | --------- | ------ | :-----------: | :------: | -------------------------------------------------------------------------------------------------------------------------------- |
-| text      | string |      n/a      |    Y     | The UTF-8 encoded text to set the initial value of the button label.                                                             |
+| text      | string |      n/a      |    N     | The UTF-8 encoded text to set the initial value of the button label.                                                             |
 | width     | number |      `0`      |    N     | The width of the button, 0 for default.                                                                                          |
 | height    | number |      `0`      |    N     | The height of the button, 0 for default.                                                                                         |
 | roundness | number |      1.0      |    N     | The ratio of corner rounding (0-1). Use `1` for a fully rounded button, such as a circle or capsule. Use `0` for a sharp corner. |
@@ -90,15 +90,13 @@ import ExpandableSection from '@theme/ExpandableSection';
 ​
 ## Element Properties
 
-| Name      | Type   | Default Value            | Description                               |
+| Name      | Type   |      Default Value       | Description                               |
 | :-------- | :----- | :----------------------: | ----------------------------------------- |
 | iconColor | vec4   | [0.75, 0.75, 0.75, 1.00] | Sets the RGBA color of the button icon.   |
 | iconSize  | vec2   |       [0.04, 0.04]       | Sets the button icon size in scene units. |
-| text      | string |       empty string       | Sets the UTF-8 encoded button text.       |
+| text      | string |           n/a            | Sets the UTF-8 encoded button text.       |
 | textColor | vec4   | [0.75, 0.75, 0.75, 1.00] | Sets the RGBA color of the button text.   |
 | textSize  | number |          0.0167          | Sets the text size.                       |
 
 ## Investigate before release:
-- text is duplicated in Create and Element properties with different Default Value
-- Android text is not required
-- Android iconColor, iconSize, textColor, TextSize do not have default value
+- Android iconColor, iconSize, textColor, TextSize do not have default value [[issue tracker](https://github.com/magic-script/magic-script-components/issues/223)]

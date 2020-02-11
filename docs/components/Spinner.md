@@ -80,10 +80,10 @@ export default class MyApp extends React.Component {
 | Name         | Type    | Default Value | Required | Description                                                                             |
 | ------------ | ------- | :-----------: | :------: | --------------------------------------------------------------------------------------- |
 | type         | string  |      n/a      |          | The loading spinner type (`sprite-animation` or `particle-package`).                    |
-| resourceId   | number  |       0       |          | The resource ID.                                                                        |
-| resourcePath | string  |      ''       |          | The resource path in the resource (optional).                                           |
-| height       | number  |      `0`      |          | The height of the loading spinner (optional).                                           |
-| determinate  | boolean |    `false`    |          | If `true`, this creates a determinate loading spinner component using default settings. |
+| resourceId   | number  |       0       |    N     | The resource ID.                                                                        |
+| resourcePath | string  |      ''       |    N     | The resource path in the resource (optional).                                           |
+| height       | number  |      `0`      |    N     | The height of the loading spinner (optional).                                           |
+| determinate  | boolean |    `false`    |    N     | If `true`, this creates a determinate loading spinner component using default settings. |
 
 ## Element Properties
 

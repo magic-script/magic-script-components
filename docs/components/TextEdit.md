@@ -35,7 +35,7 @@ The TextEdit component creates an editable text box for text entry on a single o
 
 | Name   | Type   | Default Value | Required | Description                                     |
 | ------ | ------ | :-----------: | :------: | ----------------------------------------------- |
-| text   | string |      n/a      |          | The initial UTF-8 encoded text in the text box. |
+| text   | string |      n/a      |    N     | The initial UTF-8 encoded text in the text box. |
 | width  | number |      n/a      |          | The width of the text edit area.                |
 | height | number |      n/a      |          | The height of the text edit area.               |
 
@@ -69,18 +69,18 @@ The TextEdit component creates an editable text box for text entry on a single o
 
 | Name                 | Type     | Default Value | Description                                                                                                                                                                                             |
 | :------------------- | :------- | :-----------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| charLimit            | number   |               | Sets the maximum number of characters allowed in the text box.                                                                                                                                          |
-| charSpacing          | number   |               | Sets the additional character spacing that is applied between characters. Note that `0` is the default spacing.                                                                                         |
+| charLimit            | number   |      `0`      | Sets the maximum number of characters allowed in the text box. `0` means no limit.                                                                                                                      |
+| charSpacing          | number   |      `0`      | Sets the additional character spacing that is applied between characters. Note that `0` is the default spacing.                                                                                         |
 | cursorEdgeScrollMode | string   |               | Sets the cursor edge scroll mode for this text box.                                                                                                                                                     |
 | style                | string   |               | Sets the style of the Magic Leap font.                                                                                                                                                                  |
 | weight               | string   |               | Sets he weight (i.e., thickness) of the Magic Leap font.                                                                                                                                                |
 | hint                 | string   |               | Sets the UTF-8 encoded text for hint text.                                                                                                                                                              |
 | hintColor            | vec4     |               | Sets the text color of the hint.                                                                                                                                                                        |
-| lineSpacing          | number   |               | Sets the line spacing to adjust the distance between lines of text; e.g., use 1 for single-spaced text, 2 for double-spaced text. The default is 1.0.                                                   |
+| lineSpacing          | number   |     `1.0`     | Sets the line spacing to adjust the distance between lines of text; e.g., use 1 for single-spaced text, 2 for double-spaced text. The default is 1.0.                                                   |
 | multiline            | boolean  |               | Sets whether the text box is in multiline mode or not. The default is single line.                                                                                                                      |
 | password             | boolean  |               | Sets whether the text box is in password mode or not.                                                                                                                                                   |
 | scrollBarVisibility  | string   |               | Creates and shows the scrollbar in the vertical direction. If a scrollbar already exists, only its visibility is affected. This function also attaches the scrollbar to the ScrollView that manages it. |
-| scrolling            | boolean  |               | Sets whether scrolling is enabled or not.                                                                                                                                                               |
+| scrolling            | boolean  |    `false`    | Sets whether scrolling is enabled or not.                                                                                                                                                               |
 | scrollSpeed          | number   |               | Sets the scroll speed in scene units per second.                                                                                                                                                        |
 | scrollValue          | number   |               | Manually scrolls the `textEdit` content position using a normalized value between 0 and 1.                                                                                                              |
 | selectedBegin        | number   |               | The first index for text selection.                                                                                                                                                                     |

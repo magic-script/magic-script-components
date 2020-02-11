@@ -105,5 +105,5 @@ export default class MyApp extends React.Component {
 
 
 ## Investigate before release:
-- ButtonType is not implemented in Android
+- ButtonType is not implemented in Android [[issue tracker](https://github.com/magic-script/magic-script-components/issues/225)]
   

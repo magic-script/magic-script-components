@@ -82,4 +82,4 @@ export class ExampleDatePicker extends React.Component {
 
 
 ## Investigate before release:
-- showHint is not implemented in Android
+- showHint is not implemented in Android [[issue tracker](https://github.com/magic-script/magic-script-components/issues/224)]
