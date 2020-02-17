@@ -36,8 +36,8 @@ The TextEdit component creates an editable text box for text entry on a single o
 | Name   | Type   | Default Value | Required | Description                                     |
 | ------ | ------ | :-----------: | :------: | ----------------------------------------------- |
 | text   | string |      n/a      |    N     | The initial UTF-8 encoded text in the text box. |
-| width  | number |      n/a      |          | The width of the text edit area.                |
-| height | number |      n/a      |          | The height of the text edit area.               |
+| width  | number |      n/a      |    N     | The width of the text edit area.                |
+| height | number |      n/a      |    N     | The height of the text edit area.               |
 
 ## Aditional (optional) parameters for create step.
 

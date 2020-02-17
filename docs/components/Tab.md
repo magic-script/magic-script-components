@@ -79,7 +79,7 @@ export default class MyApp extends React.Component {
 
 | Name | Type   | Default Value | Required | Description                                                   |
 | ---- | ------ | :-----------: | :------: | ------------------------------------------------------------- |
-| text | string |      n/a      |          | The UTF-8 encoded text to initially set the Eclipse label to. |
+| text | string |      n/a      |     N    | The UTF-8 encoded text to initially set the Eclipse label to. |
 | type | string |      n/a      |          | The EclipseLabelType                                          |
 
 ## [Eclipse Label Types](../types/EclipseLabelType.md)

@@ -73,5 +73,4 @@ export class ExampleColorPicker extends React.Component {
 
 ## Investigate before release:
 - should we add events?
-- in Android, contains other properties from button like roundness 
 - onColorConfirmed couse crash on lumin

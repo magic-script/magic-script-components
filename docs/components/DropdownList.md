@@ -72,7 +72,7 @@ export default class MyApp extends React.Component {
 | maxCharacterLimit | number   |      n/a      | Sets the maximum amount of characters to be used per list item label before adding '...'. The default character limit is `0`, which means there is no limit and the labels scale to the largest item.                                                                                       |
 | multiSelect       | boolean  |     false     | Sets the multi-select mode of the drop-down list.                                                                                                                                                                                                                                           |
 | showList          | boolean  |     false     | Shows the drop-down list or not.                                                                                                                                                                                                                                                            |
-| selected          | _object_ |               | Sets the selected state of a `DropDownListItem`. This uses the ID set for a particular `DropDownListItem`, which should be unique. If the ID is not unique, the first item with that ID is set. State are updated upon closing and reopening the list when the list is visible.             |
+| selected          | _object_ |      n/a      | Sets the selected state of a `DropDownListItem`. This uses the ID set for a particular `DropDownListItem`, which should be unique. If the ID is not unique, the first item with that ID is set. State are updated upon closing and reopening the list when the list is visible.             |
 
 ### selected
 

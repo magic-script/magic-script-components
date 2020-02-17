@@ -45,4 +45,4 @@ export default class MyApp extends React.Component {
 
 | Name   | Type   | Default Value | Description                                                                                                                                                               |
 | :----- | :----- | :-----------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| points | [vec3] |               | Sets the points that describe this series of line segments. The line follows the order in which the points are added. No line can exist if there is less than two points. |
+| points | [vec3] |      n/a      | Sets the points that describe this series of line segments. The line follows the order in which the points are added. No line can exist if there is less than two points. |

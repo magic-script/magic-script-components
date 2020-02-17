@@ -52,8 +52,8 @@ export default class MyApp extends React.Component {
 
 | Name     | Type   | Default Value | Description                                                                                   |
 | -------- | ------ | :-----------: | --------------------------------------------------------------------------------------------- |
-| url      | string |               | Sets the URL to load in the WebView.                                                          |
-| action   | string |               | Requests the specified action.                                                                |
-| scrollBy | vec2   |               | Scrolls the WebView in the given direction. Enter an array of two numbers: [xPixels, yPixels] |
+| url      | string |      n/a      | Sets the URL to load in the WebView.                                                          |
+| action   | string |      n/a      | Requests the specified action.                                                                |
+| scrollBy | vec2   |      n/a      | Scrolls the WebView in the given direction. Enter an array of two numbers: [xPixels, yPixels] |
 
 ### action options: [WebViewAction](../types/WebViewAction.md)

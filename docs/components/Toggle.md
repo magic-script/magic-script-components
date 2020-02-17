@@ -51,14 +51,14 @@ export default class MyApp extends React.Component {
 
 | Name   | Type   | Default Value | Required | Description                                                                                                     |
 | ------ | ------ | :-----------: | :------: | --------------------------------------------------------------------------------------------------------------- |
-| text   | string |      n/a      |          | The UTF-8 encoded text to initially set the Toggle label to.                                                    |
-| type   | string |     `top`     |          | The location of the toggle label. Only placing the label to top and left of the toggle are currently supported. |
-| height | string |      0.0      |          | The height of the toggle, 0 for default.                                                                        |
+| text   | string |      n/a      |    N     | The UTF-8 encoded text to initially set the Toggle label to.                                                    |
+| type   | string |     `top`     |    N     | The location of the toggle label. Only placing the label to top and left of the toggle are currently supported. |
+| height | string |      0.0      |    N     | The height of the toggle, 0 for default.                                                                        |
 
 ## Element Properties
 
 | Name | Type    | Default Value | Description                          |
 | :--- | :------ | :-----------: | ------------------------------------ |
-| on   | boolean |               | Sets whether the toggle state is ON. |
+| on   | boolean |    `false`    | Sets whether the toggle state is ON. |
 
 ### type options: [ToggleType](../types/ToggleType.md)

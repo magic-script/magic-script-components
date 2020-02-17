@@ -35,7 +35,7 @@ The Model component renders a static or animated 3D model in your scene. Lumin R
 | ------------------- | -------- | :-----------: | :------: | --------------------------------------------------------------------------------------------------------------------------- |
 | modelPath           | string   |      n/a      |          | File name of the model resource to load. By default this is assumed to be a relative path from the executable file.         |
 | materialPath        | string   |      n/a      |          | File name of the material resource to load. By default this is assumed to be a relative path from the executable file.      |
-| importScale         | number   |      1.0      |          | The scale that is applied to this resource.                                                                                 |
+| importScale         | number   |      1.0      |    N     | The scale that is applied to this resource.                                                                                 |
 | texturePaths        | [string] |      n/a      |          | An array of file names of the texture resources. By default this is assumed to be a relative path from the executable file. |
 | defaultTextureIndex | number   |      n/a      |          | Default index from the texturePaths.                                                                                        |
 | defaultTextureSlot  | string   |      n/a      |          | The texture slot, such as `Albedo` or `Normal`.                                                                             |

@@ -47,7 +47,7 @@ export default class MyApp extends React.Component {
 | Name   | Type   | Default Value | Required | Description                                      |
 | ------ | ------ | :-----------: | :------: | ------------------------------------------------ |
 | width  | number |      n/a      |          | The width of the progress bar.                   |
-| height | number |      n/a      |          | The height of the progress bar, `0` for default. |
+| height | number |      n/a      |    0     | The height of the progress bar, `0` for default. |
 
 ## Element Properties
 

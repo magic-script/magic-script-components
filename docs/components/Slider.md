@@ -98,8 +98,8 @@ export default class MyApp extends React.Component {
 
 | Name   | Type   | Default Value | Required | Description               |
 | ------ | ------ | :-----------: | :------: | ------------------------- |
-| width  | number |      n/a      |          | The width of the slider.  |
-| height | number |       0       |          | The height of the slider. |
+| width  | number |      n/a      |    N     | The width of the slider.  |
+| height | number |       0       |    N     | The height of the slider. |
 
 ## Element Properties
 
