@@ -3,9 +3,6 @@ id: pageView
 title: PageView
 ---
 
-import PlatformTabs from '@theme/PlatformTabs';
-
-<PlatformTabs component='pageview' />​
 
 ## Description
 

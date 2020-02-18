@@ -3,9 +3,6 @@ id: quad
 title: Quad
 ---
 
-import PlatformTabs from '@theme/PlatformTabs';
-
-<PlatformTabs component='quad' />​
 
 ## Description
 

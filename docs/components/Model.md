@@ -3,6 +3,10 @@ id: model
 title: Model
 ---
 
+import PlatformTabs from '@theme/PlatformTabs';
+
+<PlatformTabs component='model' />​
+
 ## Description
 
 The Model component renders a static or animated 3D model in your scene. Lumin Runtime uses a proprietary material file format called a kmat to bind materials to renderable surfaces. When creating your model, ensure you use <material_name>.kmat to reference the material. Your textures are referenced in the kmat file. We recommend creating kmat files with the Lumin Runtime Editor.

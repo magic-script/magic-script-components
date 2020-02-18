@@ -3,9 +3,6 @@ id: light
 title: Light
 ---
 
-import PlatformTabs from '@theme/PlatformTabs';
-
-<PlatformTabs component='light' />​
 
 ## Description
 

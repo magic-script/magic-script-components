@@ -3,10 +3,6 @@ id: dialog
 title: Dialog
 ---
 
-import PlatformTabs from '@theme/PlatformTabs';
-
-<PlatformTabs component='dialog' />​
-
 ## Description
 
 The Dialog is a container where you can place other UI components - such as layouts, buttons, or text - as child nodes.

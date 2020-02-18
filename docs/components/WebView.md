@@ -3,10 +3,6 @@ id: webView
 title: WebView
 ---
 
-import PlatformTabs from '@theme/PlatformTabs';
-
-<PlatformTabs component='webview' />​
-
 ## Description
 
 WebView renders HTML, CSS, and JavaScript content in a prism. When you enable web inspectors in your app, use web inspector clients, such as Chrome DevTools, to debug the displayed WebView content.

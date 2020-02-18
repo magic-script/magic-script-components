@@ -3,9 +3,6 @@ id: video
 title: Video
 ---
 
-import PlatformTabs from '@theme/PlatformTabs';
-
-<PlatformTabs component='video' />​
 
 ## Description
 

@@ -3,9 +3,6 @@ id: rectLayout
 title: RectLayout
 ---
 
-import PlatformTabs from '@theme/PlatformTabs';
-
-<PlatformTabs component='rectlayout' />​
 
 ## Description
 
