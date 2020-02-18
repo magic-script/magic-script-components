@@ -38,16 +38,16 @@ export default class MyApp extends React.Component {
     const dialog = this.state.requestUserConfirmation
     ? ( <Dialog
         buttonType="text-with-icon"
-        dialogType="dual-action"
-        dialogLayout="wide"
+        type="dual-action"
+        layout="wide"
         cancelIcon="close"
         cancelText="No"
         confirmIcon="check"
         confirmText="Yes"
         title="Please confirm:"
-        text="Dismiss the notification ?"
-        onCancel={this.onDialogCancel}
-        onConfirm={this.onDialogConfirm}
+        message="Dismiss the notification ?"
+        onDialogCanceled={this.onDialogCancel}
+        onDialogConfirmed={this.onDialogConfirm}
       />)
     : undefined;
 
@@ -75,7 +75,7 @@ export default class MyApp extends React.Component {
 | Name      | Type    | Default Value | Description                                                       |
 | --------- | ------- | :-----------: | ----------------------------------------------------------------- |
 | title     | string  |      n/a      | The dialog title text. Use an empty string to hide the title.     |
-| text      | string  |      n/a      | The dialog message text. Use an empty string to hide the message. |
+| message   | string  |      n/a      | The dialog message text. Use an empty string to hide the message. |
 | type      | string  | `dual-action` | The type of dialog.                                               |
 | layout    | string  |  `standard`   | The dialog layout preference.                                     |
 | scrolling | boolean |    `false`    | Creates a new dialog with vertical scrolling content.             |
