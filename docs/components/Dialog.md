@@ -45,9 +45,8 @@ export default class MyApp extends React.Component {
         confirmIcon="check"
         confirmText="Yes"
         title="Please confirm:"
-        text="Dismiss the notification ?"
-        onCancel={this.onDialogCancel}
-        onConfirm={this.onDialogConfirm}
+        onDialogCanceled={this.onDialogCancel}
+        onDialogConfirmed={this.onDialogConfirm}
       />)
     : undefined;
 
