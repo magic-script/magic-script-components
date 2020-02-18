@@ -38,3 +38,5 @@ export {
 } from './src/components.js';
 
 export { Platform } from './src/platform';
+
+export { PlaneDetector } from './src/plane-detector';
