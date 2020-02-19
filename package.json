@@ -5,6 +5,8 @@
   "module": "index.js",
   "files": [
     "src/components.js",
+    "src/plane-detector.js",
+    "src/platform.js",
     "index.d.ts",
     "index.js"
   ],
