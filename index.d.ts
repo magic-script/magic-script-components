@@ -24,7 +24,7 @@ declare module "magic-script-components" {
 
   interface TextProps extends ViewProps, EventHandlerProps {
     text?: string;
-    textColor?: any;
+    textColor?: color;
     textSize?: number;
     allCaps?: boolean;
     charSpacing?: number;
@@ -43,7 +43,7 @@ declare module "magic-script-components" {
 
   interface TextEditProps extends ViewProps, EventHandlerProps {
     text?: string;
-    textColor?: any;
+    textColor?: color;
     textSize?: number;
     textAlignment?: HorizontalTextAlignment;
     charLimit?: number;
@@ -52,7 +52,7 @@ declare module "magic-script-components" {
     lineSpacing?: number;
     textPadding?: vec4;
     hint?: string;
-    hintColor?: any;
+    hintColor?: color;
     multiline?: boolean;
     password?: boolean;
     scrolling?: boolean;
@@ -72,10 +72,10 @@ declare module "magic-script-components" {
 
   interface ButtonProps extends ViewProps, EventHandlerProps {
     text?: string;
-    textColor?: any;
+    textColor?: color;
     textSize?: number;
     iconSize?: vec2;
-    iconColor?: any;
+    iconColor?: color;
     width?: number;
     height?: number;
     roundness?: number;
@@ -86,7 +86,7 @@ declare module "magic-script-components" {
   interface ImageProps extends ViewProps, EventHandlerProps {
     ui?: boolean;
     opaque?: boolean;
-    color?: any;
+    color?: color;
     texCoords?: vec4;
     imageFrameResource?: number;
     renderResource?: number;
@@ -166,7 +166,7 @@ declare module "magic-script-components" {
   const ListView: React.FC<ListViewProps>;
 
   interface ListViewItemProps extends ViewProps, EventHandlerProps {
-    backgroundColor?: any;
+    backgroundColor?: color;
   }
 
   const ListViewItem: React.FC<ListViewItemProps>;
@@ -194,7 +194,7 @@ declare module "magic-script-components" {
   const Slider: React.FC<SliderProps>;
 
   interface ProgressBarProps extends ViewProps, EventHandlerProps {
-    progressColor?: { beginColor?: any; endColor?: any; };
+    progressColor?: { beginColor?: color; endColor?: color; };
     min?: number;
     max?: number;
     value?: number;
@@ -241,10 +241,10 @@ declare module "magic-script-components" {
 
   interface DropdownListProps extends ViewProps, EventHandlerProps {
     text?: string;
-    textColor?: any;
+    textColor?: color;
     textSize?: number;
     iconSize?: vec2;
-    iconColor?: any;
+    iconColor?: color;
     listMaxHeight?: number;
     listTextSize?: number;
     maxCharacterLimit?: number;
@@ -264,7 +264,7 @@ declare module "magic-script-components" {
 
   interface ToggleProps extends ViewProps, EventHandlerProps {
     text?: string;
-    textColor?: any;
+    textColor?: color;
     textSize?: number;
     on?: boolean;
     height?: number;
@@ -296,7 +296,7 @@ declare module "magic-script-components" {
 
   interface TabProps extends ViewProps, EventHandlerProps {
     text?: string;
-    textColor?: any;
+    textColor?: color;
     textSize?: number;
     type?: EclipseLabelType;
   }
@@ -344,7 +344,7 @@ declare module "magic-script-components" {
 
   interface PortalIconProps extends ViewProps, EventHandlerProps {
     text?: string;
-    textColor?: any;
+    textColor?: color;
     textSize?: number;
     hoverScale?: number;
     hoverZOffset?: number;
@@ -360,14 +360,14 @@ declare module "magic-script-components" {
   const PortalIcon: React.FC<PortalIconProps>;
 
   interface ColorPickerProps extends ViewProps, EventHandlerProps {
-    color?: any;
+    color?: color;
     height?: number;
   }
 
   const ColorPicker: React.FC<ColorPickerProps>;
 
   interface TimePickerProps extends ViewProps, EventHandlerProps {
-    color?: any;
+    color?: color;
     time?: string;
     showHint?: boolean;
     label?: string;
@@ -378,7 +378,7 @@ declare module "magic-script-components" {
   const TimePicker: React.FC<TimePickerProps>;
 
   interface DatePickerProps extends ViewProps, EventHandlerProps {
-    color?: any;
+    color?: color;
     date?: string;
     showHint?: boolean;
     label?: string;
@@ -418,7 +418,7 @@ declare module "magic-script-components" {
 
   interface ModelProps extends ContentProps, EventHandlerProps {
     bloomStrength?: number;
-    color?: any;
+    color?: color;
     drmContent?: boolean;
     shader?: ShaderType;
     renderingLayer?: RenderingLayer;
@@ -452,7 +452,7 @@ declare module "magic-script-components" {
 
   interface QuadProps extends ContentProps, EventHandlerProps {
     bloomStrength?: number;
-    color?: any;
+    color?: color;
     drmContent?: boolean;
     shader?: ShaderType;
     renderingLayer?: RenderingLayer;
@@ -470,7 +470,6 @@ declare module "magic-script-components" {
     writesColor?: { on?: boolean; renderStateIndex?: number; };
     writesDepth?: { on?: boolean; renderStateIndex?: number; };
     writesStencil?: { on?: boolean; renderStateIndex?: number; };
-    renderResourceId?: number;
     texCoords?: vec4;
     viewMode?: ViewMode;
     size?: vec2;
@@ -519,7 +518,7 @@ declare module "magic-script-components" {
   const Audio: React.FC<AudioProps>;
 
   interface LightProps extends ContentProps, EventHandlerProps {
-    color?: any;
+    color?: color;
     intensity?: number;
     range?: number;
     spotAngle?: number;
@@ -532,7 +531,7 @@ declare module "magic-script-components" {
 
   interface LineProps extends ContentProps, EventHandlerProps {
     bloomStrength?: number;
-    color?: any;
+    color?: color;
     drmContent?: boolean;
     shader?: ShaderType;
     renderingLayer?: RenderingLayer;
@@ -716,6 +715,16 @@ declare module "magic-script-components" {
   type SoundEvent = 'activate' | 'context-menu-close' | 'context-menu-item-hover' | 'context-menu-item-select' | 'context-menu-open' | 'dialog-cancel' | 'dialog-confirm' | 'dialog-loop' | 'dialog-open' | 'dropdown-item-hover' | 'dropdown-item-select' | 'dropdown-list-collapse' | 'dropdown-list-expand' | 'dropdown-nested-list-collapse' | 'dropdown-nested-list-expand' | 'focus-gained' | 'focus-lost' | 'hover-enter' | 'hover-exit' | 'long-press' | 'panel-transition-horizontal' | 'panel-transition-vertical' | 'scroll-view-scroll-limit' | 'text-cursor-insert' | 'text-password-hide' | 'text-password-show' | 'text-selection-handle-drop' | 'text-selection-handle-grab' | 'text-word-select' | 'toggle-state-off' | 'toggle-state-on';
 
   type GravityWellSnap = 'center' | 'center-x' | 'center-y' | 'closest-edge' | 'closest-inside-edge';
+
+  type color = string | number | vec4 | color_hsl | color_lch | color_cmyk | color_rgba;
+
+  type color_hsl = { h: number, s: number, l: number };
+
+  type color_lch = { l: number, c: number, h: number };
+
+  type color_cmyk = { c: number, m: number, y: number, k: number };
+
+  type color_rgba = { r: number, g: number, b: number, a: number, type?: string };
 
   type HorizontalTextAlignment = 'center' | 'justify' | 'left' | 'right';
 
