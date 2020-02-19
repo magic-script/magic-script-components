@@ -24,7 +24,7 @@ declare module "magic-script-components" {
 
   interface TextProps extends ViewProps, EventHandlerProps {
     text?: string;
-    textColor?: vec4;
+    textColor?: any;
     textSize?: number;
     allCaps?: boolean;
     charSpacing?: number;
@@ -43,7 +43,7 @@ declare module "magic-script-components" {
 
   interface TextEditProps extends ViewProps, EventHandlerProps {
     text?: string;
-    textColor?: vec4;
+    textColor?: any;
     textSize?: number;
     textAlignment?: HorizontalTextAlignment;
     charLimit?: number;
@@ -52,7 +52,7 @@ declare module "magic-script-components" {
     lineSpacing?: number;
     textPadding?: vec4;
     hint?: string;
-    hintColor?: vec4;
+    hintColor?: any;
     multiline?: boolean;
     password?: boolean;
     scrolling?: boolean;
@@ -72,10 +72,10 @@ declare module "magic-script-components" {
 
   interface ButtonProps extends ViewProps, EventHandlerProps {
     text?: string;
-    textColor?: vec4;
+    textColor?: any;
     textSize?: number;
     iconSize?: vec2;
-    iconColor?: vec4;
+    iconColor?: any;
     width?: number;
     height?: number;
     roundness?: number;
@@ -86,7 +86,7 @@ declare module "magic-script-components" {
   interface ImageProps extends ViewProps, EventHandlerProps {
     ui?: boolean;
     opaque?: boolean;
-    color?: vec4;
+    color?: any;
     texCoords?: vec4;
     imageFrameResource?: number;
     renderResource?: number;
@@ -105,8 +105,8 @@ declare module "magic-script-components" {
     thumbSize?: number;
     thumbPosition?: number;
     orientation?: Orientation;
-    width?: number;
-    height?: number;
+    length?: number;
+    thickness?: number;
   }
 
   const ScrollBar: React.FC<ScrollBarProps>;
@@ -166,7 +166,7 @@ declare module "magic-script-components" {
   const ListView: React.FC<ListViewProps>;
 
   interface ListViewItemProps extends ViewProps, EventHandlerProps {
-    backgroundColor?: vec4;
+    backgroundColor?: any;
   }
 
   const ListViewItem: React.FC<ListViewItemProps>;
@@ -194,7 +194,7 @@ declare module "magic-script-components" {
   const Slider: React.FC<SliderProps>;
 
   interface ProgressBarProps extends ViewProps, EventHandlerProps {
-    progressColor?: { beginColor?: vec4; endColor?: vec4; };
+    progressColor?: { beginColor?: any; endColor?: any; };
     min?: number;
     max?: number;
     value?: number;
@@ -205,12 +205,13 @@ declare module "magic-script-components" {
   const ProgressBar: React.FC<ProgressBarProps>;
 
   interface GridLayoutProps extends ViewProps, EventHandlerProps {
+    itemAlignment?: { row?: number; column?: number; alignment?: Alignment; };
     defaultItemAlignment?: Alignment;
     defaultItemPadding?: vec4;
-    itemPadding?: vec4;
     skipInvisibleItems?: boolean;
     columns?: number;
     rows?: number;
+    itemPadding?: { row?: number; column?: number; padding?: vec4; };
     width?: number;
     height?: number;
   }
@@ -218,11 +219,12 @@ declare module "magic-script-components" {
   const GridLayout: React.FC<GridLayoutProps>;
 
   interface LinearLayoutProps extends ViewProps, EventHandlerProps {
+    itemAlignment?: { index?: number; alignment?: Alignment; };
     defaultItemAlignment?: Alignment;
     defaultItemPadding?: vec4;
-    itemPadding?: vec4;
     skipInvisibleItems?: boolean;
     orientation?: Orientation;
+    itemPadding?: { index?: number; padding?: vec4; };
     width?: number;
     height?: number;
   }
@@ -239,10 +241,10 @@ declare module "magic-script-components" {
 
   interface DropdownListProps extends ViewProps, EventHandlerProps {
     text?: string;
-    textColor?: vec4;
+    textColor?: any;
     textSize?: number;
-    iconSize?: number;
-    iconColor?: vec4;
+    iconSize?: vec2;
+    iconColor?: any;
     listMaxHeight?: number;
     listTextSize?: number;
     maxCharacterLimit?: number;
@@ -262,7 +264,7 @@ declare module "magic-script-components" {
 
   interface ToggleProps extends ViewProps, EventHandlerProps {
     text?: string;
-    textColor?: vec4;
+    textColor?: any;
     textSize?: number;
     on?: boolean;
     height?: number;
@@ -294,7 +296,7 @@ declare module "magic-script-components" {
 
   interface TabProps extends ViewProps, EventHandlerProps {
     text?: string;
-    textColor?: vec4;
+    textColor?: any;
     textSize?: number;
     type?: EclipseLabelType;
   }
@@ -342,7 +344,7 @@ declare module "magic-script-components" {
 
   interface PortalIconProps extends ViewProps, EventHandlerProps {
     text?: string;
-    textColor?: vec4;
+    textColor?: any;
     textSize?: number;
     hoverScale?: number;
     hoverZOffset?: number;
@@ -358,14 +360,14 @@ declare module "magic-script-components" {
   const PortalIcon: React.FC<PortalIconProps>;
 
   interface ColorPickerProps extends ViewProps, EventHandlerProps {
-    color?: vec4;
+    color?: any;
     height?: number;
   }
 
   const ColorPicker: React.FC<ColorPickerProps>;
 
   interface TimePickerProps extends ViewProps, EventHandlerProps {
-    color?: vec4;
+    color?: any;
     time?: string;
     showHint?: boolean;
     label?: string;
@@ -376,7 +378,7 @@ declare module "magic-script-components" {
   const TimePicker: React.FC<TimePickerProps>;
 
   interface DatePickerProps extends ViewProps, EventHandlerProps {
-    color?: vec4;
+    color?: any;
     date?: string;
     showHint?: boolean;
     label?: string;
@@ -416,7 +418,7 @@ declare module "magic-script-components" {
 
   interface ModelProps extends ContentProps, EventHandlerProps {
     bloomStrength?: number;
-    color?: vec4;
+    color?: any;
     drmContent?: boolean;
     shader?: ShaderType;
     renderingLayer?: RenderingLayer;
@@ -450,7 +452,7 @@ declare module "magic-script-components" {
 
   interface QuadProps extends ContentProps, EventHandlerProps {
     bloomStrength?: number;
-    color?: vec4;
+    color?: any;
     drmContent?: boolean;
     shader?: ShaderType;
     renderingLayer?: RenderingLayer;
@@ -517,7 +519,7 @@ declare module "magic-script-components" {
   const Audio: React.FC<AudioProps>;
 
   interface LightProps extends ContentProps, EventHandlerProps {
-    color?: vec4;
+    color?: any;
     intensity?: number;
     range?: number;
     spotAngle?: number;
@@ -530,7 +532,7 @@ declare module "magic-script-components" {
 
   interface LineProps extends ContentProps, EventHandlerProps {
     bloomStrength?: number;
-    color?: vec4;
+    color?: any;
     drmContent?: boolean;
     shader?: ShaderType;
     renderingLayer?: RenderingLayer;
@@ -630,7 +632,6 @@ declare module "magic-script-components" {
     Alignment?: any;
     Enabled?: any;
     EventPassThrough?: any;
-    EventSoundID?: any;
     GravityWellEnabled?: any;
     GravityWellProperties?: any;
     RenderingLayer?: any;
@@ -661,7 +662,6 @@ declare module "magic-script-components" {
     Alignment?: any;
     Enabled?: any;
     EventPassThrough?: any;
-    EventSoundID?: any;
     GravityWellEnabled?: any;
     GravityWellProperties?: any;
     RenderingLayer?: any;
@@ -703,7 +703,7 @@ declare module "magic-script-components" {
 
   type quat = vec4;
 
-  type mat4 = [vec4, vec4, vec4, vec4];
+  type mat4 = [number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number];
 
   type CursorHoverState = 'browser-default' | 'browser-pointer' | 'crosshair' | 'default' | 'move' | 'none' | 'scroll' | 'scroll-e' | 'scroll-n' | 'scroll-ne' | 'scroll-nw' | 'scroll-s' | 'scroll-se' | 'scroll-sw' | 'scroll-w' | 'text-input';
 
