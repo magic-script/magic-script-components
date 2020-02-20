@@ -56,7 +56,7 @@ If `text` is empty, the content of the `<text>` tag will be used as text.
 | textColor     | verc4    | Sets the RGBA color of the rendered text.                                                                                                                                                                                                                                          |
 | textSize      | number   | Sets the text render size height in scene units.                                                                                                                                                                                                                                   |
 | boundsSize    | _object_ | Sets the text bounds size in scene units. The default value of `0,0` indicates there is no bounds and the text can grow and does not wrap or truncate. Setting the bounds greater than `0` in both X and Y will set the text bounds and cause the text to wrap or truncate within. |
-| fontParams    | _object_ | Sets the font parameters, including style, weight, pixel size, and tracking. This uses one of the default sets of Magic Leap font resources that support style and weight.                                                                                                         |
+| fontParameters | _object_ | Sets the font parameters, including style, weight, pixel size, and tracking. This uses one of the default sets of Magic Leap font resources that support style and weight.                                                                                                         |
 
 ### boundsSize
 
