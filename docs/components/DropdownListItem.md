@@ -17,7 +17,7 @@ Structure containing information about each item in a drop-down list.
 import React from "react";
 import { View, DropdownList, DropdownListItem } from "magic-script-components";
 
-export class ExampleDropdownListItem extends React.Component {
+export class MyApp extends React.Component {
   state = { selectedId: undefined };
 
   onSelection = eventData => {

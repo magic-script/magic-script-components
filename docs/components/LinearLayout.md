@@ -17,7 +17,7 @@ The LinearLayout component automatically lays out multiple elements in a horizon
 import React from "react";
 import { View, LinearLayout, Text } from "magic-script-components";
 
-export class ExampleLinearLayout extends React.Component {
+export class MyApp extends React.Component {
   render() {
     const moons = [
       "Europa",

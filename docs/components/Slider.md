@@ -17,7 +17,7 @@ The Slider component places a slider into your prism. Use sliders to provide a v
 import React from "react";
 import { Text, Slider, Image, LinearLayout } from "magic-script-components";
 
-export class ExampleSlider extends React.Component {
+export class MyApp extends React.Component {
   state = {
     red: undefined,
     green: undefined,

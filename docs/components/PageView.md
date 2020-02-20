@@ -14,7 +14,7 @@ The PageView component is used to switch between displaying individual page node
 import React from 'react';
 import { View, PageView, Content, Text, Toggle } from 'magic-script-components';
 
-export class ExamplePageView extends React.Component {
+export class MyApp extends React.Component {
   state = { pageIndex: 0 };
 
   onSwitchHandler = eventData => {

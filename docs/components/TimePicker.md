@@ -17,7 +17,7 @@ The TimePicker component is a dialog that allows the user to select a time.
 import React from "react";
 import { View, TimePicker } from "magic-script-components";
 
-export class ExampleTimePicker extends React.Component {
+export class MyApp extends React.Component {
   render() {
     return (
       <View name="main-view" localPosition={[-0.05, 0, 0]} localScale={[2,2,2]}>

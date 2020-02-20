@@ -18,7 +18,7 @@ import {
   Text
 } from "magic-script-components";
 
-export  class ExampleListViewItem extends React.Component {
+export  class MyApp extends React.Component {
   render() {
     const moons = [
       "Europa",

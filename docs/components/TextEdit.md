@@ -17,7 +17,7 @@ The TextEdit component creates an editable text box for text entry on a single o
 import React from 'react';
 import { TextEdit } from 'magic-script-components';
 
-export class ExampleTextEdit extends React.Component {
+export class MyApp extends React.Component {
   render() {
     return (
         <TextEdit

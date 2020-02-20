@@ -17,7 +17,7 @@ The Model component renders a static or animated 3D model in your scene. Lumin R
 import React from "react";
 import { Model, View } from "magic-script-components";
 
-export class ExampleModel extends React.Component {
+export class MyApp extends React.Component {
   render() {
     return (
       <View>

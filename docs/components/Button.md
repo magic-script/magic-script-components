@@ -17,7 +17,7 @@ Button represents a standard, clickable button that you can select and activate 
 import React from 'react';
 import { View, Button } from 'magic-script-components';
 
-export class ExampleButton extends React.Component {
+export class MyApp extends React.Component {
   constructor(props) {
     super(props);
   }

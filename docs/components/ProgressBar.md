@@ -17,7 +17,7 @@ The ProgressBar component is used to show the progress of an event. By default, 
 import React from "react";
 import { View, ProgressBar } from "magic-script-components";
 
-export class ExampleProgressBar extends React.Component {
+export class MyApp extends React.Component {
   render() {
     const colors = {
       beginColor: [0.25, 0, 25, 0.8],

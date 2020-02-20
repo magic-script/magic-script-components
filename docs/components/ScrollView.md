@@ -25,7 +25,7 @@ import {
   LinearLayout
 } from "magic-script-components";
 
-export class ExampleScrollView extends React.Component {
+export class MyApp extends React.Component {
   render() {
     const alphabet = [
       "Alfa",

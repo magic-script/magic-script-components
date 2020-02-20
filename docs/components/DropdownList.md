@@ -17,7 +17,7 @@ The `DropDownList` creates a vertical drop-down list box. Single or multiple ite
 import React from "react";
 import { View, DropdownList, DropdownListItem } from "magic-script-components";
 
-export  class ExampleDropdownList extends React.Component {
+export  class MyApp extends React.Component {
   state = { selectedId: undefined };
 
   onSelection = eventData => {
