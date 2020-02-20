@@ -38,16 +38,16 @@ export default class MyApp extends React.Component {
     const dialog = this.state.requestUserConfirmation
     ? ( <Dialog
         buttonType="text-with-icon"
-        dialogType="dual-action"
-        dialogLayout="wide"
+        type="dual-action"
+        layout="wide"
         cancelIcon="close"
         cancelText="No"
         confirmIcon="check"
         confirmText="Yes"
         title="Please confirm:"
-        text="Dismiss the notification ?"
-        onCancel={this.onDialogCancel}
-        onConfirm={this.onDialogConfirm}
+        message="Dismiss the notification ?"
+        onDialogCanceled={this.onDialogCancel}
+        onDialogConfirmed={this.onDialogConfirm}
       />)
     : undefined;
 

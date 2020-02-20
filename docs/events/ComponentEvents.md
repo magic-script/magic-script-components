@@ -48,5 +48,5 @@ title: Component Events
 | DatePicker         | onDateChanged           | DatePickerEventData   |
 |                    | onDateConfirmed         | DatePickerEventData   |
 | CircleConfirmation | onConfirmationCanceled  | UiEventData           |
-|                    | onConfirmationComplete  | UiEventData           |
-|                    | onConfirmationUpdate    | UiEventData           |
+|                    | onConfirmationCompleted | UiEventData           |
+|                    | onConfirmationUpdated   | UiEventData           |
