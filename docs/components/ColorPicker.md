@@ -18,7 +18,7 @@ Dialog which allows the user to select color.
 import React from 'react';
 import { View, ColorPicker } from 'magic-script-components';
 
-export class MyApp extends React.Component {
+export default class MyApp extends React.Component {
     onColorChanged = event => {
         // event.Color
         console.log("onColorChanged event received: ", event);

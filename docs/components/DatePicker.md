@@ -18,13 +18,13 @@ Dialog which allows the user to select date.
 import React from 'react';
 import { DatePicker } from 'magic-script-components';
 
-export class MyApp extends React.Component {
+export default class MyApp extends React.Component {
 
     onDateChanged = event => {
         // event.Date, event.DateString
         console.log("onDateChanged event received: ", event);
       };
-    
+
       onDateConfirmed = event => {
         // event.Date, event.DateString
         console.log("onDateConfirmed event received: ", event);

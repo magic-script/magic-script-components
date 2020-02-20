@@ -17,7 +17,7 @@ CircleConfirmation is the UI element intended to confirm powering off. The user 
 import React from 'react';
 import { View, CircleConfirmation } from 'magic-script-components';
 
-export class MyApp extends React.Component {
+export default class MyApp extends React.Component {
     constructor(props) {
         super(props);
     }

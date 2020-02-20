@@ -22,7 +22,7 @@ import {
   Text
 } from "magic-script-components";
 
-export class MyApp extends React.Component {
+export default class MyApp extends React.Component {
   render() {
     const moons = [
       "Europa",

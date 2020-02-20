@@ -17,13 +17,13 @@ The Model component renders a static or animated 3D model in your scene. Lumin R
 import React from "react";
 import { Model, View } from "magic-script-components";
 
-export class MyApp extends React.Component {
+export default class MyApp extends React.Component {
   render() {
     return (
       <View>
-        <Model 
-          localScale={[0.3, 0.3, 0.3]} 
-          modelPath={require('../resources/static.glb')} 
+        <Model
+          localScale={[0.3, 0.3, 0.3]}
+          modelPath={require('../resources/static.glb')}
         />
       </View>
     );

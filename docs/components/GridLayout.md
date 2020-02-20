@@ -17,7 +17,7 @@ The GridLayout class automatically lays out elements in a grid with optional pad
 import React from "react";
 import { GridLayout, Text, View } from "magic-script-components";
 
-export class MyApp extends React.Component {
+export default class MyApp extends React.Component {
   render() {
     return (
       <View name="main-view">

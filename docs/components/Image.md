@@ -17,7 +17,7 @@ The Image component displays a 2D image from an image file.
 import React from "react";
 import { View, Image, Button } from "magic-script-components";
 
-export class MyApp extends React.Component {
+export default class MyApp extends React.Component {
   constructor(props) {
     super(props);
   this.state = { index: 0 };

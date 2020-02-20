@@ -16,7 +16,7 @@ The RectLayout sends events only when it is the immediate parent of a UI element
 import React from "react";
 import { View, RectLayout, Content, Text } from "magic-script-components";
 
-export class MyApp extends React.Component {
+export default class MyApp extends React.Component {
   render() {
     return (
       <View name="main-view">

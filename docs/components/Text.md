@@ -17,7 +17,7 @@ This is the base component of any static text element placed in your prism. Thes
 import React from 'react';
 import { Text } from 'magic-script-components';
 
-export class MyApp extends React.Component {
+export default class MyApp extends React.Component {
   render() {
     return (
       <Text alignment={'center-center'} textAlignment={'center'} textSize={0.1}>

@@ -20,7 +20,7 @@ WebView renders HTML, CSS, and JavaScript content in a prism. When you enable we
 import React from "react";
 import { View, WebView, Text } from "magic-script-components";
 
-export class MyApp extends React.Component {
+export default class MyApp extends React.Component {
 
   render() {
 

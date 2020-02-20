@@ -17,7 +17,7 @@ The Panel component organizes two or more elements, transforms descendants withi
 import React from "react";
 import { View, Panel, Button } from "magic-script-components";
 
-export class MyApp extends React.Component {
+export default class MyApp extends React.Component {
   render() {
     const aShape = {
       size: [0.4, 0.4],

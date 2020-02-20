@@ -22,7 +22,7 @@ import {
   Button
 } from "magic-script-components";
 
-export class MyApp extends React.Component {
+export default class MyApp extends React.Component {
   state = { progress: 0 };
 
   clickHanlder = eventData =>

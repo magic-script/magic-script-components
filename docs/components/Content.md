@@ -13,7 +13,7 @@ The root component for a group of components. An example of a parent component i
 import React from 'react';
 import { ScrollView, ScrollBar, Content, Text, Button } from 'magic-script-components';
 
-export class MyApp extends React.Component {
+export default class MyApp extends React.Component {
   constructor(props) {
     super(props);
   }

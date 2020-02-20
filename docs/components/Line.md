@@ -17,7 +17,7 @@ The Line component renders a colored line. The Line component creates lines as a
 import React from "react";
 import { View, Line } from "magic-script-components";
 
-export class MyApp extends React.Component {
+export default class MyApp extends React.Component {
   render() {
     const points = [
       [-0.35, -0.35, -0.2],

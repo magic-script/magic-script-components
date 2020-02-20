@@ -14,7 +14,7 @@ The Video component represents a simple 2D rectangle on which video resources ca
 import React from 'react';
 import { LinearLayout, Video, Button, Text } from 'magic-script-components';
 
-export class MyApp extends React.Component {
+export default class MyApp extends React.Component {
   state = {
     playEnabled: false,
     pauseEnabled: false,

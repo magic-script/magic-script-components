@@ -13,9 +13,9 @@ Toggle creates a two option, toggleable element. Toggles are generally used in a
 import React from "react";
 import { View, PageView, Content, Text, Toggle } from "magic-script-components";
 
-export class MyApp extends React.Component {
+export default class MyApp extends React.Component {
   state = { pageIndex: 0 };
-  
+
   onSwitchHandler = eventData => {
     this.setState({ pageIndex: eventData.On ? 1 : 0 });
   };

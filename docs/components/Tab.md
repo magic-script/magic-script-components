@@ -13,7 +13,7 @@ The tab component allows you to change a content view using button controls. You
 import React from "react";
 import { LinearLayout, Tab, Text, PageView, Line, Content } from "magic-script-components";
 
-export class MyApp extends React.Component {
+export default class MyApp extends React.Component {
   state = { activePage: 0 }
 
   onHomeClicked = () => this.setState({ activePage: 0 })
