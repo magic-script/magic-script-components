@@ -14,13 +14,13 @@ This is the base component of any static text element placed in your prism. Thes
 ## Example
 
 ```javascript
-import React from "react";
-import { Text } from "magic-script-components";
+import React from 'react';
+import { Text } from 'magic-script-components';
 
-export default class TextExample extends React.Component {
+export class ExampleText extends React.Component {
   render() {
     return (
-      <Text textSize={0.1} localPosition={[-0.3, 0, 0]}>
+      <Text alignment={'center-center'} textAlignment={'center'} textSize={0.1}>
         Text Example
       </Text>
     );

@@ -12,20 +12,23 @@ Toggle creates a two option, toggleable element. Toggles are generally used in a
 ```javascript
 import React from "react";
 import { View, PageView, Content, Text, Toggle } from "magic-script-components";
-export default class MyApp extends React.Component {
+
+export class ExampleToggle extends React.Component {
   state = { pageIndex: 0 };
+  
   onSwitchHandler = eventData => {
     this.setState({ pageIndex: eventData.On ? 1 : 0 });
   };
+
   render() {
     return (
       <View name="main-view">
         <Toggle
-          localPosition={[0, 0.25, 0]}
+          localPosition={[0.1, -0.25, 0]}
           text="Switch Page"
           onToggleChanged={this.onSwitchHandler}
         />
-        <PageView name="page-view" visiblePage={this.state.pageIndex}>
+        <PageView alignment="center-center" name="page-view" visiblePage={this.state.pageIndex}>
           <Content name="page-0">
             <Text textSize={0.1}>Page One</Text>
           </Content>

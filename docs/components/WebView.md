@@ -18,15 +18,15 @@ WebView renders HTML, CSS, and JavaScript content in a prism. When you enable we
 
 ```javascript
 import React from "react";
-
 import { View, WebView, Text } from "magic-script-components";
-export default class MyApp extends React.Component {
+
+export class ExampleWebView extends React.Component {
 
   render() {
 
     return (
       <View name='main-view' >
-        <WebView localPosition={[-0.4, 0.4, 0]} width={0.8} height={0.8} url={'http://google.com'}/>
+        <WebView localPosition={[0, -0.2, 0]} width={1} height={0.8} url={'http://google.com'}/>
       </View>
     );
   }

@@ -17,7 +17,7 @@ The `DropDownList` creates a vertical drop-down list box. Single or multiple ite
 import React from "react";
 import { View, DropdownList, DropdownListItem } from "magic-script-components";
 
-export default class MyApp extends React.Component {
+export  class ExampleDropdownList extends React.Component {
   state = { selectedId: undefined };
 
   onSelection = eventData => {
@@ -33,16 +33,16 @@ export default class MyApp extends React.Component {
       "Valetudo",
       "Amalthea"
     ];
-
+    
     return (
-      <View name="main-view">
+      <View name="main-view" localPosition={this.props.localPosition} >
         <DropdownList
           text="Select Moon"
           iconColor={[0.5, 1.0, 0.5, 0.8]}
           onSelectionChanged={this.onSelection}
         >
           {moons.map((moon, index) => (
-            <DropdownListItem id={index} label={moon} />
+            <DropdownListItem key={moon} id={index} label={moon} />
           ))}
         </DropdownList>
       </View>

@@ -25,7 +25,7 @@ import {
   LinearLayout
 } from "magic-script-components";
 
-export default class MyApp extends React.Component {
+export class ExampleScrollView extends React.Component {
   render() {
     const alphabet = [
       "Alfa",
@@ -67,12 +67,14 @@ export default class MyApp extends React.Component {
     return (
       <View name="main-view">
         <Text
+          alignment="center-center"
           text="Phonetic Alphabet"
+          textAlignment="center"
           textSize={0.07}
-          localPosition={[-0.15, 0.4, 0]}
+          localPosition={[0, 0.4, 0]}
         />
         <ScrollView scrollBarVisibility="always" scrollBounds={aabb}>
-          <ScrollBar width={0.6} thumbSize={0.03} orientation="vertical" />
+          <ScrollBar length={0.6} thumbSize={0.03} orientation="vertical" />
           <LinearLayout
             defaultItemAlignment="center-left"
             defaultItemPadding={[0.01, 0.01, 0.01, 0.01]}

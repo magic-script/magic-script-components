@@ -22,7 +22,7 @@ import {
   Text
 } from "magic-script-components";
 
-export default class MyApp extends React.Component {
+export class ExampleListView extends React.Component {
   render() {
     const moons = [
       "Europa",
@@ -37,11 +37,11 @@ export default class MyApp extends React.Component {
     ];
 
     return (
-      <ListView localPosition={[-0.15, 0.25, 0]} width={0.5} height={0.5}>
-        <ScrollBar width={0.5} thumbSize={0.03} />
+      <ListView localPosition={[-0.25, 0.25, 0]} width={0.5} height={0.5}>
+        <ScrollBar length={0.5} thumbSize={0.03} />
         {moons.map((moon, index) => (
           <ListViewItem>
-            <Text key={index} textSize={0.1}>
+            <Text key={moon} textSize={0.1}>
               {moon}
             </Text>
           </ListViewItem>

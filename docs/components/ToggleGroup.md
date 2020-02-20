@@ -16,7 +16,8 @@ ToggleGroup represents a group of standard, clickable toggles.
 ```javascript
 import React from "react";
 import { GridLayout, LinearLayout, ToggleGroup, Toggle } from "magic-script-components";
-export default class MyApp extends React.Component {
+
+export class ExampleToggleGroup extends React.Component {
   onChangedHandler = (eventData, message) => {
     console.log(`Toggle: ${message}`);
   };
@@ -80,7 +81,6 @@ export default class MyApp extends React.Component {
     );
   }
 }
-
 ```
 
 ## [Common Events](../events/CommonEvents.md)

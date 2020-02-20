@@ -13,7 +13,7 @@ The PortalIcon component represents a portal icon for use in the on-device app L
 import React from "react";
 import { View, PortalIcon } from "magic-script-components";
 
-export default class MyApp extends React.Component {
+export class ExamplePortalIcon extends React.Component {
   render() {
     return (
       <View name="main-view">

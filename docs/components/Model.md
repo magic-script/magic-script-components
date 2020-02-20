@@ -14,17 +14,21 @@ The Model component renders a static or animated 3D model in your scene. Lumin R
 ## Example
 
 ```javascript
-<Model
-  modelPath={"resources/turkey4.fbx"}
-  materialPath={"resources/turkey.kmat"}
-  texturePaths={["resources/turkey_baseColor.png"]}
-  defaultTextureIndex={0}
-  defaultTextureSlot={"albedo"}
-  defaultMaterialName={"turkey_material"}
-  animation={{ name: "idle" }}
-  animationPauseState={false}
-  animationPlaybackSpeed={1.0}
-/>
+import React from "react";
+import { Model, View } from "magic-script-components";
+
+export class ExampleModel extends React.Component {
+  render() {
+    return (
+      <View>
+        <Model 
+          localScale={[0.3, 0.3, 0.3]} 
+          modelPath={require('../resources/static.glb')} 
+        />
+      </View>
+    );
+  }
+}
 ```
 
 - FBX file format is currently supported on Magic Leap One.

@@ -17,7 +17,7 @@ Structure containing information about each item in a drop-down list.
 import React from "react";
 import { View, DropdownList, DropdownListItem } from "magic-script-components";
 
-export default class MyApp extends React.Component {
+export class ExampleDropdownListItem extends React.Component {
   state = { selectedId: undefined };
 
   onSelection = eventData => {
@@ -35,14 +35,14 @@ export default class MyApp extends React.Component {
     ];
 
     return (
-      <View name="main-view">
+      <View name="main-view" localPosition={this.props.localPosition}>
         <DropdownList
           text="Select Moon"
           iconColor={[0.5, 1.0, 0.5, 0.8]}
           onSelectionChanged={this.onSelection}
         >
           {moons.map((moon, index) => (
-            <DropdownListItem id={index} label={moon} />
+            <DropdownListItem key={moon} id={index} label={moon} />
           ))}
         </DropdownList>
       </View>

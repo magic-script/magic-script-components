@@ -17,7 +17,7 @@ The LinearLayout component automatically lays out multiple elements in a horizon
 import React from "react";
 import { View, LinearLayout, Text } from "magic-script-components";
 
-export default class MyApp extends React.Component {
+export class ExampleLinearLayout extends React.Component {
   render() {
     const moons = [
       "Europa",
@@ -36,39 +36,11 @@ export default class MyApp extends React.Component {
         <LinearLayout
           defaultItemAlignment="center-left"
           defaultItemPadding={[0.01, 0.01, 0.01, 0.01]}
-          localPosition={[-0.25, 0.25, 0]}
+          localPosition={[-0.1, 0.25, 0]}
         >
           {moons.map((moon, index) => (
             <Text textSize={0.05} key={index} text={moon} />
           ))}
-        </LinearLayout>
-      </View>
-    );
-  }
-}
-```
-
-```javascript
-import React from "react";
-import { GridLayout, LinearLayout, Text, View } from "magic-script-components";
-
-export default class MyApp extends React.Component {
-  render() {
-    return (
-      // padding: [top, right, bottom, left]
-      <View name="main-view">
-        <LinearLayout localPosition={[-0.5, 0.5, 0]} width={0.5} height={0.8}
-          itemPadding={[
-            {index: 0, padding: [0, 0, 0, 0   ]},
-            {index: 1, padding: [0, 0, 0, 0.05]},
-            {index: 2, padding: [0, 0, 0, 0.1 ]},
-            {index: 3, padding: [0, 0, 0, 0.15]}
-          ]}
-        >
-          <Text textSize={0.1 } text='Ganymede'/>
-          <Text textSize={0.03} text='Io' />
-          <Text textSize={0.08} text='Mira' />
-          <Text textSize={0.06} text='Europa' />
         </LinearLayout>
       </View>
     );
