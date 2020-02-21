@@ -3,6 +3,10 @@ id: scrollView
 title: ScrollView
 ---
 
+import PlatformTabs from '@theme/PlatformTabs';
+
+<PlatformTabs component='scrollview' />​
+
 ## Description
 
 The ScrollView component represents a scrollable content view so objects, such as images or text, can overflow the viewable area. The ScrollView creates a 3D box that you specify a minimum and maximum corner that contains all of your content. The scroll bounds sets the viewable area (AABB) of the 3D box. Content outside the scroll bounds is clipped. You can scroll horizontally, vertically, or both. When scrolling, the cursor snaps to contents of the scroll view when gravity wells and snap are enabled.
@@ -63,9 +67,11 @@ export default class MyApp extends React.Component {
     return (
       <View name="main-view">
         <Text
+          alignment="center-center"
           text="Phonetic Alphabet"
+          textAlignment="center"
           textSize={0.07}
-          localPosition={[-0.15, 0.4, 0]}
+          localPosition={[0, 0.4, 0]}
         />
         <ScrollView scrollBarVisibility="always" scrollBounds={aabb}>
           <ScrollBar length={0.6} thumbSize={0.03} orientation="vertical" />
@@ -101,15 +107,15 @@ export default class MyApp extends React.Component {
 
 ## Element Properties
 
-| Name                | Type     | Description                                                                                                                                                                                                                             |
-| :------------------ | :------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| scrollBarVisibility | string   | Sets the visibility mode of any attached scrollbars. The visibility mode affects the visibility of any attached scroll bars.                                                                                                            |
-| scrollDirection     | string   | Sets the scroll direction for the scroll view. The default is vertical.                                                                                                                                                                 |
-| scrollMask          | number   | Applies the texture resource as a mask for ScrollView content.                                                                                                                                                                          |
-| scrollOffset        | vec3     | Sets the scroll content offset manually.                                                                                                                                                                                                |
-| scrollSpeed         | number   | Sets the scroll speed in scene units per second.                                                                                                                                                                                        |
-| scrollValue         | number   | Sets the scroll content position manually with a normalized value between 0 and 1.                                                                                                                                                      |
-| scrollBounds        | _object_ | Sets the scroll bounds. The bounds are defined within the ScrollView's local coordinate system. The scroll bounds is used to both clip content visually and to automatically clamp content scrolling extents to stay within the bounds. |
+| Name                | Type     | Default Value | Description                                                                                                                                                                                                                             |
+| :------------------ | :------- | :-----------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| scrollBarVisibility | string   |    `auto`     | Sets the visibility mode of any attached scrollbars. The visibility mode affects the visibility of any attached scroll bars.                                                                                                            |
+| scrollDirection     | string   |  `vertical`   | Sets the scroll direction for the scroll view. The default is vertical.                                                                                                                                                                 |
+| scrollMask          | number   |      n/a      | Applies the texture resource as a mask for ScrollView content.                                                                                                                                                                          |
+| scrollOffset        | vec3     |      n/a      | Sets the scroll content offset manually.                                                                                                                                                                                                |
+| scrollSpeed         | number   |     `0.1`     | Sets the scroll speed in scene units per second.                                                                                                                                                                                        |
+| scrollValue         | number   |      `0`      | Sets the scroll content position manually with a normalized value between 0 and 1.                                                                                                                                                      |
+| scrollBounds        | _object_ |      n/a      | Sets the scroll bounds. The bounds are defined within the ScrollView's local coordinate system. The scroll bounds is used to both clip content visually and to automatically clamp content scrolling extents to stay within the bounds. |
 
 ### scrollBounds
 
@@ -123,3 +129,6 @@ export default class MyApp extends React.Component {
 ### scrollBarVisibility options: [ScrollBarVisibility](../types/ScrollBarVisibility.md)
 
 ### ScrollDirection options: [ScrollDirection](../types/ScrollDirection.md)
+
+## Investigate before release:
+scrollBarVisibility, scrollMask, scrollOffset,scrollSpeed,scrollValue is not implemented in Android

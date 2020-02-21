@@ -3,6 +3,10 @@ id: dropdownListItem
 title: DropdownListItem
 ---
 
+import PlatformTabs from '@theme/PlatformTabs';
+
+<PlatformTabs component='dropdownlistitem' />​
+
 ## Description
 
 Structure containing information about each item in a drop-down list.
@@ -31,14 +35,14 @@ export default class MyApp extends React.Component {
     ];
 
     return (
-      <View name="main-view">
+      <View name="main-view" localPosition={this.props.localPosition}>
         <DropdownList
           text="Select Moon"
           iconColor={[0.5, 1.0, 0.5, 0.8]}
           onSelectionChanged={this.onSelection}
         >
           {moons.map((moon, index) => (
-            <DropdownListItem id={index} label={moon} />
+            <DropdownListItem key={moon} id={index} label={moon} />
           ))}
         </DropdownList>
       </View>
@@ -53,13 +57,13 @@ export default class MyApp extends React.Component {
 
 ## Create Properties
 
-| Name  | Type   | Default Value | Description                                                                                                                                               |
-| ----- | ------ | :-----------: | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| id    | number |       0       | A unique ID used per drop-down list item. If the ID is not unique, the list item that occurs first is used when a list item with the same ID is selected. |
-| label | string |      n/a      | The text used for the drop-down list item.                                                                                                                |
+| Name  | Type   | Default Value  | Required | Description                                                                                                                                               |
+| ----- | ------ | :------------: | :------: | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| id    | number |       0        |    N     | A unique ID used per drop-down list item. If the ID is not unique, the list item that occurs first is used when a list item with the same ID is selected. |
+| label | string | `empty string` |    N     | The text used for the drop-down list item.                                                                                                                |
 
 ## Element Properties
 
-| Name     | Type    | Description                           |
-| -------- | ------- | ------------------------------------- |
-| selected | boolean | Sets the selected state of this item. |
+| Name     | Type    | Default Value | Description                           |
+| -------- | ------- | :-----------: | ------------------------------------- |
+| selected | boolean |     false     | Sets the selected state of this item. |
