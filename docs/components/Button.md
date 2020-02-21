@@ -49,14 +49,14 @@ export default class MyApp extends React.Component {
 // magic-script-components-react-native: 1.0.1
 ```
 
-import ExpandableSection from '@theme/ExpandableSection';
+<!-- import ExpandableSection from '@theme/ExpandableSection'; -->
 
 
-<ExpandableSection title="Common Events">
+<!-- <ExpandableSection title="Common Events"> -->
 
 <div>
 
-<!-- ## Common Events: -->
+## Common Events:
 
 - onActivate
 - onPressed
@@ -77,10 +77,10 @@ import ExpandableSection from '@theme/ExpandableSection';
 
 </div>
 
-</ExpandableSection>
+<!-- </ExpandableSection> -->
 
 
-<ExpandableSection title='Common Properties' path='content/Properties.md' />
+<!-- <ExpandableSection title='Common Properties' path='content/Properties.md' /> -->
 ​
 
 ​
