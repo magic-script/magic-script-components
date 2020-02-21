@@ -73,16 +73,16 @@ export default class MyApp extends React.Component {
 
 ## Element Properties
 
-| Name                  | Type     | Default Value | Description                                                                                                                                                                                                                                |
-| :-------------------- | :------- | :-----------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| cursorConstrained     | boolean  |               | Sets whether the panel constrains cursor movement within the boundary shape or not.                                                                                                                                                        |
-| cursorInitialPosition | vec3     |               | Sets the initial position of the cursor within the panel upon a Panel-to-Panel transition when PanelCursorTransitionType 'initial-position' is in affect.                                                                                  |
-| cursorTransitionType  | string   |               | Sets the cursor transition type for the panel. The cursor transition type dictates where the cursor appears upon a panel transition, such as the closest edge, center, or initial position. The default is the initial position.           |
-| cursorVisible         | boolean  |               | Sets whether the cursor is visible while inside the `<Panel>`.                                                                                                                                                                             |
-| edgeConstraint        | _object_ |      n/a      | Sets the edge constraint and panel transition properties for a side of the panel shape.                                                                                                                                                    |
+| Name                  | Type     | Default Value | Description |
+| :-------------------- | :------- | :-----------: | ----------- |
+| cursorConstrained     | boolean  |     false     | Sets whether the panel constrains cursor movement within the boundary shape or not. |
+| cursorInitialPosition | vec3     |    (0,0,0)    | Sets the initial position of the cursor within the panel upon a Panel-to-Panel transition when PanelCursorTransitionType 'initial-position' is in affect. |
+| cursorTransitionType  | string   | initial-position | Sets the cursor transition type for the panel. The cursor transition type dictates where the cursor appears upon a panel transition, such as the closest edge, center, or initial position. The default is the initial position. |
+| cursorVisible         | boolean  |      true     | Sets whether the cursor is visible while inside the `<Panel>`. |
+| edgeConstraint        | _object_ |      n/a      | Sets the edge constraint and panel transition properties for a side of the panel shape.  |
 | edgeConstraintLevel   | _object_ |      n/a      | Sets the edge constraint for a side of the panel shape using a discrete constraint level. Panel edge constraint levels are mapped to a float magnitude and can be used for a consistent setting instead of setting the magnitude manually. |
-| panelShape            | _object_ |      n/a      | Sets the boundary shape for the panel. The panel is not active until the shape is set.                                                                                                                                                     |
-| side                  | string   |               | Sets the side of the boundary shape.                                                                                                                                                                                                       |
+| panelShape            | _object_ |      n/a      | Sets the boundary shape for the panel. The panel is not active until the shape is set.  |
+| side                  | string   |      n/a      | Sets the side of the boundary shape.  |
 
 ### edgeConstraint
 

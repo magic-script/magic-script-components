@@ -51,14 +51,14 @@ export default class MyApp extends React.Component {
 
 ## Element Properties
 
-| Name                   | Type     | Default Value | Description                                                                                                                                                                                          |
-| ---------------------- | -------- | :-----------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| animationPauseState    | boolean  |               | Sets the animation pause state for the current model node.                                                                                                                                           |
-| animationPlaybackSpeed | number   |               | Sets the playback speed for animations.                                                                                                                                                              |
-| animationTime          | number   |               | Sets the current time of the animation.                                                                                                                                                              |
-| modelResourceId        | number   |               | Sets the ID of the resource this node draws. The ID refers to a _ModelResource_.                                                                                                                     |
-| animation              | _object_ |               | Sets the current animation by `resource` + `name`. Some animation resources contain multiple animations. These are addressed by animation name. FBX models, for example, may contain 1-n animations. |
-| texture                | _object_ |               | Sets the texture of a given material by the new texture ID. Material should be the one applied to the Model Node.                                                                                    |
+| Name                   | Type     | Default Value | Description |
+| ---------------------- | -------- | :-----------: | ----------------------------------------------------------------------------------------------------------------------------------- |
+| animationPauseState    | boolean  |     false     | Sets the animation pause state for the current model node. |
+| animationPlaybackSpeed | number   |      n/a      | Sets the playback speed for animations. |
+| animationTime          | number   |      n/a      | Sets the current time of the animation. |
+| modelResourceId        | number   |      n/a      | Sets the ID of the resource this node draws. The ID refers to a _ModelResource_. |
+| animation              | _object_ |      n/a      | Sets the current animation by `resource` + `name`. Some animation resources contain multiple animations. These are addressed by animation name. FBX models, for example, may contain 1-n animations. |
+| texture                | _object_ |      n/a      | Sets the texture of a given material by the new texture ID. Material should be the one applied to the Model Node. |
 
 ### animation
 

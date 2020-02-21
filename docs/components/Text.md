@@ -48,19 +48,19 @@ If `text` is empty, the content of the `<text>` tag will be used as text.
 
 ## Element Properties
 
-| Name           | Type     | Default Value | Description                                                                                                                                                                                                                                                                        |
-| :------------- | :------- | :-----------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| allCaps        | boolean  |      n/a      | Displays the text in all caps if `true`.                                                                                                                                                                                                                                           |
-| charSpacing    | number   |      `0`      | Sets the additional character spacing that is applied between characters. Note a spacing of `0` is the default spacing.                                                                                                                                                            |
-| lineSpacing    | number   |     `1.0`     | Sets the line spacing to adjust the distance between lines of text; e.g., use 1 for single-spaced text, 2 for double-spaced text. The default is 1.0.                                                                                                                              |
-| style          | string   |               | Sets the style of the Magic Leap font.                                                                                                                                                                                                                                             |
-| weight         | string   |               | Sets the weight (i.e., thickness) of the Magic Leap font.                                                                                                                                                                                                                          |
-| text           | string   |               | Sets the UTF-8 encoded text. This call is ignored if there is a current localization key set. Set the localization key to an empty string, "", to unset it.                                                                                                                        |
-| textAlignment  | string   |               | Aligns the text to the left, center, or right or justifies it.                                                                                                                                                                                                                     |
-| textColor      | verc4    |               | Sets the RGBA color of the rendered text.                                                                                                                                                                                                                                          |
-| textSize       | number   |               | Sets the text render size height in scene units.                                                                                                                                                                                                                                   |
+| Name           | Type     | Default Value | Description |
+| :------------- | :------- | :-----------: | ----------- |
+| allCaps        | boolean  |      n/a      | Displays the text in all caps if `true`.  |
+| charSpacing    | number   |      `0`      | Sets the additional character spacing that is applied between characters. |
+| lineSpacing    | number   |     `1.0`     | Sets the line spacing to adjust the distance between lines of text; e.g., use 1 for single-spaced text, 2 for double-spaced text. |
+| style          | string   |    `normal`   | Sets the style of the Magic Leap font.  |
+| weight         | string   |    `regular`    | Sets the weight (i.e., thickness) of the Magic Leap font.  |
+| text           | string   |        n/a       | Sets the UTF-8 encoded text. This call is ignored if there is a current localization key set. Set the localization key to an empty string, "", to unset it.  |
+| textAlignment  | string   |      `left`         | Aligns the text to the left, center, or right or justifies it.  |
+| textColor      | verc4    |      `white`         | Sets the RGBA color of the rendered text.  |
+| textSize       | number   |       n/a        | Sets the text render size height in scene units.  |
 | boundsSize     | _object_ |     `0,0`     | Sets the text bounds size in scene units. The default value of `0,0` indicates there is no bounds and the text can grow and does not wrap or truncate. Setting the bounds greater than `0` in both X and Y will set the text bounds and cause the text to wrap or truncate within. |
-| fontParameters | _object_ |               | Sets the font parameters, including style, weight, pixel size, and tracking. This uses one of the default sets of Magic Leap font resources that support style and weight.                                                                                                         |
+| fontParameters | _object_ |         n/a      | Sets the font parameters, including style, weight, pixel size, and tracking. This uses one of the default sets of Magic Leap font resources that support style and weight.  |
 
 ### boundsSize
 
