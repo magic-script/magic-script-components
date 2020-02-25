@@ -38,8 +38,8 @@ export default class MyApp extends React.Component {
             <View>
                 <CircleConfirmation
                     onConfirmationCanceled={this.onConfirmationCanceled}
-                    onConfirmationComplete={this.onConfirmationComplete}
-                    onConfirmationUpdate={this.onConfirmationUpdate}
+                    onConfirmationCompleted={this.onConfirmationComplete}
+                    onConfirmationUpdated={this.onConfirmationUpdate}
                     radius={0.2}
                 ></CircleConfirmation>
             </View>
