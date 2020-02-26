@@ -3,6 +3,10 @@ id: toggle
 title: Toggle
 ---
 
+import PlatformTabs from '@theme/PlatformTabs';
+
+<PlatformTabs component='toggle' />​
+
 ## Description
 
 Toggle creates a two option, toggleable element. Toggles are generally used in app menus or as action buttons. Toggles can be grouped together and depend on the state of a parent toggle. If the parent toggle is off, the descendent toggles are usually disabled.

@@ -3,6 +3,10 @@ id: tab
 title: Tab
 ---
 
+import PlatformTabs from '@theme/PlatformTabs';
+
+<PlatformTabs component='tab' />​
+
 ## Description
 
 The tab component allows you to change a content view using button controls. You can organize an extensive amount of data in a compact form. Only one tab can be active at a time, and the active tab can be scrollable.
