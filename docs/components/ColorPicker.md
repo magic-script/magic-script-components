@@ -70,7 +70,3 @@ export default class MyApp extends React.Component {
 | onColorChanged   | `Color: string` | Notifiy when color in picker has changed |
 | onColorConfirmed | `Color: string` | Notify when user confirm selected color  |
 | onColorCanceled  | `Color: string` | Notify when user cancel selected color   |
-
-## Investigate before release:
-- should we add events?
-- onColorConfirmed couse crash on lumin

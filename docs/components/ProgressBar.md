@@ -66,6 +66,3 @@ export default class MyApp extends React.Component {
     endColor: <vec4>
 }
 ```
-
-## Investigate before release:
-Android default width=0.5, height=0.004

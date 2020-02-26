@@ -129,6 +129,3 @@ export default class MyApp extends React.Component {
 ### scrollBarVisibility options: [ScrollBarVisibility](../types/ScrollBarVisibility.md)
 
 ### ScrollDirection options: [ScrollDirection](../types/ScrollDirection.md)
-
-## Investigate before release:
-scrollBarVisibility, scrollMask, scrollOffset,scrollSpeed,scrollValue is not implemented in Android
