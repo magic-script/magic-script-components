@@ -96,10 +96,26 @@ export default class MyApp extends React.Component {
 ​
 ## Element Properties
 
-| Name      | Type   |      Default Value       | Description                               |
-| :-------- | :----- | :----------------------: | ----------------------------------------- |
-| iconColor | vec4   | [0.75, 0.75, 0.75, 1.00] | Sets the RGBA color of the button icon.   |
-| iconSize  | vec2   |       [0.04, 0.04]       | Sets the button icon size in scene units. |
-| text      | string |           n/a            | Sets the UTF-8 encoded button text.       |
-| textColor | vec4   | [0.75, 0.75, 0.75, 1.00] | Sets the RGBA color of the button text.   |
-| textSize  | number |          0.0167          | Sets the text size.                       |
+| Name       | Type   |      Default Value       | Description                                                              |
+| :--------- | :----- | :----------------------: | ------------------------------------------------------------------------ |
+| iconColor  | vec4   | [0.75, 0.75, 0.75, 1.00] | Sets the RGBA color of the button icon.                                  |
+| iconSize   | vec2   |       [0.04, 0.04]       | Sets the button icon size in scene units.                                |
+| text       | string |           n/a            | Sets the UTF-8 encoded button text.                                      |
+| textColor  | vec4   | [0.75, 0.75, 0.75, 1.00] | Sets the RGBA color of the button text.                                  |
+| textSize   | number |          0.0167          | Sets the text size.                                                      |
+| buttonType | string |           n/a            | Sets the type of button                                                  |
+| labelSide  | string |           n/a            | Sets the position of label when `buttonType` is set to `icon-with-label` |
+
+### buttonType
+| Name            | Description                                  |
+| :-------------- | -------------------------------------------- |
+| icon            | shows only icon                              |
+| icon-with-label | shows icon and additional label when focused |
+| text            | shows only text                              |
+| text-with-icon  | shows text with icon                         |
+
+### labelSide
+ - left
+ - top
+ - right
+ - bottom
