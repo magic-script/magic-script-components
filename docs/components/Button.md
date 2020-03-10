@@ -30,14 +30,31 @@ export default class MyApp extends React.Component {
     return (
       <View>
         <Button
+          localPosition={[0, 0.25, 0]}
           height={0.1}
           onClick={this.buttonClickHandler}
-          roundness={0.7}
+          roundness={0}
           textSize={0.05}
           width={0.3}
-        >
-          Click Me
-                </Button>
+        >Square</Button>
+
+        <Button
+          height={0.1}
+          onClick={this.buttonClickHandler}
+          roundness={1}
+          textSize={0.05}
+          width={0.3}
+        >Rounded</Button>
+
+        <Button
+          localPosition={[0, -0.25, 0]}
+          height={0.1}
+          onClick={this.buttonClickHandler}
+          roundness={0.5}
+          textColor={"yellow"}
+          textSize={0.05}
+          width={0.3}
+        >Yellow</Button>
       </View>
     );
   }
