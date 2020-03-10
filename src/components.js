@@ -178,3 +178,13 @@ export function Line (props) {
     // return (<line {...props} />);
     return React.createElement('line', props);
 }
+
+export function Prism (props) {
+    // return (<prism {...props} />);
+    return React.createElement('prism', props);
+}
+
+export function Scene (props) {
+    // return (<scene {...props} />);
+    return React.createElement('scene', props);
+}
