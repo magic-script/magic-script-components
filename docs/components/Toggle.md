@@ -51,7 +51,7 @@ export default class MyApp extends React.Component {
 | Name   | Type   | Default Value | Required | Description                                                                                                     |
 | ------ | ------ | :-----------: | :------: | --------------------------------------------------------------------------------------------------------------- |
 | text   | string |      n/a      |    N     | The UTF-8 encoded text to initially set the Toggle label to.                                                    |
-| type   | string |     `top`     |    N     | The location of the toggle label. Only placing the label to top and left of the toggle are currently supported. |
+| type   | string |     `default` |    N     | The type of the toggle, can be either `default`, `radio` or `checkbox`. The `default` stands for switch type.   |
 | height | string |      0.0      |    N     | The height of the toggle, 0 for default.                                                                        |
 
 ## Element Properties
