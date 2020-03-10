@@ -3,6 +3,10 @@ id: toggle
 title: Toggle
 ---
 
+import PlatformTabs from '@theme/PlatformTabs';
+
+<PlatformTabs component='toggle' />​
+
 ## Description
 
 Toggle creates a two option, toggleable element. Toggles are generally used in app menus or as action buttons. Toggles can be grouped together and depend on the state of a parent toggle. If the parent toggle is off, the descendent toggles are usually disabled.
@@ -11,31 +15,39 @@ Toggle creates a two option, toggleable element. Toggles are generally used in a
 
 ```javascript
 import React from "react";
-import { View, PageView, Content, Text, Toggle } from "magic-script-components";
+import { View, Toggle } from "magic-script-components";
 
 export default class MyApp extends React.Component {
-  state = { pageIndex: 0 };
-
   onSwitchHandler = eventData => {
-    this.setState({ pageIndex: eventData.On ? 1 : 0 });
   };
 
   render() {
     return (
       <View name="main-view">
         <Toggle
-          localPosition={[0.1, -0.25, 0]}
-          text="Switch Page"
+          localPosition={[0, 0.1, 0]}
+          text="Switch"
+          type="default"
+          height={0.05}
+          textSize={0.05}
           onToggleChanged={this.onSwitchHandler}
         />
-        <PageView alignment="center-center" name="page-view" visiblePage={this.state.pageIndex}>
-          <Content name="page-0">
-            <Text textSize={0.1}>Page One</Text>
-          </Content>
-          <Content name="page-1">
-            <Text textSize={0.1}>Page Two</Text>
-          </Content>
-        </PageView>
+        <Toggle
+          localPosition={[0, 0, 0]}
+          text="Radio"
+          type="radio"
+          height={0.08}
+          textSize={0.05}
+          onToggleChanged={this.onSwitchHandler}
+        />
+        <Toggle
+          localPosition={[0, -0.1, 0]}
+          text="Checkbox"
+          type="checkbox"
+          height={0.05}
+          textSize={0.05}
+          onToggleChanged={this.onSwitchHandler}
+        />
       </View>
     );
   }
