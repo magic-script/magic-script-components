@@ -17,7 +17,7 @@ This is the base component of any static text element placed in your prism. Thes
 import React from 'react';
 import { Text, View, Image } from 'magic-script-components';
 
-export class MyApp extends React.Component {
+export default class MyApp extends React.Component {
   render() {
     return (
       <View localPosition={[-0.31, 0, 0]}>
