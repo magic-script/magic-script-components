@@ -41,8 +41,8 @@ export default class MyApp extends React.Component {
 
 | Name   | Type   | Default Value | Required | Description               |
 | ------ | ------ | :-----------: | :------: | ------------------------- |
-| width  | number |      `0`      |    N     | The width of the WebView. |
-| height | number |      `0`      |    N     | the width of the WebView. |
+| width  | number |      n/a      |    Y     | The width of the WebView. Must be greater than `0` |
+| height | number |      n/a      |    Y     | the width of the WebView. Must be greater than `0` |
 
 ## Element Properties
 
