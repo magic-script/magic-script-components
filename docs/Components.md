@@ -26,7 +26,7 @@ Order | Component | Lumin RT<br/>native component | Lumin OS | iOS | Android | T
 17 | [Model](components/Model.md) | ModelNode |  👍 |  👍 |  👍 | [link](https://github.com/magic-script/magic-script-components-react-native/tree/master/docs/coverage/Model.md)
 18 | [PageView](components/PageView.md) | UiPageView |  👍 |  👍 |  👍 | [link](https://github.com/magic-script/magic-script-components-react-native/tree/master/docs/coverage/PageView.md)
 19 | [Panel](components/Panel.md) | UiPanel |  👍 |  👍 |  👍 | [link](https://github.com/magic-script/magic-script-components-react-native/tree/master/docs/coverage/Panel.md)
-20 | [PortalIcon](components/PortalIcon.md) | UiPortalIcon |  👍 |  👍 |  👍 | 
+20 | [PortalIcon](components/PortalIcon.md) | UiPortalIcon |  👍 |    |    | 
 21 | [ProgressBar](components/ProgressBar.md) | UiProgressBar |  👍 |  👍 |  👍 | [link](https://github.com/magic-script/magic-script-components-react-native/tree/master/docs/coverage/ProgressBar.md)
 22 | [Quad](components/Quad.md) | QuadNode |  👍 |  
 23 | [RectLayout](components/RectLayout.md) | UiRectLayout |  👍 |  👍 |  👍 | [link](https://github.com/magic-script/magic-script-components-react-native/tree/master/docs/coverage/RectLayout.md)
