@@ -5,6 +5,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+const versions = require('./versions.json');
+
 module.exports = {
   title: "MagicScript Components",
   tagline:
@@ -22,6 +24,18 @@ module.exports = {
         src: "img/magicscript.svg"
       },
       links: [
+        {
+          to: 'versions',
+          label: `Versions`,
+          position: 'left',
+          style: {
+            whiteSpace: 'nowrap',
+            padding: '0.25rem 0.5rem 0.2rem 0.25rem',
+            fontSize: 'calc(0.9 * var(--ifm-font-size-base))',
+            fontColor: 'black',
+            textDecoration: 'underline',
+          },
+        },
         { to: "docs/installation", label: "Docs", position: "left" },
         { to: "docs/components", label: "API", position: "left" },
         {
@@ -49,7 +63,7 @@ module.exports = {
     },
     algolia: {
       apiKey: "4a2801e1f42c5488e5db0eb1ed45b5ba",
-      indexName: "magicscript_components"
+      indexName: "magicscript_components",
     }
   },
   presets: [
@@ -58,7 +72,7 @@ module.exports = {
       {
         docs: {
           path: "../docs",
-          sidebarPath: require.resolve("./sidebars.js")
+          sidebarPath: require.resolve("./sidebars.js"),
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css")

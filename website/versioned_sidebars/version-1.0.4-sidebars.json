@@ -1,0 +1,326 @@
+{
+  "version-1.0.4/docs": [
+    {
+      "type": "category",
+      "label": "Getting Started",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-1.0.4/installation"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/example"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/platform"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Reference",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-1.0.4/components"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Components",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-1.0.4/components/audio"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/components/button"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/components/circleConfirmation"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/components/colorPicker"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/components/content"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/components/datePicker"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/components/dialog"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/components/dropdownList"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/components/dropdownListItem"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/components/gridLayout"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/components/image"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/components/light"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/components/line"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/components/linearLayout"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/components/listView"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/components/listViewItem"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/components/model"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/components/pageView"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/components/panel"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/components/portalIcon"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/components/progressBar"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/components/quad"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/components/rectLayout"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/components/scrollBar"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/components/scrollView"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/components/slider"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/components/spinner"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/components/tab"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/components/text"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/components/textEdit"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/components/timePicker"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/components/toggle"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/components/toggleGroup"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/components/video"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/components/view"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/components/webView"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Types",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-1.0.4/types/advanceDirection"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/types/alignment"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/types/buttonType"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/types/cursorEdgeScrollMode"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/types/cursorHoverState"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/types/dialogLayout"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/types/dialogType"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/types/eclipseLabelType"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/types/flowDirection"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/types/fontStyle"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/types/fontWeight"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/types/horizontalTextAlignment"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/types/iconType"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/types/labelDisplayMode"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/types/lightType"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/types/loadingSpinnerType"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/types/orientation"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/types/panelCursorTransitionType"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/types/panelEdgeConstraintLevel"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/types/portalIconSize"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/types/properties"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/types/quality"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/types/scrollBarVisibility"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/types/scrollDirection"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/types/side"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/types/textEntryMode"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/types/textureType"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/types/toggleType"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/types/viewMode"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/types/webViewAction"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Events",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-1.0.4/events/commonEvents"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/events/componentEvents"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.0.4/events/eventDataTypes"
+        }
+      ]
+    }
+  ]
+}
