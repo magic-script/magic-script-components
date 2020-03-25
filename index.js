@@ -42,3 +42,5 @@ export {
 export { Platform } from './src/platform';
 
 export { PlaneDetector } from './src/plane-detector';
+
+export { XrClientProvider } from './src/xr-client-provider';
