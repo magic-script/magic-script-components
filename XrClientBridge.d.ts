@@ -1,4 +1,4 @@
-declare module "magic-script-components" {
+declare module 'magic-script-components' {
 
   export class XrClientProvider {
     static getXrClient(): XrClientBridge;
@@ -35,35 +35,42 @@ declare module "magic-script-components" {
     getAllPCFs: () => Promise<PcfData[]>;
 
     /**
+     * Returns the current XR session status
+     *
+     * @return async session status
+     */
+    getSessionStatus: () => Promise<SessionStatus>;
+
+    /**
      * Returns the current localization status
      *
      * @return async localization status
      */
-    getLocalizationStatus: () => Promise<string>;
+    getLocalizationStatus: () => Promise<LocalizationStatus>;
 
     /**
      * Creates an anchor that can be used to position AR content
      *
      * @param anchorId The unique identifier for this anchor
      * @param position The position of this anchor
-     * @return async status string
+     * @return true if successful
      */
-    createAnchor: (anchorId: string, position: Pose) => Promise<string>;
+    createAnchor: (anchorId: string, position: Pose) => Promise<boolean>;
 
     /**
      * Removes the anchor with the given ID.
      *
      * @param anchorId The unique identifier for the anchor to remove
-     * @return async status string
+     * @return true if successful
      */
-    removeAnchor: (anchorId: string) => Promise<string>;
+    removeAnchor: (anchorId: string) => Promise<boolean>;
 
     /**
      * Removes all anchors from the scene (that were created via createAnchor)
      *
-     * @return async status string
+     * @return true if successful
      */
-    removeAllAnchors: () => Promise<string>;
+    removeAllAnchors: () => Promise<boolean>;
   }
 
   /**
@@ -122,4 +129,20 @@ declare module "magic-script-components" {
     number, number, number, number
   ];
 
+  /**
+   * Union of all possible connection status strings.
+   */
+  export type SessionStatus =
+  | 'connecting'
+  | 'connected'
+  | 'disconnected';
+
+  /**
+   * Union of all possible localization status strings.
+   */
+  export type LocalizationStatus =
+  | 'awaitingLocation'
+  | 'scanningLocation'
+  | 'localized'
+  | 'localizationFailed';
 }
