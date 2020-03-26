@@ -15,17 +15,9 @@ declare module 'magic-script-components' {
      * This must be called before any other method.
      *
      * @param token The auth token obtained via Magic Leap OAuth login
-     * @return async status string
+     * @return async session status
      */
-    connect: (token: string) => Promise<string>;
-
-    /**
-     * Sets the update interval for PCF polling
-     *
-     * @param interval The update interval in milliseconds
-     * @return async status string
-     */
-    setUpdateInterval: (interval: number) => Promise<string>;
+    connect: (token: string) => Promise<SessionStatus>;
 
     /**
      * Polls for list of all PCFs
