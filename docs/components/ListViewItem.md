@@ -68,3 +68,6 @@ export default class MyApp extends React.Component {
 | Name            | Type | Default Value | Description                |
 | --------------- | ---- | :-----------: | -------------------------- |
 | backgroundColor | vec4 |      n/a      | Sets the background color. |
+
+### Known issues
+[[ListViewItem] Behaves differently depend on the platform](https://github.com/magic-script/magic-script-components/issues/278)
