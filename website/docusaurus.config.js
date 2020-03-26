@@ -36,7 +36,7 @@ module.exports = {
             textDecoration: 'underline',
           },
         },
-        { to: "docs/installation", label: "Docs", position: "left" },
+        { to: "docs/installation", label: "Docs", position: "left", activeBasePath: 'docs',},
         { to: "docs/components", label: "API", position: "left" },
         {
           href: "https://www.magicscript.org/",
