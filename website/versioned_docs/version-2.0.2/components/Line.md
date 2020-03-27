@@ -3,10 +3,6 @@ id: line
 title: Line
 ---
 
-import PlatformTabs from '@theme/PlatformTabs';
-
-<PlatformTabs component='line' />​
-
 ## Description
 
 The Line component renders a colored line. The Line component creates lines as a series of line segments. Line follows the order in which the points are added, and must have at least two points. Line color is a multiplier to the vertex color. Create disconnected lines by adding line breaks to the Line.
@@ -37,12 +33,12 @@ export default class MyApp extends React.Component {
 }
 ```
 
-## [Common Events](../events/CommonEvents.md)
+## [Common Events](../types/Events.md)
 
 ## [Common Properties](../types/Properties.md)
 
 ## Element Properties
 
-| Name   | Type   | Default Value | Description                                                                                                                                                               |
-| :----- | :----- | :-----------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| points | [vec3] |      n/a      | Sets the points that describe this series of line segments. The line follows the order in which the points are added. No line can exist if there is less than two points. |
+| Name   | Type   | Description                                                                                                                                                               |
+| :----- | :----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| points | [vec3] | Sets the points that describe this series of line segments. The line follows the order in which the points are added. No line can exist if there is less than two points. |

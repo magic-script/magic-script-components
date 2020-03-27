@@ -3,10 +3,6 @@ id: toggleGroup
 title: ToggleGroup
 ---
 
-import PlatformTabs from '@theme/PlatformTabs';
-
-<PlatformTabs component='togglegroup' />​
-
 ## Description
 
 ToggleGroup represents a group of standard, clickable toggles.
@@ -16,7 +12,6 @@ ToggleGroup represents a group of standard, clickable toggles.
 ```javascript
 import React from "react";
 import { GridLayout, LinearLayout, ToggleGroup, Toggle } from "magic-script-components";
-
 export default class MyApp extends React.Component {
   onChangedHandler = (eventData, message) => {
     console.log(`Toggle: ${message}`);
@@ -81,23 +76,24 @@ export default class MyApp extends React.Component {
     );
   }
 }
+
 ```
 
-## [Common Events](../events/CommonEvents.md)
+## [Common Events](../types/Events.md)
 
 ## [Common Properties](../types/Properties.md)
 
 ## Create Properties
 
-| Name            | Type    | Default Value | Required | Description                                     |
-| --------------- | ------- | :-----------: | :------: | ----------------------------------------------- |
-| allowMultipleOn | boolean |    `false`    |    N     | The default does not allow multiple toggles ON. |
-| allowAllOff     | boolean |    `false`    |    N     | The default does not allow all toggles OFF.     |
+| Name            | Type    | Default Value | Description                                     |
+| --------------- | ------- | :-----------: | ----------------------------------------------- |
+| allowMultipleOn | boolean |    `false`    | The default does not allow multiple toggles ON. |
+| allowAllOff     | boolean |    `false`    | The default does not allow all toggles OFF.     |
 
 ## Element Properties
 
-| Name            | Type    | Default Value | Description                                                                            |
-| :-------------- | :------ | :-----------: | -------------------------------------------------------------------------------------- |
-| allowMultipleOn | boolean |    `false`    | Flags whether multiple toggles can be switched ON in the toggle group.                 |
-| allowAllOff     | boolean |    `false`    | Flags whether all toggles can be switched OFF in the toggle group.                     |
-| allTogglesOff   | boolean |    `false`    | Switches all toggles OFF regardless of whether all toggles can be switched off or not. |
+| Name            | Type    | Description                                                                            |
+| :-------------- | :------ | -------------------------------------------------------------------------------------- |
+| allowMultipleOn | boolean | Flags whether multiple toggles can be switched ON in the toggle group.                 |
+| allowAllOff     | boolean | Flags whether all toggles can be switched OFF in the toggle group.                     |
+| allTogglesOff   | boolean | Switches all toggles OFF regardless of whether all toggles can be switched off or not. |

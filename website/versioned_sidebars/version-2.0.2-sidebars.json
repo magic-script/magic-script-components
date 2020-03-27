@@ -11,10 +11,6 @@
         {
           "type": "doc",
           "id": "version-2.0.2/example"
-        },
-        {
-          "type": "doc",
-          "id": "version-2.0.2/platform"
         }
       ]
     },
@@ -216,6 +212,10 @@
         },
         {
           "type": "doc",
+          "id": "version-2.0.2/types/events"
+        },
+        {
+          "type": "doc",
           "id": "version-2.0.2/types/flowDirection"
         },
         {
@@ -301,24 +301,6 @@
         {
           "type": "doc",
           "id": "version-2.0.2/types/webViewAction"
-        }
-      ]
-    },
-    {
-      "type": "category",
-      "label": "Events",
-      "items": [
-        {
-          "type": "doc",
-          "id": "version-2.0.2/events/commonEvents"
-        },
-        {
-          "type": "doc",
-          "id": "version-2.0.2/events/componentEvents"
-        },
-        {
-          "type": "doc",
-          "id": "version-2.0.2/events/eventDataTypes"
         }
       ]
     }

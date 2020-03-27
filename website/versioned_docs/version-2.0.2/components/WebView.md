@@ -18,38 +18,39 @@ WebView renders HTML, CSS, and JavaScript content in a prism. When you enable we
 
 ```javascript
 import React from "react";
-import { View, WebView, Text } from "magic-script-components";
 
+import { View, WebView, Text } from "magic-script-components";
 export default class MyApp extends React.Component {
 
   render() {
 
     return (
       <View name='main-view' >
-        <WebView localPosition={[0, -0.2, 0]} width={1} height={0.8} url={'http://google.com'}/>
+        <Text text='WebView' textSize={0.05} localPosition={[0, 0.45, 0]} />
+        <WebView localPosition={[-0.4, 0.4, 0]} width={0.8} height={0.8} url={'http://google.com'}/>
       </View>
     );
   }
 }
 ```
 
-## [Common Events](../events/CommonEvents.md)
+## [Common Events](../types/Events.md)
 
 ## [Common Properties](../types/Properties.md)
 
 ## Create Properties
 
-| Name   | Type   | Default Value | Required | Description               |
-| ------ | ------ | :-----------: | :------: | ------------------------- |
-| width  | number |      n/a      |    Y     | The width of the WebView. Must be greater than `0` |
-| height | number |      n/a      |    Y     | the width of the WebView. Must be greater than `0` |
+| Name   | Type   | Default Value | Description               |
+| ------ | ------ | :-----------: | ------------------------- |
+| width  | number |      `0`      | The width of the WebView. |
+| height | number |      `0`      | the width of the WebView. |
 
 ## Element Properties
 
-| Name     | Type   | Default Value | Description                                                                                   |
-| -------- | ------ | :-----------: | --------------------------------------------------------------------------------------------- |
-| url      | string |      n/a      | Sets the URL to load in the WebView.                                                          |
-| action   | string |      n/a      | Requests the specified action.                                                                |
-| scrollBy | vec2   |      n/a      | Scrolls the WebView in the given direction. Enter an array of two numbers: [xPixels, yPixels] |
+| Name     | Type   | Description                                                                                   |
+| -------- | ------ | --------------------------------------------------------------------------------------------- |
+| url      | string | Sets the URL to load in the WebView.                                                          |
+| action   | string | Requests the specified action.                                                                |
+| scrollBy | vec2   | Scrolls the WebView in the given direction. Enter an array of two numbers: [xPixels, yPixels] |
 
 ### action options: [WebViewAction](../types/WebViewAction.md)

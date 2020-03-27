@@ -29,8 +29,8 @@ function Version() {
       <div className="container margin-vert--xl">
         <h1>MagicScript Components documentation versions</h1>
         <div className="margin-bottom--lg">
-          <h3 id="latest">Latest version (Development)</h3>
-          <p>Here you can find the latest documentation.</p>
+          <h3 id="development">Latest development version </h3>
+          <p>Here you can find the documentation for development (unreleased) version.</p>
           <table>
             <tbody>
               <tr>
@@ -41,9 +41,7 @@ function Version() {
                   </Link>
                 </td>
                 <td>
-                  <a href={`${repoUrl}/releases/tag/${latestVersion}`}>
-                    Release Notes
-                  </a>
+                  <a href={repoUrl}>Source Code</a>
                 </td>
               </tr>
             </tbody>
@@ -51,8 +49,8 @@ function Version() {
         </div>
         {pastVersions.length > 0 && (
           <div className="margin-bottom--lg">
-            <h3 id="latest">Latest version (Stable)</h3>
-            <p>Here you can find the latest documentation.</p>
+            <h3 id="latest">Latest stable version</h3>
+            <p>Here you can find the documentation for latest (stable) version.</p>
             <table>
               <tbody>
                 {pastVersions.map(version => (

@@ -3,7 +3,6 @@ id: video
 title: Video
 ---
 
-
 ## Description
 
 The Video component represents a simple 2D rectangle on which video resources can be played.
@@ -11,9 +10,9 @@ The Video component represents a simple 2D rectangle on which video resources ca
 ## Example
 
 ```javascript
-import React from 'react';
-import { LinearLayout, Video, Button, Text } from 'magic-script-components';
+import React from "react";
 
+import { LinearLayout, Video, Button, Text } from "magic-script-components";
 export default class MyApp extends React.Component {
   state = {
     playEnabled: false,
@@ -36,7 +35,7 @@ export default class MyApp extends React.Component {
   }
 
   onEventHandler = (eventData) => {
-    console.log('onEventHandler: ', eventData);
+    console.log(`onEventHandler:`, eventData);
 
     const videoEventType = eventData.VideoEventType;
 
@@ -67,7 +66,7 @@ export default class MyApp extends React.Component {
 
   render() {
     const videoProps = {
-      videoPath: require('../resources/video_1.mp4'),
+      videoUri: 'http://url/to/the/video/file',
       width: 1920,
       height: 1080,
       onEvent: this.onEventHandler,
@@ -80,25 +79,25 @@ export default class MyApp extends React.Component {
 
     return (
       <LinearLayout
-        alignment='center-center'
         key='top-layout'
         name='main-view'
-        defaultItemAlignment='center-center'
+        defaultItemAlignment="center-left"
         defaultItemPadding={[0.03, 0.03, 0.03, 0.03]}
+        localPosition={[-0.45, 0.45, 0]}
         orientation='vertical'
       >
         <Video key='video' {...videoProps}/>
         <LinearLayout
           key='buttons-layout'
-          defaultItemAlignment='center-center'
+          defaultItemAlignment="center-center"
           defaultItemPadding={[0.02, 0.02, 0.02, 0.02]}
           orientation='horizontal'
         >
-          <Button key='play'  type='icon' iconType='play'  height={0.1}
+          <Button key='play'  type='icon' iconType="play"  height={0.1}
             enabled={this.state.playEnabled}  onClick={this.onPlayHandler} />
-          <Button key='pause' type='icon' iconType='pause' height={0.1}
+          <Button key='pause' type='icon' iconType="pause" height={0.1}
             enabled={this.state.pauseEnabled} onClick={this.onPauseHandler}/>
-          <Button key='stop'  type='icon' iconType='stop'  height={0.1}
+          <Button key='stop'  type='icon' iconType="stop"  height={0.1}
             enabled={this.state.stopEnabled}  onClick={this.onStopHandler} />
         </LinearLayout>
         <Text key='status' textSize={0.05} text={`Status: ${this.state.status}`}/>
@@ -108,18 +107,18 @@ export default class MyApp extends React.Component {
 }
 ```
 
-## [Common Events](../events/CommonEvents.md)
+## [Common Events](../types/Events.md)
 
 ## [Common Properties](../types/Properties.md)
 
 ## Create Properties
 
-| Name      | Type   | Default Value | Required | Description                                                                                                                                                                                                                                                                  |
-| --------- | ------ | :-----------: | :------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| width     | number |      512      |    N     | The surface resolution width. Supported values are between 1 and 2048.                                                                                                                                                                                                       |
-| height    | number |      512      |    N     | The surface resolution height. Supported values are between 1 and 2048.                                                                                                                                                                                                      |
-| videoPath | string |      n/a      |    Y     | The path to the file to play. Preparation for playback begins synchronously after this property is set. The video is not ready to play until a `VideoEvent` of type VideoEventType 'prepared' is received.                                                                   |
-| viewMode  | string |  `full-area`  |    N     | How the video is intended to be viewed within the video component. The `full-area` view mode renders video over the full area for both eyes (monoscopic). The `left-right` view mode renders video differently per eye (stereoscopic). The default view mode is `full-area`. |
+| Name      | Type   | Default Value | Description                                                                                                                                                                                                                                                                  |
+| --------- | ------ | :-----------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| width     | number |      512      | The surface resolution width. Supported values are between 1 and 2048.                                                                                                                                                                                                       |
+| height    | number |      512      | The surface resolution height. Supported values are between 1 and 2048.                                                                                                                                                                                                      |
+| videoPath | string |      n/a      | The path to the file to play. Preparation for playback begins synchronously after this property is set. The video is not ready to play until a `VideoEvent` of type VideoEventType 'prepared' is received.                                                                   |
+| viewMode  | string |  `full-area`  | How the video is intended to be viewed within the video component. The `full-area` view mode renders video over the full area for both eyes (monoscopic). The `left-right` view mode renders video differently per eye (stereoscopic). The default view mode is `full-area`. |
 
 ## Element Properties
 
