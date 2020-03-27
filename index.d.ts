@@ -1,3 +1,5 @@
+/// <reference path='./XrClientBridge.d.ts' />
+
 declare module "magic-script-components" {
 
   // Components:

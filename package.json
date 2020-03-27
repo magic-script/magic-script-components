@@ -7,8 +7,10 @@
     "src/components.js",
     "src/plane-detector.js",
     "src/platform.js",
+    "src/xr-client-provider.js",
     "index.d.ts",
-    "index.js"
+    "index.js",
+    "XrClientBridge.d.ts"
   ],
   "scripts": {
     "docs:start": "cd website && npm install && npm run start",
