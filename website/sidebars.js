@@ -10,6 +10,8 @@ module.exports = {
     "Getting Started": ["installation", "example", "platform"],
     Reference: ["components"],
     Components: [
+      "components/scene", 
+      "components/prism",
       "components/audio",
       "components/button",
       "components/circleConfirmation",
