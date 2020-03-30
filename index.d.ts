@@ -206,8 +206,31 @@ declare module "magic-script-components" {
 
   const ProgressBar: React.FC<ProgressBarProps>;
 
-  interface GridLayoutProps extends ViewProps, EventHandlerProps {
+  interface GridLayoutProps extends EventHandlerProps {
+    name?: string;
+    parentedBoneName?: string;
+    skipRaycast?: boolean;
+    triggerable?: boolean;
+    visible?: boolean;
+    visibilityInherited?: boolean;
+    anchorPosition?: vec3;
+    localPosition?: vec3;
+    localRotation?: quat;
+    localScale?: vec3;
+    localTransform?: mat4;
+    cursorHoverState?: CursorHoverState;
+    offset?: vec3;
+    padding?: vec4;
     itemAlignment?: { row?: number; column?: number; alignment?: Alignment; };
+    alignment?: Alignment;
+    activateResponse?: FocusRequest;
+    renderingLayer?: RenderingLayer;
+    enabled?: boolean;
+    eventPassThrough?: boolean;
+    eventPassThroughChildren?: boolean;
+    gravityWellEnabled?: boolean;
+    eventSoundId?: { soundEvent?: SoundEvent; soundName?: string; };
+    gravityWellProperties?: { shape?: { size?: vec2; offset?: vec3; roundness?: number; }; snap?: GravityWellSnap; internalSnap?: boolean; };
     defaultItemAlignment?: Alignment;
     defaultItemPadding?: vec4;
     skipInvisibleItems?: boolean;
@@ -220,8 +243,31 @@ declare module "magic-script-components" {
 
   const GridLayout: React.FC<GridLayoutProps>;
 
-  interface LinearLayoutProps extends ViewProps, EventHandlerProps {
+  interface LinearLayoutProps extends EventHandlerProps {
+    name?: string;
+    parentedBoneName?: string;
+    skipRaycast?: boolean;
+    triggerable?: boolean;
+    visible?: boolean;
+    visibilityInherited?: boolean;
+    anchorPosition?: vec3;
+    localPosition?: vec3;
+    localRotation?: quat;
+    localScale?: vec3;
+    localTransform?: mat4;
+    cursorHoverState?: CursorHoverState;
+    offset?: vec3;
+    padding?: vec4;
     itemAlignment?: { index?: number; alignment?: Alignment; };
+    alignment?: Alignment;
+    activateResponse?: FocusRequest;
+    renderingLayer?: RenderingLayer;
+    enabled?: boolean;
+    eventPassThrough?: boolean;
+    eventPassThroughChildren?: boolean;
+    gravityWellEnabled?: boolean;
+    eventSoundId?: { soundEvent?: SoundEvent; soundName?: string; };
+    gravityWellProperties?: { shape?: { size?: vec2; offset?: vec3; roundness?: number; }; snap?: GravityWellSnap; internalSnap?: boolean; };
     defaultItemAlignment?: Alignment;
     defaultItemPadding?: vec4;
     skipInvisibleItems?: boolean;
@@ -555,6 +601,37 @@ declare module "magic-script-components" {
   }
 
   const Line: React.FC<LineProps>;
+
+  interface PrismProps extends EventHandlerProps {
+    excludeFromAutoFocus?: boolean;
+    handGestureFilterConfidenceLevel?: number;
+    handGestureFilterPollRate?: number;
+    handGestureFilterPositionDelta?: number;
+    handGestureHoverDistance?: number;
+    handGestureTouchDistance?: number;
+    physicsEnabled?: boolean;
+    physicsPaused?: boolean;
+    physicsWorldMeshEnabled?: boolean;
+    prismBloomStrength?: number;
+    volumeBloomStrength?: number;
+    trackHandGesture?: number;
+    trackingAutoHapticOnGesture?: number;
+    onDestroy?: () => void;
+    anchorUuid?: string;
+    size?: vec3;
+    position?: vec3;
+    positionRelativeToCamera?: boolean;
+    orientation?: quat;
+    orientationRelativeToCamera?: boolean;
+    debug?: boolean;
+  }
+
+  const Prism: React.FC<PrismProps>;
+
+  interface SceneProps extends EventHandlerProps {
+  }
+
+  const Scene: React.FC<SceneProps>;
 
   interface EventHandlerProps {
     onActivate?: (eventData: UiEventData) => void;
