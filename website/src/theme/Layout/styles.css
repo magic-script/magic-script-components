@@ -7,7 +7,7 @@
 
 body {
   margin: 0;
-  padding-top: var(--ifm-navbar-height);
+  /* padding-top: var(--ifm-navbar-height); */
   transition: var(--ifm-transition-fast) ease color;
 }
 
