@@ -9,7 +9,11 @@ class Platform {
     }
 
     static canOpenUrl(url) {
-      return Platform.linking.canOpenURL(url);
+      try {
+        return Platform.linking.canOpenURL(url);
+      } catch {
+        return new Promise((resolve, reject) => reject({ message: 'Invalid format.' }));
+      }
     }
 
     static openUrl(url) {
