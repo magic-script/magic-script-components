@@ -105,6 +105,3 @@ export default class MyApp extends React.Component {
 ### defaultItemAlignment options: [Alignment](../types/Alignment.md)
 
 ### itemAlignment options: [Alignment](../types/Alignment.md)
-
-## Investigate before release:
-- skipInvisibleItems not implemented in android [[issue tracker](https://github.com/magic-script/magic-script-components/issues/226)]
