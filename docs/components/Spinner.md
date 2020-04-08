@@ -5,7 +5,7 @@ title: Spinner
 
 import PlatformTabs from '@theme/PlatformTabs';
 
-<PlatformTabs component='spinner' />​
+<PlatformTabs extension='gif' component='spinner' />​
 
 ## Description
 
