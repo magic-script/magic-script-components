@@ -28,7 +28,6 @@ export default class MyApp extends React.Component {
         orientation='vertical'
         defaultItemAlignment="center-left"
       >
-        <Text textSize={0.05} text='Tabs' />
         <LinearLayout
           name='tab-page-layout'
           defaultItemPadding={[0.01, 0.01, 0.01, 0.01]}
