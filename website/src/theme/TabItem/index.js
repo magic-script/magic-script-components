@@ -8,7 +8,7 @@
 import React from 'react';
 
 function TabItem(props) {
-  return <div>{props.children}</div>;
+  return <div style={{ height: '420px' }} >{props.children}</div>;
 }
 
 export default TabItem;

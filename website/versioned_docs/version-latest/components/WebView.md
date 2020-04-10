@@ -3,11 +3,13 @@ id: webView
 title: WebView
 ---
 
+import PlatformTabs from '@theme/PlatformTabs';
+
+<PlatformTabs component='webview' />​
+
 ## Description
 
 WebView renders HTML, CSS, and JavaScript content in a prism. When you enable web inspectors in your app, use web inspector clients, such as Chrome DevTools, to debug the displayed WebView content.
-
-
 
 ## Example
 
@@ -18,15 +20,13 @@ WebView renders HTML, CSS, and JavaScript content in a prism. When you enable we
 
 ```javascript
 import React from "react";
-import { View, WebView, Text } from "magic-script-components";
+import { View, WebView } from "magic-script-components";
 
 export default class MyApp extends React.Component {
-
   render() {
-
     return (
       <View name='main-view' >
-        <WebView localPosition={[0, -0.2, 0]} width={1} height={0.8} url={'http://google.com'}/>
+        <WebView  width={1} height={0.8} url={'https://www.magicleap.com'}/>
       </View>
     );
   }
