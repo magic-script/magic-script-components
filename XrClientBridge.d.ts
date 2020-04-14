@@ -15,9 +15,16 @@ declare module 'magic-script-components' {
      * This must be called before any other method.
      *
      * @param token The auth token obtained via Magic Leap OAuth login
-     * @return async session status
+     * @return true if successful
      */
-    connect: (token: string) => Promise<SessionStatus>;
+    start: (token: string) => Promise<boolean>;
+
+    /**
+     * Ends the current XR session.
+     *
+     * @return true if successful
+     */
+    stop: () => Promise<boolean>;
 
     /**
      * Polls for list of all PCFs
