@@ -31,7 +31,6 @@ module.exports = {
       "components/model",
       "components/pageView",
       "components/panel",
-      "components/portalIcon",
       "components/progressBar",
       "components/quad",
       "components/rectLayout",
