@@ -5,7 +5,7 @@ title: ColorPicker
 
 import PlatformTabs from '@theme/PlatformTabs';
 
-<PlatformTabs component='colorpicker' />​
+<PlatformTabs extension='gif' component='colorpicker' />​
 
 
 ## Description
@@ -19,32 +19,34 @@ import React from 'react';
 import { View, ColorPicker } from 'magic-script-components';
 
 export default class MyApp extends React.Component {
-    onColorChanged = event => {
-        // event.Color
-        console.log("onColorChanged event received: ", event);
-    };
+  onColorChanged = event => {
+    // event.Color
+    console.log('onColorChanged event received: ', event);
+  };
 
-    onColorConfirmed = event => {
-        // event.Color
-        console.log("onColorConfirmed event received: ", event);
-    };
+  onColorConfirmed = event => {
+    // event.Color
+    console.log('onColorConfirmed event received: ', event);
+  };
 
-    onColorCanceled = event => {
-        // event.Color
-        console.log("onColorCanceled event received: ", event);
-    };
+  onColorCanceled = event => {
+    // event.Color
+    console.log('onColorCanceled event received: ', event);
+  };
 
-    render() {
-        return (
-            <View name="main-view">
-                <ColorPicker
-                    color={[1, 0.5, 1, 0.8]}
-                    onColorChanged={this.onColorChanged}
-                    onColorConfirmed={this.onColorConfirmed}
-                    onColorCanceled={this.onColorCanceled} />
-            </View>
-        );
-    }
+  render() {
+    return (
+      <View name='main-view'>
+        <ColorPicker
+          height={0.15}
+          color={[1, 0.5, 1, 0.8]}
+          onColorChanged={this.onColorChanged}
+          onColorConfirmed={this.onColorConfirmed}
+          onColorCanceled={this.onColorCanceled} />
+        />
+      </View>
+    );
+  }
 }
 ```
 
@@ -70,7 +72,3 @@ export default class MyApp extends React.Component {
 | onColorChanged   | `Color: string` | Notifiy when color in picker has changed |
 | onColorConfirmed | `Color: string` | Notify when user confirm selected color  |
 | onColorCanceled  | `Color: string` | Notify when user cancel selected color   |
-
-## Investigate before release:
-- should we add events?
-- onColorConfirmed couse crash on lumin

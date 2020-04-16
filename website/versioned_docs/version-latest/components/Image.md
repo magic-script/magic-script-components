@@ -62,6 +62,8 @@ export default class MyApp extends React.Component {
 
 ---
 
+***Lumin only***
+
 | Name       | Type    | Default Value | Required | Description                                      |
 | ---------- | ------- | :-----------: | :------: | ------------------------------------------------ |
 | resourceId | BigInt  |      n/a      |    N     | The resource ID to render for the image.         |
@@ -80,14 +82,11 @@ export default class MyApp extends React.Component {
 
 ## Element Properties
 
-| Name               | Type    | Default Value | Description                                                                                                                                                     |
-| :----------------- | :------ | :-----------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| color              | vec4    |      n/a      | Sets a color to modulate the image.                                                                                                                             |
-| textCoords         | [vec2]  |      n/a      | Sets the texture coordinates used by the image. The texture coordinates must be a list of four coordinates representing the UV coordinates of the four corners. |
-| opaque             | boolean |      n/a      | Sets the opacity state of the image.                                                                                                                            |
-| ui                 | boolean |      n/a      | Sets whether the image is rendered on UI Layer.                                                                                                                 |
-| imageFrameResource | BigInt  |      n/a      | Sets the model resource used for the image frame. Note: Frame models are expected to be one meter high, one meter wide, and centered at the origin.             |
-| renderResource     | BigInt  |      n/a      | Sets the render resource used for the image.                                                                                                                    |
-
-## Investigate before release:
-- textCoords, opaque, ui, imageFrameResource, renderResource not implemented in Android [[issue tracker](https://github.com/magic-script/magic-script-components/issues/227)]
+| Name               | Type    | Default Value | Description                                                                                                                                                     | Lumin | Android |  IOS  |
+| :----------------- | :------ | :-----------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---: | :-----: | :---: |
+| color              | vec4    |      n/a      | Sets a color to modulate the image.                                                                                                                             | 👍|👍|👍|
+| textCoords         | [vec2]  |      n/a      | Sets the texture coordinates used by the image. The texture coordinates must be a list of four coordinates representing the UV coordinates of the four corners. | 👍| | |
+| opaque             | boolean |      n/a      | Sets the opacity state of the image.                                                                                                                            | 👍|👍 | |
+| ui                 | boolean |      n/a      | Sets whether the image is rendered on UI Layer.                                                                                                                 |👍|||
+| imageFrameResource | BigInt  |      n/a      | Sets the model resource used for the image frame. Note: Frame models are expected to be one meter high, one meter wide, and centered at the origin.             |👍|||
+| renderResource     | BigInt  |      n/a      | Sets the render resource used for the image.                                                                                                                    |👍|||
