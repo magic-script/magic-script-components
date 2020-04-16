@@ -5,7 +5,7 @@ title: CircleConfirmation
 
 import PlatformTabs from '@theme/PlatformTabs';
 
-<PlatformTabs component='circleconfirmation' />​
+<PlatformTabs extension='gif' component='circleconfirmation' />​
 
 ## Description
 
@@ -25,11 +25,11 @@ export default class MyApp extends React.Component {
     onConfirmationCanceled = event => {
         console.log("onConfirmationCanceled");
     };
-    onConfirmationUpdate = event => {
-        console.log("onConfirmationUpdate");
+    onConfirmationUpdated = event => {
+        console.log("onConfirmationUpdated");
     };
-    onConfirmationComplete = event => {
-        console.log("onConfirmationComplete");
+    onConfirmationCompleted = event => {
+        console.log("onConfirmationCompleted");
     };
 
 
@@ -38,8 +38,8 @@ export default class MyApp extends React.Component {
             <View>
                 <CircleConfirmation
                     onConfirmationCanceled={this.onConfirmationCanceled}
-                    onConfirmationCompleted={this.onConfirmationComplete}
-                    onConfirmationUpdated={this.onConfirmationUpdate}
+                    onConfirmationCompleted={this.onConfirmationCompleted}
+                    onConfirmationUpdated={this.onConfirmationUpdated}
                     radius={0.2}
                 ></CircleConfirmation>
             </View>

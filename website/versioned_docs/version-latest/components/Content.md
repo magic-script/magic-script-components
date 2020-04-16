@@ -45,7 +45,3 @@ export default class MyApp extends React.Component {
 | Name           | Type |                 Default Value                  | Description                                                                   |
 | -------------- | ---- | :--------------------------------------------: | ----------------------------------------------------------------------------- |
 | localTransform | mat4 | 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1 | The local transform of the new node. Use glm::mat4() for the identity matrix. |
-
-
-## Investigate before release:
-- Code is incorrect on lumin - ScrollBar should have required properties
