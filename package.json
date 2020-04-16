@@ -7,6 +7,7 @@
     "src/components.js",
     "src/plane-detector.js",
     "src/platform.js",
+    "src/file-system.js",
     "src/xr-client-provider.js",
     "index.d.ts",
     "index.js",
