@@ -43,7 +43,6 @@ export default class MyApp extends React.Component {
           onColorChanged={this.onColorChanged}
           onColorConfirmed={this.onColorConfirmed}
           onColorCanceled={this.onColorCanceled} />
-        />
       </View>
     );
   }

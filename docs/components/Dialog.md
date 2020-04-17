@@ -100,3 +100,6 @@ export default class MyApp extends React.Component {
 ### buttonType options: [ButtonType](../types/ButtonType.md)
 
 ### cancelIcon / confirmIcon options: [IconType](../types/IconType.md)
+
+### Known Issues:
+[IOS, missing negative button in dialog](https://github.com/magic-script/magic-script-components-react-native/issues/546)
