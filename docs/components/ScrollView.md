@@ -103,3 +103,6 @@ export default class MyApp extends React.Component {
 ### scrollBarVisibility options: [ScrollBarVisibility](../types/ScrollBarVisibility.md)
 
 ### ScrollDirection options: [ScrollDirection](../types/ScrollDirection.md)
+
+### Known Issues:
+[IOS: ScrollView, Remove extra space](https://github.com/magic-script/magic-script-components-react-native/issues/545)
