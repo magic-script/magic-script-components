@@ -37,7 +37,16 @@ export {
     Video,
     View,
     WebView
-} from './src/components.js';
+} from './src/components/components.js';
+
+export {
+  Alignment,
+  AnchorPoint,
+  FontStyle,
+  FontWeight,
+  Orientation,
+  TextAlign
+} from './src/components/base-types/enums'
 
 export { Platform } from './src/platform';
 

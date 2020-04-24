@@ -15,10 +15,12 @@ export function Slider (props) {
     return React.createElement('slider', props);
 }
 
-export function Text (props) {
-    // return (<text {...props} />);
-    return React.createElement('text', props);
-}
+export { Text } from './text';
+// TODO: Remove me
+// export function Text (props) {
+//     // return (<text {...props} />);
+//     return React.createElement('text', props);
+// }
 
 export function View (props) {
     // return (<view {...props} />);
