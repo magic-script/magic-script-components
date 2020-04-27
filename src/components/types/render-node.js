@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { PropTypeValidator } from './prop-type-validators'
+import { TypeValidator } from './prop-type-validators'
 import { TransformNode } from './transform-node'
 
 const RenderNode = {
@@ -9,7 +9,7 @@ const RenderNode = {
     color: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.number,
-      PropTypes.arrayOf(PropTypeValidator.arrayOf(4)),
+      PropTypes.arrayOf(TypeValidator.arrayOf(4)),
       PropTypes.exact({ h: PropTypes.number.isRequired, s: PropTypes.number.isRequired, l: PropTypes.number.isRequired }),
       PropTypes.exact({ l: PropTypes.number.isRequired, c: PropTypes.number.isRequired, h: PropTypes.number.isRequired }),
       PropTypes.exact({ c: PropTypes.number.isRequired, m: PropTypes.number.isRequired, y: PropTypes.number.isRequired, k: PropTypes.number.isRequired }),
