@@ -7,6 +7,7 @@
     "src/components.js",
     "src/plane-detector.js",
     "src/platform.js",
+    "src/file-system.js",
     "src/xr-client-provider.js",
     "index.d.ts",
     "index.js",
@@ -30,15 +31,13 @@
     "url": "https://github.com/magic-script/magic-script-components/issues"
   },
   "homepage": "https://github.com/magic-script/magic-script-components#readme",
-  "dependencies": {
-    "react": "^16.9.0",
-    "react-reconciler": "^0.21.0"
-  },
   "peerDependencies": {
     "@babel/core": "^7.6.0",
     "@babel/plugin-transform-react-jsx": "^7.3.0",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
-    "rollup-plugin-babel": "^4.3.3"
+    "rollup-plugin-babel": "^4.3.3",
+    "react": "^16.9.0",
+    "react-reconciler": "^0.21.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.6.0",
