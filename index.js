@@ -46,7 +46,7 @@ export {
   FontWeight,
   Orientation,
   TextAlign
-} from './src/components/base-types/enums'
+} from './src/components/types/enums'
 
 export { Platform } from './src/platform';
 

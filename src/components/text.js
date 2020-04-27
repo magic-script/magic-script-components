@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { PropTypeValidator } from './base-types/prop-type-validators'
-import { UiNode } from './base-types/ui-node'
-import { FontStyle, FontWeight, TextAlign } from './base-types/enums'
+import { TypeValidator } from './types/type-validators'
+import { UiNode } from './types/ui-node'
+import { FontStyle, FontWeight, TextAlign } from './types/enums'
 import mapProperties from '../properties-mapping'
 
 export function Text (props) {
@@ -19,7 +19,7 @@ Text.propTypes = {
   textColor: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,
-    PropTypes.arrayOf(PropTypeValidator.arrayOf(4)),
+    PropTypes.arrayOf(TypeValidator.arrayOf(4)),
     PropTypes.exact({ h: PropTypes.number.isRequired, s: PropTypes.number.isRequired, l: PropTypes.number.isRequired }),
     PropTypes.exact({ l: PropTypes.number.isRequired, c: PropTypes.number.isRequired, h: PropTypes.number.isRequired }),
     PropTypes.exact({ c: PropTypes.number.isRequired, m: PropTypes.number.isRequired, y: PropTypes.number.isRequired, k: PropTypes.number.isRequired }),

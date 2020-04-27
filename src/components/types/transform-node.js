@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { PropTypeValidator } from './prop-type-validators'
+import { TypeValidator } from './type-validators'
 
 const Node = {
   PropTypes: {
@@ -18,11 +18,11 @@ const TransformNode = {
   PropTypes: {
     ...Node.PropTypes,
     debug: PropTypes.bool,
-    pivot: PropTypes.arrayOf(PropTypeValidator.arrayOf(3)),
-    position: PropTypes.arrayOf(PropTypeValidator.arrayOf(3)),
-    scale: PropTypes.arrayOf(PropTypeValidator.arrayOf(3)),
-    rotation: PropTypes.arrayOf(PropTypeValidator.arrayOf(4)),
-    transform: PropTypes.arrayOf(PropTypeValidator.arrayOf(16)),
+    pivot: PropTypes.arrayOf(TypeValidator.arrayOf(3)),
+    position: PropTypes.arrayOf(TypeValidator.arrayOf(3)),
+    scale: PropTypes.arrayOf(TypeValidator.arrayOf(3)),
+    rotation: PropTypes.arrayOf(TypeValidator.arrayOf(4)),
+    transform: PropTypes.arrayOf(TypeValidator.arrayOf(16)),
   },
 
   DefaultProps: {
