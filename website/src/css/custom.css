@@ -22,6 +22,10 @@ body {
   font-family: "LominoSubset", "Lomino", "Open Sans", sans-serif;
 }
 
+#foot-boi * {
+  background-color: unset;
+}
+
 @font-face {
   font-family: "LominoSubset";
   src: url("/fonts/lomino/lomino-regular-subset.woff2") format("woff2"),
