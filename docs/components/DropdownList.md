@@ -15,10 +15,10 @@ The `DropDownList` creates a vertical drop-down list box. Single or multiple ite
 
 ```javascript
 import React from "react";
-import { View, DropdownList, DropdownListItem, LinearLayout, Text } from "magic-script-components";
+import { View, DropdownList, DropdownListItem, LinearLayout, Text, Scene, Prism } from "magic-script-components";
 
-export  class MyApp extends React.Component {
-constructor(props) {
+export default class MyApp extends React.Component {
+  constructor(props) {
     super(props);
 
     this.stateList = [
@@ -44,25 +44,29 @@ constructor(props) {
     const { selectedState } = this.state;
 
     return (
-      <View name="main-view" localPosition={this.props.localPosition} >
-        <LinearLayout
-          alignment={'center-center'}
-          defaultItemAlignment={'center-center'}
-          defaultItemPadding={[0.03, 0.03, 0.03, 0.03]}
-          orientation={'horizontal'}
-        >
-          <Text textSize={0.03}>State:</Text>
-          <DropdownList
-            textSize={0.03}
-            text={selectedState}
-            onSelectionChanged={this.onSelectedStateChanged}
-          >
-            {this.stateList.map((item, index) => (
-              <DropdownListItem key={item} id={index} label={item} />
-            ))}
-          </DropdownList>
-        </LinearLayout>
-      </View>
+      <Scene>
+        <Prism size={[1, 1, 0.2]} >
+          <View name="main-view" localPosition={this.props.localPosition} >
+            <LinearLayout
+              alignment={'center-center'}
+              defaultItemAlignment={'center-center'}
+              defaultItemPadding={[0.03, 0.03, 0.03, 0.03]}
+              orientation={'horizontal'}
+            >
+              <Text textSize={0.03}>State:</Text>
+              <DropdownList
+                textSize={0.03}
+                text={selectedState}
+                onSelectionChanged={this.onSelectedStateChanged}
+              >
+                {this.stateList.map((item, index) => (
+                  <DropdownListItem key={item} id={index} label={item} />
+                ))}
+              </DropdownList>
+            </LinearLayout>
+          </View>
+        </Prism>
+      </Scene>
     );
   }
 }

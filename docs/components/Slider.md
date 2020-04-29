@@ -15,7 +15,7 @@ The Slider component places a slider into your prism. Use sliders to provide a v
 
 ```javascript
 import React from "react";
-import { Text, Slider, Image, LinearLayout } from "magic-script-components";
+import { Text, Slider, Image, LinearLayout, View, Prism, Scene } from "magic-script-components";
 
 export default class MyApp extends React.Component {
   state = {
@@ -68,23 +68,29 @@ export default class MyApp extends React.Component {
     ];
 
     return (
-      <LinearLayout
-        name="main-view"
-        orientation="vertical"
-        defaultItemAlignment="center-left"
-        defaultItemPadding={[0.012, 0.012, 0.012, 0.012]}
-        localPosition={[-0.45, 0.45, 0]}
-      >
-        <Image width={0.8} height={0.3} color={color} useFrame={true} />
-        <Text textSize={0.05} textColor={[1, 0, 0, 1]} text="Red" />
-        <Slider {...redProps} onSliderChanged={this.onRedChanged} />
-        <Text textSize={0.05} textColor={[0, 1, 0, 1]} text="Green" />
-        <Slider {...greenProps} onSliderChanged={this.onGreenChanged} />
-        <Text textSize={0.05} textColor={[0, 0, 1, 1]} text="Blue" />
-        <Slider {...blueProps} onSliderChanged={this.onBlueChanged} />
-        <Text textSize={0.05} text="Alpha" />
-        <Slider {...alphaProps} onSliderChanged={this.onAlphaChanged} />
-      </LinearLayout>
+      <Scene>
+        <Prism size={[1, 1, 0.2]} >
+          <View name="main-view" alignment={'center-center'}>
+            <LinearLayout
+              name="main-view"
+              orientation="vertical"
+              defaultItemAlignment="center-left"
+              defaultItemPadding={[0.012, 0.012, 0.012, 0.012]}
+              localPosition={[-0.45, 0.45, 0]}
+            >
+              <Image width={0.8} height={0.3} color={color} useFrame={true} />
+              <Text textSize={0.05} textColor={[1, 0, 0, 1]} text="Red" />
+              <Slider {...redProps} onSliderChanged={this.onRedChanged} />
+              <Text textSize={0.05} textColor={[0, 1, 0, 1]} text="Green" />
+              <Slider {...greenProps} onSliderChanged={this.onGreenChanged} />
+              <Text textSize={0.05} textColor={[0, 0, 1, 1]} text="Blue" />
+              <Slider {...blueProps} onSliderChanged={this.onBlueChanged} />
+              <Text textSize={0.05} text="Alpha" />
+              <Slider {...alphaProps} onSliderChanged={this.onAlphaChanged} />
+            </LinearLayout>
+          </View>
+        </Prism>
+      </Scene>
     );
   }
 }
