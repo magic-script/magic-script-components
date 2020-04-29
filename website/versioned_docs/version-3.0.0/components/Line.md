@@ -15,7 +15,7 @@ The Line component renders a colored line. The Line component creates lines as a
 
 ```javascript
 import React from "react";
-import { View, Line } from "magic-script-components";
+import { View, Line, Scene, Prism } from "magic-script-components";
 
 export default class MyApp extends React.Component {
   render() {
@@ -29,9 +29,13 @@ export default class MyApp extends React.Component {
     ];
 
     return (
-      <View name="main-view">
-        <Line points={points} color={[0.5, 1.0, 0.25, 0.8]} />
-      </View>
+      <Scene>
+        <Prism size={[1, 1, 0.5]} >
+          <View name="main-view" alignment={'center-center'}>
+            <Line points={points} color={[0.5, 1.0, 0.25, 0.8]} />
+          </View>
+        </Prism>
+      </Scene>
     );
   }
 }

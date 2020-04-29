@@ -20,14 +20,19 @@ WebView renders HTML, CSS, and JavaScript content in a prism. When you enable we
 
 ```javascript
 import React from "react";
-import { View, WebView } from "magic-script-components";
+import { View, WebView, Prism, Scene } from "magic-script-components";
 
-export default class MyApp extends React.Component {
+export class ExampleWebView extends React.Component {
+
   render() {
     return (
-      <View name='main-view' >
-        <WebView  width={1} height={0.8} url={'https://www.magicleap.com'}/>
-      </View>
+      <Scene>
+        <Prism size={[1, 1, 0.2]} >
+          <View name="main-view" alignment={'center-center'}>
+            <WebView width={1} height={0.8} url={'https://www.magicleap.com'} />
+          </View>
+        </Prism>
+      </Scene>
     );
   }
 }
@@ -42,7 +47,7 @@ export default class MyApp extends React.Component {
 | Name   | Type   | Default Value | Required | Description               |
 | ------ | ------ | :-----------: | :------: | ------------------------- |
 | width  | number |      n/a      |    Y     | The width of the WebView. Must be greater than `0` |
-| height | number |      n/a      |    Y     | the width of the WebView. Must be greater than `0` |
+| height | number |      n/a      |    Y     | The height of the WebView. Must be greater than `0` |
 
 ## Element Properties
 

@@ -15,18 +15,22 @@ The Audio component allows you to play audio resources and 3D sound effects. It 
 
 ```javascript
 import React from "react";
-import { View, Audio } from "magic-script-components";
+import { View, Audio,Scene, Prism  } from "magic-script-components";
 
 export default class MyApp extends React.Component {
   render() {
     return (
-      <View name="main-view">
-        <Audio
-          fileName="resources/your-audio-file.mp3"
-          loadFile={true}
-          action="start"
-        />
-      </View>
+      <Prism size={[1.0, 1.0, 1.0]} >
+        <Scene>
+          <View name="main-view">
+            <Audio
+              fileName="resources/your-audio-file.mp3"
+              loadFile={true}
+              action="start"
+            />
+          </View>
+        </Scene>
+      </Prism>
     );
   }
 }

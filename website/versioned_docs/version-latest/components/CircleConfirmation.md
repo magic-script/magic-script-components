@@ -15,7 +15,7 @@ CircleConfirmation is the UI element intended to confirm powering off. The user 
 
 ```javascript
 import React from 'react';
-import { View, CircleConfirmation } from 'magic-script-components';
+import { View, CircleConfirmation, Scene, Prism } from 'magic-script-components';
 
 export default class MyApp extends React.Component {
     constructor(props) {
@@ -35,14 +35,18 @@ export default class MyApp extends React.Component {
 
     render() {
         return (
-            <View>
-                <CircleConfirmation
-                    onConfirmationCanceled={this.onConfirmationCanceled}
-                    onConfirmationCompleted={this.onConfirmationCompleted}
-                    onConfirmationUpdated={this.onConfirmationUpdated}
-                    radius={0.2}
-                ></CircleConfirmation>
-            </View>
+            <Scene>
+                <Prism size={[2, 2, 1]} >
+                    <View name='main-view' alignment={'center-center'}>
+                        <CircleConfirmation
+                            onConfirmationCanceled={this.onConfirmationCanceled}
+                            onConfirmationCompleted={this.onConfirmationCompleted}
+                            onConfirmationUpdated={this.onConfirmationUpdated}
+                            radius={0.2}
+                        ></CircleConfirmation>
+                    </View>
+                </Prism>
+            </Scene>
         );
     }
 }

@@ -15,7 +15,7 @@ The Video component represents a simple 2D rectangle on which video resources ca
 
 ```javascript
 import React from "react";
-import { View, Button, Video } from "magic-script-components";
+import { View, Button, Video, Scene, Prism } from "magic-script-components";
 
 const VideoActions = {
   start: "start",
@@ -30,7 +30,7 @@ export default class MyApp extends React.Component {
       isLooping: false,
       action: VideoActions.pause,
       volume: 1.0,
-      videoPath: require("../resources/video.mp4")
+      videoPath: require("../../assets/video.mp4")
     };
   }
 
@@ -84,26 +84,33 @@ export default class MyApp extends React.Component {
       (resolution[1] * widthInMeters) / resolution[0]
     ];
     return (
-      <View localPosition={this.props.localPosition}>
-        <Video
-          localPosition={[0, 0.75, 0]}
-          looping={this.state.isLooping}
-          width={resolution[0]}
-          height={resolution[1]}
-          size={size}
-          anchorPosition={[0.5 * size[0], 0.5 * size[1], 0]}
-          videoPath={this.state.videoPath}
-          viewMode={"full-area"}
-          volume={this.state.volume}
-          action={this.state.action}
-        />
+      <Scene>
+        <Prism size={[1.5, 1.5, 1]} >
+          <View name="main-view" alignment={'center-center'} localPosition={this.props.localPosition}>
+            <Video
+              localPosition={[0, 0.4, 0]}
+              looping={this.state.isLooping}
+              width={resolution[0]}
+              height={resolution[1]}
+              size={size}
+              anchorPosition={[0.5 * size[0], 0.5 * size[1], 0]}
+              videoPath={this.state.videoPath}
+              viewMode={"full-area"}
+              volume={this.state.volume}
+              action={this.state.action}
+            />
 
-        {this.renderPlayOrPauseButton([-0.19, 0, 0])}
-        {this.renderStopButton([0.19, 0, 0])}
-      </View>
+            {this.renderPlayOrPauseButton([-0.19, 0, 0])}
+            {this.renderStopButton([0.19, 0, 0])}
+          </View>
+        </Prism>
+      </Scene>
     );
   }
 }
+
+export { ExampleVideo };
+
 ```
 
 ## [Common Events](../events/CommonEvents.md)
