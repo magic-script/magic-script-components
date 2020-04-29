@@ -1,3 +1,8 @@
+---
+id: eventsExample
+title: Events Example
+---
+
 ```javascript
 import React from "react";
 import { Scene, Prism, Content, Text, Button } from "magic-script-components";
