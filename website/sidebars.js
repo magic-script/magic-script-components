@@ -83,7 +83,8 @@ module.exports = {
     Events: [
       "events/commonEvents",
       "events/componentEvents",
-      "events/eventDataTypes"
+      "events/eventDataTypes",
+      "events/eventsExample"
     ]
   }
 };
