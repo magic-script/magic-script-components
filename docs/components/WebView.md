@@ -47,7 +47,7 @@ export class ExampleWebView extends React.Component {
 | Name   | Type   | Default Value | Required | Description               |
 | ------ | ------ | :-----------: | :------: | ------------------------- |
 | width  | number |      n/a      |    Y     | The width of the WebView. Must be greater than `0` |
-| height | number |      n/a      |    Y     | the width of the WebView. Must be greater than `0` |
+| height | number |      n/a      |    Y     | The height of the WebView. Must be greater than `0` |
 
 ## Element Properties
 
