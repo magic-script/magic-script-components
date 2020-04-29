@@ -16,7 +16,7 @@ Dialog which allows the user to select color.
 
 ```javascript
 import React from 'react';
-import { View, ColorPicker } from 'magic-script-components';
+import { View, ColorPicker, Scene, Prism } from 'magic-script-components';
 
 export default class MyApp extends React.Component {
   onColorChanged = event => {
@@ -36,14 +36,18 @@ export default class MyApp extends React.Component {
 
   render() {
     return (
-      <View name='main-view'>
-        <ColorPicker
-          height={0.15}
-          color={[1, 0.5, 1, 0.8]}
-          onColorChanged={this.onColorChanged}
-          onColorConfirmed={this.onColorConfirmed}
-          onColorCanceled={this.onColorCanceled} />
-      </View>
+      <Scene>
+        <Prism size={[2, 2, 1]} >
+          <View name='main-view' alignment={'center-center'}>
+            <ColorPicker
+              height={0.15}
+              color={[1, 0.5, 1, 0.8]}
+              onColorChanged={this.onColorChanged}
+              onColorConfirmed={this.onColorConfirmed}
+              onColorCanceled={this.onColorCanceled} />
+          </View>
+        </Prism>
+      </Scene>
     );
   }
 }
