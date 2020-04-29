@@ -1,6 +1,6 @@
 ```javascript
 import React from "react";
-import { Content, Text, Button } from "magic-script-components";
+import { Scene, Prism, Content, Text, Button } from "magic-script-components";
 
 export default class MyApp extends React.Component {
   updateLoopHandler = delta => {
