@@ -11,9 +11,9 @@
     "docs-tag": "docusaurus docs:version"
   },
   "dependencies": {
-    "@docusaurus/core": "^2.0.0-alpha.48",
-    "@docusaurus/preset-classic": "^2.0.0-alpha.48",
-    "@docusaurus/utils": "^2.0.0-alpha.48",
+    "@docusaurus/core": "^2.0.0-alpha.54",
+    "@docusaurus/preset-classic": "^2.0.0-alpha.54",
+    "@docusaurus/utils": "^2.0.0-alpha.54",
     "@mayankmohit/react-gif-player": "^0.4.2",
     "classnames": "^2.2.6",
     "react": "^16.12.0",
