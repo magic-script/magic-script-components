@@ -16,11 +16,6 @@ export function Slider (props) {
 }
 
 export { Text } from './text';
-// TODO: Remove me
-// export function Text (props) {
-//     // return (<text {...props} />);
-//     return React.createElement('text', props);
-// }
 
 export function View (props) {
     // return (<view {...props} />);

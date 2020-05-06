@@ -1,4 +1,3 @@
-
 export const Alignment = {
   topLeft: 'top-left',
   topCenter: 'top-center',
