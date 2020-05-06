@@ -1,11 +1,10 @@
 import PropTypes from 'prop-types'
-import { TransformNode } from './transform-node'
+import { TransformNode } from './transform-node.js';
 import { AnchorPoint } from './enums'
 
 const UiNode = {
   PropTypes: {
     ...TransformNode.PropTypes,
-    // props
     anchorPoint: PropTypes.oneOf([
       AnchorPoint.topLeft, AnchorPoint.topCenter, AnchorPoint.topRight, 
       AnchorPoint.centerLeft, AnchorPoint.centerCenter, AnchorPoint.centerRight, 
@@ -13,7 +12,7 @@ const UiNode = {
     ]),
     enabled: PropTypes.bool,
     hideBounds: PropTypes.bool,
-    // events
+
     onActivate: PropTypes.func,
     onPressed: PropTypes.func,
     onLongPress: PropTypes.func,
@@ -34,10 +33,9 @@ const UiNode = {
 
   DefaultProps: {
     ...TransformNode.DefaultProps,
-    // props
-    // anchorPoint: AnchorPoint.centerCenter,
-    // enabled: true,
-    // hideBounds: false
+    anchorPoint: AnchorPoint.centerCenter,
+    enabled: true,
+    hideBounds: false
   }
 }
 

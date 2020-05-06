@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { TypeValidator } from './types/type-validators'
-import { UiNode } from './types/ui-node'
-import { FontStyle, FontWeight, TextAlign } from './types/enums'
-import mapProperties from '../properties-mapping'
+import { TypeValidator } from './util/type-validators.js';
+import { UiNode } from './types/ui-node.js';
+import { FontStyle, FontWeight, TextAlign } from './types/enums.js';
+import mapProperties from '../properties-mapping.js';
 
 export function Text (props) {
   const internalProperties = mapProperties('Text', props);
@@ -13,23 +13,49 @@ export function Text (props) {
 
 Text.propTypes = {
   ...UiNode.PropTypes,
-  // props
+
   children: PropTypes.string.isRequired,
   textAlign: PropTypes.oneOf([TextAlign.left, TextAlign.center, TextAlign.right]),
   textColor: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
-    PropTypes.arrayOf(TypeValidator.arrayOf(4)),
-    PropTypes.exact({ h: PropTypes.number.isRequired, s: PropTypes.number.isRequired, l: PropTypes.number.isRequired }),
-    PropTypes.exact({ l: PropTypes.number.isRequired, c: PropTypes.number.isRequired, h: PropTypes.number.isRequired }),
-    PropTypes.exact({ c: PropTypes.number.isRequired, m: PropTypes.number.isRequired, y: PropTypes.number.isRequired, k: PropTypes.number.isRequired }),
-    PropTypes.exact({ r: PropTypes.number.isRequired, g: PropTypes.number.isRequired, b: PropTypes.number.isRequired, a: PropTypes.number.isRequired, type: PropTypes.string }),
-  ]),
+      PropTypes.string,
+      PropTypes.number,
+      PropTypes.arrayOf(TypeValidator.arrayOf(4)),
+      PropTypes.exact({ 
+        h:PropTypes.number.isRequired,
+        s: PropTypes.number.isRequired,
+        l: PropTypes.number.isRequired
+      }),
+      PropTypes.exact({
+        l: PropTypes.number.isRequired,
+        c: PropTypes.number.isRequired,
+        h: PropTypes.number.isRequired
+      }),
+      PropTypes.exact({
+        c: PropTypes.number.isRequired,
+        m: PropTypes.number.isRequired,
+        y: PropTypes.number.isRequired,
+        k: PropTypes.number.isRequired
+      }),
+      PropTypes.exact({
+        r: PropTypes.number.isRequired,
+        g: PropTypes.number.isRequired,
+        b: PropTypes.number.isRequired,
+        a: PropTypes.number.isRequired,
+        type: PropTypes.string
+      }),
+    ]),
   width: PropTypes.number,
   height: PropTypes.number,
   multiline: PropTypes.bool,
   fontSize: PropTypes.number,
-  fontWeight: PropTypes.oneOf([FontWeight.extraLight, FontWeight.light, FontWeight.regular, FontWeight.medium, FontWeight.bold, FontWeight.extraBold]),
+  fontWeight: PropTypes.oneOf([
+    FontWeight.extraLight,
+    FontWeight.light,
+    FontWeight.regular,
+    FontWeight.medium,
+    FontWeight.bold,
+    FontWeight.extraBold
+  ]),
   fontStyle: PropTypes.oneOf([FontStyle.normal, FontStyle.italic]),
   letterSpacing: PropTypes.number,
   lineSpacing: PropTypes.number,
@@ -38,18 +64,17 @@ Text.propTypes = {
 
 Text.defaultProps = {
   ...UiNode.DefaultProps,
-  // props
-  // TODO: This is a good example of a case when we should define a default value, isn't it?
+
   children: '',
-  // textAlign: TextAlign.left,
-  // textColor: 'white',
-  // width: 0,
-  // height: 0,
-  // multiline: false,
-  // fontSize: 0.08,
-  // fontWeight: FontWeight.regular,
-  // fontStyle: FontStyle.normal,
-  // letterSpacing: 0.0,
-  // lineSpacing: 1.0,
-  // allCaps: false,
+  textAlign: TextAlign.left,
+  textColor: 'white',
+  width: 0,
+  height: 0,
+  multiline: false,
+  fontSize: 0.08,
+  fontWeight: FontWeight.regular,
+  fontStyle: FontStyle.normal,
+  letterSpacing: 0.0,
+  lineSpacing: 1.0,
+  allCaps: false
 }
