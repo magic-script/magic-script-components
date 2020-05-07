@@ -1,9 +1,6 @@
 import React from 'react'
 
-export function Button (props) {
-    // return (<button {...props} />);
-    return React.createElement('button', props);
-}
+export { Button } from './button';
 
 export function Model (props) {
     // return (<model {...props} />);

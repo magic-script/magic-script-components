@@ -56,7 +56,10 @@ Text.propTypes = {
     FontWeight.bold,
     FontWeight.extraBold
   ]),
-  fontStyle: PropTypes.oneOf([FontStyle.normal, FontStyle.italic]),
+  fontStyle: PropTypes.oneOf([
+    FontStyle.normal,
+    FontStyle.italic
+  ]),
   letterSpacing: PropTypes.number,
   lineSpacing: PropTypes.number,
   allCaps: PropTypes.bool,

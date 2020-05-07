@@ -4,21 +4,26 @@ const transformNodeInternalProperties = [...nodeInternalProperties, 'localPositi
 const renderNodeInternalProperties = [...transformNodeInternalProperties, 'color', 'isOpaque'];
 const uiNodeInternalProperties = [...transformNodeInternalProperties, 'alignment', 'enabled', 'hideBounds'];
 const uiLayoutInternalProperties = [...uiNodeInternalProperties, 'width', 'height'];
+const textContainerInternalProperties = [...uiNodeInternalProperties, 'textColor', 'textSize'];
+
 
 // Provides list of the internal property names per component
 const componentInternalProperties = {
   Text: [
-    ...uiNodeInternalProperties,
-    'textAlignment',
-    'textColor',
-    'letterSpacing',
+    ...textContainerInternalProperties,
+    'allCaps',
+    'charSpacing',
     'lineSpacing',
-    'fontParameters',
-    'boundsSize'
+    'textAlignment',
+    'style',
+    'weight',
+    'boundsSize',
+    'fontParameters'
   ],
   Button: [
-    ...uiNodeInternalProperties,
-    'iconSize','iconColor'
+    ...textContainerInternalProperties,
+    'iconSize',
+    'iconColor'
   ]
 };
 

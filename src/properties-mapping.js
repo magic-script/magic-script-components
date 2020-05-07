@@ -10,7 +10,7 @@ function setPropertyMapper (name) {
   return (properties) => getPropertyValue(properties, name);
 }
 
-// Provides map-function or name for each internalProperty
+// Provides map-function or name for each renamed internalProperty !
 const propertyMapper = {
   // TransformNode
   localPosition: setPropertyMapper('position'),
@@ -20,13 +20,12 @@ const propertyMapper = {
   // UiNode
   alignment: (publicProperties) => getPropertyValue(publicProperties, 'anchorPoint'),
   // Text
-  boundsSize: mapBoundsSize,
   charSpacing: (publicProperties) => getPropertyValue(publicProperties, 'letterSpacing'),
-  fontParameters: mapFontParameters,
   textAlignment: (publicProperties) => getPropertyValue(publicProperties, 'textAlign'),
-  // TODO: How to handle cases when the same property (fontSize) is used in multiple places?
-  // (e.g. as textSize and in fontParameters.fontSize)
   textSize: (publicProperties) => getPropertyValue(publicProperties, 'fontSize'),
+  boundsSize: mapBoundsSize,
+  fontParameters: mapFontParameters,
+  // Button - no property renaming
 }
 
 // Generic function for assembling internal properties from the public properties
