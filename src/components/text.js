@@ -20,7 +20,7 @@ Text.propTypes = {
       PropTypes.string,
       PropTypes.number,
       PropTypes.arrayOf(TypeValidator.arrayOf(4)),
-      PropTypes.exact({ 
+      PropTypes.exact({
         h:PropTypes.number.isRequired,
         s: PropTypes.number.isRequired,
         l: PropTypes.number.isRequired
@@ -56,7 +56,10 @@ Text.propTypes = {
     FontWeight.bold,
     FontWeight.extraBold
   ]),
-  fontStyle: PropTypes.oneOf([FontStyle.normal, FontStyle.italic]),
+  fontStyle: PropTypes.oneOf([
+    FontStyle.normal,
+    FontStyle.italic
+  ]),
   letterSpacing: PropTypes.number,
   lineSpacing: PropTypes.number,
   allCaps: PropTypes.bool,
