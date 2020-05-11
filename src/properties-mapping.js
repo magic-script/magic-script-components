@@ -8,8 +8,8 @@ import {
   mapProgressColor
 } from './property-mappers.js';
 
-function setPropertyMapper (name) {
-  return (properties) => getPropertyValue(properties, name);
+function setPropertyMapper (propertyName) {
+  return (properties) => getPropertyValue(properties, propertyName);
 }
 
 // Provides map-function or name for each renamed internalProperty !
@@ -57,7 +57,7 @@ const propertyMapper = {
 }
 
 // Generic function for assembling internal properties from the public properties
-function mapComponentProperties(internalPropertiesNames, publicProperties) {
+function mapComponentProperties (internalPropertiesNames, publicProperties) {
   const internalProperties = {};
 
   internalPropertiesNames.forEach(name => {
@@ -74,6 +74,10 @@ function mapComponentProperties(internalPropertiesNames, publicProperties) {
   return internalProperties;
 }
 
+function setComponentPropertyMapper (componentName) {
+  return (publicProperties) => mapComponentProperties(componentInternalProperties[componentName], publicProperties);
+}
+
 // Custom mapping function for Button component
 // function mapButtonProperties(publicProperties) {
 //   const internalProperties = {};
@@ -83,8 +87,42 @@ function mapComponentProperties(internalPropertiesNames, publicProperties) {
 
 // Provides map-function for each component
 const componentPropertyMapper = {
-  Text: (properties) => mapComponentProperties(componentInternalProperties['Text'], properties), // Generic map-function
-  //Button: mapButtonProperties // Custom map-function for the Button
+  Scene: setComponentPropertyMapper('Scene'),
+  Prism: setComponentPropertyMapper('Prism'),
+  Audio: setComponentPropertyMapper('Audio'),
+  Light: setComponentPropertyMapper('Light'),
+  Line: setComponentPropertyMapper('Line'),
+  Model: setComponentPropertyMapper('Model'),
+  Quad: setComponentPropertyMapper('Quad'),
+  Video: setComponentPropertyMapper('Video'),
+  RectLayout: setComponentPropertyMapper('RectLayout'),
+  LinearLayout: setComponentPropertyMapper('LinearLayout'),
+  GridLayout: setComponentPropertyMapper('GridLayout'),
+  Panel: setComponentPropertyMapper('Panel'),
+  View: setComponentPropertyMapper('View'),
+  WebView: setComponentPropertyMapper('WebView'),
+  PageView: setComponentPropertyMapper('PageView'),
+  ScrollView: setComponentPropertyMapper('ScrollView'),
+  ScrollBar: setComponentPropertyMapper('ScrollBar'),
+  ListView: setComponentPropertyMapper('ListView'),
+  ListViewItem: setComponentPropertyMapper('ListViewItem'),
+  DropdownList: setComponentPropertyMapper('DropdownList'),
+  Text: setComponentPropertyMapper('Text'),
+  TextEdit: setComponentPropertyMapper('TextEdit'),
+  Button: setComponentPropertyMapper('Button'),
+  Tab: setComponentPropertyMapper('Tab'),
+  ProgressBar: setComponentPropertyMapper('ProgressBar'),
+  Slider: setComponentPropertyMapper('Slider'),
+  Spinner: setComponentPropertyMapper('Spinner'),
+  Dialog: setComponentPropertyMapper('Dialog'),
+  Image: setComponentPropertyMapper('Image'),
+  Toggle: setComponentPropertyMapper('Toggle'),
+  ToggleGroup: setComponentPropertyMapper('ToggleGroup'),
+  CircleConfirmation: setComponentPropertyMapper('CircleConfirmation'),
+  ColorPicker: setComponentPropertyMapper('ColorPicker'),
+  DatePicker: setComponentPropertyMapper('DatePicker'),
+  TimePicker: setComponentPropertyMapper('TimePicker')
+  //Custom: mapCustomProperties
 }
 
 // Usage:
