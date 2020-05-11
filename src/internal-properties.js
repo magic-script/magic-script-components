@@ -23,7 +23,23 @@ const uiNodeInternalProperties = [
   ...transformNodeInternalProperties,
   'alignment',
   'enabled',
-  'hideBounds'
+  'hideBounds',
+  'onActivate',
+  'onPressed',
+  'onLongPress',
+  'onRelease',
+  'onHoverEnter',
+  'onHoverExit',
+  'onHoverMove',
+  'onEnabled',
+  'onDisabled',
+  'onFocusGained',
+  'onFocusLost',
+  'onFocusInput',
+  'onUpdate',
+  'onDeleted',
+  'onEvent',
+  'onUpdateLoop'
 ];
 const uiLayoutInternalProperties = [
   ...uiNodeInternalProperties,
@@ -198,7 +214,8 @@ const componentInternalProperties = {
     'scrollOffset',
     'scrollSpeed',
     'scrollValue',
-    'scrollBounds'
+    'scrollBounds',
+    'onScrollChanged'
   ],
   ScrollBar: [
     ...uiNodeInternalProperties,
@@ -246,7 +263,9 @@ const componentInternalProperties = {
     'maxCharacterLimit',
     'multiSelect',
     'showList',
-    'selected'
+    'selected',
+    'onSelectionChanged',
+    'onListVisibilityChanged'
   ],
   Text: [
     ...textContainerInternalProperties,
@@ -260,7 +279,8 @@ const componentInternalProperties = {
     'fontParameters',
     'fontDescription',
     'filePath',
-    'absolutePath'
+    'absolutePath',
+    'onTextChanged'
   ],
   TextEdit: [
     ...textContainerInternalProperties,
@@ -284,7 +304,8 @@ const componentInternalProperties = {
     'filePath',
     'absolutePath',
     'selectedBegin',
-    'selectedEnd'
+    'selectedEnd',
+    'onToggleChanged'
   ],
   Button: [
     ...textContainerInternalProperties,
@@ -313,7 +334,8 @@ const componentInternalProperties = {
     'max',
     'value',
     'width',
-    'height'
+    'height',
+    'onProgressBarChanged'
   ],
   Slider: [
     ...uiNodeInternalProperties,
@@ -321,7 +343,8 @@ const componentInternalProperties = {
     'max',
     'value',
     'width',
-    'height'
+    'height',
+    'onSliderChanged'
   ],
   Spinner: [
     ...uiNodeInternalProperties,
@@ -330,7 +353,10 @@ const componentInternalProperties = {
     'type',
     'resourceId',
     'resourcePath',
-    'determinate'
+    'determinate',
+    'onDialogConfirmed',
+    'onDialogCanceled',
+    'onDialogTimeExpired'
   ],
   Dialog: [
     ...uiNodeInternalProperties,
@@ -365,7 +391,8 @@ const componentInternalProperties = {
   Toggle: [
     ...textContainerInternalProperties,
     'height',
-    'on'
+    'on',
+    'onToggleChanged'
   ],
   ToggleGroup: [
     ...uiNodeInternalProperties,
@@ -375,12 +402,18 @@ const componentInternalProperties = {
   ],
   CircleConfirmation: [
     ...uiNodeInternalProperties,
-    'radius'
+    'radius',
+    'onConfirmationCompleted',
+    'onConfirmationCanceled',
+    'onConfirmationUpdated'
   ],
   ColorPicker: [
     ...uiNodeInternalProperties,
     'color',
-    'height'
+    'height',
+    'onColorChanged',
+    'onColorConfirmed',
+    'onColorCanceled'
   ],
   DatePicker: [
     ...uiNodeInternalProperties,
@@ -391,7 +424,9 @@ const componentInternalProperties = {
     'labelSide',
     'yearMin',
     'yearMax',
-    'defaultDate'
+    'defaultDate',
+    'onDateChanged',
+    'onDateConfirmed'
   ],
   TimePicker: [
     ...uiNodeInternalProperties,
@@ -400,7 +435,9 @@ const componentInternalProperties = {
     'showHint',
     'label',
     'labelSide',
-    'defaultTime'
+    'defaultTime',
+    'onTimeChanged',
+    'onTimeConfirmed'
   ]
 };
 

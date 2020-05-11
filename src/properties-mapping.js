@@ -3,7 +3,9 @@ import { getPropertyValue } from './property-mappers.js';
 
 import {
   mapBoundsSize,
-  mapFontParameters
+  mapFontParameters,
+  mapSize,
+  mapProgressColor
 } from './property-mappers.js';
 
 function setPropertyMapper (name) {
@@ -14,18 +16,44 @@ function setPropertyMapper (name) {
 const propertyMapper = {
   // TransformNode
   localPosition: setPropertyMapper('position'),
-  localRotation: (publicProperties) => getPropertyValue(publicProperties, 'rotation'),
-  localScale: (publicProperties) => getPropertyValue(publicProperties, 'scale'),
-  localTransform: (publicProperties) => getPropertyValue(publicProperties, 'transform'),
+  localRotation: setPropertyMapper('rotation'),
+  localScale: setPropertyMapper('scale'),
+  localTransform: setPropertyMapper('transform'),
+  // Audio
+  fileName: setPropertyMapper('path'),
+  soundLooping: setPropertyMapper('looping'),
+  soundMute: setPropertyMapper('mute'),
+  soundPitch: setPropertyMapper('pitch'),
+  soundVolumeLinear: setPropertyMapper('volume'),
+  streamedFileOffset: setPropertyMapper('seekTo'),
+  // Model
+  modelPath: setPropertyMapper('path'),
+  // Quad, Spinner
+  size: mapSize,
+  // Video
+  timedTextPath: setPropertyMapper('subtitlePath'),
+  videoPath: setPropertyMapper('path'),
+  // ListView
+  scrollingEnabled: setPropertyMapper('scrollEnabled'),
+  // DropdownList
+  textSize: setPropertyMapper('fontSize'),
+  listTextSize: setPropertyMapper('listFontSize'),
   // UiNode
-  alignment: (publicProperties) => getPropertyValue(publicProperties, 'anchorPoint'),
+  alignment: setPropertyMapper('anchorPoint'),
+  // RectLayout
+  contentAlignment: setPropertyMapper('alignment'),
+  // Dialog
+  scrolling: setPropertyMapper('scrollEnabled'),
+  // ProgressColor
+  progressColor: mapProgressColor,
   // Text
-  charSpacing: (publicProperties) => getPropertyValue(publicProperties, 'letterSpacing'),
-  textAlignment: (publicProperties) => getPropertyValue(publicProperties, 'textAlign'),
-  textSize: (publicProperties) => getPropertyValue(publicProperties, 'fontSize'),
+  charSpacing: setPropertyMapper('letterSpacing'),
+  textAlignment: setPropertyMapper('textAlign'),
+  textSize: setPropertyMapper('fontSize'),
   boundsSize: mapBoundsSize,
   fontParameters: mapFontParameters,
-  // Button - no property renaming
+  // Button
+  labelSide: setPropertyMapper('textSide')
 }
 
 // Generic function for assembling internal properties from the public properties
