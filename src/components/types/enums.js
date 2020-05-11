@@ -48,6 +48,11 @@ export const Side = {
   top: 'top'
 };
 
+export const LabelDisplayMode = {
+  always: 'always',
+  hover:'hover'
+};
+
 export const SystemIcon = {
   actions: 'actions',
   actionsLeft: 'actions-left',
