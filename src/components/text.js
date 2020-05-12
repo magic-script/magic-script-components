@@ -7,7 +7,7 @@ import mapProperties from '../properties-mapping.js';
 
 export function Text (props) {
   const internalProperties = mapProperties('Text', props);
-  console.log('Text: ', props, internalProperties)
+  // console.log('Text: ', props, internalProperties)
   return React.createElement('text', internalProperties);
 }
 

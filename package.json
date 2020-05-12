@@ -16,7 +16,8 @@
   "scripts": {
     "docs:start": "cd website && npm install && npm run start",
     "docs:build": "cd website && npm install && npm run build",
-    "docs:deploy": "cd website && npm install && npm run deploy"
+    "docs:deploy": "cd website && npm install && npm run deploy",
+    "test": "jest -i --json --outputFile=coverage/coverage.json"
   },
   "repository": {
     "type": "git",
@@ -45,6 +46,7 @@
     "@babel/preset-env": "^7.6.0",
     "@babel/preset-react": "^7.0.0",
     "babel-jest": "^24.9.0",
+    "jest": "^24.8.0",
     "react-test-renderer": "^16.9.0",
     "prop-types": "^15.7.2"
   }

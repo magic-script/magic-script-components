@@ -8,10 +8,7 @@ module.exports = {
   collectCoverage: true,
   coverageDirectory: "coverage",
   collectCoverageFrom: [
-    "src/*.js",
-    "src/core/*.js",
-    "src/platform/**/*.js",
-    "src/react-magic-script/*.js"
+    "src/components/components.js",
   ],
   moduleNameMapper: {
     lumin: "./__mocks__/luminMock.js"

@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text component with fontSize == 0.05 1`] = `
+<text
+  alignment="center-center"
+  allCaps={false}
+  boundsSize={
+    Object {
+      "boundsSize": Array [
+        0,
+        0,
+      ],
+      "wrap": false,
+    }
+  }
+  charSpacing={0}
+  debug={false}
+  enabled={true}
+  fontParameters={
+    Object {
+      "allCaps": false,
+      "fontSize": 0.05,
+      "fontStyle": "normal",
+      "fontWeight": "regular",
+    }
+  }
+  hideBounds={false}
+  lineSpacing={1}
+  localPosition={
+    Array [
+      0,
+      0,
+      0,
+    ]
+  }
+  localRotation={
+    Array [
+      0,
+      0,
+      0,
+      1,
+    ]
+  }
+  localScale={
+    Array [
+      1,
+      1,
+      1,
+    ]
+  }
+  localTransform={
+    Array [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+    ]
+  }
+  skipRaycast={false}
+  textAlignment="left"
+  textColor="white"
+  textSize={0.05}
+  visible={true}
+>
+  MagicScript Components
+</text>
+`;
