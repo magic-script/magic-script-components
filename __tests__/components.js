@@ -5,27 +5,61 @@ import renderer from 'react-test-renderer';
 import { Text } from '../src/components/components.js';
 
 test('Text component', () => {
+  const localPosition = [1, 1, 1];
+  const localRotation = [1, 1, 1, 1];
+  const localScale= [1, 1, 1];
+  const localTransform= [1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4];
+  const alignment = 'top-left';
+  const charSpacing = 0.01;
+  const textAlignment = 'center';
+
+  const boundsSize = {
+    boundsSize: [0.6, 0.4],
+    wrap: true
+  };
+
+  const fontParameters = {
+    fontStyle: 'normal',
+    fontWeight: 'regular',
+    fontSize: 0.05,
+    allCaps: true
+  };
+
   const component = renderer.create(
     <Text
-      position={[1, 1, 1]}
-      rotation={[1, 1, 1, 1]}
-      scale={[1, 1, 1]}
-      transform={[1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4]}
-      anchorPoint='top-left'
-      letterSpacing={0.01}
-      textAlign='center'
-      width={0.6}
-      height={0.4}
-      multiline={true}
-      fontStyle={'normal'}
-      fontWeight={'regular'}
-      fontSize={0.05}
-      allCaps={true}
+      position={localPosition}
+      rotation={localRotation}
+      scale={localScale}
+      transform={localTransform}
+      anchorPoint={alignment}
+      letterSpacing={charSpacing}
+      textAlign={textAlignment}
+      width={boundsSize.boundsSize[0]}
+      height={boundsSize.boundsSize[1]}
+      multiline={boundsSize.wrap}
+      fontStyle={fontParameters.fontStyle}
+      fontWeight={fontParameters.fontWeight}
+      fontSize={fontParameters.fontSize}
+      allCaps={fontParameters.allCaps}
     >MagicScript Components</Text>,
   );
+
   let tree = component.toJSON();
-  console.log(tree);
   expect(tree).toMatchSnapshot();
+
+  expect(tree).toHaveProperty('localPosition', localPosition);
+  expect(tree).toHaveProperty('localRotation', localRotation);
+  expect(tree).toHaveProperty('localScale', localScale);
+  expect(tree).toHaveProperty('localTransform', localTransform);
+  expect(tree).toHaveProperty('alignment', alignment);
+  expect(tree).toHaveProperty('charSpacing', charSpacing);
+  expect(tree).toHaveProperty('textAlignment', textAlignment);
+  expect(tree).toHaveProperty('boundsSize.wrap', true);
+  expect(tree).toHaveProperty('boundsSize.boundsSize', [0.6, 0.4]);
+  expect(tree).toHaveProperty('fontParameters.fontStyle', fontParameters.fontStyle);
+  expect(tree).toHaveProperty('fontParameters.fontWeight', fontParameters.fontWeight);
+  expect(tree).toHaveProperty('fontParameters.fontSize', fontParameters.fontSize);
+  expect(tree).toHaveProperty('fontParameters.allCaps', fontParameters.allCaps);
 });
 
 test('Audio component', () => {
