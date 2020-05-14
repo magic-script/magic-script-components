@@ -6,9 +6,7 @@ import { FontStyle, FontWeight, TextAlign } from './types/enums.js';
 import mapProperties from '../properties-mapping.js';
 
 export function Text (props) {
-  const internalProperties = mapProperties('Text', props);
-  // console.log('Text: ', props, internalProperties)
-  return React.createElement('text', internalProperties);
+  return React.createElement('text', mapProperties('Text', props));
 }
 
 Text.propTypes = {
