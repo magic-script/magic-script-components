@@ -44,7 +44,7 @@ test('Text component', () => {
     >MagicScript Components</Text>,
   );
 
-  let tree = component.toJSON();
+  const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 
   expect(tree).toHaveProperty('localPosition', localPosition);
@@ -63,116 +63,184 @@ test('Text component', () => {
 });
 
 test('Audio component', () => {
+  const fileName = 'resources/audio.mp3';
+  const soundLooping = true;
+  const soundMute = false;
+  const soundPitch = 1;
+  const soundVolumeLinear = 1;
+  const streamedFileOffset = 0.5;
+
   const component = renderer.create(
     <Audio
-    path='resources/audio.mp3'
-    looping={true}
-    mute={false}
-    pitch={1}
-    volume={1}
-    seekTo={0.5}
+      path={fileName}
+      looping={soundLooping}
+      mute={soundMute}
+      pitch={soundPitch}
+      volume={soundVolumeLinear}
+      seekTo={streamedFileOffset}
     />,
   );
-  let tree = component.toJSON();
-  console.log(tree);
+
+  const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
+
+  expect(tree).toHaveProperty('fileName', fileName);
+  expect(tree).toHaveProperty('soundLooping', soundLooping);
+  expect(tree).toHaveProperty('soundMute', soundMute);
+  expect(tree).toHaveProperty('soundPitch', soundPitch);
+  expect(tree).toHaveProperty('soundVolumeLinear', soundVolumeLinear);
+  expect(tree).toHaveProperty('streamedFileOffset', streamedFileOffset);
 });
 
 test('Video component', () => {
+  const videoPath = 'resources/video.mp4';
+  const timedTextPath = 'resources/subtitles.txt';
+
   const component = renderer.create(
     <Video
-      path='resources/video.mp4'
-      subtitlePath='resources/video.txt'
+      path={videoPath}
+      subtitlePath={timedTextPath}
     />
   );
-  let tree = component.toJSON();
-  console.log(tree);
+
+  const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
+
+  expect(tree).toHaveProperty('videoPath', videoPath);
+  expect(tree).toHaveProperty('timedTextPath', timedTextPath);
 });
 
 test('Model component', () => {
+  const modelPath = 'resources/model.glb';
+
   const component = renderer.create(
-    <Model path='resources/model.glb'/>
+    <Model path={modelPath}/>
   );
-  let tree = component.toJSON();
-  console.log(tree);
+
+  const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
+
+  expect(tree).toHaveProperty('modelPath', modelPath);
 });
 
 test('Quad component', () => {
+  const size = [0.5, 0.4];
+
   const component = renderer.create(
-    <Quad width={0.5} height={0.4}/>
+    <Quad
+      width={size[0]}
+      height={size[1]}
+    />
   );
-  let tree = component.toJSON();
-  console.log(tree);
+
+  const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
+
+  expect(tree).toHaveProperty('size', size);
 });
 
 test('Spinner component', () => {
+  const size = [0.3, 0.3];
+
   const component = renderer.create(
-    <Spinner width={0.3} height={0.3}/>
+    <Spinner
+      width={size[0]}
+      height={size[1]}
+    />
   );
-  let tree = component.toJSON();
-  console.log(tree);
+
+  const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
+
+  expect(tree).toHaveProperty('size', size);
 });
 
 test('ListView component', () => {
+  const scrollingEnabled = true;
+
   const component = renderer.create(
-    <ListView scrollEnabled={true}/>
+    <ListView scrollEnabled={scrollingEnabled}/>
   );
-  let tree = component.toJSON();
-  console.log(tree);
+
+  const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
+
+  expect(tree).toHaveProperty('scrollingEnabled', scrollingEnabled);
 });
 
 test('DropdownList component', () => {
+  const textSize = 0.08;
+  const listTextSize = 0.05;
+
   const component = renderer.create(
     <DropdownList
-      fontSize={0.08}
-      listFontSize={0.05}
+      fontSize={textSize}
+      listFontSize={listTextSize}
     />
   );
-  let tree = component.toJSON();
-  console.log(tree);
+
+  const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
+
+  expect(tree).toHaveProperty('textSize', textSize);
+  expect(tree).toHaveProperty('listTextSize', listTextSize);
 });
 
 test('RectLayout component', () => {
+  const contentAlignment = 'top-left';
+
   const component = renderer.create(
-    <RectLayout alignment='top-left'/>
+    <RectLayout alignment={contentAlignment}/>
   );
-  let tree = component.toJSON();
-  console.log(tree);
+
+  const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
+
+  expect(tree).toHaveProperty('contentAlignment', contentAlignment);
 });
 
 test('Dialog component', () => {
+  const scrolling = true;
+
   const component = renderer.create(
-    <Dialog scrollEnabled={true}/>
+    <Dialog scrollEnabled={scrolling}/>
   );
-  let tree = component.toJSON();
-  console.log(tree);
+
+  const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
+
+  expect(tree).toHaveProperty('scrolling', scrolling);
 });
 
 test('ProgressColor component', () => {
+  const progressColor = {
+    beginColor='white',
+    endColor='blue'
+  };
+
   const component = renderer.create(
     <ProgressColor
-      beginColor='white'
-      endColor='blue'
+      beginColor={progressColor.beginColor}
+      endColor={progressColor.endColor}
     />
   );
-  let tree = component.toJSON();
-  console.log(tree);
+
+  const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
-})
+
+  expect(tree).toHaveProperty('progressColor.beginColor', progressColor.beginColor);
+  expect(tree).toHaveProperty('progressColor.endColor', progressColor.endColor);
+});
 
 test('Button component', () => {
+  const labelSide = 'left';
+
   const component = renderer.create(
-    <Button textSide='left'/>
+    <Button textSide={labelSide}/>
   );
-  let tree = component.toJSON();
-  console.log(tree);
+
+  const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
-})
+
+  expect(tree).toHaveProperty('labelSide', labelSide);
+});
