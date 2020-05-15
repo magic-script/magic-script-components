@@ -6,9 +6,7 @@ import { Side, SystemIcon } from './types/enums.js';
 import mapProperties from '../properties-mapping.js';
 
 export function Button (props) {
-  const internalProperties = mapProperties('Button', props);
-  console.log('Button: ', props, internalProperties)
-  return React.createElement('button', internalProperties);
+  return React.createElement('button', mapProperties('Button', props));
 }
 
 Button.propTypes = {
