@@ -57,22 +57,22 @@ test('Text component', () => {
     >MagicScript Components</Text>,
   );
 
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  const json = component.toJSON();
+  expect(json).toMatchSnapshot();
 
-  expect(component).toHaveProperty('localPosition', localPosition);
-  expect(tree).toHaveProperty('localRotation', localRotation);
-  expect(tree).toHaveProperty('localScale', localScale);
-  expect(tree).toHaveProperty('localTransform', localTransform);
-  expect(tree).toHaveProperty('alignment', alignment);
-  expect(tree).toHaveProperty('charSpacing', charSpacing);
-  expect(tree).toHaveProperty('textAlignment', textAlignment);
-  expect(tree).toHaveProperty('boundsSize.wrap', true);
-  expect(tree).toHaveProperty('boundsSize.boundsSize', [0.6, 0.4]);
-  expect(tree).toHaveProperty('fontParameters.fontStyle', fontParameters.fontStyle);
-  expect(tree).toHaveProperty('fontParameters.fontWeight', fontParameters.fontWeight);
-  expect(tree).toHaveProperty('fontParameters.fontSize', fontParameters.fontSize);
-  expect(tree).toHaveProperty('fontParameters.allCaps', fontParameters.allCaps);
+  expect(json.props).toHaveProperty('localPosition', localPosition);
+  expect(json.props).toHaveProperty('localRotation', localRotation);
+  expect(json.props).toHaveProperty('localScale', localScale);
+  expect(json.props).toHaveProperty('localTransform', localTransform);
+  expect(json.props).toHaveProperty('alignment', alignment);
+  expect(json.props).toHaveProperty('charSpacing', charSpacing);
+  expect(json.props).toHaveProperty('textAlignment', textAlignment);
+  expect(json.props).toHaveProperty('boundsSize.wrap', true);
+  expect(json.props).toHaveProperty('boundsSize.boundsSize', [0.6, 0.4]);
+  expect(json.props).toHaveProperty('fontParameters.fontStyle', fontParameters.fontStyle);
+  expect(json.props).toHaveProperty('fontParameters.fontWeight', fontParameters.fontWeight);
+  expect(json.props).toHaveProperty('fontParameters.fontSize', fontParameters.fontSize);
+  expect(json.props).toHaveProperty('fontParameters.allCaps', fontParameters.allCaps);
 });
 
 test('Audio component', () => {
@@ -94,15 +94,15 @@ test('Audio component', () => {
     />,
   );
 
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  const json = component.toJSON();
+  expect(json).toMatchSnapshot();
 
-  expect(tree).toHaveProperty('fileName', fileName);
-  expect(tree).toHaveProperty('soundLooping', soundLooping);
-  expect(tree).toHaveProperty('soundMute', soundMute);
-  expect(tree).toHaveProperty('soundPitch', soundPitch);
-  expect(tree).toHaveProperty('soundVolumeLinear', soundVolumeLinear);
-  expect(tree).toHaveProperty('streamedFileOffset', streamedFileOffset);
+  expect(json.props).toHaveProperty('fileName', fileName);
+  expect(json.props).toHaveProperty('soundLooping', soundLooping);
+  expect(json.props).toHaveProperty('soundMute', soundMute);
+  expect(json.props).toHaveProperty('soundPitch', soundPitch);
+  expect(json.props).toHaveProperty('soundVolumeLinear', soundVolumeLinear);
+  expect(json.props).toHaveProperty('streamedFileOffset', streamedFileOffset);
 });
 
 test('Video component', () => {
@@ -116,11 +116,11 @@ test('Video component', () => {
     />
   );
 
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  const json = component.toJSON();
+  expect(json).toMatchSnapshot();
 
-  expect(tree).toHaveProperty('videoPath', videoPath);
-  expect(tree).toHaveProperty('timedTextPath', timedTextPath);
+  expect(json.props).toHaveProperty('videoPath', videoPath);
+  expect(json.props).toHaveProperty('timedTextPath', timedTextPath);
 });
 
 test('Model component', () => {
@@ -130,10 +130,10 @@ test('Model component', () => {
     <Model path={modelPath}/>
   );
 
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  const json = component.toJSON();
+  expect(json).toMatchSnapshot();
 
-  expect(tree).toHaveProperty('modelPath', modelPath);
+  expect(json.props).toHaveProperty('modelPath', modelPath);
 });
 
 test('Quad component', () => {
@@ -146,10 +146,10 @@ test('Quad component', () => {
     />
   );
 
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  const json = component.toJSON();
+  expect(json).toMatchSnapshot();
 
-  expect(tree).toHaveProperty('size', size);
+  expect(json.props).toHaveProperty('size', size);
 });
 
 test('Spinner component', () => {
@@ -162,10 +162,10 @@ test('Spinner component', () => {
     />
   );
 
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  const json = component.toJSON();
+  expect(json).toMatchSnapshot();
 
-  expect(tree).toHaveProperty('size', size);
+  expect(json.props).toHaveProperty('size', size);
 });
 
 test('ListView component', () => {
@@ -175,10 +175,10 @@ test('ListView component', () => {
     <ListView scrollEnabled={scrollingEnabled}/>
   );
 
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  const json = component.toJSON();
+  expect(json).toMatchSnapshot();
 
-  expect(tree).toHaveProperty('scrollingEnabled', scrollingEnabled);
+  expect(json.props).toHaveProperty('scrollingEnabled', scrollingEnabled);
 });
 
 test('DropdownList component', () => {
@@ -192,11 +192,11 @@ test('DropdownList component', () => {
     />
   );
 
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  const json = component.toJSON();
+  expect(json).toMatchSnapshot();
 
-  expect(tree).toHaveProperty('textSize', textSize);
-  expect(tree).toHaveProperty('listTextSize', listTextSize);
+  expect(json.props).toHaveProperty('textSize', textSize);
+  expect(json.props).toHaveProperty('listTextSize', listTextSize);
 });
 
 test('RectLayout component', () => {
@@ -206,10 +206,10 @@ test('RectLayout component', () => {
     <RectLayout alignment={contentAlignment}/>
   );
 
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  const json = component.toJSON();
+  expect(json).toMatchSnapshot();
 
-  expect(tree).toHaveProperty('contentAlignment', contentAlignment);
+  expect(json.props).toHaveProperty('contentAlignment', contentAlignment);
 });
 
 test('Dialog component', () => {
@@ -219,10 +219,10 @@ test('Dialog component', () => {
     <Dialog scrollEnabled={scrolling}/>
   );
 
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  const json = component.toJSON();
+  expect(json).toMatchSnapshot();
 
-  expect(tree).toHaveProperty('scrolling', scrolling);
+  expect(json.props).toHaveProperty('scrolling', scrolling);
 });
 
 test('ProgressBar component', () => {
@@ -238,11 +238,11 @@ test('ProgressBar component', () => {
     />
   );
 
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  const json = component.toJSON();
+  expect(json).toMatchSnapshot();
 
-  expect(tree).toHaveProperty('progressColor.beginColor', progressColor.beginColor);
-  expect(tree).toHaveProperty('progressColor.endColor', progressColor.endColor);
+  expect(json.props).toHaveProperty('progressColor.beginColor', progressColor.beginColor);
+  expect(json.props).toHaveProperty('progressColor.endColor', progressColor.endColor);
 });
 
 test('Button component', () => {
@@ -252,8 +252,8 @@ test('Button component', () => {
     <Button textSide={labelSide}/>
   );
 
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  const json = component.toJSON();
+  expect(json).toMatchSnapshot();
 
-  expect(tree).toHaveProperty('labelSide', labelSide);
+  expect(json.props).toHaveProperty('labelSide', labelSide);
 });

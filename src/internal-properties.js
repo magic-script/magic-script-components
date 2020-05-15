@@ -87,6 +87,7 @@ const componentInternalProperties = {
   ],
   Audio: [
     ...transformNodeInternalProperties,
+    'fileName',
     'action',
     'soundLooping',
     'soundMute',
