@@ -5,7 +5,7 @@ title: CircleConfirmation
 
 import PlatformTabs from '@theme/PlatformTabs';
 
-<PlatformTabs component='circleconfirmation' />​
+<PlatformTabs extension='gif' component='circleconfirmation' />​
 
 ## Description
 
@@ -15,7 +15,7 @@ CircleConfirmation is the UI element intended to confirm powering off. The user 
 
 ```javascript
 import React from 'react';
-import { View, CircleConfirmation } from 'magic-script-components';
+import { View, CircleConfirmation, Scene, Prism } from 'magic-script-components';
 
 export default class MyApp extends React.Component {
     constructor(props) {
@@ -25,24 +25,28 @@ export default class MyApp extends React.Component {
     onConfirmationCanceled = event => {
         console.log("onConfirmationCanceled");
     };
-    onConfirmationUpdate = event => {
-        console.log("onConfirmationUpdate");
+    onConfirmationUpdated = event => {
+        console.log("onConfirmationUpdated");
     };
-    onConfirmationComplete = event => {
-        console.log("onConfirmationComplete");
+    onConfirmationCompleted = event => {
+        console.log("onConfirmationCompleted");
     };
 
 
     render() {
         return (
-            <View>
-                <CircleConfirmation
-                    onConfirmationCanceled={this.onConfirmationCanceled}
-                    onConfirmationCompleted={this.onConfirmationComplete}
-                    onConfirmationUpdated={this.onConfirmationUpdate}
-                    radius={0.2}
-                ></CircleConfirmation>
-            </View>
+            <Scene>
+                <Prism size={[2, 2, 1]} >
+                    <View name='main-view' alignment={'center-center'}>
+                        <CircleConfirmation
+                            onConfirmationCanceled={this.onConfirmationCanceled}
+                            onConfirmationCompleted={this.onConfirmationCompleted}
+                            onConfirmationUpdated={this.onConfirmationUpdated}
+                            radius={0.2}
+                        ></CircleConfirmation>
+                    </View>
+                </Prism>
+            </Scene>
         );
     }
 }

@@ -15,7 +15,7 @@ The Panel component organizes two or more elements, transforms descendants withi
 
 ```javascript
 import React from "react";
-import { View, Panel, Button } from "magic-script-components";
+import { View, Panel, Button, Scene, Prism } from "magic-script-components";
 
 export default class MyApp extends React.Component {
   render() {
@@ -32,8 +32,9 @@ export default class MyApp extends React.Component {
     };
 
     return (
-      <View name="main-view">
-        <Panel
+      <Scene>
+        <Prism size={[1, 1, 0.2]} >
+          <View name="main-view" alignment={'center-center'}>        <Panel
           localPosition={[0, 0.25, 0]}
           panelShape={aShape}
           cursorTransitionType="closest-edge"
@@ -62,6 +63,8 @@ export default class MyApp extends React.Component {
           />
         </Panel>
       </View>
+      </Prism>
+      </Scene>
     );
   }
 }

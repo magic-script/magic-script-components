@@ -14,8 +14,8 @@ The Image component displays a 2D image from an image file.
 ## Example
 
 ```javascript
-import React from "react";
-import { View, Image, Text } from 'magic-script-components';
+import React from 'react';
+import { View, Image, Text, Scene, Prism } from 'magic-script-components';
 
 export default class MyApp extends React.Component {
   constructor(props) {
@@ -28,17 +28,20 @@ export default class MyApp extends React.Component {
 
   render() {
     return (
-      <View localPosition={[-0.16, 0, 0]}>
-        <Image localPosition={[-0.13, 0, 0]} height={0.17} width={0.17} filePath={require('../resources/contact1.jpg')}/>
-          <Text alignment={'center-left'} textSize={0.07} weight={"bold"} textColor={"#85D834"} localPosition={[0, 0.05, 0]}>
-          Lorem Ipsum
-          </Text>
-        <Image alignment={'center-left'} height={0.07} icon={"send"} localPosition={[0, -0.03, 0]} />
-        <Text alignment={'center-left'} textSize={0.04} textColor={"#e0e0e0"} localPosition={[0.1, -0.03, 0]}>
-          lorem.lpsum@magicleap.com
-          </Text>
-
-      </View>
+      <Scene>
+        <Prism size={[1, 1, 0.2]} >
+          <View name="main-view" alignment={'center-center'} localPosition={[-0.16, 0, 0]}>
+            <Image localPosition={[-0.13, 0, 0]} height={0.17} width={0.17} filePath={require('../../resources/contact1.jpg')} />
+            <Text alignment={'center-left'} textSize={0.07} weight={"bold"} textColor={"#85D834"} localPosition={[0, 0.05, 0]}>
+              Lorem Ipsum
+            </Text>
+            <Image alignment={'center-left'} height={0.07} width={0.07} icon={"send"} localPosition={[0, -0.03, 0]} />
+            <Text alignment={'center-left'} textSize={0.04} textColor={"#e0e0e0"} localPosition={[0.1, -0.03, 0]}>
+              lorem.lpsum@magicleap.com
+            </Text>
+          </View>
+        </Prism>
+      </Scene>
     );
   }
 }
@@ -62,6 +65,8 @@ export default class MyApp extends React.Component {
 
 ---
 
+***Lumin only***
+
 | Name       | Type    | Default Value | Required | Description                                      |
 | ---------- | ------- | :-----------: | :------: | ------------------------------------------------ |
 | resourceId | BigInt  |      n/a      |    N     | The resource ID to render for the image.         |
@@ -80,14 +85,11 @@ export default class MyApp extends React.Component {
 
 ## Element Properties
 
-| Name               | Type    | Default Value | Description                                                                                                                                                     |
-| :----------------- | :------ | :-----------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| color              | vec4    |      n/a      | Sets a color to modulate the image.                                                                                                                             |
-| textCoords         | [vec2]  |      n/a      | Sets the texture coordinates used by the image. The texture coordinates must be a list of four coordinates representing the UV coordinates of the four corners. |
-| opaque             | boolean |      n/a      | Sets the opacity state of the image.                                                                                                                            |
-| ui                 | boolean |      n/a      | Sets whether the image is rendered on UI Layer.                                                                                                                 |
-| imageFrameResource | BigInt  |      n/a      | Sets the model resource used for the image frame. Note: Frame models are expected to be one meter high, one meter wide, and centered at the origin.             |
-| renderResource     | BigInt  |      n/a      | Sets the render resource used for the image.                                                                                                                    |
-
-## Investigate before release:
-- textCoords, opaque, ui, imageFrameResource, renderResource not implemented in Android [[issue tracker](https://github.com/magic-script/magic-script-components/issues/227)]
+| Name               | Type    | Default Value | Description                                                                                                                                                     | Lumin | Android |  IOS  |
+| :----------------- | :------ | :-----------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---: | :-----: | :---: |
+| color              | vec4    |      n/a      | Sets a color to modulate the image.                                                                                                                             | 👍|👍|👍|
+| textCoords         | [vec2]  |      n/a      | Sets the texture coordinates used by the image. The texture coordinates must be a list of four coordinates representing the UV coordinates of the four corners. | 👍| | |
+| opaque             | boolean |      n/a      | Sets the opacity state of the image.                                                                                                                            | 👍|👍 | |
+| ui                 | boolean |      n/a      | Sets whether the image is rendered on UI Layer.                                                                                                                 |👍|||
+| imageFrameResource | BigInt  |      n/a      | Sets the model resource used for the image frame. Note: Frame models are expected to be one meter high, one meter wide, and centered at the origin.             |👍|||
+| renderResource     | BigInt  |      n/a      | Sets the render resource used for the image.                                                                                                                    |👍|||

@@ -15,7 +15,7 @@ Toggle creates a two option, toggleable element. Toggles are generally used in a
 
 ```javascript
 import React from "react";
-import { View, Toggle } from "magic-script-components";
+import { View, Toggle, Scene, Prism } from "magic-script-components";
 
 export default class MyApp extends React.Component {
   onSwitchHandler = eventData => {
@@ -23,32 +23,36 @@ export default class MyApp extends React.Component {
 
   render() {
     return (
-      <View name="main-view">
-        <Toggle
-          localPosition={[0, 0.1, 0]}
-          text="Switch"
-          type="default"
-          height={0.05}
-          textSize={0.05}
-          onToggleChanged={this.onSwitchHandler}
-        />
-        <Toggle
-          localPosition={[0, 0, 0]}
-          text="Radio"
-          type="radio"
-          height={0.08}
-          textSize={0.05}
-          onToggleChanged={this.onSwitchHandler}
-        />
-        <Toggle
-          localPosition={[0, -0.1, 0]}
-          text="Checkbox"
-          type="checkbox"
-          height={0.05}
-          textSize={0.05}
-          onToggleChanged={this.onSwitchHandler}
-        />
-      </View>
+      <Scene>
+        <Prism size={[1, 1, 0.2]} >
+          <View name="main-view" alignment={'center-center'}>
+            <Toggle
+              localPosition={[0, 0.1, 0]}
+              text="Switch"
+              type="default"
+              height={0.05}
+              textSize={0.05}
+              onToggleChanged={this.onSwitchHandler}
+            />
+            <Toggle
+              localPosition={[0, 0, 0]}
+              text="Radio"
+              type="radio"
+              height={0.08}
+              textSize={0.05}
+              onToggleChanged={this.onSwitchHandler}
+            />
+            <Toggle
+              localPosition={[0, -0.1, 0]}
+              text="Checkbox"
+              type="checkbox"
+              height={0.05}
+              textSize={0.05}
+              onToggleChanged={this.onSwitchHandler}
+            />
+          </View>
+        </Prism>
+      </Scene>
     );
   }
 }

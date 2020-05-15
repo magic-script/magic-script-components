@@ -15,52 +15,55 @@ The GridLayout class automatically lays out elements in a grid with optional pad
 
 ```javascript
 import React from "react";
-import { GridLayout, Text, View, Image } from "magic-script-components";
+import { GridLayout, Text, View, Image, Scene, Prism } from "magic-script-components";
 
 export default class MyApp extends React.Component {
   render() {
     return (
-      <View name="main-view" alignment={'center-center'}>
-        <GridLayout alignment={'center-center'} rows={3} defaultItemPadding={[0.02, 0.02, 0.02, 0.02]}>
-          <View>
-            <Image color="#7e7e7e" width={0.3} height={0.3} />
-            <Text text='1' alignment="center-center" textColor="#151515" textSize={0.08} localPosition={[0, 0, 0.02]} />
+      <Scene>
+        <Prism size={[1, 1, 0.2]} >
+          <View name="main-view" alignment={'center-center'}>
+            <GridLayout alignment={'center-center'} rows={3} defaultItemPadding={[0.02, 0.02, 0.02, 0.02]}>
+              <View>
+                <Image color="#7e7e7e" width={0.3} height={0.3} />
+                <Text text='1' alignment="center-center" textColor="#151515" textSize={0.08} localPosition={[0, 0, 0.02]} />
+              </View>
+              <View>
+                <Image color="#2a2a2a" width={0.3} height={0.3} />
+                <Text text='2' alignment="center-center" textColor="#bdbdbd" textSize={0.08} localPosition={[0, 0, 0.02]} />
+              </View>
+              <View>
+                <Image color="#7e7e7e" width={0.3} height={0.3} />
+                <Text text='3' alignment="center-center" textColor="#151515" textSize={0.08} localPosition={[0, 0, 0.02]} />
+              </View>
+              <View>
+                <Image color="#2a2a2a" width={0.3} height={0.3} />
+                <Text text='4' alignment="center-center" textColor="#bdbdbd" textSize={0.08} localPosition={[0, 0, 0.02]} />
+              </View>
+              <View>
+                <Image color="#7e7e7e" width={0.3} height={0.3} />
+                <Text text='5' alignment="center-center" textColor="#151515" textSize={0.08} localPosition={[0, 0, 0.02]} />
+              </View>
+              <View>
+                <Image color="#2a2a2a" width={0.3} height={0.3} />
+                <Text text='6' alignment="center-center" textColor="#bdbdbd" textSize={0.08} localPosition={[0, 0, 0.02]} />
+              </View>
+              <View>
+                <Image color="#7e7e7e" width={0.3} height={0.3} />
+                <Text text='7' alignment="center-center" textColor="#151515" textSize={0.08} localPosition={[0, 0, 0.02]} />
+              </View>
+              <View>
+                <Image color="#2a2a2a" width={0.3} height={0.3} />
+                <Text text='8' alignment="center-center" textColor="#bdbdbd" textSize={0.08} localPosition={[0, 0, 0.02]} />
+              </View>
+              <View>
+                <Image color="#7e7e7e" width={0.3} height={0.3} />
+                <Text text='9' alignment="center-center" textColor="#151515" textSize={0.08} localPosition={[0, 0, 0.02]} />
+              </View>
+            </GridLayout>
           </View>
-          <View>
-            <Image color="#2a2a2a" width={0.3} height={0.3} />
-            <Text text='2' alignment="center-center" textColor="#bdbdbd" textSize={0.08} localPosition={[0, 0, 0.02]} />
-          </View>
-          <View>
-            <Image color="#7e7e7e" width={0.3} height={0.3} />
-            <Text text='3' alignment="center-center" textColor="#151515" textSize={0.08} localPosition={[0, 0, 0.02]} />
-          </View>
-          <View>
-            <Image color="#2a2a2a" width={0.3} height={0.3} />
-            <Text text='4' alignment="center-center" textColor="#bdbdbd" textSize={0.08} localPosition={[0, 0, 0.02]} />
-          </View>
-          <View>
-            <Image color="#7e7e7e" width={0.3} height={0.3} />
-            <Text text='5' alignment="center-center" textColor="#151515" textSize={0.08} localPosition={[0, 0, 0.02]} />
-          </View>
-          <View>
-            <Image color="#2a2a2a" width={0.3} height={0.3} />
-            <Text text='6' alignment="center-center" textColor="#bdbdbd" textSize={0.08} localPosition={[0, 0, 0.02]} />
-          </View>
-          <View>
-            <Image color="#7e7e7e" width={0.3} height={0.3} />
-            <Text text='7' alignment="center-center" textColor="#151515" textSize={0.08} localPosition={[0, 0, 0.02]} />
-          </View>
-          <View>
-            <Image color="#2a2a2a" width={0.3} height={0.3} />
-            <Text text='8' alignment="center-center" textColor="#bdbdbd" textSize={0.08} localPosition={[0, 0, 0.02]} />
-          </View>
-          <View>
-            <Image color="#7e7e7e" width={0.3} height={0.3} />
-            <Text text='9' alignment="center-center" textColor="#151515" textSize={0.08} localPosition={[0, 0, 0.02]} />
-          </View>
-
-        </GridLayout>
-      </View>
+        </Prism>
+      </Scene>
     );
   }
 }
@@ -105,6 +108,3 @@ export default class MyApp extends React.Component {
 ### defaultItemAlignment options: [Alignment](../types/Alignment.md)
 
 ### itemAlignment options: [Alignment](../types/Alignment.md)
-
-## Investigate before release:
-- skipInvisibleItems not implemented in android [[issue tracker](https://github.com/magic-script/magic-script-components/issues/226)]

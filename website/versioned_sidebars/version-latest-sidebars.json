@@ -118,10 +118,6 @@
         },
         {
           "type": "doc",
-          "id": "version-latest/components/portalIcon"
-        },
-        {
-          "type": "doc",
           "id": "version-latest/components/progressBar"
         },
         {
@@ -327,6 +323,10 @@
         {
           "type": "doc",
           "id": "version-latest/events/eventDataTypes"
+        },
+        {
+          "type": "doc",
+          "id": "version-latest/events/eventsExample"
         }
       ]
     }

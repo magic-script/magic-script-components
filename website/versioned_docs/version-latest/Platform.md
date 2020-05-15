@@ -11,16 +11,20 @@ The Platform component allows you to get information about platform your app run
 
 ```javascript
 import React from "react";
-import { Platform, Text } from "magic-script-components";
+import { Platform, Text, Scene, Prism } from "magic-script-components";
 
 export default class MyApp extends React.Component {
   render() {
     return (
-      <View name="main-view">
-        <Text textSize={0.1} textColor={[0.5, 0.5, 0.5, 0.5]}>
-          {(Platform.OS, Platform.Version)}
-        </Text>
-      </View>
+      <Scene>
+        <Prism size={[1, 1, 0.2]} >
+          <View name="main-view">
+            <Text textSize={0.1} textColor={[0.5, 0.5, 0.5, 0.5]}>
+              {(Platform.OS, Platform.Version)}
+            </Text>
+          </View>
+        </Prism>
+      </Scene>
     );
   }
 }

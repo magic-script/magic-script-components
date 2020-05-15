@@ -31,7 +31,6 @@ module.exports = {
       "components/model",
       "components/pageView",
       "components/panel",
-      "components/portalIcon",
       "components/progressBar",
       "components/quad",
       "components/rectLayout",
@@ -84,7 +83,8 @@ module.exports = {
     Events: [
       "events/commonEvents",
       "events/componentEvents",
-      "events/eventDataTypes"
+      "events/eventDataTypes",
+      "events/eventsExample"
     ]
   }
 };

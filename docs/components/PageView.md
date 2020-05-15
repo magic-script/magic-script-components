@@ -15,17 +15,17 @@ The PageView component is used to switch between displaying individual page node
 
 ```javascript
 import React from 'react';
-import { View, PageView, GridLayout, Image } from 'magic-script-components';
+import { View, PageView, GridLayout, Image, Scene, Prism } from 'magic-script-components';
 
 export default class MyApp extends React.Component {
   constructor(props) {
     super(props);
     this.state = { pageIndex: 0, photoIndex: 0 };
     this.photos = [
-      { image: require('../resources/contact1.jpg') },
-      { image: require('../resources/contact2.jpg') },
-      { image: require('../resources/contact1.jpg') },
-      { image: require('../resources/contact2.jpg') }
+      { image: require('../../resources/contact1.jpg') },
+      { image: require('../../resources/contact2.jpg') },
+      { image: require('../../resources/contact1.jpg') },
+      { image: require('../../resources/contact2.jpg') }
     ];
   }
 
@@ -49,12 +49,16 @@ export default class MyApp extends React.Component {
   render() {
     const { pageIndex, photoIndex } = this.state
     return (
-      <View name='main-view'>
-        <PageView alignment={'center-center'} name='page-view' visiblePage={pageIndex}>
-          {this.renderGalleryPage()}
-          {this.renderPhotoPage(photoIndex)}
-        </PageView>
-      </View>
+      <Scene>
+        <Prism size={[1, 1, 0.2]} >
+          <View name="main-view" alignment={'center-center'}>
+            <PageView alignment={'center-center'} name='page-view' visiblePage={pageIndex}>
+              {this.renderGalleryPage()}
+              {this.renderPhotoPage(photoIndex)}
+            </PageView>
+          </View>
+        </Prism>
+      </Scene>
     );
   }
 }
