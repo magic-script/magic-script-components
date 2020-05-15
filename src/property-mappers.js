@@ -39,7 +39,7 @@ function mapSize (publicProperties) {
     const width = getPropertyValue(publicProperties, 'width', 0);
     const height = getPropertyValue(publicProperties, 'height', 0);
 
-    return { width, height };
+    return [ width, height ];
 }
 
 function mapProgressColor (publicProperties) {

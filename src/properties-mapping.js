@@ -44,7 +44,7 @@ const propertyMapper = {
   contentAlignment: setPropertyMapper('alignment'),
   // Dialog
   scrolling: setPropertyMapper('scrollEnabled'),
-  // ProgressColor
+  // ProgressBar
   progressColor: mapProgressColor,
   // Text
   charSpacing: setPropertyMapper('letterSpacing'),
