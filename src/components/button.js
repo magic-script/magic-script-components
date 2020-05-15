@@ -317,5 +317,5 @@ Button.defaultProps = {
   textColor: 'white',
   textSide: Side.left,
   iconColor: 'white',
-  iconSize: 0.08,
+  iconSize: [0.05, 0.05],
 }
