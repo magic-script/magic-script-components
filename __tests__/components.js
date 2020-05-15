@@ -2,7 +2,20 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import { Text } from '../src/components/components.js';
+import {
+    Audio,
+    Model,
+    Video,
+    Quad,
+    Spinner,
+    ListView,
+    DropdownList,
+    RectLayout,
+    Dialog,
+    ProgressBar,
+    Button,
+    Text
+} from '../src/components/components.js';
 
 test('Text component', () => {
   const localPosition = [1, 1, 1];
@@ -47,7 +60,7 @@ test('Text component', () => {
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 
-  expect(tree).toHaveProperty('localPosition', localPosition);
+  expect(component).toHaveProperty('localPosition', localPosition);
   expect(tree).toHaveProperty('localRotation', localRotation);
   expect(tree).toHaveProperty('localScale', localScale);
   expect(tree).toHaveProperty('localTransform', localTransform);
@@ -212,14 +225,14 @@ test('Dialog component', () => {
   expect(tree).toHaveProperty('scrolling', scrolling);
 });
 
-test('ProgressColor component', () => {
+test('ProgressBar component', () => {
   const progressColor = {
-    beginColor='white',
-    endColor='blue'
+    beginColor: 'white',
+    endColor: 'blue'
   };
 
   const component = renderer.create(
-    <ProgressColor
+    <ProgressBar
       beginColor={progressColor.beginColor}
       endColor={progressColor.endColor}
     />

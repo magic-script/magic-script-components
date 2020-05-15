@@ -1,5 +1,208 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Audio component 1`] = `
+<audio
+  looping={true}
+  mute={false}
+  path="resources/audio.mp3"
+  pitch={1}
+  seekTo={0.5}
+  volume={1}
+/>
+`;
+
+exports[`Button component 1`] = `
+<button
+  alignment="center-center"
+  debug={false}
+  enabled={true}
+  height={0}
+  hideBounds={false}
+  iconColor="white"
+  iconSize={0.08}
+  labelSide="left"
+  localPosition={
+    Array [
+      0,
+      0,
+      0,
+    ]
+  }
+  localRotation={
+    Array [
+      0,
+      0,
+      0,
+      1,
+    ]
+  }
+  localScale={
+    Array [
+      1,
+      1,
+      1,
+    ]
+  }
+  localTransform={
+    Array [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+    ]
+  }
+  skipRaycast={false}
+  textColor="white"
+  textSize={0.08}
+  visible={true}
+  width={0}
+>
+  
+</button>
+`;
+
+exports[`Dialog component 1`] = `
+<dialog
+  scrollEnabled={true}
+/>
+`;
+
+exports[`DropdownList component 1`] = `
+<dropdownList
+  fontSize={0.08}
+  listFontSize={0.05}
+/>
+`;
+
+exports[`ListView component 1`] = `
+<listView
+  scrollEnabled={true}
+/>
+`;
+
+exports[`Model component 1`] = `
+<model
+  path="resources/model.glb"
+/>
+`;
+
+exports[`ProgressBar component 1`] = `
+<progressBar
+  beginColor="white"
+  endColor="blue"
+/>
+`;
+
+exports[`Quad component 1`] = `
+<quad
+  height={0.4}
+  width={0.5}
+/>
+`;
+
+exports[`RectLayout component 1`] = `
+<rectLayout
+  alignment="top-left"
+/>
+`;
+
+exports[`Spinner component 1`] = `
+<spinner
+  height={0.3}
+  width={0.3}
+/>
+`;
+
+exports[`Text component 1`] = `
+<text
+  alignment="top-left"
+  allCaps={true}
+  boundsSize={
+    Object {
+      "boundsSize": Array [
+        0.6,
+        0.4,
+      ],
+      "wrap": true,
+    }
+  }
+  charSpacing={0.01}
+  debug={false}
+  enabled={true}
+  fontParameters={
+    Object {
+      "allCaps": true,
+      "fontSize": 0.05,
+      "fontStyle": "normal",
+      "fontWeight": "regular",
+    }
+  }
+  hideBounds={false}
+  lineSpacing={1}
+  localPosition={
+    Array [
+      1,
+      1,
+      1,
+    ]
+  }
+  localRotation={
+    Array [
+      1,
+      1,
+      1,
+      1,
+    ]
+  }
+  localScale={
+    Array [
+      1,
+      1,
+      1,
+    ]
+  }
+  localTransform={
+    Array [
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      3,
+      3,
+      3,
+      3,
+      4,
+      4,
+      4,
+      4,
+    ]
+  }
+  skipRaycast={false}
+  textAlignment="center"
+  textColor="white"
+  textSize={0.05}
+  visible={true}
+>
+  MagicScript Components
+</text>
+`;
+
 exports[`Text component with fontSize == 0.05 1`] = `
 <text
   alignment="center-center"
@@ -76,4 +279,11 @@ exports[`Text component with fontSize == 0.05 1`] = `
 >
   MagicScript Components
 </text>
+`;
+
+exports[`Video component 1`] = `
+<video
+  path="resources/video.mp4"
+  subtitlePath="resources/subtitles.txt"
+/>
 `;
