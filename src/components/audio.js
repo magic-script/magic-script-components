@@ -9,11 +9,17 @@ export function Audio (props) {
   return React.createElement('audio', mapProperties('Audio', props));
 }
 
-// TODO:
-// Audio.propTypes = {
-//     ...UiNode.PropTypes,
-// }
+Audio.propTypes = {
+    ...UiNode.PropTypes,
+    
+    path: PropTypes.string.isRequired,
+    looping: PropTypes.bool,
+    mute: PropTypes.bool,
+    pitch: PropTypes.number,
+    volume: PropTypes.number,
+    seekTo: PropTypes.number
+}
 
-// Audio.defaultProps = {
-//     ...UiNode.DefaultProps,
-// }
+Audio.defaultProps = {
+    ...UiNode.DefaultProps,
+}

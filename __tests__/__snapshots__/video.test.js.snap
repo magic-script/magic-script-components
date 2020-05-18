@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Video component 1`] = `
+<video
+  timedTextPath="resources/subtitles.txt"
+  videoPath="resources/video.mp4"
+/>
+`;

@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListView component 1`] = `
+<listView
+  scrollingEnabled={true}
+/>
+`;

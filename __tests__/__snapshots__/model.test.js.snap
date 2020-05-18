@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Model component 1`] = `
+<model
+  modelPath="resources/model.glb"
+/>
+`;

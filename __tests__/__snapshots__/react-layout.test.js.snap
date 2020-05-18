@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RectLayout component 1`] = `
+<rectLayout
+  contentAlignment="top-left"
+/>
+`;

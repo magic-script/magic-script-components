@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DropdownList component 1`] = `
+<dropdownList
+  listTextSize={0.05}
+  textSize={0.08}
+/>
+`;

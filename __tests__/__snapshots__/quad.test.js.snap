@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Quad component 1`] = `
+<quad
+  size={
+    Array [
+      0.5,
+      0.4,
+    ]
+  }
+/>
+`;
