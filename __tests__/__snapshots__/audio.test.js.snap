@@ -6,16 +6,16 @@ exports[`Audio component 1`] = `
   fileName="resources/audio.mp3"
   localPosition={
     Array [
-      1,
-      1,
-      1,
+      0,
+      0,
+      0,
     ]
   }
   localRotation={
     Array [
-      1,
-      1,
-      1,
+      0,
+      0,
+      0,
       1,
     ]
   }
@@ -29,21 +29,21 @@ exports[`Audio component 1`] = `
   localTransform={
     Array [
       1,
+      0,
+      0,
+      0,
+      0,
       1,
+      0,
+      0,
+      0,
+      0,
       1,
-      1,
-      2,
-      2,
-      2,
-      2,
-      3,
-      3,
-      3,
-      3,
-      4,
-      4,
-      4,
-      4,
+      0,
+      0,
+      0,
+      0,
+      0,
     ]
   }
   skipRaycast={false}

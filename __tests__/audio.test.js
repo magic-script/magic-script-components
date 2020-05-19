@@ -3,7 +3,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import  * as TransformNodeProps from './utils/transform-node-props';
 import { Audio } from '../src/components/components.js';
 
 test('Audio component', () => {
@@ -16,12 +15,6 @@ test('Audio component', () => {
 
   const component = renderer.create(
     <Audio
-      // TransformNodeProps
-      position={TransformNodeProps.localPosition}
-      rotation={TransformNodeProps.localRotation}
-      scale={TransformNodeProps.localScale}
-      transform={TransformNodeProps.localTransform}
-
       path={fileName}
       looping={soundLooping}
       mute={soundMute}
@@ -33,12 +26,6 @@ test('Audio component', () => {
 
   const json = component.toJSON();
   expect(json).toMatchSnapshot();
-
-  // TransformNodeProps
-  expect(json.props).toHaveProperty('localPosition', TransformNodeProps.localPosition);
-  expect(json.props).toHaveProperty('localRotation', TransformNodeProps.localRotation);
-  expect(json.props).toHaveProperty('localScale', TransformNodeProps.localScale);
-  expect(json.props).toHaveProperty('localTransform', TransformNodeProps.localTransform);
 
   expect(json.props).toHaveProperty('fileName', fileName);
   expect(json.props).toHaveProperty('soundLooping', soundLooping);
