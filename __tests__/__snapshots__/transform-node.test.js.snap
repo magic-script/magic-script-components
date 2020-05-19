@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Transform component 1`] = `
+<audio
+  debug={false}
+  fileName=""
+  localPosition={
+    Array [
+      1,
+      1,
+      1,
+    ]
+  }
+  localRotation={
+    Array [
+      1,
+      1,
+      1,
+      1,
+    ]
+  }
+  localScale={
+    Array [
+      1,
+      1,
+      1,
+    ]
+  }
+  localTransform={
+    Array [
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      3,
+      3,
+      3,
+      3,
+      4,
+      4,
+      4,
+      4,
+    ]
+  }
+  skipRaycast={false}
+  visible={true}
+/>
+`;

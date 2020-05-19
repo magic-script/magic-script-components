@@ -3,7 +3,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
 
-import  * as TransformNodeProps from './utils/transform-node-props';
 import { Text } from "../src/components/components.js";
 
 test("Text component", () => {
@@ -25,12 +24,6 @@ test("Text component", () => {
 
   const component = renderer.create(
     <Text
-      // TransformNodeProps
-      position={TransformNodeProps.localPosition}
-      rotation={TransformNodeProps.localRotation}
-      scale={TransformNodeProps.localScale}
-      transform={TransformNodeProps.localTransform}
-
       anchorPoint={alignment}
       letterSpacing={charSpacing}
       textAlign={textAlignment}
@@ -48,12 +41,6 @@ test("Text component", () => {
 
   const json = component.toJSON();
   expect(json).toMatchSnapshot();
-
-  // TransformNodeProps
-  expect(json.props).toHaveProperty('localPosition', TransformNodeProps.localPosition);
-  expect(json.props).toHaveProperty('localRotation', TransformNodeProps.localRotation);
-  expect(json.props).toHaveProperty('localScale', TransformNodeProps.localScale);
-  expect(json.props).toHaveProperty('localTransform', TransformNodeProps.localTransform);
 
   expect(json.props).toHaveProperty("alignment", alignment);
   expect(json.props).toHaveProperty("charSpacing", charSpacing);
