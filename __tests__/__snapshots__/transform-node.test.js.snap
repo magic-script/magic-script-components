@@ -2,6 +2,7 @@
 
 exports[`Transform component 1`] = `
 <audio
+  action="stop"
   debug={false}
   fileName=""
   localPosition={
@@ -47,6 +48,11 @@ exports[`Transform component 1`] = `
     ]
   }
   skipRaycast={false}
+  soundLooping={false}
+  soundMute={false}
+  soundPitch={0}
+  soundVolumeLinear={1}
+  streamedFileOffset={0}
   visible={true}
 />
 `;
