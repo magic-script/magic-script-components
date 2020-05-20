@@ -276,3 +276,10 @@ export const SystemIcon = {
   zoomIn: 'zoom-in',
   zoomOut: 'zoom-out'
 };
+
+export const AudioAction = {
+  pause: 'pause',
+  start: 'start',
+  stop: 'stop',
+  resume: 'resume'
+};

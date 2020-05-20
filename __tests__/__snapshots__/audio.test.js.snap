@@ -2,6 +2,7 @@
 
 exports[`Audio component 1`] = `
 <audio
+  action="stop"
   debug={false}
   fileName="resources/audio.mp3"
   localPosition={

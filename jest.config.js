@@ -7,13 +7,11 @@ module.exports = {
   clearMocks: true,
   collectCoverage: true,
   coverageDirectory: "coverage",
-  collectCoverageFrom: [
-    "src/components/components.js",
-  ],
+  collectCoverageFrom: ["src/*.js", "src/components/*.js"],
   moduleNameMapper: {
-    lumin: "./__mocks__/luminMock.js"
+    lumin: "./__mocks__/luminMock.js",
   },
   testEnvironment: "node",
   testMatch: ["**/__tests__/*.js"],
-  testPathIgnorePatterns: ["/node_modules/", ".eslintrc.js"]
+  testPathIgnorePatterns: ["/node_modules/", ".eslintrc.js"],
 };
