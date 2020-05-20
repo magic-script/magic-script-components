@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`RectLayout component 1`] = `
+exports[`RectLayout component should contain mapped properties 1`] = `
 <rectLayout
   contentAlignment="top-left"
 />

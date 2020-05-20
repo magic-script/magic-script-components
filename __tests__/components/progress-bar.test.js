@@ -3,9 +3,10 @@
 import React from "react";
 import renderer from "react-test-renderer";
 
-import { ProgressBar } from "../src/components/components.js";
+import { ProgressBar } from "../../src/components/components.js";
 
-test("ProgressBar component", () => {
+describe("ProgressBar component", () => {
+  test("should contain mapped properties", () => {
   const progressColor = {
     beginColor: "white",
     endColor: "blue",
@@ -29,4 +30,5 @@ test("ProgressBar component", () => {
     "progressColor.endColor",
     progressColor.endColor
   );
+});
 });

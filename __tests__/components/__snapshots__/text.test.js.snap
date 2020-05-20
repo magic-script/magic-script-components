@@ -1,20 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button component 1`] = `
-<button
-  alignment="center-center"
+exports[`Text component should contain mapped properties 1`] = `
+<text
+  alignment="top-left"
+  allCaps={true}
+  boundsSize={
+    Object {
+      "boundsSize": Array [
+        0.6,
+        0.4,
+      ],
+      "wrap": true,
+    }
+  }
+  charSpacing={0.01}
   debug={false}
   enabled={true}
-  height={0}
-  hideBounds={false}
-  iconColor="white"
-  iconSize={
-    Array [
-      0.05,
-      0.05,
-    ]
+  fontParameters={
+    Object {
+      "allCaps": true,
+      "fontSize": 0.05,
+      "fontStyle": "normal",
+      "fontWeight": "regular",
+    }
   }
-  labelSide="left"
+  hideBounds={false}
+  lineSpacing={1}
   localPosition={
     Array [
       0,
@@ -58,11 +69,11 @@ exports[`Button component 1`] = `
     ]
   }
   skipRaycast={false}
+  textAlignment="center"
   textColor="white"
-  textSize={0.08}
+  textSize={0.05}
   visible={true}
-  width={0}
 >
-
-</button>
+  MagicScript Components
+</text>
 `;

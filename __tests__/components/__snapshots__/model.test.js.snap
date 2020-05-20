@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Model component 1`] = `
+exports[`Model component should contain mapped properties 1`] = `
 <model
   modelPath="resources/model.glb"
 />

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ProgressBar component 1`] = `
+exports[`ProgressBar component should contain mapped properties 1`] = `
 <progressBar
   progressColor={
     Object {
