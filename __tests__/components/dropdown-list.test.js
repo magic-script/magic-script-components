@@ -3,7 +3,7 @@
 import React from "react";
 import renderer from "react-test-renderer";
 
-import { DropdownList } from "../src/components/components.js";
+import { DropdownList } from "../../src/components/components.js";
 
 test("DropdownList component", () => {
   const textSize = 0.08;

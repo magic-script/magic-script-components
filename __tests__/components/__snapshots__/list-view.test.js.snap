@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ListView component 1`] = `
+exports[`ListView component should contain mapped properties 1`] = `
 <listView
   scrollingEnabled={true}
 />

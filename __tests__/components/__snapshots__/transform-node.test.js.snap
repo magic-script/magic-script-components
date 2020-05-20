@@ -1,22 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Audio component 1`] = `
+exports[`TransformNode component should contain mapped properties 1`] = `
 <audio
   action="stop"
   debug={false}
-  fileName="resources/audio.mp3"
+  fileName=""
   localPosition={
     Array [
-      0,
-      0,
-      0,
+      1,
+      1,
+      1,
     ]
   }
   localRotation={
     Array [
-      0,
-      0,
-      0,
+      1,
+      1,
+      1,
       1,
     ]
   }
@@ -30,29 +30,29 @@ exports[`Audio component 1`] = `
   localTransform={
     Array [
       1,
-      0,
-      0,
-      0,
-      0,
       1,
-      0,
-      0,
-      0,
-      0,
       1,
-      0,
-      0,
-      0,
-      0,
-      0,
+      1,
+      2,
+      2,
+      2,
+      2,
+      3,
+      3,
+      3,
+      3,
+      4,
+      4,
+      4,
+      4,
     ]
   }
   skipRaycast={false}
-  soundLooping={true}
+  soundLooping={false}
   soundMute={false}
-  soundPitch={1}
+  soundPitch={0}
   soundVolumeLinear={1}
-  streamedFileOffset={0.5}
+  streamedFileOffset={0}
   visible={true}
 />
 `;

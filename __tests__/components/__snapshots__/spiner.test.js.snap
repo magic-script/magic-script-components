@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Spinner component 1`] = `
+exports[`Spiner component should contain mapped properties 1`] = `
 <spinner
   size={
     Array [

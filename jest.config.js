@@ -12,6 +12,6 @@ module.exports = {
     lumin: "./__mocks__/luminMock.js",
   },
   testEnvironment: "node",
-  testMatch: ["**/__tests__/*.js"],
+  testMatch: ["**/__tests__/**/*.js"],
   testPathIgnorePatterns: ["/node_modules/", ".eslintrc.js"],
 };

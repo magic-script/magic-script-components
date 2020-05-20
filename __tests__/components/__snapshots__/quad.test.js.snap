@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Quad component 1`] = `
+exports[`Quad component should contain mapped properties 1`] = `
 <quad
   size={
     Array [

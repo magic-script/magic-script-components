@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Video component 1`] = `
+exports[`Video component should contain mapped properties 1`] = `
 <video
   timedTextPath="resources/subtitles.txt"
   videoPath="resources/video.mp4"
