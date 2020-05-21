@@ -52,7 +52,7 @@ Audio.propTypes = {
   spatialSoundRadiation: PropTypes.exact({
     channel: PropTypes.number,
     innerAngle: PropTypes.number,
-    outerAngle: PropTypes.numbr,
+    outerAngle: PropTypes.number,
     outerGain: PropTypes.number,
     outerGainHf: PropTypes.number,
   }),
@@ -64,10 +64,10 @@ Audio.propTypes = {
     gainMf: PropTypes.number,
   }),
 
-  // should be hidden from end-user
+  // should this be hidden from end-user?
   loadFile: PropTypes.bool,
-  absolutePath: PropTypes.string,
-  descriptor: PropTypes.object,
+  absolutePath: PropTypes.bool,
+  descriptor: PropTypes.number,
   basePath: PropTypes.string,
   autoDestroy: PropTypes.bool,
   dynamicDecode: PropTypes.bool,
