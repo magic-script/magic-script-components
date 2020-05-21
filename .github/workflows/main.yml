@@ -3,7 +3,7 @@ name: CI
 on: [push, pull_request]
 
 jobs:
-  unit-tests:
+  test:
 
     runs-on: ubuntu-latest
     
@@ -13,6 +13,14 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '10.x'
-    - name: npm install
+    - name: npm install, npm test
       run: |
         npm install
+        npm test
+    - uses: actions/upload-artifact@master
+      with:
+        name: code-coverage-artifact
+        path: coverage
+    - uses: codecov/codecov-action@v1.0.3
+      with:
+        token: ${{secrets.CODECOV_TOKEN}}
