@@ -14,10 +14,32 @@ import React from "react";
 import { Scene, Prism } from "magic-script-components";
 ​
 export default class MyApp extends React.Component {
+
+  onModeChangedHandler = (event) => {
+    console.log("onModeChangedHandler", event);
+  }
+
+  onRotationChangedHandler = (event) => {
+    console.log("onRotationChangedHandler", event);
+  }
+
+  onScaleChangedHandler = (event) => {
+    console.log("onScaleChangedHandler", event);
+  }
+
+  onPositionChangedHandler = (event) => {
+    console.log("onPositionChangedHandler", event);
+  }
+
   render() {
     return (
       <Scene>
-        <Prism size={[1.0, 1.0, 1.0]} interactions={["scale", "position"]}>
+        <Prism size={[1.0, 1.0, 1.0]} 
+        interactions={["scale", "position"]}
+        onModeChanged={this.onModeChangedHandler}
+        onRotationChanged={this.onRotationChangedHandler}
+        onScaleChanged={this.onScaleChangedHandler}
+        onPositionChanged={this.onPositionChangedHandler}>
 ​
         </Prism>
       </Scene>
