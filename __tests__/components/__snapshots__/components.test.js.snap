@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components CircleConfirmation should create component 1`] = `<circleConfirmation />`;
+
+exports[`Components ColorPicker should create component 1`] = `<colorPicker />`;
+
+exports[`Components Content should create component 1`] = `<content />`;
+
+exports[`Components DatePicker should create component 1`] = `<datePicker />`;
+
+exports[`Components DropdownListItem should create component 1`] = `<dropdownListItem />`;
+
+exports[`Components GridLayout should create component 1`] = `<gridLayout />`;
+
+exports[`Components Image should create component 1`] = `<image />`;
+
+exports[`Components Light should create component 1`] = `<light />`;
+
+exports[`Components Line should create component 1`] = `<line />`;
+
+exports[`Components LinearLayout should create component 1`] = `<linearLayout />`;
+
+exports[`Components ListViewItem should create component 1`] = `<listViewItem />`;
+
+exports[`Components PageView should create component 1`] = `<pageView />`;
+
+exports[`Components Panel should create component 1`] = `<panel />`;
+
+exports[`Components PortalIcon should create component 1`] = `<portalIcon />`;
+
+exports[`Components Prism should create component 1`] = `<prism />`;
+
+exports[`Components Scene should create component 1`] = `<scene />`;
+
+exports[`Components ScrollBar should create component 1`] = `<scrollBar />`;
+
+exports[`Components ScrollView should create component 1`] = `<scrollView />`;
+
+exports[`Components Slider should create component 1`] = `<slider />`;
+
+exports[`Components Tab should create component 1`] = `<tab />`;
+
+exports[`Components TextEdit should create component 1`] = `<textEdit />`;
+
+exports[`Components TimePicker should create component 1`] = `<timePicker />`;
+
+exports[`Components Toggle should create component 1`] = `<toggle />`;
+
+exports[`Components ToggleGroup should create component 1`] = `<toggleGroup />`;
+
+exports[`Components View should create component 1`] = `<view />`;
+
+exports[`Components WebView should create component 1`] = `<webView />`;
