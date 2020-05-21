@@ -36,6 +36,7 @@ export default class MyApp extends React.Component {
       <Scene>
         <Prism size={[1.0, 1.0, 1.0]} 
         interactions={["scale", "position"]}
+        title={"Main prism"}
         onModeChanged={this.onModeChangedHandler}
         onRotationChanged={this.onRotationChangedHandler}
         onScaleChanged={this.onScaleChangedHandler}
