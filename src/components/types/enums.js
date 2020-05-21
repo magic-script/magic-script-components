@@ -283,3 +283,14 @@ export const AudioAction = {
   stop: 'stop',
   resume: 'resume'
 };
+
+export const VideoAction = {
+  pause: 'pause',
+  start: 'start',
+  stop: 'stop'
+};
+
+export const VideoViewMode = {
+  fullArea: 'full-area',
+  leftRight: 'left-right'
+};

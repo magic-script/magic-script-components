@@ -7,11 +7,11 @@ import { Video } from "../../src/components/components.js";
 
 describe("Video component", () => {
   test("should contain mapped properties", () => {
-    const videoPath = "resources/video.mp4";
-    const timedTextPath = "resources/subtitles.txt";
+    const videoPath = "file_path/file.name";
+    const timedTextPath = "file_path/subtitle_file.name";
 
     const component = renderer.create(
-      <Video path={videoPath} subtitlePath={timedTextPath} />
+      <Video path={videoPath} subtitlePath={timedTextPath} v />
     );
 
     const json = component.toJSON();
