@@ -294,3 +294,23 @@ export const VideoViewMode = {
   fullArea: 'full-area',
   leftRight: 'left-right'
 };
+
+export const ButtonType = {
+  icon: 'icon',
+  iconWithLabel: 'icon-with-label',
+  text: 'text',
+  textWithIcon: 'text-with-icon'
+};
+
+export const DialogType = {
+  custom: 'custom',
+  timed: 'timed',
+  noAction: 'no-action',
+  singleAction: 'single-action',
+  dualAction: 'dual-action'
+};
+
+export const DialogLayout = {
+  standard: 'standard',
+  wide: 'wide'
+};
