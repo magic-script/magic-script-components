@@ -304,7 +304,7 @@ Button.propTypes = {
       SystemIcon.zoomIn,
       SystemIcon.zoomOut
   ])
-}
+};
 
 Button.defaultProps = {
   ...UiNode.DefaultProps,
@@ -318,4 +318,4 @@ Button.defaultProps = {
   textSide: Side.left,
   iconColor: 'white',
   iconSize: [0.05, 0.05],
-}
+};
