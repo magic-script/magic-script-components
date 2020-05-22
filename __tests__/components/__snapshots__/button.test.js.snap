@@ -63,6 +63,6 @@ exports[`Button component should contain mapped properties 1`] = `
   visible={true}
   width={0}
 >
-
+  
 </button>
 `;
