@@ -46,6 +46,7 @@
     "@babel/preset-react": "^7.0.0",
     "babel-jest": "^24.9.0",
     "jest": "^24.8.0",
+    "react": "^16.9.0",
     "react-test-renderer": "^16.9.0",
     "prop-types": "^15.7.2"
   }
