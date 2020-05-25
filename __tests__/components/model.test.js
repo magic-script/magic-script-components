@@ -7,7 +7,7 @@ import { Model } from "../../src/components/components.js";
 
 describe("Model component", () => {
   test("should contain mapped properties", () => {
-    const modelPath = "resources/model.glb";
+    const modelPath = "file_path/file.name";
 
     const component = renderer.create(<Model path={modelPath} />);
 
