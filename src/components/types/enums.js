@@ -314,3 +314,15 @@ export const DialogLayout = {
   standard: 'standard',
   wide: 'wide'
 };
+
+export const CursorEdgeScrollMode = {
+  always: 'always',
+  auto: 'auto',
+  never: 'never'
+};
+
+export const ScrollBarVisibility = {
+  always: 'always',
+  auto: 'auto',
+  off: 'off'
+};
