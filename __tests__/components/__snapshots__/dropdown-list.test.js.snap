@@ -2,7 +2,69 @@
 
 exports[`DropdownList component 1`] = `
 <dropdownList
+  alignment="center-center"
+  debug={false}
+  enabled={true}
+  hideBounds={false}
+  iconColor="white"
+  iconSize={
+    Array [
+      0.05,
+      0.05,
+    ]
+  }
+  listMaxHeight={0}
   listTextSize={0.05}
+  localPosition={
+    Array [
+      0,
+      0,
+      0,
+    ]
+  }
+  localRotation={
+    Array [
+      0,
+      0,
+      0,
+      1,
+    ]
+  }
+  localScale={
+    Array [
+      1,
+      1,
+      1,
+    ]
+  }
+  localTransform={
+    Array [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+    ]
+  }
+  maxCharacterLimit={0}
+  multiSelect={false}
+  selected={Array []}
+  showList={false}
+  skipRaycast={false}
+  text=""
+  textColor="white"
   textSize={0.08}
+  visible={true}
 />
 `;
