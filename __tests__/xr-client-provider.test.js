@@ -1,3 +1,5 @@
+// Copyright (c) 2020 Magic Leap, Inc. All Rights Reserved
+
 import { XrClientProvider } from "../src/xr-client-provider";
 
 const XRClientMock = {};

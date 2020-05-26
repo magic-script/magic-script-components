@@ -1,3 +1,5 @@
+// Copyright (c) 2020 Magic Leap, Inc. All Rights Reserved
+
 import { Platform } from "../src/platform";
 
 const NativePlatformInformationMock = {

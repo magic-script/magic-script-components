@@ -1,3 +1,5 @@
+// Copyright (c) 2020 Magic Leap, Inc. All Rights Reserved
+
 import { PlaneDetector } from "../src/plane-detector";
 
 const NativePlaneDetectorMock = {
