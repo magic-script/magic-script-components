@@ -17,7 +17,7 @@ Model.propTypes = {
   animationPauseState: PropTypes.bool,
   animationPlaybackSpeed: PropTypes.number,
   animationTime: PropTypes.number,
-  modelResourceId: PropTypes.number, // should be map into the resourceId
+  resourceId: PropTypes.number, 
   importScale: PropTypes.number,
   animation: PropTypes.shape({
     resourceId: PropTypes.number,

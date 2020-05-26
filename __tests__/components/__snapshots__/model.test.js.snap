@@ -59,7 +59,7 @@ exports[`Model component should contain mapped properties 1`] = `
   }
   materialPath=""
   modelPath="file_path/file.name"
-  modelResourceId={0}
+  modelResourceId={12345}
   skipRaycast={false}
   texture={
     Object {

@@ -19,16 +19,9 @@ Video.propTypes = {
   subtitlePath: PropTypes.string,
   volume: TypeValidator.range(0.0, 1.0),
   seekTo: PropTypes.number,
-  action: PropTypes.oneOf([
-    VideoAction.pause,
-    VideoAction.start,
-    VideoAction.stop
-  ]),
+  action: PropTypes.oneOf(Object.values(VideoAction)),
 
-  viewMode: PropTypes.oneOf([
-    ViewMode.fullArea,
-    ViewMode.leftRight
-  ]),
+  viewMode: PropTypes.oneOf(Object.values(ViewMode)),
   width: PropTypes.number,
   height: PropTypes.number
 };

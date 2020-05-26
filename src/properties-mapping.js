@@ -28,6 +28,7 @@ const propertyMapper = {
   streamedFileOffset: setPropertyMapper('seekTo'),
   // Model
   modelPath: setPropertyMapper('path'),
+  modelResourceId: setPropertyMapper('resourceId'),
   // Quad, Spinner
   size: mapSize,
   // Video

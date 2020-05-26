@@ -47,7 +47,7 @@ describe("Text component", () => {
     expect(json.props).toHaveProperty("charSpacing", charSpacing);
     expect(json.props).toHaveProperty("textAlignment", textAlignment);
     expect(json.props).toHaveProperty("boundsSize.wrap", true);
-    expect(json.props).toHaveProperty("boundsSize.boundsSize", [0.6, 0.4]);
+    expect(json.props).toHaveProperty("boundsSize.boundsSize", boundsSize.boundsSize);
     expect(json.props).toHaveProperty(
       "fontParameters.fontStyle",
       fontParameters.fontStyle

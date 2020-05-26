@@ -8,12 +8,14 @@ import { Model } from "../../src/components/components.js";
 describe("Model component", () => {
   test("should contain mapped properties", () => {
     const modelPath = "file_path/file.name";
+    const resourceId = 12345;
 
-    const component = renderer.create(<Model path={modelPath} />);
+    const component = renderer.create(<Model path={modelPath} resourceId={resourceId} />);
 
     const json = component.toJSON();
     expect(json).toMatchSnapshot();
 
     expect(json.props).toHaveProperty("modelPath", modelPath);
+    expect(json.props).toHaveProperty("modelResourceId", resourceId);
   });
 });

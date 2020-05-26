@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { TransformNode } from "./types/transform-node";
 
 import mapProperties from "../properties-mapping.js";
-import { TypeValidator } from './util/type-validators.js';
+import { TypeValidator } from "./util/type-validators.js";
 
 import { AudioAction } from "./types/enums.js";
 
@@ -20,17 +20,12 @@ Audio.propTypes = {
   pitch: PropTypes.number,
   volume: TypeValidator.range(0.0, 1.0),
   seekTo: PropTypes.number,
-  action: PropTypes.oneOf([
-    AudioAction.pause,
-    AudioAction.resume,
-    AudioAction.start,
-    AudioAction.stop,
-  ]),
+  action: PropTypes.oneOf(Object.values(AudioAction)),
 
   spatialSoundEnable: PropTypes.bool,
   spatialSoundDirection: PropTypes.exact({
     channel: PropTypes.number,
-    channelDirection: PropTypes.arrayOf(TypeValidator.arrayOf(4, 'number')),
+    channelDirection: PropTypes.arrayOf(TypeValidator.arrayOf(4, "number")),
   }),
   spatialSoundDirectSendLevels: PropTypes.exact({
     channel: PropTypes.number,
@@ -64,7 +59,6 @@ Audio.propTypes = {
     gainMf: PropTypes.number,
   }),
 
-  // should this be hidden from end-user?
   loadFile: PropTypes.bool,
   absolutePath: PropTypes.bool,
   descriptor: PropTypes.number,
@@ -76,11 +70,11 @@ Audio.propTypes = {
 Audio.defaultProps = {
   ...TransformNode.DefaultProps,
 
-  path: '',
+  path: "",
   looping: false,
   mute: false,
   pitch: 0,
   volume: 1.0,
   seekTo: 0.0,
-  action: AudioAction.stop
+  action: AudioAction.stop,
 };

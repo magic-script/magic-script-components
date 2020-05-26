@@ -31,7 +31,7 @@ Dialog.propTypes = {
   cancelIcon: PropTypes.oneOf(Object.values(SystemIcon)),
   confirmText: PropTypes.string,
   confirmIcon: PropTypes.oneOf(Object.values(SystemIcon)),
-  expireTime: TypeValidator.range(0, 1000), // value in range 0 to 1000 seconds
+  expireTime: TypeValidator.range(0, 1000) // value in range 0 to 1000 seconds
 };
 
 Dialog.defaultProps = {
@@ -46,9 +46,9 @@ Dialog.defaultProps = {
   type: DialogType.dualAction,
 
   buttonType: ButtonType.iconWithLabel,
-  cancelText: "",
+  cancelText: "Cancel",
   cancelIcon: SystemIcon.chevronUp,
-  confirmText: "",
+  confirmText: "Confirm",
   confirmIcon: SystemIcon.chevronDown,
-  expireTime: 0,
+  expireTime: 0
 };
