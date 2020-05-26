@@ -290,7 +290,7 @@ export const VideoAction = {
   stop: 'stop'
 };
 
-export const VideoViewMode = {
+export const ViewMode = {
   fullArea: 'full-area',
   leftRight: 'left-right'
 };

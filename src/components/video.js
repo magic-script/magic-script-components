@@ -5,7 +5,7 @@ import { TypeValidator } from './util/type-validators.js';
 import { UiNode } from './types/ui-node.js';
 
 import mapProperties from '../properties-mapping.js';
-import { VideoAction, VideoViewMode } from './types/enums.js';
+import { VideoAction, ViewMode } from './types/enums.js';
 
 export function Video (props) {
   return React.createElement('video', mapProperties('Video', props));
@@ -26,8 +26,8 @@ Video.propTypes = {
   ]),
 
   viewMode: PropTypes.oneOf([
-    VideoViewMode.fullArea,
-    VideoViewMode.leftRight
+    ViewMode.fullArea,
+    ViewMode.leftRight
   ]),
   width: PropTypes.number,
   height: PropTypes.number
@@ -43,7 +43,7 @@ Video.defaultProps = {
   seekTo: 0.0,
   action: VideoAction.stop,
 
-  viewMode: VideoViewMode.fullArea,
+  viewMode: ViewMode.fullArea,
   width: 0.0,
   height: 0.0
 };

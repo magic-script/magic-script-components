@@ -3,7 +3,8 @@
 import React from "react";
 import renderer from "react-test-renderer";
 
-import { Quad } from "../../src/components/components.js";
+import { Quad, View } from "../../src/components/components.js";
+import { ViewMode } from "../../src/components/types/enums.js";
 
 describe("Quad component", () => {
   test("should contain mapped properties", () => {

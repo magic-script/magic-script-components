@@ -2,11 +2,65 @@
 
 exports[`Quad component should contain mapped properties 1`] = `
 <quad
+  debug={false}
+  localPosition={
+    Array [
+      0,
+      0,
+      0,
+    ]
+  }
+  localRotation={
+    Array [
+      0,
+      0,
+      0,
+      1,
+    ]
+  }
+  localScale={
+    Array [
+      1,
+      1,
+      1,
+    ]
+  }
+  localTransform={
+    Array [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+    ]
+  }
   size={
     Array [
       0.5,
       0.4,
     ]
   }
+  skipRaycast={false}
+  texCoords={
+    Array [
+      0,
+      0,
+      0,
+      0,
+    ]
+  }
+  viewMode="full-area"
+  visible={true}
 />
 `;
