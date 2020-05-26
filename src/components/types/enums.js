@@ -326,3 +326,8 @@ export const ScrollBarVisibility = {
   auto: 'auto',
   off: 'off'
 };
+
+export const SpinnerType = {
+  spriteAnimation: 'sprite-animation',
+  particlePackage: 'particle-package'
+};

@@ -2,11 +2,62 @@
 
 exports[`Spiner component should contain mapped properties 1`] = `
 <spinner
+  alignment="center-center"
+  debug={false}
+  determinate={false}
+  enabled={true}
+  hideBounds={false}
+  localPosition={
+    Array [
+      0,
+      0,
+      0,
+    ]
+  }
+  localRotation={
+    Array [
+      0,
+      0,
+      0,
+      1,
+    ]
+  }
+  localScale={
+    Array [
+      1,
+      1,
+      1,
+    ]
+  }
+  localTransform={
+    Array [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+    ]
+  }
   size={
     Array [
       0.3,
       0.3,
     ]
   }
+  skipRaycast={false}
+  type="sprite-animation"
+  value={0}
+  visible={true}
 />
 `;
