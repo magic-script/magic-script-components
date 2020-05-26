@@ -2,6 +2,62 @@
 
 exports[`RectLayout component should contain mapped properties 1`] = `
 <rectLayout
+  alignment="center-center"
   contentAlignment="top-left"
+  debug={false}
+  enabled={true}
+  hideBounds={false}
+  localPosition={
+    Array [
+      0,
+      0,
+      0,
+    ]
+  }
+  localRotation={
+    Array [
+      0,
+      0,
+      0,
+      1,
+    ]
+  }
+  localScale={
+    Array [
+      1,
+      1,
+      1,
+    ]
+  }
+  localTransform={
+    Array [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+    ]
+  }
+  padding={
+    Array [
+      0,
+      0,
+      0,
+      0,
+    ]
+  }
+  skipRaycast={false}
+  visible={true}
 />
 `;
