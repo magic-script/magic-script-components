@@ -8,53 +8,53 @@ import {
   mapProgressColor
 } from './property-mappers.js';
 
-function setPropertyMapper (propertyName) {
-  return (properties) => getPropertyValue(properties, propertyName);
+function setPropertyMapper (propertyName, oldApiPropertyName) {
+  return (properties) => getPropertyValue(properties, oldApiPropertyName, getPropertyValue(properties, propertyName))
 }
 
 // Provides map-function or name for each renamed internalProperty !
 const propertyMapper = {
   // TransformNode
-  localPosition: setPropertyMapper('position'),
-  localRotation: setPropertyMapper('rotation'),
-  localScale: setPropertyMapper('scale'),
-  localTransform: setPropertyMapper('transform'),
+  localPosition: setPropertyMapper('position', 'localPosition'),
+  localRotation: setPropertyMapper('rotation', 'localRotation'),
+  localScale: setPropertyMapper('scale', 'localScale'),
+  localTransform: setPropertyMapper('transform', 'localTransform'),
   // Audio
-  fileName: setPropertyMapper('path'),
-  soundLooping: setPropertyMapper('looping'),
-  soundMute: setPropertyMapper('mute'),
-  soundPitch: setPropertyMapper('pitch'),
-  soundVolumeLinear: setPropertyMapper('volume'),
-  streamedFileOffset: setPropertyMapper('seekTo'),
+  fileName: setPropertyMapper('path', 'fileName'),
+  soundLooping: setPropertyMapper('looping', 'soundLooping'),
+  soundMute: setPropertyMapper('mute', 'soundMute'),
+  soundPitch: setPropertyMapper('pitch', 'soundPitch'),
+  soundVolumeLinear: setPropertyMapper('volume', 'soundVolumeLinear'),
+  streamedFileOffset: setPropertyMapper('seekTo', 'streamedFileOffset'),
   // Model
-  modelPath: setPropertyMapper('path'),
-  modelResourceId: setPropertyMapper('resourceId'),
+  modelPath: setPropertyMapper('path', 'modelPath'),
+  modelResourceId: setPropertyMapper('resourceId', 'modelResourceId'),
   // Quad, Spinner
   size: mapSize,
   // Video
-  timedTextPath: setPropertyMapper('subtitlePath'),
-  videoPath: setPropertyMapper('path'),
+  timedTextPath: setPropertyMapper('subtitlePath', 'timedTextPath'),
+  videoPath: setPropertyMapper('path', 'videoPath'),
   // ListView
-  scrollingEnabled: setPropertyMapper('scrollEnabled'),
+  scrollingEnabled: setPropertyMapper('scrollEnabled', 'scrollingEnabled'),
   // DropdownList
-  textSize: setPropertyMapper('fontSize'),
-  listTextSize: setPropertyMapper('listFontSize'),
+  textSize: setPropertyMapper('fontSize', 'textSize'),
+  listTextSize: setPropertyMapper('listFontSize', 'listTextSize'),
   // UiNode
-  alignment: setPropertyMapper('anchorPoint'),
+  alignment: setPropertyMapper('anchorPoint', 'alignment'),
   // RectLayout
-  contentAlignment: setPropertyMapper('alignment'),
+  contentAlignment: setPropertyMapper('alignment', 'contentAlignment'),
   // Dialog
-  scrolling: setPropertyMapper('scrollEnabled'),
+  scrolling: setPropertyMapper('scrollEnabled', 'scrolling'),
   // ProgressBar
   progressColor: mapProgressColor,
   // Text
-  charSpacing: setPropertyMapper('letterSpacing'),
-  textAlignment: setPropertyMapper('textAlign'),
-  textSize: setPropertyMapper('fontSize'),
+  charSpacing: setPropertyMapper('letterSpacing', 'charSpacing'),
+  textAlignment: setPropertyMapper('textAlign', 'textAlignment'),
+  textSize: setPropertyMapper('fontSize', 'textSize'),
   boundsSize: mapBoundsSize,
   fontParameters: mapFontParameters,
   // Button
-  labelSide: setPropertyMapper('textSide')
+  labelSide: setPropertyMapper('textSide', 'labelSide'),
 }
 
 // Generic function for assembling internal properties from the public properties
