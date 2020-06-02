@@ -24,6 +24,7 @@ const uiNodeInternalProperties = [
   'alignment',
   'enabled',
   'hideBounds',
+  'onClick',
   'onActivate',
   'onPressed',
   'onLongPress',
