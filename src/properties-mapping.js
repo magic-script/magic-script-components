@@ -31,14 +31,14 @@ const propertyMapper = {
   streamedFileOffset: setPropertyMapper('seekTo', 'streamedFileOffset'),
   // Model
   modelPath: setPropertyMapper('path', 'modelPath'),
-  modelResourceId: setPropertyMapper('resourceId', ''),
+  modelResourceId: setPropertyMapper('resourceId', 'modelResourceId'),
   // Quad, Spinner
   size: mapSize,
   // Video
   timedTextPath: setPropertyMapper('subtitlePath', 'timedTextPath'),
   videoPath: setPropertyMapper('path', 'videoPath'),
   // ListView
-  scrollingEnabled: setPropertyMapper('scrollEnabled', ''),
+  scrollingEnabled: setPropertyMapper('scrollEnabled', 'scrollingEnabled'),
   // DropdownList
   textSize: setPropertyMapper('fontSize', 'textSize'),
   listTextSize: setPropertyMapper('listFontSize', 'listTextSize'),
@@ -47,7 +47,7 @@ const propertyMapper = {
   // RectLayout
   contentAlignment: setPropertyMapper('alignment', 'contentAlignment'),
   // Dialog
-  scrolling: setPropertyMapper('scrollEnabled', ''),
+  scrolling: setPropertyMapper('scrollEnabled', 'scrolling'),
   // ProgressBar
   progressColor: mapProgressColor,
   // Text
