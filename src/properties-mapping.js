@@ -8,8 +8,11 @@ import {
   mapProgressColor
 } from './property-mappers.js';
 
-function setPropertyMapper (propertyName, oldApiPropertyName) {
-  return (properties) => getPropertyValue(properties, oldApiPropertyName, getPropertyValue(properties, propertyName))
+function setPropertyMapper (publicPropertyName, internalPropertyName) {
+  return (properties) => {
+    const value = getPropertyValue(properties, publicPropertyName);
+    return value !== undefined ? value : getPropertyValue(properties, internalPropertyName);
+  }
 }
 
 // Provides map-function or name for each renamed internalProperty !
