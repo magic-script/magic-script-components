@@ -2,7 +2,7 @@
 
 exports[`RectLayout component should contain mapped properties 1`] = `
 <rectLayout
-  alignment="top-left"
+  alignment="center-center"
   contentAlignment="top-left"
   debug={false}
   enabled={true}
