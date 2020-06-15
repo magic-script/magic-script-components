@@ -8,56 +8,55 @@ import {
   mapProgressColor
 } from './property-mappers.js';
 
-function setPropertyMapper (publicPropertyName, internalPropertyName) {
+function setPropertyMapper (publicPropertyName) {
   return (properties) => {
-    const value = getPropertyValue(properties, publicPropertyName);
-    return value !== undefined ? value : getPropertyValue(properties, internalPropertyName);
+    return getPropertyValue(properties, publicPropertyName);
   }
 }
 
 // Provides map-function or name for each renamed internalProperty !
 const propertyMapper = {
   // TransformNode
-  localPosition: setPropertyMapper('position', 'localPosition'),
-  localRotation: setPropertyMapper('rotation', 'localRotation'),
-  localScale: setPropertyMapper('scale', 'localScale'),
-  localTransform: setPropertyMapper('transform', 'localTransform'),
+  localPosition: setPropertyMapper('position'),
+  localRotation: setPropertyMapper('rotation'),
+  localScale: setPropertyMapper('scale'),
+  localTransform: setPropertyMapper('transform'),
   // Audio
-  fileName: setPropertyMapper('path', 'fileName'),
-  soundLooping: setPropertyMapper('looping', 'soundLooping'),
-  soundMute: setPropertyMapper('mute', 'soundMute'),
-  soundPitch: setPropertyMapper('pitch', 'soundPitch'),
-  soundVolumeLinear: setPropertyMapper('volume', 'soundVolumeLinear'),
-  streamedFileOffset: setPropertyMapper('seekTo', 'streamedFileOffset'),
+  fileName: setPropertyMapper('path'),
+  soundLooping: setPropertyMapper('looping'),
+  soundMute: setPropertyMapper('mute'),
+  soundPitch: setPropertyMapper('pitch'),
+  soundVolumeLinear: setPropertyMapper('volume'),
+  streamedFileOffset: setPropertyMapper('seekTo'),
   // Model
-  modelPath: setPropertyMapper('path', 'modelPath'),
-  modelResourceId: setPropertyMapper('resourceId', 'modelResourceId'),
+  modelPath: setPropertyMapper('path'),
+  modelResourceId: setPropertyMapper('resourceId'),
   // Quad, Spinner
   size: mapSize,
   // Video
-  timedTextPath: setPropertyMapper('subtitlePath', 'timedTextPath'),
-  videoPath: setPropertyMapper('path', 'videoPath'),
+  timedTextPath: setPropertyMapper('subtitlePath'),
+  videoPath: setPropertyMapper('path'),
   // ListView
-  scrollingEnabled: setPropertyMapper('scrollEnabled', 'scrollingEnabled'),
+  scrollingEnabled: setPropertyMapper('scrollEnabled'),
   // DropdownList
-  textSize: setPropertyMapper('fontSize', 'textSize'),
-  listTextSize: setPropertyMapper('listFontSize', 'listTextSize'),
+  textSize: setPropertyMapper('fontSize'),
+  listTextSize: setPropertyMapper('listFontSize'),
   // UiNode
-  alignment: setPropertyMapper('anchorPoint', 'alignment'),
+  alignment: setPropertyMapper('anchorPoint'),
   // RectLayout
-  contentAlignment: setPropertyMapper('alignment', 'contentAlignment'),
+  contentAlignment: setPropertyMapper('alignment'),
   // Dialog
-  scrolling: setPropertyMapper('scrollEnabled', 'scrolling'),
+  scrolling: setPropertyMapper('scrollEnabled'),
   // ProgressBar
   progressColor: mapProgressColor,
   // Text
-  charSpacing: setPropertyMapper('letterSpacing', 'charSpacing'),
-  textAlignment: setPropertyMapper('textAlign', 'textAlignment'),
-  textSize: setPropertyMapper('fontSize', 'textSize'),
+  charSpacing: setPropertyMapper('letterSpacing'),
+  textAlignment: setPropertyMapper('textAlign'),
+  textSize: setPropertyMapper('fontSize'),
   boundsSize: mapBoundsSize,
   fontParameters: mapFontParameters,
   // Button
-  labelSide: setPropertyMapper('textSide', 'labelSide'),
+  labelSide: setPropertyMapper('textSide'),
 }
 
 // Generic function for assembling internal properties from the public properties
@@ -81,13 +80,6 @@ function mapComponentProperties (internalPropertiesNames, publicProperties) {
 function setComponentPropertyMapper (componentName) {
   return (publicProperties) => mapComponentProperties(componentInternalProperties[componentName], publicProperties);
 }
-
-// Custom mapping function for Button component
-// function mapButtonProperties(publicProperties) {
-//   const internalProperties = {};
-//   // Custom mapping code from publicProperties ...
-//   return internalProperties;
-// }
 
 // Provides map-function for each component
 const componentPropertyMapper = {
