@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dialog component should contain mapped properties 1`] = `
+<dialog
+  alignment="center-center"
+  buttonType="icon-with-label"
+  cancelIcon="chevron-up"
+  cancelText="Cancel"
+  confirmIcon="chevron-down"
+  confirmText="Confirm"
+  debug={false}
+  enabled={true}
+  expireTime={0}
+  hideBounds={false}
+  layout="standard"
+  localPosition={
+    Array [
+      0,
+      0,
+      0,
+    ]
+  }
+  localRotation={
+    Array [
+      0,
+      0,
+      0,
+      1,
+    ]
+  }
+  localScale={
+    Array [
+      1,
+      1,
+      1,
+    ]
+  }
+  localTransform={
+    Array [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+    ]
+  }
+  message=""
+  scrolling={true}
+  skipRaycast={false}
+  title=""
+  type="dual-action"
+  visible={true}
+/>
+`;

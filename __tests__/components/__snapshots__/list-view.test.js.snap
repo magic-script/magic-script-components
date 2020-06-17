@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListView component should contain mapped properties 1`] = `
+<listView
+  alignment="center-center"
+  cursorEdgeScrollMode="never"
+  debug={false}
+  defaultItemAlignment="top-left"
+  defaultItemPadding={
+    Array [
+      0,
+      0,
+      0,
+      0,
+    ]
+  }
+  enabled={true}
+  height={0}
+  hideBounds={false}
+  itemAlignment={Array []}
+  itemPadding={Array []}
+  localPosition={
+    Array [
+      0,
+      0,
+      0,
+    ]
+  }
+  localRotation={
+    Array [
+      0,
+      0,
+      0,
+      1,
+    ]
+  }
+  localScale={
+    Array [
+      1,
+      1,
+      1,
+    ]
+  }
+  localTransform={
+    Array [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+    ]
+  }
+  orientation="horizontal"
+  scrollBarVisibility="off"
+  scrollSpeed={0}
+  scrollToItem={0}
+  scrollValue={0}
+  scrollingEnabled={true}
+  skipInvisibleItems={false}
+  skipRaycast={false}
+  visible={true}
+  width={0}
+/>
+`;

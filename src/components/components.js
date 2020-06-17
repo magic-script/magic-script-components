@@ -1,24 +1,15 @@
 import React from 'react'
 
-export function Button (props) {
-    // return (<button {...props} />);
-    return React.createElement('button', props);
-}
+export { Button } from './button.js';
 
-export function Model (props) {
-    // return (<model {...props} />);
-    return React.createElement('model', props);
-}
+export { Model } from './model.js';
 
 export function Slider (props) {
     // return (<slider {...props} />);
     return React.createElement('slider', props);
 }
 
-export function Text (props) {
-    // return (<text {...props} />);
-    return React.createElement('text', props);
-}
+export { Text } from './text.js';
 
 export function View (props) {
     // return (<view {...props} />);
@@ -54,25 +45,16 @@ export function ScrollView (props) {
     return React.createElement('scrollView', props);
 }
 
-export function ListView (props) {
-    // return (<listView {...props} />);
-    return React.createElement('listView', props);
-}
+export { ListView } from './list-view.js';
 
 export function ListViewItem (props) {
     // return (<listViewItem {...props} />);
     return React.createElement('listViewItem', props);
 }
 
-export function Spinner (props) {
-    // return (<spinner {...props} />);
-    return React.createElement('spinner', props);
-}
+export { Spinner } from './spinner.js';
 
-export function ProgressBar (props) {
-    // return (<progressBar {...props} />);
-    return React.createElement('progressBar', props);
-}
+export { ProgressBar } from './progress-bar.js';
 
 export function GridLayout (props) {
     // return (<gridLayout {...props} />);
@@ -84,15 +66,9 @@ export function LinearLayout (props) {
     return React.createElement('linearLayout', props);
 }
 
-export function RectLayout (props) {
-    // return (<rectLayout {...props} />);
-    return React.createElement('rectLayout', props);
-}
+export { RectLayout } from './rect-layout.js';
 
-export function DropdownList (props) {
-    // return (<dropdownList {...props} />);
-    return React.createElement('dropdownList', props);
-}
+export { DropdownList } from './dropdown-list.js';
 
 export function DropdownListItem (props) {
     // return (<dropdownListItem {...props} />);
@@ -109,10 +85,7 @@ export function Tab (props) {
     return React.createElement('tab', props);
 }
 
-export function Dialog (props) {
-    // return (<dialog {...props} />);
-    return React.createElement('dialog', props);
-}
+export { Dialog } from './dialog.js';
 
 export function PageView (props) {
     // return (<pageView {...props} />);
@@ -154,20 +127,11 @@ export function Content (props) {
     return React.createElement('content', props);
 }
 
-export function Quad (props) {
-    // return (<quad {...props} />);
-    return React.createElement('quad', props);
-}
+export { Quad } from './quad.js';
 
-export function Video (props) {
-    // return (<video {...props} />);
-    return React.createElement('video', props);
-}
+export { Video } from './video.js';
 
-export function Audio (props) {
-    // return (<audio {...props} />);
-    return React.createElement('audio', props);
-}
+export { Audio } from './audio.js';
 
 export function Light (props) {
     // return (<light {...props} />);

@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Video component should contain mapped properties 1`] = `
+<video
+  action="stop"
+  debug={false}
+  height={0}
+  localPosition={
+    Array [
+      0,
+      0,
+      0,
+    ]
+  }
+  localRotation={
+    Array [
+      0,
+      0,
+      0,
+      1,
+    ]
+  }
+  localScale={
+    Array [
+      1,
+      1,
+      1,
+    ]
+  }
+  localTransform={
+    Array [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+    ]
+  }
+  looping={false}
+  seekTo={0}
+  skipRaycast={false}
+  timedTextPath="file_path/subtitle_file.name"
+  videoPath="file_path/file.name"
+  viewMode="full-area"
+  visible={true}
+  volume={1}
+  width={0}
+/>
+`;

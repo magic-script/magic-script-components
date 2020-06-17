@@ -7,16 +7,11 @@ module.exports = {
   clearMocks: true,
   collectCoverage: true,
   coverageDirectory: "coverage",
-  collectCoverageFrom: [
-    "src/*.js",
-    "src/core/*.js",
-    "src/platform/**/*.js",
-    "src/react-magic-script/*.js"
-  ],
+  collectCoverageFrom: ["src/*.js", "src/components/*.js"],
   moduleNameMapper: {
-    lumin: "./__mocks__/luminMock.js"
+    lumin: "./__mocks__/luminMock.js",
   },
   testEnvironment: "node",
-  testMatch: ["**/__tests__/*.js"],
-  testPathIgnorePatterns: ["/node_modules/", ".eslintrc.js"]
+  testMatch: ["**/__tests__/**/*.js"],
+  testPathIgnorePatterns: ["/node_modules/", ".eslintrc.js"],
 };

@@ -1,12 +1,13 @@
 {
   "name": "magic-script-components",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "MagicScript Component Framework",
   "module": "index.js",
   "files": [
-    "src/components.js",
+    "src/components",
     "src/plane-detector.js",
     "src/platform.js",
+    "src/properties-mapping.js",
     "src/file-system.js",
     "src/xr-client-provider.js",
     "index.d.ts",
@@ -16,7 +17,8 @@
   "scripts": {
     "docs:start": "cd website && npm install && npm run start",
     "docs:build": "cd website && npm install && npm run build",
-    "docs:deploy": "cd website && npm install && npm run deploy"
+    "docs:deploy": "cd website && npm install && npm run deploy",
+    "test": "jest -i --json --outputFile=coverage/coverage.json"
   },
   "repository": {
     "type": "git",
@@ -43,6 +45,9 @@
     "@babel/preset-env": "^7.6.0",
     "@babel/preset-react": "^7.0.0",
     "babel-jest": "^24.9.0",
-    "react-test-renderer": "^16.9.0"
+    "jest": "^24.8.0",
+    "react": "^16.9.0",
+    "react-test-renderer": "^16.9.0",
+    "prop-types": "^15.7.2"
   }
 }
