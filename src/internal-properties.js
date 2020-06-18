@@ -440,7 +440,9 @@ const componentInternalProperties = {
     'defaultTime',
     'onTimeChanged',
     'onTimeConfirmed'
-  ]
+  ],
+  PortalIcon: [],
+  Content: []
 };
 
 export { componentInternalProperties }

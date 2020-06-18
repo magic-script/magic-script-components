@@ -37,26 +37,6 @@ exports[`DropdownList component 1`] = `
       1,
     ]
   }
-  localTransform={
-    Array [
-      1,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-    ]
-  }
   maxCharacterLimit={0}
   multiSelect={false}
   selected={Array []}
