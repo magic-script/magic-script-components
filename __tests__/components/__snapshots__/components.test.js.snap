@@ -66,8 +66,6 @@ exports[`Components ColorPicker should create component 1`] = `
 />
 `;
 
-exports[`Components Content should create component 1`] = `<content />`;
-
 exports[`Components DatePicker should create component 1`] = `
 <datePicker
   alignment="center-center"

@@ -25,7 +25,6 @@ import {
   TimePicker,
   DatePicker,
   CircleConfirmation,
-  Content,
   Light,
   Line,
   Prism,
@@ -196,14 +195,6 @@ describe("Components", () => {
   describe("CircleConfirmation", () => {
     test("should create component", () => {
       const component = renderer.create(<CircleConfirmation />);
-      const json = component.toJSON();
-      expect(json).toMatchSnapshot();
-    });
-  });
-
-  describe("Content", () => {
-    test("should create component", () => {
-      const component = renderer.create(<Content />);
       const json = component.toJSON();
       expect(json).toMatchSnapshot();
     });

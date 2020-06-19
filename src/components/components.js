@@ -4,7 +4,6 @@ export { Audio } from './audio.js';
 export { Button } from './button.js';
 export { CircleConfirmation } from './circle-confirmation.js';
 export { ColorPicker } from './color-picker.js';
-export { Content } from './content.js';
 export { DatePicker } from './date-picker.js';
 export { Dialog } from './dialog.js';
 export { DropdownList } from './dropdown-list.js';
