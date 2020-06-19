@@ -269,6 +269,11 @@ const componentInternalProperties = {
     'onSelectionChanged',
     'onListVisibilityChanged'
   ],
+  DropdownListItem: [
+      ...uiNodeInternalProperties,
+      'id',
+      'label'
+  ],
   Text: [
     ...textContainerInternalProperties,
     'allCaps',

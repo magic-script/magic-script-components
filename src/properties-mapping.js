@@ -91,7 +91,7 @@ const componentPropertyMapper = {
   DatePicker: setComponentPropertyMapper('DatePicker'),
   Dialog: setComponentPropertyMapper('Dialog'),
   DropdownList: setComponentPropertyMapper('DropdownList'),
-  DropdownListItem: setComponentPropertyMapper('DropdownList'),
+  DropdownListItem: setComponentPropertyMapper('DropdownListItem'),
   GridLayout: setComponentPropertyMapper('GridLayout'),
   Image: setComponentPropertyMapper('Image'),
   Light: setComponentPropertyMapper('Light'),
