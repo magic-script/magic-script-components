@@ -7,7 +7,7 @@ module.exports = {
   clearMocks: true,
   collectCoverage: true,
   coverageDirectory: "coverage",
-  collectCoverageFrom: ["src/*.js", "src/components/*.js"],
+  collectCoverageFrom: ["src/*.js", "src/components/**/*.js"],
   moduleNameMapper: {
     lumin: "./__mocks__/luminMock.js",
   },
