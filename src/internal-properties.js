@@ -291,6 +291,9 @@ const componentInternalProperties = {
   ],
   TextEdit: [
     ...textContainerInternalProperties,
+    'text',
+    'width',
+    'height',
     'textAlignment',
     'charLimit',
     'charSpacing',
