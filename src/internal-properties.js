@@ -167,14 +167,18 @@ const componentInternalProperties = {
     ...uiPositionalLayoutInternalProperties,
     'orientation',
     'itemAlignment',
-    'itemPadding'
+    'itemPadding',
+    'defaultItemAlignment',
+    'defaultItemPadding'
   ],
   GridLayout: [
     ...uiLayoutInternalProperties,
     'columns',
     'rows',
     'itemAlignment',
-    'itemPadding'
+    'itemPadding',
+    'defaultItemAlignment',
+    'defaultItemPadding'
   ],
   Panel: [
     ...uiNodeInternalProperties,
