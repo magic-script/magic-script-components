@@ -363,10 +363,7 @@ const componentInternalProperties = {
     'type',
     'resourceId',
     'resourcePath',
-    'determinate',
-    'onDialogConfirmed',
-    'onDialogCanceled',
-    'onDialogTimeExpired'
+    'determinate'
   ],
   Dialog: [
     ...uiNodeInternalProperties,
@@ -380,7 +377,10 @@ const componentInternalProperties = {
     'layout',
     'scrolling',
     'title',
-    'message'
+    'message',
+    'onDialogConfirmed',
+    'onDialogCanceled',
+    'onDialogTimeExpired'
   ],
   Image: [
     ...uiNodeInternalProperties,
@@ -400,6 +400,7 @@ const componentInternalProperties = {
   ],
   Toggle: [
     ...textContainerInternalProperties,
+    'type',
     'height',
     'on',
     'onToggleChanged'
