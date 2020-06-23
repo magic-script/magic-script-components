@@ -400,7 +400,8 @@ const componentInternalProperties = {
     'filePath',
     'resourceId',
     'height',
-    'width'
+    'width',
+    'fit'
   ],
   Toggle: [
     ...textContainerInternalProperties,
