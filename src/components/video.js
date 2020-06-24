@@ -14,7 +14,7 @@ export function Video (props) {
 Video.propTypes = {
   ...UiNode.PropTypes,
 
-  path: PropTypes.string.isRequired,
+  path: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
   looping: PropTypes.bool,
   subtitlePath: PropTypes.string,
   volume: TypeValidator.range(0.0, 1.0),
