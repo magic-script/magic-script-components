@@ -1,6 +1,7 @@
 {
   "version-latest/docs": [
     {
+      "collapsed": true,
       "type": "category",
       "label": "Getting Started",
       "items": [
@@ -19,6 +20,7 @@
       ]
     },
     {
+      "collapsed": true,
       "type": "category",
       "label": "Reference",
       "items": [
@@ -29,6 +31,7 @@
       ]
     },
     {
+      "collapsed": true,
       "type": "category",
       "label": "Components",
       "items": [
@@ -183,6 +186,7 @@
       ]
     },
     {
+      "collapsed": true,
       "type": "category",
       "label": "Types",
       "items": [
@@ -309,6 +313,7 @@
       ]
     },
     {
+      "collapsed": true,
       "type": "category",
       "label": "Events",
       "items": [
