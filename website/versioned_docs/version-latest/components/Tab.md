@@ -28,14 +28,14 @@ export default class MyApp extends React.Component {
     return (
       <Scene>
         <Prism size={[1, 1, 0.2]} >
-          <View name="main-view" alignment={'center-center'}>
+          <View name="main-view" anchorPoint={'center-center'}>
             <LinearLayout
-              alignment='center-center'
+              anchorPoint='center-center'
               name='top-layout'
               orientation='vertical'
               defaultItemAlignment="center-left"
             >
-              <Text textSize={0.05} text='Tabs' />
+              <Text fontSize={0.05} >Tabs</Text>
               <LinearLayout
                 name='tab-page-layout'
                 defaultItemPadding={[0.01, 0.01, 0.01, 0.01]}
@@ -59,13 +59,13 @@ export default class MyApp extends React.Component {
                 />
                 <PageView visiblePage={this.state.activePage}>
                   <Content name="page-home">
-                    <Text textSize={0.05}>Welcome ...</Text>
+                    <Text fontSize={0.05}>Welcome ...</Text>
                   </Content>
                   <Content name="page-about">
-                    <Text textSize={0.05}>About us ...</Text>
+                    <Text fontSize={0.05}>About us ...</Text>
                   </Content>
                   <Content name="page-contact">
-                    <Text textSize={0.05}>Contact ...</Text>
+                    <Text fontSize={0.05}>Contact ...</Text>
                   </Content>
                 </PageView>
               </LinearLayout>

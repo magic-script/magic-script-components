@@ -22,18 +22,18 @@ export default class MyApp extends React.Component {
     return (
       <Scene>
         <Prism size={[1, 1, 0.2]} >
-          <View name="main-view" alignment={'center-center'} localPosition={[-0.31, 0, 0]}>
-            <Text alignment={'center-left'} textSize={0.1} weight={"bold"} textColor={"#85D834"} localPosition={[0, 0.12, 0]}>
+          <View name="main-view" anchorPoint={'center-center'} position={[-0.31, 0, 0]}>
+            <Text alignment={'center-left'} fontSize={0.1} weight={"bold"} textColor={"#85D834"} position={[0, 0.12, 0]}>
               Lorem Ipsum
-        </Text>
+            </Text>
             <Image alignment={'center-left'} height={0.07} width={0.07} icon={"phone"} />
-            <Text alignment={'center-left'} textSize={0.05} textColor={"#B5B5B5"} localPosition={[0.1, 0, 0]}>
+            <Text alignment={'center-left'} fontSize={0.05} textColor={"#B5B5B5"} position={[0.1, 0, 0]}>
               (555)-123-1234
-        </Text>
-            <Image alignment={'center-left'} height={0.07} width={0.07} icon={"send"} localPosition={[0, -0.1, 0]} />
-            <Text alignment={'center-left'} textSize={0.05} textColor={"#e0e0e0"} localPosition={[0.1, -0.1, 0]}>
+            </Text>
+            <Image alignment={'center-left'} height={0.07} width={0.07} icon={"send"} position={[0, -0.1, 0]} />
+            <Text alignment={'center-left'} fontSize={0.05} textColor={"#e0e0e0"} position={[0.1, -0.1, 0]}>
               lorem.lpsum@magicleap.com
-        </Text>
+            </Text>
           </View>
         </Prism>
       </Scene>
@@ -62,39 +62,19 @@ If `text` is empty, the content of the `<text>` tag will be used as text.
 
 ## Element Properties
 
-| Name           | Type     | Default Value | Description |
-| :------------- | :------- | :-----------: | ----------- |
-| allCaps        | boolean  |      n/a      | Displays the text in all caps if `true`.  |
-| charSpacing    | number   |      `0`      | Sets the additional character spacing that is applied between characters. |
-| lineSpacing    | number   |     `1.0`     | Sets the line spacing to adjust the distance between lines of text; e.g., use 1 for single-spaced text, 2 for double-spaced text. |
-| style          | string   |    `normal`   | Sets the style of the Magic Leap font.  |
-| weight         | string   |    `regular`    | Sets the weight (i.e., thickness) of the Magic Leap font.  |
-| text           | string   |        n/a       | Sets the UTF-8 encoded text. This call is ignored if there is a current localization key set. Set the localization key to an empty string, "", to unset it.  |
-| textAlignment  | string   |      `left`         | Aligns the text to the left, center, or right or justifies it.  |
-| textColor      | verc4    |      `white`         | Sets the RGBA color of the rendered text.  |
-| textSize       | number   |       n/a        | Sets the text render size height in scene units.  |
-| boundsSize     | _object_ |     `0,0`     | Sets the text bounds size in scene units. The default value of `0,0` indicates there is no bounds and the text can grow and does not wrap or truncate. Setting the bounds greater than `0` in both X and Y will set the text bounds and cause the text to wrap or truncate within. |
-| fontParameters | _object_ |         n/a      | Sets the font parameters, including style, weight, pixel size, and tracking. This uses one of the default sets of Magic Leap font resources that support style and weight.  |
-
-### boundsSize
-
-```javascript
-{
-    boundsSize: vec2,
-    wrap: boolean
-}
-```
-
-### fontParams
-
-```javascript
-{
-    style: string,
-    weight: string,
-    fontSize: number,
-    tracking: number,
-    allCaps: boolean
-}
-```
+| Name          | Type    | Default Value | Description                                                                                                                                                                                                                                                                              |
+| :------------ | :------ | :-----------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| allCaps       | boolean |      n/a      | Displays the text in all caps if `true`.                                                                                                                                                                                                                                                 |
+| letterSpacing | number  |      `0`      | Sets the additional character spacing that is applied between characters.                                                                                                                                                                                                                |
+| lineSpacing   | number  |     `1.0`     | Sets the line spacing to adjust the distance between lines of text; e.g., use 1 for single-spaced text, 2 for double-spaced text.                                                                                                                                                        |
+| style         | string  |   `normal`    | Sets the style of the Magic Leap font.                                                                                                                                                                                                                                                   |
+| weight        | string  |   `regular`   | Sets the weight (i.e., thickness) of the Magic Leap font.                                                                                                                                                                                                                                |
+| text          | string  |      n/a      | Sets the UTF-8 encoded text. This call is ignored if there is a current localization key set. Set the localization key to an empty string, "", to unset it.                                                                                                                              |
+| textAlign     | string  |    `left`     | Aligns the text to the left, center, or right or justifies it.                                                                                                                                                                                                                           |
+| textColor     | verc4   |    `white`    | Sets the RGBA color of the rendered text.                                                                                                                                                                                                                                                |
+| fontSize      | number  |    `0.08`     | Sets the text render size height in scene units.                                                                                                                                                                                                                                         |
+| width         | number  |      `0`      | Sets the text widht in scene units. The default value of `0` indicates there is no bounds and the text can grow and does not wrap or truncate. Setting the bounds greater than `0` in both `width` and `height` will set the text bounds and cause the text to wrap or truncate within.  |
+| height        | number  |      `0`      | Sets the text height in scene units. The default value of `0` indicates there is no bounds and the text can grow and does not wrap or truncate. Setting the bounds greater than `0` in both `width` and `height` will set the text bounds and cause the text to wrap or truncate within. |
+| multiline     | boolean |    `false`    | Determined if the text can be shown in multiple lines                                                                                                                                                                                                                                    |
 
 ### textAlignment options: [HorizontalTextAlignment](../types/HorizontalTextAlignment.md)

@@ -31,7 +31,7 @@ export default class MyApp extends React.Component {
 
   renderGalleryPage() {
     return (
-      <GridLayout key={"page1"} alignment={'center-center'} columns={2} defaultItemPadding={[0.02, 0.02, 0.02, 0.02]}>
+      <GridLayout key={"page1"} anchorPoint={'center-center'} columns={2} defaultItemPadding={[0.02, 0.02, 0.02, 0.02]}>
         <Image filePath={this.photos[0].image} width={0.2} height={0.2} onClick={event => this.setState({ pageIndex: 1, photoIndex: 0 })} />
         <Image filePath={this.photos[1].image} width={0.2} height={0.2} onClick={event => this.setState({ pageIndex: 1, photoIndex: 1 })} />
         <Image filePath={this.photos[2].image} width={0.2} height={0.2} onClick={event => this.setState({ pageIndex: 1, photoIndex: 2 })} />
@@ -51,8 +51,8 @@ export default class MyApp extends React.Component {
     return (
       <Scene>
         <Prism size={[1, 1, 0.2]} >
-          <View name="main-view" alignment={'center-center'}>
-            <PageView alignment={'center-center'} name='page-view' visiblePage={pageIndex}>
+          <View name="main-view" anchorPoint={'center-center'}>
+            <PageView anchorPoint={'center-center'} name='page-view' visiblePage={pageIndex}>
               {this.renderGalleryPage()}
               {this.renderPhotoPage(photoIndex)}
             </PageView>

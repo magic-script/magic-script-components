@@ -46,16 +46,16 @@ export default class MyApp extends React.Component {
     return (
       <Scene>
         <Prism size={[1, 1, 0.2]} >
-          <View name="main-view" localPosition={this.props.localPosition} >
+          <View name="main-view" position={this.props.position} >
             <LinearLayout
-              alignment={'center-center'}
+              anchorPoint={'center-center'}
               defaultItemAlignment={'center-center'}
               defaultItemPadding={[0.03, 0.03, 0.03, 0.03]}
               orientation={'horizontal'}
             >
-              <Text textSize={0.03}>State:</Text>
+              <Text fontSize={0.03}>State:</Text>
               <DropdownList
-                textSize={0.03}
+                fontSize={0.03}
                 text={selectedState}
                 onSelectionChanged={this.onSelectedStateChanged}
               >

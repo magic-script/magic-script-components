@@ -28,7 +28,7 @@ export class ExampleWebView extends React.Component {
     return (
       <Scene>
         <Prism size={[1, 1, 0.2]} >
-          <View name="main-view" alignment={'center-center'}>
+          <View name="main-view" anchorPoint={'center-center'}>
             <WebView width={1} height={0.8} url={'https://www.magicleap.com'} />
           </View>
         </Prism>

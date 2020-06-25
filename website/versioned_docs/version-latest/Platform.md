@@ -19,7 +19,7 @@ export default class MyApp extends React.Component {
       <Scene>
         <Prism size={[1, 1, 0.2]} >
           <View name="main-view">
-            <Text textSize={0.1} textColor={[0.5, 0.5, 0.5, 0.5]}>
+            <Text fontSize={0.1} textColor={[0.5, 0.5, 0.5, 0.5]}>
               {(Platform.OS, Platform.Version)}
             </Text>
           </View>

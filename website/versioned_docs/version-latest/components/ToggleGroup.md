@@ -32,7 +32,6 @@ export default class MyApp extends React.Component {
             rows={2}
             defaultItemAlignment="center-center"
             defaultItemPadding={[0.03, 0.03, 0.03, 0.03]}
-            // localPosition={[-0.35, 0.35, 0]}
             alignment='center-center'
           >
             <ToggleGroup key='regular-toggles-group'>

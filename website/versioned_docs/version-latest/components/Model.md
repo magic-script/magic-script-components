@@ -22,11 +22,11 @@ export default class MyApp extends React.Component {
     return (
       <Scene>
         <Prism size={[1, 1, 0.2]} >
-          <View name="main-view" alignment={'center-center'}>
+          <View name="main-view" anchorPoint={'center-center'}>
             <Model
-              localScale={[0.3, 0.3, 0.3]}
-              localRotation={[0.2, 0.38268346, 0.0, 0.9238795]}
-              modelPath={require('../../resources/static.glb')}
+              scale={[0.3, 0.3, 0.3]}
+              rotation={[0.2, 0.38268346, 0.0, 0.9238795]}
+              path={require('../../resources/static.glb')}
             />
           </View>
         </Prism>
@@ -46,7 +46,7 @@ export default class MyApp extends React.Component {
 
 | Name                | Type     | Default Value | Required | Description                                                                                                                 |
 | ------------------- | -------- | :-----------: | :------: | --------------------------------------------------------------------------------------------------------------------------- |
-| modelPath           | string   |      n/a      |          | File name of the model resource to load. By default this is assumed to be a relative path from the executable file.         |
+| path                | string   |      n/a      |          | File name of the model resource to load. By default this is assumed to be a relative path from the executable file.         |
 | materialPath        | string   |      n/a      |          | File name of the material resource to load. By default this is assumed to be a relative path from the executable file.      |
 | importScale         | number   |      1.0      |    N     | The scale that is applied to this resource.                                                                                 |
 | texturePaths        | [string] |      n/a      |          | An array of file names of the texture resources. By default this is assumed to be a relative path from the executable file. |
