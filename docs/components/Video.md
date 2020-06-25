@@ -52,8 +52,8 @@ export default class MyApp extends React.Component {
       action === VideoActions.stop ? this.onStopClick : this.onStartPauseClick;
     return (
       <Button
-        localPosition={position}
-        TextSize={0.1}
+        position={position}
+        fontSize={0.1}
         width={0.3}
         height={0.12}
         onClick={onClickHandler}
@@ -86,15 +86,14 @@ export default class MyApp extends React.Component {
     return (
       <Scene>
         <Prism size={[1.5, 1.5, 1]} >
-          <View name="main-view" alignment={'center-center'} localPosition={this.props.localPosition}>
+          <View name="main-view" anchorPoint={'center-center'} position={this.props.position}>
             <Video
-              localPosition={[0, 0.4, 0]}
+              position={[0, 0.4, 0]}
               looping={this.state.isLooping}
               width={resolution[0]}
               height={resolution[1]}
-              size={size}
-              anchorPosition={[0.5 * size[0], 0.5 * size[1], 0]}
-              videoPath={this.state.videoPath}
+              screenSize={size}
+              path={this.state.videoPath}
               viewMode={"full-area"}
               volume={this.state.volume}
               action={this.state.action}
@@ -119,23 +118,23 @@ export { ExampleVideo };
 
 ## Create Properties
 
-| Name      | Type   | Default Value | Required | Description                                                                                                                                                                                                                                                                  | Lumin | Android |  IOS  |
-| --------- | ------ | :-----------: | :------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---: | :-----: | :---: |
-| width     | number |      512      |    N     | The surface resolution width. Supported values are between 1 and 2048.                                                                                                                                                                                                       |  👍   |   👍    |  👍   |
-| height    | number |      512      |    N     | The surface resolution height. Supported values are between 1 and 2048.                                                                                                                                                                                                      |  👍   |   👍    |  👍   |
-| videoPath | string |      n/a      |    Y     | The path to the file to play. Preparation for playback begins synchronously after this property is set. The video is not ready to play until a `VideoEvent` of type VideoEventType 'prepared' is received.                                                                   |  👍   |   👍    |  👍   |
-| viewMode  | string |  `full-area`  |    N     | How the video is intended to be viewed within the video component. The `full-area` view mode renders video over the full area for both eyes (monoscopic). The `left-right` view mode renders video differently per eye (stereoscopic). The default view mode is `full-area`. |  👍   |         |       |
-
+| Name       | Type     | Default Value | Required | Description                                                                                                                                                                                                                                                                  | Lumin | Android |  IOS  |
+| ---------- | -------- | :-----------: | :------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---: | :-----: | :---: |
+| width      | number   |      512      |    N     | The surface resolution width. Supported values are between 1 and 2048.                                                                                                                                                                                                       |   👍   |    👍    |   👍   |
+| height     | number   |      512      |    N     | The surface resolution height. Supported values are between 1 and 2048.                                                                                                                                                                                                      |   👍   |    👍    |   👍   |
+| path       | string   |      n/a      |    Y     | The path to the file to play. Preparation for playback begins synchronously after this property is set. The video is not ready to play until a `VideoEvent` of type VideoEventType 'prepared' is received.                                                                   |   👍   |    👍    |   👍   |
+| viewMode   | string   |  `full-area`  |    N     | How the video is intended to be viewed within the video component. The `full-area` view mode renders video over the full area for both eyes (monoscopic). The `left-right` view mode renders video differently per eye (stereoscopic). The default view mode is `full-area`. |   👍   |         |       |
+| screenSize | `object` |      n/a      |    Y     | Sets size of the component                                                                                                                                                                                                                                                      |   👍   |    👍    |   👍   |
 ## Element Properties
 
 | Name          | Type    | Default Value | Description                                                                                                                                                                                                                                | Lumin | Android |  IOS  |
 | ------------- | ------- | :-----------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :---: | :-----: | :---: |
-| volume        | number  |       1       | Sets the volume of the node. The volume range is 0.0 - 1.0.                                                                                                                                                                                |  👍   |   👍    |  👍   |
-| looping       | boolean |      n/a      | Sets the looping mode of the player.                                                                                                                                                                                                       |  👍   |   👍    |  👍   |
-| timedTextPath | string  |      n/a      | Sets the timed text file.                                                                                                                                                                                                                  |  👍   |    👍    |       |
+| volume        | number  |       1       | Sets the volume of the node. The volume range is 0.0 - 1.0.                                                                                                                                                                                |   👍   |    👍    |   👍   |
+| looping       | boolean |      n/a      | Sets the looping mode of the player.                                                                                                                                                                                                       |   👍   |    👍    |   👍   |
+| timedTextPath | string  |      n/a      | Sets the timed text file.                                                                                                                                                                                                                  |   👍   |    👍    |       |
 | videoUri      | string  |      n/a      | Sets the file URI to play. This is not implemented currently. Preparation for playback begins synchronously after this property is set. The video is not ready to play until a `VideoEvent` of type VideoEventType 'prepared' is received. |
-| seekTo        | number  |      n/a      | Seeks to the specified time position.                                                                                                                                                                                                      |  👍   |    👍    |       |
-| action        | string  |      n/a      | Sets the current operation: `start`, `stop`, `pause`                                                                                                                                                                                       |  👍   |   👍    |  👍   |
+| seekTo        | number  |      n/a      | Seeks to the specified time position.                                                                                                                                                                                                      |   👍   |    👍    |       |
+| action        | string  |      n/a      | Sets the current operation: `start`, `stop`, `pause`                                                                                                                                                                                       |   👍   |    👍    |   👍   |
 
 ### viewMode options:
 

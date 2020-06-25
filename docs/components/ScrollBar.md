@@ -42,7 +42,7 @@ export default class MyApp extends React.Component {
     return (
       <Scene>
         <Prism size={[1, 1, 1]} >
-          <View name="main-view" alignment={'center-center'}>
+          <View name="main-view" anchorPoint={'center-center'}>
             <ScrollView scrollBarVisibility="auto" scrollBounds={aabb}>
               <ScrollBar length={0.6} thumbSize={0.03} orientation="vertical" />
               <LinearLayout
@@ -50,16 +50,16 @@ export default class MyApp extends React.Component {
                 orientation="vertical"
               >
                 {contacts.map((contact, index) => (
-                  <RectLayout key={contact.name} width={0.35} contentAlignment={'top-left'}>
+                  <RectLayout key={contact.name} width={0.35} alignment={'top-left'}>
                     <View>
-                      <Image localPosition={[0, 0, 0]} height={0.17} width={0.17} filePath={contact.image} />
-                      <Text localPosition={[0.2, 0.05, 0]} alignment={'center-left'} textSize={0.07} weight={"bold"} textColor={"#85D834"} >
+                      <Image position={[0, 0, 0]} height={0.17} width={0.17} filePath={contact.image} />
+                      <Text position={[0.2, 0.05, 0]} alignment={'center-left'} fontSize={0.07} weight={"bold"} textColor={"#85D834"} >
                         {contact.name}
                       </Text>
-                      <Text localPosition={[0.2, 0, 0]} alignment={'center-left'} textSize={0.05} textColor={"#e0e0e0"} >
+                      <Text position={[0.2, 0, 0]} alignment={'center-left'} fontSize={0.05} textColor={"#e0e0e0"} >
                         {contact.email}
                       </Text>
-                      <Text localPosition={[0.2, -0.05, 0]} alignment={'center-left'} textSize={0.05} textColor={"#B5B5B5"}>
+                      <Text position={[0.2, -0.05, 0]} alignment={'center-left'} fontSize={0.05} textColor={"#B5B5B5"}>
                         {contact.phone}
                       </Text>
                     </View>

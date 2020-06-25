@@ -25,29 +25,29 @@ export default class MyApp extends React.Component {
     return (
       <Scene>
         <Prism size={[1, 1, 0.2]} >
-          <View name="main-view" alignment={'center-center'}>
+          <View name="main-view" anchorPoint={'center-center'}>
             <Toggle
-              localPosition={[0, 0.1, 0]}
+              position={[0, 0.1, 0]}
               text="Switch"
               type="default"
               height={0.05}
-              textSize={0.05}
+              fontSize={0.05}
               onToggleChanged={this.onSwitchHandler}
             />
             <Toggle
-              localPosition={[0, 0, 0]}
+              position={[0, 0, 0]}
               text="Radio"
               type="radio"
               height={0.08}
-              textSize={0.05}
+              fontSize={0.05}
               onToggleChanged={this.onSwitchHandler}
             />
             <Toggle
-              localPosition={[0, -0.1, 0]}
+              position={[0, -0.1, 0]}
               text="Checkbox"
               type="checkbox"
               height={0.05}
-              textSize={0.05}
+              fontSize={0.05}
               onToggleChanged={this.onSwitchHandler}
             />
           </View>

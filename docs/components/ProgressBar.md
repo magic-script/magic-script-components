@@ -27,8 +27,8 @@ export default class MyApp extends React.Component {
     return (
       <Scene>
         <Prism size={[1, 1, 0.2]} >
-          <View name="main-view" alignment={'center-center'}>
-            <Text localPosition={[-0.13, 0.05, 0]} textSize={0.035}>Downloading (80%)...</Text>
+          <View name="main-view" anchorPoint={'center-center'}>
+            <Text position={[-0.13, 0.05, 0]} fontSize={0.035}>Downloading (80%)...</Text>
             <ProgressBar
               width={0.5}
               height={0.03}
@@ -37,8 +37,8 @@ export default class MyApp extends React.Component {
               value={80}
               progressColor={colors}
             />
-            <Text localPosition={[-0.26, -0.07, 0]} textSize={0.035}>0%</Text>
-            <Text localPosition={[0.22, -0.07, 0]} textSize={0.035}>100%</Text>
+            <Text position={[-0.26, -0.07, 0]} fontSize={0.035}>0%</Text>
+            <Text position={[0.22, -0.07, 0]} fontSize={0.035}>100%</Text>
           </View>
         </Prism>
       </Scene>
@@ -65,13 +65,7 @@ export default class MyApp extends React.Component {
 | min           | number   |        0         | Sets the progress bar minimum value. Default value for min is `0`. The minimum value is set only if it is less than the progress bar's maximum value.    |
 | max           | number   |        0         | Sets the progress bar maximum value. Default value for max is `1`. The maximum value is set only if it is greater than the progress bar's minimum value. |
 | value         | number   |        0         | Sets the progress bar value. The value is constrained within the current min and max range.                                                              |
-| progressColor | _object_ | `<white, white>` | Sets the progress bar indicator color.                                                                                                                   |
-
-### progressColor
-
-```javascript
-{
-    beginColor: <vec4>,
-    endColor: <vec4>
-}
-```
+| beginColor    | color  | `white` | Sets the progress bar begin indicator
+color.                                                                                                                   |
+| endColor      | color  | `white` | Sets the progress bar end indicator
+color.                                                                                                                   |

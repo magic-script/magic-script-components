@@ -38,7 +38,7 @@ export default class MyApp extends React.Component {
     return (
       <Scene>
         <Prism size={[2, 2, 1]} >
-          <View name='main-view' alignment={'center-center'}>
+          <View name='main-view' anchorPoint={'center-center'}>
             <ColorPicker
               height={0.15}
               color={[1, 0.5, 1, 0.8]}

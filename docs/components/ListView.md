@@ -41,21 +41,21 @@ export default class MyApp extends React.Component {
     return (
       <Scene>
         <Prism size={[1, 1, 0.2]} >
-          <View name="main-view" alignment={'center-center'}>
-            <ListView localPosition={[0, 0, 0]} width={0.7} height={0.5} defaultItemAlignment={'top-left'} defaultItemPadding={[0, 0, 0.01, 0]}>
+          <View name="main-view" anchorPoint={'center-center'}>
+            <ListView position={[0, 0, 0]} width={0.7} height={0.5} defaultItemAlignment={'top-left'} defaultItemPadding={[0, 0, 0.01, 0]}>
               <ScrollBar length={0.5} thumbSize={0.03} />
               {contacts.map((contact, index) => (
                 <ListViewItem key={index}>
-                  <RectLayout width={0.35} contentAlignment={'top-left'}>
+                  <RectLayout width={0.35} alignment={'top-left'}>
                     <View>
-                      <Image localPosition={[0, 0, 0]} height={0.17} width={0.17} filePath={contact.image} />
-                      <Text localPosition={[0.2, 0.05, 0]} alignment={'center-left'} textSize={0.07} weight={"bold"} textColor={"#85D834"} >
+                      <Image position={[0, 0, 0]} height={0.17} width={0.17} filePath={contact.image} />
+                      <Text position={[0.2, 0.05, 0]} anchorPoint={'center-left'} fontSize={0.07} weight={"bold"} textColor={"#85D834"} >
                         {contact.name}
                       </Text>
-                      <Text localPosition={[0.2, 0, 0]} alignment={'center-left'} textSize={0.05} textColor={"#e0e0e0"} >
+                      <Text position={[0.2, 0, 0]} anchorPoint={'center-left'} fontSize={0.05} textColor={"#e0e0e0"} >
                         {contact.email}
                       </Text>
-                      <Text localPosition={[0.2, -0.05, 0]} alignment={'center-left'} textSize={0.05} textColor={"#B5B5B5"}>
+                      <Text position={[0.2, -0.05, 0]} anchorPoint={'center-left'} fontSize={0.05} textColor={"#B5B5B5"}>
                         {contact.phone}
                       </Text>
                     </View>
@@ -91,7 +91,7 @@ export default class MyApp extends React.Component {
 | defaultItemPadding   | vec4     | `[0.0, 0.0, 0.0, 0.0]` | Sets the default padding of each item within the list, in scene units. The default is no padding (0,0,0,0). The padding order is: top, right, bottom, left. This is set for any new items that are added that don't explicitly specify padding. The padding of each individual item can be set later if needed. |
 | orientation          | string   |       `vertical`       | Sets the orientation of this list view. The default orientation is `Vertical`.                                                                                                                                                                                                                                  |
 | scrollBarVisibility  | string   |        `always`        | Sets the visibility mode of the scrollbars attached.                                                                                                                                                                                                                                                            |
-| scrollingEnabled     | boolean  |         `true`         | Sets whether list view scrolling is enabled or not.                                                                                                                                                                                                                                                             |
+| scrollEnabled        | boolean  |         `true`         | Sets whether list view scrolling is enabled or not.                                                                                                                                                                                                                                                             |
 | scrollSpeed          | number   |         `0.1`          | Sets the scroll speed in scene units per second.                                                                                                                                                                                                                                                                |
 | scrollValue          | number   |          `0`           | Sets the scroll content position manually with a normalized value between 0 and 1.                                                                                                                                                                                                                              |
 | scrollToItem         | number   |          n/a           | Sets the index of the item you would like to scroll to.                                                                                                                                                                                                                                                         |

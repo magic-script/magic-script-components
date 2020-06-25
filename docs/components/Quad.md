@@ -26,10 +26,11 @@ The Quad component renders a 2D rectangle in your scene and applies a texture to
 
 ## Element Properties
 
-| Name      | Type   | Default Value | Description |
-| :-------- | :----- | :-----------: | ----------- |
+| Name      | Type   | Default Value | Description                                                                                                                                                                           |
+| :-------- | :----- | :-----------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | texCoords | [vec2] |               | Sets the texture coordinates of the node being rendered when the resource referenced in `renderResourceId` is a texture. If the render resource is not a texture, this has no effect. |
-| viewMode  | string |   full-area   | Sets the current ViewMode to the given value. |
-| size      | vec2   |     [1, 1]    | Sets the custom size. |
+| viewMode  | string |   full-area   | Sets the current ViewMode to the given value.                                                                                                                                         |
+| width     | vec2   |       1       | Sets the custom width.                                                                                                                                                                |
+| height    | vec2   |       1       | Sets the custom height.                                                                                                                                                               |
 
 ### viewMode options: [ViewMode](../types/ViewMode.md)

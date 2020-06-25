@@ -31,7 +31,7 @@ export default class MyApp extends React.Component {
     return (
       <Scene>
         <Prism size={[1, 1, 0.5]} >
-          <View name="main-view" alignment={'center-center'}>
+          <View name="main-view" anchorPoint={'center-center'}>
             <Line points={points} color={[0.5, 1.0, 0.25, 0.8]} />
           </View>
         </Prism>

@@ -46,16 +46,16 @@ export default class MyApp extends React.Component {
     return (
       <Scene>
         <Prism size={[1, 1, 0.2]} >
-          <View name="main-view" localPosition={this.props.localPosition} >
+          <View name="main-view" position={this.props.position} >
             <LinearLayout
-              alignment={'center-center'}
+              anchorPoint={'center-center'}
               defaultItemAlignment={'center-center'}
               defaultItemPadding={[0.03, 0.03, 0.03, 0.03]}
               orientation={'horizontal'}
             >
-              <Text textSize={0.03}>State:</Text>
+              <Text fontSize={0.03}>State:</Text>
               <DropdownList
-                textSize={0.03}
+                fontSize={0.03}
                 text={selectedState}
                 onSelectionChanged={this.onSelectedStateChanged}
               >
@@ -89,7 +89,7 @@ export default class MyApp extends React.Component {
 | iconSize          | number   |      n/a      | Sets the button icon size in scene units.                                                                                                                                                                                                                                                   |
 | iconColor         | vec4     |      n/a      | Sets the RGBA color of the button icon.                                                                                                                                                                                                                                                     |
 | listMaxHeight     | number   |      `0`      | Sets the maximum height of a drop-down list. The default value (`0`) indicates there is no limit and the list grows as long as it needs to. Setting a value greater than zero will set the maximum height such that if a list is larger than the maxiumum height, the list content scrolls. |
-| listTextSize      | number   |     0.025     | Sets the size of the list text. If no size set, the list uses the same text size used in the drop-down list menu button itself. If no text is present on the menu button, the default text size is used.                                                                                    |
+| listFontSize      | number   |     0.025     | Sets the size of the list text. If no size set, the list uses the same text size used in the drop-down list menu button itself. If no text is present on the menu button, the default text size is used.                                                                                    |
 | maxCharacterLimit | number   |      n/a      | Sets the maximum amount of characters to be used per list item label before adding '...'. The default character limit is `0`, which means there is no limit and the labels scale to the largest item.                                                                                       |
 | multiSelect       | boolean  |     false     | Sets the multi-select mode of the drop-down list.                                                                                                                                                                                                                                           |
 | showList          | boolean  |     false     | Shows the drop-down list or not.                                                                                                                                                                                                                                                            |

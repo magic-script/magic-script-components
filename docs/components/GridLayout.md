@@ -22,43 +22,43 @@ export default class MyApp extends React.Component {
     return (
       <Scene>
         <Prism size={[1, 1, 0.2]} >
-          <View name="main-view" alignment={'center-center'}>
-            <GridLayout alignment={'center-center'} rows={3} defaultItemPadding={[0.02, 0.02, 0.02, 0.02]}>
+          <View name="main-view" anchorPoint={'center-center'}>
+            <GridLayout anchorPoint={'center-center'} rows={3} defaultItemPadding={[0.02, 0.02, 0.02, 0.02]}>
               <View>
                 <Image color="#7e7e7e" width={0.3} height={0.3} />
-                <Text text='1' alignment="center-center" textColor="#151515" textSize={0.08} localPosition={[0, 0, 0.02]} />
+                <Text alignment="center-center" textColor="#151515" textSize={0.08} position={[0, 0, 0.02]} >1</Text>
               </View>
               <View>
                 <Image color="#2a2a2a" width={0.3} height={0.3} />
-                <Text text='2' alignment="center-center" textColor="#bdbdbd" textSize={0.08} localPosition={[0, 0, 0.02]} />
+                <Text alignment="center-center" textColor="#bdbdbd" textSize={0.08} position={[0, 0, 0.02]} >2</Text>
               </View>
               <View>
                 <Image color="#7e7e7e" width={0.3} height={0.3} />
-                <Text text='3' alignment="center-center" textColor="#151515" textSize={0.08} localPosition={[0, 0, 0.02]} />
+                <Text alignment="center-center" textColor="#151515" textSize={0.08} position={[0, 0, 0.02]} >3</Text>
               </View>
               <View>
                 <Image color="#2a2a2a" width={0.3} height={0.3} />
-                <Text text='4' alignment="center-center" textColor="#bdbdbd" textSize={0.08} localPosition={[0, 0, 0.02]} />
+                <Text alignment="center-center" textColor="#bdbdbd" textSize={0.08} position={[0, 0, 0.02]} >4</Text>
               </View>
               <View>
                 <Image color="#7e7e7e" width={0.3} height={0.3} />
-                <Text text='5' alignment="center-center" textColor="#151515" textSize={0.08} localPosition={[0, 0, 0.02]} />
+                <Text alignment="center-center" textColor="#151515" textSize={0.08} position={[0, 0, 0.02]} >5</Text>
               </View>
               <View>
                 <Image color="#2a2a2a" width={0.3} height={0.3} />
-                <Text text='6' alignment="center-center" textColor="#bdbdbd" textSize={0.08} localPosition={[0, 0, 0.02]} />
+                <Text alignment="center-center" textColor="#bdbdbd" textSize={0.08} position={[0, 0, 0.02]} >6</Text>
               </View>
               <View>
                 <Image color="#7e7e7e" width={0.3} height={0.3} />
-                <Text text='7' alignment="center-center" textColor="#151515" textSize={0.08} localPosition={[0, 0, 0.02]} />
+                <Text alignment="center-center" textColor="#151515" textSize={0.08} position={[0, 0, 0.02]} >7</Text>
               </View>
               <View>
                 <Image color="#2a2a2a" width={0.3} height={0.3} />
-                <Text text='8' alignment="center-center" textColor="#bdbdbd" textSize={0.08} localPosition={[0, 0, 0.02]} />
+                <Text alignment="center-center" textColor="#bdbdbd" textSize={0.08} position={[0, 0, 0.02]} >8</Text>
               </View>
               <View>
                 <Image color="#7e7e7e" width={0.3} height={0.3} />
-                <Text text='9' alignment="center-center" textColor="#151515" textSize={0.08} localPosition={[0, 0, 0.02]} />
+                <Text alignment="center-center" textColor="#151515" textSize={0.08} position={[0, 0, 0.02]} >9</Text>
               </View>
             </GridLayout>
           </View>
