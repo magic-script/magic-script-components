@@ -20,7 +20,7 @@ Video.propTypes = {
   volume: TypeValidator.range(0.0, 1.0),
   seekTo: PropTypes.number,
   action: PropTypes.oneOf(Object.values(VideoAction)),
-
+  screenSize: PropTypes.arrayOf(TypeValidator.arrayOf(2)),
   viewMode: PropTypes.oneOf(Object.values(ViewMode)),
   width: PropTypes.number,
   height: PropTypes.number
@@ -35,7 +35,7 @@ Video.defaultProps = {
   volume: 1.0,
   seekTo: 0.0,
   action: VideoAction.stop,
-
+  screenSize: [1.4, 0.85],
   viewMode: ViewMode.fullArea,
   width: 0.0,
   height: 0.0

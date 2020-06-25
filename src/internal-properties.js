@@ -149,6 +149,7 @@ const componentInternalProperties = {
     ...renderNodeInternalProperties,
     'width',
     'height',
+    'screenSize',
     'volume',
     'viewMode',
     'looping',
