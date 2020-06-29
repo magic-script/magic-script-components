@@ -1,5 +1,6 @@
 # MagicScript Components
 
+[![codecov](https://codecov.io/gh/magic-script/magic-script-components/branch/master/graph/badge.svg?token=gZKfulNJa4)](https://codecov.io/gh/magic-script/magic-script-components)
 [![CI](https://github.com/magic-script/magic-script-components/workflows/CI/badge.svg)](https://github.com/magic-script/magic-script-components/actions) [![npm version](https://badge.fury.io/js/magic-script-components.svg)](https://badge.fury.io/js/magic-script-components) [![npm downloads](https://img.shields.io/npm/dt/magic-script-components.svg)](https://www.npmjs.com/package/magic-script-components)
  [![License](http://img.shields.io/:license-Apache%202.0-blue.svg)](LICENSE)
 
