@@ -22,10 +22,10 @@ export default class MyApp extends React.Component {
     return (
       <Scene>
         <Prism size={[1, 1, 0.2]} >
-          <View name="main-view" alignment={'center-center'}>
+          <View name="main-view" anchorPoint={'center-center'}>
             <LinearLayout
               orientation='vertical'
-              alignment="center-center"
+              anchorPoint="center-center"
               defaultItemAlignment='center-center'
               defaultItemPadding={[0.01, 0.01, 0.01, 0.01]}
             >
@@ -34,16 +34,16 @@ export default class MyApp extends React.Component {
                 defaultItemAlignment='center-center'
                 defaultItemPadding={[0.01, 0.01, 0.01, 0.01]}
               >
-                <Text textSize={0.05} textColor={"#B5B5B5"} localPosition={[0.1, 0, 0]}>Name:</Text>
-                <TextEdit text='Lorem Ipsum' height={0.054} textSize={0.05} width={0.3} />
+                <Text fontSize={0.05} textColor={"#B5B5B5"} position={[0.1, 0, 0]}>Name:</Text>
+                <TextEdit text='Lorem Ipsum' height={0.054} fontSize={0.05} width={0.3} />
               </LinearLayout>
               <LinearLayout
                 orientation='horizontal'
                 defaultItemAlignment='center-center'
                 defaultItemPadding={[0.01, 0.01, 0.01, 0.01]}
               >
-                <Text textSize={0.05} textColor={"#B5B5B5"} localPosition={[0.1, 0, 0]}>Age:</Text>
-                <TextEdit text='25' height={0.054} textSize={0.05} width={0.3} />
+                <Text fontSize={0.05} textColor={"#B5B5B5"} position={[0.1, 0, 0]}>Age:</Text>
+                <TextEdit text='25' height={0.054} fontSize={0.05} width={0.3} />
               </LinearLayout>
             </LinearLayout>
           </View>

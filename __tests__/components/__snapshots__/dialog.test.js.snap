@@ -35,26 +35,6 @@ exports[`Dialog component should contain mapped properties 1`] = `
       1,
     ]
   }
-  localTransform={
-    Array [
-      1,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-    ]
-  }
   message=""
   scrolling={true}
   skipRaycast={false}

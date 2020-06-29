@@ -45,14 +45,14 @@ export default class MyApp extends React.Component {
         <Prism size={[1, 1, 0.2]} >
           <LinearLayout
             name="main-view"
-            localPosition={[0, 0, 0]}
-            alignment="center-center"
+            position={[0, 0, 0]}
+            anchorPoint="center-center"
             itemPadding={[
               { index: 0, padding: [0, 0, 0.06, 0] },
               { index: 2, padding: [0, 0, 0.04, 0] },
               { index: 3, padding: [0, 0, 0.08, 0] },
             ]}>
-            <TextEdit hint='Event Title' height={0.075} textSize={0.07} width={0.7} />
+            <TextEdit hint='Event Title' height={0.075} fontSize={0.07} width={0.7} />
 
             <LinearLayout orientation="horizontal">
               <DatePicker label="Starts" labelSide="left" showHint={false} onDateConfirmed={this.onDateConfirmed} />
@@ -64,11 +64,11 @@ export default class MyApp extends React.Component {
               <TimePicker labelSide="left" time={endTime} timeFormat={"HH:MM p"} showHint={false} onTimeConfirmed={this.onTimeConfirmed} />
             </LinearLayout>
 
-            <TextEdit hint='Add notes or comments' multiline={true} height={0.15} textSize={0.05} width={0.7} />
+            <TextEdit hint='Add notes or comments' multiline={true} height={0.15} fontSize={0.05} width={0.7} />
 
             <View>
-              <Button localPosition={[-0.2, 0, 0]} text="Accept" textSize={0.06} roundness={1} />
-              <Button localPosition={[0.2, 0, 0]} text="Reject" textSize={0.06} roundness={1} />
+              <Button position={[-0.2, 0, 0]} fontSize={0.06} roundness={1} >Accept</Button>
+              <Button position={[0.2, 0, 0]} fontSize={0.06} roundness={1} >Reject</Button>
             </View>
           </LinearLayout>
         </Prism>

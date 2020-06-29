@@ -27,27 +27,13 @@ exports[`Video component should contain mapped properties 1`] = `
       1,
     ]
   }
-  localTransform={
+  looping={false}
+  screenSize={
     Array [
-      1,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
+      1.4,
+      0.85,
     ]
   }
-  looping={false}
   seekTo={0}
   skipRaycast={false}
   timedTextPath="file_path/subtitle_file.name"

@@ -149,6 +149,7 @@ const componentInternalProperties = {
     ...renderNodeInternalProperties,
     'width',
     'height',
+    'screenSize',
     'volume',
     'viewMode',
     'looping',
@@ -167,14 +168,18 @@ const componentInternalProperties = {
     ...uiPositionalLayoutInternalProperties,
     'orientation',
     'itemAlignment',
-    'itemPadding'
+    'itemPadding',
+    'defaultItemAlignment',
+    'defaultItemPadding'
   ],
   GridLayout: [
     ...uiLayoutInternalProperties,
     'columns',
     'rows',
     'itemAlignment',
-    'itemPadding'
+    'itemPadding',
+    'defaultItemAlignment',
+    'defaultItemPadding'
   ],
   Panel: [
     ...uiNodeInternalProperties,
@@ -269,6 +274,11 @@ const componentInternalProperties = {
     'onSelectionChanged',
     'onListVisibilityChanged'
   ],
+  DropdownListItem: [
+      ...uiNodeInternalProperties,
+      'id',
+      'label'
+  ],
   Text: [
     ...textContainerInternalProperties,
     'allCaps',
@@ -286,6 +296,9 @@ const componentInternalProperties = {
   ],
   TextEdit: [
     ...textContainerInternalProperties,
+    'text',
+    'width',
+    'height',
     'textAlignment',
     'charLimit',
     'charSpacing',
@@ -355,10 +368,7 @@ const componentInternalProperties = {
     'type',
     'resourceId',
     'resourcePath',
-    'determinate',
-    'onDialogConfirmed',
-    'onDialogCanceled',
-    'onDialogTimeExpired'
+    'determinate'
   ],
   Dialog: [
     ...uiNodeInternalProperties,
@@ -372,7 +382,10 @@ const componentInternalProperties = {
     'layout',
     'scrolling',
     'title',
-    'message'
+    'message',
+    'onDialogConfirmed',
+    'onDialogCanceled',
+    'onDialogTimeExpired'
   ],
   Image: [
     ...uiNodeInternalProperties,
@@ -388,10 +401,12 @@ const componentInternalProperties = {
     'filePath',
     'resourceId',
     'height',
-    'width'
+    'width',
+    'fit'
   ],
   Toggle: [
     ...textContainerInternalProperties,
+    'type',
     'height',
     'on',
     'onToggleChanged'
@@ -440,7 +455,9 @@ const componentInternalProperties = {
     'defaultTime',
     'onTimeChanged',
     'onTimeConfirmed'
-  ]
+  ],
+  PortalIcon: [],
+  Content: []
 };
 
 export { componentInternalProperties }

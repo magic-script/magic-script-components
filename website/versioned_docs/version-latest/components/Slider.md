@@ -70,22 +70,22 @@ export default class MyApp extends React.Component {
     return (
       <Scene>
         <Prism size={[1, 1, 0.2]} >
-          <View name="main-view" alignment={'center-center'}>
+          <View name="main-view" anchorPoint={'center-center'}>
             <LinearLayout
               name="main-view"
               orientation="vertical"
               defaultItemAlignment="center-left"
               defaultItemPadding={[0.012, 0.012, 0.012, 0.012]}
-              localPosition={[-0.45, 0.45, 0]}
+              position={[-0.45, 0.45, 0]}
             >
               <Image width={0.8} height={0.3} color={color} useFrame={true} />
-              <Text textSize={0.05} textColor={[1, 0, 0, 1]} text="Red" />
+              <Text fontSize={0.05} textColor={[1, 0, 0, 1]} >Red</Text>
               <Slider {...redProps} onSliderChanged={this.onRedChanged} />
-              <Text textSize={0.05} textColor={[0, 1, 0, 1]} text="Green" />
+              <Text fontSize={0.05} textColor={[0, 1, 0, 1]} >Green</Text>
               <Slider {...greenProps} onSliderChanged={this.onGreenChanged} />
-              <Text textSize={0.05} textColor={[0, 0, 1, 1]} text="Blue" />
+              <Text fontSize={0.05} textColor={[0, 0, 1, 1]} >Blue</Text>
               <Slider {...blueProps} onSliderChanged={this.onBlueChanged} />
-              <Text textSize={0.05} text="Alpha" />
+              <Text fontSize={0.05} >Alpha</Text>
               <Slider {...alphaProps} onSliderChanged={this.onAlphaChanged} />
             </LinearLayout>
           </View>

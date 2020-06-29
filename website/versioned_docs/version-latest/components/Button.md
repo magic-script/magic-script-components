@@ -32,11 +32,11 @@ export default class MyApp extends React.Component {
         <Prism size={[1, 1, 0.2]} >
           <View>
             <Button
-              localPosition={[0, 0.25, 0]}
+              position={[0, 0.25, 0]}
               height={0.1}
               onClick={this.buttonClickHandler}
               roundness={0}
-              textSize={0.05}
+              fontSize={0.05}
               width={0.3}
             >Square</Button>
 
@@ -44,17 +44,17 @@ export default class MyApp extends React.Component {
               height={0.1}
               onClick={this.buttonClickHandler}
               roundness={1}
-              textSize={0.05}
+              fontSize={0.05}
               width={0.3}
             >Rounded</Button>
 
             <Button
-              localPosition={[0, -0.25, 0]}
+              position={[0, -0.25, 0]}
               height={0.1}
               onClick={this.buttonClickHandler}
               roundness={0.5}
               textColor={"yellow"}
-              textSize={0.05}
+              fontSize={0.05}
               width={0.3}
             >Yellow</Button>
           </View>
@@ -77,6 +77,7 @@ export default class MyApp extends React.Component {
 - onActivate
 - onPressed
 - onLongPress
+- onClick
 - onRelease
 - onHoverEnter
 - onHoverExit
@@ -115,12 +116,11 @@ export default class MyApp extends React.Component {
 | Name       | Type   |      Default Value       | Description                                                              |
 | :--------- | :----- | :----------------------: | ------------------------------------------------------------------------ |
 | iconColor  | vec4   | [0.75, 0.75, 0.75, 1.00] | Sets the RGBA color of the button icon.                                  |
-| iconSize   | vec2   |       [0.04, 0.04]       | Sets the button icon size in scene units.                                |
-| text       | string |           n/a            | Sets the UTF-8 encoded button text.                                      |
+| fontSize   | vec2   |       [0.04, 0.04]       | Sets the button icon size in scene units.                                |
 | textColor  | vec4   | [0.75, 0.75, 0.75, 1.00] | Sets the RGBA color of the button text.                                  |
 | textSize   | number |          0.0167          | Sets the text size.                                                      |
 | buttonType | string |           n/a            | Sets the type of button                                                  |
-| labelSide  | string |           n/a            | Sets the position of label when `buttonType` is set to `icon-with-label` |
+| textSide   | string |           n/a            | Sets the position of label when `buttonType` is set to `icon-with-label` |
 
 ### buttonType
 | Name            | Description                                  |

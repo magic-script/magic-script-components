@@ -40,7 +40,7 @@ DropdownList.defaultProps = {
   iconSize: [0.05, 0.05],
   iconColor: "white",
   listMaxHeight: 0,
-  listFontSize: 0,
+  listFontSize: 0.05,
   maxCharacterLimit: 0,
   multiSelect: false,
   selected: [],

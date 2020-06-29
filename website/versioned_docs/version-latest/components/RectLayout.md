@@ -24,43 +24,43 @@ export default class MyApp extends React.Component {
     return (
       <Scene>
         <Prism size={[1, 1, 0.2]} >
-          <View name="main-view" alignment={'center-center'}>
+          <View name="main-view" anchorPoint={'center-center'}>
             <Line color={'white'} points={[[-0.2, 0.2, 0], [0, 0.2, 0], [0, 0, 0], [-0.2, 0, 0], [-0.2, 0.2, 0]]} />
             <RectLayout
-              localPosition={[-0.2, 0.2, 0]}
+              position={[-0.2, 0.2, 0]}
               width={0.2}
               height={0.2}
-              contentAlignment="top-left"
+              alignment="top-left"
             >
               <Image width={0.1} height={0.1} color={'red'} />
             </RectLayout>
 
             <Line color={'white'} points={[[0, 0.2, 0], [0.2, 0.2, 0], [0.2, 0, 0], [0, 0, 0], [0, 0.2, 0]]} />
             <RectLayout
-              localPosition={[0, 0.2, 0]}
+              position={[0, 0.2, 0]}
               width={0.2}
               height={0.2}
-              contentAlignment="top-right"
+              alignment="top-right"
             >
               <Image width={0.1} height={0.1} color={'blue'} />
             </RectLayout>
 
             <Line color={'white'} points={[[-0.2, 0, 0], [0, 0, 0], [0, -0.2, 0], [-0.2, -0.2, 0], [-0.2, 0, 0]]} />
             <RectLayout
-              localPosition={[-0.2, 0, 0]}
+              position={[-0.2, 0, 0]}
               width={0.2}
               height={0.2}
-              contentAlignment="bottom-left"
+              alignment="bottom-left"
             >
               <Image width={0.1} height={0.1} color={'yellow'} />
             </RectLayout>
 
             <Line color={'white'} points={[[0, 0, 0], [0.2, 0, 0], [0.2, -0.2, 0], [0, -0.2, 0], [0, 0, 0]]} />
             <RectLayout
-              localPosition={[0, 0, 0]}
+              position={[0, 0, 0]}
               width={0.2}
               height={0.2}
-              contentAlignment="bottom-right"
+              alignment="bottom-right"
             >
               <Image width={0.1} height={0.1} color={'green'} />
             </RectLayout>
@@ -80,7 +80,7 @@ export default class MyApp extends React.Component {
 
 | Name             | Type   |     Default Value      | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | ---------------- | ------ | :--------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| contentAlignment | string |       `top-left`       | Sets the content alignment within the rectangular area. The default content alignments are `TOP_LEFT`. When the size of the layout is set to zero in a dimension, it grows in that dimension to fit both the content and its padding, if any. When the size is set to greater than zero, the content might scale down to fit in the room left by the padding. In this case, content alignment is ignored.                                                                      |
+| alignment | string |       `top-left`       | Sets the content alignment within the rectangular area. The default content alignments are `TOP_LEFT`. When the size of the layout is set to zero in a dimension, it grows in that dimension to fit both the content and its padding, if any. When the size is set to greater than zero, the content might scale down to fit in the room left by the padding. In this case, content alignment is ignored.                                                                      |
 | padding          | vec4   | `[0.0, 0.0, 0.0, 0.0]` | Sets the content padding for the four sides of the rectangular area, in scene units. The default is no padding (`0,0,0,0`). The padding order is: top, right, bottom, left. When the size of the layout is set to zero in a dimension, it grows in that dimension to fit both the content and its padding, if any. When the size is set to greater than zero, the content might scale down to fit in the room left by the padding. In this case, content alignment is ignored. |
 
-### contentAlignment options: [Alignment](../types/Alignment.md)
+### alignment options: [Alignment](../types/Alignment.md)

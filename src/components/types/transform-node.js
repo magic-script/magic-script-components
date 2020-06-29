@@ -20,7 +20,6 @@ const TransformNode = {
     position: [0, 0, 0],
     scale: [1, 1, 1],
     rotation: [0, 0, 0, 1],
-    transform: [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0]
   }
 }
 

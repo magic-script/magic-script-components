@@ -27,9 +27,9 @@ export default class MyApp extends React.Component {
         <Prism size={[1, 1, 0.2]} >
           <View name="main-view">
             <Text
-              textSize={0.1}
+              fontSize={0.1}
               textColor={[0.1, 1, 0.1, 0.84]}
-              localPosition={[0, 0.25, 0]}
+              position={[0, 0.25, 0]}
             >
               {this.state.counter}
             </Text>

@@ -60,8 +60,8 @@ export default class MyApp extends React.Component {
         return (
             <Scene>
                 <Prism size={[1, 1, 0.2]} >
-                    <View name='main-view' alignment={'center-center'}>
-                        <Text key='notification-center' textSize={0.05} text='Notification Center' localPosition={[-0.18, 0.4, 0]} />
+                    <View name='main-view' anchorPoint={'center-center'}>
+                        <Text key='notification-center' textSize={0.05} position={[-0.18, 0.4, 0]} >Notification Center</Text>
                         {notification}
                         {dialog}
                     </View>

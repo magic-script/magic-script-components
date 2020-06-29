@@ -34,7 +34,7 @@ export default class MyApp extends React.Component {
         return (
             <Scene>
                 <Prism size={[1, 1, 0.2]} >
-                    <View name='main-view' alignment={'center-center'} localPosition={[-0.25, 0, 0]}>
+                    <View name='main-view' alignment={'center-center'} position={[-0.25, 0, 0]}>
                         <DatePicker
                             label="Select Date"
                             labelSide="left"
