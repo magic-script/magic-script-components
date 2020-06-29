@@ -43,7 +43,7 @@ export default class MyApp extends React.Component {
                 defaultItemPadding={[0.01, 0.01, 0.01, 0.01]}
               >
                 <Text fontSize={0.05} textColor={"#B5B5B5"} position={[0.1, 0, 0]}>Age:</Text>
-                <TextEdit text='25' height={0.054} textSize={0.05} width={0.3} />
+                <TextEdit text='25' height={0.054} fontSize={0.05} width={0.3} />
               </LinearLayout>
             </LinearLayout>
           </View>
