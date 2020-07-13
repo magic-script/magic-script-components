@@ -8,6 +8,8 @@
     "src/plane-detector.js",
     "src/platform.js",
     "src/properties-mapping.js",
+    "src/internal-properties.js",
+    "src/property-mappers.js",
     "src/file-system.js",
     "src/xr-client-provider.js",
     "index.d.ts",
