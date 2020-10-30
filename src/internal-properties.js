@@ -402,7 +402,8 @@ const componentInternalProperties = {
     'resourceId',
     'height',
     'width',
-    'fit'
+    'fit',
+    'useDefaultIcon' // iOS|Android only
   ],
   Toggle: [
     ...textContainerInternalProperties,
