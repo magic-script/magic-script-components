@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { UiNode } from './types/ui-node.js';
 import mapProperties from "../properties-mapping.js";
 
@@ -7,7 +8,9 @@ export function Image(props) {
 }
 
 Image.propTypes = {
-  ...UiNode.PropTypes
+  ...UiNode.PropTypes,
+
+  path: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
 
 Image.defaultProps = {
