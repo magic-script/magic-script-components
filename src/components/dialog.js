@@ -45,5 +45,6 @@ Dialog.defaultProps = {
   layout: DialogLayout.standard,
   type: DialogType.dualAction,
 
-  buttonType: ButtonType.iconWithLabel
+  buttonType: ButtonType.iconWithLabel,
+  expireTime: 0
 };
