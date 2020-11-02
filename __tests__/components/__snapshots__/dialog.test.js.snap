@@ -4,10 +4,6 @@ exports[`Dialog component should contain mapped properties 1`] = `
 <dialog
   alignment="center-center"
   buttonType="icon-with-label"
-  cancelIcon="chevron-up"
-  cancelText="Cancel"
-  confirmIcon="chevron-down"
-  confirmText="Confirm"
   debug={false}
   enabled={true}
   expireTime={0}
