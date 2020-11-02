@@ -45,10 +45,5 @@ Dialog.defaultProps = {
   layout: DialogLayout.standard,
   type: DialogType.dualAction,
 
-  buttonType: ButtonType.iconWithLabel,
-  cancelText: "Cancel",
-  cancelIcon: SystemIcon.chevronUp,
-  confirmText: "Confirm",
-  confirmIcon: SystemIcon.chevronDown,
-  expireTime: 0
+  buttonType: ButtonType.iconWithLabel
 };
