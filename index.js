@@ -42,21 +42,22 @@ export {
 export {
   Alignment,
   AnchorPoint,
+  AudioAction,
+  ButtonType,
+  CursorEdgeScrollMode,
+  DialogLayout,
+  DialogType,
   FontStyle,
   FontWeight,
-  Orientation,
-  TextAlign,
-  Side,
   LabelDisplayMode,
-  AudioAction,
-  VideoAction,
-  ViewMode,
-  ButtonType,
-  DialogType,
-  DialogLayout,
-  CursorEdgeScrollMode,
+  Orientation,
   ScrollBarVisibility,
-  SpinnerType
+  Side,
+  SpinnerType,
+  SystemIcon,
+  TextAlign,
+  VideoAction,
+  ViewMode
 } from "./src/components/types/enums";
 
 export { Platform } from "./src/platform";
