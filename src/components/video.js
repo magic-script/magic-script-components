@@ -29,7 +29,6 @@ Video.propTypes = {
 Video.defaultProps = {
   ...UiNode.DefaultProps,
 
-  path: '',
   looping: false,
   subtitlePath: '',
   volume: 1.0,

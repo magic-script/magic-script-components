@@ -14,7 +14,7 @@ export function Audio(props) {
 Audio.propTypes = {
   ...TransformNode.PropTypes,
 
-  path: PropTypes.string.isRequired,
+  path: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
   looping: PropTypes.bool,
   mute: PropTypes.bool,
   pitch: PropTypes.number,
@@ -70,7 +70,6 @@ Audio.propTypes = {
 Audio.defaultProps = {
   ...TransformNode.DefaultProps,
 
-  path: "",
   looping: false,
   mute: false,
   pitch: 0,

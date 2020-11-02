@@ -1,8 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { TypeValidator } from "./util/type-validators.js";
 import { UiNode } from "./types/ui-node.js";
-
 import mapProperties from "../properties-mapping.js";
 
 export function Model(props) {
@@ -12,7 +10,7 @@ export function Model(props) {
 Model.propTypes = {
   ...UiNode.PropTypes,
 
-  path: PropTypes.string.isRequired,
+  path: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
   materialPath: PropTypes.string,
   animationPauseState: PropTypes.bool,
   animationPlaybackSpeed: PropTypes.number,
@@ -34,7 +32,7 @@ Model.propTypes = {
 
 Model.defaultProps = {
   ...UiNode.DefaultProps,
-  path: "",
+
   materialPath: "",
   animationPauseState: false,
   animationPlaybackSpeed: 1.0,

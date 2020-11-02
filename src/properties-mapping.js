@@ -28,6 +28,8 @@ const propertyMapper = {
   soundPitch: setPropertyMapper('pitch'),
   soundVolumeLinear: setPropertyMapper('volume'),
   streamedFileOffset: setPropertyMapper('seekTo'),
+  // Image
+  filePath: setPropertyMapper('path'),
   // Model
   modelPath: setPropertyMapper('path'),
   modelResourceId: setPropertyMapper('resourceId'),
