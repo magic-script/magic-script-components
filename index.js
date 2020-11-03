@@ -55,6 +55,7 @@ export {
   Side,
   SpinnerType,
   SystemIcon,
+  ToggleType,
   TextAlign,
   VideoAction,
   ViewMode

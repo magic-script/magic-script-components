@@ -331,3 +331,9 @@ export const SpinnerType = {
   spriteAnimation: 'sprite-animation',
   particlePackage: 'particle-package'
 };
+
+export const ToggleType = {
+  default: 'default',
+  checkbox: 'checkbox',
+  radio: 'radio',
+};
