@@ -55,8 +55,8 @@ export {
   Side,
   SpinnerType,
   SystemIcon,
-  ToggleType,
   TextAlign,
+  ToggleType,
   VideoAction,
   ViewMode
 } from "./src/components/types/enums";
