@@ -12,7 +12,44 @@ export const Alignment = {
 
 export const AnchorPoint = Alignment;
 
-// #region Font
+export const AudioAction = {
+  pause: 'pause',
+  start: 'start',
+  stop: 'stop',
+  resume: 'resume'
+};
+
+export const ButtonType = {
+  icon: 'icon',
+  iconWithLabel: 'icon-with-label',
+  text: 'text',
+  textWithIcon: 'text-with-icon'
+};
+
+export const CursorEdgeScrollMode = {
+  always: 'always',
+  auto: 'auto',
+  never: 'never'
+};
+
+export const DialogLayout = {
+  standard: 'standard',
+  wide: 'wide'
+};
+
+export const DialogType = {
+  custom: 'custom',
+  timed: 'timed',
+  noAction: 'no-action',
+  singleAction: 'single-action',
+  dualAction: 'dual-action'
+};
+
+export const FitMode = {
+  stretch: 'stretch',
+  aspectFill: 'aspect-fill',
+  aspectFit: 'aspect-fit'
+};
 
 export const FontStyle = {
   normal: 'normal',
@@ -28,17 +65,20 @@ export const FontWeight = {
   extraBold: 'extra-bold'
 };
 
-// #endregion
+export const LabelDisplayMode = {
+  always: 'always',
+  hover:'hover'
+};
 
 export const Orientation = {
   horizontal: 'horizontal',
   vertical: 'vertical'
 };
 
-export const TextAlign = {
-  left: 'left',
-  center: 'center',
-  right: 'right'
+export const ScrollBarVisibility = {
+  always: 'always',
+  auto: 'auto',
+  off: 'off'
 };
 
 export const Side = {
@@ -48,9 +88,9 @@ export const Side = {
   top: 'top'
 };
 
-export const LabelDisplayMode = {
-  always: 'always',
-  hover:'hover'
+export const SpinnerType = {
+  spriteAnimation: 'sprite-animation',
+  particlePackage: 'particle-package'
 };
 
 export const SystemIcon = {
@@ -277,11 +317,16 @@ export const SystemIcon = {
   zoomOut: 'zoom-out'
 };
 
-export const AudioAction = {
-  pause: 'pause',
-  start: 'start',
-  stop: 'stop',
-  resume: 'resume'
+export const TextAlign = {
+  left: 'left',
+  center: 'center',
+  right: 'right'
+};
+
+export const ToggleType = {
+  default: 'default',
+  checkbox: 'checkbox',
+  radio: 'radio',
 };
 
 export const VideoAction = {
@@ -293,47 +338,4 @@ export const VideoAction = {
 export const ViewMode = {
   fullArea: 'full-area',
   leftRight: 'left-right'
-};
-
-export const ButtonType = {
-  icon: 'icon',
-  iconWithLabel: 'icon-with-label',
-  text: 'text',
-  textWithIcon: 'text-with-icon'
-};
-
-export const DialogType = {
-  custom: 'custom',
-  timed: 'timed',
-  noAction: 'no-action',
-  singleAction: 'single-action',
-  dualAction: 'dual-action'
-};
-
-export const DialogLayout = {
-  standard: 'standard',
-  wide: 'wide'
-};
-
-export const CursorEdgeScrollMode = {
-  always: 'always',
-  auto: 'auto',
-  never: 'never'
-};
-
-export const ScrollBarVisibility = {
-  always: 'always',
-  auto: 'auto',
-  off: 'off'
-};
-
-export const SpinnerType = {
-  spriteAnimation: 'sprite-animation',
-  particlePackage: 'particle-package'
-};
-
-export const ToggleType = {
-  default: 'default',
-  checkbox: 'checkbox',
-  radio: 'radio',
 };
