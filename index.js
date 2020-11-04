@@ -47,6 +47,7 @@ export {
   CursorEdgeScrollMode,
   DialogLayout,
   DialogType,
+  FitMode,
   FontStyle,
   FontWeight,
   LabelDisplayMode,
