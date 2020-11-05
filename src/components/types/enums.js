@@ -323,6 +323,16 @@ export const TextAlign = {
   right: 'right'
 };
 
+export const TimeFormat = {
+  hhmmssp: 'hh:mm:ss p', 
+  hhmmp: 'hh:mm p', 
+  hhssp: 'hh:ss p', 
+  hhmmss: 'hh:mm:ss', 
+  hhmm: 'hh:mm', 
+  hhss: 'hh:ss', 
+  mmss: 'mm:ss'
+};
+
 export const ToggleType = {
   default: 'default',
   checkbox: 'checkbox',
