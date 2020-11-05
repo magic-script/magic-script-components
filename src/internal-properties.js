@@ -436,6 +436,7 @@ const componentInternalProperties = {
     ...uiNodeInternalProperties,
     'color',
     'date',
+    'dateFormat',
     'showHint',
     'label',
     'labelSide',
