@@ -45,6 +45,7 @@ export {
   AudioAction,
   ButtonType,
   CursorEdgeScrollMode,
+  DateFormat,
   DialogLayout,
   DialogType,
   FitMode,
