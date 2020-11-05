@@ -324,12 +324,10 @@ export const TextAlign = {
 };
 
 export const TimeFormat = {
-  hhmmssp: 'hh:mm:ss p', 
-  hhmmp: 'hh:mm p', 
-  hhssp: 'hh:ss p', 
   hhmmss: 'hh:mm:ss', 
+  hhmmssp: 'hh:mm:ss p', 
   hhmm: 'hh:mm', 
-  hhss: 'hh:ss', 
+  hhmmp: 'hh:mm p',  
   mmss: 'mm:ss'
 };
 
