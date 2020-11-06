@@ -88,6 +88,8 @@ export const ScrollBarVisibility = {
   off: 'off'
 };
 
+export const ScrollDirection = Orientation;
+
 export const Side = {
   bottom: 'bottom',
   left: 'left',

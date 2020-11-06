@@ -54,6 +54,7 @@ export {
   LabelDisplayMode,
   Orientation,
   ScrollBarVisibility,
+  ScrollDirection,
   Side,
   SpinnerType,
   SystemIcon,
