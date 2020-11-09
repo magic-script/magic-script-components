@@ -23,41 +23,53 @@ Audio.propTypes = {
   action: PropTypes.oneOf(Object.values(AudioAction)),
 
   spatialSoundEnable: PropTypes.bool,
-  spatialSoundDirection: PropTypes.exact({
-    channel: PropTypes.number,
-    channelDirection: PropTypes.arrayOf(TypeValidator.arrayOf(4, "number")),
-  }),
-  spatialSoundDirectSendLevels: PropTypes.exact({
-    channel: PropTypes.number,
-    gain: PropTypes.number,
-    gainHf: PropTypes.number,
-    gainLf: PropTypes.number,
-    gainMf: PropTypes.number,
-  }),
-  spatialSoundDistance: PropTypes.exact({
-    channel: PropTypes.number,
-    minDistance: PropTypes.number,
-    maxDistance: PropTypes.number,
-    rolloffFactor: PropTypes.number,
-  }),
-  spatialSoundPosition: PropTypes.exact({
-    channel: PropTypes.number,
-    channelPosition: PropTypes.number,
-  }),
-  spatialSoundRadiation: PropTypes.exact({
-    channel: PropTypes.number,
-    innerAngle: PropTypes.number,
-    outerAngle: PropTypes.number,
-    outerGain: PropTypes.number,
-    outerGainHf: PropTypes.number,
-  }),
-  spatialSoundRoomSendLevels: PropTypes.exact({
-    channel: PropTypes.number,
-    gain: PropTypes.number,
-    gainHf: PropTypes.number,
-    gainLf: PropTypes.number,
-    gainMf: PropTypes.number,
-  }),
+  spatialSoundDirection: PropTypes.arrayOf(
+    PropTypes.exact({
+      channel: PropTypes.number.isRequired,
+      channelDirection: PropTypes.arrayOf(TypeValidator.arrayOf(4, "number")).isRequired,
+    })
+  ),
+  spatialSoundDirectSendLevels: PropTypes.arrayOf(
+    PropTypes.exact({
+      channel: PropTypes.number.isRequired,
+      gain: PropTypes.number.isRequired,
+      gainHf: PropTypes.number.isRequired,
+      gainLf: PropTypes.number.isRequired,
+      gainMf: PropTypes.number.isRequired,
+    })
+  ),
+  spatialSoundDistance: PropTypes.arrayOf(
+    PropTypes.exact({
+      channel: PropTypes.number.isRequired,
+      minDistance: PropTypes.number.isRequired,
+      maxDistance: PropTypes.number.isRequired,
+      rolloffFactor: PropTypes.number.isRequired,
+    })
+  ),
+  spatialSoundPosition: PropTypes.arrayOf(
+    PropTypes.exact({
+      channel: PropTypes.number.isRequired,
+      channelPosition: PropTypes.arrayOf(TypeValidator.arrayOf(3)).isRequired,
+    })
+  ),
+  spatialSoundRadiation: PropTypes.arrayOf(
+    PropTypes.exact({
+      channel: PropTypes.number.isRequired,
+      innerAngle: PropTypes.number.isRequired,
+      outerAngle: PropTypes.number.isRequired,
+      outerGain: PropTypes.number.isRequired,
+      outerGainHf: PropTypes.number.isRequired,
+    })
+  ),
+  spatialSoundRoomSendLevels: PropTypes.arrayOf(
+    PropTypes.exact({
+      channel: PropTypes.number.isRequired,
+      gain: PropTypes.number.isRequired,
+      gainHf: PropTypes.number.isRequired,
+      gainLf: PropTypes.number.isRequired,
+      gainMf: PropTypes.number.isRequired,
+    })
+  ),
 
   loadFile: PropTypes.bool,
   absolutePath: PropTypes.bool,
