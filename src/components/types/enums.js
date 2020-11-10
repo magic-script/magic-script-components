@@ -33,6 +33,7 @@ export const CursorEdgeScrollMode = {
 };
 
 export const DateFormat = {
+  auto: 'auto',
   MMDDYYYY: 'MM/DD/YYYY', 
   DDMMYYYY: 'DD/MM/YYYY', 
   MMYYYY: 'MM/YYYY', 
@@ -333,6 +334,7 @@ export const TextAlign = {
 };
 
 export const TimeFormat = {
+  auto: 'auto',
   hhmmss: 'hh:mm:ss', 
   hhmmssp: 'hh:mm:ss p', 
   hhmm: 'hh:mm', 
