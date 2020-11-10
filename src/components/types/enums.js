@@ -32,6 +32,13 @@ export const CursorEdgeScrollMode = {
   never: 'never'
 };
 
+export const DateFormat = {
+  MMDDYYYY: 'MM/DD/YYYY', 
+  DDMMYYYY: 'DD/MM/YYYY', 
+  MMYYYY: 'MM/YYYY', 
+  DDYYYY: 'DD/YYYY'
+};
+
 export const DialogLayout = {
   standard: 'standard',
   wide: 'wide'
@@ -80,6 +87,8 @@ export const ScrollBarVisibility = {
   auto: 'auto',
   off: 'off'
 };
+
+export const ScrollDirection = Orientation;
 
 export const Side = {
   bottom: 'bottom',

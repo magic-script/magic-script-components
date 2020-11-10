@@ -359,6 +359,8 @@ const componentInternalProperties = {
     'value',
     'width',
     'height',
+    'minLabel',
+    'maxLabel',
     'onSliderChanged'
   ],
   Spinner: [
