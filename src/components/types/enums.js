@@ -333,6 +333,14 @@ export const TextAlign = {
   right: 'right'
 };
 
+export const TextEntryMode = {
+  email: 'email',
+  none: 'none',
+  normal: 'normal',
+  numeric: 'numeric',
+  ur: 'url'
+};
+
 export const TimeFormat = {
   auto: 'auto',
   hhmmss: 'hh:mm:ss', 

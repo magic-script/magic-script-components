@@ -59,6 +59,7 @@ export {
   SpinnerType,
   SystemIcon,
   TextAlign,
+  TextEntryMode,
   TimeFormat,
   ToggleType,
   VideoAction,
