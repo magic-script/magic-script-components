@@ -1,15 +1,26 @@
-import React from "react";
+import React from 'react';
+import PropTypes from 'prop-types'
 import { UiNode } from './types/ui-node.js';
-import mapProperties from "../properties-mapping.js";
+import mapProperties from '../properties-mapping.js';
 
 export function CircleConfirmation(props) {
-  return React.createElement("circleConfirmation", mapProperties("CircleConfirmation", props));
+  return React.createElement('circleConfirmation', mapProperties('CircleConfirmation', props));
 }
 
 CircleConfirmation.propTypes = {
-  ...UiNode.PropTypes
+  ...UiNode.PropTypes,
+
+  // Properties
+  radius: PropTypes.number,
+
+  // Event handlers
+  onConfirmationCanceled: PropTypes.func,
+  onConfirmationCompleted: PropTypes.func,
+  onConfirmationUpdated: PropTypes.func
 };
 
 CircleConfirmation.defaultProps = {
-  ...UiNode.DefaultProps
+  ...UiNode.DefaultProps,
+
+  radius: 0.2
 };

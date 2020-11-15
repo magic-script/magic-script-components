@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 import { TypeValidator } from "./util/type-validators.js";
 import { UiNode } from "./types/ui-node.js";
 
@@ -18,20 +18,24 @@ export function Dialog(props) {
 Dialog.propTypes = {
   ...UiNode.PropTypes,
 
+  // Properties
   scrolling: PropTypes.bool,
 
   title: PropTypes.string,
   message: PropTypes.string,
-
   layout: PropTypes.oneOf(Object.values(DialogLayout)),
   type: PropTypes.oneOf(Object.values(DialogType)),
-
   buttonType: PropTypes.oneOf(Object.values(ButtonType)),
   cancelText: PropTypes.string,
   cancelIcon: PropTypes.oneOf(Object.values(SystemIcon)),
   confirmText: PropTypes.string,
   confirmIcon: PropTypes.oneOf(Object.values(SystemIcon)),
-  expireTime: TypeValidator.range(0, 1000) // value in range 0 to 1000 seconds
+  expireTime: TypeValidator.range(0, 1000), // value in range 0 to 1000 seconds
+
+  // Event handlers
+  onDialogConfirmed: PropTypes.func,
+  onDialogCanceled: PropTypes.func,
+  onDialogTimeExpired: PropTypes.func,
 };
 
 Dialog.defaultProps = {
@@ -39,8 +43,8 @@ Dialog.defaultProps = {
 
   scrolling: false,
 
-  title: "",
-  message: "",
+  title: '',
+  message: '',
 
   layout: DialogLayout.standard,
   type: DialogType.dualAction,

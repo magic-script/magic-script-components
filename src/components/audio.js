@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { TransformNode } from "./types/transform-node";
+import { TransformNode } from "./types/transform-node.js";
 
 import mapProperties from "../properties-mapping.js";
 import { TypeValidator } from "./util/type-validators.js";
@@ -14,6 +14,7 @@ export function Audio(props) {
 Audio.propTypes = {
   ...TransformNode.PropTypes,
 
+  // Properties
   path: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
   looping: PropTypes.bool,
   mute: PropTypes.bool,

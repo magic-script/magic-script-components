@@ -1,15 +1,30 @@
 import React from "react";
-import { UiNode } from './types/ui-node.js';
+import PropTypes from "prop-types";
+import { UiLayout } from './types/ui-node.js';
 import mapProperties from "../properties-mapping.js";
+import { Alignment } from "./types/enums";
 
 export function GridLayout(props) {
   return React.createElement("gridLayout", mapProperties("GridLayout", props));
 }
 
 GridLayout.propTypes = {
-  ...UiNode.PropTypes
+  ...UiLayout.PropTypes,
+
+  // Properties
+  rows: PropTypes.number,
+  columns: PropTypes.number,
+  defaultItemAlignment: AlignmentProp,
+  defaultItemPadding: PropTypes.number,
+  skipInvisibleItems: PropTypes.bool,
 };
 
 GridLayout.defaultProps = {
-  ...UiNode.DefaultProps
+  ...UiLayout.DefaultProps,
+
+  rows: 0,
+  columns: 0,
+  defaultItemAlignment: Alignment.topLeft,
+  defaultItemPadding: [0, 0, 0, 0],
+  skipInvisibleItems: true
 };

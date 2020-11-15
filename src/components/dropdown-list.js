@@ -16,6 +16,7 @@ export function DropdownList(props) {
 DropdownList.propTypes = {
   ...UiNode.PropTypes,
 
+  // Properties
   text: PropTypes.string,
   textColor: ColorProp,
   fontSize: PropTypes.number,
@@ -29,16 +30,19 @@ DropdownList.propTypes = {
     PropTypes.shape({ id: PropTypes.string, selected: PropTypes.bool })
   ),
   showList: PropTypes.bool,
+
+  // Event handlers
+  onSelectionChanged: PropTypes.func
 };
 
 DropdownList.defaultProps = {
   ...UiNode.DefaultProps,
 
-  text: "",
-  textColor: "white",
+  text: '',
+  textColor: 'white',
   fontSize: 0.08,
   iconSize: [0.05, 0.05],
-  iconColor: "white",
+  iconColor: 'white',
   listMaxHeight: 0,
   listFontSize: 0.05,
   maxCharacterLimit: 0,
