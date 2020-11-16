@@ -15,7 +15,7 @@ DatePicker.propTypes = {
   label: PropTypes.string,
   dateFormat: PropTypes.oneOf(Object.values(DateFormat)),
 
-  // Event handlers
+  // Events
   onDateChanged: PropTypes.func,
   onDateConfirmed: PropTypes.func,
   onColorCanceled: PropTypes.func

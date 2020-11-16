@@ -1,5 +1,3 @@
-import React from 'react'
-
 export { Audio } from './audio.js';
 export { Button } from './button.js';
 export { CircleConfirmation } from './circle-confirmation.js';

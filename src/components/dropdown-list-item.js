@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 import PropTypes from 'prop-types';
 import { UiNode } from './types/ui-node.js';
-import mapProperties from "../properties-mapping.js";
+import mapProperties from '../properties-mapping.js';
 import { ColorProp } from './common-props';
 
 export function DropdownListItem(props) {
-  return React.createElement("dropdownListItem", mapProperties("DropdownListItem", props));
+  return React.createElement('dropdownListItem', mapProperties('DropdownListItem', props));
 }
 
 DropdownListItem.propTypes = {
@@ -15,8 +15,6 @@ DropdownListItem.propTypes = {
   id: PropTypes.number,
   label: PropTypes.string,
   selected: PropTypes.bool
-
-  // Event handlers
 };
 
 DropdownListItem.defaultProps = {

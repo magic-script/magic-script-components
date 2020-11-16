@@ -78,6 +78,12 @@ export const LabelDisplayMode = {
   hover:'hover'
 };
 
+export const LightType = {
+  directional: 'directional',
+  point: 'point',
+  spot: 'spot'
+};
+
 export const Orientation = {
   horizontal: 'horizontal',
   vertical: 'vertical'
@@ -365,4 +371,10 @@ export const VideoAction = {
 export const ViewMode = {
   fullArea: 'full-area',
   leftRight: 'left-right'
+};
+
+export const WebViewAction = {
+  back: 'back',
+  forward: 'forward',
+  reload: 'reload'
 };

@@ -1,16 +1,13 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { TypeValidator } from "./util/type-validators.js";
-import { UiNode } from "./types/ui-node.js";
-import { ColorProp } from "./common-props";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { TypeValidator } from './util/type-validators.js';
+import { UiNode } from './types/ui-node.js';
+import { ColorProp } from './common-props';
 
-import mapProperties from "../properties-mapping.js";
+import mapProperties from '../properties-mapping.js';
 
 export function DropdownList(props) {
-  return React.createElement(
-    "dropdownList",
-    mapProperties("DropdownList", props)
-  );
+  return React.createElement('dropdownList', mapProperties('DropdownList', props));
 }
 
 DropdownList.propTypes = {
@@ -31,7 +28,7 @@ DropdownList.propTypes = {
   ),
   showList: PropTypes.bool,
 
-  // Event handlers
+  // Events
   onSelectionChanged: PropTypes.func
 };
 

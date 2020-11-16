@@ -52,6 +52,7 @@ export {
   FontStyle,
   FontWeight,
   LabelDisplayMode,
+  LightType,
   Orientation,
   ScrollBarVisibility,
   ScrollDirection,
@@ -63,7 +64,8 @@ export {
   TimeFormat,
   ToggleType,
   VideoAction,
-  ViewMode
+  ViewMode,
+  WebViewAction
 } from "./src/components/types/enums";
 
 export { Platform } from "./src/platform";

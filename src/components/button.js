@@ -26,7 +26,7 @@ Button.propTypes = {
   iconSize: PropTypes.arrayOf(TypeValidator.arrayOf(2)),
   iconType: PropTypes.oneOf(Object.values(SystemIcon)),
 
-  // Event handlers
+  // Events
   onClick: PropTypes.func
 };
 

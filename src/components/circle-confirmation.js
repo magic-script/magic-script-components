@@ -13,7 +13,7 @@ CircleConfirmation.propTypes = {
   // Properties
   radius: PropTypes.number,
 
-  // Event handlers
+  // Events
   onConfirmationCanceled: PropTypes.func,
   onConfirmationCompleted: PropTypes.func,
   onConfirmationUpdated: PropTypes.func

@@ -1,36 +1,36 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { TypeValidator } from "./util/type-validators.js";
-import { UiNode } from "./types/ui-node.js";
-import { ColorProp } from "./common-props";
-import mapProperties from "../properties-mapping.js";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { UiNode } from './types/ui-node.js';
+import { ColorProp } from './common-props';
+import mapProperties from '../properties-mapping.js';
 
 export function ProgressBar(props) {
-  return React.createElement(
-    "progressBar",
-    mapProperties("ProgressBar", props)
-  );
+  return React.createElement('progressBar', mapProperties('ProgressBar', props));
 }
 
 ProgressBar.propTypes = {
   ...UiNode.PropTypes,
 
-  beginColor: ColorProp,
-  endColor: ColorProp,
+  // Properties
+  width: PropTypes.number.isRequired,
+  height: PropTypes.number,
   min: PropTypes.number,
   max: PropTypes.number,
   value: PropTypes.number,
-  width: PropTypes.number,
-  height: PropTypes.number,
+  beginColor: ColorProp,
+  endColor: ColorProp,
+
+  // Events
+  onProgressBarChanged: PropTypes.func
 };
 
 ProgressBar.defaultProps = {
   ...UiNode.DefaultProps,
 
-  progressColor: { beginColor: "white", endColor: "black" },
+  height: 0,
   min: 0,
   max: 1,
   value: 0,
-  width: 0,
-  height: 0,
+  beginColor: 'white', 
+  endColor: 'black',
 };

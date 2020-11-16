@@ -1,18 +1,13 @@
-import React from "react";
+import React from 'react';
 import PropTypes from 'prop-types';
-import { TypeValidator } from "./util/type-validators.js";
-import { UiNode } from "./types/ui-node.js";
+import { TypeValidator } from './util/type-validators.js';
+import { UiNode } from './types/ui-node.js';
 
-import mapProperties from "../properties-mapping.js";
-import {
-  SystemIcon,
-  DialogLayout,
-  DialogType,
-  ButtonType,
-} from "./types/enums.js";
+import mapProperties from '../properties-mapping.js';
+import { SystemIcon, DialogLayout, DialogType, ButtonType } from './types/enums.js';
 
 export function Dialog(props) {
-  return React.createElement("dialog", mapProperties("Dialog", props));
+  return React.createElement('dialog', mapProperties('Dialog', props));
 }
 
 Dialog.propTypes = {
@@ -32,7 +27,7 @@ Dialog.propTypes = {
   confirmIcon: PropTypes.oneOf(Object.values(SystemIcon)),
   expireTime: TypeValidator.range(0, 1000), // value in range 0 to 1000 seconds
 
-  // Event handlers
+  // Events
   onDialogConfirmed: PropTypes.func,
   onDialogCanceled: PropTypes.func,
   onDialogTimeExpired: PropTypes.func,

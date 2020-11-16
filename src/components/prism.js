@@ -1,5 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 import { TypeValidator } from './util/type-validators.js';
 
 export function Prism (props) {
@@ -14,7 +14,7 @@ Prism.propTypes = {
   transform: PropTypes.arrayOf(TypeValidator.arrayOf(16)),
   size: PropTypes.arrayOf(TypeValidator.arrayOf(3)).isRequired,
 
-  // Event handlers
+  // Events
   onDestroy: PropTypes.func,
   onModeChanged: PropTypes.func,
   onRotationChanged: PropTypes.func,
