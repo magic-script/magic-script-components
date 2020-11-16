@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { UiLayout } from './types/ui-node.js';
+import { TypeValidator } from './util/type-validators.js';
+import { UiLayout } from './types/ui-layout.js';
 import mapProperties from "../properties-mapping.js";
 import { Alignment } from "./types/enums";
 
@@ -14,8 +15,8 @@ GridLayout.propTypes = {
   // Properties
   rows: PropTypes.number,
   columns: PropTypes.number,
-  defaultItemAlignment: AlignmentProp,
-  defaultItemPadding: PropTypes.number,
+  defaultItemAlignment: PropTypes.oneOf(Object.values(Alignment)),
+  defaultItemPadding: PropTypes.arrayOf(TypeValidator.arrayOf(4)),
   skipInvisibleItems: PropTypes.bool,
 };
 

@@ -1,9 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import mapProperties from '../properties-mapping.js';
 
 export function Scene (props) {
-  return React.createElement('scene', mapProperties('Scene', props));
+  return React.createElement('scene', props);
 }
 
 Scene.propTypes = {
