@@ -34,7 +34,7 @@ import {
 describe("Components", () => {
   describe("Slider", () => {
     test("should create component", () => {
-      const component = renderer.create(<Slider />);
+      const component = renderer.create(<Slider width={0.5}/>);
       const json = component.toJSON();
       expect(json).toMatchSnapshot();
     });
@@ -82,7 +82,7 @@ describe("Components", () => {
 
   describe("ScrollBar", () => {
     test("should create component", () => {
-      const component = renderer.create(<ScrollBar />);
+      const component = renderer.create(<ScrollBar length={0.5}/>);
       const json = component.toJSON();
       expect(json).toMatchSnapshot();
     });
@@ -90,7 +90,11 @@ describe("Components", () => {
 
   describe("ScrollView", () => {
     test("should create component", () => {
-      const component = renderer.create(<ScrollView />);
+      const aabb = {
+        min: [-0.5, -0.5, -0.1],
+        max: [0.5, 0.5, 0.1],
+      };
+      const component = renderer.create(<ScrollView scrollBounds={aabb}/>);
       const json = component.toJSON();
       expect(json).toMatchSnapshot();
     });
@@ -154,7 +158,7 @@ describe("Components", () => {
 
   describe("WebView", () => {
     test("should create component", () => {
-      const component = renderer.create(<WebView />);
+      const component = renderer.create(<WebView width={0.5} height={0.5} />);
       const json = component.toJSON();
       expect(json).toMatchSnapshot();
     });
@@ -210,7 +214,7 @@ describe("Components", () => {
 
   describe("Line", () => {
     test("should create component", () => {
-      const component = renderer.create(<Line />);
+      const component = renderer.create(<Line points={[[0,0,0], [1,1,1]]}/>);
       const json = component.toJSON();
       expect(json).toMatchSnapshot();
     });
