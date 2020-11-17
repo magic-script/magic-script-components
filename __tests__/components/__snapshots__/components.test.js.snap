@@ -441,8 +441,6 @@ exports[`Components Panel should create component 1`] = `
 />
 `;
 
-exports[`Components PortalIcon should create component 1`] = `<portalIcon />`;
-
 exports[`Components Prism should create component 1`] = `
 <prism
   orientation={

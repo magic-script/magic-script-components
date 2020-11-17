@@ -16,7 +16,6 @@ export { ListViewItem } from './list-view-item.js';
 export { Model } from './model.js';
 export { PageView } from './page-view.js';
 export { Panel } from './panel.js';
-export { PortalIcon } from './portal-icon.js';
 export { Prism } from './prism.js';
 export { ProgressBar } from './progress-bar.js';
 export { Quad } from './quad.js';

@@ -390,23 +390,6 @@ declare module "magic-script-components" {
 
   const WebView: React.FC<WebViewProps>;
 
-  interface PortalIconProps extends ViewProps, EventHandlerProps {
-    text?: string;
-    textColor?: color;
-    textSize?: number;
-    hoverScale?: number;
-    hoverZOffset?: number;
-    iconActivateAnimation?: string;
-    iconContextMenuAnimation?: string;
-    iconHoverAnimation?: string;
-    iconIdleAnimation?: string;
-    iconHoverPosition?: vec3;
-    labelDisplayMode?: LabelDisplayMode;
-    iconSize?: PortalIconSize;
-  }
-
-  const PortalIcon: React.FC<PortalIconProps>;
-
   interface ColorPickerProps extends ViewProps, EventHandlerProps {
     color?: color;
     height?: number;
@@ -443,26 +426,6 @@ declare module "magic-script-components" {
   }
 
   const CircleConfirmation: React.FC<CircleConfirmationProps>;
-
-  interface ContentProps extends EventHandlerProps {
-    name?: string;
-    parentedBoneName?: string;
-    skipRaycast?: boolean;
-    triggerable?: boolean;
-    visible?: boolean;
-    visibilityInherited?: boolean;
-    anchorPosition?: vec3;
-    localPosition?: vec3;
-    localRotation?: quat;
-    localScale?: vec3;
-    localTransform?: mat4;
-    cursorHoverState?: CursorHoverState;
-    offset?: vec3;
-    padding?: vec4;
-    itemAlignment?: Alignment;
-  }
-
-  const Content: React.FC<ContentProps>;
 
   interface ModelProps extends ContentProps, EventHandlerProps {
     bloomStrength?: number;
