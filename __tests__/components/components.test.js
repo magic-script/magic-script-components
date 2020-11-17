@@ -20,7 +20,6 @@ import {
   Tab,
   PageView,
   WebView,
-  PortalIcon,
   ColorPicker,
   TimePicker,
   DatePicker,
@@ -159,14 +158,6 @@ describe("Components", () => {
   describe("WebView", () => {
     test("should create component", () => {
       const component = renderer.create(<WebView width={0.5} height={0.5} />);
-      const json = component.toJSON();
-      expect(json).toMatchSnapshot();
-    });
-  });
-
-  describe("PortalIcon", () => {
-    test("should create component", () => {
-      const component = renderer.create(<PortalIcon />);
       const json = component.toJSON();
       expect(json).toMatchSnapshot();
     });
