@@ -372,9 +372,3 @@ export const ViewMode = {
   fullArea: 'full-area',
   leftRight: 'left-right'
 };
-
-export const WebViewAction = {
-  back: 'back',
-  forward: 'forward',
-  reload: 'reload'
-};

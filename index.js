@@ -64,8 +64,7 @@ export {
   TimeFormat,
   ToggleType,
   VideoAction,
-  ViewMode,
-  WebViewAction
+  ViewMode
 } from "./src/components/types/enums";
 
 export { Platform } from "./src/platform";
