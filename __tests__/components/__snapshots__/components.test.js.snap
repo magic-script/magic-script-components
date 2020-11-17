@@ -697,7 +697,9 @@ exports[`Components TextEdit should create component 1`] = `
   }
   textSize={0.08}
   visible={true}
-/>
+>
+  
+</textEdit>
 `;
 
 exports[`Components TimePicker should create component 1`] = `
