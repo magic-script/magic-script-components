@@ -14,7 +14,7 @@ Quad.propTypes = {
 
   width: PropTypes.number,
   height: PropTypes.number,
-  resourceId: PropTypes.number.isRequired,
+  resourceId: PropTypes.number,
   viewMode: PropTypes.oneOf(Object.values(ViewMode)),
   texCoords: PropTypes.arrayOf(
     PropTypes.arrayOf(TypeValidator.arrayOf(2))

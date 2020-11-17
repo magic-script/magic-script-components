@@ -275,9 +275,9 @@ const componentInternalProperties = {
     'onListVisibilityChanged'
   ],
   DropdownListItem: [
-      ...uiNodeInternalProperties,
-      'id',
-      'label'
+    ...uiNodeInternalProperties,
+    'id',
+    'label'
   ],
   Text: [
     ...textContainerInternalProperties,
@@ -296,7 +296,6 @@ const componentInternalProperties = {
   ],
   TextEdit: [
     ...textContainerInternalProperties,
-    'text',
     'width',
     'height',
     'textAlignment',
@@ -320,7 +319,7 @@ const componentInternalProperties = {
     'absolutePath',
     'selectedBegin',
     'selectedEnd',
-    'onToggleChanged'
+    'onTextChanged'
   ],
   Button: [
     ...textContainerInternalProperties,

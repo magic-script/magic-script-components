@@ -22,7 +22,5 @@ DatePicker.propTypes = {
 };
 
 DatePicker.defaultProps = {
-  ...UiNode.DefaultProps,
-
-  label: ''
+  ...UiNode.DefaultProps
 };

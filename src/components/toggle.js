@@ -13,9 +13,9 @@ Toggle.propTypes = {
   ...UiNode.PropTypes,
 
   // Properties
+  children: PropTypes.string,
   height: PropTypes.number,
   on: PropTypes.bool,
-  text: PropTypes.string,
   textColor: ColorProp,
   textSize: PropTypes.number,
   type: PropTypes.oneOf(Object.values(ToggleType)),
@@ -29,7 +29,6 @@ Toggle.defaultProps = {
 
   height: 0,
   on: false,
-  text: '',
   textColor: 'white',
   textSize: 0.08,
   type: ToggleType.default

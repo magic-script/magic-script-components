@@ -14,6 +14,7 @@ TextEdit.propTypes = {
   ...UiNode.PropTypes,
 
   // Properties
+  children: PropTypes.string.isRequired,
   allCaps: PropTypes.bool,
   charLimit: PropTypes.number,
   cursorEdgeScrollMode: PropTypes.oneOf(Object.values(CursorEdgeScrollMode)),
@@ -32,7 +33,6 @@ TextEdit.propTypes = {
   scrollValue: PropTypes.number,
   selectedBegin: PropTypes.number,
   selectedEnd: PropTypes.number,
-  text: PropTypes.string,
   textAlign: PropTypes.oneOf(Object.values(TextAlign)),
   textColor: ColorProp,
   textEntry: PropTypes.oneOf(Object.values(TextEntryMode)),
@@ -47,6 +47,7 @@ TextEdit.propTypes = {
 TextEdit.defaultProps = {
   ...UiNode.DefaultProps,
 
+  children: '',
   allCaps: false,
   charLimit: 0,
   fontSize: 0.08,
