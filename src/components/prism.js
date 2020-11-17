@@ -25,6 +25,5 @@ Prism.propTypes = {
 Prism.defaultProps = {
   position: [0, 0, 0],
   orientation: [0, 0, 0, 1],
-  scale: [1, 1, 1],
-  size: [1, 1, 1]
+  scale: [1, 1, 1]
 };
