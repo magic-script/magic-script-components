@@ -32,5 +32,5 @@ ProgressBar.defaultProps = {
   max: 1,
   value: 0,
   beginColor: 'white', 
-  endColor: 'black',
+  endColor: 'white',
 };
