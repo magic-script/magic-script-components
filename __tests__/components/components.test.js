@@ -222,7 +222,7 @@ describe("Components", () => {
 
   describe("Prism", () => {
     test("should create component", () => {
-      const component = renderer.create(<Prism />);
+      const component = renderer.create(<Prism size={[1,1,1]}/>);
       const json = component.toJSON();
       expect(json).toMatchSnapshot();
     });
