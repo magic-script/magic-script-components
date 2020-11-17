@@ -4,7 +4,7 @@ exports[`Video component should contain mapped properties 1`] = `
 <video
   action="stop"
   debug={false}
-  height={0}
+  height={512}
   localPosition={
     Array [
       0,
@@ -41,6 +41,6 @@ exports[`Video component should contain mapped properties 1`] = `
   viewMode="full-area"
   visible={true}
   volume={1}
-  width={0}
+  width={512}
 />
 `;

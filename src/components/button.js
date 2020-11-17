@@ -4,7 +4,7 @@ import { TypeValidator } from './util/type-validators.js';
 import { UiNode } from './types/ui-node.js';
 import { Side, SystemIcon } from './types/enums.js';
 import mapProperties from '../properties-mapping.js';
-import { ColorProp } from "./common-props";
+import { ColorProp } from './common-props.js';
 
 export function Button (props) {
   return React.createElement('button', mapProperties('Button', props));
@@ -13,6 +13,7 @@ export function Button (props) {
 Button.propTypes = {
   ...UiNode.PropTypes,
 
+  // Properties
   children: PropTypes.string.isRequired,
   width: PropTypes.number,
   height: PropTypes.number,
@@ -23,7 +24,10 @@ Button.propTypes = {
   iconColor: ColorProp,
   iconPath: PropTypes.string,
   iconSize: PropTypes.arrayOf(TypeValidator.arrayOf(2)),
-  iconType: PropTypes.oneOf(Object.values(SystemIcon))
+  iconType: PropTypes.oneOf(Object.values(SystemIcon)),
+
+  // Events
+  onClick: PropTypes.func
 };
 
 Button.defaultProps = {

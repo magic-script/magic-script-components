@@ -14,28 +14,28 @@ export function Video (props) {
 Video.propTypes = {
   ...UiNode.PropTypes,
 
-  path: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
-  looping: PropTypes.bool,
-  subtitlePath: PropTypes.string,
-  volume: TypeValidator.range(0.0, 1.0),
-  seekTo: PropTypes.number,
+  // Properties
   action: PropTypes.oneOf(Object.values(VideoAction)),
+  looping: PropTypes.bool,
+  path: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
   screenSize: PropTypes.arrayOf(TypeValidator.arrayOf(2)),
+  seekTo: PropTypes.number,
+  subtitlePath: PropTypes.string,
   viewMode: PropTypes.oneOf(Object.values(ViewMode)),
-  width: PropTypes.number,
-  height: PropTypes.number
+  volume: TypeValidator.range(0.0, 1.0),
+  width: TypeValidator.range(1, 2048),
+  height: TypeValidator.range(1, 2048),
 };
 
 Video.defaultProps = {
   ...UiNode.DefaultProps,
 
-  looping: false,
-  subtitlePath: '',
-  volume: 1.0,
-  seekTo: 0.0,
   action: VideoAction.stop,
+  looping: false,
   screenSize: [1.4, 0.85],
+  seekTo: 0.0,
   viewMode: ViewMode.fullArea,
-  width: 0.0,
-  height: 0.0
+  volume: 1.0,
+  width: 512,
+  height: 512
 };

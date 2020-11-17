@@ -1,21 +1,19 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { TypeValidator } from "./util/type-validators.js";
-import { UiNode } from "./types/ui-node.js";
-import { ColorProp } from "./common-props";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { TypeValidator } from './util/type-validators.js';
+import { UiNode } from './types/ui-node.js';
+import { ColorProp } from './common-props';
 
-import mapProperties from "../properties-mapping.js";
+import mapProperties from '../properties-mapping.js';
 
 export function DropdownList(props) {
-  return React.createElement(
-    "dropdownList",
-    mapProperties("DropdownList", props)
-  );
+  return React.createElement('dropdownList', mapProperties('DropdownList', props));
 }
 
 DropdownList.propTypes = {
   ...UiNode.PropTypes,
 
+  // Properties
   text: PropTypes.string,
   textColor: ColorProp,
   fontSize: PropTypes.number,
@@ -29,16 +27,19 @@ DropdownList.propTypes = {
     PropTypes.shape({ id: PropTypes.string, selected: PropTypes.bool })
   ),
   showList: PropTypes.bool,
+
+  // Events
+  onSelectionChanged: PropTypes.func
 };
 
 DropdownList.defaultProps = {
   ...UiNode.DefaultProps,
 
-  text: "",
-  textColor: "white",
+  text: '',
+  textColor: 'white',
   fontSize: 0.08,
   iconSize: [0.05, 0.05],
-  iconColor: "white",
+  iconColor: 'white',
   listMaxHeight: 0,
   listFontSize: 0.05,
   maxCharacterLimit: 0,

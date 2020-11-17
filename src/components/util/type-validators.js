@@ -1,5 +1,5 @@
 const TypeValidator = {
-  arrayOf: (length, type = "number") => {
+  arrayOf: (length, type = 'number') => {
     return (propValue, key, componentName, location, propFullName) => {
       if (propValue.length !== length) {
         return new Error(

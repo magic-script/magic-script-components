@@ -1,19 +1,20 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { TransformNode } from "./types/transform-node";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { TransformNode } from './types/transform-node.js';
 
-import mapProperties from "../properties-mapping.js";
-import { TypeValidator } from "./util/type-validators.js";
+import mapProperties from '../properties-mapping.js';
+import { TypeValidator } from './util/type-validators.js';
 
-import { AudioAction } from "./types/enums.js";
+import { AudioAction } from './types/enums.js';
 
 export function Audio(props) {
-  return React.createElement("audio", mapProperties("Audio", props));
+  return React.createElement('audio', mapProperties('Audio', props));
 }
 
 Audio.propTypes = {
   ...TransformNode.PropTypes,
 
+  // Properties
   path: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
   looping: PropTypes.bool,
   mute: PropTypes.bool,
@@ -26,7 +27,7 @@ Audio.propTypes = {
   spatialSoundDirection: PropTypes.arrayOf(
     PropTypes.exact({
       channel: PropTypes.number.isRequired,
-      channelDirection: PropTypes.arrayOf(TypeValidator.arrayOf(4, "number")).isRequired,
+      channelDirection: PropTypes.arrayOf(TypeValidator.arrayOf(4)).isRequired,
     })
   ),
   spatialSoundDirectSendLevels: PropTypes.arrayOf(

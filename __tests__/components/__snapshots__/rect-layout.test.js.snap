@@ -6,6 +6,7 @@ exports[`RectLayout component should contain mapped properties 1`] = `
   contentAlignment="top-left"
   debug={false}
   enabled={true}
+  height={0}
   hideBounds={false}
   localPosition={
     Array [
@@ -39,5 +40,6 @@ exports[`RectLayout component should contain mapped properties 1`] = `
   }
   skipRaycast={false}
   visible={true}
+  width={0}
 />
 `;

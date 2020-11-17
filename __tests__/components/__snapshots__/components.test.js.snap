@@ -28,6 +28,7 @@ exports[`Components CircleConfirmation should create component 1`] = `
       1,
     ]
   }
+  radius={0.2}
   skipRaycast={false}
   visible={true}
 />
@@ -36,6 +37,7 @@ exports[`Components CircleConfirmation should create component 1`] = `
 exports[`Components ColorPicker should create component 1`] = `
 <colorPicker
   alignment="center-center"
+  color="white"
   debug={false}
   enabled={true}
   hideBounds={false}
@@ -105,6 +107,8 @@ exports[`Components DropdownListItem should create component 1`] = `
   debug={false}
   enabled={true}
   hideBounds={false}
+  id={0}
+  label=""
   localPosition={
     Array [
       0,
@@ -135,8 +139,19 @@ exports[`Components DropdownListItem should create component 1`] = `
 exports[`Components GridLayout should create component 1`] = `
 <gridLayout
   alignment="center-center"
+  columns={0}
   debug={false}
+  defaultItemAlignment="top-left"
+  defaultItemPadding={
+    Array [
+      0,
+      0,
+      0,
+      0,
+    ]
+  }
   enabled={true}
+  height={0}
   hideBounds={false}
   localPosition={
     Array [
@@ -160,8 +175,10 @@ exports[`Components GridLayout should create component 1`] = `
       1,
     ]
   }
+  rows={1}
   skipRaycast={false}
   visible={true}
+  width={0}
 />
 `;
 
@@ -170,6 +187,7 @@ exports[`Components Image should create component 1`] = `
   alignment="center-center"
   debug={false}
   enabled={true}
+  fit="stretch"
   hideBounds={false}
   localPosition={
     Array [
@@ -194,12 +212,14 @@ exports[`Components Image should create component 1`] = `
     ]
   }
   skipRaycast={false}
+  useFrame={false}
   visible={true}
 />
 `;
 
 exports[`Components Light should create component 1`] = `
 <light
+  color="white"
   debug={false}
   localPosition={
     Array [
@@ -224,6 +244,7 @@ exports[`Components Light should create component 1`] = `
     ]
   }
   skipRaycast={false}
+  type="directional"
   visible={true}
 />
 `;
@@ -253,6 +274,20 @@ exports[`Components Line should create component 1`] = `
       1,
     ]
   }
+  points={
+    Array [
+      Array [
+        0,
+        0,
+        0,
+      ],
+      Array [
+        1,
+        1,
+        1,
+      ],
+    ]
+  }
   skipRaycast={false}
   visible={true}
 />
@@ -262,7 +297,17 @@ exports[`Components LinearLayout should create component 1`] = `
 <linearLayout
   alignment="center-center"
   debug={false}
+  defaultItemAlignment="top-left"
+  defaultItemPadding={
+    Array [
+      0,
+      0,
+      0,
+      0,
+    ]
+  }
   enabled={true}
+  height={0}
   hideBounds={false}
   localPosition={
     Array [
@@ -286,8 +331,11 @@ exports[`Components LinearLayout should create component 1`] = `
       1,
     ]
   }
+  orientation="vertical"
+  skipInvisibleItems={false}
   skipRaycast={false}
   visible={true}
+  width={0}
 />
 `;
 
@@ -329,6 +377,7 @@ exports[`Components PageView should create component 1`] = `
   alignment="center-center"
   debug={false}
   enabled={true}
+  height={0}
   hideBounds={false}
   localPosition={
     Array [
@@ -354,6 +403,8 @@ exports[`Components PageView should create component 1`] = `
   }
   skipRaycast={false}
   visible={true}
+  visiblePage={0}
+  width={0}
 />
 `;
 
@@ -392,7 +443,39 @@ exports[`Components Panel should create component 1`] = `
 
 exports[`Components PortalIcon should create component 1`] = `<portalIcon />`;
 
-exports[`Components Prism should create component 1`] = `<prism />`;
+exports[`Components Prism should create component 1`] = `
+<prism
+  orientation={
+    Array [
+      0,
+      0,
+      0,
+      1,
+    ]
+  }
+  position={
+    Array [
+      0,
+      0,
+      0,
+    ]
+  }
+  scale={
+    Array [
+      1,
+      1,
+      1,
+    ]
+  }
+  size={
+    Array [
+      1,
+      1,
+      1,
+    ]
+  }
+/>
+`;
 
 exports[`Components Scene should create component 1`] = `<scene />`;
 
@@ -402,6 +485,7 @@ exports[`Components ScrollBar should create component 1`] = `
   debug={false}
   enabled={true}
   hideBounds={false}
+  length={0.5}
   localPosition={
     Array [
       0,
@@ -424,7 +508,11 @@ exports[`Components ScrollBar should create component 1`] = `
       1,
     ]
   }
+  orientation="vertical"
   skipRaycast={false}
+  thickness={0}
+  thumbPosition={0}
+  thumbSize={0}
   visible={true}
 />
 `;
@@ -457,6 +545,24 @@ exports[`Components ScrollView should create component 1`] = `
       1,
     ]
   }
+  scrollBarVisibility="auto"
+  scrollBounds={
+    Object {
+      "max": Array [
+        0.5,
+        0.5,
+        0.1,
+      ],
+      "min": Array [
+        -0.5,
+        -0.5,
+        -0.1,
+      ],
+    }
+  }
+  scrollDirection="vertical"
+  scrollSpeed={0.1}
+  scrollValue={0}
   skipRaycast={false}
   visible={true}
 />
@@ -467,6 +573,7 @@ exports[`Components Slider should create component 1`] = `
   alignment="center-center"
   debug={false}
   enabled={true}
+  height={0}
   hideBounds={false}
   localPosition={
     Array [
@@ -490,8 +597,12 @@ exports[`Components Slider should create component 1`] = `
       1,
     ]
   }
+  max={1}
+  min={0}
   skipRaycast={false}
+  value={0}
   visible={true}
+  width={0.5}
 />
 `;
 
@@ -524,6 +635,7 @@ exports[`Components Tab should create component 1`] = `
     ]
   }
   skipRaycast={false}
+  textColor="white"
   visible={true}
 />
 `;
@@ -531,9 +643,20 @@ exports[`Components Tab should create component 1`] = `
 exports[`Components TextEdit should create component 1`] = `
 <textEdit
   alignment="center-center"
+  charLimit={0}
+  charSpacing={0}
   debug={false}
   enabled={true}
+  fontParameters={
+    Object {
+      "allCaps": false,
+      "fontSize": 0.08,
+      "fontStyle": "normal",
+      "fontWeight": "regular",
+    }
+  }
   hideBounds={false}
+  lineSpacing={1}
   localPosition={
     Array [
       0,
@@ -556,14 +679,33 @@ exports[`Components TextEdit should create component 1`] = `
       1,
     ]
   }
+  multiline={false}
+  password={false}
+  scrollBarVisibility="auto"
+  scrollSpeed={0.1}
   skipRaycast={false}
+  textAlignment="left"
+  textColor="white"
+  textEntry="normal"
+  textPadding={
+    Array [
+      0,
+      0,
+      0,
+      0,
+    ]
+  }
+  textSize={0.08}
   visible={true}
-/>
+>
+  
+</textEdit>
 `;
 
 exports[`Components TimePicker should create component 1`] = `
 <timePicker
   alignment="center-center"
+  color="white"
   debug={false}
   enabled={true}
   hideBounds={false}
@@ -589,7 +731,9 @@ exports[`Components TimePicker should create component 1`] = `
       1,
     ]
   }
+  showHint={false}
   skipRaycast={false}
+  timeFormat="auto"
   visible={true}
 />
 `;
@@ -599,6 +743,7 @@ exports[`Components Toggle should create component 1`] = `
   alignment="center-center"
   debug={false}
   enabled={true}
+  height={0}
   hideBounds={false}
   localPosition={
     Array [
@@ -622,7 +767,10 @@ exports[`Components Toggle should create component 1`] = `
       1,
     ]
   }
+  on={false}
   skipRaycast={false}
+  textColor="white"
+  type="default"
   visible={true}
 />
 `;
@@ -630,6 +778,9 @@ exports[`Components Toggle should create component 1`] = `
 exports[`Components ToggleGroup should create component 1`] = `
 <toggleGroup
   alignment="center-center"
+  allTogglesOff={false}
+  allowAllOff={false}
+  allowMultipleOn={false}
   debug={false}
   enabled={true}
   hideBounds={false}
@@ -698,6 +849,7 @@ exports[`Components WebView should create component 1`] = `
   alignment="center-center"
   debug={false}
   enabled={true}
+  height={0.5}
   hideBounds={false}
   localPosition={
     Array [
@@ -723,5 +875,6 @@ exports[`Components WebView should create component 1`] = `
   }
   skipRaycast={false}
   visible={true}
+  width={0.5}
 />
 `;

@@ -2,17 +2,7 @@
 
 exports[`Model component should contain mapped properties 1`] = `
 <model
-  animation={
-    Object {
-      "loops": 1,
-      "name": "",
-      "paused": false,
-      "resourceId": 0,
-    }
-  }
   animationPauseState={false}
-  animationPlaybackSpeed={1}
-  animationTime={0}
   debug={false}
   importScale={1}
   localPosition={
@@ -37,17 +27,9 @@ exports[`Model component should contain mapped properties 1`] = `
       1,
     ]
   }
-  materialPath=""
   modelPath="file_path/file.name"
   modelResourceId={12345}
   skipRaycast={false}
-  texture={
-    Object {
-      "materialName": "",
-      "textureId": 0,
-      "textureSlot": "",
-    }
-  }
   visible={true}
 />
 `;

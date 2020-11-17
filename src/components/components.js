@@ -1,5 +1,3 @@
-import React from 'react'
-
 export { Audio } from './audio.js';
 export { Button } from './button.js';
 export { CircleConfirmation } from './circle-confirmation.js';
@@ -19,21 +17,11 @@ export { Model } from './model.js';
 export { PageView } from './page-view.js';
 export { Panel } from './panel.js';
 export { PortalIcon } from './portal-icon.js';
-
-export function Prism (props) {
-  // return (<prism {...props} />);
-  return React.createElement('prism', props);
-}
-
+export { Prism } from './prism.js';
 export { ProgressBar } from './progress-bar.js';
 export { Quad } from './quad.js';
 export { RectLayout } from './rect-layout.js';
-
-export function Scene (props) {
-  // return (<prism {...props} />);
-  return React.createElement('scene', props);
-}
-
+export { Scene } from './scene.js';
 export { ScrollBar } from './scroll-bar.js';
 export { ScrollView } from './scroll-view.js';
 export { Slider } from './slider.js';

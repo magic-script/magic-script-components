@@ -17,8 +17,6 @@ exports[`ListView component should contain mapped properties 1`] = `
   enabled={true}
   height={0}
   hideBounds={false}
-  itemAlignment={Array []}
-  itemPadding={Array []}
   localPosition={
     Array [
       0,
@@ -41,10 +39,9 @@ exports[`ListView component should contain mapped properties 1`] = `
       1,
     ]
   }
-  orientation="horizontal"
-  scrollBarVisibility="off"
-  scrollSpeed={0}
-  scrollToItem={0}
+  orientation="vertical"
+  scrollBarVisibility="always"
+  scrollSpeed={0.1}
   scrollValue={0}
   scrollingEnabled={true}
   skipInvisibleItems={false}

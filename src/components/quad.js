@@ -1,29 +1,31 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { TypeValidator } from "./util/type-validators.js";
-import { UiNode } from "./types/ui-node.js";
-import { ViewMode } from "./types/enums.js";
-
-import mapProperties from "../properties-mapping.js";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { TypeValidator } from './util/type-validators.js';
+import { RenderNode } from './types/render-node.js';
+import { ViewMode } from './types/enums.js';
+import mapProperties from '../properties-mapping.js';
 
 export function Quad(props) {
-  return React.createElement("quad", mapProperties("Quad", props));
+  return React.createElement('quad', mapProperties('Quad', props));
 }
 
 Quad.propTypes = {
-  ...UiNode.PropTypes,
+  ...RenderNode.PropTypes,
 
   width: PropTypes.number,
   height: PropTypes.number,
+  resourceId: PropTypes.number,
   viewMode: PropTypes.oneOf(Object.values(ViewMode)),
-  texCoords: PropTypes.arrayOf(TypeValidator.arrayOf(4))
+  texCoords: PropTypes.arrayOf(
+    PropTypes.arrayOf(TypeValidator.arrayOf(2))
+  )
 };
 
 Quad.defaultProps = {
-  ...UiNode.DefaultProps,
+  ...RenderNode.DefaultProps,
 
-  width: 0,
-  height: 0,
+  width: 1,
+  height: 1,
   viewMode: ViewMode.fullArea,
-  texCoords: [0, 0, 0, 0],
+  texCoords: [[0, 0], [1, 0], [0, 1], [1, 1]],
 };
