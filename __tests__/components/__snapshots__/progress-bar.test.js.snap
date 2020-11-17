@@ -40,6 +40,6 @@ exports[`ProgressBar component should contain mapped properties 1`] = `
   skipRaycast={false}
   value={0}
   visible={true}
-  width={0}
+  width={0.5}
 />
 `;

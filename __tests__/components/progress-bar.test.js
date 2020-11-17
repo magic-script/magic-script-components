@@ -16,6 +16,7 @@ describe("ProgressBar component", () => {
     <ProgressBar
       beginColor={progressColor.beginColor}
       endColor={progressColor.endColor}
+      width={0.5}
     />
   );
 

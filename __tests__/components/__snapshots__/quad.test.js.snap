@@ -34,10 +34,22 @@ exports[`Quad component should contain mapped properties 1`] = `
   skipRaycast={false}
   texCoords={
     Array [
-      0,
-      0,
-      0,
-      0,
+      Array [
+        0,
+        0,
+      ],
+      Array [
+        1,
+        0,
+      ],
+      Array [
+        0,
+        1,
+      ],
+      Array [
+        1,
+        1,
+      ],
     ]
   }
   viewMode="full-area"
