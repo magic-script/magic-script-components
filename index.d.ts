@@ -89,7 +89,7 @@ declare module "magic-script-components" {
     ui?: boolean;
     opaque?: boolean;
     color?: color;
-    texCoords?: vec4;
+    texCoords?: vec4[];
     imageFrameResource?: number;
     renderResource?: number;
     width?: number;
@@ -99,6 +99,7 @@ declare module "magic-script-components" {
     resourceId?: bigint;
     absolutePath?: boolean;
     useFrame?: boolean;
+    fit?: FitMode;
   }
 
   const Image: React.FC<ImageProps>;
@@ -833,6 +834,8 @@ declare module "magic-script-components" {
   type AudioAction = 'pause' | 'start' | 'stop' | 'resume';
 
   type LightType = 'directional' | 'point' | 'spot';
+
+  type FitMode = 'stretch' | 'aspect-fill' | 'aspect-fit';
 
 }
 
