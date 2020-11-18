@@ -428,6 +428,27 @@ declare module "magic-script-components" {
 
   const CircleConfirmation: React.FC<CircleConfirmationProps>;
 
+  interface ContentProps extends EventHandlerProps {
+    name?: string;
+    parentedBoneName?: string;
+    skipRaycast?: boolean;
+    triggerable?: boolean;
+    visible?: boolean;
+    visibilityInherited?: boolean;
+    anchorPosition?: vec3;
+    localPosition?: vec3;
+    localRotation?: quat;
+    localScale?: vec3;
+    localTransform?: mat4;
+    cursorHoverState?: CursorHoverState;
+    offset?: vec3;
+    padding?: vec4;
+    itemAlignment?: Alignment;
+  }
+
+  const Content: React.FC<ContentProps>;
+
+
   interface ModelProps extends ContentProps, EventHandlerProps {
     bloomStrength?: number;
     color?: color;
