@@ -71,6 +71,7 @@ exports[`Components ColorPicker should create component 1`] = `
 exports[`Components DatePicker should create component 1`] = `
 <datePicker
   alignment="center-center"
+  color="white"
   debug={false}
   enabled={true}
   hideBounds={false}
@@ -96,6 +97,7 @@ exports[`Components DatePicker should create component 1`] = `
       1,
     ]
   }
+  showHint={false}
   skipRaycast={false}
   visible={true}
 />
@@ -376,6 +378,15 @@ exports[`Components PageView should create component 1`] = `
 <pageView
   alignment="center-center"
   debug={false}
+  defaultPageAlignment="top-left"
+  defaultPagePadding={
+    Array [
+      0,
+      0,
+      0,
+      0,
+    ]
+  }
   enabled={true}
   height={0}
   hideBounds={false}
@@ -443,6 +454,7 @@ exports[`Components Panel should create component 1`] = `
 
 exports[`Components Prism should create component 1`] = `
 <prism
+  debug={false}
   orientation={
     Array [
       0,
@@ -451,6 +463,7 @@ exports[`Components Prism should create component 1`] = `
       1,
     ]
   }
+  orientationRelatedToCamera={false}
   position={
     Array [
       0,
@@ -458,6 +471,7 @@ exports[`Components Prism should create component 1`] = `
       0,
     ]
   }
+  positionRelatedToCamera={false}
   scale={
     Array [
       1,

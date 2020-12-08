@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { TypeValidator } from './util/type-validators.js';
 import { UiNode } from './types/ui-node.js';
 import mapProperties from '../properties-mapping.js';
+import { Alignment } from './types/enums.js';
 
 export function PageView(props) {
   return React.createElement('pageView', mapProperties('PageView', props));
