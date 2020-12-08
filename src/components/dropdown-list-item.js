@@ -13,8 +13,7 @@ DropdownListItem.propTypes = {
 
   // Properties
   id: PropTypes.number,
-  label: PropTypes.string,
-  selected: PropTypes.bool
+  label: PropTypes.string
 };
 
 DropdownListItem.defaultProps = {

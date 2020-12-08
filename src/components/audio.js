@@ -15,14 +15,18 @@ Audio.propTypes = {
   ...TransformNode.PropTypes,
 
   // Properties
-  path: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
+  action: PropTypes.oneOf(Object.values(AudioAction)),
+  absolutePath: PropTypes.bool,
+  autoDestroy: PropTypes.bool,
+  basePath: PropTypes.string,
+  descriptor: PropTypes.number,
+  dynamicDecode: PropTypes.bool,
+  loadFile: PropTypes.bool,
   looping: PropTypes.bool,
   mute: PropTypes.bool,
+  path: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
   pitch: PropTypes.number,
-  volume: TypeValidator.range(0.0, 1.0),
   seekTo: PropTypes.number,
-  action: PropTypes.oneOf(Object.values(AudioAction)),
-
   spatialSoundEnable: PropTypes.bool,
   spatialSoundDirection: PropTypes.arrayOf(
     PropTypes.exact({
@@ -71,13 +75,7 @@ Audio.propTypes = {
       gainMf: PropTypes.number.isRequired,
     })
   ),
-
-  loadFile: PropTypes.bool,
-  absolutePath: PropTypes.bool,
-  descriptor: PropTypes.number,
-  basePath: PropTypes.string,
-  autoDestroy: PropTypes.bool,
-  dynamicDecode: PropTypes.bool,
+  volume: TypeValidator.range(0.0, 1.0),
 };
 
 Audio.defaultProps = {

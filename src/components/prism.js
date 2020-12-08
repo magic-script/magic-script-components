@@ -8,11 +8,14 @@ export function Prism (props) {
 
 Prism.propTypes = {
   // Properties
-  position: PropTypes.arrayOf(TypeValidator.arrayOf(3)),
+  debug: PropTypes.bool,
   orientation: PropTypes.arrayOf(TypeValidator.arrayOf(4)),
+  orientationRelatedToCamera: PropTypes.bool,
+  position: PropTypes.arrayOf(TypeValidator.arrayOf(3)),
+  positionRelatedToCamera: PropTypes.bool,
   scale: PropTypes.arrayOf(TypeValidator.arrayOf(3)),
-  transform: PropTypes.arrayOf(TypeValidator.arrayOf(16)),
   size: PropTypes.arrayOf(TypeValidator.arrayOf(3)).isRequired,
+  transform: PropTypes.arrayOf(TypeValidator.arrayOf(16)),
 
   // Events
   onDestroy: PropTypes.func,
@@ -23,7 +26,10 @@ Prism.propTypes = {
 };
 
 Prism.defaultProps = {
-  position: [0, 0, 0],
+  debug: false,
   orientation: [0, 0, 0, 1],
+  orientationRelatedToCamera: false,
+  position: [0, 0, 0],
+  positionRelatedToCamera: false,
   scale: [1, 1, 1]
 };

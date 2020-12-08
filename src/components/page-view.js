@@ -10,16 +10,50 @@ export function PageView(props) {
 PageView.propTypes = {
   ...UiNode.PropTypes,
 
+  defaultItemAlignment: PropTypes.oneOf(Object.values(Alignment)),
+  defaultItemPadding: PropTypes.arrayOf(TypeValidator.arrayOf(4)),
+  itemAlignment: PropTypes.arrayOf(
+    PropTypes.exact({
+      column: PropTypes.number.isRequired,
+      row: PropTypes.number.isRequired,
+      alignment: PropTypes.oneOf(Object.values(Alignment)).isRequired
+    })
+  ),
+  itemPadding: PropTypes.arrayOf(
+    PropTypes.exact({
+      column: PropTypes.number.isRequired,
+      row: PropTypes.number.isRequired,
+      padding: PropTypes.arrayOf(TypeValidator.arrayOf(4)).isRequired
+    })
+  ),
+
   // Properties
+  defaultPageAlignment: PropTypes.oneOf(Object.values(Alignment)),
+  defaultPagePadding: PropTypes.arrayOf(TypeValidator.arrayOf(4)),
+  pageAlignment: PropTypes.arrayOf(
+    PropTypes.exact({
+      index: PropTypes.number.isRequired,
+      alignment: PropTypes.oneOf(Object.values(Alignment)).isRequired
+    })
+  ),
+  pagePadding: PropTypes.arrayOf(
+    PropTypes.exact({
+      index: PropTypes.number.isRequired,
+      padding: PropTypes.arrayOf(TypeValidator.arrayOf(4)).isRequired
+    })
+  ),
+  visiblePage: PropTypes.number,
   width: PropTypes.number,
   height: PropTypes.number,
-  visiblePage: PropTypes.number
+  
 };
 
 PageView.defaultProps = {
   ...UiNode.DefaultProps,
 
+  defaultPageAlignment: Alignment.topLeft,
+  defaultPagePadding: [0, 0, 0, 0],
+  visiblePage: 0,
   width: 0,
-  height: 0,
-  visiblePage: 0
+  height: 0
 };

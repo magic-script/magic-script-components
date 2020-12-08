@@ -14,18 +14,17 @@ Dialog.propTypes = {
   ...UiNode.PropTypes,
 
   // Properties
-  scrolling: PropTypes.bool,
-
-  title: PropTypes.string,
-  message: PropTypes.string,
-  layout: PropTypes.oneOf(Object.values(DialogLayout)),
-  type: PropTypes.oneOf(Object.values(DialogType)),
   buttonType: PropTypes.oneOf(Object.values(ButtonType)),
   cancelText: PropTypes.string,
   cancelIcon: PropTypes.oneOf(Object.values(SystemIcon)),
   confirmText: PropTypes.string,
   confirmIcon: PropTypes.oneOf(Object.values(SystemIcon)),
   expireTime: TypeValidator.range(0, 1000), // value in range 0 to 1000 seconds
+  layout: PropTypes.oneOf(Object.values(DialogLayout)),
+  message: PropTypes.string,
+  scrolling: PropTypes.bool,
+  title: PropTypes.string,
+  type: PropTypes.oneOf(Object.values(DialogType)),
 
   // Events
   onDialogConfirmed: PropTypes.func,
@@ -36,14 +35,11 @@ Dialog.propTypes = {
 Dialog.defaultProps = {
   ...UiNode.DefaultProps,
 
-  scrolling: false,
-
-  title: '',
-  message: '',
-
-  layout: DialogLayout.standard,
-  type: DialogType.dualAction,
-
   buttonType: ButtonType.iconWithLabel,
-  expireTime: 0
+  expireTime: 0,
+  layout: DialogLayout.standard,
+  message: '',
+  scrolling: false,
+  title: '',
+  type: DialogType.dualAction,
 };
