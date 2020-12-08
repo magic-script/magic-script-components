@@ -105,36 +105,8 @@ exports[`Components DatePicker should create component 1`] = `
 
 exports[`Components DropdownListItem should create component 1`] = `
 <dropdownListItem
-  alignment="center-center"
-  debug={false}
-  enabled={true}
-  hideBounds={false}
   id={0}
   label=""
-  localPosition={
-    Array [
-      0,
-      0,
-      0,
-    ]
-  }
-  localRotation={
-    Array [
-      0,
-      0,
-      0,
-      1,
-    ]
-  }
-  localScale={
-    Array [
-      1,
-      1,
-      1,
-    ]
-  }
-  skipRaycast={false}
-  visible={true}
 />
 `;
 
@@ -344,6 +316,14 @@ exports[`Components LinearLayout should create component 1`] = `
 exports[`Components ListViewItem should create component 1`] = `
 <listViewItem
   alignment="center-center"
+  backgroundColor={
+    Array [
+      0,
+      0,
+      0,
+      0,
+    ]
+  }
   debug={false}
   enabled={true}
   hideBounds={false}
