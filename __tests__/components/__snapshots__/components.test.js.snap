@@ -1,5 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Components Checkbox should create component 1`] = `
+<toggle
+  alignment="center-center"
+  debug={false}
+  enabled={true}
+  height={0}
+  hideBounds={false}
+  localPosition={
+    Array [
+      0,
+      0,
+      0,
+    ]
+  }
+  localRotation={
+    Array [
+      0,
+      0,
+      0,
+      1,
+    ]
+  }
+  localScale={
+    Array [
+      1,
+      1,
+      1,
+    ]
+  }
+  on={false}
+  skipRaycast={false}
+  textColor="white"
+  type="checkbox"
+  visible={true}
+/>
+`;
+
 exports[`Components CircleConfirmation should create component 1`] = `
 <circleConfirmation
   alignment="center-center"
@@ -469,6 +506,43 @@ exports[`Components Prism should create component 1`] = `
 />
 `;
 
+exports[`Components Radio should create component 1`] = `
+<toggle
+  alignment="center-center"
+  debug={false}
+  enabled={true}
+  height={0}
+  hideBounds={false}
+  localPosition={
+    Array [
+      0,
+      0,
+      0,
+    ]
+  }
+  localRotation={
+    Array [
+      0,
+      0,
+      0,
+      1,
+    ]
+  }
+  localScale={
+    Array [
+      1,
+      1,
+      1,
+    ]
+  }
+  on={false}
+  skipRaycast={false}
+  textColor="white"
+  type="radio"
+  visible={true}
+/>
+`;
+
 exports[`Components Scene should create component 1`] = `<scene />`;
 
 exports[`Components ScrollBar should create component 1`] = `
@@ -595,6 +669,43 @@ exports[`Components Slider should create component 1`] = `
   value={0}
   visible={true}
   width={0.5}
+/>
+`;
+
+exports[`Components Switch should create component 1`] = `
+<toggle
+  alignment="center-center"
+  debug={false}
+  enabled={true}
+  height={0}
+  hideBounds={false}
+  localPosition={
+    Array [
+      0,
+      0,
+      0,
+    ]
+  }
+  localRotation={
+    Array [
+      0,
+      0,
+      0,
+      1,
+    ]
+  }
+  localScale={
+    Array [
+      1,
+      1,
+      1,
+    ]
+  }
+  on={false}
+  skipRaycast={false}
+  textColor="white"
+  type="default"
+  visible={true}
 />
 `;
 

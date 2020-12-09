@@ -277,15 +277,21 @@ declare module "magic-script-components" {
 
   const DropdownListItem: React.FC<DropdownListItemProps>;
 
-  interface ToggleProps extends ViewProps, EventHandlerProps {
+  interface BaseToggleProps extends ViewProps, EventHandlerProps {
     children?: string;
     height?: number;
     on?: boolean;
     textColor?: color;
     textSize?: number;
+  }
+
+  interface ToggleProps extends BaseToggleProps, EventHandlerProps {
     type?: ToggleType;
   }
 
+  const Checkbox: React.FC<BaseToggleProps>;
+  const Radio: React.FC<BaseToggleProps>;
+  const Switch: React.FC<BaseToggleProps>;
   const Toggle: React.FC<ToggleProps>;
 
   interface ToggleGroupProps extends ViewProps, EventHandlerProps {
