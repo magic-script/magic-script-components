@@ -16,5 +16,7 @@ ListViewItem.propTypes = {
 };
 
 ListViewItem.defaultProps = {
-  ...UiNode.DefaultProps
+  ...UiNode.DefaultProps,
+
+  backgroundColor: [0, 0, 0, 0]
 };

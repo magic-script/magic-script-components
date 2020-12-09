@@ -10,105 +10,147 @@ declare module "magic-script-components" {
     volumeSize: vec3;
   }
 
-  interface ViewProps extends ContentProps, EventHandlerProps {
-    alignment?: Alignment;
-    activateResponse?: FocusRequest;
+  interface NodeProps extends EventHandlerProps {
+    cursorHoverState?: CursorHoverState;
+    name?: string;
+    parentedBoneName?: string;
+    skipRaycast?: boolean;
+    triggerable?: boolean;
+    visible?: boolean;
+    visibilityInherited?: boolean;
+  }
+
+  interface TransformProps extends NodeProps, EventHandlerProps {
+    pivot?: vec3;
+    position?: vec3;
+    rotation?: quat;
+    scale?: vec3;
+    transform?: mat4;
+  }
+
+  interface RenderProps extends TransformProps, EventHandlerProps {
+    blooms?: { on?: boolean; renderStateIndex?: number; };
+    bloomStrength?: number;
+    color?: color;
+    castsShadows?: { on?: boolean; renderStateIndex?: number; };
+    drmContent?: boolean;
+    backFaceCulls?: { on?: boolean; renderStateIndex?: number; };
+    frontFaceCulls?: { on?: boolean; renderStateIndex?: number; };
+    isOpaque?: { on?: boolean; renderStateIndex?: number; };
+    isUI?: { on?: boolean; renderStateIndex?: number; };
+    pushesStencil?: { on?: boolean; renderStateIndex?: number; };
+    readsClip?: { on?: boolean; renderStateIndex?: number; };
+    readsDepth?: { on?: boolean; renderStateIndex?: number; };
+    receivesLight?: { on?: boolean; renderStateIndex?: number; };
+    receivesShadows?: { on?: boolean; renderStateIndex?: number; };
     renderingLayer?: RenderingLayer;
+    shader?: ShaderType;
+    writesColor?: { on?: boolean; renderStateIndex?: number; };
+    writesDepth?: { on?: boolean; renderStateIndex?: number; };
+    writesStencil?: { on?: boolean; renderStateIndex?: number; };
+  }
+
+  // Interface for UiNode
+  interface ViewProps extends TransformProps, EventHandlerProps {
+    activateResponse?: FocusRequest;
+    anchorPoint?: AnchorPoint;
     enabled?: boolean;
     eventPassThrough?: boolean;
     eventPassThroughChildren?: boolean;
-    gravityWellEnabled?: boolean;
     eventSoundId?: { soundEvent?: SoundEvent; soundName?: string; };
+    gravityWellEnabled?: boolean;
     gravityWellProperties?: { shape?: { size?: vec2; offset?: vec3; roundness?: number; }; snap?: GravityWellSnap; internalSnap?: boolean; };
+    renderingLayer?: RenderingLayer;
   }
 
   const View: React.FC<ViewProps>;
 
+  interface LayoutProps extends ViewProps {
+    width?: number;
+    height?: number;
+  }
+
   interface TextProps extends ViewProps, EventHandlerProps {
-    text?: string;
-    textColor?: color;
-    textSize?: number;
+    children?: string;
     allCaps?: boolean;
-    charSpacing?: number;
+    fontSize?: number;
+    fontStyle?: FontStyle;
+    fontWeight?: FontWeight;
+    letterSpacing?: number;
     lineSpacing?: number;
-    textAlignment?: HorizontalTextAlignment;
-    style?: FontStyle;
-    weight?: FontWeight;
-    boundsSize?: { boundsSize?: vec2; wrap?: boolean; };
-    fontParameters?: { style?: FontStyle; weight?: FontWeight; fontSize?: number; tracking?: number; allCaps?: boolean; };
-    fontDescription?: FontDescription;
-    filePath?: string;
-    absolutePath?: boolean;
+    multiline?: boolean;
+    textAlign?: TextAlign;
+    textColor?: color;
+    width?: number;
+    height?: number;
   }
 
   const Text: React.FC<TextProps>;
 
   interface TextEditProps extends ViewProps, EventHandlerProps {
-    text?: string;
-    textColor?: color;
-    textSize?: number;
-    textAlignment?: HorizontalTextAlignment;
+    children?: string;
+    allCaps?: boolean;
     charLimit?: number;
-    charSpacing?: number;
     cursorEdgeScrollMode?: CursorEdgeScrollMode;
-    lineSpacing?: number;
-    textPadding?: vec4;
+    fontSize?: number;
+    fontWeight?: FontWeight;
+    fontStyle?: FontStyle;
     hint?: string;
     hintColor?: color;
+    letterSpacing?: number;
+    lineSpacing?: number;
     multiline?: boolean;
     password?: boolean;
-    scrolling?: boolean;
-    textEntry?: TextEntryMode;
     scrollBarVisibility?: ScrollBarVisibility;
+    scrolling?: boolean;
     scrollSpeed?: number;
     scrollValue?: number;
-    fontParameters?: { style?: FontStyle; weight?: FontWeight; fontSize?: number; tracking?: number; allCaps?: boolean; };
+    selectedBegin?: number;
+    selectedEnd?: number;
+    textAlign?: TextAlign;
+    textColor?: color;
+    textEntry?: TextEntryMode;
+    textPadding?: vec4;
     width?: number;
     height?: number;
-    fontDescription?: FontDescription;
-    filePath?: string;
-    absolutePath?: boolean;
   }
 
   const TextEdit: React.FC<TextEditProps>;
 
   interface ButtonProps extends ViewProps, EventHandlerProps {
-    text?: string;
-    textColor?: color;
-    textSize?: number;
-    iconSize?: vec2;
-    iconColor?: color;
+    children?: string;
     width?: number;
     height?: number;
-    roundness?: number;
+    outline?: boolean;
+    fontSize?: number;
+    textColor?: color;
+    textSide?: Side;
+    iconColor?: color;
+    iconPath?: string;
+    iconSize?: vec2;
+    iconType?: SystemIcon;
   }
 
   const Button: React.FC<ButtonProps>;
 
   interface ImageProps extends ViewProps, EventHandlerProps {
-    ui?: boolean;
-    opaque?: boolean;
+    path?: string;
+    icon?: SystemIcon;
     color?: color;
-    texCoords?: vec4;
-    imageFrameResource?: number;
-    renderResource?: number;
     width?: number;
     height?: number;
-    icon?: SystemIcon;
-    filePath?: string;
-    resourceId?: bigint;
-    absolutePath?: boolean;
-    useFrame?: boolean;
+    useFrame?: boolean,
+    fit?: FitMode;
   }
 
   const Image: React.FC<ImageProps>;
 
   interface ScrollBarProps extends ViewProps, EventHandlerProps {
+    length?: number;
+    thickness?: number;
     thumbSize?: number;
     thumbPosition?: number;
     orientation?: Orientation;
-    length?: number;
-    thickness?: number;
   }
 
   const ScrollBar: React.FC<ScrollBarProps>;
@@ -125,34 +167,14 @@ declare module "magic-script-components" {
 
   const ScrollView: React.FC<ScrollViewProps>;
 
-  interface ListViewProps extends EventHandlerProps {
-    name?: string;
-    parentedBoneName?: string;
-    skipRaycast?: boolean;
-    triggerable?: boolean;
-    visible?: boolean;
-    visibilityInherited?: boolean;
-    anchorPosition?: vec3;
-    localPosition?: vec3;
-    localRotation?: quat;
-    localScale?: vec3;
-    localTransform?: mat4;
-    cursorHoverState?: CursorHoverState;
-    offset?: vec3;
-    padding?: vec4;
-    itemAlignment?: { index?: number; alignment?: Alignment; };
-    alignment?: Alignment;
-    activateResponse?: FocusRequest;
-    renderingLayer?: RenderingLayer;
-    enabled?: boolean;
-    eventPassThrough?: boolean;
-    eventPassThroughChildren?: boolean;
-    gravityWellEnabled?: boolean;
-    eventSoundId?: { soundEvent?: SoundEvent; soundName?: string; };
-    gravityWellProperties?: { shape?: { size?: vec2; offset?: vec3; roundness?: number; }; snap?: GravityWellSnap; internalSnap?: boolean; };
-    cursorEdgeScrollMode?: CursorEdgeScrollMode;
+  interface ListViewProps extends ViewProps, EventHandlerProps {
+    width?: number;
+    height?: number;
+    cursorEdgeScollMode?: CursorEdgeScrollMode;
     defaultItemAlignment?: Alignment;
     defaultItemPadding?: vec4;
+    itemAlignment?: { index?: number; alignment?: Alignment; };
+    itemPadding?: { index?: number; padding?: vec4; };
     orientation?: Orientation;
     scrollBarVisibility?: ScrollBarVisibility;
     scrollingEnabled?: boolean;
@@ -160,9 +182,6 @@ declare module "magic-script-components" {
     scrollValue?: number;
     scrollToItem?: number;
     skipInvisibleItems?: boolean;
-    itemPadding?: { index?: number; padding?: vec4; };
-    width?: number;
-    height?: number;
   }
 
   const ListView: React.FC<ListViewProps>;
@@ -174,115 +193,63 @@ declare module "magic-script-components" {
   const ListViewItem: React.FC<ListViewItemProps>;
 
   interface SpinnerProps extends ViewProps, EventHandlerProps {
-    size?: vec2;
-    value?: number;
-    type?: LoadingSpinnerType;
-    id?: bigint;
-    path?: string;
+    width?: number;
     height?: number;
+    value?: number;
+    type?: SpinnerType;
     determinate?: boolean;
   }
 
   const Spinner: React.FC<SpinnerProps>;
 
   interface SliderProps extends ViewProps, EventHandlerProps {
+    width?: number;
+    height?: number;
     min?: number;
     max?: number;
     value?: number;
-    width?: number;
-    height?: number;
   }
 
   const Slider: React.FC<SliderProps>;
 
   interface ProgressBarProps extends ViewProps, EventHandlerProps {
-    progressColor?: { beginColor?: color; endColor?: color; };
+    width?: number;
+    height?: number;
     min?: number;
     max?: number;
     value?: number;
-    width?: number;
-    height?: number;
+    beginColor?: color;
+    endColor?: color;
   }
 
   const ProgressBar: React.FC<ProgressBarProps>;
 
-  interface GridLayoutProps extends EventHandlerProps {
-    name?: string;
-    parentedBoneName?: string;
-    skipRaycast?: boolean;
-    triggerable?: boolean;
-    visible?: boolean;
-    visibilityInherited?: boolean;
-    anchorPosition?: vec3;
-    localPosition?: vec3;
-    localRotation?: quat;
-    localScale?: vec3;
-    localTransform?: mat4;
-    cursorHoverState?: CursorHoverState;
-    offset?: vec3;
-    padding?: vec4;
-    itemAlignment?: { row?: number; column?: number; alignment?: Alignment; };
-    alignment?: Alignment;
-    activateResponse?: FocusRequest;
-    renderingLayer?: RenderingLayer;
-    enabled?: boolean;
-    eventPassThrough?: boolean;
-    eventPassThroughChildren?: boolean;
-    gravityWellEnabled?: boolean;
-    eventSoundId?: { soundEvent?: SoundEvent; soundName?: string; };
-    gravityWellProperties?: { shape?: { size?: vec2; offset?: vec3; roundness?: number; }; snap?: GravityWellSnap; internalSnap?: boolean; };
+  interface GridLayoutProps extends LayoutProps, EventHandlerProps {
     defaultItemAlignment?: Alignment;
     defaultItemPadding?: vec4;
+    itemAlignment?: { row?: number; column?: number; alignment?: Alignment; };
+    itemPadding?: { row?: number; column?: number; padding?: vec4; };
     skipInvisibleItems?: boolean;
     columns?: number;
     rows?: number;
-    itemPadding?: { row?: number; column?: number; padding?: vec4; };
-    width?: number;
-    height?: number;
   }
 
   const GridLayout: React.FC<GridLayoutProps>;
 
-  interface LinearLayoutProps extends EventHandlerProps {
-    name?: string;
-    parentedBoneName?: string;
-    skipRaycast?: boolean;
-    triggerable?: boolean;
-    visible?: boolean;
-    visibilityInherited?: boolean;
-    anchorPosition?: vec3;
-    localPosition?: vec3;
-    localRotation?: quat;
-    localScale?: vec3;
-    localTransform?: mat4;
-    cursorHoverState?: CursorHoverState;
-    offset?: vec3;
-    padding?: vec4;
-    itemAlignment?: { index?: number; alignment?: Alignment; };
-    alignment?: Alignment;
-    activateResponse?: FocusRequest;
-    renderingLayer?: RenderingLayer;
-    enabled?: boolean;
-    eventPassThrough?: boolean;
-    eventPassThroughChildren?: boolean;
-    gravityWellEnabled?: boolean;
-    eventSoundId?: { soundEvent?: SoundEvent; soundName?: string; };
-    gravityWellProperties?: { shape?: { size?: vec2; offset?: vec3; roundness?: number; }; snap?: GravityWellSnap; internalSnap?: boolean; };
+  interface LinearLayoutProps extends LayoutProps, EventHandlerProps {
     defaultItemAlignment?: Alignment;
     defaultItemPadding?: vec4;
+    itemAlignment?: { index?: number; alignment?: Alignment; };
+    itemPadding?: { index?: number; padding?: vec4; };
     skipInvisibleItems?: boolean;
     orientation?: Orientation;
-    itemPadding?: { index?: number; padding?: vec4; };
-    width?: number;
-    height?: number;
   }
 
   const LinearLayout: React.FC<LinearLayoutProps>;
 
-  interface RectLayoutProps extends ViewProps, EventHandlerProps {
-    contentAlignment?: Alignment;
-    width?: number;
-    height?: number;
+  interface RectLayoutProps extends LayoutProps, EventHandlerProps {
+    alignment?: Alignment;
+    padding?: vec4;
   }
 
   const RectLayout: React.FC<RectLayoutProps>;
@@ -304,18 +271,18 @@ declare module "magic-script-components" {
   const DropdownList: React.FC<DropdownListProps>;
 
   interface DropdownListItemProps extends EventHandlerProps {
-    label?: string;
     id?: number;
+    label?: string;
   }
 
   const DropdownListItem: React.FC<DropdownListItemProps>;
 
   interface ToggleProps extends ViewProps, EventHandlerProps {
-    text?: string;
+    children?: string;
+    height?: number;
+    on?: boolean;
     textColor?: color;
     textSize?: number;
-    on?: boolean;
-    height?: number;
     type?: ToggleType;
   }
 
@@ -346,7 +313,6 @@ declare module "magic-script-components" {
     text?: string;
     textColor?: color;
     textSize?: number;
-    type?: EclipseLabelType;
   }
 
   const Tab: React.FC<TabProps>;
@@ -359,11 +325,11 @@ declare module "magic-script-components" {
     confirmText?: string;
     confirmIcon?: SystemIcon;
     expireTime?: number;
+    layout?: DialogLayout;
     message?: string;
+    scrolling?: boolean;
     title?: string;
     type?: DialogType;
-    layout?: DialogLayout;
-    scrolling?: boolean;
   }
 
   const Dialog: React.FC<DialogProps>;
@@ -371,9 +337,9 @@ declare module "magic-script-components" {
   interface PageViewProps extends ViewProps, EventHandlerProps {
     defaultPageAlignment?: Alignment;
     defaultPagePadding?: vec4;
-    visiblePage?: number;
     pageAlignment?: { index?: number; alignment?: Alignment; };
     pagePadding?: { index?: number; padding?: vec4; };
+    visiblePage?: number;
     width?: number;
     height?: number;
   }
@@ -381,9 +347,8 @@ declare module "magic-script-components" {
   const PageView: React.FC<PageViewProps>;
 
   interface WebViewProps extends ViewProps, EventHandlerProps {
-    url?: string;
-    action?: WebViewAction;
     scrollBy?: vec2;
+    url?: string;
     width?: number;
     height?: number;
   }
@@ -392,18 +357,18 @@ declare module "magic-script-components" {
 
   interface ColorPickerProps extends ViewProps, EventHandlerProps {
     color?: color;
-    height?: number;
   }
 
   const ColorPicker: React.FC<ColorPickerProps>;
 
   interface TimePickerProps extends ViewProps, EventHandlerProps {
     color?: color;
-    time?: string;
-    showHint?: boolean;
+    defaultTime?: string;
     label?: string;
     labelSide?: Side;
-    defaultTime?: string;
+    showHint?: boolean;
+    time?: string;
+    timeFormat?: TimeFormat;
   }
 
   const TimePicker: React.FC<TimePickerProps>;
@@ -411,10 +376,11 @@ declare module "magic-script-components" {
   interface DatePickerProps extends ViewProps, EventHandlerProps {
     color?: color;
     date?: string;
-    showHint?: boolean;
+    dateFormat?: DateFormat;
+    defaultDate?: string;
     label?: string;
     labelSide?: Side;
-    defaultDate?: string;
+    showHint?: boolean;
     yearMin?: number;
     yearMax?: number;
   }
@@ -427,108 +393,69 @@ declare module "magic-script-components" {
 
   const CircleConfirmation: React.FC<CircleConfirmationProps>;
 
-  interface ModelProps extends ContentProps, EventHandlerProps {
-    bloomStrength?: number;
-    color?: color;
-    drmContent?: boolean;
-    shader?: ShaderType;
-    renderingLayer?: RenderingLayer;
-    backFaceCulls?: { on?: boolean; renderStateIndex?: number; };
-    blooms?: { on?: boolean; renderStateIndex?: number; };
-    castsShadows?: { on?: boolean; renderStateIndex?: number; };
-    frontFaceCulls?: { on?: boolean; renderStateIndex?: number; };
-    isOpaque?: { on?: boolean; renderStateIndex?: number; };
-    isUI?: { on?: boolean; renderStateIndex?: number; };
-    pushesStencil?: { on?: boolean; renderStateIndex?: number; };
-    readsClip?: { on?: boolean; renderStateIndex?: number; };
-    readsDepth?: { on?: boolean; renderStateIndex?: number; };
-    receivesLight?: { on?: boolean; renderStateIndex?: number; };
-    receivesShadows?: { on?: boolean; renderStateIndex?: number; };
-    writesColor?: { on?: boolean; renderStateIndex?: number; };
-    writesDepth?: { on?: boolean; renderStateIndex?: number; };
-    writesStencil?: { on?: boolean; renderStateIndex?: number; };
+  interface ModelProps extends RenderProps, EventHandlerProps {    
+    animation?: { resourceId?: number; name?: string; paused?: boolean; loops?: number; };
     animationPauseState?: boolean;
     animationPlaybackSpeed?: number;
     animationTime?: number;
-    modelResourceId?: number;
-    animation?: { resourceId?: number; name?: string; paused?: boolean; loops?: number; };
-    texture?: { textureId?: number; textureSlot?: string; materialName?: string; };
-    modelPath?: string;
-    materialPath?: string;
     importScale?: number;
-    texturePaths?: number[];
+    materialPath?: string;
+    path?: string;
+    resourceId?: number;
+    texture?: { textureId?: number; textureSlot?: string; materialName?: string; };
   }
 
   const Model: React.FC<ModelProps>;
 
-  interface QuadProps extends ContentProps, EventHandlerProps {
-    bloomStrength?: number;
-    color?: color;
-    drmContent?: boolean;
-    shader?: ShaderType;
-    renderingLayer?: RenderingLayer;
-    backFaceCulls?: { on?: boolean; renderStateIndex?: number; };
-    blooms?: { on?: boolean; renderStateIndex?: number; };
-    castsShadows?: { on?: boolean; renderStateIndex?: number; };
-    frontFaceCulls?: { on?: boolean; renderStateIndex?: number; };
-    isOpaque?: { on?: boolean; renderStateIndex?: number; };
-    isUI?: { on?: boolean; renderStateIndex?: number; };
-    pushesStencil?: { on?: boolean; renderStateIndex?: number; };
-    readsClip?: { on?: boolean; renderStateIndex?: number; };
-    readsDepth?: { on?: boolean; renderStateIndex?: number; };
-    receivesLight?: { on?: boolean; renderStateIndex?: number; };
-    receivesShadows?: { on?: boolean; renderStateIndex?: number; };
-    writesColor?: { on?: boolean; renderStateIndex?: number; };
-    writesDepth?: { on?: boolean; renderStateIndex?: number; };
-    writesStencil?: { on?: boolean; renderStateIndex?: number; };
-    texCoords?: vec4;
-    viewMode?: ViewMode;
-    size?: vec2;
+  interface QuadProps extends RenderProps, EventHandlerProps {
+    width?: number;
+    height?: number;
     subTexture?: string | number;
+    texCoords?: vec2[];
+    viewMode?: ViewMode;
+    lodBias?: number;
   }
 
   const Quad: React.FC<QuadProps>;
 
   interface VideoProps extends QuadProps, EventHandlerProps {
-    looping?: boolean;
-    timedTextPath?: string;
-    videoPath?: string;
-    videoUri?: string;
-    volume?: number;
-    seekTo?: number;
     action?: VideoAction;
-    width?: number;
-    height?: number;
+    looping?: boolean;
+    path?: string;
+    screenSize?: vec2;
+    seekTo?: number;
+    subtitlePath?: string;
+    volume?: number;
   }
 
   const Video: React.FC<VideoProps>;
 
-  interface AudioProps extends ContentProps, EventHandlerProps {
+  interface AudioProps extends TransformProps, EventHandlerProps {
     action?: AudioAction;
-    soundLooping?: boolean;
-    soundMute?: boolean;
-    soundPitch?: number;
-    soundVolumeLinear?: number;
+    absolutePath?: boolean;
+    autoDestroy?: boolean;
+    basePath?: string;
+    descriptor?: number;
+    dynamicDecode?: boolean;
+    loadFile?: boolean;
+    looping?: boolean;
+    mute?: boolean;
+    path?: string;
+    pitch?: number;
+    seekTo?: number;
     spatialSoundEnable?: boolean;
-    streamedFileOffset?: number;
     spatialSoundDirection?: { channel?: number; channelDirection?: quat; };
     spatialSoundDirectSendLevels?: { channel?: number; gain?: number; gainHf?: number; gainLf?: number; gainMf?: number; };
     spatialSoundDistance?: { channel?: number; minDistance?: number; maxDistance?: number; rolloffFactor?: number; };
     spatialSoundPosition?: { channel?: number; channelPosition?: vec3; };
     spatialSoundRadiation?: { channel?: number; innerAngle?: number; outerAngle?: number; outerGain?: number; outerGainHf?: number; };
     spatialSoundRoomSendLevels?: { channel?: number; gain?: number; gainHf?: number; gainLf?: number; gainMf?: number; };
-    fileName?: string;
-    loadFile?: boolean;
-    absolutePath?: boolean;
-    descriptor?: number;
-    basePath?: string;
-    autoDestroy?: boolean;
-    dynamicDecode?: boolean;
+    volume?: number;
   }
 
   const Audio: React.FC<AudioProps>;
 
-  interface LightProps extends ContentProps, EventHandlerProps {
+  interface LightProps extends TransformProps, EventHandlerProps {
     color?: color;
     intensity?: number;
     range?: number;
@@ -540,53 +467,24 @@ declare module "magic-script-components" {
 
   const Light: React.FC<LightProps>;
 
-  interface LineProps extends ContentProps, EventHandlerProps {
-    bloomStrength?: number;
-    color?: color;
-    drmContent?: boolean;
-    shader?: ShaderType;
-    renderingLayer?: RenderingLayer;
-    backFaceCulls?: { on?: boolean; renderStateIndex?: number; };
-    blooms?: { on?: boolean; renderStateIndex?: number; };
-    castsShadows?: { on?: boolean; renderStateIndex?: number; };
-    frontFaceCulls?: { on?: boolean; renderStateIndex?: number; };
-    isOpaque?: { on?: boolean; renderStateIndex?: number; };
-    isUI?: { on?: boolean; renderStateIndex?: number; };
-    pushesStencil?: { on?: boolean; renderStateIndex?: number; };
-    readsClip?: { on?: boolean; renderStateIndex?: number; };
-    readsDepth?: { on?: boolean; renderStateIndex?: number; };
-    receivesLight?: { on?: boolean; renderStateIndex?: number; };
-    receivesShadows?: { on?: boolean; renderStateIndex?: number; };
-    writesColor?: { on?: boolean; renderStateIndex?: number; };
-    writesDepth?: { on?: boolean; renderStateIndex?: number; };
-    writesStencil?: { on?: boolean; renderStateIndex?: number; };
+  interface LineProps extends RenderProps, EventHandlerProps {
     points?: vec3[];
   }
 
   const Line: React.FC<LineProps>;
 
-  interface PrismProps extends EventHandlerProps {
-    excludeFromAutoFocus?: boolean;
-    handGestureFilterConfidenceLevel?: number;
-    handGestureFilterPollRate?: number;
-    handGestureFilterPositionDelta?: number;
-    handGestureHoverDistance?: number;
-    handGestureTouchDistance?: number;
-    physicsEnabled?: boolean;
-    physicsPaused?: boolean;
-    physicsWorldMeshEnabled?: boolean;
-    prismBloomStrength?: number;
-    volumeBloomStrength?: number;
-    trackHandGesture?: number;
-    trackingAutoHapticOnGesture?: number;
-    onDestroy?: () => void;
-    anchorUuid?: string;
-    size?: vec3;
-    position?: vec3;
-    positionRelativeToCamera?: boolean;
+  interface PrismProps extends EventHandlerProps {    
+    debug?: boolean;
     orientation?: quat;
     orientationRelativeToCamera?: boolean;
-    debug?: boolean;
+    position?: vec3;
+    positionRelativeToCamera?: boolean;
+    scale?: vec3;
+    size?: vec3;
+    transform: mat4;
+
+    // Events
+    onDestroy?: () => void;
   }
 
   const Prism: React.FC<PrismProps>;
@@ -750,6 +648,8 @@ declare module "magic-script-components" {
 
   type Alignment = 'top-left' | 'top-center' | 'top-right' | 'center-left' | 'center-center' | 'center-right' | 'bottom-left' | 'bottom-center' | 'bottom-right';
 
+  type AnchorPoint = Alignment;
+
   type FocusRequest = 'gain-focus' | 'lose-focus' | 'none';
 
   type RenderingLayer = 'background-layer' | 'hud-layer' | 'object-layer' | 'post-hud-layer' | 'post-object-layer' | 'pre-object-layer' | 'rendering-layer-max';
@@ -768,7 +668,7 @@ declare module "magic-script-components" {
 
   type color_rgba = { r: number, g: number, b: number, a: number, type?: string };
 
-  type HorizontalTextAlignment = 'center' | 'justify' | 'left' | 'right';
+  type TextAlign = 'center' | 'justify' | 'left' | 'right';
 
   type FontStyle = 'normal' | 'italic';
 
@@ -798,7 +698,7 @@ declare module "magic-script-components" {
 
   type ScrollDirection = 'horizontal' | 'vertical';
 
-  type LoadingSpinnerType = 'sprite-animation' | 'particle-package';
+  type SpinnerType = 'sprite-animation' | 'particle-package';
 
   type ToggleType = 'default' | 'checkbox' | 'radio';
 
@@ -818,8 +718,6 @@ declare module "magic-script-components" {
 
   type DialogLayout = 'standard' | 'wide';
 
-  type WebViewAction = 'back' | 'forward' | 'reload';
-
   type LabelDisplayMode = 'always' | 'hover';
 
   type PortalIconSize = 'extra-large' | 'large' | 'medium' | 'small' | 'extra-small';
@@ -833,6 +731,12 @@ declare module "magic-script-components" {
   type AudioAction = 'pause' | 'start' | 'stop' | 'resume';
 
   type LightType = 'directional' | 'point' | 'spot';
+
+  type FitMode = 'stretch' | 'aspect-fill' | 'aspect-fit';
+
+  type TimeFormat = 'auto' | 'hh:mm:ss' | 'hh:mm:ss p' | 'hh:mm' | 'hh:mm p' | 'mm:ss';
+
+  type DateFormat = 'auto' | 'MM/DD/YYYY' | 'DD/MM/YYYY' | 'MM/YYYY' | 'DD/YYYY';
 
 }
 

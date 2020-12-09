@@ -71,6 +71,7 @@ exports[`Components ColorPicker should create component 1`] = `
 exports[`Components DatePicker should create component 1`] = `
 <datePicker
   alignment="center-center"
+  color="white"
   debug={false}
   enabled={true}
   hideBounds={false}
@@ -96,6 +97,7 @@ exports[`Components DatePicker should create component 1`] = `
       1,
     ]
   }
+  showHint={false}
   skipRaycast={false}
   visible={true}
 />
@@ -103,36 +105,8 @@ exports[`Components DatePicker should create component 1`] = `
 
 exports[`Components DropdownListItem should create component 1`] = `
 <dropdownListItem
-  alignment="center-center"
-  debug={false}
-  enabled={true}
-  hideBounds={false}
   id={0}
   label=""
-  localPosition={
-    Array [
-      0,
-      0,
-      0,
-    ]
-  }
-  localRotation={
-    Array [
-      0,
-      0,
-      0,
-      1,
-    ]
-  }
-  localScale={
-    Array [
-      1,
-      1,
-      1,
-    ]
-  }
-  skipRaycast={false}
-  visible={true}
 />
 `;
 
@@ -342,6 +316,14 @@ exports[`Components LinearLayout should create component 1`] = `
 exports[`Components ListViewItem should create component 1`] = `
 <listViewItem
   alignment="center-center"
+  backgroundColor={
+    Array [
+      0,
+      0,
+      0,
+      0,
+    ]
+  }
   debug={false}
   enabled={true}
   hideBounds={false}
@@ -376,6 +358,15 @@ exports[`Components PageView should create component 1`] = `
 <pageView
   alignment="center-center"
   debug={false}
+  defaultPageAlignment="top-left"
+  defaultPagePadding={
+    Array [
+      0,
+      0,
+      0,
+      0,
+    ]
+  }
   enabled={true}
   height={0}
   hideBounds={false}
@@ -443,6 +434,7 @@ exports[`Components Panel should create component 1`] = `
 
 exports[`Components Prism should create component 1`] = `
 <prism
+  debug={false}
   orientation={
     Array [
       0,
@@ -451,6 +443,7 @@ exports[`Components Prism should create component 1`] = `
       1,
     ]
   }
+  orientationRelatedToCamera={false}
   position={
     Array [
       0,
@@ -458,6 +451,7 @@ exports[`Components Prism should create component 1`] = `
       0,
     ]
   }
+  positionRelatedToCamera={false}
   scale={
     Array [
       1,

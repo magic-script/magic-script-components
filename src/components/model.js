@@ -11,19 +11,19 @@ Model.propTypes = {
   ...UiNode.PropTypes,
 
   // Properties
-  path: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
-  materialPath: PropTypes.string,
-  animationPauseState: PropTypes.bool,
-  animationPlaybackSpeed: PropTypes.number,
-  animationTime: PropTypes.number,
-  resourceId: PropTypes.number, 
-  importScale: PropTypes.number,
   animation: PropTypes.exact({
     resourceId: PropTypes.number,
     name: PropTypes.string,
     paused: PropTypes.bool,
     loops: PropTypes.number,
   }),
+  animationPauseState: PropTypes.bool,
+  animationPlaybackSpeed: PropTypes.number,
+  animationTime: PropTypes.number,
+  importScale: PropTypes.number,
+  materialPath: PropTypes.string,
+  path: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
+  resourceId: PropTypes.number, 
   texture: PropTypes.exact({
     textureId: PropTypes.number.isRequired,
     textureSlot: PropTypes.string.isRequired,
