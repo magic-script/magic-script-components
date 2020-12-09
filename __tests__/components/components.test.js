@@ -6,6 +6,9 @@ import renderer from "react-test-renderer";
 import {
   Slider,
   View,
+  Checkbox,
+  Radio,
+  Switch,
   Toggle,
   ToggleGroup,
   TextEdit,
@@ -42,6 +45,30 @@ describe("Components", () => {
   describe("View", () => {
     test("should create component", () => {
       const component = renderer.create(<View />);
+      const json = component.toJSON();
+      expect(json).toMatchSnapshot();
+    });
+  });
+
+  describe("Checkbox", () => {
+    test("should create component", () => {
+      const component = renderer.create(<Checkbox />);
+      const json = component.toJSON();
+      expect(json).toMatchSnapshot();
+    });
+  });
+
+  describe("Radio", () => {
+    test("should create component", () => {
+      const component = renderer.create(<Radio />);
+      const json = component.toJSON();
+      expect(json).toMatchSnapshot();
+    });
+  });
+
+  describe("Switch", () => {
+    test("should create component", () => {
+      const component = renderer.create(<Switch />);
       const json = component.toJSON();
       expect(json).toMatchSnapshot();
     });
