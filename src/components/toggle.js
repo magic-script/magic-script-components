@@ -33,3 +33,15 @@ Toggle.defaultProps = {
   textSize: 0.08,
   type: ToggleType.default
 };
+
+export function Checkbox(props) {
+  return <Toggle { ...props } type={ToggleType.checkbox} onToggleChanged={props.onChanged} />;
+}
+
+export function Radio(props) {
+  return <Toggle { ...props } type={ToggleType.radio} onToggleChanged={props.onChanged} />;
+}
+
+export function Switch(props) {
+  return <Toggle { ...props } type={ToggleType.default} onToggleChanged={props.onChanged} />;
+}

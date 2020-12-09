@@ -29,7 +29,7 @@ export { Tab } from './tab.js';
 export { Text } from './text.js';
 export { TextEdit } from './text-edit.js';
 export { TimePicker } from './time-picker.js';
-export { Toggle } from './toggle.js';
+export { Checkbox, Radio, Switch, Toggle } from './toggle.js';
 export { ToggleGroup } from './toggle-group.js';
 export { Video } from './video.js';
 export { View } from './view.js';
