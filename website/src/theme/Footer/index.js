@@ -4,21 +4,21 @@
 
 import React from "react";
 import ScriptLoader from "react-script-loader-hoc";
-
-function createMarkup() {
-  return {
-    __html: window.startCookieControl.load({
-      apiKey: "bd100834001edf98bd5458ce61e48ca552418f9c",
-      footerSelector: "#foot-boi"
-    })
-  };
-}
+import CookieConsent, { Cookie } from "react-cookie-consent";
 
 const MLFooter = ({ scriptsLoadedSuccessfully }) => {
-  if (!scriptsLoadedSuccessfully) return null;
-  return <section id="foot-boi" dangerouslySetInnerHTML={createMarkup()} />;
+  return <CookieConsent
+          location="bottom"
+          buttonText="Accept All Cookies"
+          cookieName="defaultCookie"
+          style={{ background: "#4A4A4AEE", color: "#F8F8F8", fontSize: "15px", fontWeight: "bold", paddingLeft: 80, paddingRight: 80 }}
+          buttonStyle={{ flex: "0 1 auto", background: "#F8F8F8", color: "#4A4A4A", fontSize: "16px", fontWeight: "bold", borderRadius: 4, padding: 13 }}
+          expires={30}
+        >
+          Magic Leap uses cookies to enhance your user experience, improve our websites, and deliver ads that may interest you.
+          <div />
+          <a style={{ color: "#F8F8F8", fontSize: "16px" , fontWeight: "normal" }} href="https://www.magicleap.com/legal/cookie-policy">Learn More</a>
+        </CookieConsent>
 };
 
-export default ScriptLoader(
-  "https://magicleap.com/assets/js/cookie-control-js/cookie-control-vanilla.min.js"
-)(MLFooter);
+export default ScriptLoader()(MLFooter);
