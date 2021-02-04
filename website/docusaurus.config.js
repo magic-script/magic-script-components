@@ -17,13 +17,16 @@ module.exports = {
   organizationName: "magic-script", // Usually your GitHub org/user name.
   projectName: "magic-script-components", // Usually your repo name.
   themeConfig: {
+    colorMode: {
+      respectPrefersColorScheme: false
+    },
     navbar: {
       title: "MagicScript",
       logo: {
         alt: "MagicScript Logo",
         src: "img/magicscript.svg"
       },
-      links: [
+      items: [
         {
           to: 'versions',
           label: `Versions`,
@@ -60,6 +63,10 @@ module.exports = {
           position: "right"
         }
       ]
+    },
+    footer: {
+      style: 'light',
+      links: []
     },
     algolia: {
       apiKey: "4a2801e1f42c5488e5db0eb1ed45b5ba",
